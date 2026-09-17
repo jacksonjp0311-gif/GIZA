@@ -248,10 +248,10 @@
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "a567640187cecb8b07ff55cea5560557a87e05548a8cb978427e6e1c8b7623cd",
-      "bytes": 6535
+      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b",
+      "bytes": 8174
     }
   ],
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T11:18:19.207Z"
+  "sealed_at": "2026-09-17T16:55:51.241Z"
 }

@@ -23,18 +23,18 @@
   "files": [
     {
       "path": "src/workstation/WorkstationHeader.tsx",
-      "sha256": "e42d2927e2d5742d96b7aad4e34d327a3f6cf69df0063a35d3b37be3272d60f4",
-      "bytes": 2149
+      "sha256": "ca61c2f9bd4a0f6ee5071860f4273783e2b626d21e679dafb7ae57b3f5f422d9",
+      "bytes": 2392
     },
     {
       "path": "src/workstation/LeftRail.tsx",
-      "sha256": "c35ccb496befc1b1e0ed8013d2e9ece1b11e0266f1555831cc5f6c14d16102bc",
-      "bytes": 5023
+      "sha256": "8fc6dc284bbed45074f82abf4c638e8a023a3638cb377bd587925f4036c7b4c8",
+      "bytes": 5055
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "a567640187cecb8b07ff55cea5560557a87e05548a8cb978427e6e1c8b7623cd",
-      "bytes": 6535
+      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b",
+      "bytes": 8174
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
@@ -43,13 +43,13 @@
     },
     {
       "path": "src/workstation/WorkstationFooter.tsx",
-      "sha256": "c4f8326be239ba26e1ca2ff44918d4395a41e684484fe781cb46f78cc4d82e2f",
-      "bytes": 447
+      "sha256": "dbe13daa45f7629dd60d715d03051501c9ec3bd2fb7edf14747866af7722aad4",
+      "bytes": 523
     },
     {
       "path": "src/styles.css",
-      "sha256": "2c0079a241c3ddce9c1a5eb22b7476b142700f7743615b2587752ce3cc15c506",
-      "bytes": 71758
+      "sha256": "6c1fd541039e68fb98c83ac0ffca4864c62b4112c1481a0a6135c3c5e9877e7d",
+      "bytes": 78553
     },
     {
       "path": "docs/design/APPROVED-UI-TARGET.png",
@@ -83,5 +83,5 @@
     }
   ],
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T11:18:19.207Z"
+  "sealed_at": "2026-09-17T16:55:51.241Z"
 }

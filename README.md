@@ -6,6 +6,8 @@ This project is maintained as **GIZA**. The model-first Explorer includes the or
 
 See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for the original audit and all 56 component coverage rows. [Usability foundation](docs/USABILITY_FOUNDATION.md) tracks the first implemented tranche and remaining limits; the full archaeological roadmap is not complete.
 
+The [Sphinx Explorer](docs/SPHINX_EXPLORER.md) adds a separate exterior study reconstruction with exploded regions, synthetic repair blocks, clipping, isolation and GLB export. It is explicitly not a scan or a per-stone survey.
+
 An executable local workbench for importing a source plate, recording landmarks, freezing an experiment, and inspecting every holdout residual. This is a software release, not an inspection report.
 
 The existing React / Three.js explorer, exploded-model controls, photo inspector, simulations and eleven-view atlas are retained. The new Registration surface opens from the central viewport; it does not replace the 3-D model or add another global navigation mode.
@@ -59,6 +61,12 @@ A frozen experiment or recorded fit cannot be overwritten. Make a separate proje
 - Duplicate, nonfinite, out-of-bounds and collinear correspondence inputs are rejected.
 - Atlas navigation no longer hides later tabs on narrower displays; internal scrolling no longer feeds an automatic parent focus/scroll loop.
 - Release sealing regenerates current manifests in dependency order and verifies their hashes.
+
+## Interior inspection and hieroglyph workspace
+
+In the 3D overview, use **Remove shell / inspect inside** to expose the known internal system, select a subsystem, fit it, and isolate individual components. **Restore shell** returns the ordinary layer selections. The Sphinx offers **Expose carved bedrock**, not an invented hollow interior.
+
+Open **Inscription Lab** from Quick Views or the Sphinx panel to inspect the bundled Dream Stela photo/facsimile, mark reading zones, trace marks, compose signs, and maintain a source-linked translation board. Drafts save locally and export to JSON. AI review packets and proposal import are manual handoffs; no automatic OCR/translation provider is connected. See `docs/INTERIORS_AND_EPIGRAPHY.md` for the current audit, workflow and next priorities.
 
 ## Existing 3-D explorer
 

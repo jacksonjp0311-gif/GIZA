@@ -6,9 +6,10 @@ import type { Part } from '../lib/model';
 import { searchParts } from '../lib/search';
 
 export function LeftRail({
-  filter, setFilter, layers, toggleLayer, sectionAxis, setSectionAxis, viewPreset, setViewPreset, onReset, onOpenAtlas, onOpenModel, parts, onOpenPart,
+  filter, setFilter, layers, toggleLayer, sectionAxis, setSectionAxis, viewPreset, setViewPreset, onReset, onOpenAtlas, onOpenModel, parts, onOpenPart, onOpenSphinx,
 }: {
   filter: string; setFilter: (value: string) => void;
+  onOpenSphinx:()=>void;
   parts:Part[];onOpenPart:(id:string)=>void;
   layers: Record<LayerKey, boolean>; toggleLayer: (key: LayerKey) => void;
   sectionAxis: SectionAxis; setSectionAxis: (axis: SectionAxis) => void;
@@ -34,7 +35,7 @@ export function LeftRail({
           <button onClick={() => onOpenAtlas('plateau')}>› <span>Khufu (Context)</span></button>
           <button className="active" onClick={onOpenModel}>⌄ <span>Khafre (Active)</span><i>◉</i></button>
           <button onClick={() => onOpenAtlas('plateau')}>› <span>Menkaure</span></button>
-          <button onClick={() => onOpenAtlas('geology')}>› <span>Sphinx</span></button>
+          <button onClick={onOpenSphinx}>› <span>Sphinx</span><i>3D</i></button>
           <button onClick={() => onOpenAtlas('rooms')}>› <span>Valley Temple</span></button>
           <button onClick={() => onOpenAtlas('rooms')}>› <span>Causeway</span></button>
           <button onClick={() => onOpenAtlas('plateau')}>› <span>Mastabas & Tombs</span></button>

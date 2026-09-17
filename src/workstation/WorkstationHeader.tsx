@@ -1,7 +1,8 @@
 import type { ModelBundle } from '../lib/model';
 import { GIZA_DISPLAY_VERSION } from '../version';
 
-export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / PYRAMID CORE'}: {
+export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / PYRAMID CORE',sphinx=false}: {
+  sphinx?:boolean;
   modelTitle?:string;
   model:ModelBundle;
   surface:'MODEL'|'ATLAS'|'REGISTRATION';
@@ -19,7 +20,7 @@ export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / 
     <div className="modelIdentity" title="CINEMATIC SPATIAL REVERSE-ENGINEERING WORKSTATION">
       <small>GIZA <em>NEXUS</em> · v{GIZA_DISPLAY_VERSION}</small>
       <h1 aria-live="polite" title={modelTitle}>{surface==='MODEL'?modelTitle:surface==='ATLAS'?'GIZA / MAP ATLAS':'GIZA / REGISTRATION'}</h1>
-      <span>GIZA, EGYPT · {model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}° N · {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}° E · c. 2570 BCE</span>
+      {sphinx?<span>GIZA, EGYPT · LOCAL STUDY FRAME · ILLUSTRATIVE EXTERIOR</span>:<span>GIZA, EGYPT · {model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}° N · {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}° E · c. 2570 BCE</span>}
     </div>
     </div>
     <nav className="surfaceSwitch" aria-label="Viewport surface">
@@ -28,7 +29,7 @@ export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / 
       <button aria-pressed={surface==='REGISTRATION'} className={surface==='REGISTRATION'?'active':''} onClick={()=>onSurface('REGISTRATION')}>REGISTRATION</button>
     </nav>
     <div className="headerSummary" aria-label="Model evidence summary">
-      <span><b>{derived}</b> reconstructions</span><span><b>{assumed}</b> assumed</span><span><b>{unverified}</b> unverified</span>
+      {sphinx?<><span><b>≈73.5 m</b>overall length</span><span><b>≈20 m</b>height</span><span><b>10</b>study regions</span></>:<><span><b>{derived}</b> reconstructions</span><span><b>{assumed}</b> assumed</span><span><b>{unverified}</b> unverified</span></>}
     </div>
   </header>;
 }

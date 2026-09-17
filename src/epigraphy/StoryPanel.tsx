@@ -1,0 +1,4 @@
+import {STORY_CARDS} from './story';
+export function StoryPanel({onRead}:{onRead:()=>void}){
+  return <section className="epiStory" aria-label="Inscription story and sources"><small>HISTORY / WORDS / INTERPRETATION</small><h2>The story, with its evidence attached</h2><p>Read the historical context separately from your translation and our visual predictions.</p>{STORY_CARDS.map(c=><article key={c.id}><small>{c.era}</small><h3>{c.title}</h3><span className="epiStatus">{c.kind}</span><p>{c.text}</p><a href={c.source} target="_blank" rel="noreferrer">{c.publisher} ↗</a></article>)}<button onClick={onRead}>Inspect the inscription and make a cited reading</button><p className="epiMicro">No complete translation, recovered missing text, or calibrated likelihood of a reconstruction is supplied. The translation board keeps alternatives and operator review separate.</p></section>;
+}

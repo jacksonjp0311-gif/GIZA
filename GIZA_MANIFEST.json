@@ -3,8 +3,8 @@
   "name": "GIZA NEXUS",
   "version": "0.10.12",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-17T11:18:19.207Z",
-  "file_count": 609,
+  "sealed_at": "2026-09-17T16:55:51.241Z",
+  "file_count": 653,
   "exclude": [
     "GIZA_MANIFEST.json",
     "node_modules/",
@@ -29,7 +29,7 @@
     },
     {
       "path": "ACTION_GRAPH_MANIFEST.json",
-      "sha256": "1c14fdbc561d9438b56779e45b5813af4853e92adcce7482a6745a67248d8bdc",
+      "sha256": "fec673dacb5a5949814046e4e549b2e4f99b0b23e61ac6179b32523dca3ecdf4",
       "bytes": 1961
     },
     {
@@ -39,12 +39,12 @@
     },
     {
       "path": "ARCHIVE_HARVEST_MANIFEST.json",
-      "sha256": "a2289f5fff934630193d9c7308c741dad04ee49f99830b1ec9747f30b5bad937",
+      "sha256": "ae335b5f4f8eb9a29bbe029dd74a0a375acde895748601deb053169e85b45f57",
       "bytes": 738
     },
     {
       "path": "ATLAS_INGEST_MANIFEST.json",
-      "sha256": "406276f3bea21cc7eb8265c6b0b1e8889f1122b112e075c45998693cb85cec46",
+      "sha256": "4c18c24000c5d289805c012e006c66d557f7d0b8eeb5eb2089e6b1c0b27e07b4",
       "bytes": 1721
     },
     {
@@ -59,12 +59,12 @@
     },
     {
       "path": "CONTINUITY_MANIFEST.json",
-      "sha256": "f27e89cde57282056b7c0c4be33292fab0248d47dfafe324d5a491d05561195c",
+      "sha256": "15a4f818408d92847fd87597b61869d173c60c6a58a88d1d696c3d3f9849c7d3",
       "bytes": 23678
     },
     {
       "path": "CONTROL_NET_MANIFEST.json",
-      "sha256": "db0ec49a0e9d5c1a1eee7e125e5dbca75a5a9a2c8bbe7e40528e8f43ff5e8c34",
+      "sha256": "39c0767c23bb0daa8f79c3fe8fd6e7cbb01b96d044853b518f18a350a0110daf",
       "bytes": 3669
     },
     {
@@ -263,6 +263,11 @@
       "bytes": 6340
     },
     {
+      "path": "docs/INTERIORS_AND_EPIGRAPHY.md",
+      "sha256": "1a1d3e9e8194d1d2ed980980da797aa5e3fe5d91a7cab504738088f08de3c8bb",
+      "bytes": 12063
+    },
+    {
       "path": "docs/METRIC_VIEW_LAB.md",
       "sha256": "8802ddb413cee0c8579e7e250f55f0ef4dd0e2d7be8227e6012e55e0430ff947",
       "bytes": 1948
@@ -428,6 +433,11 @@
       "bytes": 526
     },
     {
+      "path": "docs/SPHINX_EXPLORER.md",
+      "sha256": "944e591b578f27b9f4b44e986c56730f4106ca120b2f654dedd35e191e2f7868",
+      "bytes": 7942
+    },
+    {
       "path": "docs/STRATA.md",
       "sha256": "8bd60c2bf52a9c88d20d6740e50f6b5512137f2cbc7b50d8c90295e802d61d2b",
       "bytes": 1785
@@ -474,12 +484,12 @@
     },
     {
       "path": "ECHO_MANIFEST.json",
-      "sha256": "fd9d78c35a1a2a90e6641754d0441f045bcd47c66edc23b9ae40e9e3788ce24d",
+      "sha256": "c1afa0254795c35c9817dd8ef6f179cea24d43e82a0d450764d0507d7daab1cf",
       "bytes": 7821
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
-      "sha256": "c556b33da2d852a010812f27b12f95b9686ffa07fa84fc043e88e062178dc8a1",
+      "sha256": "eedb5ce493e1a0a966bc70cd2e048fee1cbafb5d738b22c10fac2c9190feee72",
       "bytes": 3514
     },
     {
@@ -509,12 +519,12 @@
     },
     {
       "path": "FIELD_MANIFEST.json",
-      "sha256": "0e889c017c7939665464897d8961289393dabaa5198cf17dc8dd58c4fd4d7ce6",
+      "sha256": "1370ec5d5df8e8d6dac6cf17b1849a4dcb84530c679e7286e9ca5c90309781d2",
       "bytes": 2280
     },
     {
       "path": "FRAME_MANIFEST.json",
-      "sha256": "b69ded131b308cc980a1644179b6c4418c8ad325cb3c92b234c3c69a9f97215d",
+      "sha256": "6626ac2e5627e2e8a6675fee7bfb052f7d1c5676f054ec878a7219c127f4d916",
       "bytes": 2512
     },
     {
@@ -699,7 +709,7 @@
     },
     {
       "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
-      "sha256": "d5c821fcbb5288b1e943e8a1b3875a4874741b0e1423d3293f46b28e6ce9fbe6",
+      "sha256": "d9ad8dff431f6c663fd75ef0aeaeed81520543c02cff16c9f9224f30a1a95731",
       "bytes": 2050
     },
     {
@@ -709,12 +719,12 @@
     },
     {
       "path": "METRIC_VIEW_LAB_MANIFEST.json",
-      "sha256": "9b497fcb43e88f45e585014f6c1e70428e9367bb898934b2c399c6a099b434be",
+      "sha256": "674ab47ac158e020dff6b215948b3d7a5fa3bf57bd9089a1151ffe33d07ce47b",
       "bytes": 2163
     },
     {
       "path": "OBSERVATORY_MANIFEST.json",
-      "sha256": "241de6601545d39ad23363d92f6c93a4223e0e8aa16ee2b60e0cad4dc6f5fcdf",
+      "sha256": "56fcbb5effffea13c4c94cd6b1f5e1291088dd544dc36c875b6002755cf26f37",
       "bytes": 996
     },
     {
@@ -724,33 +734,78 @@
     },
     {
       "path": "package.json",
-      "sha256": "1124f79dd7817bdd3487661c5c3b5a3e0f1566dae41b1b8ee69323c1de4ef300",
-      "bytes": 9542
+      "sha256": "268a3cf0b0b39acc5df87d047b326cd88e27bcb0271faa2f69dbcbf5cf469ee9",
+      "bytes": 9778
     },
     {
       "path": "PLAN_CONCORDANCE_MANIFEST.json",
-      "sha256": "911d09dc9c3af58452c2a2d1d19ae2d501b336df461af9669f44a9339394d4a2",
+      "sha256": "dee7de0cbd540057df7aeea2e36b0b89651f18df87d66168123f17cd8f36d536",
       "bytes": 1630
     },
     {
       "path": "PLATE_REGISTRATION_MANIFEST.json",
-      "sha256": "7a68e531381f42f6599b72be2a235bc0095b0ce54f3e4f2d44afcbecbb06b906",
+      "sha256": "10ca3e40980756af7e12c28068fd2787af944f78eef5158d16b6788160b324d0",
       "bytes": 5030
     },
     {
       "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
-      "sha256": "0feafc2105488596276357bdd8416abd0114ab587072f3e4dee9e098d3faae87",
+      "sha256": "d9e7797f694665de9ae89f8fdc05172b7c891294119f62f0dd84d5d9cb4729bf",
       "bytes": 1519
     },
     {
       "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
-      "sha256": "097ddff85d788b49a463d6534d8c2295ce790e2ca071b005dc30cc318e25a247",
+      "sha256": "0c1d728a25300fb3090ad6152639593f200fd6d06958cc3882cd52b07856a20f",
       "bytes": 3255
     },
     {
       "path": "prompts/research/CANON-01.md",
       "sha256": "de1e8dfb538776b2b005767f0b0c4429c11a226971b57d7cf8714d3d6b6f561a",
       "bytes": 2261
+    },
+    {
+      "path": "public/epigraphy/dream-stela-color-hypothesis-v1.png",
+      "sha256": "51eb74f690fbe7f43ebdb14215cd571b41cc8614a4945e9d5b02ca49cdedbafe",
+      "bytes": 2573046
+    },
+    {
+      "path": "public/epigraphy/dream-stela-detail.jpg",
+      "sha256": "833fdd37ac8a16f8f2b5a6daf0d42a4287ae25e3d02d737576eeba8729d8c602",
+      "bytes": 4106890
+    },
+    {
+      "path": "public/epigraphy/dream-stela-lepsius.jpg",
+      "sha256": "e42018d9ea06e34e01b3230034d1893c7cc762d62ad60dbcd9d303dcb2daca55",
+      "bytes": 1465663
+    },
+    {
+      "path": "public/epigraphy/dream-stela.jpg",
+      "sha256": "73826fd777b8af7872c52ba040da26e1c6c18d006bcec7f174d8d87ce6925f1f",
+      "bytes": 817085
+    },
+    {
+      "path": "public/epigraphy/NOTO-OFL.txt",
+      "sha256": "dc8114a49f5bb53bad3d99ee52cbb245e98076438d59428a258720258494de68",
+      "bytes": 4396
+    },
+    {
+      "path": "public/epigraphy/NotoSansEgyptianHieroglyphs-Regular.ttf",
+      "sha256": "b792accc6207ca9caa59fc67f53926b6985a99d255dd432d7c68b68a6dfd62f8",
+      "bytes": 1004836
+    },
+    {
+      "path": "public/epigraphy/RECONSTRUCTION-RECEIPT.md",
+      "sha256": "fcca89bbf1dd6f2ee7b4bbeb6a1997d21e3af99676c3b299125cf55aa88c85dc",
+      "bytes": 3170
+    },
+    {
+      "path": "public/epigraphy/SOURCES.md",
+      "sha256": "0198ef4294cc03d0baeae58afe845c6e8114d0450ced8a944cca10c2688e1036",
+      "bytes": 3160
+    },
+    {
+      "path": "public/epigraphy/UNICODE-LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
     },
     {
       "path": "public/GIZA-NEXUS.png",
@@ -854,7 +909,7 @@
     },
     {
       "path": "public/model/control_net/benchmarks/projective_camera.json",
-      "sha256": "24467877fe727b1de7d05881bf1df9f6051cdb094b2b5deed9d7c4d602c43ff4",
+      "sha256": "dc0e5fdc91a20f2de20bb0a84088b3a1b5a7afa359bbbafa6fe960b4273d252a",
       "bytes": 12928
     },
     {
@@ -1464,7 +1519,7 @@
     },
     {
       "path": "public/model/registration/benchmarks/planar_homography.json",
-      "sha256": "0cb3cc419bdd2319cc090677e89f3f50a00aaedfbc22358914a8d720053ce980",
+      "sha256": "69fd5d41f9fdc128664bcb8460398ecb5bf34a19f4d78218dbad1665c16cc709",
       "bytes": 292
     },
     {
@@ -2053,6 +2108,21 @@
       "bytes": 9567
     },
     {
+      "path": "public/sphinx/assembly-lascar.jpg",
+      "sha256": "9d88465173ff1a69f0b45525cb7a363ee730562b1afaad814a3183cd19afb2db",
+      "bytes": 917440
+    },
+    {
+      "path": "public/sphinx/head-meskens.jpg",
+      "sha256": "bac7c4c3b83e8d66c727e48c9c254f4ff8fab75ba2c862b35abb6a6a4473eb60",
+      "bytes": 3419986
+    },
+    {
+      "path": "public/sphinx/SOURCES.md",
+      "sha256": "dd3eaaf2c1098793097339008448f6998d924ad65ccc8504a1b9fcc33f67aca7",
+      "bytes": 1465
+    },
+    {
       "path": "public/vault/assets.json",
       "sha256": "28b6c656605b7b48260585313cdf170232dec12824fda84f20e9843de7bdadda",
       "bytes": 13281
@@ -2134,32 +2204,32 @@
     },
     {
       "path": "README.md",
-      "sha256": "d175cdb7cdb752bce05459575acd9aa20212c475a533921541f2e40e1f10f435",
-      "bytes": 7719
+      "sha256": "22127bf8d7764e787b027c4a5c1cfd4e61bbe3b60ec19a2d46a0015935feb0f4",
+      "bytes": 8744
     },
     {
       "path": "REGISTER_MANIFEST.json",
-      "sha256": "8a4bc0a2913e0e9a3cc516e8739c6a29e331894949448501c1827fcfdb271d1c",
+      "sha256": "6fa58af35c7457fd89af618f8107e70713a78820a7fde5847a4f2d1e3eb4fd0f",
       "bytes": 1610
     },
     {
       "path": "REGISTRATION_MANIFEST.json",
-      "sha256": "981d1adbee7224c5c85972e8f1b8d6e8317c13f405c89c637fe0800ff0bc156a",
+      "sha256": "3e380d012e0243eba9796aebc3011690d3d975416ca3e56a1268ec1acc045b13",
       "bytes": 3797
     },
     {
       "path": "RESIDUAL_FIELD_MANIFEST.json",
-      "sha256": "6692bc4177e132c955d95247be4ba56e9b791b7f046ddf2495b4d0000159d609",
+      "sha256": "ced0979ffe6621906550cc5480a969dbe24b20db00771f837a160baaa0428aba",
       "bytes": 1286
     },
     {
       "path": "RITUAL_MAP_MANIFEST.json",
-      "sha256": "4ceac9b073ab4a8c9d55f33a28d3e0241c480012cb344a4c59783170835e5afa",
+      "sha256": "2e4d5eb30a5c8573795c70f4e130a6f9757bce3a6b04a97f3163ddb91191077e",
       "bytes": 4033
     },
     {
       "path": "ROOM_GRAPH_MANIFEST.json",
-      "sha256": "c81b8767c0363cee201d219e06b2908852ecb5b7bf2846f5a9c248bebe95d324",
+      "sha256": "40b0986d1db3c2098fbdfd1c66eb5ecbd86acc8f76dca4f4c94e6d3e4d9b3f35",
       "bytes": 2131
     },
     {
@@ -2709,28 +2779,103 @@
     },
     {
       "path": "SIMLAB_MANIFEST.json",
-      "sha256": "227e782e7aa8a692521816c6a0d08979bbe9f657ea50d2528f4c6793bbf4d80d",
+      "sha256": "50449e7f8c9adab70fb7e331eac1f2560436e8c0c12425801a687255eec2c14f",
       "bytes": 9101
     },
     {
       "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
-      "sha256": "3e592baf06625d6c41ae752ed80d0e00689ec9a94f5263389d34153435e04e2c",
+      "sha256": "4d5309cc0bd3f09d94e5afa5f7833b28a651068aa6f422ddb1ad49ce7b67629b",
       "bytes": 3272
     },
     {
       "path": "SOURCE_PARSER_MANIFEST.json",
-      "sha256": "a2fc5df53e9888d34e8a39920f9956059f255eff06482ab9204956827d0cb632",
+      "sha256": "7aa7c7950728f843ee43d8b64213fb1953137987e59e711657e344c18cd9f20a",
       "bytes": 1990
     },
     {
       "path": "src/App.tsx",
-      "sha256": "ce35a6e40c45b8df7f4efd34eaf8cbddf5702159abcefdc567a1d62c4ac96092",
-      "bytes": 13826
+      "sha256": "16c97a3e5df875c4ebbdfc1d30d2aab898a6f1eff3257c9fe8f1fa5996f1ee1b",
+      "bytes": 14691
     },
     {
       "path": "src/components/GizaScene.tsx",
-      "sha256": "3f0c71aa79fdbdbadf4b1f5a7ddbc0e1590e0d487aa28acaa3301d68331c0160",
-      "bytes": 4407
+      "sha256": "7c9cd76c28d81a9d0add36f60dd837da33a078355af44adc63c161105c2d67f0",
+      "bytes": 4518
+    },
+    {
+      "path": "src/epigraphy/artifact.css",
+      "sha256": "4b7e4c8325af03612531c5c154b53521281c0fb85ad08af4561a87f60f4e7bc5",
+      "bytes": 11685
+    },
+    {
+      "path": "src/epigraphy/ArtifactOverview.tsx",
+      "sha256": "63d8d6620cee5c47d1e5828631f3eda2f73cc4beccc337975f84ea89a1a3e545",
+      "bytes": 7129
+    },
+    {
+      "path": "src/epigraphy/catalog.ts",
+      "sha256": "47a8b9ffed9b1e1843f9f7d4ece42712073f24edac17b12e3761de2ca2330020",
+      "bytes": 2671
+    },
+    {
+      "path": "src/epigraphy/epigraphy.css",
+      "sha256": "74792ebe23de5e87157a0941c400f56edcb7a6e9dcabca4dcdf288e0a36355c1",
+      "bytes": 11164
+    },
+    {
+      "path": "src/epigraphy/InscriptionLab.tsx",
+      "sha256": "558e865b8e9bc4f3bd2f525952a9a447468749acfb1979eee491ec09079afc69",
+      "bytes": 13074
+    },
+    {
+      "path": "src/epigraphy/InscriptionLauncher.tsx",
+      "sha256": "031a7db056f9caf48da5911e02cbf93e7800c03f9e3386a4042a32564219dd33",
+      "bytes": 1046
+    },
+    {
+      "path": "src/epigraphy/model.ts",
+      "sha256": "7bdd6d143f8c208ef26540aa860f6e08a49299f286a23a8543e69d603b50e31f",
+      "bytes": 7252
+    },
+    {
+      "path": "src/epigraphy/navigation.ts",
+      "sha256": "567ba43251f211efa5abea71fac1e8422a554e3bbc84cb7472806923124b4c97",
+      "bytes": 1733
+    },
+    {
+      "path": "src/epigraphy/ReadingBoard.tsx",
+      "sha256": "5c1df1c9746edd81fd48887e6d1b3aa22382199ca3e8f0b5e3720a4ee6370efe",
+      "bytes": 6801
+    },
+    {
+      "path": "src/epigraphy/RestorationStudio.tsx",
+      "sha256": "b64200fcd720ba5dafca552bdddee09deb13b7517105a210e2c9ddcf38a63994",
+      "bytes": 7903
+    },
+    {
+      "path": "src/epigraphy/signs.ts",
+      "sha256": "af7e11e36419f592af6959789a16630a554e8b39e28a0a533fdd9c9bd00e33eb",
+      "bytes": 33476
+    },
+    {
+      "path": "src/epigraphy/SourceViewer.tsx",
+      "sha256": "c8fb0ea798a86c560221c7b6baeef5773b9ed4e2559cc4e5905d50c5985e92f0",
+      "bytes": 9737
+    },
+    {
+      "path": "src/epigraphy/storage.ts",
+      "sha256": "1175c97a7161824eb59e169cf2a9577adadcc4420294c7798fbb82884924423d",
+      "bytes": 4615
+    },
+    {
+      "path": "src/epigraphy/story.ts",
+      "sha256": "1fe365cafd84274801befcebeb222b71b512281d3d4e8240fac84c6f90b1e226",
+      "bytes": 2237
+    },
+    {
+      "path": "src/epigraphy/StoryPanel.tsx",
+      "sha256": "785a47cdbb4363d947720c82ee0e808cf1949f169abe2bc73be4872718935008",
+      "bytes": 887
     },
     {
       "path": "src/lib/componentDetails.ts",
@@ -2746,6 +2891,11 @@
       "path": "src/lib/field.ts",
       "sha256": "ee01199385d94a5f405488b395c24e69b200973f5cc598084086bea4598edd64",
       "bytes": 5276
+    },
+    {
+      "path": "src/lib/interiorInspection.ts",
+      "sha256": "440c7c21e85e65155d7f142d950da94c07ce259f772de50f4636c861d8ff73f0",
+      "bytes": 1560
     },
     {
       "path": "src/lib/model.ts",
@@ -2794,8 +2944,8 @@
     },
     {
       "path": "src/scene/CameraRig.tsx",
-      "sha256": "dd87395d148c402aec8bdcbfaa106f6a76199df84c990a71fac924e74e45b7e8",
-      "bytes": 2172
+      "sha256": "77f311ce27fddbff08786d030178a5cdeecc31d3d562815fd9d6ab9dce8f1618",
+      "bytes": 3012
     },
     {
       "path": "src/scene/ComponentScene.tsx",
@@ -2848,9 +2998,59 @@
       "bytes": 6195
     },
     {
+      "path": "src/sphinx/catalog.ts",
+      "sha256": "23aa9a63d55a1ed0143b7c911d6319e4ccfcaddc4a29667d6c1cdb9ff2d80300",
+      "bytes": 3852
+    },
+    {
+      "path": "src/sphinx/geometry.ts",
+      "sha256": "cc893134050251e69d7ec431ef775a5cff69678f9aa73438d0244eb7e939db11",
+      "bytes": 6212
+    },
+    {
+      "path": "src/sphinx/references.ts",
+      "sha256": "7ced76d0523fcbbf4d77fa0d964386d7c672fc4871c69e4abf4ea22b7f490c63",
+      "bytes": 1813
+    },
+    {
+      "path": "src/sphinx/specifications.ts",
+      "sha256": "a472f15133064f761c6f823ea5133579ef5fa19e9e0335acf84bbdfd12b11b4c",
+      "bytes": 1474
+    },
+    {
+      "path": "src/sphinx/SpecificationsPanel.tsx",
+      "sha256": "a82aef948f3e10f183142c75ad7937383e7aafec2ecc614e68abdb99699ead2f",
+      "bytes": 736
+    },
+    {
+      "path": "src/sphinx/SphinxEntry.tsx",
+      "sha256": "e6f15401c9df01d610caa1b8198ddcf8cb9adc66fe2c184eaba9fa999d9342c8",
+      "bytes": 928
+    },
+    {
+      "path": "src/sphinx/SphinxMaterial.tsx",
+      "sha256": "f6b42f4eaf19f48b35a880bb13128c34fd09b4ffe9d4321941b56eb8b8e25211",
+      "bytes": 1790
+    },
+    {
+      "path": "src/sphinx/SphinxReferences.tsx",
+      "sha256": "ed9b274ee10551fbc00311e08f585d38caf65bf234eddde45119f6ca1303dd47",
+      "bytes": 2188
+    },
+    {
+      "path": "src/sphinx/SphinxScene.tsx",
+      "sha256": "ebb6f8fbe380b957e88c9bb0f4334de17bcdd0a01608106036bc6f478a28c627",
+      "bytes": 9977
+    },
+    {
+      "path": "src/sphinx/SphinxWorkbench.tsx",
+      "sha256": "c136a2c945c185390828646cc54f4122ced657b35a36adb160a589fe4e100965",
+      "bytes": 11544
+    },
+    {
       "path": "src/styles.css",
-      "sha256": "2c0079a241c3ddce9c1a5eb22b7476b142700f7743615b2587752ce3cc15c506",
-      "bytes": 71758
+      "sha256": "6c1fd541039e68fb98c83ac0ffca4864c62b4112c1481a0a6135c3c5e9877e7d",
+      "bytes": 78553
     },
     {
       "path": "src/version.ts",
@@ -2874,8 +3074,8 @@
     },
     {
       "path": "src/workstation/LeftRail.tsx",
-      "sha256": "c35ccb496befc1b1e0ed8013d2e9ece1b11e0266f1555831cc5f6c14d16102bc",
-      "bytes": 5023
+      "sha256": "8fc6dc284bbed45074f82abf4c638e8a023a3638cb377bd587925f4036c7b4c8",
+      "bytes": 5055
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
@@ -2894,8 +3094,8 @@
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "a567640187cecb8b07ff55cea5560557a87e05548a8cb978427e6e1c8b7623cd",
-      "bytes": 6535
+      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b",
+      "bytes": 8174
     },
     {
       "path": "src/workstation/types.ts",
@@ -2904,13 +3104,13 @@
     },
     {
       "path": "src/workstation/WorkstationFooter.tsx",
-      "sha256": "c4f8326be239ba26e1ca2ff44918d4395a41e684484fe781cb46f78cc4d82e2f",
-      "bytes": 447
+      "sha256": "dbe13daa45f7629dd60d715d03051501c9ec3bd2fb7edf14747866af7722aad4",
+      "bytes": 523
     },
     {
       "path": "src/workstation/WorkstationHeader.tsx",
-      "sha256": "e42d2927e2d5742d96b7aad4e34d327a3f6cf69df0063a35d3b37be3272d60f4",
-      "bytes": 2149
+      "sha256": "ca61c2f9bd4a0f6ee5071860f4273783e2b626d21e679dafb7ae57b3f5f422d9",
+      "bytes": 2392
     },
     {
       "path": "Start-GIZA.cmd",
@@ -2929,7 +3129,7 @@
     },
     {
       "path": "STRATA_MANIFEST.json",
-      "sha256": "d4ff62557dbf851fcbc9226ef333a09e060b5d196e9a5d8469204a481763b3fa",
+      "sha256": "745b1d55edd18a23f22da3be6e8b2aa80c8685ee124142f4f2df4e63675c5ba1",
       "bytes": 2928
     },
     {
@@ -2943,9 +3143,29 @@
       "bytes": 5576
     },
     {
+      "path": "tests/epigraphy-navigation.test.mjs",
+      "sha256": "ea7b3d2fb1038a6ad4fbda572413e756c0e4fd40c68760c9604b329ff8a87e4e",
+      "bytes": 2870
+    },
+    {
+      "path": "tests/epigraphy-storage.test.mjs",
+      "sha256": "82df40ce0e06a8746336d3afc369dc9c9d58a91e516e1ceead77c4080ee940e7",
+      "bytes": 8129
+    },
+    {
+      "path": "tests/epigraphy.test.mjs",
+      "sha256": "362ba5f76d826a4d315cf8fc5d6e35775250215dc26bae1af97ff6e8c3acf9e4",
+      "bytes": 9523
+    },
+    {
       "path": "tests/registration-repairs.test.mjs",
       "sha256": "082c7874073e48202161357ac64d8183053edd44137f30ea2ae113315e25797c",
       "bytes": 9950
+    },
+    {
+      "path": "tests/sphinx.test.mjs",
+      "sha256": "873fab69c49d5afd88c4dd8aa7a9fe92161fb0f777c2393509967815dca65da0",
+      "bytes": 6480
     },
     {
       "path": "tests/usability.test.mjs",
@@ -2969,13 +3189,13 @@
     },
     {
       "path": "UI_RESTORE_MANIFEST.json",
-      "sha256": "ffc18cc2a22307906d7ce181f23244470c2fba7d4a69f5a8d48f9ab29f66eebb",
+      "sha256": "55dc1ab2023bd70afcfbe96bb274548c37d1ae66a7814cd444a9a0bc4df079b3",
       "bytes": 2803
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "acf63051179d8524c5100b90daa90daf67768101f06d6a08c038df1c9d6ad9b5",
-      "bytes": 14905
+      "sha256": "abcc0dd8ef4f4b12ca90d2995c787496506aeb1e302fe5ab4cb1ca1bf06784a9",
+      "bytes": 31442
     },
     {
       "path": "verification/api-end-to-end.json",
@@ -3044,7 +3264,7 @@
     },
     {
       "path": "VISIBILITY_LAB_MANIFEST.json",
-      "sha256": "80ce46641c045b68f768385e51d6fda4675293673b9bc396d9cb3674345685c4",
+      "sha256": "82ba76237c840c66551ac682419028d42a45dc76b0f2be8ab7b4d91d249f44c7",
       "bytes": 2132
     },
     {
@@ -3054,7 +3274,7 @@
     },
     {
       "path": "WORKBENCH_MANIFEST.json",
-      "sha256": "40a16665c7c074e58af0ff614afa6546d7ec580d2f3086e9b6a5c38843c7fda6",
+      "sha256": "cc0d667a686d2aafff5b7d1720d9c31fd072d5e2500ad5fe320a39ceb5ef7d81",
       "bytes": 2292
     }
   ]

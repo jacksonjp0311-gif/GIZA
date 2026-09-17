@@ -5,16 +5,28 @@ import { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import * as THREE from 'three';
 import { VIEW_PRESETS } from './geometry';
 import type { ViewPreset } from './types';
+import type { Part } from '../lib/model';
+import { inspectionBounds } from '../lib/interiorInspection';
 
-export function CameraRig({ preset, revision, speed=1 }: { preset: ViewPreset; revision: number;speed?:number }) {
-  const { camera } = useThree();
+export function CameraRig({ preset, revision, speed=1,fitParts,explode=0 }: { preset: ViewPreset; revision: number;speed?:number;fitParts?:Part[];explode?:number }) {
+  const { camera,size } = useThree();
   const controls = useRef<OrbitControlsImpl>(null);
   const moving = useRef(true);
   const desired = VIEW_PRESETS[preset];
   const desiredPosition = useMemo(() => new THREE.Vector3(...desired.position), [desired]);
   const desiredTarget = useMemo(() => new THREE.Vector3(...desired.target), [desired]);
 
-  useEffect(() => { moving.current = true; }, [preset, revision]);
+  useEffect(() => {
+    moving.current = !fitParts;
+    if(!fitParts||!controls.current)return;
+    const bounds=inspectionBounds(fitParts,explode),cam=camera as THREE.PerspectiveCamera;
+    const vfov=THREE.MathUtils.degToRad(cam.fov),hfov=2*Math.atan(Math.tan(vfov/2)*size.width/size.height);
+    const distance=bounds.radius/Math.sin(Math.min(vfov,hfov)/2)*1.15;
+    controls.current.target.set(...bounds.target);
+    camera.position.copy(new THREE.Vector3(.85,-1.3,.7).normalize().multiplyScalar(distance).add(controls.current.target));
+    controls.current.update();
+    // Explosion does not refit on every slider move. Fit interior explicitly reframes it.
+  }, [preset, revision,fitParts,size.width,size.height]);
 
   useFrame((_, delta) => {
     if (!moving.current || !controls.current) return;
@@ -35,7 +47,7 @@ export function CameraRig({ preset, revision, speed=1 }: { preset: ViewPreset; r
       ref={controls}
       makeDefault
       maxDistance={1800}
-      minDistance={10}
+      minDistance={fitParts?.length ? .15 : 10}
       enableDamping
       dampingFactor={0.075}
       rotateSpeed={0.55}

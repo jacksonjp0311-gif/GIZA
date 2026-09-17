@@ -1,0 +1,84 @@
+.epigraphyLab .artifactOverview{grid-column:1/-1;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;color:#ecdab4;background:radial-gradient(ellipse at 85% 0,rgba(152,104,50,.11),transparent 55%),#080f13;font-size:14px;line-height:1.55;scrollbar-color:#8c7751 #0a141a}
+.epigraphyLab .artifactOverview *{box-sizing:border-box}
+.epigraphyLab .artifactPage{max-width:1440px;margin:0 auto;padding:28px clamp(18px,3vw,42px) 24px}
+.epigraphyLab .artifactOverview h2,.epigraphyLab .artifactOverview h3,.epigraphyLab .artifactOverview h4,.epigraphyLab .artifactOverview p,.epigraphyLab .artifactOverview figure{margin:0}
+.epigraphyLab .artifactOverview a{color:#f1ca80;text-underline-offset:3px}
+.epigraphyLab .artifactOverview a:hover{color:#fff0c7}
+.epigraphyLab .artifactOverview button{border:1px solid #76613e;border-radius:6px;background:#182026;color:#f4dcb0;padding:10px 14px;font:inherit;font-weight:650;line-height:1.3;cursor:pointer;min-height:42px;white-space:normal;text-align:left;transition:background-color .15s,border-color .15s}
+.epigraphyLab .artifactOverview button:hover{background:#293036;border-color:#e6bb6e}
+.epigraphyLab .artifactOverview button:focus-visible,.epigraphyLab .artifactOverview a:focus-visible{outline:3px solid #ffce76;outline-offset:4px}
+.epigraphyLab .artifactEyebrow{display:block;color:#d9ad66;font-size:11px;line-height:1.4;font-weight:750;letter-spacing:.13em}
+.epigraphyLab .artifactIntro{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:24px}
+.epigraphyLab .artifactIntro h2{font-size:clamp(26px,2.6vw,40px);line-height:1.18;font-weight:700;letter-spacing:-.025em;margin:8px 0 10px;color:#f8e6bf}
+.epigraphyLab .artifactIntro p{max-width:780px;color:#c3b69c;font-size:15px}
+.epigraphyLab .artifactIdentity{flex-shrink:0;border:1px solid #63553d;background:#171b1a;border-radius:6px;padding:11px 14px;color:#e3c88f;font-size:10px;letter-spacing:.08em;line-height:1.5;font-weight:750}
+.epigraphyLab .artifactIdentity span{display:block;font-size:12px;letter-spacing:0;color:#bdb39f;font-weight:400;margin-top:3px}
+.epigraphyLab .artifactHero{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(320px,1.15fr);gap:24px;align-items:start}
+.epigraphyLab .artifactPortrait{border:1px solid #3e4036;border-radius:10px;overflow:hidden;background:#0d171c}
+.epigraphyLab .artifactImageStage{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px;background:#0c1112}
+.epigraphyLab .artifactImageStage>img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain}
+.epigraphyLab .artifactImageBadge{position:absolute;z-index:1;top:12px;left:12px;right:12px;width:max-content;max-width:calc(100% - 24px);background:rgba(8,16,17,.94);color:#e1d7b7;border:1px solid #77795f;padding:6px 9px;font-size:10px;line-height:1.4;letter-spacing:.075em;font-weight:750;border-radius:4px}
+.epigraphyLab .artifactPortrait figcaption{display:flex;gap:16px;justify-content:space-between;padding:14px 16px;font-size:12px;line-height:1.6}
+.epigraphyLab .artifactPortrait figcaption>div{display:flex;flex-direction:column;gap:2px}
+.epigraphyLab .artifactPortrait figcaption strong{color:#f0dfbb;font-size:13px}
+.epigraphyLab .artifactPortrait figcaption span{color:#bdb198}
+.epigraphyLab .artifactPortrait figcaption a{white-space:nowrap}
+.epigraphyLab .artifactImageFallback{display:flex;align-items:center;justify-content:center;min-height:120px;padding:24px;color:#d8cbb0;text-align:center}
+.epigraphyLab .artifactOrientation{display:grid;gap:16px}
+.epigraphyLab .artifactBegin{padding:4px 0 8px}
+.epigraphyLab .artifactBegin h3{font-size:clamp(21px,2vw,28px);line-height:1.25;color:#f4e0b9;margin:8px 0 10px}
+.epigraphyLab .artifactBegin p{color:#cabda3;max-width:650px}
+.epigraphyLab .artifactActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.epigraphyLab .artifactOverview .artifactPrimary{background:#e9ba6b;border-color:#f2d398;color:#211a10;font-weight:750;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.epigraphyLab .artifactOverview .artifactPrimary:hover{background:#f4d293;color:#15110b}
+.epigraphyLab .artifactDimension{border:1px solid #635338;background:linear-gradient(120deg,rgba(163,113,43,.095),rgba(21,30,32,.8));border-radius:8px;padding:18px}
+.epigraphyLab .artifactDimensionHeader{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.epigraphyLab .artifactDimensionHeader h3,.epigraphyLab .artifactNotebook h3{font-size:15px;color:#f0ddba}
+.epigraphyLab .artifactDimensionHeader>span{font-size:9px;font-weight:750;letter-spacing:.065em;color:#d5b77e;border:1px solid #645335;border-radius:3px;padding:3px 6px}
+.epigraphyLab .artifactDimensionValue{display:flex;align-items:baseline;gap:14px;margin:5px 0 7px}
+.epigraphyLab .artifactDimensionValue>strong{font-size:42px;line-height:1.2;letter-spacing:-.025em;color:#f7d795;font-variant-numeric:tabular-nums}
+.epigraphyLab .artifactDimensionValue small{font-size:20px;font-weight:500}
+.epigraphyLab .artifactDimensionValue>span{font-size:12px;color:#c4b397}
+.epigraphyLab .artifactDimension>p{color:#c9bda4;font-size:13px;margin-bottom:8px}
+.epigraphyLab .artifactDimension>a{font-size:12px}
+.epigraphyLab .artifactConflict{border-top:1px solid #49402e;padding-top:11px;margin-top:12px}
+.epigraphyLab .artifactConflict>strong{font-size:12px;color:#ebc47d}
+.epigraphyLab .artifactConflict p{font-size:12px;color:#c6b89d;margin-top:4px}
+.epigraphyLab .artifactNotebook{border:1px solid #39423e;border-radius:8px;background:#10191d;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:start}
+.epigraphyLab .artifactNotebook>div>p{font-size:12px;color:#b8b09d;margin-top:4px}
+.epigraphyLab .artifactNotebook dl{margin:0;display:flex;gap:24px}
+.epigraphyLab .artifactNotebook dl>div{display:flex;flex-direction:column-reverse}
+.epigraphyLab .artifactNotebook dt{font-size:10px;color:#b8af9c;white-space:nowrap}
+.epigraphyLab .artifactNotebook dd{margin:0;font-size:24px;line-height:1.2;font-weight:700;color:#f0d69f;font-variant-numeric:tabular-nums}
+.epigraphyLab .artifactNotebook .artifactCaution{grid-column:1/-1;border-top:1px solid #333d36;padding-top:10px;font-size:11px;color:#bcb19b}
+.epigraphyLab .artifactPathways,.epigraphyLab .artifactSources{margin-top:32px}
+.epigraphyLab .artifactSectionHeading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:15px}
+.epigraphyLab .artifactSectionHeading h3{font-size:21px;line-height:1.3;color:#f3dfb9;margin-top:5px}
+.epigraphyLab .artifactSectionHeading>p{max-width:420px;font-size:12px;color:#b9af9a}
+.epigraphyLab .artifactPathGrid,.epigraphyLab .artifactSourceGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.epigraphyLab .artifactPath{display:flex;flex-direction:column;align-items:flex-start;gap:11px;border:1px solid #3c4138;border-top:3px solid #718c79;background:#111b1f;border-radius:7px;padding:18px}
+.epigraphyLab .artifactLayer{font-size:10px;line-height:1.5;letter-spacing:.07em;font-weight:750;color:#b6c8ab}
+.epigraphyLab .artifactPath h4{font-size:17px;line-height:1.35;font-weight:650;color:#f0dfbc}
+.epigraphyLab .artifactPath p{color:#c0b49a;font-size:13px;margin-bottom:5px}
+.epigraphyLab .artifactPath button{margin-top:auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px}
+.epigraphyLab .artifactPathInterpretation{border-top-color:#a29777}
+.epigraphyLab .artifactPathInterpretation .artifactLayer{color:#d0c5aa}
+.epigraphyLab .artifactPathPrediction{border-top-color:#d19b4c;background:#1a1b18}
+.epigraphyLab .artifactPathPrediction .artifactLayer{color:#edbc6e}
+.epigraphyLab .artifactSource{border:1px solid #364139;border-radius:7px;background:#0e181d;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.epigraphyLab .artifactOverview .artifactSourceOpen{display:flex;gap:14px;align-items:center;padding:14px;border:0;border-bottom:1px solid #303b33;border-radius:0;background:#152025;width:100%}
+.epigraphyLab .artifactOverview .artifactSourceOpen:hover{background:#222d2e}
+.epigraphyLab .artifactSourceOpen>img{display:block;width:76px;height:90px;object-fit:cover;border-radius:3px;border:1px solid #716345;flex-shrink:0}
+.epigraphyLab .artifactSourceOpen>.artifactImageFallback{font-size:10px;min-height:90px;width:76px;padding:5px;flex-shrink:0}
+.epigraphyLab .artifactSourceOpen>span:not(.artifactImageFallback){display:flex;flex-direction:column;gap:6px;min-width:0}
+.epigraphyLab .artifactSourceOpen small{font-size:10px;color:#b6b39d;font-weight:450}
+.epigraphyLab .artifactSourceOpen strong{font-size:14px;color:#edd5a5;line-height:1.4;font-weight:650}
+.epigraphyLab .artifactSourceOpen>span>span{font-size:11px;color:#dfb977;font-weight:500}
+.epigraphyLab .artifactSource>p{padding:12px 14px;color:#bfb49d;font-size:12px;flex:1}
+.epigraphyLab .artifactSource footer{display:flex;gap:5px 12px;flex-wrap:wrap;padding:0 14px 14px;font-size:10px;color:#aaa28e}
+.epigraphyLab .artifactSource footer>span{flex-basis:100%}
+.epigraphyLab .artifactFooterNote{border-top:1px solid #343b32;padding-top:16px;margin-top:26px!important;font-size:11px;color:#b8ae97}
+@media(max-width:1050px){.epigraphyLab .artifactHero{grid-template-columns:minmax(235px,.8fr) minmax(310px,1.2fr);gap:18px}.epigraphyLab .artifactIdentity{display:none}.epigraphyLab .artifactNotebook{grid-template-columns:1fr}.epigraphyLab .artifactNotebook dl{gap:35px}.epigraphyLab .artifactPortrait figcaption{flex-direction:column;gap:8px}.epigraphyLab .artifactPortrait figcaption>div:last-child{flex-direction:row;flex-wrap:wrap;gap:12px}.epigraphyLab .artifactPath{padding:14px}.epigraphyLab .artifactSectionHeading{align-items:start;gap:18px}.epigraphyLab .artifactSectionHeading>p{max-width:300px}.epigraphyLab .artifactSourceOpen>img{width:58px;height:78px}.epigraphyLab .artifactOverview .artifactSourceOpen{gap:9px;padding:10px}}
+@media(max-width:760px){.epigraphyLab .artifactPage{padding:22px 16px}.epigraphyLab .artifactHero{grid-template-columns:1fr}.epigraphyLab .artifactImageStage{min-height:260px}.epigraphyLab .artifactImageStage>img{max-height:460px}.epigraphyLab .artifactPortrait figcaption{flex-direction:row}.epigraphyLab .artifactPortrait figcaption>div:last-child{flex-direction:column;gap:2px}.epigraphyLab .artifactOrientation{gap:15px}.epigraphyLab .artifactBegin{padding-top:5px}.epigraphyLab .artifactPathGrid{grid-template-columns:1fr}.epigraphyLab .artifactPath{gap:8px}.epigraphyLab .artifactPath button{margin-top:5px}.epigraphyLab .artifactSourceGrid{grid-template-columns:1fr}.epigraphyLab .artifactSourceOpen>img{width:68px;height:80px}.epigraphyLab .artifactOverview .artifactSourceOpen{padding:13px;gap:14px}.epigraphyLab .artifactSectionHeading{flex-direction:column;gap:8px}.epigraphyLab .artifactSectionHeading>p{max-width:none}.epigraphyLab .artifactNotebook{grid-template-columns:1fr auto}.epigraphyLab .artifactPathways,.epigraphyLab .artifactSources{margin-top:26px}}
+@media(max-width:440px){.epigraphyLab .artifactIntro h2{font-size:26px}.epigraphyLab .artifactIntro p{font-size:14px}.epigraphyLab .artifactNotebook{grid-template-columns:1fr}.epigraphyLab .artifactPortrait figcaption{flex-direction:column}.epigraphyLab .artifactPortrait figcaption>div:last-child{flex-direction:row;flex-wrap:wrap;gap:12px}.epigraphyLab .artifactActions{flex-direction:column}.epigraphyLab .artifactActions button{width:100%}.epigraphyLab .artifactDimensionValue{flex-wrap:wrap;gap:4px 12px}}
+@media(prefers-reduced-motion:reduce){.epigraphyLab .artifactOverview button{transition:none}}

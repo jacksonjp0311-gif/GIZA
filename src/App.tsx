@@ -12,12 +12,15 @@ import type { InspectorTab, LayerKey, QuickViewItem } from './workstation/types'
 import type { ActiveSimulation } from './simlab/types';
 import type { AtlasMapId } from './maps/types';
 import type { DetailContext } from './lib/componentDetails';
+import { SphinxWorkbench } from './sphinx/SphinxEntry';
 
 function isInternal(part: Part) {
   return part.id.startsWith('part.upper.') || part.id.startsWith('part.lower.') || part.id.startsWith('part.burial.') || part.id.startsWith('part.sarcophagus.');
 }
 
 export default function App() {
+  const [sphinx,setSphinx]=useState<boolean|'stela'>(false);
+  const [workspaceRevision,setWorkspaceRevision]=useState(0);
   const [model, setModel] = useState<ModelBundle | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [initial] = useState(loadWorkspaceState);
@@ -42,6 +45,7 @@ export default function App() {
   const [detail, setDetail] = useState<{id:string;context:DetailContext;revision:number}|null>(null);
   const [activeQuickView,setActiveQuickView]=useState<string|null>('Full Pyramid');
   const openDetail = useCallback((id:string, context:DetailContext='ROOM') => {
+    setSphinx(false);
     setActiveQuickView(null);
     setDetail(v=>({id,context,revision:(v?.revision??0)+1}));
     setSelectedId(id);setSelectedStone(null);setTab('OVERVIEW');setSurface('MODEL');
@@ -64,6 +68,8 @@ export default function App() {
   }, [selectedId, explode, mode, sectionAxis, sectionPos, viewPreset, animationSpeed, showLabels, showDimensions, layers]);
 
   const resetWorkspace = () => {
+    setWorkspaceRevision(v=>v+1);
+    setSphinx(false);
     setSurface('MODEL');setFilter('');
     setActiveQuickView('Full Pyramid');
     setDetail(null);
@@ -84,6 +90,7 @@ export default function App() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
+      if(document.querySelector('[data-sphinx-workbench], [data-epigraphy]'))return;
       if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();document.getElementById('component-search')?.focus();return;}
       if(event.ctrlKey||event.metaKey||event.altKey)return;
       const tag = (event.target as HTMLElement | null)?.tagName;
@@ -153,6 +160,7 @@ export default function App() {
   const quickViews = useMemo<QuickViewItem[]>(() => {
     if (!model) return [];
     const defs = [
+      { label:'Sphinx',id:'preview.sphinx',action:()=>setSphinx(true) },
       { label: 'Full Pyramid', id: 'part.pyramid.khafre', action: () => { setExplode(0); setSectionAxis('OFF'); activateView('PERSPECTIVE'); selectPart('part.pyramid.khafre'); } },
       { label: 'Exploded', id: 'part.pyramid.khafre', action: () => { setExplode(1.75); activateView('PERSPECTIVE'); selectPart('part.pyramid.khafre'); } },
       { label: 'Interior', id: 'part.burial.chamber', action: () => openDetail('part.burial.chamber') },
@@ -180,14 +188,16 @@ export default function App() {
   return (
     <div className="app nexusEdge">
       <WorkstationHeader
-        modelTitle={activeQuickView ? `KHAFRE / ${activeQuickView.toUpperCase()}` : model.parts.find(p=>p.id===detail?.id)?.name ?? 'KHAFRE / PYRAMID CORE'}
+        sphinx={!!sphinx}
+        modelTitle={sphinx?'GIZA / THE GREAT SPHINX':activeQuickView ? `KHAFRE / ${activeQuickView.toUpperCase()}` : model.parts.find(p=>p.id===detail?.id)?.name ?? 'KHAFRE / PYRAMID CORE'}
         model={model}
         surface={surface}
-        onSurface={setSurface}
+        onSurface={v=>{setSurface(v);if(v!=='MODEL')setSphinx(false);}}
       />
 
-      <main className="workspace edgeWorkspace">
+      {sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className="workspace edgeWorkspace">
         <LeftRail
+          onOpenSphinx={()=>setSphinx(true)}
           parts={model.parts}
           onOpenPart={id=>openDetail(id,id.startsWith('part.sarcophagus.')||id.startsWith('part.burial.')?'ROOM':'OBJECT')}
           filter={filter}
@@ -200,10 +210,12 @@ export default function App() {
           setViewPreset={activateView}
           onReset={resetWorkspace}
           onOpenAtlas={id => { setAtlasFocus(id); setSurface('ATLAS'); }}
-          onOpenModel={() => {setSurface('MODEL');setDetail(null);setActiveQuickView('Full Pyramid');}}
+          onOpenModel={() => {setWorkspaceRevision(v=>v+1);setSurface('MODEL');setDetail(null);setActiveQuickView('Full Pyramid');}}
         />
 
         <SpatialViewport
+          onArtifact={()=>{setSurface('MODEL');setSphinx('stela');}}
+          key={workspaceRevision}
           animationSpeed={animationSpeed}
           showDimensions={showDimensions}
           setShowDimensions={setShowDimensions}
@@ -231,7 +243,7 @@ export default function App() {
           activeSimulation={activeSimulation}
           uncertainty={layers.measurements && mode === 'ENGINEER' ? selectedUncertainty : null}
           activeQuickView={activeQuickView}
-          quickViews={quickViews.map(v => ({ ...v, action: () => { setSurface('MODEL');setDetail(null); v.action();setActiveQuickView(v.label); } }))}
+          quickViews={quickViews.map(v => ({ ...v, action: () => { setSphinx(false);setSurface('MODEL');setDetail(null); v.action();setActiveQuickView(v.label); } }))}
           onSelectPart={id => selectPart(id)}
           onSelectStone={selectStone}
           surface={surface}
@@ -261,9 +273,9 @@ export default function App() {
           toggleLayer={toggleLayer}
           onSelectPart={id => selectPart(id)}
         />
-      </main>
+      </main>}
 
-      <WorkstationFooter keyStructures={model.parts.length} />
+      <WorkstationFooter keyStructures={sphinx?10:model.parts.length} sphinx={!!sphinx}/>
     </div>
   );
 }

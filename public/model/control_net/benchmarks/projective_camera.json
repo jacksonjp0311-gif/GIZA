@@ -542,5 +542,5 @@
   },
   "pass": true,
   "guard": "This benchmark validates an uncalibrated projective camera matrix only. It does not validate focal length, distortion, metric Euclidean pose, or any real Khafre photograph.",
-  "created_at": "2026-09-17T11:16:56.203Z"
+  "created_at": "2026-09-17T16:54:24.213Z"
 }

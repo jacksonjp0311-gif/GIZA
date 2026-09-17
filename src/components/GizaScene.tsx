@@ -17,10 +17,11 @@ export { buildStoneCells } from '../scene/geometry';
 export function GizaScene({
   parts, stoneField, showStoneField, explode, selectedId, selectedStone, showUnverified, mode, sectionAxis, sectionPos, animationSpeed,
   viewPreset = 'PERSPECTIVE', cameraRevision = 0, xray = false, showLabels = true, showFieldFrame = false, uncertainty = null, simulationVisible = false, activeSimulation = 'GRAVITY', gravityResult = null, acousticResult = null, strataResult = null,
-  onSelect, onSelectStone,
+  onSelect, onSelectStone,inspection=false,
 }: {
   parts: Part[]; stoneField: StoneField; showStoneField: boolean; explode: number; selectedId: string | null;
   animationSpeed:number;
+  inspection?:boolean;
   selectedStone?: StoneCellInfo | null; showUnverified: boolean; mode: UiMode; sectionAxis: SectionAxis; sectionPos: number;
   viewPreset?: ViewPreset; cameraRevision?: number; xray?: boolean; showLabels?: boolean; showFieldFrame?: boolean; uncertainty?: UncertaintyRecord | null; simulationVisible?: boolean; activeSimulation?: ActiveSimulation; gravityResult?: GravityResult | null; acousticResult?: AcousticResult | null; strataResult?: StrataResult | null;
   onSelect: (id: string | null) => void;
@@ -48,7 +49,7 @@ export function GizaScene({
       <directionalLight position={[-360, 260, 180]} intensity={1.05} color="#d7e4df" />
       <pointLight position={[0, -80, 210]} intensity={1.2} distance={760} color="#d99a4f" />
       <pointLight position={[-180, 210, 110]} intensity={0.9} distance={680} color="#e6bd77" />
-      <Grid
+      {!inspection&&<Grid
         args={[820, 820]}
         position={[0, 0, -4.5]}
         rotation={[Math.PI / 2, 0, 0]}
@@ -62,7 +63,7 @@ export function GizaScene({
         fadeStrength={2.4}
         infiniteGrid={false}
         followCamera={false}
-      />
+      />}
 
       <MasonryLayer
         field={stoneField}
@@ -89,7 +90,7 @@ export function GizaScene({
 
       <FieldLayer visible={showFieldFrame} selectedPart={selectedPart} uncertainty={uncertainty} explode={explode} />
       <SimulationLayer visible={simulationVisible} active={activeSimulation} gravity={gravityResult} acoustic={acousticResult} strata={strataResult} />
-      <CameraRig preset={viewPreset} revision={cameraRevision} speed={animationSpeed}/>
+      <CameraRig preset={viewPreset} revision={cameraRevision} speed={animationSpeed} fitParts={inspection?parts:undefined} explode={explode}/>
     </Canvas>
   );
 }
