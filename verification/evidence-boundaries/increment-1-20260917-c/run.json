@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "increment-1-20260917-c",
+  "createdAt": "2026-09-17T23:04:05.113Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 0,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

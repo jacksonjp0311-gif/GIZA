@@ -5,6 +5,7 @@
   "codename": "REGISTRATION WORKBENCH",
   "purpose": "Continue the runnable local workbench and repaired shared registration engine, preserving 3-D explorer and evidence history.",
   "read_order": [
+    "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
     "README.md",
     "CONTINUITY.json",
     "AGENTS.md",

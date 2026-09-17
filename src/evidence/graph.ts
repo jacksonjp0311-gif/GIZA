@@ -1,4 +1,5 @@
 import type { EvidenceAssembly } from './types';
+import {assertSafeDocument,validateObservation} from './observationContract';
 
 export type EvidenceNodeKind = 'FEATURE' | 'OBSERVATION' | 'SOURCE' | 'SOURCE_BYTES' | 'REGISTRATION' | 'FRAME' | 'TRANSFORM' | 'UNCERTAINTY' | 'GEOMETRY' | 'ASSEMBLY' | 'CONSTRAINT' | 'EXPERIMENT' | 'FINDING' | 'RECEIPT';
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
@@ -63,7 +64,7 @@ export function buildEvidenceGraph(assembly: EvidenceAssembly): SpatialEvidenceG
   }
   for (const feature of assembly.features) {
     add(feature.id, 'FEATURE', feature.label, feature.authority, feature);
-    add(`geometry:${feature.id}`, 'GEOMETRY', feature.label, feature.authority, { geometry: feature.geometry, frameId: feature.frameId, derivation: feature.derivation, unknowns: feature.unknowns });
+    add(`geometry:${feature.id}`, 'GEOMETRY', feature.label, feature.coordinateAuthority==='UNKNOWN'?null:feature.authority==='HYPOTHESIS'?'HYPOTHESIS':'RECONSTRUCTED', { geometry: feature.geometry, frameId: feature.frameId, coordinateAuthority:feature.coordinateAuthority, scalarAuthority:feature.authority, surfaceAuthority:feature.geometry.kind==='unknown'?'UNKNOWN':'RECONSTRUCTED', placementAuthority:'RECONSTRUCTED_OR_UNRESOLVED_SEE_TRANSFORMS', reviewStatus:'NOT_AUTHENTICATED', derivation: feature.derivation, unknowns: feature.unknowns });
     add(`uncertainty:${feature.id}`, 'UNCERTAINTY', 'Feature uncertainty', null, feature.uncertainty);
     edge(feature.id, `geometry:${feature.id}`, 'REPRESENTED_BY');
     edge(feature.id, `uncertainty:${feature.id}`, 'HAS_UNCERTAINTY');
@@ -87,6 +88,7 @@ export function buildEvidenceGraph(assembly: EvidenceAssembly): SpatialEvidenceG
 }
 
 export function parseEvidenceGraph(value: unknown): SpatialEvidenceGraph {
+  assertSafeDocument(value,5_000_000);
   const serialized = canonicalJson(value);
   if (new TextEncoder().encode(serialized).length > 5_000_000) throw new Error('Evidence graph exceeds 5 MB');
   const graph = JSON.parse(serialized) as SpatialEvidenceGraph;
@@ -97,21 +99,33 @@ export function parseEvidenceGraph(value: unknown): SpatialEvidenceGraph {
     ids.add(node.id);
   }
   if (!ids.has(graph.assemblyId) || !ids.has(graph.authoritativeFrameId)) throw new Error('Graph lacks assembly/frame identity');
+  const sources=new Set(graph.nodes.filter(n=>n.kind==='SOURCE').map(n=>n.id));
+  for(const node of graph.nodes)if(node.kind==='OBSERVATION'){validateObservation(node.data,sources);if(node.id!==node.data.id||node.authority!==node.data.authority)throw new Error('Observation graph identity/authority mismatch');}
   for (const edge of graph.edges) if (!edge || !ids.has(edge.from) || !ids.has(edge.to) || typeof edge.relationship !== 'string' || !edge.relationship) throw new Error('Dangling evidence relationship');
   return graph;
 }
 
 /** Directed by default: a feature does not inherit a neighbouring feature's evidence. */
-export function traverseEvidence(graph: SpatialEvidenceGraph, startId: string, maxDepth = 8): { nodes: EvidenceNode[]; edges: EvidenceEdge[] } {
+export type EvidenceQueryPurpose='DIRECT_SUPPORT'|'DERIVED_DEPENDENCIES'|'PLACEMENT'|'RELATED_CONTEXT';
+export function traverseEvidence(graph: SpatialEvidenceGraph, startId: string, maxDepth = 8, purpose:EvidenceQueryPurpose='DIRECT_SUPPORT'): { nodes: EvidenceNode[]; edges: EvidenceEdge[] } {
   if (!graph.nodes.some(n => n.id === startId)) return { nodes: [], edges: [] };
   if (!Number.isInteger(maxDepth) || maxDepth < 0 || maxDepth > 40) throw new Error('Invalid traversal depth');
   const visited = new Set([startId]); let frontier = [startId];
+  const byId=new Map(graph.nodes.map(n=>[n.id,n]));
+  const allowed=(e:EvidenceEdge)=>{
+    if(purpose==='RELATED_CONTEXT')return true;
+    const target=byId.get(e.to)!;
+    if(['CITES','HAS_UNCERTAINTY','HAS_CUSTODY_STATE','IMAGE_METRIC_AUTHORITY_STATE','REGISTRATION_REQUIRES_BYTES'].includes(e.relationship))return true;
+    if(e.relationship==='CONSTRAINED_BY')return target.kind==='OBSERVATION';
+    if(purpose!=='DIRECT_SUPPORT'&&e.relationship==='COMPUTED_FROM')return true;
+    return purpose==='PLACEMENT'&&(['REPRESENTED_BY','EXPRESSED_IN','TARGET_FRAME'].includes(e.relationship)||(e.relationship==='TRANSFORMS_BY'&&target.data.scope==='AUTHORITATIVE_RECONSTRUCTION'));
+  };
   for (let depth = 0; depth < maxDepth && frontier.length; depth++) {
     const next: string[] = [];
-    for (const id of frontier) for (const edge of graph.edges) if (edge.from === id && !visited.has(edge.to)) { visited.add(edge.to); next.push(edge.to); }
+    for (const id of frontier) for (const edge of graph.edges) if (edge.from === id && allowed(edge) && !visited.has(edge.to)) { visited.add(edge.to); next.push(edge.to); }
     frontier = next;
   }
-  return { nodes: graph.nodes.filter(n => visited.has(n.id)), edges: graph.edges.filter(e => visited.has(e.from) && visited.has(e.to)) };
+  return { nodes: graph.nodes.filter(n => visited.has(n.id)), edges: graph.edges.filter(e => allowed(e)&&visited.has(e.from) && visited.has(e.to)) };
 }
 
 /** Append-only graph extension; collisions are errors, never replacements. */

@@ -1,5 +1,11 @@
 # v0.10.12 — REGISTRATION WORKBENCH
 
+## Unreleased evidence-boundary evolution
+
+- Shared strict observation and quantity validation; explicit status authority; direct support separated from context; reconstructed coordinates retained in graph geometry.
+- Versioned v2 computation receipts with dependency fingerprints, historical replay and current-review gating. Historical v1 receipts remain unchanged.
+- Increment-1 full validation: 164 passing tests. See `docs/EVIDENCE_BOUNDARY_EVOLUTION.md`; later spatial, persistence, browser and source-campaign increments are still in progress.
+
 ## Evidence Assembly contract v1 — 2026-09-17
 
 - Added a lazy, full-width Khafre sarcophagus/lid/chamber workspace with exact feature evidence, typed reality layers, canonical point/angle tools, orthogonal/oblique sections/caps, source references, explicit uncertainty and session camera bookmarks.

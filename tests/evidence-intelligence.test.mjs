@@ -41,7 +41,8 @@ test('feature evidence graph reaches exact observation, locator, source and expl
   assert.ok(traversed.nodes.some(n => n.kind === 'SOURCE' && n.id === 'src.petrie1883'));
   assert.ok(traversed.nodes.some(n => n.kind === 'SOURCE_BYTES' && n.data.sha256 === null && n.data.verification === 'NOT_REHASHED'));
   assert.ok(traversed.nodes.some(n => n.kind === 'REGISTRATION' && n.data.residual === null));
-  assert.ok(traversed.nodes.some(n => n.kind === 'TRANSFORM'));
+  assert.ok(!traversed.nodes.some(n => n.kind === 'TRANSFORM'));
+  assert.ok(traverseEvidence(graph,feature.id,8,'PLACEMENT').nodes.some(n=>n.kind==='TRANSFORM'));
   assert.ok(traversed.nodes.some(n => n.kind === 'UNCERTAINTY'));
 });
 
@@ -120,7 +121,7 @@ test('review produces an append-only nonauthoritative finding and traversable gr
   assert.equal(finding.payload.data.geometryAuthority, 'NONE');
   assert.equal(canonicalJson(experiment), original);
   const expanded = graphWithReceipt(graphWithReceipt(graph, experiment), finding);
-  const chain = traverseEvidence(expanded, 'feature.coffer.base');
+  const chain = traverseEvidence(expanded, 'feature.coffer.base',8,'RELATED_CONTEXT');
   assert.ok(chain.nodes.some(n => n.kind === 'EXPERIMENT'));
   assert.ok(chain.nodes.some(n => n.kind === 'FINDING'));
   assert.ok(chain.nodes.some(n => n.id === finding.id));

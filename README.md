@@ -2,6 +2,8 @@
 
 ## Current repository status — 2026-09-17
 
+Evidence-boundary hardening is in progress; see [ordered implementation checkpoints](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Historical results below remain unchanged. New experiment receipts distinguish current calculations from historical snapshots.
+
 ### Evidence Assembly / 01 — Khafre sarcophagus
 
 Open **Sarcophagus**, **Sarcophagus Lid**, **Burial Chamber** or **Interior** in Quick Views for the new full-width Evidence Assembly. Measure exact anchors or picked points, inspect orthogonal/oblique sections and hollow-body caps, compare preserved legacy coordinates, traverse feature-level evidence, and review deterministic Investigation Candidates into immutable computation/finding receipts. Reality layers are independently controlled. Selection and lid inspection motion never enter physical measurements or exports.

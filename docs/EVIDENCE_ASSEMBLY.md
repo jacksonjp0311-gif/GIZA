@@ -1,5 +1,7 @@
 # Khafre Evidence Assembly / contract v1
 
+The [boundary evolution addendum](EVIDENCE_BOUNDARY_EVOLUTION.md) documents shared observation validation, quantity metadata, query purpose and v2 receipt applicability. The original contract and historical results below remain preserved.
+
 Implemented 2026-09-17 in place. The sealed product identity remains 0.10.12; the compile-first launcher produces a distinct development build. This module is `giza.evidence-assembly.v1`, not a revision of archaeological measurements. Historical module versions and failed registration receipts remain historical.
 
 ## Entry and scope

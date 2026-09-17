@@ -3,7 +3,7 @@ export type RealityAuthority = 'OBSERVED' | 'RECONSTRUCTED' | 'HYPOTHESIS';
 export type Vec3 = [number, number, number];
 /** Row-major affine matrix, applied to column vectors. Translation is indices 3, 7, 11. */
 export type Matrix4 = [number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number];
-export interface Uncertainty { status: 'KNOWN' | 'UNKNOWN'; value: number | null; unit: string; note: string }
+export interface Uncertainty { status: 'KNOWN' | 'UNKNOWN'; value: number | null; unit: string; note: string; interpretation?:'UNSPECIFIED_MAGNITUDE'|'BOUND'|'STANDARD_UNCERTAINTY'|'ROUNDING'|'UNKNOWN' }
 export interface SpatialFrame {
   id: string; label: string; units: 'm'; axes: {x:string;y:string;z:string}; handedness: 'RIGHT_HANDED';
   datum: string; authority: RealityAuthority; status: 'DEFINED' | 'UNRESOLVED';
@@ -14,6 +14,7 @@ export interface SpatialTransform {
   authority: RealityAuthority; observationIds: string[]; uncertainty: Uncertainty; derivation: string;
 }
 export interface EvidenceObservation {
+  quantity?:import('./observationContract').ValidatedQuantity;
   id: string; sourceId: string; locator: string; value: number | string | null; unit: string | null;
   nativeValue: number | string | null; nativeUnit: string | null;
   uncertainty: Uncertainty; authority: RealityAuthority; derivation: string; status: string;

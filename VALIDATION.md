@@ -1,5 +1,9 @@
 # GIZA NEXUS 0.10.12 — Software validation
 
+## Evidence-boundary follow-up (in progress)
+
+See [checkpoint ledger](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Full check `increment-1-20260917-b` passed 163 tests; preceding failed run is preserved. Subsequent work requires fresh validation. These numerical/contract checks are not browser or performance certification.
+
 ## Evidence Assembly / 01 evolution — 2026-09-17
 
 - Implemented the sarcophagus/lid/burial-chamber Evidence Assembly in place: explicit rigid frames, 50 features, 39 observations, a 260-node/520-edge evidence graph and 13 deterministic Investigation Candidates. Canonical archaeological files are unchanged. The comparison-only adapter discloses legacy/detail orientation, rim elevation and position disagreements; it cannot resolve authoritative measurements. Actual lid placement and assembly-to-monument/site ties remain UNKNOWN.

@@ -1,4 +1,5 @@
 import type {BoxGeometry,CanonicalPoint,EvidenceAssembly,Matrix4,SectionPlane,SpatialFrame,SpatialResult,SpatialTransform,Uncertainty,Vec3} from './types';
+import {assertSafeDocument,validateObservation} from './observationContract';
 
 export const unknownUncertainty=(note='No uncertainty supplied by the cited record.'):Uncertainty=>({status:'UNKNOWN',value:null,unit:'m',note});
 export const identityMatrix=():Matrix4=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
@@ -82,7 +83,9 @@ export function polygonArea(points:Vec3[]):number {
 }
 /** Fail-closed trust boundary; imports do not resolve unknown datums or promote authority. */
 export function importCanonicalAssembly(input:unknown):EvidenceAssembly {
+  if(typeof input==='string'&&new TextEncoder().encode(input).length>8_000_000)throw new Error('Assembly exceeds 8 MB');
   const data=typeof input==='string'?JSON.parse(input):input;
+  assertSafeDocument(data);
   if(!data||typeof data!=='object'||Array.isArray(data))throw new Error('Invalid assembly document');
   const a=data as EvidenceAssembly;
   if(a.schemaVersion!=='giza.evidence-assembly.v1'||typeof a.id!=='string'||typeof a.title!=='string')throw new Error('Invalid assembly identity/version');
@@ -103,7 +106,7 @@ export function importCanonicalAssembly(input:unknown):EvidenceAssembly {
     uncertainty(t.uncertainty);authority(t.authority);
   }
   for(const s of a.sources)if(typeof s.title!=='string'||typeof s.url!=='string'||(s.url!==''&&!/^https?:\/\//i.test(s.url))||s.byteStatus!=='UNKNOWN')throw new Error('Invalid source metadata / unsupported custody claim');
-  for(const o of a.observations){if(!sourceIds.has(o.sourceId)||typeof o.locator!=='string'||(typeof o.value==='number'&&!Number.isFinite(o.value)))throw new Error('Invalid observation');uncertainty(o.uncertainty);authority(o.authority);}
+  for(const o of a.observations)validateObservation(o,sourceIds);
   for(const f of a.features){
     if(!ids.has(f.frameId)||!Array.isArray(f.observationIds)||f.observationIds.some(id=>!observationIds.has(id)))throw new Error('Invalid feature binding');
     if(f.value!==null&&(typeof f.value!=='number'||!Number.isFinite(f.value)))throw new Error('Invalid feature scalar');

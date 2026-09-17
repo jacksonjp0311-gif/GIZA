@@ -2,10 +2,11 @@ import { appendEvidenceNodes, canonicalJson, parseEvidenceGraph } from './graph'
 import type { JsonValue, SpatialEvidenceGraph } from './graph';
 import type { InvestigationCandidate } from './intelligence';
 import type { EvidenceFeature, RealityAuthority } from './types';
+import {dependencyFingerprint,EVALUATION_RULE} from './dependencies';
 
 export interface ReceiptContext { version: string; commit: string; environment: string; createdAt: string }
 export interface EvidenceReceipt {
-  schema: 'giza.evidence-receipt.v1'; id: string; kind: 'EXPERIMENT' | 'FINDING' | 'PROMOTION'; sha256: string;
+  schema: 'giza.evidence-receipt.v1'|'giza.evidence-receipt.v2'; id: string; kind: 'EXPERIMENT' | 'FINDING' | 'PROMOTION'; sha256: string;
   payload: { context: ReceiptContext; assemblyId: string; frameId: string; authority: RealityAuthority; data: Record<string, JsonValue> };
 }
 export interface ResearchReview { reviewer: string; outcome: 'SUPPORTED' | 'FALSIFIED' | 'INCONCLUSIVE'; note: string }
@@ -40,8 +41,8 @@ export async function sha256Json(value: unknown): Promise<string> {
   return Array.from(new Uint8Array(digest), v => v.toString(16).padStart(2, '0')).join('');
 }
 async function seal(kind: EvidenceReceipt['kind'], payload: EvidenceReceipt['payload']): Promise<EvidenceReceipt> {
-  const sha256 = await sha256Json({ schema: 'giza.evidence-receipt.v1', kind, payload });
-  const receipt: EvidenceReceipt = { schema: 'giza.evidence-receipt.v1', id: `receipt:${kind.toLowerCase()}:${sha256}`, kind, sha256, payload };
+  const sha256 = await sha256Json({ schema: 'giza.evidence-receipt.v2', kind, payload });
+  const receipt: EvidenceReceipt = { schema: 'giza.evidence-receipt.v2', id: `receipt:${kind.toLowerCase()}:${sha256}`, kind, sha256, payload };
   verifiedReceipts.add(receipt);
   return freeze(receipt);
 }
@@ -82,13 +83,13 @@ function reCompute(candidate: InvestigationCandidate, graph: SpatialEvidenceGrap
 export async function runCandidateExperiment(candidate: InvestigationCandidate, graphInput: SpatialEvidenceGraph, context: ReceiptContext): Promise<EvidenceReceipt> {
   const graph = parseEvidenceGraph(graphInput), result = reCompute(candidate, graph);
   if (typeof result === 'number' && typeof candidate.computation.result === 'number' ? Math.abs(result - candidate.computation.result) > 1e-10 : result !== candidate.computation.result) throw new Error('Candidate result changed; regenerate candidate from current evidence');
-  return seal('EXPERIMENT', { context: contextChecked(context), assemblyId: graph.assemblyId, frameId: graph.authoritativeFrameId, authority: candidate.authority, data: plain({ candidate, graphSha256: await sha256Json(graph), graphSnapshot: graph, result, outcome: 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED', metricAuthority: 'NONE', note: 'Reproducing source arithmetic is not an independent archaeological test. Candidate still requires review.' }) });
+  return seal('EXPERIMENT', { context: contextChecked(context), assemblyId: graph.assemblyId, frameId: graph.authoritativeFrameId, authority: candidate.authority, data: plain({ candidate, dependencyFingerprint:await dependencyFingerprint(candidate,graph),evaluationRule:EVALUATION_RULE,graphSha256: await sha256Json(graph), graphSnapshot: graph, result, outcome: 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED', metricAuthority: 'NONE', note: 'Reproducing source arithmetic is not an independent archaeological test. Candidate still requires review.' }) });
 }
 
 export async function verifyReceipt(value: unknown): Promise<EvidenceReceipt> {
   if (new TextEncoder().encode(canonicalJson(value)).length > 8_000_000) throw new Error('Receipt exceeds 8 MB');
   const receipt = JSON.parse(canonicalJson(value)) as EvidenceReceipt;
-  if (receipt.schema !== 'giza.evidence-receipt.v1' || !['EXPERIMENT', 'FINDING', 'PROMOTION'].includes(receipt.kind) || !receipt.payload || !receipt.payload.data || typeof receipt.payload.data !== 'object' || Array.isArray(receipt.payload.data) || typeof receipt.payload.assemblyId !== 'string' || !receipt.payload.assemblyId || typeof receipt.payload.frameId !== 'string' || !receipt.payload.frameId || !['OBSERVED', 'RECONSTRUCTED', 'HYPOTHESIS'].includes(receipt.payload.authority)) throw new Error('Unsupported evidence receipt');
+  if (!['giza.evidence-receipt.v1','giza.evidence-receipt.v2'].includes(receipt.schema) || !['EXPERIMENT', 'FINDING', 'PROMOTION'].includes(receipt.kind) || !receipt.payload || !receipt.payload.data || typeof receipt.payload.data !== 'object' || Array.isArray(receipt.payload.data) || typeof receipt.payload.assemblyId !== 'string' || !receipt.payload.assemblyId || typeof receipt.payload.frameId !== 'string' || !receipt.payload.frameId || !['OBSERVED', 'RECONSTRUCTED', 'HYPOTHESIS'].includes(receipt.payload.authority)) throw new Error('Unsupported evidence receipt');
   contextChecked(receipt.payload.context);
   const expected = await sha256Json({ schema: receipt.schema, kind: receipt.kind, payload: receipt.payload });
   if (receipt.sha256 !== expected || receipt.id !== `receipt:${receipt.kind.toLowerCase()}:${expected}`) throw new Error('Receipt checksum mismatch');
@@ -96,6 +97,7 @@ export async function verifyReceipt(value: unknown): Promise<EvidenceReceipt> {
     const graph = parseEvidenceGraph(receipt.payload.data.graphSnapshot);
     if (await sha256Json(graph) !== receipt.payload.data.graphSha256 || graph.assemblyId !== receipt.payload.assemblyId || graph.authoritativeFrameId !== receipt.payload.frameId) throw new Error('Experiment graph/frame mismatch');
     const candidate = receipt.payload.data.candidate as unknown as InvestigationCandidate;
+    if(receipt.schema==='giza.evidence-receipt.v2'&&(receipt.payload.data.evaluationRule!==EVALUATION_RULE||receipt.payload.data.dependencyFingerprint!==await dependencyFingerprint(candidate,graph)))throw new Error('Experiment dependency fingerprint/rule mismatch');
     if (receipt.payload.authority !== candidate.authority || receipt.payload.data.metricAuthority !== 'NONE' || receipt.payload.data.outcome !== 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED') throw new Error('Experiment authority does not match its candidate');
     const result = reCompute(candidate, graph);
     if (result !== receipt.payload.data.result || result !== candidate.computation.result) throw new Error('Experiment no longer reproduces');
@@ -122,6 +124,19 @@ export async function reviewExperiment(experimentInput: EvidenceReceipt, review:
   if (experiment.kind !== 'EXPERIMENT') throw new Error('A finding must cite an experiment receipt');
   reviewChecked(review);
   return seal('FINDING', { context: contextChecked(context), assemblyId: experiment.payload.assemblyId, frameId: experiment.payload.frameId, authority: 'HYPOTHESIS', data: plain({ experimentReceiptId: experiment.id, experimentSha256: experiment.sha256, candidateId: (experiment.payload.data.candidate as Record<string, JsonValue>).id, review, classification: 'OPERATOR_REVIEW_NOT_AUTHENTICATED', geometryAuthority: 'NONE', note: 'A finding records an interpretation; neither a supportive review nor a content hash promotes geometry to observed.' }) });
+}
+
+export async function experimentApplicability(receipt:EvidenceReceipt,candidate:InvestigationCandidate,graph:SpatialEvidenceGraph):Promise<'CURRENT'|'HISTORICAL'|'UNVERIFIABLE'>{
+  try{
+    const checked=await verifyReceipt(receipt);
+    if(checked.kind!=='EXPERIMENT'||checked.schema==='giza.evidence-receipt.v1')return 'UNVERIFIABLE';
+    if((checked.payload.data.candidate as Record<string,JsonValue>).id!==candidate.id)return 'HISTORICAL';
+    return checked.payload.data.dependencyFingerprint===await dependencyFingerprint(candidate,graph)?'CURRENT':'HISTORICAL';
+  }catch{return 'UNVERIFIABLE';}
+}
+export async function reviewCurrentExperiment(experiment:EvidenceReceipt,candidate:InvestigationCandidate,graph:SpatialEvidenceGraph,review:ResearchReview,context:ReceiptContext){
+  if(await experimentApplicability(experiment,candidate,graph)!=='CURRENT')throw new Error('A matching current computation is required. Historical inputs cannot be silently rebased.');
+  return reviewExperiment(experiment,review,context);
 }
 
 /** Promotion requests are always receipted, including denied requests. Source data is never mutated. */

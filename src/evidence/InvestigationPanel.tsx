@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import type {EvidenceAssembly,EvidenceFeature} from './types';
 import type {SpatialEvidenceGraph} from './graph';
 import type {InvestigationCandidate} from './intelligence';
-import {runCandidateExperiment,reviewExperiment,createPromotionReceipt,type EvidenceReceipt,type ReceiptContext,type ResearchReview} from './receipts';
+import {runCandidateExperiment,reviewCurrentExperiment,experimentApplicability,createPromotionReceipt,type EvidenceReceipt,type ReceiptContext,type ResearchReview} from './receipts';
 import {downloadJson} from './export';
 import {formatValue} from './FeaturePanel';
 
@@ -10,7 +10,10 @@ export function InvestigationPanel({assembly,graph,candidates,selected,feature,o
   const candidate=candidates.find(c=>c.id===selected);
   const [busy,setBusy]=useState(false),[message,setMessage]=useState(''),[last,setLast]=useState<EvidenceReceipt|null>(null);
   const [review,setReview]=useState<ResearchReview>({reviewer:'',outcome:'INCONCLUSIVE',note:''});
-  const experiment=[...journal].reverse().find(r=>r.kind==='EXPERIMENT'&&(r.payload.data.candidate as {id?:string})?.id===candidate?.id);
+  const [applicability,setApplicability]=useState<{receipt:EvidenceReceipt;state:string}[]>([]);
+  useEffect(()=>{let live=true;setApplicability([]);if(candidate)Promise.all([...journal].reverse().filter(r=>r.kind==='EXPERIMENT'&&(r.payload.data.candidate as {id?:string})?.id===candidate.id).map(async receipt=>({receipt,state:await experimentApplicability(receipt,candidate,graph)}))).then(rows=>{if(live)setApplicability(rows);});return()=>{live=false;};},[journal,candidate,graph]);
+  const experiment=applicability.find(r=>r.state==='CURRENT')?.receipt;
+  const reviewExperiment=(r:EvidenceReceipt,review:ResearchReview,ctx:ReceiptContext)=>{if(!candidate)throw new Error('Select a candidate');return reviewCurrentExperiment(r,candidate,graph,review,ctx);};
   const perform=async(job:()=>Promise<EvidenceReceipt>)=>{setBusy(true);setMessage('');try{const receipt=await job();setLast(receipt);await onAppend(receipt);setMessage(`${receipt.kind} sealed and appended. No archaeological authority was promoted.`);}catch(e){setMessage(String(e));}finally{setBusy(false);}};
   return <>
     <p>Investigation Candidates are computational questions, not discoveries. Review source definitions and null explanations before interpreting a result.</p>
@@ -23,6 +26,8 @@ export function InvestigationPanel({assembly,graph,candidates,selected,feature,o
       <details><summary>Evidence IDs and 3-D locations</summary>{candidate.evidenceIds.map(id=><p key={id}><code>{id}</code></p>)}<div className="actions">{candidate.featureIds.map(id=><button key={id} onClick={()=>onLocate(id)}>{assembly.features.find(f=>f.id===id)?.label??id}</button>)}</div></details>
       <h4>Alternative / null explanations</h4><ul>{candidate.alternatives.map(s=><li key={s}>{s}</li>)}</ul><h4>What would falsify it?</h4><p>{candidate.falsification.test}</p><ul>{candidate.falsification.neededEvidence.map(s=><li key={s}>{s}</li>)}</ul>
       <button disabled={busy} onClick={()=>perform(()=>runCandidateExperiment(candidate,graph,context()))}>Run reproducible computation</button>
+      <p role="status">{experiment?'CURRENT — matching dependency fingerprint':'No current computation. Run against these identified inputs before review.'}</p>
+      {applicability.filter(r=>r.state!=='CURRENT').map(({receipt,state})=><details key={receipt.id}><summary>{state} · {receipt.payload.context.createdAt}</summary><p>Historical result: {String(receipt.payload.data.result)}. Not evaluated against the currently displayed inputs.</p><pre>{JSON.stringify((receipt.payload.data.candidate as unknown as InvestigationCandidate).computation.inputs,null,2)}</pre><button onClick={()=>downloadJson(`GIZA-historical-${receipt.sha256.slice(0,12)}.json`,receipt)}>Export original snapshot receipt</button></details>)}
       {experiment&&<section><h4>Result → reviewed finding</h4><p>Experiment {experiment.sha256.slice(0,16)}… reproduced source arithmetic. This is not an independent archaeological confirmation.</p><label>Researcher / reviewer<input aria-label="Finding reviewer" value={review.reviewer} maxLength={150} onChange={e=>setReview({...review,reviewer:e.target.value})}/></label><label>Review outcome<select value={review.outcome} onChange={e=>setReview({...review,outcome:e.target.value as ResearchReview['outcome']})}><option>INCONCLUSIVE</option><option>SUPPORTED</option><option>FALSIFIED</option></select></label><label>Evidence interpretation / limitations<textarea aria-label="Finding review note" value={review.note} maxLength={5000} onChange={e=>setReview({...review,note:e.target.value})}/></label><button disabled={busy||!review.reviewer.trim()||review.note.trim().length<10} onClick={()=>perform(()=>reviewExperiment(experiment,review,context()))}>Append reviewed finding</button><small>Operator-supplied, unauthenticated review; geometry authority remains NONE.</small></section>}
     </>}
     <section><h4>Immutable research journal · {journal.length}</h4><p>{journalMessage}</p>{message&&<p role="status">{message}</p>}{last&&<button onClick={()=>downloadJson(`GIZA-${last.kind.toLowerCase()}-${last.sha256.slice(0,12)}.json`,last)}>Download last sealed receipt</button>}<div className="actions"><button onClick={()=>downloadJson('GIZA-investigation-journal.json',{schema:'giza.investigation-journal.v1',receipts:journal})}>Export journal</button></div>{journal.map(r=><details key={r.id}><summary>{r.kind} · {r.payload.context.createdAt}</summary><code>{r.sha256}</code><p>{r.payload.authority} · {r.payload.context.version}</p><button onClick={()=>downloadJson(`GIZA-receipt-${r.sha256.slice(0,12)}.json`,r)}>Export receipt</button></details>)}</section>

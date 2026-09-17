@@ -5,7 +5,8 @@ import ts from 'typescript';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const compile=s=>ts.transpileModule(s,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
 const uri=s=>'data:text/javascript;base64,'+Buffer.from(s).toString('base64');
-const runtimeURI=uri(compile(read('src/lib/runtimeData.ts')));
+const observationURI=uri(compile(read('src/evidence/observationContract.ts')));
+const runtimeURI=uri(compile(read('src/lib/runtimeData.ts')).replace("'../evidence/observationContract'",JSON.stringify(observationURI)));
 const {runtimeContracts,requiredDatasets,validateRuntimeDocument,createRuntimeLoader,unavailable}=await import(runtimeURI);
 const {watchWebGLContext}=await import(uri(compile(read('src/lib/runtimeWebGL.ts'))));
 const modelSource=compile(read('src/lib/model.ts')).replace("'./runtimeData'",JSON.stringify(runtimeURI));
@@ -75,7 +76,7 @@ test('malformed observations and orphan source bindings are quarantined without 
     const doc=fixture(url);mutate(doc);const diagnostics=[];
     const data=await createRuntimeLoader(diagnostics,async()=>response(doc))(url);
     assert.deepEqual(data.observations,[]);assert.deepEqual(data.sources,[]);assert.equal(data.reviewed,'UNAVAILABLE');
-    assert.equal(diagnostics[0].scope,'COMPONENT');assert.match(diagnostics[0].reason,/observation/);
+    assert.equal(diagnostics[0].scope,'COMPONENT');assert.match(diagnostics[0].reason,/observation/i);
   }
 });
 test('healthy loader preserves source objects and unrecognized extension fields byte-equivalently',async()=>{

@@ -1,6 +1,7 @@
 import type {ModelBundle} from '../lib/model';
 import type {AssemblyConstraint,BoxGeometry,EvidenceAssembly,EvidenceFeature,EvidenceObservation,FeatureGeometry,RealityAuthority,SpatialFrame,SpatialTransform,Uncertainty,Vec3} from './types';
 import {rigidMatrix,unknownUncertainty} from './spatial';
+import {adaptObservation,lengthValue} from './observationContract';
 
 export const ASSEMBLY_FRAME='frame.khafre.burial.reconstruction';
 export const BODY_FRAME='frame.khafre.coffer.object';
@@ -22,16 +23,12 @@ export function buildKhafreAssembly(model:AssemblyModel):EvidenceAssembly {
   const measurements=(Array.isArray(model.measurements)?model.measurements:[]).filter(m=>/^m\.(coffer|burial)\./.test(m.id));
   const supplemental=(model.componentResearch?.observations??[]).filter(o=>/^(coffer|burial)\./.test(o.id));
   const observations:EvidenceObservation[]=[
-    ...measurements.map(m=>({id:m.id,sourceId:m.source_id,locator:m.source_locator??'UNKNOWN',value:typeof m.si_value==='number'&&Number.isFinite(m.si_value)?m.si_value:null,
-      unit:m.si_unit,nativeValue:m.native_value,nativeUnit:m.native_unit,
-      uncertainty:typeof m.uncertainty_si==='number'&&Number.isFinite(m.uncertainty_si)&&m.uncertainty_si>=0?{status:'KNOWN' as const,value:m.uncertainty_si,unit:m.si_unit??'UNKNOWN',note:'Uncertainty copied verbatim from the canonical record; its statistical interpretation is not specified.'}:unknownUncertainty(),
-      authority:(m.status.startsWith('DERIVED')?'RECONSTRUCTED':'OBSERVED') as RealityAuthority,derivation:m.notes||'Source-reported scalar; no registered source-image position.',status:m.status})),
-    ...supplemental.map(o=>({id:o.id,sourceId:o.source,locator:o.locator,value:typeof o.si_value==='number'&&Number.isFinite(o.si_value)?o.si_value:typeof o.value==='string'?o.value:null,
-      unit:typeof o.si_value==='number'?'m':o.unit??null,nativeValue:o.value,nativeUnit:o.unit??null,uncertainty:unknownUncertainty(),
-      authority:(o.status.startsWith('DERIVED')?'RECONSTRUCTED':'OBSERVED') as RealityAuthority,derivation:o.note??'Cited historical record; not a registered image observation.',status:o.status})),
+    ...measurements.map(m=>adaptObservation(m as unknown as Record<string,unknown>)),
+    ...supplemental.map(o=>adaptObservation(o as unknown as Record<string,unknown>,true)),
   ];
   const obs=new Map(observations.map(o=>[o.id,o]));
-  const value=(id:string)=>{const n=obs.get(id)?.value;return typeof n==='number'&&Number.isFinite(n)&&n>0?n:null;};
+  if(obs.size!==observations.length)throw new Error('Duplicate observation identifiers');
+  const value=(id:string)=>{const n=lengthValue(obs.get(id));return n!==null&&n>0?n:null;};
   const mean=(a:string,b:string)=>{const x=value(a),y=value(b);return x!==null&&y!==null?(x+y)/2:null;};
   const d={outerLength:value('m.coffer.outer_length'),outerWidth:value('m.coffer.outer_width'),outerHeight:value('m.coffer.outer_height'),innerLength:value('m.coffer.inner_length'),innerWidth:value('m.coffer.inner_width'),innerDepth:value('m.coffer.inner_depth'),lidLength:value('m.coffer.lid_length'),lidWidth:value('m.coffer.lid_width'),lidThickness:mean('m.coffer.lid_thickness_min','m.coffer.lid_thickness_max'),length:mean('m.burial.length_n','m.burial.length_s'),width:mean('m.burial.width_e','m.burial.width_w'),height:value('m.burial.wall_height'),rise:value('m.burial.gable_rise.vyse'),west:value('coffer.west_clearance'),north:value('coffer.north_clearance')};
   const frames=[frame(BODY_FRAME,'Coffer object-local','Reconstructed rim centre; rim z=0; length follows +N. Cavity centring is an idealization.'),
@@ -39,7 +36,8 @@ export function buildKhafreAssembly(model:AssemblyModel):EvidenceAssembly {
     frame(ASSEMBLY_FRAME,'Burial assembly reconstruction','Mean interior plan centre; reconstructed paving/coffer-rim z=0. Not the legacy overview datum.'),
     frame(MONUMENT_FRAME,'Preserved monument overview','Existing parts.json engineering coordinates, unchanged; inherited placements retain their limitations.'),
     frame(SITE_FRAME,'Site / world context','Existing FIELD local ENU frame. Horizontal survey translation and vertical datum unresolved.','UNRESOLVED')];
-  const bodyX=d.length!==null&&d.west!==null&&d.outerWidth!==null?-d.length/2+d.west+d.outerWidth/2:null;
+  const placementSupported=['coffer.orientation','coffer.floor'].every(id=>{const o=obs.get(id);return !!o&&o.value!==null&&o.authority!=='HYPOTHESIS';});
+  const bodyX=placementSupported&&d.length!==null&&d.west!==null&&d.outerWidth!==null?-d.length/2+d.west+d.outerWidth/2:null;
   const bodyY=d.width!==null&&d.north!==null&&d.outerLength!==null?d.width/2-d.north-d.outerLength/2:null;
   const transform=(id:string,from:string,to:string,matrix:SpatialTransform['matrix'],observationIds:string[],derivation:string,scope:SpatialTransform['scope']='AUTHORITATIVE_RECONSTRUCTION'):SpatialTransform=>({id,from,to,matrix,status:matrix?'RESOLVED':'UNRESOLVED',scope,authority:'RECONSTRUCTED',observationIds,derivation,uncertainty:unknownUncertainty('No complete placement covariance / independently controlled registration exists.')});
   const chamber=model.parts.find(p=>p.id==='part.burial.chamber');
@@ -114,6 +112,7 @@ export function buildKhafreAssembly(model:AssemblyModel):EvidenceAssembly {
   for(const id of new Set(constraints.flatMap(c=>c.featureIds)))if(!features.some(f=>f.id===id))add(id,id.includes('chamber')?roomId:bodyId,'Unavailable constrained feature',id.includes('chamber')?ASSEMBLY_FRAME:BODY_FRAME,unknownGeometry('Required measurements are unavailable.'),[], 'Constraint target preserved as UNKNOWN until evidence exists.',['Geometry UNKNOWN.']);
   const sources=[...new Set(observations.map(o=>o.sourceId))].map(id=>{
     const canonical=model.sourceRegistry?.find(s=>s.id===id),detail=model.componentResearch?.sources?.find(s=>s.id===id);
+    if(id!=='source.unknown'&&!canonical&&!detail)throw new Error(`Observation source ${id} is not in the loaded source registry; load or repair its source record.`);
     return {id,title:canonical?.title??detail?.title??id,url:canonical?.url??detail?.url??'',authority:detail?.geometry_authority??'CITED_MEASUREMENTS_ONLY',byteStatus:'UNKNOWN' as const};
   });
   return {schemaVersion:'giza.evidence-assembly.v1',id:'assembly.khafre.sarcophagus',title:'Khafre Sarcophagus Evidence Assembly',authoritativeFrameId:ASSEMBLY_FRAME,frames,transforms,sources,observations,features,constraints,

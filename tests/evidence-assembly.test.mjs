@@ -138,6 +138,9 @@ test('missing optional observations become explicit unknown graph records withou
 test('missing/invalid core dimensions never invent a replacement body',()=>{
   for(const bad of [undefined,NaN,-1]){
     const measurements=model.measurements.filter(m=>m.id!=='m.coffer.inner_depth');if(bad!==undefined)measurements.push({...model.measurements.find(m=>m.id==='m.coffer.inner_depth'),si_value:bad});
+    // Malformed or inconsistent records are now rejected at the common boundary,
+    // rather than coerced to UNKNOWN. Absent records still yield unknown geometry.
+    if(bad!==undefined){assert.throws(()=>buildKhafreAssembly({...model,measurements}));continue;}
     const incomplete=buildKhafreAssembly({...model,measurements});assert.ok(!incomplete.features.some(f=>f.objectId==='part.sarcophagus.body'&&f.geometry.kind==='box'));
     assert.equal(incomplete.features.find(f=>f.id==='feature.coffer.body.unknown').geometry.kind,'unknown');assert.doesNotThrow(()=>importCanonicalAssembly(incomplete));
   }

@@ -1,6 +1,7 @@
 /** Runtime trust boundary, not archaeological validation. Unknown keys are retained verbatim.
  * Failed optional documents are quarantined; their inert shape is NEVER a research result. */
 export interface RuntimeDiagnostic { url:string; status:'UNAVAILABLE'; reason:string; scope:string }
+import {adaptObservation,assertSafeDocument,observationAuthority,scalar} from '../evidence/observationContract';
 type Rule = 'string'|'number'|'boolean'|'value'|'record'|{[key:string]:Rule}|Rule[];
 const S:Rule='string', N:Rule='number', B:Rule='boolean', V:Rule='value', R:Rule='record';
 const strings=[S], numbers=[N];
@@ -116,13 +117,16 @@ export function validateRuntimeDocument(url:string,value:unknown):void {
     if(['base_m','height_m','visual_course_count','target_block_width_m','radial_depth_m'].some(key=>doc[key]<=0)||!Number.isInteger(doc.visual_course_count)||doc.joint_gap_fraction<0||doc.joint_gap_fraction>=1)throw new Error('stone field: invalid construction dimensions');
   }
   if(url==='/model/research/measurements.json')for(const row of doc.measurements){
+    observationAuthority(row.status);scalar(row.si_value);scalar(row.native_value);
+    if(/^m\.(coffer|burial)\./.test(row.id))adaptObservation(row);
     for(const key of ['native_value','si_value'])if(row[key]!==null&&typeof row[key]!=='string'&&(typeof row[key]!=='number'||!Number.isFinite(row[key])))throw new Error(`${row.id}: invalid ${key}`);
     for(const key of ['native_unit','si_unit'])if(row[key]!==null&&typeof row[key]!=='string')throw new Error(`${row.id}: invalid ${key}`);
     if(row.uncertainty_si!=null&&(typeof row.uncertainty_si!=='number'||!Number.isFinite(row.uncertainty_si)||row.uncertainty_si<0))throw new Error(`${row.id}: invalid uncertainty`);
   }
   if(url==='/model/component_research.json')for(const row of doc.observations){
-    if(typeof row.value!=='string'&&(typeof row.value!=='number'||!Number.isFinite(row.value)))throw new Error(`${row.id}: invalid observation value`);
-    if(row.si_value!==undefined&&(typeof row.si_value!=='number'||!Number.isFinite(row.si_value)))throw new Error(`${row.id}: invalid observation SI value`);
+    adaptObservation(row,true);
+    scalar(row.value);
+    if(row.si_value!==undefined)scalar(row.si_value);
     if(row.bind!==undefined)validateRuntimeShape(row.bind,strings,`${row.id}.bind`);
     if(!doc.sources.some((source:{id:string})=>source.id===row.source))throw new Error(`${row.id}: unbound observation source`);
   }
@@ -142,6 +146,7 @@ export function validateRuntimeDocument(url:string,value:unknown):void {
     if(typeof (row.introduced_version??row.first_seen_version)!=='string'||typeof (row.updated_version??row.last_updated_version)!=='string')throw new Error(`${row.id}: missing finding version lineage`);
     if(row.related_runs!==undefined)validateRuntimeShape(row.related_runs,strings,`${row.id}.related_runs`);
   }
+  assertSafeDocument(value,30_000_000);
 }
 
 export function createRuntimeLoader(diagnostics:RuntimeDiagnostic[],fetcher:typeof fetch=fetch){
