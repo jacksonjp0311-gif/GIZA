@@ -59,7 +59,7 @@ export function ComponentScene({model,part,context,lidLift,dimensions,roof,surve
     const d=burialDimensions(model);
     const coffer=part.id.startsWith('part.sarcophagus.');
     if(room && (!coffer||wide)){target=[0,0,d.wallHeight*.25];radius=Math.hypot(d.length,d.width,d.wallHeight)/2;}
-    else {target=room?[-d.length/2+d.westClearance+d.outerWidth/2,d.width/2-d.northClearance-d.outerLength/2,-.12]:[0,0,-.15];radius=2.15;}
+    else {target=room?[-d.length/2+d.westClearance+d.outerWidth/2,d.width/2-d.northClearance-d.outerLength/2,-.12]:[0,0,-.15];radius=!room&&top?1.5:2.15;}
   }
   if(lower){const p=part.spatial.primitive;if(p.kind==='box'){target=[0,0,p.sz*.25];radius=Math.hypot(p.sx,p.sy,p.sz)/2;}}
   return <Canvas className="componentCanvas" dpr={[1,1.75]} gl={{antialias:true,alpha:false}} camera={{fov:42,near:.01,far:3000,up:[0,0,1]}}

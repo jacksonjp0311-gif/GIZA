@@ -12,6 +12,16 @@ const model={parts:read('parts.json').parts,measurements:read('research/measurem
 const coffer=model.parts.find(p=>p.id==='part.sarcophagus.body');
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 
+test('coffer body and lid distinguish object measurements from assembly context',()=>{
+  const body=detailCoverage(model,coffer);
+  const lid=detailCoverage(model,model.parts.find(p=>p.id==='part.sarcophagus.lid'));
+  assert.equal(body.measurements.length,7);
+  assert.ok(body.measurements.every(m=>!m.id.startsWith('m.coffer.lid_')));
+  assert.equal(lid.measurements.length,4);
+  assert.ok(lid.measurements.every(m=>m.id.startsWith('m.coffer.lid_')));
+  assert.ok(body.contextMeasurements.every(m=>!body.measurements.includes(m)));
+});
+
 test('lower doorway closes the reported east wall without inventing a height',()=>{
   const d=lowerDimensions(model);
   near(d.width,123.1*.0254);near(d.doorWidth,41.2*.0254);

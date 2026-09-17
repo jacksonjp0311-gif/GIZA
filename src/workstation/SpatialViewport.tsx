@@ -1,4 +1,5 @@
 import { GizaScene } from '../components/GizaScene';
+import { useEffect, useState } from 'react';
 import type { ModelBundle, Part } from '../lib/model';
 import type { UncertaintyRecord } from '../lib/field';
 import type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/types';
@@ -8,15 +9,17 @@ import { MapAtlasPanel } from '../maps/MapAtlasPanel';
 import type { AtlasMapId } from '../maps/types';
 import { ComponentWorkbench } from './ComponentWorkbench';
 import type { DetailContext } from '../lib/componentDetails';
+import { DimensionReadout } from './DimensionReadout';
 
 export function SpatialViewport({
   model, parts, selectedId, selectedStone, explode, setExplode, mode, sectionAxis, sectionPos, viewPreset, cameraRevision,
   showStoneField, showUnverified, xray, showLabels, showPhotos, showFieldFrame, showSimulation, activeSimulation, uncertainty,
   quickViews, onSelectPart, onSelectStone, surface, onSurface, atlasFocus, onAtlasFocus,
-  detail, onOpenDetail, onCloseDetail, activeQuickView,
+  detail, onOpenDetail, onCloseDetail, activeQuickView,animationSpeed,showDimensions,setShowDimensions,
 }: {
   detail: {id:string;context:DetailContext;revision:number}|null;
   activeQuickView:string|null;
+  animationSpeed:number;showDimensions:boolean;setShowDimensions:(value:boolean)=>void;
   onOpenDetail: (id:string,context?:DetailContext)=>void;
   onCloseDetail: ()=>void;
   model: ModelBundle;
@@ -47,16 +50,17 @@ export function SpatialViewport({
   atlasFocus: AtlasMapId | null;
   onAtlasFocus: (id:AtlasMapId) => void;
 }) {
-  const verified = model.parts.filter(p => p.provenance.class !== 'UNVERIFIED').length;
-  const unverified = model.parts.length - verified;
+  const [expanded,setExpanded]=useState(false);
+  useEffect(()=>{const exit=(e:KeyboardEvent)=>{if(e.key==='Escape')setExpanded(false);};window.addEventListener('keydown',exit);return()=>window.removeEventListener('keydown',exit);},[]);
   const detailPart=detail?model.parts.find(p=>p.id===detail.id):null;
 
   return (
-    <section className="sceneShell edgeSceneShell">
+    <section className={`sceneShell edgeSceneShell${expanded?' viewerExpanded':''}`}>
       <div className="sceneWrap edgeScene">
 
-        {surface === 'MODEL' && detailPart && detail ? <ComponentWorkbench key={detail.id+':'+detail.revision} model={model} part={detailPart} initialContext={detail.context} onClose={onCloseDetail} onOpen={onOpenDetail} onSelect={id=>onSelectPart(id)}/> : surface === 'MODEL' ? <>
+        {surface === 'MODEL' && detailPart && detail ? <ComponentWorkbench key={detail.id+':'+detail.revision} model={model} part={detailPart} initialContext={detail.context} dimensions={showDimensions} setDimensions={setShowDimensions} onClose={onCloseDetail} onOpen={onOpenDetail} onSelect={id=>onSelectPart(id)}/> : surface === 'MODEL' ? <>
         <GizaScene
+          animationSpeed={animationSpeed}
           parts={parts}
           stoneField={model.stoneField}
           showStoneField={showStoneField}
@@ -83,13 +87,14 @@ export function SpatialViewport({
         />
 
         <div className="sceneModePill">{viewPreset} · {explode > 0.5 ? 'EXPLODED' : 'ASSEMBLED'}{showSimulation ? (activeSimulation === 'ACOUSTICS' ? ` · ECHO ${model.simlab.acoustic.selected_visualization.frequency_hz.toFixed(2)} Hz MODE` : activeSimulation === 'STRATA' ? ` · STRATA ${model.simlab.strata.geomechanics.shaft_bottom.vertical_overburden_proxy_mpa.toFixed(1)} MPa @ 648 m` : ` · GRAVITY ${model.simlab.gravity.summary.max_magnitude_microgal.toFixed(1)} µGal PEAK`) : ''}</div>
+        {showDimensions&&<DimensionReadout part={parts.find(p=>p.id===selectedId)}/>}
         <div className="viewportExplodeControl">
           <div><span>EXPLOSION DISTANCE</span><b>{Math.round(explode * 100)}%</b></div>
           <input aria-label="Explosion distance" type="range" min="0" max="2.75" step="0.01" value={explode} onChange={event => setExplode(Number(event.target.value))} />
           <button type="button" onClick={() => setExplode(0)}>ASSEMBLE</button>
         </div>
           <div className="sceneHintLarge">DRAG ROTATE · WHEEL ZOOM · RIGHT-DRAG PAN · CLICK SELECT</div>
-        </> : surface === 'REGISTRATION' ? <div className="registrationSurface"><iframe title="GIZA Registration Workbench" src="/workbench/"/><a href="http://127.0.0.1:4174/workbench/" target="_blank" rel="noreferrer">Open local workbench separately · requires npm run workbench</a></div> : <>
+        </> : surface === 'REGISTRATION' ? <div className="registrationSurface"><iframe title="GIZA Registration Workbench" src="/workbench/"/><a href="/workbench/" target="_blank" rel="noreferrer">Open local workbench in a separate tab</a></div> : <>
           <MapAtlasPanel model={model} atlas={model.maps} focusMap={atlasFocus} onSelectPart={id => { onSelectPart(id); onSurface('MODEL'); }} onActiveMap={onAtlasFocus}/>
           <div className="sceneModePill atlasModePill">MAP ATLAS · {model.maps.manifest.maps.length} EVIDENCE VIEWS</div>
           <div className="sceneHintLarge">SCROLL ATLAS · USE STICKY INDEX · M RETURNS 3D</div>
@@ -97,7 +102,7 @@ export function SpatialViewport({
       </div>
 
       <div className="quickViewsBar">
-        <div className="quickTitle">QUICK VIEWS</div>
+        <div className="quickTitle">QUICK VIEWS<button className="expandViewer" aria-pressed={expanded} onClick={()=>setExpanded(v=>!v)}>{expanded?'Restore panels · Esc':'Expand viewer'}</button></div>
         <div className="quickScroller">
           {quickViews.map(view => (
             <button key={view.label} title={view.label} aria-pressed={activeQuickView===view.label} className={activeQuickView===view.label ? 'active' : ''} onClick={view.action}>

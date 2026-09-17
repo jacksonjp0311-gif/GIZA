@@ -4,12 +4,14 @@
   "version": "0.10.12",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "start": "node scripts/start.mjs",
+    "test:usability": "node --test tests/usability.test.mjs",
+    "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "test:components": "node --test tests/component-details.test.mjs",
-    "preview": "vite preview --host 0.0.0.0",
+    "preview": "vite preview --host 127.0.0.1",
     "validate:model": "node scripts/validate-model.mjs",
-    "check": "tsc --noEmit && npm run check:legacy && npm run test:repairs && npm run test:components && npm run build:workbench",
+    "check": "tsc --noEmit && npm run check:legacy && npm run test:repairs && npm run test:components && npm run test:usability && npm run build:workbench",
     "preflight": "npm run check",
     "validate:evidence": "node scripts/validate-evidence.mjs",
     "validate:solvers": "node scripts/validate-solvers.mjs",
@@ -126,7 +128,7 @@
     "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^5.0.2",
     "typescript": "^5.9.2",
-    "vite": "^7.1.4"
+    "vite": "^7.3.6"
   },
   "engines": {
     "node": ">=20.19.0"

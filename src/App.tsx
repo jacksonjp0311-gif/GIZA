@@ -64,6 +64,7 @@ export default function App() {
   }, [selectedId, explode, mode, sectionAxis, sectionPos, viewPreset, animationSpeed, showLabels, showDimensions, layers]);
 
   const resetWorkspace = () => {
+    setSurface('MODEL');setFilter('');
     setActiveQuickView('Full Pyramid');
     setDetail(null);
     clearWorkspaceState();
@@ -83,6 +84,8 @@ export default function App() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
+      if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();document.getElementById('component-search')?.focus();return;}
+      if(event.ctrlKey||event.metaKey||event.altKey)return;
       const tag = (event.target as HTMLElement | null)?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
       const key = event.key.toLowerCase();
@@ -171,7 +174,7 @@ export default function App() {
     }));
   }, [model, activateView, openDetail]);
 
-  if (error) return <div className="fatal">GIZA boot failed: {error}</div>;
+  if (error) return <div className="fatal" role="alert"><h1>GIZA couldn’t load</h1><p>{error}</p><button onClick={()=>{setError(null);loadModel().then(setModel).catch(e=>setError(String(e)));}}>Retry loading</button><button onClick={()=>{clearWorkspaceState();window.location.reload();}}>Reset saved workspace</button></div>;
   if (!model) return <div className="boot"><b>GIZA NEXUS</b><span>Initializing evidence-governed workstation…</span></div>;
 
   return (
@@ -185,6 +188,8 @@ export default function App() {
 
       <main className="workspace edgeWorkspace">
         <LeftRail
+          parts={model.parts}
+          onOpenPart={id=>openDetail(id,id.startsWith('part.sarcophagus.')||id.startsWith('part.burial.')?'ROOM':'OBJECT')}
           filter={filter}
           setFilter={setFilter}
           layers={layers}
@@ -199,6 +204,9 @@ export default function App() {
         />
 
         <SpatialViewport
+          animationSpeed={animationSpeed}
+          showDimensions={showDimensions}
+          setShowDimensions={setShowDimensions}
           detail={detail}
           onOpenDetail={openDetail}
           onCloseDetail={()=>{setDetail(null);setActiveQuickView('Full Pyramid');}}

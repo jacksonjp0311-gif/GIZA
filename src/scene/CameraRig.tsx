@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { VIEW_PRESETS } from './geometry';
 import type { ViewPreset } from './types';
 
-export function CameraRig({ preset, revision }: { preset: ViewPreset; revision: number }) {
+export function CameraRig({ preset, revision, speed=1 }: { preset: ViewPreset; revision: number;speed?:number }) {
   const { camera } = useThree();
   const controls = useRef<OrbitControlsImpl>(null);
   const moving = useRef(true);
@@ -18,7 +18,7 @@ export function CameraRig({ preset, revision }: { preset: ViewPreset; revision: 
 
   useFrame((_, delta) => {
     if (!moving.current || !controls.current) return;
-    const alpha = 1 - Math.exp(-delta * 5.1);
+    const alpha = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : 1 - Math.exp(-delta * 5.1 * speed);
     camera.position.lerp(desiredPosition, alpha);
     controls.current.target.lerp(desiredTarget, alpha);
     controls.current.update();

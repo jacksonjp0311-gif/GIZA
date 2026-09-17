@@ -343,7 +343,7 @@ export interface ModelBundle {
 }
 
 async function getJson<T>(url:string):Promise<T> {
-  const r = await fetch(url);
+  const r = await fetch(url,{signal:AbortSignal.timeout(15000)});
   if (!r.ok) throw new Error(`${url}: ${r.status}`);
   return r.json() as Promise<T>;
 }

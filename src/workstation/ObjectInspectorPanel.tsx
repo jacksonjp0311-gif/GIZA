@@ -394,7 +394,7 @@ export function ObjectInspectorPanel({
 
       <section className="panelCard analysisCard">
         <div className="sectionLabel">ANIMATION & ANALYSIS</div>
-        <label><span>Animation Speed</span><input type="range" min="0.25" max="2" step="0.25" value={animationSpeed} onChange={e => setAnimationSpeed(Number(e.target.value))} /><b>{animationSpeed.toFixed(2)}x</b></label>
+        <label><span>Overview camera speed</span><input aria-label="Overview camera speed" type="range" min="0.25" max="2" step="0.25" value={animationSpeed} onChange={e => setAnimationSpeed(Number(e.target.value))} /><b>{animationSpeed.toFixed(2)}x</b></label>
         <div className="analysisToggles">
           <label><input type="checkbox" checked={showLabels} onChange={e => setShowLabels(e.target.checked)} /><i />Show Labels</label>
           <label><input type="checkbox" checked={showDimensions} onChange={e => setShowDimensions(e.target.checked)} /><i />Show Dimensions</label>

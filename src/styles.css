@@ -449,19 +449,26 @@ body{font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLe
 .componentToolbar>div{flex:1;min-width:180px}.componentToolbar small{font-size:10px;letter-spacing:.13em}.componentToolbar h2{margin:3px 0;font-size:21px;line-height:1.15}
 .componentWorkbench button{background:#101d23;border:1px solid #685433;border-radius:4px;padding:8px 10px;font-size:12px}
 .componentWorkbench button:hover,.componentWorkbench button.active{border-color:#efb24c;background:#322614}
-.componentStage{position:relative;min-height:0;overflow:hidden}.componentCanvas{position:absolute!important;inset:0;z-index:0}
+.componentWorkbench{container-type:inline-size}.componentStage{position:relative;min-height:0;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)}.componentVisual{position:relative;min-width:0;min-height:0}.componentCanvas{position:absolute!important;inset:0;z-index:0}
+.componentStage.drawerOpen{grid-template-columns:minmax(0,1fr) minmax(270px,38%)}
+.componentStage.drawerOpen>.componentEvidence,.componentStage.drawerOpen>.componentCatalog{position:relative;inset:auto;width:auto;min-height:0;margin:8px;box-shadow:none}
+@container(max-width:650px){.componentStage.drawerOpen{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(180px,1fr) minmax(150px,.75fr)}}
 .componentViewControls{position:absolute;top:10px;left:12px;right:12px;display:flex;gap:5px;flex-wrap:wrap;pointer-events:none}
 .componentViewControls button{pointer-events:auto;background:rgba(12,24,29,.93)}
 .componentControls{position:absolute;bottom:12px;right:12px;left:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:rgba(9,17,20,.94);border:1px solid #685433;padding:10px;border-radius:5px}
 .componentControls label{display:flex;gap:7px;align-items:center;font-size:12px}.componentControls>span{font-size:11px;margin-left:auto}
 .componentControls input{accent-color:#e9ae46}.componentControls input[type=range]{width:130px}
+.componentVisual{display:flex;flex-direction:column}.componentRender{position:relative;flex:1;min-height:0;order:1}
+.componentVisual>.componentViewControls{position:static;order:0;flex-shrink:0;padding:8px 12px}
+.componentVisual>.componentControls{position:static;order:2;flex-shrink:0;margin:0 12px 8px;padding:8px;gap:8px}
+.componentControls>span{display:none}
 .componentTruth{display:flex;gap:10px;align-items:baseline;padding:9px 12px;border-top:1px solid #685433;background:#111a1d;font-size:11px;line-height:1.5}
 .componentTruth b{white-space:nowrap;font-size:10px;letter-spacing:.03em}.componentTruth span{color:var(--sand-muted)!important}
 .detailDimension{display:block;white-space:nowrap;padding:4px 6px;border:1px solid #ab8544;border-radius:3px;background:rgba(9,15,17,.92);font:12px "Segoe UI",sans-serif;color:#f6dda6;pointer-events:none}
 .componentEvidence,.componentCatalog{position:absolute;right:12px;top:60px;bottom:78px;width:min(350px,calc(100% - 24px));overflow:auto;background:#0c171d;border:1px solid #aa8441;border-radius:5px;padding:12px;box-shadow:0 8px 30px #0009;z-index:8}
 .componentEvidence h3{font-size:14px;margin:18px 0 9px}.componentEvidence p{font-size:12px;line-height:1.5}.componentEvidence figure{margin:0 0 14px;border:1px solid #3d463f;padding:6px}
 .componentEvidence img{width:100%;max-height:200px;object-fit:contain;display:block;background:#080d0e}.componentEvidence figcaption{font-size:12px;line-height:1.4;margin-top:7px}
-.componentEvidence figcaption span,.componentEvidence small{display:block;font-size:10px;margin-top:4px;line-height:1.5}.componentEvidence a{color:#f5cf82!important}
+.componentEvidence figcaption span,.componentEvidence small{display:block;font-size:12px;margin-top:4px;line-height:1.5;overflow-wrap:anywhere}.componentEvidence a{color:#f5cf82!important}
 .detailMeasure{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:8px 0;border-bottom:1px solid #394239;font-size:12px}.detailMeasure small{grid-column:1/-1}
 .componentCatalog{left:12px;right:auto}.componentCatalog input{width:100%;padding:9px;background:#071117;border:1px solid #71603f;border-radius:3px;font-size:13px}.componentCatalog>div{display:grid;gap:6px;margin-top:9px}
 .componentCatalog button{text-align:left}.componentCatalog small{display:block;font-size:9px;margin-top:5px}
@@ -477,6 +484,12 @@ body{font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLe
 .compactModelHeader .surfaceSwitch{display:flex!important;flex-wrap:nowrap;align-items:center;width:auto}.compactModelHeader .surfaceSwitch button{padding:10px;font-size:11px;white-space:nowrap;min-width:0}
 .headerSummary{display:flex;gap:16px;font-size:11px}.headerSummary span{display:grid;gap:4px}.headerSummary b{font-size:20px;color:#eeb85c}
 .cavityReadout{flex-basis:100%;font-size:12px;color:#f4d79c;line-height:1.5}
+.searchResults p{font-size:12px;line-height:1.5;padding:4px 8px}.projectTree .searchResults button{display:block;padding:10px 8px;border-bottom:1px solid #24404a;line-height:1.4}.searchResults small{display:block;font-size:10px;color:#c5aa75;margin-top:4px}
+.quickTitle{justify-content:space-between}.expandViewer{background:#14232b;border:1px solid #8b7040;color:#f4d79c;border-radius:4px;padding:3px 8px;font-size:11px}
+.edgeWorkspace:has(.viewerExpanded){grid-template-columns:minmax(0,1fr)}.edgeWorkspace:has(.viewerExpanded)>.leftRail,.edgeWorkspace:has(.viewerExpanded)>.rightRail{display:none}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #f3c773;outline-offset:3px}
+.dimensionReadout{position:absolute;top:12px;left:12px;z-index:5;max-width:min(300px,calc(100% - 24px));padding:9px;background:#09171eed;border:1px solid #997e48;border-radius:5px;font-size:12px}.dimensionReadout summary{cursor:pointer}.dimensionReadout b{display:block;margin-top:9px}.dimensionReadout small{line-height:1.4;display:block}
+.fatal{padding:30px;max-width:760px;margin:auto;color:#f4d79c}.fatal button{padding:12px;margin:8px;border:1px solid #997e48;background:#15232c;color:inherit}.fatal pre{white-space:pre-wrap;overflow-wrap:anywhere}
 .brandModelIdentity{display:flex;align-items:center;gap:14px;min-width:0}
 .brandModelIdentity .modelIdentity{flex:1;min-width:0}
 .brandModelIdentity h1{font-size:clamp(15px,1.55vw,23px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

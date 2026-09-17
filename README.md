@@ -2,9 +2,9 @@
 
 ## Current repository status — 2026-09-17
 
-This project is now maintained as **GIZA**. The Explorer has since passed TypeScript and production compilation, with a model-first header, animated original logo and component Quick Views. The portable scripts below still differ from the external desktop compile/version launcher; a fresh clone does not include that external launcher. Historical verification artifacts are preserved with their original results.
+This project is maintained as **GIZA**. The model-first Explorer includes the original animated logo, searchable components, expanded viewing and component Quick Views. The repo-contained launcher now compiles TypeScript and production assets on every start, stamps the build outside the repository, and serves both Explorer and Registration Workbench. Historical verification artifacts retain their original results.
 
-See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for code findings, all 56 component coverage rows, and the proposed evolution plan. These recommendations are not yet implemented.
+See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for the original audit and all 56 component coverage rows. [Usability foundation](docs/USABILITY_FOUNDATION.md) tracks the first implemented tranche and remaining limits; the full archaeological roadmap is not complete.
 
 An executable local workbench for importing a source plate, recording landmarks, freezing an experiment, and inspecting every holdout residual. This is a software release, not an inspection report.
 
@@ -24,9 +24,9 @@ The existing React / Three.js explorer, exploded-model controls, photo inspector
 ./start-giza.sh
 ```
 
-Then open `http://127.0.0.1:4174/workbench/` in your browser. The console prints the address. Ctrl+C stops the local service.
+First install the locked dependencies once with `npm ci` (Node 22 recommended). All platforms can use `npm start`. Open `http://127.0.0.1:4173/` when the console says **GIZA READY**. Ctrl+C stops both services. Occupied ports produce an actionable error without killing an existing process. Override ports using `GIZA_EXPLORER_PORT` and `GIZA_PORT` if needed. `npm start -- --check` compiles without serving; `npm start -- --smoke` compiles, health-checks both services and stops.
 
-The Registration Workbench uses Node.js built-ins and shipped HTML/CSS/JavaScript. **It does not require `npm install`, Vite or a network connection.** Node.js 22.16 was used for verification; the package retains its Node >=20.19 requirement.
+For the standalone Registration Workbench only, run `npm run workbench` or `Start-GIZA.ps1 -Mode Workbench`, then open `http://127.0.0.1:4174/workbench/`. That standalone mode uses Node built-ins and shipped HTML/CSS/JavaScript: no dependency installation or compilation is required. The package retains its Node >=20.19 requirement.
 
 PDF import additionally requires Poppler's `pdfinfo` and `pdftoppm` on PATH. Missing rendering tools do not prevent the workbench or its synthetic test from launching. The actual historical PDF is not bundled.
 

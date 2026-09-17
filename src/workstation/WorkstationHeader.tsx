@@ -7,7 +7,9 @@ export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / 
   surface:'MODEL'|'ATLAS'|'REGISTRATION';
   onSurface:(surface:'MODEL'|'ATLAS'|'REGISTRATION')=>void;
 }) {
-  const verified=model.parts.filter(p=>p.provenance.class!=='UNVERIFIED').length;
+  const assumed=model.parts.filter(p=>p.provenance.class==='ASSUMED').length;
+  const unverified=model.parts.filter(p=>p.provenance.class==='UNVERIFIED').length;
+  const derived=model.parts.length-assumed-unverified;
   return <header className="topbar edgeTop compactModelHeader">
     <div className="brandModelIdentity">
       <div className="animatedBrandMark" title="GIZA NEXUS">
@@ -26,7 +28,7 @@ export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / 
       <button aria-pressed={surface==='REGISTRATION'} className={surface==='REGISTRATION'?'active':''} onClick={()=>onSurface('REGISTRATION')}>REGISTRATION</button>
     </nav>
     <div className="headerSummary" aria-label="Model evidence summary">
-      <span><b>{verified}</b> evidence-bound</span><span><b>{model.parts.length-verified}</b> unverified</span><span><b>{model.measurements.length}</b> measurements</span>
+      <span><b>{derived}</b> reconstructions</span><span><b>{assumed}</b> assumed</span><span><b>{unverified}</b> unverified</span>
     </div>
   </header>;
 }

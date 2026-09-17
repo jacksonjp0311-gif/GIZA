@@ -70,7 +70,7 @@ function PartMesh({
   const clip = clippingPlanes(sectionAxis, sectionPos);
 
   return (
-    <group position={position} rotation={part.spatial.rpy_rad} onClick={e => { e.stopPropagation(); onSelect(part.id); }} scale={selected ? 1.018 : 1}>
+    <group position={position} rotation={part.spatial.rpy_rad} onClick={e => { e.stopPropagation(); onSelect(part.id); }}>
       {stl ? (
         <Suspense fallback={<Html center><span className="loader">mesh…</span></Html>}>
           <Stl url={stl} color={color} opacity={opacity} clip={clip} />

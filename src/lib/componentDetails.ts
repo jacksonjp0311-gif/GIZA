@@ -66,8 +66,13 @@ export function detailParts(model: ModelBundle, focus: Part, context: DetailCont
 
 export function detailCoverage(model: ModelBundle, part: Part) {
   const components = model.atlasObjects[part.id]?.measurement_components ?? [];
+  const associated = model.measurements.filter(m => components.includes(m.component));
+  const isCoffer = part.id.startsWith('part.sarcophagus.');
+  const measurements = isCoffer ? associated.filter(m => m.id.startsWith('m.coffer.') &&
+    (part.id.endsWith('.lid') === m.id.startsWith('m.coffer.lid_'))) : associated;
   return {
-    measurements: model.measurements.filter(m => components.includes(m.component)),
+    measurements,
+    contextMeasurements: associated.filter(m => !measurements.includes(m)),
     photos: uniquePhotos(model.photos.filter(p => p.bind.includes(part.id))),
     quality: part.provenance.class === 'UNVERIFIED' ? 'UNVERIFIED GEOMETRY'
       : isBurialDetail(part.id) ? 'SURVEY-BASED RECONSTRUCTION'

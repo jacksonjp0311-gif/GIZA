@@ -55,6 +55,15 @@ No GitHub commits were made.
 
 ## Sealing
 
+### Usability foundation and portable startup — 2026-09-17
+
+- Implemented searchable component navigation with empty states, expanded viewer mode, shared dimensions controls, functional overview camera speed, reduced-motion transitions, unscaled selection highlights, sanitized saved settings, request timeouts and render-error recovery. Header evidence counts now distinguish derived/assumed/unverified.
+- Sarcophagus cavity/lid actions and separate body (7) versus lid (4) survey records are implemented. Reference/catalog drawers and inspection controls have dedicated layout space instead of covering the canvas. Source captions are larger. No new archaeological measurements, scans or photographs were acquired in this tranche.
+- Repo-relative `npm start` and default platform launchers compile before serving Explorer and Workbench; external build receipts do not alter sealed source. Lockfile added, Vite updated to 7.3.6, and Windows/Linux CI configured. `npm audit` reports zero known vulnerabilities; this is not a comprehensive security audit.
+- Full `npm run check` passed after final source changes: strict TypeScript, inherited scientific/static checks, 25 registration repair tests, 11 component tests and 7 usability tests. A compile/start/health/stop smoke run passed on alternate ports 4185/4186. Occupied default ports failed with the intended message without stopping their existing processes. Final desktop compilation passed as dev.25; the pre-existing large-bundle warning remains.
+- Browser checks exercised search success and no-results, expanded/restored panels, cavity and lid navigation, and body/lid counts. Final 1280×720 dev.25 screenshot verified the model, photo panel and controls do not overlap in expanded mode. Earlier 812×912 checks exercised component search/cavity navigation. Browser logs returned no errors during those checks. Narrow stacked evidence layout and reduced-motion preference are implemented but not comprehensively browser-tested. Automated tests do not replace a full accessibility/performance audit.
+- All four canonical hashes (parts, measurements, assemblies, stone field) remain unchanged. Runtime schemas, canonical/detail frame reconciliation, wider direct-record binding and evidence acquisition remain open in `docs/USABILITY_FOUNDATION.md`. The 56-item roadmap is not claimed complete.
+
 ### GitHub publication and code/data audit — 2026-09-17
 
 - User authorized repository creation and push. Created private jacksonjp0311-gif/GIZA, main branch; no existing repository/history was overwritten. Added environment/private-key ignore rules, retained checksum-referenced historical verification logs, and preserved bytes via .gitattributes.

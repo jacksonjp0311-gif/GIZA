@@ -1,12 +1,12 @@
 {
   "version": "0.10.12",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-17T10:50:17.079Z",
+  "sealed_at": "2026-09-17T11:18:19.207Z",
   "required_handoff_files": [
     {
       "path": "README.md",
-      "sha256": "1086e1a0be47d26d54998f509a97bdb146ddb0293e138f95980cda3aec11e1b4",
-      "bytes": 7180
+      "sha256": "d175cdb7cdb752bce05459575acd9aa20212c475a533921541f2e40e1f10f435",
+      "bytes": 7719
     },
     {
       "path": "CHANGELOG.md",
@@ -25,8 +25,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "7e818f435f0855fa302111ddf63896fe1f43d49cab50c959bff33513ab0c6397",
-      "bytes": 12548
+      "sha256": "acf63051179d8524c5100b90daa90daf67768101f06d6a08c038df1c9d6ad9b5",
+      "bytes": 14905
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -165,7 +165,7 @@
     },
     {
       "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
-      "sha256": "18b908c326711a3bbf6d6a840a059f408d85ba18d21f1f64b770521f98428eb3",
+      "sha256": "097ddff85d788b49a463d6534d8c2295ce790e2ca071b005dc30cc318e25a247",
       "bytes": 3255
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
-      "sha256": "48adb56f6522c5a9f5344b5ee01c62c523966b402aae7f3a7574efc1ae205309",
+      "sha256": "d5c821fcbb5288b1e943e8a1b3875a4874741b0e1423d3293f46b28e6ce9fbe6",
       "bytes": 2050
     },
     {
@@ -250,7 +250,7 @@
     },
     {
       "path": "RITUAL_MAP_MANIFEST.json",
-      "sha256": "14598d059ea193efc34518ed8902717bf6d6b990c69c5be09afce9b509e2afd7",
+      "sha256": "4ceac9b073ab4a8c9d55f33a28d3e0241c480012cb344a4c59783170835e5afa",
       "bytes": 4033
     },
     {
@@ -280,7 +280,7 @@
     },
     {
       "path": "SOURCE_PARSER_MANIFEST.json",
-      "sha256": "bdcf048a38c4c9d296c505047d52541e7b2e16ae000bebca949390ae40860778",
+      "sha256": "a2fc5df53e9888d34e8a39920f9956059f255eff06482ab9204956827d0cb632",
       "bytes": 1990
     },
     {
@@ -315,7 +315,7 @@
     },
     {
       "path": "ACTION_GRAPH_MANIFEST.json",
-      "sha256": "8dae1056cc1f8c087da16f2a1be3cb9d7cc29619963de04745bcec7cd65e7544",
+      "sha256": "1c14fdbc561d9438b56779e45b5813af4853e92adcce7482a6745a67248d8bdc",
       "bytes": 1961
     },
     {
@@ -330,12 +330,12 @@
     },
     {
       "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
-      "sha256": "a4f095a51b1d21cf662cc3d786d31c22671e1ef52d9afd1102d1e5d98f8250ef",
+      "sha256": "0feafc2105488596276357bdd8416abd0114ab587072f3e4dee9e098d3faae87",
       "bytes": 1519
     },
     {
       "path": "ROOM_GRAPH_MANIFEST.json",
-      "sha256": "4a119085481a542d7e498e89e9606b844e2fa0ca7e3be98e537ce000f667caf1",
+      "sha256": "c81b8767c0363cee201d219e06b2908852ecb5b7bf2846f5a9c248bebe95d324",
       "bytes": 2131
     },
     {
@@ -410,7 +410,7 @@
     },
     {
       "path": "PLAN_CONCORDANCE_MANIFEST.json",
-      "sha256": "446c1c6bd25e8bae53cf6780a5b680a3c36e9b772b9ffd80e2ebac6e58d60a74",
+      "sha256": "911d09dc9c3af58452c2a2d1d19ae2d501b336df461af9669f44a9339394d4a2",
       "bytes": 1630
     },
     {
@@ -445,7 +445,7 @@
     },
     {
       "path": "VISIBILITY_LAB_MANIFEST.json",
-      "sha256": "ec96a1923655964e3c5c17e0436b307bab43652fbb131a961092c60b649b1da1",
+      "sha256": "80ce46641c045b68f768385e51d6fda4675293673b9bc396d9cb3674345685c4",
       "bytes": 2132
     },
     {
@@ -480,7 +480,7 @@
     },
     {
       "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
-      "sha256": "33c7381c6b703e8d7025770463635fc46aff84e60e73b5d5db139b6cf9956d91",
+      "sha256": "3e592baf06625d6c41ae752ed80d0e00689ec9a94f5263389d34153435e04e2c",
       "bytes": 3272
     },
     {
@@ -525,7 +525,7 @@
     },
     {
       "path": "METRIC_VIEW_LAB_MANIFEST.json",
-      "sha256": "6eafbc2d13163c959085fdaefe70365c0707e944e2c5c521d0af273523572a45",
+      "sha256": "9b497fcb43e88f45e585014f6c1e70428e9367bb898934b2c399c6a099b434be",
       "bytes": 2163
     },
     {
@@ -575,7 +575,7 @@
     },
     {
       "path": "PLATE_REGISTRATION_MANIFEST.json",
-      "sha256": "4140709ce2c2c6d880f0c0757d0e00e90234d982c8eec1d32925b766092d1624",
+      "sha256": "7a68e531381f42f6599b72be2a235bc0095b0ce54f3e4f2d44afcbecbb06b906",
       "bytes": 5030
     },
     {
@@ -685,7 +685,7 @@
     },
     {
       "path": "WORKBENCH_MANIFEST.json",
-      "sha256": "83afe1049750c2540f5f2f4db5c005dd6b18c54bb811c552500517cdca74774e",
+      "sha256": "40a16665c7c074e58af0ff614afa6546d7ec580d2f3086e9b6a5c38843c7fda6",
       "bytes": 2292
     }
   ]

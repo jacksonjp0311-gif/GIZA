@@ -15,11 +15,12 @@ export type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/ty
 export { buildStoneCells } from '../scene/geometry';
 
 export function GizaScene({
-  parts, stoneField, showStoneField, explode, selectedId, selectedStone, showUnverified, mode, sectionAxis, sectionPos,
+  parts, stoneField, showStoneField, explode, selectedId, selectedStone, showUnverified, mode, sectionAxis, sectionPos, animationSpeed,
   viewPreset = 'PERSPECTIVE', cameraRevision = 0, xray = false, showLabels = true, showFieldFrame = false, uncertainty = null, simulationVisible = false, activeSimulation = 'GRAVITY', gravityResult = null, acousticResult = null, strataResult = null,
   onSelect, onSelectStone,
 }: {
   parts: Part[]; stoneField: StoneField; showStoneField: boolean; explode: number; selectedId: string | null;
+  animationSpeed:number;
   selectedStone?: StoneCellInfo | null; showUnverified: boolean; mode: UiMode; sectionAxis: SectionAxis; sectionPos: number;
   viewPreset?: ViewPreset; cameraRevision?: number; xray?: boolean; showLabels?: boolean; showFieldFrame?: boolean; uncertainty?: UncertaintyRecord | null; simulationVisible?: boolean; activeSimulation?: ActiveSimulation; gravityResult?: GravityResult | null; acousticResult?: AcousticResult | null; strataResult?: StrataResult | null;
   onSelect: (id: string | null) => void;
@@ -88,7 +89,7 @@ export function GizaScene({
 
       <FieldLayer visible={showFieldFrame} selectedPart={selectedPart} uncertainty={uncertainty} explode={explode} />
       <SimulationLayer visible={simulationVisible} active={activeSimulation} gravity={gravityResult} acoustic={acousticResult} strata={strataResult} />
-      <CameraRig preset={viewPreset} revision={cameraRevision} />
+      <CameraRig preset={viewPreset} revision={cameraRevision} speed={animationSpeed}/>
     </Canvas>
   );
 }
