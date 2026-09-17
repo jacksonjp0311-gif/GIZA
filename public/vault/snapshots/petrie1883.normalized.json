@@ -1,0 +1,16 @@
+{
+  "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+  "version": "0.10.0",
+  "source_id": "src.petrie1883",
+  "title": "The Pyramids and Temples of Gizeh",
+  "author": "W. M. Flinders Petrie",
+  "year": 1883,
+  "internet_archive_id": "cu31924012038927",
+  "verified_pdf_url": "https://archive.org/download/cu31924012038927/cu31924012038927.pdf",
+  "public_domain": true,
+  "commons_reported_pages": 315,
+  "approx_pdf_size_bytes": 9300000,
+  "geometry_role": "PRIMARY_HISTORICAL_METRIC_BACKBONE",
+  "guard": "Parsed measurements must preserve native units, page/plate locator, conversion receipt and source-frame assumptions.",
+  "canonical_mutation": false
+}

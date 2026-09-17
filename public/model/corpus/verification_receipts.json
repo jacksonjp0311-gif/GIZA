@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "receipt_count": 14,
+  "receipts": [
+    {
+      "receipt_id": "verify.egypt_ministry.sphinx",
+      "source_id": "src.egypt_ministry.sphinx",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://egymonuments.gov.eg/monuments/the-great-sphinx/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Official summary. Khafre attribution and sequence remain archaeological/historical context, not direct geometry control."
+    },
+    {
+      "receipt_id": "verify.egypt_ministry.giza_plateau",
+      "source_id": "src.egypt_ministry.giza_plateau",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/giza-plateau/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Official site-level context; does not write detailed geometry."
+    },
+    {
+      "receipt_id": "verify.digitalgiza.khafre_valley_temple",
+      "source_id": "src.digitalgiza.khafre_valley_temple",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://giza.fas.harvard.edu/sites/1778/full/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Catalog record is authoritative for Digital Giza indexing. Per-asset rights still control redistribution."
+    },
+    {
+      "receipt_id": "verify.digitalgiza.khafre_pyramid_temple",
+      "source_id": "src.digitalgiza.khafre_pyramid_temple",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://giza.fas.harvard.edu/sites/2294/full/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Catalog metadata only unless individual records carry reusable rights."
+    },
+    {
+      "receipt_id": "verify.perring1840.khafre",
+      "source_id": "src.perring1840.khafre",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://doi.org/10.11588/diglit.3558",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Underlying 1840 work is public domain; digital facsimile reuse should follow Heidelberg terms. OCR values require plate/manual verification before geometry promotion."
+    },
+    {
+      "receipt_id": "verify.britishmuseum.belzoni_medal",
+      "source_id": "src.britishmuseum.belzoni_medal",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://www.britishmuseum.org/collection/object/C_M-5597",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Museum record independently anchors the 2 March 1818 discovery date; no geometry authority."
+    },
+    {
+      "receipt_id": "verify.met.khafre_face",
+      "source_id": "src.met.khafre_face",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://www.metmuseum.org/art/collection/search/543896",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Museum curatorial attribution; use object-level Open Access flag for images."
+    },
+    {
+      "receipt_id": "verify.met.khafre_architrave",
+      "source_id": "src.met.khafre_architrave",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://www.metmuseum.org/art/collection/search/551054",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Curatorial record says original red-granite architrave probably came from Khafre pyramid temple and was later reused at Lisht."
+    },
+    {
+      "receipt_id": "verify.unesco.memphis_necropolis",
+      "source_id": "src.unesco.memphis_necropolis",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://whc.unesco.org/en/list/86",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "UNESCO descriptive text is CC-BY-SA IGO 3.0; gallery images have item-specific copyright and must not be bulk-reused."
+    },
+    {
+      "receipt_id": "verify.aera.kh_monuments_unit",
+      "source_id": "src.aera.kh_monuments_unit",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://aeraweb.org/khafres-monuments/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Expert archaeological synthesis; sequence claims remain interpretations supported by mapped structural/geological relationships."
+    },
+    {
+      "receipt_id": "verify.aera.kh_sequence",
+      "source_id": "src.aera.kh_sequence",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://aeraweb.org/why-sequence-is-important/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Strong relative-sequence interpretation; not absolute dating or metric geometry."
+    },
+    {
+      "receipt_id": "verify.aera.area_c",
+      "source_id": "src.aera.area_c",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://aeraweb.org/projects/area-c/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Re-excavation-based interpretation that galleries were storage/craft rather than barracks; association with Khafre construction is contextual."
+    },
+    {
+      "receipt_id": "verify.aera.radiocarbon",
+      "source_id": "src.aera.radiocarbon",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://aeraweb.org/projects/how-old-are-the-pyramids/",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Research summary of 1984/1995 radiocarbon campaigns; use primary Radiocarbon paper for formal citation."
+    },
+    {
+      "receipt_id": "verify.bonani2001.radiocarbon",
+      "source_id": "src.bonani2001.radiocarbon",
+      "verified_on": "2026-09-12",
+      "verification": "LIVE_WEB_SOURCE_OPENED_OR_SEARCH_RESULT_CONFIRMED",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/radiocarbon-dates-of-old-and-middle-kingdom-monuments-in-egypt/A967302ADD527BFEB9226457682C0B4A",
+      "stored_content": "CITATION_METADATA_AND_NORMALIZED_FACTS_ONLY",
+      "canonical_mutation": false,
+      "notes": "Peer-reviewed primary chronology study; >450 organic samples collected across Old/Middle Kingdom monuments."
+    }
+  ]
+}

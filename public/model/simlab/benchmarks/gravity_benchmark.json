@@ -1,0 +1,24 @@
+{
+  "benchmark_id": "bench.gravity.v0.9.0",
+  "provenance_class": "SIMULATED",
+  "tests": [
+    {
+      "id": "point_mass_exact",
+      "expected_microgal": -133.486,
+      "computed_microgal": -133.486,
+      "relative_error": 0,
+      "tolerance": 1e-12,
+      "pass": true
+    },
+    {
+      "id": "deep_cube_far_field_convergence",
+      "point_mass_microgal": 16.903359162901307,
+      "voxel_microgal": 16.90317679980206,
+      "relative_difference": 0.000010788571519305217,
+      "tolerance": 0.01,
+      "pass": true,
+      "note": "Voxel finite-body result should approach point-mass scale at depth; not an identity test."
+    }
+  ],
+  "pass": true
+}

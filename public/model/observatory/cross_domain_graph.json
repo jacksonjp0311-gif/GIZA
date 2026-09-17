@@ -1,0 +1,480 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "nodes": [
+    {
+      "id": "entity.khafre_pyramid",
+      "kind": "monument"
+    },
+    {
+      "id": "entity.burial_chamber",
+      "kind": "component"
+    },
+    {
+      "id": "entity.casing",
+      "kind": "component"
+    },
+    {
+      "id": "entity.valley_temple",
+      "kind": "complex_component"
+    },
+    {
+      "id": "entity.giza_plateau",
+      "kind": "geology_context"
+    },
+    {
+      "id": "entity.sphinx_context",
+      "kind": "hydrology_context"
+    },
+    {
+      "id": "entity.backing_limestone",
+      "kind": "material"
+    },
+    {
+      "id": "entity.survey_frame",
+      "kind": "reference_frame"
+    },
+    {
+      "id": "entity.future_laser_cloud",
+      "kind": "acquisition_target"
+    },
+    {
+      "id": "entity.kh_material_samples",
+      "kind": "material_sample_set"
+    },
+    {
+      "id": "entity.digital_plan_register",
+      "kind": "plan_register"
+    },
+    {
+      "id": "entity.sar_method_lineage",
+      "kind": "claim_method_audit"
+    },
+    {
+      "id": "entity.archive_inventory_audit",
+      "kind": "source_discrepancy"
+    },
+    {
+      "id": "entity.open_media_atlas",
+      "kind": "evidence_collection",
+      "label": "Open Khafre media atlas",
+      "domains": [
+        "imagery",
+        "field_registration",
+        "architecture",
+        "condition"
+      ]
+    },
+    {
+      "id": "entity.facade_condition_monitoring",
+      "kind": "research_thread",
+      "label": "Khafre facade condition/time-series monitoring",
+      "domains": [
+        "structural_condition",
+        "imagery",
+        "geomechanics"
+      ]
+    },
+    {
+      "id": "entity.registration_lab",
+      "kind": "research_runtime",
+      "label": "Photo/survey Registration Lab",
+      "domains": [
+        "imagery",
+        "survey_control",
+        "photogrammetry",
+        "field_registration"
+      ]
+    },
+    {
+      "id": "entity.modern_khafre_surface_control",
+      "kind": "evidence_gap",
+      "label": "Modern Khafre surface control",
+      "domains": [
+        "laser_scanning",
+        "survey",
+        "geometry"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "entity.khafre_pyramid",
+      "to": "obs.petrie.base_mean",
+      "relation": "HAS_MEASURED_SURVEY"
+    },
+    {
+      "from": "entity.khafre_pyramid",
+      "to": "obs.ministry.height",
+      "relation": "HAS_OFFICIAL_SUMMARY"
+    },
+    {
+      "from": "entity.casing",
+      "to": "obs.dash.khafre_baseline_definition",
+      "relation": "CONSTRAINS_BASELINE_INTERPRETATION"
+    },
+    {
+      "from": "entity.survey_frame",
+      "to": "obs.gpmp.loop_closure",
+      "relation": "HAS_CONTROL_QUALITY_CONTEXT"
+    },
+    {
+      "from": "entity.sphinx_context",
+      "to": "obs.lehner.water_level_1981_82",
+      "relation": "HAS_HYDROLOGY_CONTEXT"
+    },
+    {
+      "from": "entity.backing_limestone",
+      "to": "obs.material.kh_tensile",
+      "relation": "HAS_LAB_PROPERTY"
+    },
+    {
+      "from": "entity.backing_limestone",
+      "to": "obs.material.kh_shear",
+      "relation": "HAS_LAB_PROPERTY"
+    },
+    {
+      "from": "entity.giza_plateau",
+      "to": "obs.geology.aigner_structure",
+      "relation": "HAS_GEOLOGICAL_CONTEXT"
+    },
+    {
+      "from": "entity.future_laser_cloud",
+      "to": "obs.kh2025laser.exists",
+      "relation": "JUSTIFIED_BY_PUBLICATION"
+    },
+    {
+      "from": "entity.khafre_pyramid",
+      "to": "obs.scidep.multiview_plan",
+      "relation": "HAS_FUTURE_NONDESTRUCTIVE_METHOD"
+    },
+    {
+      "from": "entity.kh_material_samples",
+      "to": "obs.material.kh_table13_samples",
+      "relation": "HAS_EXACT_LAB_ROWS"
+    },
+    {
+      "from": "entity.kh_material_samples",
+      "to": "obs.material.kh_pwave",
+      "relation": "CONSTRAINS_ACOUSTIC_PRIOR"
+    },
+    {
+      "from": "entity.kh_material_samples",
+      "to": "obs.material.kh_elastic_modulus",
+      "relation": "CONSTRAINS_GEOMECHANICAL_PRIOR"
+    },
+    {
+      "from": "entity.digital_plan_register",
+      "to": "obs.digitalgiza.plan_register",
+      "relation": "HAS_ARCHIVAL_GEOMETRY_REFERENCES"
+    },
+    {
+      "from": "entity.archive_inventory_audit",
+      "to": "obs.arce.archive_final_counts",
+      "relation": "HAS_FINAL_DIGITIZATION_COUNT"
+    },
+    {
+      "from": "entity.sar_method_lineage",
+      "to": "obs.sar.method_retracted",
+      "relation": "HAS_RETRACTION_STATUS"
+    },
+    {
+      "from": "entity.open_media_atlas",
+      "to": "obs.commons.khafre_media_surface",
+      "relation": "SUPPORTED_BY"
+    },
+    {
+      "from": "entity.open_media_atlas",
+      "to": "obs.digitalgiza.khafre_photo_count",
+      "relation": "COMPLEMENTS_ARCHIVE"
+    },
+    {
+      "from": "entity.facade_condition_monitoring",
+      "to": "obs.khafre.facade_photo_condition_2009_2012",
+      "relation": "SUPPORTED_BY"
+    },
+    {
+      "from": "entity.facade_condition_monitoring",
+      "to": "entity.open_media_atlas",
+      "relation": "CAN_EXTEND_WITH_REGISTERED_TIME_SERIES"
+    },
+    {
+      "from": "entity.registration_lab",
+      "to": "obs.aera.gpmp.control_network",
+      "relation": "USES_CONTROL_NETWORK_CONTEXT"
+    },
+    {
+      "from": "entity.registration_lab",
+      "to": "obs.dash.khafre_corner_control_dataset",
+      "relation": "ACQUIRES_SURVEY_CONTROL_FROM"
+    },
+    {
+      "from": "entity.registration_lab",
+      "to": "entity.open_media_atlas",
+      "relation": "REGISTERS_VISUAL_EVIDENCE_FROM"
+    },
+    {
+      "from": "entity.modern_khafre_surface_control",
+      "to": "obs.khafre.laser_survey_2025_exists",
+      "relation": "PUBLICATION_EXISTS_DATA_PENDING"
+    },
+    {
+      "from": "entity.registration_lab",
+      "to": "obs.kawae2019.drone3d_method",
+      "relation": "METHOD_CONTEXT"
+    }
+  ],
+  "cross_domain_summaries": [
+    {
+      "id": "cross.baseline-survey-visual",
+      "domains": [
+        "survey",
+        "imagery",
+        "architecture"
+      ],
+      "summary": "Khafre base reconstruction should combine Petrie metric lines, physical baseline-definition evidence at granite casing/pavement interface, and modern laser/photogrammetric acquisition rather than treating one summary dimension as sufficient.",
+      "evidence": [
+        "obs.petrie.base_mean",
+        "obs.dash.khafre_baseline_definition",
+        "obs.kh2025laser.exists"
+      ],
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "cross.hydrology-geology-strata",
+      "domains": [
+        "hydrology",
+        "geology",
+        "geomechanics"
+      ],
+      "summary": "Sphinx-area historical water-table observations are real context but cannot be propagated into the pyramid/deep model without explicit stratigraphic connectivity and permeability.",
+      "evidence": [
+        "obs.arce.water_table_profile",
+        "obs.lehner.water_level_1981_82",
+        "obs.geology.aigner_structure"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.materials-strata-acoustics",
+      "domains": [
+        "materials",
+        "geomechanics",
+        "acoustics"
+      ],
+      "summary": "Measured limestone strength/porosity/absorption ranges demonstrate material heterogeneity; future STRATA and ECHO runs should sample material uncertainty rather than use single constants.",
+      "evidence": [
+        "obs.material.kh_tensile",
+        "obs.material.kh_shear",
+        "obs.material.giza_porosity",
+        "obs.material.giza_absorption"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.muography-laser-geometry",
+      "domains": [
+        "muography",
+        "laser_scanning",
+        "geometry"
+      ],
+      "summary": "Modern external/internal sensing can constrain different variables: laser survey constrains accessible surfaces while muography can test density-path anomalies; neither should silently infer the other.",
+      "evidence": [
+        "obs.kh2025laser.exists",
+        "obs.scidep.multiview_plan"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.samples-echo-strata",
+      "domains": [
+        "materials",
+        "acoustics",
+        "geomechanics"
+      ],
+      "summary": "Exact Khafre sample rows now permit solver priors to use distributions/rows rather than broad monument-wide constants. P-wave, UCS, tensile and shear values remain sample-scale evidence.",
+      "evidence": [
+        "obs.material.kh_table13_samples",
+        "obs.material.kh_pwave",
+        "obs.material.kh_elastic_modulus",
+        "obs.material.kh_physical_samples"
+      ],
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "cross.archive-discrepancy-governance",
+      "domains": [
+        "archives",
+        "survey",
+        "data_governance"
+      ],
+      "summary": "ARCE/AERA archive counts differ by publication phase/scope; GIZA preserves the discrepancy rather than flattening inventory history.",
+      "evidence": [
+        "obs.arce.archive_media_counts",
+        "obs.arce.archive_final_counts"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.sar-claim-method-audit",
+      "domains": [
+        "remote_sensing",
+        "publication_status",
+        "claim_governance"
+      ],
+      "summary": "The 2022 SAR Doppler tomography method paper is retracted. GIZA therefore assigns that method lineage zero geometry-write authority and keeps deep Khafre geometry unverified.",
+      "evidence": [
+        "obs.sar.method_retracted"
+      ],
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "cross.plan-photo-register",
+      "domains": [
+        "architecture",
+        "survey",
+        "imagery"
+      ],
+      "summary": "Digital Giza provides a large Khafre photo catalog plus stable plan records for complex, lower corridor/chamber and temple geometry; these are high-value registration/crosscheck inputs subject to record-level rights.",
+      "evidence": [
+        "obs.digitalgiza.khafre_photo_count",
+        "obs.digitalgiza.plan_register"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "summary.atlas.open_media_time_series",
+      "title": "Open imagery can support registered condition/time-series analysis",
+      "domains": [
+        "imagery",
+        "structural_condition",
+        "field_registration"
+      ],
+      "evidence": [
+        "obs.commons.khafre_media_surface",
+        "obs.digitalgiza.khafre_photo_count",
+        "obs.khafre.facade_photo_condition_2009_2012"
+      ],
+      "summary": "Commons and Digital Giza provide broad historical/modern visual coverage, while the 2016 facade study demonstrates a photography-plus-field-verification condition workflow. The next defensible step is camera/plan registration and residual auditing, not uncalibrated image measurement.",
+      "guard": "Archive abundance is not measurement precision; category counts overlap and image-derived geometry requires calibration/control."
+    },
+    {
+      "id": "summary.registration.survey-control-bridge",
+      "title": "Open photos can be upgraded using survey control rather than visual alignment alone",
+      "domains": [
+        "imagery",
+        "survey_control",
+        "photogrammetry",
+        "field_registration"
+      ],
+      "evidence": [
+        "obs.commons.khafre_media_surface",
+        "obs.aera.gpmp.control_network",
+        "obs.dash.khafre_corner_control_dataset",
+        "obs.kawae2019.drone3d_method"
+      ],
+      "summary": "The open Khafre image atlas can be tied to a defensible spatial workflow because public institutional survey-control resources and documented Giza 3D-survey methods exist. The immediate bottleneck is acquisition/CRS-datum registration of control data plus image-space correspondence marking.",
+      "guard": "Availability of survey-control metadata does not mean a photo is registered; residuals and transform receipts remain mandatory."
+    },
+    {
+      "id": "summary.controlnet.khafre-survey-orientation",
+      "title": "Measured Khafre casing orientation now supplies a survey-backed angular prior for image registration",
+      "domains": [
+        "survey_control",
+        "field_registration",
+        "photogrammetry",
+        "architecture"
+      ],
+      "evidence": [
+        "obs.nell2006.khafre.north_casing_orientation",
+        "obs.nell2006.khafre.east_casing_orientation",
+        "obs.nell2006.khafre.south_casing_orientation",
+        "obs.nell2006.khafre.west_casing_orientation",
+        "obs.nell2006.khafre.repeatability",
+        "obs.gpmp.frame_origin",
+        "obs.gpmp.sp4"
+      ],
+      "summary": "Four Total Station best-fit casing-foundation side measurements support a common Khafre yaw prior of -4.45 arcmin from true cardinality while retaining a 2.0 arcmin side spread. GPMP frame/control observations provide a separate coordinate-network context, but the Khafre-local translation remains unresolved.",
+      "guard": "Angular control is not a full survey-to-model transform. No photo pose, local translation, elevation, or canonical geometry update follows automatically."
+    },
+    {
+      "id": "cross.sphinx-sequence-geology",
+      "domains": [
+        "archaeology",
+        "construction_sequence",
+        "geology"
+      ],
+      "summary": "Official and AERA/ARCE sources converge on a Khafre-period lower-complex sequence in which the Valley Temple precedes the Sphinx Temple and Sphinx-quarry work, with geological block matching linking quarry and temple.",
+      "evidence": [
+        "obs.ministry.sphinx.sequence",
+        "obs.aera.valley_before_sphinx_temple",
+        "obs.aera.sphinx_quarry_link",
+        "obs.aera.causeway_precedes_sphinx_quarry"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.history-modern-registration",
+      "domains": [
+        "historical_survey",
+        "imagery",
+        "registration"
+      ],
+      "summary": "Perring/Belzoni historical sections and open modern photographs can become a condition/geometry time series only after independent survey registration; historical drawings alone remain cross-checks.",
+      "evidence": [
+        "obs.perring1840.chamber_roof",
+        "obs.belzoni.discovery_date",
+        "obs.commons.khafre_media_surface"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.chronology-radiocarbon-caveat",
+      "domains": [
+        "chronology",
+        "radiocarbon",
+        "archaeology"
+      ],
+      "summary": "Radiocarbon programs provide an independent chronology constraint but Old Kingdom offsets/scatter and old-wood effects prevent direct conversion of a single old charcoal date into an earlier pyramid construction date.",
+      "evidence": [
+        "obs.aera.radiocarbon.1995_offset",
+        "obs.aera.radiocarbon.oldwood",
+        "obs.bonani.sample_count"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.materials-quarry-mechanics",
+      "domains": [
+        "materials",
+        "quarrying",
+        "geomechanics"
+      ],
+      "summary": "Official/material studies converge on local limestone core/backing, imported fine limestone casing and granite use at the base; sample mechanics are useful priors but not universal rock-mass properties.",
+      "evidence": [
+        "obs.ministry.core_material",
+        "obs.material.kh.granite_base_casing",
+        "obs.material.kh.local_quarry_context",
+        "obs.material.kh_table13_samples"
+      ],
+      "priority": "HIGH"
+    },
+    {
+      "id": "cross.intent.mortuary-cult-landscape",
+      "domains": [
+        "ritual_function",
+        "architecture",
+        "political_organization",
+        "ideology"
+      ],
+      "summary": "The strongest current intent reconstruction combines royal funeral/afterlife transition, continuing offering cult, staged complex architecture and centralized-state context; solar/cosmic interpretation is supported contextually but remains less Khafre-specific.",
+      "evidence": [
+        "obs.intent.royal_complex.funeral_afterlife",
+        "obs.intent.royal_complex.offering_cult",
+        "obs.intent.old_kingdom.solar_symbolism",
+        "obs.intent.old_kingdom.centralized_state"
+      ],
+      "priority": "HIGH"
+    }
+  ]
+}

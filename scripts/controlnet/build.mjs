@@ -1,0 +1,17 @@
+import {spawnSync} from 'node:child_process';
+import fs from 'node:fs';
+const run=(args)=>{const r=spawnSync(process.execPath,args,{stdio:'inherit'});if(r.status!==0)process.exit(r.status??1)};
+run(['scripts/controlnet/derive-khafre-orientation.mjs']);
+run(['scripts/controlnet/benchmark.mjs']);
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const manifest=read('public/model/control_net/manifest.json');
+manifest.counts.frames=read('public/model/control_net/frames.json').frames.length;
+manifest.counts.survey_constraints=read('public/model/control_net/survey_constraints.json').constraints.length;
+manifest.counts.survey_points=read('public/model/control_net/survey_points.json').points.length;
+manifest.counts.orientation_receipts=read('public/model/control_net/orientation_receipts.json').receipts.length;
+manifest.counts.asset_receipts=read('public/model/control_net/asset_receipts.json').assets.length;
+manifest.counts.registration_links=read('public/model/control_net/registration_links.json').links.length;
+manifest.status.projective_camera_benchmark=read('public/model/control_net/benchmarks/projective_camera.json').pass?'PASS':'FAIL';
+manifest.generated_at=new Date().toISOString();
+fs.writeFileSync('public/model/control_net/manifest.json',JSON.stringify(manifest,null,2)+'\n');
+console.log(`CONTROL NET frames=${manifest.counts.frames} constraints=${manifest.counts.survey_constraints} points=${manifest.counts.survey_points} receipts=${manifest.counts.orientation_receipts}`);

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {solveHomography,applyHomography,reprojectionStats} from './registration-math.mjs';
+const Htrue=[[0.0032,-0.0004,-1.7],[0.0003,0.0027,-0.9],[0.0000015,-0.0000008,1]];
+const image=[[120,90],[1040,80],[1110,690],[140,720],[620,360],[820,510]];
+const corr=image.map((p,i)=>({id:`p${i+1}`,image_px:p,plane_xy_m:applyHomography(Htrue,p)}));
+const H=solveHomography(corr);
+const qa=reprojectionStats(H,corr);
+const pass=qa.reprojection_rmse_px<1e-6 && qa.plane_rmse_m<1e-9;
+const result={benchmark_id:'benchmark.registration.planar_homography.0.9.8',kind:'SYNTHETIC_ANALYTIC_CONTROL',correspondence_count:corr.length,reprojection_rmse_px:qa.reprojection_rmse_px,plane_rmse_m:qa.plane_rmse_m,pass,created_at:new Date().toISOString()};
+fs.mkdirSync('public/model/registration/benchmarks',{recursive:true});
+fs.writeFileSync('public/model/registration/benchmarks/planar_homography.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2)); if(!pass)process.exit(1);

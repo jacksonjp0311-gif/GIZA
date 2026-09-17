@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "campaign_id": "first_plate.valley_temple.petrie_vi",
+  "title": "Petrie Plate VI \u2014 Granite / Khafre Valley Temple",
+  "state": "REMOTE_FILE_FINGERPRINT_LOCKED_RAW_BYTES_NOT_LOCAL",
+  "target_frame": "PLATE_LOCAL_METERS",
+  "candidate_id": "bytes.petrie1883.public_domain_pdf",
+  "locator_id": "loc.petrie.plate_vi",
+  "threshold_profile_id": "threshold.historical_plan_similarity.v1",
+  "source_identity_receipts": [
+    "remote.petrie.commons",
+    "remote.petrie.digitalgiza",
+    "remote.petrie.petrieproject_pdf"
+  ],
+  "acquisition_attempt_ids": [
+    "attempt.petrie.archiveorg.20260913",
+    "attempt.petrie.wikimedia.20260913",
+    "attempt.petrie.petrieproject.20260915",
+    "attempt.petrie.wikimedia_original.20260915"
+  ],
+  "controls": [],
+  "holdouts": [],
+  "freeze_state": "LANDMARK_PROTOCOL_DEFINED_COORDINATES_BLOCKED_UNTIL_LOCAL_CHECKSUM_BOUND_SOURCE_IMAGE",
+  "registration_result": null,
+  "metric_geometry_authority": "NONE",
+  "metric_ray_authority": "NONE",
+  "next_action": "Acquire or import the exact Petrie PDF on a networked/local runtime, compute SHA-256, render PDF page 305 from those bytes, record explicit Plate VI visual confirmation, populate the preregistered landmark set, freeze controls/holdouts, then run the unchanged similarity gate once."
+}

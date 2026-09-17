@@ -1,0 +1,53 @@
+{
+  "version": "0.10.7",
+  "title": "Khafre architectural + action sequence",
+  "chapters": [
+    {
+      "id": "threshold",
+      "title": "Threshold",
+      "plain": "The lower complex controls entry into a royal architectural program; GIZA treats this as an architectural fact before assigning ritual meaning.",
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple"
+      ]
+    },
+    {
+      "id": "ascent",
+      "title": "Ascent",
+      "plain": "The causeway physically joins lower and upper components. Its constrained route is a testable candidate for processional sequencing.",
+      "source_ids": [
+        "src.aera.kh_monuments_unit"
+      ]
+    },
+    {
+      "id": "upper_cult",
+      "title": "Upper cult",
+      "plain": "The pyramid temple and pyramid form the upper mortuary/cult focus; continuing offering practice belongs to the broader royal pyramid-complex model.",
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ]
+    },
+    {
+      "id": "images",
+      "title": "Royal-image field",
+      "plain": "Valley Temple finds and the official Khafre statue record make repeated royal imagery a direct archaeological context. Exact statue positions and ritual choreography still require primary plan/findspot parsing.",
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple",
+        "src.egyptianmuseum.khafre_statue"
+      ]
+    },
+    {
+      "id": "marked_threshold",
+      "title": "Marked upper threshold",
+      "plain": "The Khafre architrave is reconstructed by the Met as spanning a pyramid-temple court doorway with royal titulary and associated falcon/statue imagery, making the threshold itself a testable symbolic/action node.",
+      "source_ids": [
+        "src.met.khafre_architrave"
+      ]
+    },
+    {
+      "id": "message",
+      "title": "Meaning guard",
+      "plain": "A designed sequence demonstrates controlled movement. It does not by itself recover the words, theology or intended future audience of the builders.",
+      "source_ids": []
+    }
+  ]
+}

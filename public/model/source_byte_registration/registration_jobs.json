@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "job_count": 6,
+  "jobs": [
+    {
+      "id": "reg.petrie.plate_vi",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "locator_id": "loc.petrie.plate_vi",
+      "target_complex": "VALLEY_TEMPLE",
+      "state": "BLOCKED_SOURCE_BYTES_MISSING",
+      "required": [
+        "local bytes",
+        "SHA-256",
+        "plate crop/page index",
+        "scale extraction",
+        ">=4 independent control correspondences",
+        "holdout controls",
+        "residual report"
+      ]
+    },
+    {
+      "id": "reg.perring.plate_i",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_id": "loc.perring.plate_i",
+      "target_complex": "PYRAMID_INTERIOR",
+      "state": "BLOCKED_SOURCE_BYTES_MISSING_AND_TERMS_REVIEW",
+      "required": [
+        "legal local bytes",
+        "SHA-256",
+        "plate scale parse",
+        "control points",
+        "holdout residuals"
+      ]
+    },
+    {
+      "id": "reg.perring.chamber",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_id": "loc.perring.plate_chamber_scale",
+      "target_complex": "PYRAMID_INTERIOR",
+      "state": "BLOCKED_SOURCE_BYTES_MISSING_AND_TERMS_REVIEW",
+      "required": [
+        "legal local bytes",
+        "SHA-256",
+        "scale parse",
+        "existing 3D interior crosscheck"
+      ]
+    },
+    {
+      "id": "reg.hoelscher.pt",
+      "candidate_id": "bytes.hoelscher1912.heidelberg",
+      "locator_id": "loc.hoelscher.plate_iii",
+      "target_complex": "PYRAMID_TEMPLE",
+      "state": "RIGHTS_BLOCKED_IMAGE_REGISTRATION",
+      "required": [
+        "rights-cleared image bytes from lawful source",
+        "SHA-256",
+        "plate scale/frame",
+        "control points",
+        "residual report"
+      ]
+    },
+    {
+      "id": "reg.arce.vt100",
+      "candidate_id": "bytes.arce.khafre_valley_1_100",
+      "locator_id": "loc.arce.valley_100",
+      "target_complex": "VALLEY_TEMPLE",
+      "state": "BLOCKED_ITEM_URI_UNRESOLVED",
+      "required": [
+        "exact Open Context item URI",
+        "license/attribution",
+        "local bytes",
+        "SHA-256",
+        "survey scale/frame metadata",
+        "registration residuals"
+      ]
+    },
+    {
+      "id": "reg.cross.vt_holdout",
+      "candidate_id": "bytes.arce.khafre_valley_1_100",
+      "locator_id": "loc.arce.valley_100",
+      "target_complex": "VALLEY_TEMPLE",
+      "state": "WAITING_FOR_PETRIE_AND_ARCE_REGISTRATIONS",
+      "required": [
+        "independently register Petrie and ARCE",
+        "compare wall/door correspondences",
+        "report systematic offsets without forcing fit"
+      ]
+    }
+  ]
+}

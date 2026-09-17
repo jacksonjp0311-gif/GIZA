@@ -1,0 +1,154 @@
+{
+  "run_id": "run.gravity.gravity.deep-claim-conditional.6da5f2c3c8f1",
+  "experiment_id": "gravity.deep-claim-conditional",
+  "solver_id": "solver.gravity",
+  "solver_version": "0.9.0-direct-summation",
+  "provenance_class": "SIMULATED",
+  "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+  "geometry_revision": "rev.0003",
+  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+  "input_hash": "6da5f2c3c8f1b5565644a5d136a3e403533dcda4b73bb598731dd6e964d7b787",
+  "parameters": {
+    "density_contrast_kg_m3": -2600,
+    "integration_method": "finite-volume point-element direct summation",
+    "target_cell_m": 10,
+    "observation_height_m": 5
+  },
+  "controls": {
+    "primary_null": "no_void_density_contrast",
+    "null_prediction_microgal": 0,
+    "additional_controls": [
+      "no_void_density_contrast",
+      "shafts_only_contribution_review",
+      "terminals_only_contribution_review"
+    ]
+  },
+  "uncertainty": {
+    "kind": "SCENARIO_SENSITIVITY_NOT_POSTERIOR",
+    "density_note": "2600 kg/m^3 is a modeling contrast, not a measured density field for every location.",
+    "geometry_note": "The geometry itself is UNVERIFIED; conventional confidence intervals would be misleading.",
+    "required_future_sweeps": [
+      "density contrast",
+      "terminal dimensions",
+      "terminal depth",
+      "shaft radius",
+      "regional geology/topography"
+    ]
+  },
+  "components": [
+    {
+      "id": "part.shaft.alpha.1",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.alpha.2",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.alpha.3",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.alpha.4",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.beta.1",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.beta.2",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.beta.3",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.shaft.beta.4",
+      "primitive": {
+        "kind": "cylinder",
+        "radius": 5.5,
+        "height": 648
+      },
+      "volume_m3": 61581.499195667115
+    },
+    {
+      "id": "part.terminal.alpha",
+      "primitive": {
+        "kind": "box",
+        "sx": 80,
+        "sy": 80,
+        "sz": 80
+      },
+      "volume_m3": 512000
+    },
+    {
+      "id": "part.terminal.beta",
+      "primitive": {
+        "kind": "box",
+        "sx": 80,
+        "sy": 80,
+        "sz": 80
+      },
+      "volume_m3": 512000
+    }
+  ],
+  "total_modeled_void_volume_m3": 1516651.9935653368,
+  "element_count": 1672,
+  "observation_count": 961,
+  "summary": {
+    "min_microgal": -283.42251151673264,
+    "max_microgal": -35.92486100608634,
+    "max_magnitude_microgal": 283.42251151673264,
+    "peak": {
+      "coordinates_m": [
+        -60,
+        -20,
+        5
+      ],
+      "upward_delta_g_microgal": 283.42251151673264,
+      "conventional_downward_delta_g_microgal": -283.42251151673264,
+      "magnitude_microgal": 283.42251151673264
+    }
+  },
+  "status": "COMPLETE",
+  "created_at": "2026-09-11T14:59:22.332Z",
+  "interpretation_guard": "This is a conditional forward prediction. It is not evidence that any UNVERIFIED component exists.",
+  "result_path": "public/model/simlab/results/gravity.deep-claim-conditional.json"
+}

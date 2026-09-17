@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "accessed_on": "2026-09-12",
+  "publications": [
+    {
+      "id": "pub.petrie1883",
+      "source_id": "src.petrie1883",
+      "year": 1883,
+      "citation": "W. M. Flinders Petrie, The Pyramids and Temples of Gizeh. London: Field & Tuer, 1883.",
+      "domains": [
+        "survey",
+        "architecture",
+        "geometry"
+      ],
+      "access": "PUBLIC_WEB",
+      "status": "INGESTED_BACKBONE"
+    },
+    {
+      "id": "pub.hoelscher1912",
+      "source_id": "src.hoelscher1912",
+      "year": 1912,
+      "citation": "Uvo Hölscher, Das Grabdenkmal des Königs Chephren, 1912.",
+      "doi": "10.11588/diglit.26793",
+      "domains": [
+        "excavation",
+        "architecture",
+        "materials"
+      ],
+      "access": "PUBLIC_DIGITIZED_VIEW",
+      "status": "REFERENCE_AND_MANUAL_EXTRACTION"
+    },
+    {
+      "id": "pub.aigner1983",
+      "source_id": "src.aigner1983",
+      "year": 1983,
+      "citation": "Thomas Aigner, A Pliocene cliff-line around the Giza pyramids plateau, Egypt, Palaeogeography, Palaeoclimatology, Palaeoecology 42 (1983) 313–322.",
+      "doi": "10.1016/0031-0182(83)90029-9",
+      "domains": [
+        "geology",
+        "geomorphology"
+      ],
+      "access": "ABSTRACT_PUBLIC",
+      "status": "CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.lehner1992",
+      "source_id": "src.lehner.sphinx1992",
+      "year": 1992,
+      "citation": "The First International Symposium on the Great Sphinx: Book of Proceedings, 1992.",
+      "domains": [
+        "survey",
+        "hydrology",
+        "geology",
+        "architecture"
+      ],
+      "access": "PUBLIC_PDF",
+      "status": "CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.npj2020",
+      "source_id": "src.npj2020.materials",
+      "year": 2020,
+      "citation": "Sustainability problems of the Giza pyramids, Heritage Science 8 (2020).",
+      "doi": "10.1186/s40494-020-0356-9",
+      "domains": [
+        "materials",
+        "geomechanics",
+        "petrography"
+      ],
+      "access": "OPEN_ACCESS",
+      "status": "MATERIAL_PRIORS_INGESTED"
+    },
+    {
+      "id": "pub.scidep2025",
+      "source_id": "src.scidep2025",
+      "year": 2025,
+      "citation": "Gamal et al., The ScIDEP Muon Radiography Project at the Egyptian Pyramid of Khafre, arXiv:2503.21959 (2025).",
+      "arxiv": "2503.21959",
+      "domains": [
+        "muography",
+        "detector_physics",
+        "internal_structure"
+      ],
+      "access": "PUBLIC_PREPRINT",
+      "status": "METHOD_CONTEXT_ONLY_NO_STRUCTURE_RESULT"
+    },
+    {
+      "id": "pub.kh2025laser",
+      "source_id": "src.aera.kh2025_laser",
+      "year": 2025,
+      "citation": "Søren Sindbæk and Sarah Skytte Qvistgaard, “Beaming in on Khafre: The First Laser Survey of the Second Great Pyramid,” AERAGRAM 26:1-2 (2025), 3–6.",
+      "domains": [
+        "laser_scanning",
+        "survey",
+        "surface_geometry"
+      ],
+      "access": "MEMBER_ARTICLE_METADATA_PUBLIC",
+      "status": "ACQUISITION_PRIORITY"
+    },
+    {
+      "id": "pub.corner2012",
+      "source_id": "src.dash.corner_conundrum",
+      "year": 2012,
+      "citation": "“Corner Conundrum: A Mapping Mantra,” AERAGRAM 13:1 (2012), p. 19.",
+      "domains": [
+        "survey",
+        "baseline_geometry",
+        "uncertainty"
+      ],
+      "access": "PUBLIC_PDF",
+      "status": "METHOD_OBSERVATION_INGESTED"
+    },
+    {
+      "id": "pub.lehner1983.layout",
+      "source_id": "src.lehner1983.layout",
+      "year": 1983,
+      "citation": "Mark Lehner, “Some Observations on the Layout of the Khufu and Khafre Pyramids,” Journal of the American Research Center in Egypt 20 (1983), 7–25.",
+      "doi": "10.2307/40000898",
+      "domains": [
+        "survey",
+        "architecture",
+        "baseline_geometry"
+      ],
+      "access": "PUBLIC_METADATA_HARVARD_PDF",
+      "status": "METHOD_AND_LAYOUT_CONTEXT"
+    },
+    {
+      "id": "pub.biondi2022.retracted",
+      "source_id": "src.biondi2022.sar",
+      "year": 2022,
+      "citation": "Filippo Biondi and Corrado Malanga, “Synthetic Aperture Radar Doppler Tomography Reveals Details of Undiscovered High-Resolution Internal Structure of the Great Pyramid of Giza,” Remote Sensing 14 (2022) 5231. RETRACTED 2026.",
+      "doi": "10.3390/rs14205231",
+      "domains": [
+        "remote_sensing",
+        "sar",
+        "method_audit"
+      ],
+      "access": "OPEN_ACCESS_RETRACTED",
+      "status": "RETRACTED_DO_NOT_USE_AS_VALIDATED_METHOD"
+    },
+    {
+      "id": "pub.biondi2026.retraction",
+      "source_id": "src.mdpi2026.sar_retraction",
+      "year": 2026,
+      "citation": "Remote Sensing Editorial Office, retraction notice for Biondi & Malanga 2022, Remote Sensing 18(16) (2026) 2679.",
+      "doi": "10.3390/rs18162679",
+      "domains": [
+        "publication_status",
+        "remote_sensing",
+        "method_audit"
+      ],
+      "access": "OPEN_ACCESS",
+      "status": "STATUS_AUTHORITY"
+    },
+    {
+      "id": "pub.seglins_kukela2016",
+      "source_id": "src.procedia2016.khafre_deformations",
+      "year": 2016,
+      "citation": "I. Seglins and J. Kukela, “Unknown Deformations on the Facades of the Pyramid of Khafre at Giza Pyramid Complex in Egypt,” Procedia Engineering 161 (2016), 1780–1784.",
+      "doi": "10.1016/j.proeng.2016.08.777",
+      "domains": [
+        "structural_condition",
+        "fractures",
+        "photographic_documentation",
+        "field_verification"
+      ],
+      "access": "OPEN_ACCESS",
+      "status": "CONDITION_EVIDENCE_INGESTED"
+    },
+    {
+      "id": "pub.kawae2019.drone3d",
+      "source_id": "src.kawae2019.drone3d",
+      "year": 2019,
+      "citation": "Yukinori Kawae, “Drone 3D Survey at the Pyramids of Giza,” IATSS Review 44(2) (2019), 117–123.",
+      "doi": "10.24572/iatssreview.44.2_117",
+      "domains": [
+        "photogrammetry",
+        "drone_survey",
+        "3d_survey"
+      ],
+      "access": "OPEN_ACCESS",
+      "status": "METHOD_CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.aera2025.khafre_laser",
+      "source_id": "src.aera2025.khafre_laser",
+      "year": 2025,
+      "citation": "Søren Sindbæk and Sarah Skytte Qvistgaard, “Beamoin in on Khafre: The First Laser Survey of the Second Great Pyramid,” AERAGRAM 26(1–2) (2025), 3–6.",
+      "doi": null,
+      "domains": [
+        "laser_scanning",
+        "khafre",
+        "modern_surface_survey"
+      ],
+      "access": "MEMBER_ONLY_ARTICLE_METADATA_PUBLIC",
+      "status": "PUBLICATION_METADATA_ONLY_NO_MEASUREMENTS_INGESTED"
+    },
+    {
+      "id": "pub.nell_ruggles2014",
+      "source_id": "src.nell_ruggles2014",
+      "year": 2014,
+      "citation": "Erin Nell and Clive Ruggles, “The Orientations of the Giza Pyramids and Associated Structures,” Journal for the History of Astronomy 45(3), 2014, 304–360; open preprint arXiv:1302.5622.",
+      "domains": [
+        "survey",
+        "orientation",
+        "control_network"
+      ],
+      "access": "OPEN_PREPRINT",
+      "status": "NUMERIC_KHAFRE_ALIGNMENT_INGESTED"
+    },
+    {
+      "id": "pub.dash_gpmp_frame2015",
+      "source_id": "src.dash.gpmp_frame2015",
+      "year": 2015,
+      "citation": "Glen Dash, “The Great Pyramid’s Footprint: Results from Our 2015 Survey,” AERAGRAM 16-2.",
+      "domains": [
+        "survey",
+        "gpmp",
+        "coordinate_frame"
+      ],
+      "access": "PUBLIC_PDF",
+      "status": "FRAME_DEFINITION_INGESTED"
+    },
+    {
+      "id": "pub.dash_gpmp_geophys2006",
+      "source_id": "src.dash.gpmp_geophys2006",
+      "year": 2007,
+      "citation": "Glen Dash Foundation / GPMP, preliminary report on the 2006 geophysical survey at Giza (draft of Aug. 2007).",
+      "domains": [
+        "survey",
+        "geophysics",
+        "control_point"
+      ],
+      "access": "PUBLIC_PDF",
+      "status": "SP4_CONTROL_CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.dash_petrie_stations2017",
+      "source_id": "src.dash.petrie_stations2017",
+      "year": 2017,
+      "citation": "Glen Dash, “Finding Those Indelible Marks: Flinders Petrie’s Survey Stations,” AERAGRAM 18-1, 2017.",
+      "domains": [
+        "survey",
+        "historical_control",
+        "gpmp"
+      ],
+      "access": "PUBLIC_PDF",
+      "status": "FRAME_BRIDGE_METADATA_INGESTED"
+    },
+    {
+      "id": "pub.perring1840.khafre",
+      "source_id": "src.perring1840.khafre",
+      "year": 1840,
+      "citation": "John Shae Perring, The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids. London, 1840.",
+      "doi": "10.11588/diglit.3558",
+      "domains": [
+        "historical_survey",
+        "architecture",
+        "exploration_history"
+      ],
+      "access": "PUBLIC_DIGITIZED_VIEW",
+      "status": "PRIMARY_HISTORICAL_INGEST"
+    },
+    {
+      "id": "pub.bonani2001",
+      "source_id": "src.bonani2001.radiocarbon",
+      "year": 2001,
+      "citation": "Bonani et al., Radiocarbon Dates of Old and Middle Kingdom Monuments in Egypt, Radiocarbon 43(3), 2001.",
+      "domains": [
+        "chronology",
+        "radiocarbon"
+      ],
+      "access": "ABSTRACT_PUBLIC",
+      "status": "METHOD_CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.unesco86",
+      "source_id": "src.unesco.memphis_necropolis",
+      "year": 1979,
+      "citation": "UNESCO World Heritage Centre, Memphis and its Necropolis – the Pyramid Fields from Giza to Dahshur, Property 86.",
+      "domains": [
+        "heritage",
+        "landscape",
+        "conservation"
+      ],
+      "access": "PUBLIC_WEB",
+      "status": "INSTITUTIONAL_CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.digitalgiza.royal_complexes",
+      "source_id": "src.digitalgiza.royal_pyramid_complexes",
+      "year": null,
+      "citation": "Digital Giza, Royal Pyramid Complexes, Giza Project at Harvard University.",
+      "domains": [
+        "ritual_function",
+        "royal_cult",
+        "architecture"
+      ],
+      "access": "PUBLIC_WEB",
+      "status": "SCHOLARLY_SYNTHESIS_INGESTED"
+    },
+    {
+      "id": "pub.met.old_kingdom",
+      "source_id": "src.met.old_kingdom",
+      "year": 2018,
+      "citation": "The Metropolitan Museum of Art, Egypt in the Old Kingdom (ca. 2649–2130 B.C.).",
+      "domains": [
+        "kingship",
+        "solar_symbolism",
+        "state_organization",
+        "art_history"
+      ],
+      "access": "PUBLIC_WEB",
+      "status": "SCHOLARLY_CONTEXT_INGESTED"
+    },
+    {
+      "id": "pub.flentye2018",
+      "source_id": "src.oxford.flentye2018",
+      "year": 2018,
+      "citation": "Laurel Flentye, “The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty,” Oxford Handbook of Topics in Archaeology (2018).",
+      "domains": [
+        "architecture",
+        "statuary",
+        "causeway",
+        "room_program"
+      ],
+      "access": "PUBLIC_WEB_TEXT",
+      "status": "SCHOLARLY_SYNTHESIS_INGESTED"
+    },
+    {
+      "id": "pub.arnold1999.statuary",
+      "source_id": "src.met.arnold1999.statuary",
+      "year": 1999,
+      "citation": "Dieter Arnold, “Old Kingdom Statues in their Architectural Setting,” in Egyptian Art in the Age of the Pyramids (Metropolitan Museum of Art, 1999), pp. 40–49.",
+      "domains": [
+        "statuary",
+        "architecture",
+        "room_program"
+      ],
+      "access": "PUBLIC_DOWNLOAD_REFERENCE",
+      "status": "SCHOLARLY_INTERPRETATION_REGISTERED"
+    }
+  ]
+}

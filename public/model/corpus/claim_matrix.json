@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "policy": "Claim status is separate from evidence and simulation. Unsupported claims remain visible but cannot write geometry.",
+  "claim_count": 8,
+  "claims": [
+    {
+      "id": "claim.khafre.sphinx_owner",
+      "claim": "Khafre was responsible for the Great Sphinx / Sphinx Temple program.",
+      "status": "STRONGLY_SUPPORTED_ARCHAEOLOGICAL_INTERPRETATION",
+      "supporting_source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.aera.kh_sequence",
+        "src.aera.kh_monuments_unit",
+        "src.opencontext.arce_sphinx"
+      ],
+      "counterpoint": "Some scholars have proposed Khufu/Djedefre or earlier dates; current integrated sequence/geology evidence favors Khafre.",
+      "geometry_write_authority": "NONE",
+      "guard": "Attribution is not a camera/survey control."
+    },
+    {
+      "id": "claim.sphinx.extreme_antiquity",
+      "claim": "The Sphinx predates the 4th Dynasty by thousands of years.",
+      "status": "NOT_SUPPORTED_BY_CURRENT_GIZA_CORPUS",
+      "supporting_source_ids": [],
+      "contradicting_source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.aera.kh_sequence",
+        "src.aera.kh_monuments_unit"
+      ],
+      "geometry_write_authority": "NONE",
+      "guard": "Keep alternative claims quarantined unless new independently verifiable evidence enters the corpus."
+    },
+    {
+      "id": "claim.giza.ai_technology",
+      "claim": "Giza builders possessed AI/computers or exposure to modern-equivalent computational technology.",
+      "status": "NO_DIRECT_EVIDENCE_FOUND",
+      "supporting_source_ids": [],
+      "geometry_write_authority": "NONE",
+      "guard": "Survey precision and algorithmic organization are not evidence of digital computation or AI."
+    },
+    {
+      "id": "claim.khafre.deep_shafts",
+      "claim": "Large deep shafts/terminal structures exist beneath Khafre.",
+      "status": "UNVERIFIED",
+      "supporting_source_ids": [
+        "src.ahrama.deep_claim_2025"
+      ],
+      "contradicting_or_limiting_source_ids": [
+        "src.ahrama.deep_claim_retraction_context_2026"
+      ],
+      "geometry_write_authority": "NONE",
+      "guard": "Retain as quarantined claim geometry only; simulations test consequences, not existence."
+    },
+    {
+      "id": "claim.sar_doppler_validated",
+      "claim": "SAR Doppler tomography publication validates hidden Giza geometry.",
+      "status": "RETRACTED_METHOD_PUBLICATION_NO_GEOMETRY_AUTHORITY",
+      "supporting_source_ids": [
+        "src.biondi2022.sar"
+      ],
+      "contradicting_or_limiting_source_ids": [
+        "src.mdpi2026.sar_retraction"
+      ],
+      "geometry_write_authority": "NONE",
+      "guard": "Retraction status is part of source truth and cannot be omitted."
+    },
+    {
+      "id": "claim.khafre.acoustic_design",
+      "claim": "Khafre interior was intentionally tuned as an acoustic resonator.",
+      "status": "NOT_ESTABLISHED",
+      "supporting_source_ids": [],
+      "geometry_write_authority": "NONE",
+      "guard": "ECHO mode coincidences remain a pattern watch and weaken under construction-aware controls."
+    },
+    {
+      "id": "claim.khafre.hydraulic_machine",
+      "claim": "Khafre pyramid/deep system functioned as a hydraulic machine or power system.",
+      "status": "NO_EVIDENCE_IN_CURRENT_CORPUS",
+      "supporting_source_ids": [],
+      "geometry_write_authority": "NONE",
+      "guard": "Static head calculations are conditional physics, not evidence of water, flow, or power."
+    },
+    {
+      "id": "claim.giza.future_message",
+      "claim": "The Giza pyramid complexes encode a deliberate technical or scientific message intended specifically for people in the distant future.",
+      "status": "NOT_ESTABLISHED",
+      "supporting_source_ids": [],
+      "limiting_source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes",
+        "src.met.old_kingdom"
+      ],
+      "geometry_write_authority": "NONE",
+      "guard": "Durability, precision and symbolic architecture demonstrate communication and permanence, but do not by themselves establish a distant-future technical audience or hidden data payload."
+    }
+  ]
+}

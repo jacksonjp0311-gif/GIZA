@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "source_id": "src.npj2020.materials",
+  "source_locator": "Table 10 — petro-physical properties, Chephren/Khafre sample rows",
+  "truth_class": "LAB_MEASURED_SAMPLE_ROWS",
+  "sample_scope_guard": "Khafre backing-limestone sample rows only; not a full monument density/porosity field.",
+  "samples": [
+    {
+      "sample": 1,
+      "unit_weight_g_cm3": 2.31,
+      "specific_gravity": 2.31,
+      "open_porosity_percent": 20.02,
+      "total_porosity_percent": 21.0,
+      "water_absorption_percent": 12.62
+    },
+    {
+      "sample": 2,
+      "unit_weight_g_cm3": 2.29,
+      "specific_gravity": 2.27,
+      "open_porosity_percent": 19.01,
+      "total_porosity_percent": 24.0,
+      "water_absorption_percent": 13.02
+    },
+    {
+      "sample": 3,
+      "unit_weight_g_cm3": 2.25,
+      "specific_gravity": 2.27,
+      "open_porosity_percent": 22.02,
+      "total_porosity_percent": 23.0,
+      "water_absorption_percent": 15.2
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "id": "sensitivity.gravity.deep-claim.v0.9.0",
+  "kind": "SCENARIO_SENSITIVITY_NOT_POSTERIOR",
+  "provenance_class": "SIMULATED",
+  "parameters": {
+    "density_contrast_kg_m3": [
+      -2400,
+      -2600,
+      -2800
+    ],
+    "terminal_side_m": [
+      70,
+      80,
+      90
+    ],
+    "terminal_center_depth_m": [
+      680,
+      720,
+      760
+    ],
+    "shaft_geometry": "held at current UNVERIFIED model values"
+  },
+  "station_count": 11,
+  "scenario_count": 27,
+  "summary": {
+    "min_peak_microgal": 382.70614263796926,
+    "median_peak_microgal": 426.95237244529085,
+    "max_peak_microgal": 479.43618778012655
+  },
+  "scenarios": [
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 386.70314637558266,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 384.5546089770794,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 382.70614263796926,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 397.3170003095089,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 394.10988225719143,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 391.35067591505583,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 410.9453038115376,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 406.3789771907247,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2400,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 402.4503837763179,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 418.9284085735484,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 416.6008263918366,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 414.5983211911323,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 430.4267503353009,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 426.95237244529085,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 423.96323224131106,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 445.1907457958325,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 440.2438919566183,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2600,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 435.98791575767683,
+      "peak_station_m": [
+        -70,
+        24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 451.1536707715126,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 448.64704380659344,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 70,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 446.4904997442975,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 463.53650036109235,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 459.7948626333891,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 80,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 456.5757885675655,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 680,
+      "peak_screen_microgal": 479.43618778012655,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 720,
+      "peak_screen_microgal": 474.1088067225123,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    },
+    {
+      "density_contrast_kg_m3": -2800,
+      "terminal_side_m": 90,
+      "terminal_center_depth_m": 760,
+      "peak_screen_microgal": 469.52544773903696,
+      "peak_station_m": [
+        -70,
+        -24,
+        5
+      ]
+    }
+  ],
+  "warning": "These ranges are deterministic stress-test assumptions, not confidence intervals and not a posterior distribution."
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "policy": "Evidence links use independence groups to reduce double counting. Weight is an internal triage weight, not a Bayes factor or probability.",
+  "links": [
+    {
+      "hypothesis_id": "intent.royal_mortuary_transition",
+      "evidence_id": "kn.intent.royal_funeral_afterlife",
+      "polarity": "SUPPORT",
+      "weight": 1.0,
+      "independence_group": "digitalgiza_function_synthesis",
+      "reason": "Direct scholarly synthesis of royal pyramid-complex function."
+    },
+    {
+      "hypothesis_id": "intent.royal_mortuary_transition",
+      "evidence_id": "kn.khafre.burial_chamber.roof",
+      "polarity": "SUPPORT",
+      "weight": 0.8,
+      "independence_group": "perring_interior",
+      "reason": "Khafre contains purpose-built burial architecture documented historically."
+    },
+    {
+      "hypothesis_id": "intent.royal_mortuary_transition",
+      "evidence_id": "kn.khafre.sarcophagus.setting",
+      "polarity": "SUPPORT",
+      "weight": 0.9,
+      "independence_group": "perring_interior",
+      "reason": "Sarcophagus setting is directly compatible with royal burial function."
+    },
+    {
+      "hypothesis_id": "intent.perpetual_royal_cult",
+      "evidence_id": "kn.intent.perpetual_offering_cult",
+      "polarity": "SUPPORT",
+      "weight": 1.0,
+      "independence_group": "digitalgiza_function_synthesis",
+      "reason": "Direct scholarly synthesis of post-burial cult activity."
+    },
+    {
+      "hypothesis_id": "intent.perpetual_royal_cult",
+      "evidence_id": "kn.khafre.architrave",
+      "polarity": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "met_object",
+      "reason": "Royal titulary associated with temple architecture supports sustained royal cult/iconographic presence."
+    },
+    {
+      "hypothesis_id": "intent.cosmic_order_solar_kingship",
+      "evidence_id": "kn.intent.solar_kingship_context",
+      "polarity": "SUPPORT",
+      "weight": 0.75,
+      "independence_group": "met_oldkingdom_context",
+      "reason": "Independent contextual support for solar kingship in Old Kingdom pyramid tradition."
+    },
+    {
+      "hypothesis_id": "intent.cosmic_order_solar_kingship",
+      "evidence_id": "kn.khafre.orientation",
+      "polarity": "SUPPORT",
+      "weight": 0.65,
+      "independence_group": "nell_survey",
+      "reason": "Measured near-cardinal orientation is consistent with deliberate cosmographic/survey order, though not diagnostic of meaning."
+    },
+    {
+      "hypothesis_id": "intent.cosmic_order_solar_kingship",
+      "evidence_id": "missing.khafre_direct_cosmic_text",
+      "polarity": "MISSING_EXPECTED",
+      "weight": 0.55,
+      "independence_group": "direct_text_gap",
+      "reason": "No Khafre-specific inscription in the current corpus directly explains the orientation as a cosmic message."
+    },
+    {
+      "hypothesis_id": "intent.state_integration_legitimacy",
+      "evidence_id": "kn.intent.centralized_state_context",
+      "polarity": "SUPPORT",
+      "weight": 0.8,
+      "independence_group": "met_oldkingdom_context",
+      "reason": "Old Kingdom state organization provides direct context for monument-scale mobilization."
+    },
+    {
+      "hypothesis_id": "intent.state_integration_legitimacy",
+      "evidence_id": "mon.area_c",
+      "polarity": "SUPPORT",
+      "weight": 0.45,
+      "independence_group": "aera_area_c",
+      "reason": "Broader construction/craft infrastructure is consistent with organized state logistics."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "mon.khafre_valley_temple",
+      "polarity": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "complex_architecture",
+      "reason": "Distinct lower temple is one element of a linked complex."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "mon.khafre_causeway",
+      "polarity": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "complex_architecture",
+      "reason": "Causeway physically connects lower and upper cult zones."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "mon.khafre_pyramid_temple",
+      "polarity": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "complex_architecture",
+      "reason": "Upper temple completes a staged architectural sequence."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "kn.intent.royal_funeral_afterlife",
+      "polarity": "SUPPORT",
+      "weight": 0.75,
+      "independence_group": "digitalgiza_function_synthesis",
+      "reason": "Royal pyramid complexes are described as settings for processions and afterlife preparation."
+    },
+    {
+      "hypothesis_id": "intent.future_audience_message",
+      "evidence_id": "claim.giza.future_message",
+      "polarity": "MISSING_EXPECTED",
+      "weight": 0.9,
+      "independence_group": "future_message_direct_evidence",
+      "reason": "Current corpus has no explicit marker of a distant-future technical audience or decodable payload."
+    },
+    {
+      "hypothesis_id": "intent.future_audience_message",
+      "evidence_id": "kn.khafre.orientation",
+      "polarity": "SUPPORT",
+      "weight": 0.15,
+      "independence_group": "nell_survey",
+      "reason": "Precision and durability make long-lived communication possible but are not diagnostic of future-audience intent."
+    },
+    {
+      "hypothesis_id": "intent.machine_or_power_system",
+      "evidence_id": "claim.khafre.hydraulic_machine",
+      "polarity": "LIMIT",
+      "weight": 1.0,
+      "independence_group": "machine_claim_audit",
+      "reason": "Current evidence audit finds no hydraulic-machine evidence; passive physics is not function."
+    },
+    {
+      "hypothesis_id": "intent.machine_or_power_system",
+      "evidence_id": "finding.echo.coincidence-density",
+      "polarity": "LIMIT",
+      "weight": 0.5,
+      "independence_group": "echo_controls",
+      "reason": "Acoustic pattern weakens under construction-aware controls and does not establish tuning."
+    },
+    {
+      "hypothesis_id": "intent.advanced_computation",
+      "evidence_id": "claim.giza.ai_technology",
+      "polarity": "LIMIT",
+      "weight": 1.0,
+      "independence_group": "technology_claim_audit",
+      "reason": "No direct computational artifact or modern-equivalent technology evidence exists in the current corpus."
+    },
+    {
+      "hypothesis_id": "intent.advanced_computation",
+      "evidence_id": "kn.khafre.orientation",
+      "polarity": "SUPPORT",
+      "weight": 0.1,
+      "independence_group": "nell_survey",
+      "reason": "Survey precision indicates sophisticated procedure, not digital computation."
+    },
+    {
+      "hypothesis_id": "intent.perpetual_royal_cult",
+      "evidence_id": "kn.action.valley_temple.statuary",
+      "polarity": "SUPPORT",
+      "weight": 0.35,
+      "independence_group": "egyptianmuseum_valley_statuary",
+      "reason": "Independent museum/object provenance confirms repeated Khafre royal imagery in the Valley Temple, compatible with image-centered cult activity but not diagnostic of exact ritual."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "kn.action.pyramid_temple.royal_threshold",
+      "polarity": "SUPPORT",
+      "weight": 0.3,
+      "independence_group": "met_architrave_threshold",
+      "reason": "Curatorial reconstruction places royal titulary across a pyramid-temple court doorway, strengthening the interpretation of controlled, symbolically marked thresholds."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "finding.room.threshold-density",
+      "polarity": "SUPPORT",
+      "weight": 0.3,
+      "independence_group": "room_graph_threshold_topology",
+      "reason": "Source-addressed room topology exposes repeated architectural transitions and branching; this supports testing a staged journey while not proving choreography."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "evidence_id": "finding.room.statuary-as-spatial-program",
+      "polarity": "SUPPORT",
+      "weight": 0.25,
+      "independence_group": "room_graph_statuary_environment",
+      "reason": "Royal statuary is spatially integrated with movement environments in the Valley Temple and Pyramid Temple evidence, supporting experience-oriented design without fixing exact statue positions."
+    },
+    {
+      "hypothesis_id": "intent.perpetual_royal_cult",
+      "evidence_id": "finding.room.statuary-as-spatial-program",
+      "polarity": "SUPPORT",
+      "weight": 0.2,
+      "independence_group": "room_graph_statuary_environment",
+      "reason": "Repeated royal-image installation evidence is compatible with image-centered cult function, while exact rites remain unresolved."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "clusters": [
+    {
+      "id": "cluster.kh.burial_chamber",
+      "target": "part.burial.chamber",
+      "media": ["photo.kh.chamber", "photo.kh.belzoni", "photo.kh.coffer"],
+      "status": "CANDIDATE_NOT_SOLVED",
+      "known_overlap": false,
+      "next_requirements": ["feature matching", "camera intrinsics or EXIF", "scale anchor", "viewpoint diversity review"]
+    },
+    {
+      "id": "cluster.kh.exterior",
+      "target": "part.pyramid.khafre",
+      "media": ["photo.kh.exterior"],
+      "status": "INSUFFICIENT_VIEWS",
+      "known_overlap": false,
+      "next_requirements": ["licensed multi-view exterior images", "summit casing coverage", "camera solve"]
+    },
+    {
+      "id": "cluster.kh.passage",
+      "target": "part.upper.entrance.existing",
+      "media": ["photo.kh.passage"],
+      "status": "INSUFFICIENT_VIEWS",
+      "known_overlap": false,
+      "next_requirements": ["additional passage viewpoints", "scale anchors", "feature overlap"]
+    }
+  ]
+}

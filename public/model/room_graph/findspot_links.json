@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "links": [
+    {
+      "id": "find.valley.mariette_statues",
+      "space_id": "room.vt.vestibule",
+      "observation_id": "obs.digitalgiza.valley.finds17",
+      "status": "RECOVERY_CONTEXT_NOT_ORIGINAL_PLACEMENT",
+      "note": "Mariette recovery context informs provenance but cannot by itself place statues in their original niche positions."
+    },
+    {
+      "id": "find.pt.statuary",
+      "space_id": "room.pt.statue_court",
+      "observation_id": "obs.digitalgiza.pyramid_temple.finds5",
+      "status": "TEMPLE_ASSOCIATION_NOT_EXACT_PLACEMENT",
+      "note": "Temple find inventory supports royal statuary presence, not exact original room position."
+    },
+    {
+      "id": "find.pt.architrave",
+      "space_id": "room.pt.statue_court",
+      "observation_id": "obs.met.architrave.doorway_context",
+      "status": "CURATORIAL_RECONSTRUCTION",
+      "note": "Architrave/cartouche threshold context is a curatorial architectural reconstruction."
+    }
+  ]
+}

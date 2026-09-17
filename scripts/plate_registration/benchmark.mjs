@@ -1,0 +1,10 @@
+import fs from 'node:fs';import {fitSimilarity,applySimilarity,residuals,summarizeResiduals,frameDiagonal} from './math.mjs';
+const V='0.10.11'; const rad=17*Math.PI/180,scale=.020, a=scale*Math.cos(rad),b=scale*Math.sin(rad),tx=12.5,ty=-4.2; const truth={a,b,tx,ty,scale,angle_deg:17};
+const src=[[100,100],[800,120],[120,700],[820,720],[450,250],[300,520],[680,460],[540,650],[210,330]];
+const noise=[[.002,-.003],[-.004,.001],[.003,.004],[-.002,-.002],[.001,.003],[-.003,.002],[.004,-.001],[-.002,.003],[.002,-.004]];
+const pts=src.map(([x,y],i)=>{const q=applySimilarity(truth,{x,y});return{id:`p${i+1}`,source:{x,y},target:{x:q.x+noise[i][0],y:q.y+noise[i][1]}}});
+const controls=pts.slice(0,6),holdouts=pts.slice(6); const fit=fitSimilarity(controls); const diag=frameDiagonal(pts); const cr=residuals(fit,controls),hr=residuals(fit,holdouts); const cs=summarizeResiduals(cr,diag),hs=summarizeResiduals(hr,diag);
+const profile=JSON.parse(fs.readFileSync('public/model/plate_registration/preregistered_thresholds.json','utf8')).profiles.find(x=>x.id==='threshold.historical_plan_similarity.v1'); const A=profile.acceptance;
+const pass=hs.normalized_rms<=A.normalized_holdout_rms_max&&hs.normalized_max<=A.normalized_holdout_max_max&&hs.rms<=A.absolute_holdout_rms_m_max&&Math.abs(fit.scale-truth.scale)/truth.scale<=A.scale_drift_fraction_max;
+const out={schema_version:'1.0.0',version:V,id:'plate.synthetic.similarity.v1',benchmark_class:'SYNTHETIC_ALGORITHM_ONLY',truth,fit,frame_diagonal_m:diag,controls:cs,holdouts:hs,holdout_residuals:hr,threshold_profile_id:profile.id,passed:pass,authority_effect:false,guard:'Synthetic benchmark validates similarity-fit and holdout logic only. It provides zero archaeological geometry authority.'};
+fs.writeFileSync('public/model/plate_registration/benchmark_result.json',JSON.stringify(out,null,2)+'\n');console.log(`PLATE REGISTRATION BENCHMARK ${pass?'PASS':'FAIL'} controls=${controls.length} holdouts=${holdouts.length} holdout_nrms=${hs.normalized_rms.toFixed(6)} rms=${hs.rms.toFixed(4)}m`);if(!pass)process.exit(1);

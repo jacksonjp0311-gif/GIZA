@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "campaign_id": "first_plate.valley_temple.petrie_vi",
+  "status": "REMOTE_FILE_FINGERPRINT_LOCKED_RAW_BYTES_BLOCKED",
+  "checks": {
+    "source_identity": true,
+    "exact_pdf_page_locator": true,
+    "plate_title": true,
+    "printed_scale": true,
+    "remote_render": true,
+    "local_source_bytes": false,
+    "local_sha256": false,
+    "pixel_control_coordinates_frozen": false,
+    "holdouts_frozen": false,
+    "similarity_fit_run": false,
+    "holdout_gate_passed": false,
+    "metric_wall_polygons": false,
+    "metric_visibility_rays": false,
+    "remote_file_metadata_fingerprint": true
+  },
+  "allowed_now": [
+    "dimension graph from source text",
+    "remote plate/page witness",
+    "registration campaign planning",
+    "remote file fingerprint lock",
+    "named landmark protocol without pixel coordinates",
+    "desktop custody/import preparation"
+  ],
+  "blocked_until_local_sha256": [
+    "pixel-coordinate controls",
+    "similarity registration",
+    "wall/opening digitization promotion",
+    "metric visibility ray casting"
+  ],
+  "next_action": "Import or acquire the exact Petrie PDF on a networked runtime, compute local SHA-256, render page 305, visually confirm Plate VI, then populate and freeze the landmark control/holdout file before fitting."
+}

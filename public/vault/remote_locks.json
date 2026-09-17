@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "locks": [
+    {
+      "asset_id": "vault.zenodo.arce.bundle4.index",
+      "native_identifier": "zenodo:1439449/zenodo-oc-files.json",
+      "expected_checksum": {
+        "algorithm": "MD5",
+        "value": "eb60b999d5534fa73175742fd029d4e9"
+      },
+      "state": "REMOTE_HASH_LOCKED",
+      "verification": "UPSTREAM_RECORD_METADATA"
+    },
+    {
+      "asset_id": "vault.zenodo.arce.photo.021820",
+      "native_identifier": "pz---101-color-photo-021820.jpg",
+      "expected_checksum": {
+        "algorithm": "MD5",
+        "value": "a6c049bad3e1ae1da63703cf21e93d4a"
+      },
+      "state": "REMOTE_HASH_LOCKED",
+      "verification": "UPSTREAM_RECORD_METADATA"
+    }
+  ]
+}

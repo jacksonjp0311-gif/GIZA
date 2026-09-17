@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "VISIBILITY LAB",
+  "purpose": "Pre-metric access/visibility analysis over the source-addressed ROOM GRAPH. Quantifies topological depth, branch/merge structure, chokepoints and environmental-state transitions while refusing metric line-of-sight claims.",
+  "counts": {
+    "spaces": 24,
+    "transitions": 22,
+    "articulation_points": 12,
+    "branches": 3,
+    "merges": 2,
+    "qualitative_states": 20
+  },
+  "truth_rules": [
+    "schematic coordinates cannot produce metric rays",
+    "visibility state is qualitative until wall polygons/heights are registered",
+    "topological chokepoint is not ritual restriction",
+    "contrast index is not psychological intensity",
+    "visibility lab cannot write geometry or historical intent"
+  ],
+  "generated_at": "2026-09-13T14:49:47.075Z"
+}

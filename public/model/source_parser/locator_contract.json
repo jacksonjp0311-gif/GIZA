@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "required_fields": [
+    "record_id",
+    "source_id",
+    "source_locator",
+    "truth_class",
+    "claim",
+    "input_mode",
+    "raw_byte_verified",
+    "geometry_write_authority"
+  ],
+  "input_modes": {
+    "RAW_PRIMARY_BYTES": "Requires local vault asset + checksum + byte-level parser receipt.",
+    "NORMALIZED_SOURCE_SNAPSHOT": "May preserve facts already normalized from a verified source but cannot claim byte-level parsing.",
+    "NORMALIZED_OBSERVATION": "Portable observation with source locator; no raw-byte custody claim."
+  },
+  "rules": [
+    "Empty source locators fail validation.",
+    "raw_byte_verified=true requires a source SHA-256 and vault asset reference.",
+    "Parser output never increases geometry authority beyond its input observation.",
+    "Interpretive actions must remain distinguishable from direct physical observations."
+  ]
+}

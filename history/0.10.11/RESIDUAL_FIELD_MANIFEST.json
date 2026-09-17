@@ -1,0 +1,38 @@
+{
+  "version": "0.10.11",
+  "codename": "RESIDUAL FIELD + CONSTRAINT HIERARCHY",
+  "canonical_geometry_changed": false,
+  "metric_rays": 0,
+  "artifacts": [
+    {
+      "path": "public/model/residual_field/protocol.json",
+      "sha256": "f65413a17295bef8023ae46166c0ab95b5a0fe15ffa77fa697546f1921a57145",
+      "bytes": 1063
+    },
+    {
+      "path": "public/model/residual_field/constraint_hierarchy.json",
+      "sha256": "579e968f60650134fb557390387d5e55da5c95a589b729627d04154c0b10fb1c",
+      "bytes": 1594
+    },
+    {
+      "path": "public/model/residual_field/benchmark_fixture.json",
+      "sha256": "fff8f6da5e9c4b574dedb25698f52668396dfddf5a6f2ae2019333db804e1723",
+      "bytes": 861
+    },
+    {
+      "path": "public/model/residual_field/benchmark_result.json",
+      "sha256": "98eccf521fd1ecca1e0a1e213a16239206483889e096b8e2a74bd98b896386e8",
+      "bytes": 917
+    },
+    {
+      "path": "docs/RESIDUAL_FIELD.md",
+      "sha256": "814470e01f5df49ac97d1e1e0c306415843053450730e3f12aa75dfe3f4392a9",
+      "bytes": 239
+    },
+    {
+      "path": "docs/CONSTRAINT_HIERARCHY.md",
+      "sha256": "7c07be070d3a943be080f2237c3e202a9f6d53216ff1b3a1e1d1d6d50782e889",
+      "bytes": 300
+    }
+  ]
+}

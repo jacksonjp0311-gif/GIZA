@@ -1,0 +1,57 @@
+{
+  "id": "geology",
+  "version": "0.10.7",
+  "title": "Geology / Quarry / Construction Sequence",
+  "coordinate_mode": "SCHEMATIC_RELATIONSHIP",
+  "metric": false,
+  "guard": "Geological/architectural relationships are synthesized from mapped Sphinx/Khafre evidence; this is not a bed-by-bed metric geological model.",
+  "source_ids": [
+    "src.aera.sphinx_stone_mapping",
+    "src.opencontext.arce_sphinx",
+    "src.aera.kh_monuments_unit"
+  ],
+  "bands": [
+    {
+      "id": "plateau",
+      "label": "GIZA PLATEAU BEDROCK",
+      "y": 25,
+      "thickness": 15,
+      "truth": "GEOLOGICAL_CONTEXT"
+    },
+    {
+      "id": "causeway_foundation",
+      "label": "KHAFRE CAUSEWAY FOUNDATION",
+      "y": 46,
+      "thickness": 8,
+      "truth": "ARCHAEOLOGICAL_RELATION"
+    },
+    {
+      "id": "sphinx_quarry",
+      "label": "SPHINX QUARRY / ENCLOSURE",
+      "y": 62,
+      "thickness": 16,
+      "truth": "MAPPED_ARCHAEOLOGY"
+    },
+    {
+      "id": "lower_temples",
+      "label": "SPHINX + VALLEY TEMPLE TERRACE",
+      "y": 80,
+      "thickness": 9,
+      "truth": "MAPPED_ARCHAEOLOGY"
+    }
+  ],
+  "sequence": [
+    {
+      "before": "causeway_foundation",
+      "after": "sphinx_quarry",
+      "claim": "Causeway foundation predates excavation of the adjacent Sphinx quarry in the documented construction sequence.",
+      "status": "SUPPORTED_INTERPRETATION"
+    }
+  ],
+  "layers": [
+    "geology",
+    "monuments",
+    "sources",
+    "uncertainty"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "tours": [
+    {
+      "id": "tour.first-look",
+      "title": "Khafre in five clicks",
+      "stops": [
+        "part.pyramid.khafre",
+        "part.upper.entrance.existing",
+        "part.lower.chamber",
+        "part.burial.chamber",
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "tour.evidence",
+      "title": "How do we know?",
+      "stops": [
+        "part.pyramid.khafre",
+        "part.lower.chamber",
+        "part.burial.chamber",
+        "part.lower.portcullis.slab"
+      ]
+    },
+    {
+      "id": "tour.deep-claim",
+      "title": "Test the deep-structure claim",
+      "stops": [
+        "part.shaft.alpha.1",
+        "part.helix.alpha.1",
+        "part.terminal.alpha"
+      ]
+    }
+  ]
+}

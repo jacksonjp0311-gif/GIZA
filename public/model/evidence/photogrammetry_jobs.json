@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "state_machine": [
+    "DRAFT",
+    "MEDIA_VALIDATED",
+    "CAMERA_SOLVED",
+    "SCALE_LOCKED",
+    "QA_PASSED",
+    "CANDIDATE_MESH",
+    "REVIEWED",
+    "PROMOTABLE",
+    "REJECTED"
+  ],
+  "defaults": {
+    "minimum_images": 3,
+    "minimum_scale_anchors": 1,
+    "recommended_scale_anchors": 2,
+    "max_reprojection_rmse_px_for_default_gate": 2.0,
+    "require_coverage_diversity_review": true,
+    "require_coordinate_frame_receipt": true
+  },
+  "jobs": []
+}

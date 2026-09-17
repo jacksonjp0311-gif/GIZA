@@ -1,0 +1,101 @@
+{
+  "version": "0.10.1",
+  "phase": "PRIMARY_SOURCE_VAULT_EVIDENCE",
+  "generated_at": "2026-09-12T23:05:00Z",
+  "source_count": 65,
+  "rights_rows": 65,
+  "geometry_revision": "rev.0003",
+  "geometry_changed": false,
+  "files": [
+    {
+      "path": "public/model/evidence/acquisition_backlog.json",
+      "sha256": "fc45985395c64c3f444bc84f2e45782b0e9269c941f04dc9dc41f5873016827f",
+      "bytes": 4326
+    },
+    {
+      "path": "public/model/evidence/conflict_matrix.json",
+      "sha256": "9cd75ca5f117f32343a946b8049241ef18e083d317e14dd91da89aa1406b7152",
+      "bytes": 5742
+    },
+    {
+      "path": "public/model/evidence/deduplication_report.json",
+      "sha256": "9c43ca6bb11240d42dc4de706a5b84bdce677ca205f7a7825972f8fc28cb09ac",
+      "bytes": 2457
+    },
+    {
+      "path": "public/model/evidence/evidence_items.json",
+      "sha256": "1b2355aa007f7dbd451b55abd2737ccecdf7ccef0fddaa2a2ebd86b085b54dcf",
+      "bytes": 8104
+    },
+    {
+      "path": "public/model/evidence/evidence_maturity.json",
+      "sha256": "a1ee8e77190690818ffa5c86fbb715e330be4872b4a8cfd7cf118002554a1cbe",
+      "bytes": 1608
+    },
+    {
+      "path": "public/model/evidence/geometry_snapshot.json",
+      "sha256": "0968423fbaede2bd9cb541d120cc03cff0830b5c5e7e90988b2a21d92b487d5c",
+      "bytes": 1183
+    },
+    {
+      "path": "public/model/evidence/inbox/README.md",
+      "sha256": "0cd5b665617a0c18891ef4571a5a82183b89ae7b0eb0ad934d51e4683a7ac50e",
+      "bytes": 132
+    },
+    {
+      "path": "public/model/evidence/media_assets.json",
+      "sha256": "a19a3a8d9d4b8543b1aadc4558caa34a94e66e06b40709bce8c59dd5e172e26e",
+      "bytes": 41
+    },
+    {
+      "path": "public/model/evidence/object_source_map.json",
+      "sha256": "d8cef72ef0714de49a09b66e4efc38727dcaaf49565d2dca764897f73bd4c5f8",
+      "bytes": 32136
+    },
+    {
+      "path": "public/model/evidence/photo_metrology_jobs.json",
+      "sha256": "80524de9a3e384223213ef4ef21437cdcdb912cfd0d14b7280461ba225a2881b",
+      "bytes": 680
+    },
+    {
+      "path": "public/model/evidence/photogrammetry_jobs.json",
+      "sha256": "07761d81acc309925b59ef186826c4c68c43e83e37c054c00246fb39e17d35b8",
+      "bytes": 490
+    },
+    {
+      "path": "public/model/evidence/promotion_policy.json",
+      "sha256": "0d1a92f87351c0f87b4fa4f6fbc35856f0447e5a01125b3f16247d0add32fca3",
+      "bytes": 2035
+    },
+    {
+      "path": "public/model/evidence/promotion_queue.json",
+      "sha256": "d8075af13e1a851300aa45d3efb6b42d7adc3d8957b2259beb950a0d1ff066fc",
+      "bytes": 1761
+    },
+    {
+      "path": "public/model/evidence/rights_matrix.json",
+      "sha256": "075eee50a45dd8bb6d5e20bdb736d92c9b767126ecfbcb2f9ff1d7ba6cca61f9",
+      "bytes": 34112
+    },
+    {
+      "path": "public/model/evidence/source_registry.json",
+      "sha256": "f1996ba524013c7dc4078080f30f13b6b0fd9494f97c05d22039e09cdf6aa002",
+      "bytes": 78185
+    },
+    {
+      "path": "public/model/evidence/source_scorecard.json",
+      "sha256": "9b68d8f0153d06ee6fb662ac9117afc91b91d0bf84eb3c540024191f16b45652",
+      "bytes": 18014
+    },
+    {
+      "path": "public/model/evidence/spatial_registration.json",
+      "sha256": "9b7f2c575c33c6a36a3f3364fa0f1a46fe691315567672972a15764dd7f3723e",
+      "bytes": 955
+    },
+    {
+      "path": "public/model/evidence/terrain_layers.json",
+      "sha256": "942a4ee09f21071ae470a26812d34d361999690d904af11470326ba3d9fd0d24",
+      "bytes": 1212
+    }
+  ]
+}

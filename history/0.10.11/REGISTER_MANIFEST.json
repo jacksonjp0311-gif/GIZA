@@ -1,0 +1,46 @@
+{
+  "version": "0.10.1",
+  "codename": "REGISTER + PRIMARY SOURCE VAULT",
+  "phase": "NORMALIZED_EVIDENCE_AUDIT_PLUS_BYTE_PROVENANCE",
+  "generated_at": "2026-09-12T23:05:00Z",
+  "geometry_changed": false,
+  "ui_shell_changed": false,
+  "evidence_maturity_changed": false,
+  "files": [
+    {
+      "path": "docs/REGISTER.md",
+      "sha256": "a361cc27a0b1d0a63a802b0b17ca333f51c7cdc2b9d5850a0003f499d35869d7",
+      "bytes": 1823
+    },
+    {
+      "path": "public/model/observatory/source_discrepancies.json",
+      "sha256": "e4260e59c1897a9c415f8dcec29b878604586a1215c10c6d65f5ff9b5a59d4e4",
+      "bytes": 2866
+    },
+    {
+      "path": "public/model/observatory/claims_registry.json",
+      "sha256": "7a1a2e8540ad0809be6b97a6f4eb1d0b934108a4da03f0a02f3893400317338e",
+      "bytes": 1649
+    },
+    {
+      "path": "public/model/observatory/material_samples_khafre.csv",
+      "sha256": "c8fe4c3236a6a7b43e789fe07cb30dc78332dd785bc313319d5d02102c0620e4",
+      "bytes": 444
+    },
+    {
+      "path": "public/model/observatory/material_physical_khafre.csv",
+      "sha256": "9922c614ab6462e5ac0e191f159d3987d26831f4247bed5704c21d7d72697ca5",
+      "bytes": 202
+    },
+    {
+      "path": "public/model/observatory/plan_register.json",
+      "sha256": "1cb4b77f54d5013a49c2e634f383825c11f6e18c76d560157e34f13fcc38af61",
+      "bytes": 2349
+    },
+    {
+      "path": "public/model/observatory/source_status.json",
+      "sha256": "9f546011a8f30db56342b7219a6ffa473760757e8e00750e10ed849800d13835",
+      "bytes": 323
+    }
+  ]
+}

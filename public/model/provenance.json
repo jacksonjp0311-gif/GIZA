@@ -1,0 +1,276 @@
+{
+  "revisions": [
+    {
+      "id": "rev.0001",
+      "parent_revision": null,
+      "transaction_id": null,
+      "timestamp": "2026-09-10T05:00:00Z",
+      "author": "archeon.model02",
+      "agent": "architect",
+      "message": "Initial Giza/Khafre concept model with evidence-separated deep claim.",
+      "geometry_hash": null,
+      "design_hash": null
+    },
+    {
+      "id": "rev.0002",
+      "parent_revision": "rev.0001",
+      "transaction_id": null,
+      "timestamp": "2026-09-10T06:00:00Z",
+      "author": "archeon.model02",
+      "agent": "analysis-engineer",
+      "message": "Added established internal topology and first falsification screens.",
+      "geometry_hash": null,
+      "design_hash": null
+    },
+    {
+      "id": "rev.0003",
+      "parent_revision": "rev.0002",
+      "transaction_id": null,
+      "timestamp": "2026-09-10T07:36:36Z",
+      "author": "archeon.model02",
+      "agent": "analysis-engineer",
+      "message": "Survey-tight reconstruction: Petrie exterior/chamber/coffer dimensions + Legon passage lengths, slopes and A-L positions; finer independent explode assemblies; explicit field uncertainty.",
+      "geometry_hash": null,
+      "design_hash": null
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec.frame.rev3",
+      "text": "Use right-handed Z-up world frame: +X east, +Y north, base-center origin. Legon Table II determines N-S and vertical centerline positions; Petrie 490.3 in sets X-axis anchor. Passage azimuth is retained as measured metadata but not forced into X drift until a future joint source-frame fit.",
+      "requirement_ids": [
+        "req.survey",
+        "req.no-false-precision"
+      ],
+      "provenance": {
+        "class": "USER_LOCKED",
+        "created_by": "archeon.model02",
+        "reason": "Prevents false precision while preserving measured orientation for later fitting.",
+        "requirement_ids": [
+          "req.survey",
+          "req.no-false-precision"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior",
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "dec.deep-isolation",
+      "text": "Keep every deep shaft/helix/terminal geometry in UNVERIFIED assemblies and out of measured-model metrics.",
+      "requirement_ids": [
+        "req.claim-isolation"
+      ],
+      "provenance": {
+        "class": "USER_LOCKED",
+        "created_by": "archeon.model02",
+        "reason": "Evidence firewall.",
+        "requirement_ids": [
+          "req.claim-isolation"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev.petrie.surface",
+      "kind": "historical_survey",
+      "text": "Petrie ch. VIII: four side lengths, mean 8474.9 in, slope 53°10′±4′, height 5664±13 in, lowest granite casing course and artificially leveled site observations.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Transcribed primary historical survey.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.petrie.interior",
+      "kind": "historical_survey",
+      "text": "Petrie ch. IX: 490.3 in east passage axis, upper passage clear section, portcullis grooves, raised horizontal section, burial chamber dimensions and gabled roof observations.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Transcribed primary historical survey.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.petrie.coffer",
+      "kind": "historical_survey",
+      "text": "Petrie ch. IX §77: measured sarcophagus outer/inner dimensions, lid dimensions and nonuniform lid thickness.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Transcribed primary historical survey.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.petrie.lower",
+      "kind": "historical_survey",
+      "text": "Petrie ch. IX §78: lower chamber plan dimensions, widths, turning recess and granite portcullis existence.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Transcribed primary historical survey.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.legon.passages",
+      "kind": "field_measurement_and_reconstruction",
+      "text": "Legon 1989 Tables I-II: passage lengths/angles and computed A-L positions; note 7 distinguishes existing 34.01 m / 33.88 m entrance lengths from reconstructed original endpoints.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Published field-measurement table plus explicit reconstruction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.ministry.materials",
+      "kind": "official_summary",
+      "text": "Egyptian Ministry: Khafre pyramid original height 143.5 m, local limestone core, high-quality limestone casing.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Official monument summary.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.height.conflict",
+      "kind": "source_disagreement",
+      "text": "Petrie-derived original height 143.8656 m differs from Egyptian Ministry summary 143.5 m by 0.3656 m; rev.0003 stores both rather than averaging them.",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Explicit source-conflict record.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.ministry.materials"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.scidep",
+      "kind": "peer_reviewed_modern_context",
+      "text": "ScIDEP 2025 reports current height 136.4 m and base 215.3 m while developing muography of Khafre.",
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Peer-reviewed modern context.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "ev.rev0003.validation",
+      "kind": "validation",
+      "text": "Local static validation of DesignIR references, survey node/segment consistency, evidence firewall, CAD existence and JSON parse.",
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "Generated by rev.0003 validator.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "analyses": [
+    {
+      "id": "an.survey.reconstruction",
+      "kind": "survey_coordinate_reconstruction",
+      "status": "DERIVED",
+      "notes": "A-L N-S/z coordinates are Legon Table II. X uses Petrie axis offset. No freehand N-S centerline placement remains for major passages.",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Historical survey reconstruction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior",
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "an.source.residuals",
+      "kind": "source_disagreement_audit",
+      "status": "DERIVED",
+      "notes": "See research/reconstruction_residuals.json. Conflicts are preserved rather than collapsed.",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Quantifies cross-source residuals.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.ministry.materials",
+          "ev.scidep"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ]
+}

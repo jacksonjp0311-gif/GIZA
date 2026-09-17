@@ -1,0 +1,25 @@
+ion,temperature_eV,target_gyroradius_m,required_B_T,note
+H+,1,1,0.00014449695439595363,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1,5,2.889939087919073e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1,10,1.4449695439595364e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1,20,7.224847719797682e-06,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10,1,0.00045693949084869324,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10,5,9.138789816973864e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10,10,4.569394908486932e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10,20,2.284697454243466e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100,1,0.0014449695439595364,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100,5,0.00028899390879190726,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100,10,0.00014449695439595363,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100,20,7.224847719797682e-05,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1000.0,1,0.0045693949084869324,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1000.0,5,0.0009138789816973865,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1000.0,10,0.00045693949084869324,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,1000.0,20,0.00022846974542434662,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10000.0,1,0.014449695439595366,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10000.0,5,0.002889939087919073,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10000.0,10,0.0014449695439595364,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,10000.0,20,0.0007224847719797682,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100000.0,1,0.04569394908486933,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100000.0,5,0.009138789816973865,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100000.0,10,0.0045693949084869324,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.
+H+,100000.0,20,0.0022846974542434662,Necessary-not-sufficient single-particle gyroradius scale; not a confinement proof.

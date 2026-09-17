@@ -1,0 +1,860 @@
+{
+  "id": "visibility",
+  "version": "0.10.7",
+  "title": "Visibility / Access Lab",
+  "coordinate_mode": "SCHEMATIC_TOPOLOGY_PREMETRIC_VISIBILITY",
+  "metric": false,
+  "guard": "This view shows topological depth, access chokepoints and qualitative visibility/environment states. It does not compute metric sightlines, illumination, field of view, or ancient experience.",
+  "source_ids": [
+    "src.oxford.flentye2018",
+    "src.smithsonian.elisofon.khafre",
+    "src.egyptianmuseum.khafre_statue",
+    "src.hoelscher1912",
+    "src.perring1840.khafre"
+  ],
+  "spaces": [
+    {
+      "id": "room.vt.north_entry",
+      "label": "North east entrance",
+      "complex": "VALLEY_TEMPLE",
+      "x": 10,
+      "y": 24,
+      "kind": "ENTRANCE",
+      "topological_depth": 1,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "EXTERIOR_TO_INTERIOR_THRESHOLD",
+      "environment": "THRESHOLD",
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "id": "room.vt.south_entry",
+      "label": "South east entrance",
+      "complex": "VALLEY_TEMPLE",
+      "x": 10,
+      "y": 39,
+      "kind": "ENTRANCE",
+      "topological_depth": 1,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "EXTERIOR_TO_INTERIOR_THRESHOLD",
+      "environment": "THRESHOLD",
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "id": "room.vt.vestibule",
+      "label": "Transverse vestibule",
+      "complex": "VALLEY_TEMPLE",
+      "x": 20,
+      "y": 31,
+      "kind": "ROOM",
+      "topological_depth": 2,
+      "is_branch": false,
+      "is_merge": true,
+      "is_articulation": true,
+      "visibility_state": "TRANSITIONAL_INTERIOR",
+      "environment": "INTERIOR",
+      "certainty": "HIGH_ROOM_PROGRAM"
+    },
+    {
+      "id": "room.vt.t_hall",
+      "label": "T-shaped pillared hall",
+      "complex": "VALLEY_TEMPLE",
+      "x": 31,
+      "y": 31,
+      "kind": "PILLARED_HALL",
+      "topological_depth": 3,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "PILLARED_ROYAL_IMAGE_FIELD",
+      "environment": "PILLARED_INTERIOR",
+      "certainty": "HIGH_ARCHITECTURE / PLACEMENT_PARTLY_RECONSTRUCTED"
+    },
+    {
+      "id": "room.vt.statue_niches",
+      "label": "23 niche / statue positions",
+      "complex": "VALLEY_TEMPLE",
+      "x": 31,
+      "y": 49,
+      "kind": "INSTALLATION_FIELD",
+      "topological_depth": null,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "HIGH_ROYAL_IMAGE_DENSITY",
+      "environment": "UNCLASSIFIED",
+      "certainty": "UNCLASSIFIED"
+    },
+    {
+      "id": "room.vt.nw_causeway_exit",
+      "label": "NW causeway transition",
+      "complex": "VALLEY_TEMPLE",
+      "x": 42,
+      "y": 31,
+      "kind": "THRESHOLD",
+      "topological_depth": 4,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "ROUTE_CHOKEPOINT",
+      "environment": "THRESHOLD",
+      "certainty": "MODERATE_TOPOLOGY"
+    },
+    {
+      "id": "room.cw.covered_corridor",
+      "label": "Covered ascending causeway",
+      "complex": "CAUSEWAY",
+      "x": 51,
+      "y": 31,
+      "kind": "CORRIDOR",
+      "topological_depth": 5,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "COVERED_LINEAR_ASCENT",
+      "environment": "ENCLOSED_ROUTE",
+      "certainty": "HIGH_FUNCTIONAL_FORM"
+    },
+    {
+      "id": "room.cw.lower_drain",
+      "label": "Lower drainage provision",
+      "complex": "CAUSEWAY",
+      "x": 49,
+      "y": 47,
+      "kind": "HYDROLOGIC_FEATURE",
+      "topological_depth": null,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "NOT_RITUAL_INFERENCE",
+      "environment": "UNCLASSIFIED",
+      "certainty": "UNCLASSIFIED"
+    },
+    {
+      "id": "room.pt.entry_branch",
+      "label": "Causeway termination / branch",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 61,
+      "y": 31,
+      "kind": "JUNCTION",
+      "topological_depth": 6,
+      "is_branch": true,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "CONTROLLED_BRANCH",
+      "environment": "BRANCH_THRESHOLD",
+      "certainty": "HIGH_PRIMARY_TOPOLOGY"
+    },
+    {
+      "id": "room.pt.side_rooms",
+      "label": "Side / magazine rooms",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 61,
+      "y": 48,
+      "kind": "SERVICE_ROOMS",
+      "topological_depth": 7,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "ACCESS_UNKNOWN",
+      "environment": "UNCLASSIFIED",
+      "certainty": "UNCLASSIFIED"
+    },
+    {
+      "id": "room.pt.vestibule",
+      "label": "Transverse vestibule",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 69,
+      "y": 31,
+      "kind": "PILLARED_ROOM",
+      "topological_depth": 7,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "PILLARED_TRANSITION",
+      "environment": "INTERIOR",
+      "certainty": "HIGH_PRIMARY_DESCRIPTION"
+    },
+    {
+      "id": "room.pt.wide_hall",
+      "label": "Wide pillared hall",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 76,
+      "y": 24,
+      "kind": "PILLARED_HALL",
+      "topological_depth": 8,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "PILLARED_HALL_IMAGE_CANDIDATE",
+      "environment": "INTERIOR_HALL",
+      "certainty": "ARCHITECTURE_HIGH / STATUARY_MEDIUM"
+    },
+    {
+      "id": "room.pt.deep_hall",
+      "label": "Deep pillared hall",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 76,
+      "y": 39,
+      "kind": "PILLARED_HALL",
+      "topological_depth": 9,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "PILLARED_HALL_IMAGE_CANDIDATE",
+      "environment": "INTERIOR_HALL",
+      "certainty": "ARCHITECTURE_HIGH / STATUARY_MEDIUM"
+    },
+    {
+      "id": "room.pt.serdabs",
+      "label": "Serdab / enclosed cult rooms",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 83,
+      "y": 18,
+      "kind": "ENCLOSED_ROOMS",
+      "topological_depth": null,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "LOW_OR_CONTROLLED",
+      "environment": "UNCLASSIFIED",
+      "certainty": "UNCLASSIFIED"
+    },
+    {
+      "id": "room.pt.statue_court",
+      "label": "Statue court",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 84,
+      "y": 31,
+      "kind": "COURT",
+      "topological_depth": 10,
+      "is_branch": true,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "MONUMENTAL_COURT_IMAGE_FIELD",
+      "environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "certainty": "COURT_ARCHITECTURE_HIGH / STATUE_FORM_DISPUTED"
+    },
+    {
+      "id": "room.pt.ambulatory",
+      "label": "Court ambulatory",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 84,
+      "y": 47,
+      "kind": "CIRCULATION",
+      "topological_depth": 11,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "PERIMETER_TRANSITION",
+      "environment": "CIRCULATION",
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "id": "room.pt.five_chapels",
+      "label": "Five western chapels",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 91,
+      "y": 22,
+      "kind": "CULT_ROOM_SET",
+      "topological_depth": 11,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "RESTRICTED_CULT_CANDIDATE",
+      "environment": "INNER_ROOMS",
+      "certainty": "ARCHITECTURE_HIGH / FUNCTION_INTERPRETIVE"
+    },
+    {
+      "id": "room.pt.inner_zone",
+      "label": "Inner / “intimate” cult zone",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 92,
+      "y": 39,
+      "kind": "CULT_ZONE",
+      "topological_depth": 11,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "INNER_ACCESS_ZONE",
+      "environment": "INNER_ROOMS",
+      "certainty": "HISTORICAL_FUNCTIONAL_INTERPRETATION"
+    },
+    {
+      "id": "room.pt.pyramid_court",
+      "label": "Pyramid court / west transition",
+      "complex": "PYRAMID_TEMPLE",
+      "x": 96,
+      "y": 31,
+      "kind": "COURT_THRESHOLD",
+      "topological_depth": 12,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "PYRAMID_ADJACENT_TRANSITION",
+      "environment": "COURT_THRESHOLD",
+      "certainty": "HIGH_ROOM_PROGRAM"
+    },
+    {
+      "id": "room.py.upper_entry",
+      "label": "Upper entrance / descending passage",
+      "complex": "PYRAMID_INTERIOR",
+      "x": 72,
+      "y": 76,
+      "kind": "PASSAGE",
+      "topological_depth": 1,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "ENCLOSED_DESCENT",
+      "environment": "INTERIOR_PASSAGE",
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "id": "room.py.lower_entry",
+      "label": "Lower entrance / passage",
+      "complex": "PYRAMID_INTERIOR",
+      "x": 72,
+      "y": 89,
+      "kind": "PASSAGE",
+      "topological_depth": 1,
+      "is_branch": true,
+      "is_merge": false,
+      "is_articulation": true,
+      "visibility_state": "ENCLOSED_LOWER_ROUTE",
+      "environment": "INTERIOR_PASSAGE",
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "id": "room.py.portcullis",
+      "label": "Portcullis control point",
+      "complex": "PYRAMID_INTERIOR",
+      "x": 82,
+      "y": 82,
+      "kind": "CLOSURE",
+      "topological_depth": 2,
+      "is_branch": false,
+      "is_merge": true,
+      "is_articulation": true,
+      "visibility_state": "PHYSICAL_ACCESS_CHOKEPOINT",
+      "environment": "CLOSURE",
+      "certainty": "HIGH_PHYSICAL_FEATURE / OPERATION_HISTORICAL_INTERPRETATION"
+    },
+    {
+      "id": "room.py.lower_chamber",
+      "label": "Lower chamber",
+      "complex": "PYRAMID_INTERIOR",
+      "x": 82,
+      "y": 94,
+      "kind": "CHAMBER",
+      "topological_depth": 2,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "ENCLOSED_BRANCH_CHAMBER",
+      "environment": "CHAMBER",
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "id": "room.py.burial_chamber",
+      "label": "Belzoni / burial chamber",
+      "complex": "PYRAMID_INTERIOR",
+      "x": 93,
+      "y": 82,
+      "kind": "BURIAL_CHAMBER",
+      "topological_depth": 3,
+      "is_branch": false,
+      "is_merge": false,
+      "is_articulation": false,
+      "visibility_state": "ENCLOSED_BURIAL_ENDPOINT",
+      "environment": "BURIAL_CHAMBER",
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    }
+  ],
+  "thresholds": [
+    {
+      "id": "thr.vt.north",
+      "from": "EXTERIOR",
+      "to": "room.vt.north_entry",
+      "kind": "MONUMENT_ENTRANCE",
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.south",
+      "from": "EXTERIOR",
+      "to": "room.vt.south_entry",
+      "kind": "MONUMENT_ENTRANCE",
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.n_to_vest",
+      "from": "room.vt.north_entry",
+      "to": "room.vt.vestibule",
+      "kind": "PASSAGE",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.s_to_vest",
+      "from": "room.vt.south_entry",
+      "to": "room.vt.vestibule",
+      "kind": "PASSAGE",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.vest_to_hall",
+      "from": "room.vt.vestibule",
+      "to": "room.vt.t_hall",
+      "kind": "INTERNAL_THRESHOLD",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.hall_to_causeway",
+      "from": "room.vt.t_hall",
+      "to": "room.vt.nw_causeway_exit",
+      "kind": "ROUTE_TRANSITION",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.cw.route",
+      "from": "room.vt.nw_causeway_exit",
+      "to": "room.cw.covered_corridor",
+      "kind": "ASCENDING_ROUTE",
+      "evidence": [
+        "obs.room.hoelscher.causeway_slope"
+      ],
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.cw.to_pt",
+      "from": "room.cw.covered_corridor",
+      "to": "room.pt.entry_branch",
+      "kind": "CAUSEWAY_TERMINATION",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.branch_side",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.side_rooms",
+      "kind": "SIDE_BRANCH",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.branch_main",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.vestibule",
+      "kind": "MAIN_BRANCH",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.vest_wide",
+      "from": "room.pt.vestibule",
+      "to": "room.pt.wide_hall",
+      "kind": "SEQUENTIAL_THRESHOLD",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.wide_deep",
+      "from": "room.pt.wide_hall",
+      "to": "room.pt.deep_hall",
+      "kind": "SEQUENTIAL_THRESHOLD",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.deep_court",
+      "from": "room.pt.deep_hall",
+      "to": "room.pt.statue_court",
+      "kind": "COURT_ENTRY",
+      "evidence": [
+        "obs.room.hoelscher.court_passages"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_ambulatory",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.ambulatory",
+      "kind": "MULTIPLE_OPENINGS",
+      "evidence": [
+        "obs.room.hoelscher.court_passages"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_chapels",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.five_chapels",
+      "kind": "CULT_TRANSITION",
+      "evidence": [
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_inner",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.inner_zone",
+      "kind": "INNER_TRANSITION",
+      "evidence": [
+        "obs.room.hoelscher.public_private"
+      ],
+      "status": "FUNCTIONAL_INTERPRETATION",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.inner_pycourt",
+      "from": "room.pt.inner_zone",
+      "to": "room.pt.pyramid_court",
+      "kind": "WEST_TRANSITION",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.upper_port",
+      "from": "room.py.upper_entry",
+      "to": "room.py.portcullis",
+      "kind": "DESCENDING_PASSAGE",
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.lower_port",
+      "from": "room.py.lower_entry",
+      "to": "room.py.portcullis",
+      "kind": "LOWER_ROUTE_CONVERGENCE",
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.lower_chamber",
+      "from": "room.py.lower_entry",
+      "to": "room.py.lower_chamber",
+      "kind": "LOWER_BRANCH",
+      "evidence": [
+        "obs.room.perring.lower_chamber"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.port_burial",
+      "from": "room.py.portcullis",
+      "to": "room.py.burial_chamber",
+      "kind": "HORIZONTAL_PASSAGE_TO_BURIAL",
+      "evidence": [
+        "obs.room.perring.belzoni_chamber"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    }
+  ],
+  "transitions": [
+    {
+      "threshold_id": "thr.vt.north",
+      "from": "EXTERIOR",
+      "to": "room.vt.north_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.south",
+      "from": "EXTERIOR",
+      "to": "room.vt.south_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.n_to_vest",
+      "from": "room.vt.north_entry",
+      "to": "room.vt.vestibule",
+      "from_environment": "THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.s_to_vest",
+      "from": "room.vt.south_entry",
+      "to": "room.vt.vestibule",
+      "from_environment": "THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.vest_to_hall",
+      "from": "room.vt.vestibule",
+      "to": "room.vt.t_hall",
+      "from_environment": "INTERIOR",
+      "to_environment": "PILLARED_INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED_PROGRAM",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.hall_to_causeway",
+      "from": "room.vt.t_hall",
+      "to": "room.vt.nw_causeway_exit",
+      "from_environment": "PILLARED_INTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.cw.route",
+      "from": "room.vt.nw_causeway_exit",
+      "to": "room.cw.covered_corridor",
+      "from_environment": "THRESHOLD",
+      "to_environment": "ENCLOSED_ROUTE",
+      "contrast_index": 3,
+      "contrast_class": "HIGH",
+      "status": "HISTORICAL_MEASUREMENT",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.cw.to_pt",
+      "from": "room.cw.covered_corridor",
+      "to": "room.pt.entry_branch",
+      "from_environment": "ENCLOSED_ROUTE",
+      "to_environment": "BRANCH_THRESHOLD",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "PRIMARY_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.branch_main",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.vestibule",
+      "from_environment": "BRANCH_THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.vest_wide",
+      "from": "room.pt.vestibule",
+      "to": "room.pt.wide_hall",
+      "from_environment": "INTERIOR",
+      "to_environment": "INTERIOR_HALL",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.wide_deep",
+      "from": "room.pt.wide_hall",
+      "to": "room.pt.deep_hall",
+      "from_environment": "INTERIOR_HALL",
+      "to_environment": "INTERIOR_HALL",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.deep_court",
+      "from": "room.pt.deep_hall",
+      "to": "room.pt.statue_court",
+      "from_environment": "INTERIOR_HALL",
+      "to_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_ambulatory",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.ambulatory",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "CIRCULATION",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_chapels",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.five_chapels",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "INNER_ROOMS",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "SOURCE_BACKED_PROGRAM",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_inner",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.inner_zone",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "INNER_ROOMS",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "FUNCTIONAL_INTERPRETATION",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.inner_pycourt",
+      "from": "room.pt.inner_zone",
+      "to": "room.pt.pyramid_court",
+      "from_environment": "INNER_ROOMS",
+      "to_environment": "COURT_THRESHOLD",
+      "contrast_index": 3,
+      "contrast_class": "HIGH",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.upper_port",
+      "from": "room.py.upper_entry",
+      "to": "room.py.portcullis",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CLOSURE",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.lower_port",
+      "from": "room.py.lower_entry",
+      "to": "room.py.portcullis",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CLOSURE",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.lower_chamber",
+      "from": "room.py.lower_entry",
+      "to": "room.py.lower_chamber",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CHAMBER",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.port_burial",
+      "from": "room.py.portcullis",
+      "to": "room.py.burial_chamber",
+      "from_environment": "CLOSURE",
+      "to_environment": "BURIAL_CHAMBER",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "synthetic.room.py.upper_entry.exterior",
+      "from": "EXTERIOR",
+      "to": "room.py.upper_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "INTERIOR_PASSAGE",
+      "contrast_index": 4,
+      "contrast_class": "HIGH",
+      "status": "TOPOLOGY_SEED_ONLY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "synthetic.room.py.lower_entry.exterior",
+      "from": "EXTERIOR",
+      "to": "room.py.lower_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "INTERIOR_PASSAGE",
+      "contrast_index": 4,
+      "contrast_class": "HIGH",
+      "status": "TOPOLOGY_SEED_ONLY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    }
+  ],
+  "layers": [
+    "rooms",
+    "visibility",
+    "sources",
+    "uncertainty"
+  ]
+}

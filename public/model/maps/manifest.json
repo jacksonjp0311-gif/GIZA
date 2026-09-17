@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "phase": "FIRST_PLATE_REGISTRATION_HOLDOUT_GATE",
+  "atlas_id": "giza.ritual.atlas",
+  "title": "GIZA NEXUS — Ritual + Room + First-Plate Holdout Atlas",
+  "purpose": "Evidence-governed atlas integrating topology, source-byte custody, preregistered registration holdouts and future metric visibility without treating remote source access as local metric evidence.",
+  "truth_rules": [
+    "SCHEMATIC map coordinates are visual/topological only and cannot write geometry.",
+    "METRIC survey coordinates preserve their native frame and datum state.",
+    "Ritual sequence is an interpretive reconstruction grounded in documented architecture and cult context, not recovered ancient testimony.",
+    "Unregistered photographs have no map position authority.",
+    "Intent overlays visualize evidence balance; they are not probabilities or historical facts.",
+    "No map layer can mutate canonical geometry or evidence maturity.",
+    "Action-graph nodes distinguish direct physical evidence, scholarly functional context and inference; graph connectivity is not recovered ritual testimony.",
+    "Room graph coordinates are schematic UI topology, not surveyed wall geometry.",
+    "Plan metadata and OCR cannot become metric geometry without source bytes, scale/frame parsing and residual receipts.",
+    "Visibility Lab computes topological depth/chokepoints and qualitative environment transitions only; no schematic coordinate may be used as a metric sightline.",
+    "Source-byte readiness is workflow state, not source confidence.",
+    "Metric visibility remains disabled until legal local bytes, registration residuals, wall/opening geometry and height assumptions are all explicit.",
+    "Plate-local metric registration can authorize intra-building geometry without resolving plateau-wide GPMP translation; these authorities remain separate."
+  ],
+  "maps": [
+    {
+      "id": "plateau",
+      "label": "PLATEAU MASTER",
+      "subtitle": "Monuments + landscape relationships",
+      "truth_class": "SCHEMATIC_CONTEXT",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/plateau_master.json"
+    },
+    {
+      "id": "ritual",
+      "label": "RITUAL ROUTE",
+      "subtitle": "Lower-to-upper architectural sequence",
+      "truth_class": "EVIDENCE_LINKED_INTERPRETATION",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/ritual_route.json"
+    },
+    {
+      "id": "action",
+      "label": "ACTION GRAPH",
+      "subtitle": "Place → action → place evidence network",
+      "truth_class": "SOURCE_ADDRESSED_BEHAVIORAL_RECONSTRUCTION",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/action_graph.json"
+    },
+    {
+      "id": "rooms",
+      "label": "ROOM GRAPH",
+      "subtitle": "Rooms + thresholds + access topology",
+      "truth_class": "SOURCE_ADDRESSED_SCHEMATIC_TOPOLOGY",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/room_graph.json"
+    },
+    {
+      "id": "visibility",
+      "label": "VISIBILITY LAB",
+      "subtitle": "Depth + chokepoints + visual-state transitions",
+      "truth_class": "PREMETRIC_TOPOLOGY_ANALYSIS",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/visibility_lab.json"
+    },
+    {
+      "id": "metric",
+      "label": "METRIC READINESS",
+      "subtitle": "Source bytes → registration → real rays",
+      "truth_class": "REGISTRATION_READINESS",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/metric_readiness.json"
+    },
+    {
+      "id": "survey",
+      "label": "SURVEY CONTROL",
+      "subtitle": "GPMP native-frame control + orientation",
+      "truth_class": "MEASURED_AND_DERIVED_CONTROL",
+      "geometry_authority": "PRIOR_ONLY",
+      "file": "/model/maps/layers/survey_control.json"
+    },
+    {
+      "id": "geology",
+      "label": "GEOLOGY / QUARRY",
+      "subtitle": "Bedrock, quarry and construction sequence",
+      "truth_class": "ARCHAEOLOGICAL_GEOLOGY_SYNTHESIS",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/geology_quarry.json"
+    },
+    {
+      "id": "history",
+      "label": "HISTORICAL RECORD",
+      "subtitle": "1818 → modern survey campaigns",
+      "truth_class": "SOURCE_LINKED_TIMELINE",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/historical_sources.json"
+    },
+    {
+      "id": "intent",
+      "label": "INTENT RECONSTRUCTION",
+      "subtitle": "Competing purpose/message models",
+      "truth_class": "HYPOTHESIS_VISUALIZATION",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/intent_map.json"
+    },
+    {
+      "id": "photos",
+      "label": "PHOTO COVERAGE",
+      "subtitle": "Open-media evidence coverage, not camera poses",
+      "truth_class": "MEDIA_COVERAGE",
+      "geometry_authority": "NONE",
+      "file": "/model/maps/layers/photo_coverage.json"
+    }
+  ],
+  "default_layers": [
+    "monuments",
+    "ritual",
+    "action",
+    "rooms",
+    "visibility",
+    "metric",
+    "survey",
+    "sources",
+    "uncertainty",
+    "intent",
+    "geology"
+  ],
+  "source_ids": [
+    "src.aera.gpmp_survey",
+    "src.aera.kh_monuments_unit",
+    "src.opencontext.arce_sphinx",
+    "src.digitalgiza.royal_pyramid_complexes",
+    "src.nell_ruggles2014",
+    "src.petrie1883",
+    "src.aera.sphinx_stone_mapping",
+    "src.digitalgiza.khafre_causeway",
+    "src.egyptianmuseum.khafre_statue",
+    "src.met.khafre_architrave",
+    "src.oxford.flentye2018",
+    "src.egypt_ministry",
+    "src.hoelscher1912",
+    "src.perring1840.khafre",
+    "src.mr1966.plate009",
+    "src.mr1966.plate014",
+    "src.mr1966.plate015",
+    "src.isac.giza_model_sources"
+  ],
+  "ui_contract": {
+    "shell_change": false,
+    "central_viewport_surface": "scrollable atlas + action graph",
+    "object_inspector": "unchanged dock",
+    "quick_views": "preserved",
+    "primary_navigation": "unchanged"
+  }
+}

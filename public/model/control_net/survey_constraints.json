@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "constraints": [
+    {
+      "id": "constraint.khafre.casing.north",
+      "type": "AZIMUTH_DFC",
+      "side": "NORTH",
+      "observation_id": "obs.nell2006.khafre.north_casing_orientation",
+      "point_count": 13,
+      "azimuth_deg": 89.93666666666667,
+      "dfc_arcmin": -3.8,
+      "source_id": "src.nell_ruggles2014",
+      "authority": "MEASURED_TOTAL_STATION_BEST_FIT"
+    },
+    {
+      "id": "constraint.khafre.casing.east",
+      "type": "AZIMUTH_DFC",
+      "side": "EAST",
+      "observation_id": "obs.nell2006.khafre.east_casing_orientation",
+      "point_count": 19,
+      "azimuth_deg": 359.93333333333334,
+      "dfc_arcmin": -4.0,
+      "source_id": "src.nell_ruggles2014",
+      "authority": "MEASURED_TOTAL_STATION_BEST_FIT"
+    },
+    {
+      "id": "constraint.khafre.casing.south",
+      "type": "AZIMUTH_DFC",
+      "side": "SOUTH",
+      "observation_id": "obs.nell2006.khafre.south_casing_orientation",
+      "point_count": 11,
+      "azimuth_deg": 89.90333333333334,
+      "dfc_arcmin": -5.8,
+      "source_id": "src.nell_ruggles2014",
+      "authority": "MEASURED_TOTAL_STATION_BEST_FIT"
+    },
+    {
+      "id": "constraint.khafre.casing.west",
+      "type": "AZIMUTH_DFC",
+      "side": "WEST",
+      "observation_id": "obs.nell2006.khafre.west_casing_orientation",
+      "point_count": 11,
+      "azimuth_deg": 359.93,
+      "dfc_arcmin": -4.2,
+      "source_id": "src.nell_ruggles2014",
+      "authority": "MEASURED_TOTAL_STATION_BEST_FIT"
+    },
+    {
+      "id": "constraint.khafre.casing.repeatability",
+      "type": "SURVEY_REPEATABILITY_CONTEXT",
+      "observation_id": "obs.nell2006.khafre.repeatability",
+      "reported_repeatability_arcmin": 0.2,
+      "applies_to": "independently repeated >10-point line",
+      "source_id": "src.nell_ruggles2014",
+      "guard": "Repeatability is not total absolute orientation uncertainty."
+    },
+    {
+      "id": "constraint.khafre.causeway.north",
+      "type": "AZIMUTH",
+      "observation_id": "obs.nell2006.khafre.causeway_north",
+      "azimuth_deg": 103.43333333333334,
+      "point_count": 8,
+      "source_id": "src.nell_ruggles2014",
+      "geometry_write_authority": "REFERENCE_ALIGNMENT_ONLY"
+    },
+    {
+      "id": "constraint.khafre.causeway.width",
+      "type": "WIDTH",
+      "observation_id": "obs.nell2006.khafre.causeway_width",
+      "mean_width_m": 8.29,
+      "source_id": "src.nell_ruggles2014",
+      "geometry_write_authority": "REFERENCE_DIMENSION_ONLY"
+    }
+  ]
+}

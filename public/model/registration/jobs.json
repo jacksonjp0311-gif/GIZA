@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "state_machine": [
+    "DISCOVERED",
+    "MEDIA_VERIFIED",
+    "CONTROL_CANDIDATES_READY",
+    "PIXEL_CONTROLS_MARKED",
+    "SOLVED",
+    "QA_PASSED",
+    "REVIEWED",
+    "E1_RECTIFIED_CANDIDATE",
+    "E2_POSE_CANDIDATE",
+    "PROMOTABLE",
+    "REJECTED"
+  ],
+  "defaults": {
+    "planar_min_controls": 4,
+    "pnp_min_controls": 6,
+    "default_reprojection_rmse_gate_px": 2,
+    "require_control_spread_review": true,
+    "require_holdout_review": true
+  },
+  "count": 10,
+  "jobs": [
+    {
+      "id": "reg.media_commons_khafre_casing_2004",
+      "media_id": "media.commons.khafre_casing_2004",
+      "target_id": "part.pyramid.khafre",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "EXTERIOR_POSE_PENDING_SURVEY_CONTROL",
+      "camera_prior_id": "media.commons.khafre_casing_2004",
+      "world_anchor_ids": [
+        "khafre.base.NW",
+        "khafre.base.NE",
+        "khafre.base.SE",
+        "khafre.base.SW",
+        "khafre.summit"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "SURVEY_ORIENTATION_PRIOR_READY",
+        "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_burial_chamber_2007",
+      "media_id": "media.commons.khafre_burial_chamber_2007",
+      "target_id": "part.burial.chamber",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_burial_chamber_2007",
+      "world_anchor_ids": [
+        "burial.corner.1",
+        "burial.corner.2",
+        "burial.corner.3",
+        "burial.corner.4",
+        "burial.corner.5",
+        "burial.corner.6",
+        "burial.corner.7",
+        "burial.corner.8"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_sarcophagus_detail_2006",
+      "media_id": "media.commons.khafre_sarcophagus_detail_2006",
+      "target_id": "part.sarcophagus.body",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_sarcophagus_detail_2006",
+      "world_anchor_ids": [
+        "sarcophagus.corner.1",
+        "sarcophagus.corner.2",
+        "sarcophagus.corner.3",
+        "sarcophagus.corner.4",
+        "sarcophagus.corner.5",
+        "sarcophagus.corner.6",
+        "sarcophagus.corner.7",
+        "sarcophagus.corner.8"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_granite_casing",
+      "media_id": "media.commons.khafre_granite_casing",
+      "target_id": "part.pyramid.khafre",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "EXTERIOR_POSE_PENDING_SURVEY_CONTROL",
+      "camera_prior_id": "media.commons.khafre_granite_casing",
+      "world_anchor_ids": [
+        "khafre.base.NW",
+        "khafre.base.NE",
+        "khafre.base.SE",
+        "khafre.base.SW",
+        "khafre.summit"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "SURVEY_ORIENTATION_PRIOR_READY",
+        "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_exterior_geotagged",
+      "media_id": "media.commons.khafre_exterior_geotagged",
+      "target_id": "part.pyramid.khafre",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "EXTERIOR_POSE_PENDING_SURVEY_CONTROL",
+      "camera_prior_id": "media.commons.khafre_exterior_geotagged",
+      "world_anchor_ids": [
+        "khafre.base.NW",
+        "khafre.base.NE",
+        "khafre.base.SE",
+        "khafre.base.SW",
+        "khafre.summit"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "SURVEY_ORIENTATION_PRIOR_READY",
+        "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_passage_2007",
+      "media_id": "media.commons.khafre_passage_2007",
+      "target_id": "part.upper.entrance.existing",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_passage_2007",
+      "world_anchor_ids": [
+        "part.upper.entrance.existing.centerline.1",
+        "part.upper.entrance.existing.centerline.2"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_coffer_2007",
+      "media_id": "media.commons.khafre_coffer_2007",
+      "target_id": "part.sarcophagus.body",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_coffer_2007",
+      "world_anchor_ids": [
+        "sarcophagus.corner.1",
+        "sarcophagus.corner.2",
+        "sarcophagus.corner.3",
+        "sarcophagus.corner.4",
+        "sarcophagus.corner.5",
+        "sarcophagus.corner.6",
+        "sarcophagus.corner.7",
+        "sarcophagus.corner.8"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_interior_2022",
+      "media_id": "media.commons.khafre_interior_2022",
+      "target_id": "part.burial.chamber",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_interior_2022",
+      "world_anchor_ids": [
+        "burial.corner.1",
+        "burial.corner.2",
+        "burial.corner.3",
+        "burial.corner.4",
+        "burial.corner.5",
+        "burial.corner.6",
+        "burial.corner.7",
+        "burial.corner.8"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_interior_liber_2006",
+      "media_id": "media.commons.khafre_interior_liber_2006",
+      "target_id": "part.burial.chamber",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "PLANAR_OR_PNP_PENDING_PIXEL_CONTROLS",
+      "camera_prior_id": "media.commons.khafre_interior_liber_2006",
+      "world_anchor_ids": [
+        "burial.corner.1",
+        "burial.corner.2",
+        "burial.corner.3",
+        "burial.corner.4",
+        "burial.corner.5",
+        "burial.corner.6",
+        "burial.corner.7",
+        "burial.corner.8"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    },
+    {
+      "id": "reg.media_commons_khafre_exterior_cc0_2002",
+      "media_id": "media.commons.khafre_exterior_cc0_2002",
+      "target_id": "part.pyramid.khafre",
+      "state": "CONTROL_CANDIDATES_READY",
+      "solve_mode": "EXTERIOR_POSE_PENDING_SURVEY_CONTROL",
+      "camera_prior_id": "media.commons.khafre_exterior_cc0_2002",
+      "world_anchor_ids": [
+        "khafre.base.NW",
+        "khafre.base.NE",
+        "khafre.base.SE",
+        "khafre.base.SW",
+        "khafre.summit"
+      ],
+      "pixel_controls": [],
+      "solution": null,
+      "qa": {
+        "reprojection_rmse_px": null,
+        "plane_rmse_m": null,
+        "control_count": 0,
+        "control_spread_reviewed": false,
+        "holdout_reviewed": false
+      },
+      "promotion_cap": "NONE_UNTIL_SOLVED",
+      "guard": "No geometry write authority until controls are matched, solve succeeds, residuals are reviewed, and an independent receipt is issued.",
+      "plane_frame": null,
+      "control_net": {
+        "state": "MODEL_ANCHORS_ONLY",
+        "orientation_receipt_id": null,
+        "translation_receipt_id": null,
+        "pixel_correspondence_count": 0,
+        "pose_status": "UNSOLVED"
+      }
+    }
+  ]
+}

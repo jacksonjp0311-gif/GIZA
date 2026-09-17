@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "codename": "CHECKSUM HANDOFF + LANDMARK FREEZE",
+  "purpose": "Lock remote file identity and prepare a deterministic custody/render/landmark-freeze path without granting archaeological metric authority before local SHA-256 and holdouts exist.",
+  "counts": {
+    "actual_registered_plans": 0,
+    "actual_metric_rays": 0,
+    "threshold_profiles": 2,
+    "source_identity_receipts": 4,
+    "acquisition_attempts": 4,
+    "synthetic_benchmarks": 1,
+    "remote_plate_witnesses": 1,
+    "dimension_facts": 22,
+    "named_landmarks_pending": 10,
+    "checksum_bound_sources": 0
+  },
+  "truth_rules": [
+    "source identity is not byte custody",
+    "plate-local metric validity does not solve global Giza georeferencing",
+    "holdouts are frozen before fit and excluded from fitting",
+    "no automatic outlier deletion",
+    "failed similarity fit cannot be rescued by unpreregistered model complexity",
+    "synthetic benchmark validates code path only, not archaeological registration",
+    "zero archaeological metric rays until actual source bytes and a passing registration receipt exist",
+    "remote rendered page is not checksum-bound source bytes",
+    "scalar source dimensions do not uniquely reconstruct 2-D wall geometry",
+    "provider-displayed remote file metadata carries zero cryptographic authority",
+    "landmark pixel coordinates bind to a checksum-bound local render",
+    "landmark roles and coordinates freeze before fit"
+  ],
+  "invariants": [
+    "remote provider metadata is not a cryptographic checksum",
+    "named landmarks may exist before pixel coordinates but carry zero geometry authority",
+    "source render SHA-256 must bind the exact page image used for landmark coordinates"
+  ]
+}

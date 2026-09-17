@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "receipt_count": 5,
+  "receipts": [
+    {
+      "receipt_id": "vault.verify.opencontext.arce.sphinx",
+      "source_id": "src.opencontext.arce_sphinx",
+      "artifact_path": "public/vault/snapshots/opencontext_arce_sphinx.normalized.json",
+      "snapshot_sha256": "be29d44188f156f1d41d54e58fac145727efaa61fae845b78f5e5b1fb76cb887",
+      "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+      "verification_date": "2026-09-12",
+      "canonical_mutation": false,
+      "geometry_write_authority": "SPHINX_COMPLEX_CONTEXT_ONLY_UNTIL_FRAME_RECONCILED"
+    },
+    {
+      "receipt_id": "vault.verify.dash.surveys.at.giza",
+      "source_id": "src.dash.petrie_stations2017",
+      "artifact_path": "public/vault/snapshots/dash_surveys_at_giza.normalized.json",
+      "snapshot_sha256": "3ffb7e3339f94f03315afec37439df8b0389a51cd1ea03439fe8bc23b127cb6a",
+      "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+      "verification_date": "2026-09-12",
+      "canonical_mutation": false,
+      "geometry_write_authority": "ACQUISITION_INDEX_ONLY"
+    },
+    {
+      "receipt_id": "vault.verify.petrie1883",
+      "source_id": "src.petrie1883",
+      "artifact_path": "public/vault/snapshots/petrie1883.normalized.json",
+      "snapshot_sha256": "d2cc49f255be72cbecfcb56ab1ff7d229db684997889dd1df184be687cdccbef",
+      "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+      "verification_date": "2026-09-12",
+      "canonical_mutation": false,
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "receipt_id": "vault.verify.heritage.science.2020",
+      "source_id": "src.npj2020.materials",
+      "artifact_path": "public/vault/snapshots/heritage_science_2020.normalized.json",
+      "snapshot_sha256": "52c2697d737af848c8a17047ea42778794c9b735870c786d80bfd2862e498984",
+      "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+      "verification_date": "2026-09-12",
+      "canonical_mutation": false,
+      "geometry_write_authority": "MATERIAL_PRIOR_ONLY"
+    },
+    {
+      "receipt_id": "vault.verify.scidep2025",
+      "source_id": "src.scidep2025",
+      "artifact_path": "public/vault/snapshots/scidep2025.normalized.json",
+      "snapshot_sha256": "9a83f61389a4bd9a6487c655fac5ad13f75be3407e6f115b7c9141bc44df8f21",
+      "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+      "verification_date": "2026-09-12",
+      "canonical_mutation": false,
+      "geometry_write_authority": "NONE_NO_DISCOVERY_RESULT"
+    }
+  ]
+}

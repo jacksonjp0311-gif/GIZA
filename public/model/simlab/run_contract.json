@@ -1,0 +1,29 @@
+{
+  "version": "0.9.3",
+  "required_fields": [
+    "run_id",
+    "solver_id",
+    "solver_version",
+    "geometry_revision",
+    "geometry_hash",
+    "input_hash",
+    "parameters",
+    "controls",
+    "uncertainty",
+    "status",
+    "created_at",
+    "provenance_class"
+  ],
+  "hard_rules": [
+    "solver outputs are SIMULATED",
+    "solver outputs cannot mutate canonical geometry or evidence maturity",
+    "every run binds a frozen geometry hash",
+    "every run has at least one explicit null/control",
+    "uncertainty or unresolved uncertainty must be stated",
+    "UNVERIFIED input geometry remains UNVERIFIED after simulation",
+    "acoustic resonance is ordinary physical behavior unless discriminating null/control comparisons support a stronger claim",
+    "stress/UCS screening ratios are not factors of safety",
+    "hydraulic head cannot imply flow without permeability/connectivity/boundary conditions",
+    "persistent findings must carry a truth guard and next discriminating test"
+  ]
+}

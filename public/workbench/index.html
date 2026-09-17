@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GIZA NEXUS · Registration Workbench</title><link rel="stylesheet" href="./workbench.css"></head>
+<body>
+<header class="top"><a class="brand" href="./"><span class="brandmark">△</span><span>GIZA <em>NEXUS</em><small>SPATIAL RECONSTRUCTION / REGISTRATION WORKBENCH</small></span></a><div class="topnav"><span class="navactive">Registration</span><a href="http://127.0.0.1:4173" target="_blank" rel="noreferrer" title="Requires the existing Vite explorer to be running">3-D explorer ↗</a></div><div class="session"><span class="online"></span> Local session <strong>v0.10.12</strong></div></header>
+<div id="notice" role="status" class="notice" hidden></div>
+<main class="workspace">
+<aside class="rail">
+  <p class="eyebrow">FIRST PLATE CAMPAIGN</p><h1>From source<br>to measured fit.</h1><p class="intro">One source. Frozen landmarks.<br>Every holdout retained.</p>
+  <div class="identity"><span class="tag">PETRIE · 1883</span><h2>Plate VI</h2><p>Granite Temple / Khafre Valley Temple</p><span class="muted">Expected PDF page 305</span></div>
+  <h3 class="sectionLabel">CHAIN OF CUSTODY</h3><ol id="steps" class="steps"></ol>
+  <div class="sourceBox"><h3>Source fingerprint</h3><div class="hash" id="sourceHash">No local source imported</div><p class="muted">SHA-256 is calculated from the exact bytes you supply.</p></div>
+  <div class="guard"><span>AUTHORITY BOUNDARY</span><p>Registration does not promote canonical geometry or establish ancient intent.</p><b>0 metric visibility rays</b></div>
+</aside>
+<section class="mainpanel">
+  <header class="panelhead"><div><p class="eyebrow">LOCAL METRIC FRAME · HOLDOUT-TESTED</p><h2 id="viewTitle">Source plate</h2></div><div class="actions"><label class="button secondary" for="pdfUpload">Import source PDF<input id="pdfUpload" type="file" accept="application/pdf" hidden></label><button id="demo" class="button">Run synthetic test</button></div></header>
+  <div id="demoBanner" class="demoBanner" hidden><strong>SYNTHETIC TEST</strong><span>Software validation only — these are not measurements of Giza.</span><button id="closeDemo">Return to source</button></div>
+  <div class="canvasTools"><span id="canvasMode">Awaiting checksum-bound plate image</span><div><button id="zoomOut" title="Zoom out">−</button><span id="zoomValue">100%</span><button id="zoomIn" title="Zoom in">+</button><button id="zoomReset">Fit</button></div></div>
+  <div class="viewport" id="viewport">
+    <div id="emptyState" class="emptyState"><div class="reticle"><span>VI</span></div><h3>Bring the actual plate into view.</h3><p>Import the source PDF. The local renderer extracts page 305, hashes the image, and opens landmark placement.</p><p class="muted" id="rendererNote">Checking local renderer…</p><span class="smalltag">NO GENERATED PLAN IS USED AS EVIDENCE</span></div>
+    <div id="imageWrap" class="imageWrap" hidden><img id="plateImage" alt="Locally rendered source plate"><svg id="landmarkOverlay" class="landmarkOverlay"></svg></div>
+    <svg id="residualCanvas" class="residualCanvas" viewBox="0 0 1100 580" role="img" aria-label="Registration residual viewer" hidden></svg>
+    <span class="canvasFoot" id="canvasFoot">PLATE LOCAL METERS · GLOBAL GEOREFERENCING UNRESOLVED</span>
+  </div>
+  <div class="metrics" id="metrics"><div><span>Fit controls</span><b id="controlCount">0</b></div><div><span>Untouched holdouts</span><b id="holdoutCount">0</b></div><div><span>Holdout RMS</span><b id="rms">—</b></div><div><span>Scale check</span><b id="scaleResult">Not run</b></div></div>
+  <section class="landmarks"><header><div><h3>Landmark register</h3><p>Click the source image to place the selected landmark. Target coordinates need independent provenance.</p></div><div class="actions"><label class="button secondary" for="jsonUpload">Load JSON<input id="jsonUpload" type="file" accept="application/json,.json" hidden></label><button id="export" class="button secondary">Export draft</button></div></header><div class="tableScroll"><table><thead><tr><th>Landmark / sector</th><th>Role</th><th>Source pixel</th><th>Target meters</th><th>Provenance</th></tr></thead><tbody id="pointRows"></tbody></table></div></section>
+</section>
+<aside class="inspector">
+  <p class="eyebrow">EXPERIMENT INSPECTOR</p><h2>Registration gates</h2><p class="intro">Requirements are enforced before a result can be written.</p>
+  <label class="field">Fit profile<select id="profile"></select></label>
+  <div class="profileNumbers"><div><b id="minControls">4</b><span>minimum controls</span></div><div><b id="minHoldouts">2</b><span>minimum holdouts</span></div></div>
+  <label class="field">Independent scale · meters / pixel<input id="scale" type="number" min="0" step="any" placeholder="e.g. 0.01693"></label>
+  <label class="field">Scale source ID<select id="scaleSource"></select></label>
+  <label class="field">Scale source locator<input id="scaleLocator" placeholder="Scale bar or independent survey reference"></label>
+  <label class="field">Pixel Y axis<select id="pixelAxis"><option value="Y_DOWN">Downward (image convention)</option><option value="Y_UP">Upward (explicit local convention)</option></select></label>
+  <div class="divider"></div><h3>Selected landmark</h3><p id="selectedName" class="muted">Select a row to edit</p>
+  <div class="pair"><label class="field">Target X · m<input id="targetX" type="number" step="any" placeholder="X"></label><label class="field">Target Y · m<input id="targetY" type="number" step="any" placeholder="Y"></label></div>
+  <label class="field">Target source ID<select id="targetSource"></select></label>
+  <label class="field">Target source locator<input id="targetLocator" placeholder="Drawing / point / measurement locator"></label>
+  <button class="button secondary full" id="savePoint">Apply landmark edits</button>
+  <div class="divider"></div>
+  <div id="fitChecks" class="fitChecks"><p class="muted">Source and render hashes are rechecked at freeze and again at execution.</p></div>
+  <label class="check"><input id="confirmCheck" type="checkbox"> I inspected this local image and confirm it is the expected Plate VI.</label>
+  <button id="confirm" class="button secondary full" disabled>Confirm plate identity</button>
+  <button id="freeze" class="button full" disabled>Freeze experiment</button>
+  <button id="fit" class="button primary full" disabled>Run frozen fit</button>
+  <a id="receipt" class="receipt" href="/api/result" target="_blank" hidden>Open complete result JSON ↗</a>
+  <p class="smallprint">Freezing is irreversible in this experiment. Changed data, scale assumptions or thresholds require a new experiment copy. Provenance is supplied by the operator, not independently authenticated by this application.</p>
+</aside>
+</main>
+<footer><span>GIZA NEXUS <b>·</b> Registration Workbench</span><span id="footerState">Local source → hash → landmarks → freeze → fit → review</span><span id="serviceState">Connecting…</span></footer>
+<script type="module" src="./workbench.js"></script>
+</body></html>

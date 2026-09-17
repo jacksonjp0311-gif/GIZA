@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "hypothesis_id": "constraint_hierarchy.khafre.v1",
+  "status": "PREREGISTERED_HYPOTHESIS",
+  "question": "Which geometric relationships appear protected, and which absorb terrain/construction accommodation?",
+  "candidate_constraint_classes": [
+    {
+      "id": "C1_INTERNAL_ORTHOGONALITY",
+      "prediction": "internal hall axes/corners show lower normalized residuals than external route transitions"
+    },
+    {
+      "id": "C2_THRESHOLD_POSITION",
+      "prediction": "major internal thresholds remain more stable than exterior approach/causeway junctions"
+    },
+    {
+      "id": "C3_ROUTE_TERRAIN_ACCOMMODATION",
+      "prediction": "causeway/eastern transition sector carries larger coherent residuals or angular deviation"
+    },
+    {
+      "id": "C4_UNIFORM_SURVEY_ERROR_NULL",
+      "prediction": "residual field is approximately coherent across all sectors with no localized excess"
+    },
+    {
+      "id": "C5_RANDOM_MEASUREMENT_NULL",
+      "prediction": "residual directions are weakly coherent and sector RMS differences remain within null spread"
+    }
+  ],
+  "decision_policy": {
+    "minimum_archaeological_holdouts_for_hierarchy_test": 5,
+    "minimum_sectors": 3,
+    "no_claim_if_below_minimum": true,
+    "multiple_testing": "exploratory until independent ARCE replication; no confirmatory p-values in first Petrie-only fit"
+  },
+  "guard": "Residual hierarchy cannot by itself distinguish ancient design choice from survey error, damage, scan distortion, reconstruction error, or target-coordinate error."
+}

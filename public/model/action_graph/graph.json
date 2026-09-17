@@ -1,0 +1,454 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "graph_id": "giza.khafre.action_graph",
+  "guard": "Nodes/edges reconstruct physically enabled or scholarly inferred actions. They are not recovered ritual scripts and have zero canonical geometry-write authority.",
+  "node_count": 14,
+  "edge_count": 14,
+  "nodes": [
+    {
+      "id": "place.lower_approach",
+      "kind": "PLACE",
+      "label": "Lower approach",
+      "x": 10,
+      "y": 76,
+      "evidence_record_ids": [
+        "parse.funeral_function"
+      ],
+      "epistemic_status": "CONTEXTUAL",
+      "evidence_strength_index": 0.5,
+      "evidence": [
+        {
+          "record_id": "parse.funeral_function",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — complex purposes"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.enter_valley_complex",
+      "kind": "ACTION",
+      "label": "ENTER LOWER COMPLEX",
+      "x": 20,
+      "y": 69,
+      "actor": "FUNERAL_OR_CULT_PARTICIPANTS",
+      "evidence_record_ids": [
+        "parse.funeral_function"
+      ],
+      "epistemic_status": "FUNCTIONAL_INFERENCE",
+      "evidence_strength_index": 0.6,
+      "evidence": [
+        {
+          "record_id": "parse.funeral_function",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — complex purposes"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.valley_temple",
+      "kind": "PLACE",
+      "label": "Valley Temple",
+      "x": 31,
+      "y": 61,
+      "evidence_record_ids": [
+        "parse.valley_finds",
+        "parse.valley_statue"
+      ],
+      "epistemic_status": "DIRECT_ARCHITECTURE",
+      "evidence_strength_index": 0.95,
+      "evidence": [
+        {
+          "record_id": "parse.valley_finds",
+          "source_id": "src.digitalgiza.khafre_valley_temple",
+          "truth_class": "CATALOG_FACT",
+          "source_locator": "Digital Giza site record"
+        },
+        {
+          "record_id": "parse.valley_statue",
+          "source_id": "src.egyptianmuseum.khafre_statue",
+          "truth_class": "OFFICIAL_MUSEUM_OBJECT_RECORD",
+          "source_locator": "Statue of Khafre object record — discovery/material/size"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.encounter_royal_images",
+      "kind": "ACTION",
+      "label": "ENCOUNTER ROYAL IMAGES",
+      "x": 31,
+      "y": 45,
+      "actor": "VISITOR_OR_CULT_PERSONNEL",
+      "evidence_record_ids": [
+        "parse.valley_statue",
+        "parse.valley_iconography"
+      ],
+      "epistemic_status": "EVIDENCE_SUPPORTED_ACTION",
+      "evidence_strength_index": 0.78,
+      "evidence": [
+        {
+          "record_id": "parse.valley_statue",
+          "source_id": "src.egyptianmuseum.khafre_statue",
+          "truth_class": "OFFICIAL_MUSEUM_OBJECT_RECORD",
+          "source_locator": "Statue of Khafre object record — discovery/material/size"
+        },
+        {
+          "record_id": "parse.valley_iconography",
+          "source_id": "src.egyptianmuseum.khafre_statue",
+          "truth_class": "OFFICIAL_MUSEUM_CURATORIAL_DESCRIPTION",
+          "source_locator": "Statue of Khafre object record — throne/falcon description"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.valley_statuary_field",
+      "kind": "PLACE",
+      "label": "Royal statuary context",
+      "x": 42,
+      "y": 52,
+      "evidence_record_ids": [
+        "parse.valley_statue"
+      ],
+      "epistemic_status": "FIND_PROVENANCE",
+      "evidence_strength_index": 0.9,
+      "evidence": [
+        {
+          "record_id": "parse.valley_statue",
+          "source_id": "src.egyptianmuseum.khafre_statue",
+          "truth_class": "OFFICIAL_MUSEUM_OBJECT_RECORD",
+          "source_locator": "Statue of Khafre object record — discovery/material/size"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.traverse_causeway",
+      "kind": "ACTION",
+      "label": "TRAVERSE / ASCEND",
+      "x": 51,
+      "y": 44,
+      "actor": "PROCESSIONAL_MOVEMENT_CANDIDATE",
+      "evidence_record_ids": [
+        "parse.causeway_width",
+        "parse.funeral_function"
+      ],
+      "epistemic_status": "ARCHITECTURE_PLUS_FUNCTION_INFERENCE",
+      "evidence_strength_index": 0.72,
+      "evidence": [
+        {
+          "record_id": "parse.causeway_width",
+          "source_id": "src.nell_ruggles2014",
+          "truth_class": "MEASURED_SURVEY_SUMMARY",
+          "source_locator": "causeway discussion, preprint p.20"
+        },
+        {
+          "record_id": "parse.funeral_function",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — complex purposes"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.causeway",
+      "kind": "PLACE",
+      "label": "Causeway",
+      "x": 61,
+      "y": 38,
+      "evidence_record_ids": [
+        "parse.causeway_width",
+        "parse.causeway_statue"
+      ],
+      "epistemic_status": "DIRECT_ARCHITECTURE",
+      "evidence_strength_index": 0.95,
+      "evidence": [
+        {
+          "record_id": "parse.causeway_width",
+          "source_id": "src.nell_ruggles2014",
+          "truth_class": "MEASURED_SURVEY_SUMMARY",
+          "source_locator": "causeway discussion, preprint p.20"
+        },
+        {
+          "record_id": "parse.causeway_statue",
+          "source_id": "src.digitalgiza.khafre_causeway",
+          "truth_class": "CATALOG_FACT",
+          "source_locator": "Khafre Causeway record — Finds 1"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.cross_royal_threshold",
+      "kind": "ACTION",
+      "label": "CROSS ROYAL THRESHOLD",
+      "x": 70,
+      "y": 31,
+      "actor": "PROCESSIONAL_OR_CULT_PARTICIPANTS",
+      "evidence_record_ids": [
+        "parse.pyramid_temple_doorway"
+      ],
+      "epistemic_status": "THRESHOLD_INFERENCE",
+      "evidence_strength_index": 0.7,
+      "evidence": [
+        {
+          "record_id": "parse.pyramid_temple_doorway",
+          "source_id": "src.met.khafre_architrave",
+          "truth_class": "CURATORIAL_INTERPRETATION",
+          "source_locator": "Met object record N.A.1999.4.1 — court/doorway reconstruction"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.pyramid_temple_court",
+      "kind": "PLACE",
+      "label": "Pyramid Temple court",
+      "x": 79,
+      "y": 25,
+      "evidence_record_ids": [
+        "parse.pyramid_temple_doorway",
+        "parse.pyramid_temple_finds"
+      ],
+      "epistemic_status": "ARCHAEOLOGICAL_CONTEXT",
+      "evidence_strength_index": 0.82,
+      "evidence": [
+        {
+          "record_id": "parse.pyramid_temple_doorway",
+          "source_id": "src.met.khafre_architrave",
+          "truth_class": "CURATORIAL_INTERPRETATION",
+          "source_locator": "Met object record N.A.1999.4.1 — court/doorway reconstruction"
+        },
+        {
+          "record_id": "parse.pyramid_temple_finds",
+          "source_id": "src.digitalgiza.khafre_pyramid_temple",
+          "truth_class": "CATALOG_FACT",
+          "source_locator": "Digital Giza site record"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.present_offerings_readings",
+      "kind": "ACTION",
+      "label": "OFFER / RECITE",
+      "x": 73,
+      "y": 48,
+      "actor": "CULT_PERSONNEL",
+      "evidence_record_ids": [
+        "parse.offering_cult",
+        "parse.pyramid_temple_finds"
+      ],
+      "epistemic_status": "CONTEXTUAL_RITUAL_FUNCTION",
+      "evidence_strength_index": 0.66,
+      "evidence": [
+        {
+          "record_id": "parse.offering_cult",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — post-burial cult"
+        },
+        {
+          "record_id": "parse.pyramid_temple_finds",
+          "source_id": "src.digitalgiza.khafre_pyramid_temple",
+          "truth_class": "CATALOG_FACT",
+          "source_locator": "Digital Giza site record"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.upper_cult_zone",
+      "kind": "PLACE",
+      "label": "Upper cult zone",
+      "x": 82,
+      "y": 55,
+      "evidence_record_ids": [
+        "parse.offering_cult",
+        "parse.pyramid_temple_finds"
+      ],
+      "epistemic_status": "FUNCTIONAL_CONTEXT",
+      "evidence_strength_index": 0.65,
+      "evidence": [
+        {
+          "record_id": "parse.offering_cult",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — post-burial cult"
+        },
+        {
+          "record_id": "parse.pyramid_temple_finds",
+          "source_id": "src.digitalgiza.khafre_pyramid_temple",
+          "truth_class": "CATALOG_FACT",
+          "source_locator": "Digital Giza site record"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.move_to_burial",
+      "kind": "ACTION",
+      "label": "FUNERAL TRANSITION",
+      "x": 86,
+      "y": 37,
+      "actor": "ROYAL_FUNERAL_PROCESSION",
+      "evidence_record_ids": [
+        "parse.funeral_function",
+        "parse.sarcophagus_setting"
+      ],
+      "epistemic_status": "FUNCTIONAL_INFERENCE",
+      "evidence_strength_index": 0.6,
+      "evidence": [
+        {
+          "record_id": "parse.funeral_function",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — complex purposes"
+        },
+        {
+          "record_id": "parse.sarcophagus_setting",
+          "source_id": "src.perring1840.khafre",
+          "truth_class": "HISTORICAL_PRIMARY_OBSERVATION",
+          "source_locator": "Plate III description"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "place.burial_chamber",
+      "kind": "PLACE",
+      "label": "Burial chamber / sarcophagus",
+      "x": 93,
+      "y": 29,
+      "evidence_record_ids": [
+        "parse.sarcophagus_setting"
+      ],
+      "epistemic_status": "DIRECT_BURIAL_ARCHITECTURE",
+      "evidence_strength_index": 0.98,
+      "evidence": [
+        {
+          "record_id": "parse.sarcophagus_setting",
+          "source_id": "src.perring1840.khafre",
+          "truth_class": "HISTORICAL_PRIMARY_OBSERVATION",
+          "source_locator": "Plate III description"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "action.maintain_cult",
+      "kind": "ACTION",
+      "label": "MAINTAIN ROYAL CULT",
+      "x": 88,
+      "y": 72,
+      "actor": "CULT_PERSONNEL",
+      "evidence_record_ids": [
+        "parse.offering_cult"
+      ],
+      "epistemic_status": "SCHOLARLY_FUNCTIONAL_SYNTHESIS",
+      "evidence_strength_index": 0.68,
+      "evidence": [
+        {
+          "record_id": "parse.offering_cult",
+          "source_id": "src.digitalgiza.royal_pyramid_complexes",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "source_locator": "Royal Pyramid Complexes lesson — post-burial cult"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    }
+  ],
+  "edges": [
+    {
+      "from": "place.lower_approach",
+      "to": "action.enter_valley_complex",
+      "relation": "ENABLES",
+      "status": "INFERRED_FROM_COMPLEX_FUNCTION"
+    },
+    {
+      "from": "action.enter_valley_complex",
+      "to": "place.valley_temple",
+      "relation": "LEADS_TO",
+      "status": "TOPOLOGICAL"
+    },
+    {
+      "from": "place.valley_temple",
+      "to": "action.encounter_royal_images",
+      "relation": "CONTAINS_CONTEXT_FOR",
+      "status": "OBJECT_PROVENANCE_SUPPORTED"
+    },
+    {
+      "from": "action.encounter_royal_images",
+      "to": "place.valley_statuary_field",
+      "relation": "FOCUSES_ON",
+      "status": "OBJECT_PROVENANCE_SUPPORTED"
+    },
+    {
+      "from": "place.valley_statuary_field",
+      "to": "action.traverse_causeway",
+      "relation": "SEQUENCE_CANDIDATE",
+      "status": "INFERRED"
+    },
+    {
+      "from": "action.traverse_causeway",
+      "to": "place.causeway",
+      "relation": "OCCURS_IN",
+      "status": "ARCHITECTURALLY_CONSTRAINED"
+    },
+    {
+      "from": "place.causeway",
+      "to": "action.cross_royal_threshold",
+      "relation": "LEADS_TO",
+      "status": "TOPOLOGICAL"
+    },
+    {
+      "from": "action.cross_royal_threshold",
+      "to": "place.pyramid_temple_court",
+      "relation": "ENTERS",
+      "status": "CURATORIAL_ARCHITECTURAL_CONTEXT"
+    },
+    {
+      "from": "place.pyramid_temple_court",
+      "to": "action.present_offerings_readings",
+      "relation": "MAY_SUPPORT",
+      "status": "CONTEXTUAL_NOT_ROOM_SPECIFIC"
+    },
+    {
+      "from": "action.present_offerings_readings",
+      "to": "place.upper_cult_zone",
+      "relation": "OCCURS_IN",
+      "status": "OLD_KINGDOM_FUNCTIONAL_CONTEXT"
+    },
+    {
+      "from": "place.pyramid_temple_court",
+      "to": "action.move_to_burial",
+      "relation": "FUNERARY_SEQUENCE_CANDIDATE",
+      "status": "SCHOLARLY_SYNTHESIS"
+    },
+    {
+      "from": "action.move_to_burial",
+      "to": "place.burial_chamber",
+      "relation": "CULMINATES_AT",
+      "status": "BURIAL_ARCHITECTURE_SUPPORTED"
+    },
+    {
+      "from": "place.burial_chamber",
+      "to": "action.maintain_cult",
+      "relation": "POST_BURIAL_TRANSITION",
+      "status": "SCHOLARLY_SYNTHESIS"
+    },
+    {
+      "from": "action.maintain_cult",
+      "to": "place.upper_cult_zone",
+      "relation": "RETURNS_TO_CULT_SPACE",
+      "status": "SCHOLARLY_SYNTHESIS"
+    }
+  ],
+  "canonical_geometry_mutation": false
+}

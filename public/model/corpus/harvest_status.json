@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.4",
+  "policy": "Metadata/status/hash harvest only. No access controls are bypassed and response bodies are not cached by this command.",
+  "count": 5,
+  "results": [
+    {
+      "source_id": "src.petrie1883",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "status": "FETCH_ERROR",
+      "error": "fetch failed",
+      "retrieved_at": "2026-09-12T16:32:43.681Z",
+      "body_cached": false
+    },
+    {
+      "source_id": "src.hoelscher1912",
+      "url": "https://doi.org/10.11588/diglit.26793",
+      "status": "FETCH_ERROR",
+      "error": "fetch failed",
+      "retrieved_at": "2026-09-12T16:32:48.689Z",
+      "body_cached": false
+    },
+    {
+      "source_id": "src.legon1989",
+      "url": "https://rombergintegrali.org/pdf/legon/Khaefre.pdf",
+      "status": "FETCH_ERROR",
+      "error": "fetch failed",
+      "retrieved_at": "2026-09-12T16:32:48.693Z",
+      "body_cached": false
+    },
+    {
+      "source_id": "src.egypt_ministry",
+      "url": "https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren",
+      "status": "FETCH_ERROR",
+      "error": "fetch failed",
+      "retrieved_at": "2026-09-12T16:32:53.701Z",
+      "body_cached": false
+    },
+    {
+      "source_id": "src.digitalgiza.home",
+      "url": "https://giza.fas.harvard.edu/",
+      "status": "FETCH_ERROR",
+      "error": "fetch failed",
+      "retrieved_at": "2026-09-12T16:32:53.704Z",
+      "body_cached": false
+    }
+  ]
+}

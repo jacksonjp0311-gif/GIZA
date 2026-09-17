@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "campaign_id": "first_plate.valley_temple.petrie_vi",
+  "status": "AWAITING_LOCAL_BYTES",
+  "accepted_candidate_id": "bytes.petrie1883.public_domain_pdf",
+  "expected_remote_identity": {
+    "internet_archive_identifier": "cu31924012038927",
+    "provider_page_count": 315,
+    "plate_vi_pdf_page_1_indexed": 305,
+    "plate_vi_title": "THE GRANITE TEMPLE OF KHAFRA, AT GIZEH",
+    "plate_vi_scale": "1:200"
+  },
+  "local_custody": {
+    "path": null,
+    "bytes": null,
+    "sha256": null,
+    "pdf_page_count": null,
+    "plate_vi_render_path": null,
+    "plate_vi_render_sha256": null,
+    "visual_confirmation": false
+  },
+  "promotion_sequence": [
+    "import exact PDF bytes",
+    "compute SHA-256",
+    "verify PDF page count",
+    "render page 305 from those bytes",
+    "operator visually confirms Plate VI",
+    "populate named landmark pixels/targets",
+    "freeze controls and holdouts",
+    "run preregistered similarity fit",
+    "evaluate untouched holdouts"
+  ],
+  "authority_effect": "NONE",
+  "guard": "No later step may be marked complete unless every earlier custody step is satisfied."
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "codename": "REGISTRATION LAB + CONTROL NET",
+  "purpose": "Photo registration state machine bound to published survey orientation/control context through CONTROL NET; real photo jobs remain unsolved until actual pixel correspondences are marked.",
+  "counts": {
+    "camera_priors": 14,
+    "world_control_candidates": 33,
+    "jobs": 10,
+    "survey_control_sources": 6,
+    "pair_clusters": 3,
+    "control_net_links": 3
+  },
+  "state_machine": [
+    "DISCOVERED",
+    "MEDIA_VERIFIED",
+    "CONTROL_CANDIDATES_READY",
+    "PIXEL_CONTROLS_MARKED",
+    "SOLVED",
+    "QA_PASSED",
+    "REVIEWED",
+    "E1_RECTIFIED_CANDIDATE",
+    "E2_POSE_CANDIDATE",
+    "PROMOTABLE",
+    "REJECTED"
+  ],
+  "hard_rules": [
+    "photo abundance is not geometry",
+    "EXIF is a camera prior, not calibration",
+    "consumer GPS is context, not survey control",
+    "planar homography may support local E1 rectification only after control QA",
+    "full 3D pose requires a calibrated/solved camera and independent 3D controls",
+    "survey coordinates retain native CRS/vertical datum until transformed by receipt",
+    "reprojection residuals must be stored, not summarized away",
+    "no registration result overwrites canonical geometry without VAULT/FIELD review",
+    "survey-backed orientation prior may constrain a solve but does not create pixel correspondences",
+    "projective DLT is not a calibrated Euclidean pose"
+  ],
+  "qa_defaults": {
+    "planar_min_controls": 4,
+    "pnp_min_controls": 6,
+    "default_reprojection_rmse_px": 2.0,
+    "require_control_spread_review": true,
+    "require_holdout_review": true,
+    "require_coordinate_frame_receipt": true
+  },
+  "entrypoints": [
+    "public/model/registration/camera_priors.json",
+    "public/model/registration/world_control_candidates.json",
+    "public/model/registration/jobs.json",
+    "public/model/registration/survey_control_sources.json",
+    "public/model/registration/benchmarks/planar_homography.json",
+    "scripts/registration/solve-planar.mjs",
+    "scripts/registration/import-kml.mjs",
+    "docs/REGISTRATION_LAB.md",
+    "public/model/registration/pair_candidates.json",
+    "public/model/control_net/manifest.json",
+    "public/model/control_net/orientation_receipts.json",
+    "public/model/control_net/registration_links.json",
+    "scripts/controlnet/benchmark.mjs",
+    "docs/CONTROL_NET.md"
+  ]
+}

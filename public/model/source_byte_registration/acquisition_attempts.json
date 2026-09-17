@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "attempt_count": 4,
+  "attempts": [
+    {
+      "id": "attempt.petrie.archiveorg.20260913",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "url": "https://archive.org/download/cu31924012038927/cu31924012038927.pdf",
+      "result": "FAILED",
+      "failure_class": "EXECUTION_ENVIRONMENT_NETWORK_TRANSFER_UNAVAILABLE",
+      "local_file_created": false,
+      "sha256": null,
+      "authority_effect": "NONE",
+      "note": "Direct byte acquisition attempted from canonical Internet Archive URL; current execution container could not fetch external bytes."
+    },
+    {
+      "id": "attempt.petrie.wikimedia.20260913",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_pyramids_and_temples_of_Gizeh_%28IA_cu31924012038927%29.pdf",
+      "result": "FAILED",
+      "failure_class": "EXECUTION_ENVIRONMENT_NETWORK_TRANSFER_UNAVAILABLE",
+      "local_file_created": false,
+      "sha256": null,
+      "authority_effect": "NONE",
+      "note": "Second acquisition path attempted from Wikimedia original-file host. Failure does not weaken source identity; it only blocks local-byte custody."
+    },
+    {
+      "id": "attempt.petrie.petrieproject.20260915",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "url": "https://pdfs.petrieproject.com/cu31924012038927.pdf",
+      "result": "FAILED",
+      "failure_class": "EXECUTION_ENVIRONMENT_NETWORK_TRANSFER_UNAVAILABLE",
+      "local_file_created": false,
+      "sha256": null,
+      "authority_effect": "NONE",
+      "note": "Container download and direct curl acquisition were attempted on 2026-09-15; the runtime could read the PDF through the research browser but could not transfer the binary into the working filesystem."
+    },
+    {
+      "id": "attempt.petrie.wikimedia_original.20260915",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_pyramids_and_temples_of_Gizeh_%28IA_cu31924012038927%29.pdf",
+      "result": "FAILED",
+      "failure_class": "EXECUTION_ENVIRONMENT_NETWORK_TRANSFER_UNAVAILABLE",
+      "local_file_created": false,
+      "sha256": null,
+      "authority_effect": "NONE",
+      "note": "Direct binary acquisition from the Wikimedia original-file host was attempted on 2026-09-15 and failed in the current runtime. Remote file identity remains independently accessible through the research browser."
+    }
+  ]
+}

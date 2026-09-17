@@ -1,0 +1,53 @@
+{
+  "version": "1.1.0",
+  "field_phase": "FIELD_CONTROL_NET",
+  "reference_anchor": {
+    "id": "anchor.khafre.wikidata",
+    "latitude_deg": 29.976,
+    "longitude_deg": 31.130969444444446,
+    "ellipsoid_height_m": null,
+    "vertical_datum": "UNRESOLVED",
+    "source_id": "src.wikidata.khafre",
+    "source_locator": "coordinate location 29\u00b058\u203233.60\u2033N, 31\u00b07\u203251.49\u2033E",
+    "status": "CONTEXT_ANCHOR_ONLY",
+    "horizontal_authority": "LOW_CONTEXT",
+    "vertical_authority": "NONE"
+  },
+  "local_frame": {
+    "id": "frame.giza.local",
+    "units": "m",
+    "handedness": "right",
+    "axes": {
+      "x": "+EAST",
+      "y": "+NORTH",
+      "z": "+UP"
+    },
+    "origin_local_m": [
+      0,
+      0,
+      0
+    ],
+    "origin_geodetic": "anchor.khafre.wikidata",
+    "rotation_to_monument": {
+      "status": "SURVEY_ORIENTATION_PRIOR_AVAILABLE",
+      "receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "yaw_arcmin": -4.45,
+      "application": "NOT_APPLIED_TO_CANONICAL_GEOMETRY"
+    },
+    "status": "ORIENTATION_CONSTRAINED_TRANSLATION_UNRESOLVED"
+  },
+  "transform": {
+    "method": "WGS84_LOCAL_TANGENT_LINEARIZED",
+    "formula": "small-area ENU using meridional/transverse radii at anchor",
+    "max_intended_radius_m": 5000,
+    "z_rule": "No geodetic-to-local z conversion until vertical datum and local survey control are resolved.",
+    "precision_rule": "Context-grade only until GPMP/survey control points bind the engineering frame."
+  },
+  "required_upgrade": [
+    "survey-to-local horizontal translation receipt",
+    "survey control points with local XYZ and geographic coordinates",
+    "explicit vertical datum",
+    "residual report",
+    "transform receipt"
+  ]
+}

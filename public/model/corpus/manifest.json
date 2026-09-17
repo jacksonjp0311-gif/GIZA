@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "SOURCE-BYTE REGISTRATION + METRIC VIEW LAB",
+  "purpose": "Confirmed-source corpus plus registration-readiness and guarded metric-view hypotheses; no automatic geometry mutation.",
+  "counts": {
+    "knowledge_nodes": 42,
+    "timeline_events": 17,
+    "monuments": 9,
+    "claim_records": 8,
+    "verification_receipts": 14,
+    "verified_open_media_files": 7,
+    "source_registry_total": 73,
+    "observations_total": 129,
+    "publications_total": 25,
+    "media_assets_total": 16,
+    "findings_total": 29,
+    "acquisition_targets_total": 24
+  },
+  "truth_rules": [
+    "confirmed-source does not mean geometry-write authority",
+    "historical primary records retain period/context uncertainty",
+    "expert archaeological interpretations remain interpretations",
+    "official summaries do not override detailed surveys",
+    "museum object attribution is curatorial evidence, not spatial survey",
+    "open-media rights are verified per file before cache eligibility",
+    "unsupported extraordinary-technology claims remain visible with zero authority",
+    "radiocarbon dates retain old-wood/context caveats",
+    "source disagreement is preserved rather than averaged"
+  ],
+  "entrypoints": [
+    "public/model/corpus/knowledge_nodes.json",
+    "public/model/corpus/historical_timeline.json",
+    "public/model/corpus/monument_inventory.json",
+    "public/model/corpus/claim_matrix.json",
+    "public/model/corpus/verification_receipts.json",
+    "public/model/corpus/open_media_candidates.json",
+    "public/model/corpus/knowledge_matrix.csv",
+    "docs/ARCHIVE_HARVEST.md",
+    "public/model/intent/manifest.json",
+    "public/model/source_parser/parsed_records.json",
+    "public/model/action_graph/graph.json",
+    "public/model/action_graph/traversal.json",
+    "public/model/plan_concordance/matrix.json",
+    "public/model/visibility_lab/route_metrics.json",
+    "public/model/visibility_lab/transition_analysis.json",
+    "public/model/source_byte_registration/page_locators.json",
+    "public/model/metric_view_lab/emergence_report.json"
+  ]
+}

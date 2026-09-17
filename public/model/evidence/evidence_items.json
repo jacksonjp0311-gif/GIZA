@@ -1,0 +1,274 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "id": "ev.kh.exterior.petrie",
+      "targets": [
+        "part.pyramid.khafre"
+      ],
+      "kind": "survey_geometry",
+      "source_ids": [
+        "src.petrie1883"
+      ],
+      "maturity": "E3",
+      "status": "ACCEPTED",
+      "provenance_class": "DERIVED",
+      "claims": [
+        "base geometry",
+        "slope/orientation constraints"
+      ],
+      "notes": "Historical survey constrains the geometric envelope; current eroded surface remains a separate problem."
+    },
+    {
+      "id": "ev.kh.passage.network",
+      "targets": [
+        "part.upper.entrance.existing",
+        "part.upper.horizontal.kj",
+        "part.upper.horizontal.jg",
+        "part.upper.horizontal.gh",
+        "part.lower.entrance.existing",
+        "part.lower.horizontal.bc",
+        "part.lower.horizontal.ce",
+        "part.lower.connect.ef",
+        "part.lower.connect.fg"
+      ],
+      "kind": "survey_reconstruction",
+      "source_ids": [
+        "src.petrie1883",
+        "src.legon1989",
+        "src.mr1966.plate008"
+      ],
+      "maturity": "E3",
+      "status": "ACCEPTED",
+      "provenance_class": "DERIVED",
+      "claims": [
+        "passage centerline topology",
+        "section dimensions where measured"
+      ],
+      "notes": "Lost/obscured extensions stay explicitly reconstructed."
+    },
+    {
+      "id": "ev.kh.lower.chamber",
+      "targets": [
+        "part.lower.chamber"
+      ],
+      "kind": "survey_geometry",
+      "source_ids": [
+        "src.petrie1883",
+        "src.mr1966.plate009"
+      ],
+      "maturity": "E3",
+      "status": "ACCEPTED",
+      "provenance_class": "DERIVED",
+      "claims": [
+        "plan dimensions",
+        "route relation"
+      ],
+      "notes": "Height fidelity remains lower than plan fidelity until better source constraints are ingested."
+    },
+    {
+      "id": "ev.kh.burial.chamber",
+      "targets": [
+        "part.burial.chamber",
+        "part.burial.gable_envelope",
+        "part.burial.floor_paving"
+      ],
+      "kind": "survey_plus_photo",
+      "source_ids": [
+        "src.petrie1883",
+        "src.commons.khafre.interior"
+      ],
+      "maturity": "E3",
+      "status": "ACCEPTED",
+      "provenance_class": "DERIVED",
+      "claims": [
+        "chamber geometry",
+        "gable envelope",
+        "paving zone"
+      ],
+      "notes": "Photographs strengthen object identification but do not replace the survey scale."
+    },
+    {
+      "id": "ev.kh.sarcophagus",
+      "targets": [
+        "part.sarcophagus.body",
+        "part.sarcophagus.lid"
+      ],
+      "kind": "direct_dimensions_plus_photo",
+      "source_ids": [
+        "src.petrie1883",
+        "src.commons.khafre.interior"
+      ],
+      "maturity": "E4",
+      "status": "ACCEPTED",
+      "provenance_class": "MEASURED",
+      "claims": [
+        "specific surviving object identity",
+        "outer and inner dimensions",
+        "lid as separate element"
+      ],
+      "notes": "Strong mapped-element candidate because the surviving object is individually identifiable and dimensioned."
+    },
+    {
+      "id": "ev.kh.open.media.catalog",
+      "targets": [
+        "part.pyramid.khafre",
+        "part.burial.chamber",
+        "part.sarcophagus.body"
+      ],
+      "kind": "visual_reference",
+      "source_ids": [
+        "src.commons.khafre",
+        "src.commons.khafre.interior"
+      ],
+      "maturity": "E0",
+      "status": "ACCEPTED",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "visual appearance only"
+      ],
+      "notes": "Each file retains its own license; metric use requires a separate calibration/reconstruction receipt."
+    },
+    {
+      "id": "ev.kh.exterior.hoelscher_crosscheck",
+      "targets": [
+        "part.pyramid.khafre",
+        "part.casing.granite.lower"
+      ],
+      "kind": "independent_historical_crosscheck",
+      "source_ids": [
+        "src.hoelscher1912"
+      ],
+      "maturity": "E3",
+      "status": "ACCEPTED_CONTEXT",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "215.25 m historical side-length crosscheck",
+        "143.50 m design-height context",
+        "granite base casing and limestone casing description"
+      ],
+      "notes": "Crosscheck only. Petrie remains canonical metric authority for the rev.0003 envelope."
+    },
+    {
+      "id": "ev.kh.material.samples.2020",
+      "targets": [
+        "part.pyramid.khafre"
+      ],
+      "kind": "sample_material_characterization",
+      "source_ids": [
+        "src.npj2020.materials"
+      ],
+      "maturity": "E0",
+      "status": "ACCEPTED_CONTEXT",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "backing limestone sample mechanical-property ranges",
+        "mortar mineralogical context"
+      ],
+      "notes": "Sample-level material priors. Not mapped to individual blocks; cannot promote stone geometry."
+    },
+    {
+      "id": "ev.giza.registration.gpmp",
+      "targets": [
+        "part.plateau.reference"
+      ],
+      "kind": "site_control_network_reference",
+      "source_ids": [
+        "src.aera.gpmp"
+      ],
+      "maturity": "E0",
+      "status": "ACCEPTED_REFERENCE",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "high-precision site survey/control precedent"
+      ],
+      "notes": "Use to design registration workflow; no complete coordinate dataset is bundled here."
+    },
+    {
+      "id": "ev.kh.muography.scidep2025",
+      "targets": [
+        "part.pyramid.khafre"
+      ],
+      "kind": "modern_muography_project_method",
+      "source_ids": [
+        "src.scidep2025"
+      ],
+      "maturity": "E0",
+      "status": "METHOD_REFERENCE",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "Khafre-specific muography instrumentation and simulation framework"
+      ],
+      "notes": "No new hidden structure is promoted. Supporting data require request to the corresponding author."
+    },
+    {
+      "id": "ev.deep_claim.canon01_status",
+      "targets": [
+        "part.upper.1",
+        "part.upper.2",
+        "part.upper.3",
+        "part.upper.4",
+        "part.upper.5",
+        "part.shaft.alpha.1",
+        "part.helix.alpha.1",
+        "part.connector.alpha.1",
+        "part.shaft.alpha.2",
+        "part.helix.alpha.2",
+        "part.connector.alpha.2",
+        "part.shaft.alpha.3",
+        "part.helix.alpha.3",
+        "part.connector.alpha.3",
+        "part.shaft.alpha.4",
+        "part.helix.alpha.4",
+        "part.connector.alpha.4",
+        "part.shaft.beta.1",
+        "part.helix.beta.1",
+        "part.connector.beta.1",
+        "part.shaft.beta.2",
+        "part.helix.beta.2",
+        "part.connector.beta.2",
+        "part.shaft.beta.3",
+        "part.helix.beta.3",
+        "part.connector.beta.3",
+        "part.shaft.beta.4",
+        "part.helix.beta.4",
+        "part.connector.beta.4",
+        "part.terminal.alpha",
+        "part.terminal.beta"
+      ],
+      "kind": "claim_status_and_methodological_risk",
+      "source_ids": [
+        "src.ahrama.deep_claim_2025",
+        "src.ahrama.deep_claim_retraction_context_2026",
+        "src.aigner1983"
+      ],
+      "maturity": "E0",
+      "status": "UNVERIFIED_LOCK",
+      "provenance_class": "UNVERIFIED",
+      "claims": [
+        "claim provenance only",
+        "no independent reproduction in CANON-01 corpus"
+      ],
+      "notes": "Locks all 31 reported deep structures at UNVERIFIED. Geology is included as null-model context, not proof of absence."
+    },
+    {
+      "id": "ev.kh.complex.opencontext_future",
+      "targets": [
+        "part.plateau.reference"
+      ],
+      "kind": "open_dataset_future_scope",
+      "source_ids": [
+        "src.opencontext.arce_sphinx",
+        "src.arce.sphinx_database",
+        "src.zenodo.arce_media"
+      ],
+      "maturity": "E0",
+      "status": "FUTURE_SCOPE",
+      "provenance_class": "SOURCE",
+      "claims": [
+        "stone-by-stone Sphinx/Sphinx Temple/Khafre Valley Temple archive available for future complex expansion"
+      ],
+      "notes": "Does not modify the current Khafre pyramid geometry."
+    }
+  ]
+}

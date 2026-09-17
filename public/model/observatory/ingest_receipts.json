@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1.0",
+  "version": "0.10.1",
+  "receipts": [
+    {
+      "artifact": "public/model/observatory/acquisition_queue.json",
+      "sha256": "3204cc52a9bd1b84cd3f892b79f97c31658ed6041d5acda30c727764ecaba3aa",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/claims_registry.json",
+      "sha256": "c8deac7af03fe2290dc0db3516444be5559f0083a487187d94b2fe304c87e48b",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/cross_domain_graph.json",
+      "sha256": "84aa54005fb631d73142e4f32e48e9c819162a445588227802b12530f5c01889",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/evidence_matrix.csv",
+      "sha256": "693cc3438efa42d540cf232b81d1a94e272ba2a136e8d5bc3874b9b997123498",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/manifest.json",
+      "sha256": "a5698bf6cb0c161c04cee8e9315224a1185684555572c638548c577217f5dffa",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/material_physical_khafre.csv",
+      "sha256": "9922c614ab6462e5ac0e191f159d3987d26831f4247bed5704c21d7d72697ca5",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/material_physical_khafre.json",
+      "sha256": "745355f35a5780a4b83438b578ebaa38bc01839f0025108929420fac7f723b05",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/material_samples_khafre.csv",
+      "sha256": "c8fe4c3236a6a7b43e789fe07cb30dc78332dd785bc313319d5d02102c0620e4",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/material_samples_khafre.json",
+      "sha256": "c41795aa5070287d13eb0f86e6759446a9b5343c7947de43c21c1abe47daff1c",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/media_catalog.json",
+      "sha256": "b3160b73d3ecec3f2249fcc8dbb0a44e51296524c99204e197f034f0405fda02",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/media_collections.json",
+      "sha256": "6dbcf6ae376ca510f3b8b2c12e1283567226bdc662e7c53ba2cbff9557ab6c9d",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/observations.csv",
+      "sha256": "5d2224ca2684e6c9e4bf0d0703e74d665c950710c68a6d72025c0bc6f985279b",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/observations.json",
+      "sha256": "2646c4e52d0956d823a73f92db573c8566207f74c2e9e896ca8ab68920174ee5",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/photo_observations.json",
+      "sha256": "b771d10523e75d15ffd7ca9e9888ad3b9b2e6048b62be60178612e81ff77dfb0",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/plan_register.json",
+      "sha256": "3b5839fb84dc99ae961e9def2be6a5490b89facb5b05f07c1622a125a03d1a45",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/publication_catalog.json",
+      "sha256": "4f24d4fe7db72f32deda3b6680cf5f7fe05bb0851b9ec408e36c580b5d842cd7",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/source_discrepancies.json",
+      "sha256": "bef75c4861aabf5cba15a30646713f414d6e56d3f814a79f8867ea0feeaf2313",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    },
+    {
+      "artifact": "public/model/observatory/source_status.json",
+      "sha256": "a5793006ff13c58e5c0231bd2aa5b263031a66164f6699a657c882ed1c404718",
+      "created_by": "REGISTRATION_LAB_v0.9.7_release_freeze",
+      "created_on": "2026-09-12",
+      "canonical_mutation": false
+    }
+  ]
+}

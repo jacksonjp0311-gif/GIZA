@@ -1,0 +1,128 @@
+{
+  "revision": "rev.0003",
+  "coordinate_frame": {
+    "units": "m",
+    "handedness": "RIGHT_HANDED",
+    "up_axis": "Z",
+    "x_axis": "+EAST",
+    "y_axis": "+NORTH",
+    "surface_z_m": 0.0,
+    "origin": "center of Petrie mean casing square at base plane"
+  },
+  "surface": {
+    "khafre_base_mean_m": {
+      "value": 215.26246,
+      "status": "DERIVED_MEAN_FROM_PETRIE_FOUR_SIDES",
+      "measurement_id": "m.surface.base.mean"
+    },
+    "khafre_base_sides_m": {
+      "north": 215.18626,
+      "east": 215.27008,
+      "south": 215.31326,
+      "west": 215.2777,
+      "status": "MEASURED_PETRIE"
+    },
+    "khafre_face_slope_deg": {
+      "value": 53.1666666667,
+      "uncertainty_deg": 0.0666666667,
+      "status": "MEASURED_PETRIE",
+      "measurement_id": "m.surface.slope"
+    },
+    "khafre_original_height_petrie_m": {
+      "value": 143.8656,
+      "uncertainty_m": 0.3302,
+      "status": "DERIVED_FROM_PETRIE_SURVEY",
+      "measurement_id": "m.surface.height.petrie"
+    },
+    "khafre_original_height_ministry_m": {
+      "value": 143.5,
+      "status": "OFFICIAL_SUMMARY_COMPARISON_ONLY"
+    },
+    "khafre_current_height_scidep_m": {
+      "value": 136.4,
+      "status": "PEER_REVIEWED_MODERN_CONTEXT"
+    }
+  },
+  "known_internal": {
+    "axis_offset_east_m": {
+      "value": 12.45362,
+      "status": "MEASURED_PETRIE"
+    },
+    "axis_azimuth_deg": {
+      "value": -0.0936111111111111,
+      "status": "MEASURED_SMYTH_REPORTED_BY_PETRIE"
+    },
+    "upper_passage_clear_m": {
+      "width": 1.048766,
+      "height": 1.201166,
+      "status": "MEASURED_PETRIE"
+    },
+    "raised_horizontal_clear_m": {
+      "width": 1.056386,
+      "height": 1.804924,
+      "status": "MEASURED_PETRIE"
+    },
+    "upper_extant_entrance_length_m": {
+      "value": 33.88,
+      "status": "MEASURED_LEGON"
+    },
+    "lower_extant_entrance_length_m": {
+      "value": 34.01,
+      "status": "MEASURED_LEGON"
+    },
+    "burial_chamber_m": {
+      "east_west": 14.16431,
+      "north_south": 4.97459,
+      "wall_height": 5.24256,
+      "status": "MEASURED_PETRIE"
+    },
+    "subsidiary_chamber_m": {
+      "east_west": 10.45337,
+      "north_south": 3.13309,
+      "height": 2.4,
+      "height_status": "DISPLAY_ONLY_UNRESOLVED",
+      "plan_status": "MEASURED_PETRIE"
+    },
+    "sarcophagus_outer_m": {
+      "length": 2.633472,
+      "width": 1.065911,
+      "height": 0.968248,
+      "status": "MEASURED_PETRIE"
+    },
+    "placement_note": "Major N-S/vertical centerline nodes A-L come from Legon Table II; entrance extensions through missing casing/pavement are stored separately from extant segments."
+  },
+  "reported_subsurface": {
+    "shaft_count": {
+      "value": 8,
+      "status": "UNVERIFIED_REPORTED"
+    },
+    "shaft_depth_m": {
+      "value": 648.0,
+      "status": "UNVERIFIED_REPORTED"
+    },
+    "shaft_radius_m": {
+      "value": 5.5,
+      "status": "MODEL_ASSUMPTION"
+    },
+    "helix_radius_m": {
+      "value": 14.0,
+      "status": "MODEL_ASSUMPTION"
+    },
+    "helix_turns": {
+      "value": 8,
+      "status": "MODEL_ASSUMPTION"
+    },
+    "terminal_count": {
+      "value": 2,
+      "status": "UNVERIFIED_REPORTED"
+    },
+    "terminal_size_m": {
+      "value": [
+        80,
+        80,
+        80
+      ],
+      "status": "UNVERIFIED_REPORTED_REPRESENTATIVE"
+    }
+  }
+}

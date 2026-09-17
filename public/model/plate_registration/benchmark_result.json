@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "id": "plate.synthetic.similarity.v1",
+  "benchmark_class": "SYNTHETIC_ALGORITHM_ONLY",
+  "truth": {
+    "a": 0.019126095119260708,
+    "b": 0.005847434094454735,
+    "tx": 12.5,
+    "ty": -4.2,
+    "scale": 0.02,
+    "angle_deg": 17
+  },
+  "fit": {
+    "a": 0.019123374080718774,
+    "b": 0.0058461762558834635,
+    "tx": 12.500169349811143,
+    "ty": -4.197530749202391,
+    "scale": 0.019997030105642244,
+    "angle_deg": 16.998832934173944
+  },
+  "frame_diagonal_m": 22.953516555243883,
+  "controls": {
+    "count": 6,
+    "rms": 0.0034680726933892007,
+    "max": 0.005443081357925396,
+    "normalized_rms": 0.00015109112736788456,
+    "normalized_max": 0.00023713496556508626
+  },
+  "holdouts": {
+    "count": 3,
+    "rms": 0.004870975643228737,
+    "max": 0.005666927206676446,
+    "normalized_rms": 0.00021221043109039128,
+    "normalized_max": 0.0002468871030300496
+  },
+  "holdout_residuals": [
+    {
+      "id": "p7",
+      "sector": "UNASSIGNED",
+      "dx": -0.005102350654588861,
+      "dy": 0.001362242839855199,
+      "error": 0.005281068808216774,
+      "predicted": {
+        "x": 22.814822646993516,
+        "y": 8.574621181929
+      },
+      "target": {
+        "x": 22.819924997648105,
+        "y": 8.573258939089145
+      }
+    },
+    {
+      "id": "p8",
+      "sector": "UNASSIGNED",
+      "dx": 0.0015175840698233856,
+      "dy": -0.002978657083135161,
+      "error": 0.0033429716462891183,
+      "predicted": {
+        "x": 19.02677678707503,
+        "y": 11.389597581441882
+      },
+      "target": {
+        "x": 19.025259203005206,
+        "y": 11.392576238525017
+      }
+    },
+    {
+      "id": "p9",
+      "sector": "UNASSIGNED",
+      "dx": -0.0019869815541451175,
+      "dy": 0.005307161978803432,
+      "error": 0.005666927206676446,
+      "predicted": {
+        "x": 14.586839742320542,
+        "y": 3.3408797111703317
+      },
+      "target": {
+        "x": 14.588826723874687,
+        "y": 3.3355725491915282
+      }
+    }
+  ],
+  "threshold_profile_id": "threshold.historical_plan_similarity.v1",
+  "passed": true,
+  "authority_effect": false,
+  "guard": "Synthetic benchmark validates similarity-fit and holdout logic only. It provides zero archaeological geometry authority."
+}

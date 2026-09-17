@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "codename": "TRANSITION GATE + RESIDUAL FIELD CONTRACT",
+  "transition": "TO_FIRST_ARCHAEOLOGICAL_FIT",
+  "state": "ARMED_NOT_PROMOTED",
+  "prerequisites": {
+    "remote_plate_vi_witness": true,
+    "exact_page_305": true,
+    "printed_scale_1_200": true,
+    "local_checksum_bound_pdf": false,
+    "local_checksum_bound_render": false,
+    "frozen_real_landmarks": false,
+    "archaeological_fit": false
+  },
+  "promotion_rule": "No archaeological metric authority until local PDF SHA-256, local page-305 render SHA-256, visual confirmation, frozen controls/holdouts, unchanged similarity fit, and holdout gate all pass.",
+  "residual_field_on_fit": {
+    "preserve_all_holdout_residual_vectors": true,
+    "no_automatic_outlier_removal": true,
+    "classify_only_after_fit": [
+      "uniform_scale",
+      "rotation",
+      "translation",
+      "scan_distortion_candidate",
+      "localized_reconstruction_disagreement",
+      "unresolved"
+    ],
+    "preregistered_protocol": "public/model/residual_field/protocol.json",
+    "constraint_hierarchy": "public/model/residual_field/constraint_hierarchy.json"
+  },
+  "authority": {
+    "registered_plans": 0,
+    "metric_wall_polygons": 0,
+    "metric_visibility_rays": 0
+  }
+}

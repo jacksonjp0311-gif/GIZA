@@ -1,0 +1,53 @@
+{
+  "version": "0.10.7",
+  "codename": "PLAN CONCORDANCE",
+  "phase": "PLAN_CONCORDANCE",
+  "generated_at": "2026-09-13T22:45:43.022Z",
+  "canonical_geometry_changed": false,
+  "counts": {
+    "facts": 14,
+    "strong": 6,
+    "conflict_or_interpretive": 2,
+    "source_families": 10
+  },
+  "invariants": [
+    "agreement is not probability",
+    "dependent reconstructions are not independent confirmations",
+    "disagreement remains visible",
+    "concordance has zero geometry-write authority"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/plan_concordance/facts.json",
+      "sha256": "75e533a6620b83897168407133370d59a65aff4a45f4adad8a77d9fe4f13a7d2",
+      "bytes": 7784
+    },
+    {
+      "path": "public/model/plan_concordance/matrix.json",
+      "sha256": "021aa20d33b389007a8e05c4a3511e4d1c1d71025cbbb7bd204bcc765a938edc",
+      "bytes": 21883
+    },
+    {
+      "path": "public/model/plan_concordance/manifest.json",
+      "sha256": "c377f399f00a70e3b178653b1e6b880f05b28b38c3caf7ad1a4e6d9828fceaf2",
+      "bytes": 1057
+    },
+    {
+      "path": "scripts/plan_concordance/build.mjs",
+      "sha256": "0631245a6441fd5906482cbe2b8f433ea87d819eb9c7c9cf7af2e04725d9adc5",
+      "bytes": 2751
+    },
+    {
+      "path": "scripts/plan_concordance/validate.mjs",
+      "sha256": "bce50436d307780615bd7497fdb310ee340e51a1293e87b49f10f03c7b1e9999",
+      "bytes": 1499
+    },
+    {
+      "path": "docs/PLAN_CONCORDANCE.md",
+      "sha256": "d9ff2a1cf3e78de2a52ee9339f332e11e93ec8dcedff48789123c90628571f7a",
+      "bytes": 2599
+    }
+  ],
+  "release_version": "0.10.12",
+  "sealed_at": "2026-09-17T10:46:21.098Z"
+}

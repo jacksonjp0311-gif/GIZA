@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "receipts": [],
+  "rule": "A transform receipt is mandatory before any geographic/survey coordinate is used in the local engineering frame."
+}

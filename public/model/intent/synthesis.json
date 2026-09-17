@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "generated_by": "scripts/intent/evaluate.mjs",
+  "policy": "Evidence balance and coverage are triage indices only. Historical intent status remains source- and review-governed.",
+  "results": [
+    {
+      "hypothesis_id": "intent.royal_mortuary_transition",
+      "label": "Royal mortuary transformation",
+      "prior_status": "STRONGLY_SUPPORTED",
+      "support_weight": 1.9,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 1,
+      "coverage_index": 0.475,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.perpetual_royal_cult",
+      "label": "Perpetual royal cult maintenance",
+      "prior_status": "STRONGLY_SUPPORTED",
+      "support_weight": 2.1,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 1,
+      "coverage_index": 0.525,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.cosmic_order_solar_kingship",
+      "label": "Cosmic-order / solar kingship expression",
+      "prior_status": "SUPPORTED_CONTEXTUAL",
+      "support_weight": 1.4,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0.55,
+      "evidence_balance_index": 0.836,
+      "coverage_index": 0.487,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.state_integration_legitimacy",
+      "label": "State integration and royal legitimacy",
+      "prior_status": "SUPPORTED_CONTEXTUAL",
+      "support_weight": 1.25,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 1,
+      "coverage_index": 0.313,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.ritual_landscape_journey",
+      "label": "Staged ritual landscape",
+      "prior_status": "SUPPORTED_ARCHITECTURALLY",
+      "support_weight": 2.3,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 1,
+      "coverage_index": 0.575,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.future_audience_message",
+      "label": "Distant-future encoded message",
+      "prior_status": "NOT_ESTABLISHED",
+      "support_weight": 0.15,
+      "limitation_weight": 0,
+      "missing_expected_weight": 0.9,
+      "evidence_balance_index": 0.25,
+      "coverage_index": 0.263,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.machine_or_power_system",
+      "label": "Machine / power-system function",
+      "prior_status": "NOT_SUPPORTED",
+      "support_weight": 0,
+      "limitation_weight": 1.5,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 0,
+      "coverage_index": 0.3,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    },
+    {
+      "hypothesis_id": "intent.advanced_computation",
+      "label": "Advanced computational technology",
+      "prior_status": "NO_DIRECT_EVIDENCE",
+      "support_weight": 0.1,
+      "limitation_weight": 1,
+      "missing_expected_weight": 0,
+      "evidence_balance_index": 0.091,
+      "coverage_index": 0.275,
+      "interpretation_guard": "Indices are triage metrics, not probabilities or recovered ancient intent."
+    }
+  ]
+}

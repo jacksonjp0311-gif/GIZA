@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "ROOM GRAPH",
+  "purpose": "Resolve Khafre from monument-scale narrative into source-addressed rooms, thresholds, movement constraints, visibility states and findspot caveats.",
+  "counts": {
+    "spaces": 24,
+    "thresholds": 21,
+    "complex_zones": 4,
+    "visibility_constraints": 3,
+    "movement_constraints": 3,
+    "findspot_links": 3
+  },
+  "truth_rules": [
+    "room coordinates are schematic UI coordinates",
+    "topology does not prove ritual choreography",
+    "findspot is not original placement",
+    "visibility remains qualitative until metric plan parse",
+    "no room graph element has geometry-write authority"
+  ],
+  "generated_at": "2026-09-13T14:49:47.008Z"
+}

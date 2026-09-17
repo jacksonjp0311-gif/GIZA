@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Isolated synthetic 315-page PDF; no Giza measurements and no release-state mutation",
+  "checks": [
+    "PDF import validates local PDF/page count and hashes bytes",
+    "Page 305 renders from imported PDF with source/render linkage",
+    "Explicit confirmation accepted",
+    "Profile-specific freeze with source provenance and independent scale",
+    "Fit result persisted with all holdouts",
+    "Repeat fit rejected",
+    "Refreeze rejected",
+    "Mutation without valid session token rejected"
+  ],
+  "holdout_rms": 0
+}

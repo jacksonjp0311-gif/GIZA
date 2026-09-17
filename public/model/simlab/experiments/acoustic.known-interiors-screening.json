@@ -1,0 +1,57 @@
+{
+  "experiment_id": "acoustic.known-interiors-screening",
+  "title": "Khafre known-interior acoustic screening",
+  "purpose": "Estimate low-frequency rigid-wall cavity and 1-D passage mode families for the known/derived Khafre interior, then compare spectral coincidence density against deterministic geometry perturbations.",
+  "truth_status": "CONDITIONAL_DERIVED_GEOMETRY",
+  "atmosphere": {
+    "temperature_c": 20,
+    "relative_humidity_percent": null,
+    "pressure_pa": null,
+    "note": "Dry-air first-order sound speed only. Humidity and pressure are deliberately unresolved in v0.9.2."
+  },
+  "frequency": {
+    "min_hz": 1,
+    "max_hz": 150,
+    "step_hz": 0.25,
+    "max_mode_order": 8
+  },
+  "loss_model": {
+    "kind": "SCREENING_Q",
+    "q_screening": 12,
+    "warning": "Q=12 is a visualization/screening parameter, not a measured Khafre reverberation value."
+  },
+  "response": {
+    "first_modes_per_component": 8,
+    "peak_count": 12,
+    "min_peak_separation_hz": 0.75
+  },
+  "coincidence": {
+    "firstModes": 8,
+    "toleranceHz": 0.35,
+    "minComponents": 3
+  },
+  "controls": {
+    "random_scenarios": 200,
+    "perturb_fraction": 0.05,
+    "seed": 49382,
+    "families": [
+      "independent_dimension_perturbation",
+      "constraint_preserving_perturbation"
+    ]
+  },
+  "output_modes_per_component": 12,
+  "components": [
+    {"id":"burial_chamber","part_id":"part.burial.chamber","model":"CAVITY_BOX","weight":1.4,"truth_note":"Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen."},
+    {"id":"lower_chamber","part_id":"part.lower.chamber","model":"CAVITY_BOX","weight":1.0,"truth_note":"Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact."},
+    {"id":"upper_entrance_existing","part_id":"part.upper.entrance.existing","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.75,"truth_note":"Surviving upper entrance centerline and measured clear section."},
+    {"id":"upper_horizontal_kj","part_id":"part.upper.horizontal.kj","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.55,"truth_note":"Known upper horizontal segment."},
+    {"id":"upper_horizontal_jg","part_id":"part.upper.horizontal.jg","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.7,"truth_note":"Known upper horizontal segment."},
+    {"id":"upper_horizontal_gh","part_id":"part.upper.horizontal.gh","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":1.0,"truth_note":"Main upper horizontal route to burial chamber."},
+    {"id":"lower_entrance_existing","part_id":"part.lower.entrance.existing","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.75,"truth_note":"Surviving lower entrance centerline."},
+    {"id":"lower_horizontal_bc","part_id":"part.lower.horizontal.bc","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.6,"truth_note":"Known lower horizontal segment."},
+    {"id":"lower_horizontal_ce","part_id":"part.lower.horizontal.ce","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.6,"truth_note":"Known lower horizontal segment."},
+    {"id":"connecting_ef","part_id":"part.lower.connect.ef","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.65,"truth_note":"Known connecting route."},
+    {"id":"connecting_fg","part_id":"part.lower.connect.fg","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.65,"truth_note":"Known connecting route."},
+    {"id":"lower_branch_cd","part_id":"part.lower.branch.cd","model":"DUCT_1D","boundary":"OPEN_OPEN","weight":0.5,"truth_note":"Branch connecting the lower route to the subsidiary chamber."}
+  ]
+}

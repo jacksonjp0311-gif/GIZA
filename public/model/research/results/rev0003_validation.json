@@ -1,0 +1,77 @@
+{
+  "revision": "rev.0003",
+  "errors": [],
+  "warnings": [
+    "UNRESOLVED lower_passage.clear_height: Not yet extracted from a primary metric table; rev.0003 uses 1.201166 m display envelope only.",
+    "UNRESOLVED lower_chamber.clear_height: Primary-source vertical dimension not yet robustly extracted; render height 2.40 m is display-only.",
+    "UNRESOLVED lower_portcullis.dimensions_and_exact_position: Existence documented by Petrie; current geometry is an ASSUMED visible placeholder.",
+    "UNRESOLVED passage_axis.azimuth_to_world_x_drift: Petrie/Smyth azimuth retained; sign/frame reconciliation with local chamber placement deferred to joint fit rather than forcing false precision.",
+    "UNRESOLVED current_eroded_outer_surface: No photogrammetric/current-surface mesh was ingested; main pyramid is original idealized survey envelope."
+  ],
+  "counts": {
+    "parts": 56,
+    "assemblies": 9,
+    "interfaces": 42,
+    "datums": 14,
+    "measurements": 127,
+    "unverified_claim_parts": 31
+  },
+  "segment_residuals": {
+    "AB": {
+      "computed_m": 34.9386734149996,
+      "table_I_m": 34.94,
+      "residual_m": -0.0013265850003989499
+    },
+    "BC": {
+      "computed_m": 7.8799999999999955,
+      "table_I_m": 7.88,
+      "residual_m": -4.440892098500626e-15
+    },
+    "CE": {
+      "computed_m": 7.88000000000001,
+      "table_I_m": 7.88,
+      "residual_m": 9.769962616701378e-15
+    },
+    "EF": {
+      "computed_m": 14.652593627068208,
+      "table_I_m": 14.65,
+      "residual_m": 0.002593627068208093
+    },
+    "FG": {
+      "computed_m": 9.68593309908756,
+      "table_I_m": 9.69,
+      "residual_m": -0.004066900912439664
+    },
+    "GH": {
+      "computed_m": 39.37,
+      "table_I_m": 39.37,
+      "residual_m": 0.0
+    },
+    "GI": {
+      "computed_m": 41.86000000000001,
+      "table_I_m": 41.86,
+      "residual_m": 7.105427357601002e-15
+    },
+    "GJ": {
+      "computed_m": 16.019999999999996,
+      "table_I_m": 16.02,
+      "residual_m": -3.552713678800501e-15
+    },
+    "JK": {
+      "computed_m": 2.579999999999991,
+      "table_I_m": 2.58,
+      "residual_m": -8.881784197001252e-15
+    },
+    "KL": {
+      "computed_m": 36.9533124360997,
+      "table_I_m": 36.95,
+      "residual_m": 0.0033124360996978908
+    },
+    "CD": {
+      "computed_m": 6.709403848331087,
+      "table_I_m": 6.71,
+      "residual_m": -0.0005961516689128032
+    }
+  },
+  "status": "PASS"
+}

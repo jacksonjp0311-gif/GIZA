@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "codename": "SOURCE-BYTE CUSTODY HANDOFF",
+  "purpose": "Advance plan evidence from catalog identity to checksum-bound registration only when legal local bytes, scale/frame metadata and independent residual checks exist.",
+  "counts": {
+    "candidates": 4,
+    "locators": 11,
+    "registration_jobs": 6,
+    "local_cached": 0,
+    "raw_byte_verified": 0,
+    "rights_blocked": 1,
+    "item_uri_unresolved": 1,
+    "remote_identity_receipts": 4,
+    "acquisition_attempts": 4
+  },
+  "truth_rules": [
+    "remote URL is not source-byte custody",
+    "source bytes require local path + computed SHA-256",
+    "rights gates precede acquisition and registration",
+    "plate scale is not a coordinate frame",
+    "registration requires control and holdout residuals",
+    "no job may promote geometry automatically",
+    "failed network transfer is recorded as an acquisition failure, never as missing source evidence",
+    "remote page rendering is not original-byte custody",
+    "remote plate scale may support acquisition/readiness metadata but not pixel registration",
+    "provider-displayed file metadata is a remote fingerprint, not a cryptographic checksum",
+    "local import must compute SHA-256 from the exact bytes actually received",
+    "Plate VI pixel landmarks remain null until a checksum-bound local render exists",
+    "landmark roles and coordinates freeze before the first archaeological fit"
+  ],
+  "generated_at": "2026-09-15T05:15:00Z"
+}

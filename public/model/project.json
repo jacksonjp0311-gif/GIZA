@@ -1,0 +1,25 @@
+{
+  "id": "project.giza-khafre-reverse-engineering",
+  "name": "Giza / Khafre Reverse Engineering",
+  "description": "ARCHEON Model 02 rev.0003 \u2014 survey-tight, evidence-separated Khafre reconstruction. Petrie dimensions and Legon passage centerlines drive the known model; controversial deep geometry remains isolated UNVERIFIED.",
+  "revision_id": "rev.0003",
+  "branch": "main",
+  "kernel": "primitive",
+  "domain": "archaeology_reverse_engineering",
+  "provenance": {
+    "class": "GENERATED",
+    "created_by": "archeon.model02",
+    "reason": "rev.0003 canonical project folder; intended to drop into ARCHEON projects/ without modifying the ARCHEON engine.",
+    "requirement_ids": [],
+    "agent_id": "architect",
+    "tools": [
+      "designir",
+      "stl",
+      "survey_reconstruction"
+    ],
+    "evidence_ids": [],
+    "revision_id": "rev.0003",
+    "user_approved": true
+  },
+  "fidelity": "ENGINEERING"
+}

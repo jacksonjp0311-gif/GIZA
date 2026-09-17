@@ -1,0 +1,5 @@
+import fs from 'node:fs'; import crypto from 'node:crypto';
+const files=['public/model/plan_parser/manifest.json','public/model/plan_parser/plan_sources.json','public/model/plan_parser/extractions.json','public/model/plan_parser/conflicts.json','docs/PRIMARY_PLAN_PARSER.md'];
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'); const m=JSON.parse(fs.readFileSync(files[0]));
+const out={version:'0.10.7',codename:'PRIMARY PLAN PARSER',phase:'PRIMARY_PLAN_PARSER',generated_at:new Date().toISOString(),canonical_geometry_changed:false,counts:m.counts,invariants:['remote plan text is not source-byte custody','plan scale metadata is not coordinate extraction','reconstruction conflicts remain explicit','metric promotion requires checksum + parser + frame + residual receipts'],artifacts:files.map(path=>({path,sha256:hash(path)}))};
+fs.writeFileSync('PRIMARY_PLAN_PARSER_MANIFEST.json',JSON.stringify(out,null,2)+'\n');console.log(`PRIMARY PLAN PARSER manifest extractions=${m.counts.extractions}`);

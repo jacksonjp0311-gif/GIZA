@@ -1,0 +1,147 @@
+{
+  "requirements": [
+    {
+      "id": "req.truth",
+      "text": "Every geometry field used in Model 02 shall be traceable to MEASURED/SOURCE, DERIVED, ASSUMED, or UNVERIFIED evidence state.",
+      "quantity": null,
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "acceptance": "Field provenance ledger contains every nontrivial dimension/placement assumption.",
+      "satisfied": true,
+      "evidence": [
+        "ev.petrie.surface",
+        "ev.petrie.interior",
+        "ev.legon.passages"
+      ],
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "rev.0003 field-provenance audit passes.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.rev0003.validation"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "req.explode",
+      "text": "Surface, upper route, lower route, burial system, and each deep-claim group shall be independently explodable in ARCHEON.",
+      "quantity": "assemblies",
+      "operator": ">=",
+      "value": 8,
+      "unit": "count",
+      "acceptance": "Distinct assembly parents plus per-part explosion vectors/stages.",
+      "satisfied": true,
+      "evidence": [
+        "ev.rev0003.validation"
+      ],
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "Eight child assemblies under root; all parts have explosion metadata.",
+        "requirement_ids": [
+          "req.explode"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.rev0003.validation"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "req.survey",
+      "text": "Known Khafre passage centerlines shall use published field measurements/computed survey nodes rather than freehand placement wherever data are available.",
+      "quantity": null,
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "acceptance": "A-L node ledger and segment lengths match Legon Table I/II within numerical rounding.",
+      "satisfied": true,
+      "evidence": [
+        "ev.legon.passages",
+        "ev.rev0003.validation"
+      ],
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "rev.0003 reconstructs the passage graph from published A-L coordinates.",
+        "requirement_ids": [
+          "req.survey"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.rev0003.validation"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "req.claim-isolation",
+      "text": "Controversial deep-shaft/helix geometry shall never be promoted into the measured Khafre assemblies.",
+      "quantity": null,
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "acceptance": "Every deep/upper-claim part has UNVERIFIED provenance and lives only in claim assemblies.",
+      "satisfied": true,
+      "evidence": [
+        "ev.rev0003.validation"
+      ],
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "Claim geometry remains isolated.",
+        "requirement_ids": [
+          "req.claim-isolation"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.rev0003.validation"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "req.no-false-precision",
+      "text": "Unresolved historical dimensions shall remain explicit assumptions/placeholders rather than silently inferred.",
+      "quantity": null,
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "acceptance": "Validation report enumerates unresolved lower chamber height, lower portcullis dimensions, and passage-axis 3D azimuth-frame reconciliation.",
+      "satisfied": true,
+      "evidence": [
+        "ev.rev0003.validation"
+      ],
+      "provenance": {
+        "class": "VALIDATED",
+        "created_by": "archeon.model02",
+        "reason": "Unresolved dimensions listed and field provenance marks display-only values.",
+        "requirement_ids": [
+          "req.no-false-precision"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.rev0003.validation"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ]
+}

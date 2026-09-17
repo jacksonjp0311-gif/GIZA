@@ -1,0 +1,24 @@
+{
+  "version": "0.9.2",
+  "sets": [
+    {
+      "id": "material.gravity.screening.v1",
+      "purpose": "First-order density-contrast screening",
+      "rock_density_kg_m3": 2600,
+      "air_density_kg_m3": 0,
+      "contrast_kg_m3": -2600,
+      "status": "ASSUMED_MODEL_INPUT",
+      "warning": "This is not a spatially measured Giza density model. Replace with geology- and material-resolved density data before survey design or inference."
+    },
+    {
+      "id": "material.acoustic.screening.v1",
+      "purpose": "First-order air/cavity acoustic screening",
+      "air_temperature_c": 20,
+      "sound_speed_model": "331.3 + 0.606*T_C",
+      "boundary_model": "RIGID_WALL_SCREENING",
+      "q_screening": 12,
+      "status": "ASSUMED_MODEL_INPUT",
+      "warning": "Q, wall losses, humidity and pressure are not measured Khafre acoustic properties. This set is for analytical screening and visualization only."
+    }
+  ]
+}

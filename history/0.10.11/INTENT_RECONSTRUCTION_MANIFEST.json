@@ -1,0 +1,56 @@
+{
+  "version": "0.10.6",
+  "codename": "SOURCE-BYTE REGISTRATION + METRIC VIEW LAB",
+  "phase": "INTENT_RECONSTRUCTION_METRIC_GATED",
+  "generated_at": "2026-09-13T22:19:14.970731Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "hypotheses": 8,
+    "evidence_links": 25,
+    "tests": 5,
+    "source_registry_total": 73,
+    "knowledge_nodes_total": 42
+  },
+  "invariants": [
+    "intent is inferred, not observed",
+    "scores are triage indices, not probabilities",
+    "source-family independence prevents double counting",
+    "plan concordance cannot convert reconstruction agreement into historical intent",
+    "visibility topology cannot establish ritual meaning",
+    "future-message/machine/advanced-computation remain unpromoted without direct evidence",
+    "Metric readiness or visibility cannot establish ancient intent without registered geometry and independent evidence."
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/intent/manifest.json",
+      "sha256": "98387d688dfb56caeca9126249c7bdcdcec4401af55d92f7f8fee7584c900559",
+      "bytes": 1249
+    },
+    {
+      "path": "public/model/intent/hypotheses.json",
+      "sha256": "5304f5d4023e22f2c93f8e70e9b7f13bfe6b01f8dc3fac7b7af635ff4ecd44db",
+      "bytes": 5347
+    },
+    {
+      "path": "public/model/intent/evidence_links.json",
+      "sha256": "256506dcf354ddd86e18577509a7438dc02029fc1cdcfa9bed5afc9e22c6b931",
+      "bytes": 8907
+    },
+    {
+      "path": "public/model/intent/test_matrix.json",
+      "sha256": "860bb0da0dece25b1b7d68bf0be02cb48df3bd6f89729083f22d3c0bcd6c3134",
+      "bytes": 2963
+    },
+    {
+      "path": "public/model/intent/synthesis.json",
+      "sha256": "ca6737e2821f8792ec9b34e11c6190e1f39414afa5cf3bd708f2f89e2eb4ad82",
+      "bytes": 3744
+    },
+    {
+      "path": "docs/INTENT_RECONSTRUCTION.md",
+      "sha256": "15f31d32968ab43fa15b310489a3cea974fc758c7ce564ba5d30a25d1d0415ca",
+      "bytes": 6340
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "version": "0.9.3",
+  "invariant": "Every physical experiment requires at least one explicit control/null geometry or density model.",
+  "models": [
+    {
+      "id": "null.no_void",
+      "name": "No-void background",
+      "type": "DENSITY_NULL",
+      "meaning": "Set modeled cavity density contrast to zero while keeping observation geometry fixed."
+    },
+    {
+      "id": "null.terminals_removed",
+      "name": "Shafts only",
+      "type": "COMPONENT_ABLATION",
+      "meaning": "Remove both 80 m terminal volumes from the conditional deep-claim model."
+    },
+    {
+      "id": "null.shafts_removed",
+      "name": "Terminals only",
+      "type": "COMPONENT_ABLATION",
+      "meaning": "Remove all eight modeled shafts from the conditional deep-claim model."
+    },
+    {
+      "id": "null.geometry_perturb",
+      "name": "Geometry perturbation family",
+      "type": "PERTURBATION",
+      "meaning": "Reserved for deterministic depth/size/location sweeps; never treated as observations."
+    },
+    {
+      "id": "null.acoustic_independent_perturb",
+      "name": "Acoustic independent \u00b15% geometry family",
+      "type": "PERTURBATION",
+      "meaning": "Perturb component lengths/dimensions independently to test whether near-coincidences are geometry-specific."
+    },
+    {
+      "id": "null.acoustic_constraint_preserving",
+      "name": "Acoustic construction-relation preserving family",
+      "type": "PERTURBATION",
+      "meaning": "Perturb selected repeated passage relationships together so ordinary construction constraints are not destroyed by the null."
+    },
+    {
+      "id": "null.simple_reference_cavity",
+      "name": "Simple analytical reference cavity/tube",
+      "type": "ANALYTIC_REFERENCE",
+      "meaning": "Closed rectangular cavity and 1-D tube solutions used to validate the acoustic implementation."
+    },
+    {
+      "id": "null.strata.dry",
+      "name": "Dry hydraulic null",
+      "type": "HYDRAULIC_NULL",
+      "meaning": "Set connected water-column pressure to zero; prevents head calculations from implying observed flooding."
+    },
+    {
+      "id": "null.strata.density_sweep",
+      "name": "Rock-density sensitivity",
+      "type": "PARAMETER_SENSITIVITY",
+      "meaning": "Evaluate vertical overburden proxy at 2300, 2600 and 2800 kg/m\u00b3; not a posterior distribution."
+    },
+    {
+      "id": "null.strata.known_depth_reference",
+      "name": "Known lower-chamber depth reference",
+      "type": "REFERENCE_GEOMETRY",
+      "meaning": "Compare deep conditional overburden scale with the known/derived lower-chamber depth under identical rho*g*h screening."
+    }
+  ]
+}

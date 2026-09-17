@@ -1,0 +1,75 @@
+{
+  "example_only": true,
+  "truth_class": "EXAMPLE_NOT_EVIDENCE",
+  "id": "reg.example.planar",
+  "media_id": "example.media",
+  "target_id": "example.planar_surface",
+  "state": "PIXEL_CONTROLS_MARKED",
+  "solve_mode": "PLANAR_HOMOGRAPHY",
+  "plane_frame": {
+    "origin_xyz_m": [
+      0,
+      0,
+      0
+    ],
+    "x_axis_unit": [
+      1,
+      0,
+      0
+    ],
+    "y_axis_unit": [
+      0,
+      1,
+      0
+    ],
+    "source": "EXAMPLE_ONLY",
+    "uncertainty_m": 0
+  },
+  "pixel_controls": [
+    {
+      "id": "c1",
+      "image_px": [
+        100,
+        100
+      ],
+      "plane_xy_m": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "c2",
+      "image_px": [
+        900,
+        100
+      ],
+      "plane_xy_m": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "c3",
+      "image_px": [
+        900,
+        700
+      ],
+      "plane_xy_m": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "c4",
+      "image_px": [
+        100,
+        700
+      ],
+      "plane_xy_m": [
+        0,
+        3
+      ]
+    }
+  ],
+  "guard": "Synthetic format example only. Do not import into evidence registries."
+}

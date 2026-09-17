@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "id": "remote.petrie.commons",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "provider": "Wikimedia Commons",
+      "verified_on": "2026-09-13",
+      "url": "https://commons.wikimedia.org/wiki/File:The_pyramids_and_temples_of_Gizeh_(IA_cu31924012038927).pdf",
+      "reported_file_bytes": "8.87 MB",
+      "reported_pages": 315,
+      "mime": "application/pdf",
+      "rights": "PUBLIC_DOMAIN_MARK",
+      "source_identity": "Internet Archive cu31924012038927",
+      "truth_class": "REMOTE_PROVIDER_METADATA",
+      "local_byte_authority": "NONE",
+      "note": "Provider page exposes original file and states public-domain status. Remote provider metadata is not a local byte hash."
+    },
+    {
+      "id": "remote.petrie.digitalgiza",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "provider": "Digital Giza / Harvard",
+      "verified_on": "2026-09-13",
+      "url": "https://giza.fas.harvard.edu/pubdocs/551/full/",
+      "citation": "W. M. Flinders Petrie, The Pyramids and Temples of Gizeh, 1883",
+      "truth_class": "SCHOLARLY_CATALOG_IDENTITY",
+      "local_byte_authority": "NONE"
+    },
+    {
+      "id": "remote.arce.opencontext",
+      "candidate_id": "bytes.arce.khafre_valley_1_100",
+      "provider": "Open Context / ARCE / AERA",
+      "verified_on": "2026-09-13",
+      "url": "https://opencontext.org/projects/141e814a-ba2d-4560-879f-80f1afb019e9",
+      "doi": "10.6078/M7CZ356B",
+      "license": "CC BY 4.0",
+      "reported_mapping": "Detailed maps of Khafre Valley Temple at 1:100",
+      "truth_class": "PUBLISHED_ARCHIVE_METADATA",
+      "local_byte_authority": "NONE",
+      "note": "Project/archive identity and scale are verified; exact drawing item URI remains unresolved."
+    },
+    {
+      "id": "remote.petrie.petrieproject_pdf",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "provider": "The Petrie Project",
+      "verified_on": "2026-09-15",
+      "url": "https://pdfs.petrieproject.com/cu31924012038927.pdf",
+      "reported_pages": 315,
+      "plate_vi_pdf_page_1_indexed": 305,
+      "plate_vi_pdf_page_0_indexed": 304,
+      "plate_vi_title": "THE GRANITE TEMPLE OF KHAFRA, AT GIZEH",
+      "plate_vi_printed_scale": "1:200",
+      "truth_class": "REMOTE_PDF_PAGE_RENDER_VERIFIED",
+      "local_byte_authority": "NONE",
+      "note": "Web PDF rendering verifies source/page/plate identity. Original PDF bytes are not present in the release; SHA-256 remains unavailable."
+    }
+  ]
+}

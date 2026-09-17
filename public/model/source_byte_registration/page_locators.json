@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "locator_count": 11,
+  "locators": [
+    {
+      "id": "loc.petrie.plate_list",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "locator_type": "PDF_PAGE",
+      "locator": "PDF page 25 / List of Plates (Plate VI = PLAN OF THE GRANITE TEMPLE)",
+      "target": "plate inventory",
+      "status": "REMOTE_TEXT_CONFIRMED",
+      "notes": "Plate VI is plan of the Granite Temple; Plate VII contains pyramid sections."
+    },
+    {
+      "id": "loc.petrie.granite_temple_text",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "locator_type": "PDF_PAGE_RANGE",
+      "locator": "digital PDF pages ~166\u2013172",
+      "target": "Khafre lower temple/causeway description",
+      "status": "REMOTE_TEXT_CONFIRMED",
+      "notes": "Historical observations and Petrie interpretation must remain distinct."
+    },
+    {
+      "id": "loc.petrie.plate_vi",
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "locator_type": "PDF_PAGE_AND_PLATE",
+      "locator": "PDF page 305 (1-indexed; zero-index 304) \u2014 Plate VI, THE GRANITE TEMPLE OF KHAFRA, AT GIZEH",
+      "target": "Khafre Valley Temple plan",
+      "status": "REMOTE_RENDER_VERIFIED",
+      "notes": "Remote PDF render visually confirms Plate VI title, plan, dimension labels, and printed 1:200 scale. This is not local-byte custody and grants no pixel-coordinate authority.",
+      "reported_scale": "1:200"
+    },
+    {
+      "id": "loc.perring.list",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0002",
+      "target": "plate inventory",
+      "status": "REMOTE_OCR_CONFIRMED"
+    },
+    {
+      "id": "loc.perring.plate_i",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0018 \u2014 Plate I section and plan",
+      "target": "Khafre pyramid interior/base plan",
+      "status": "REMOTE_FACSIMILE_CONFIRMED"
+    },
+    {
+      "id": "loc.perring.plate_iii_text",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0005 \u2014 Plate III Belzoni chamber text",
+      "target": "burial chamber/sarcophagus construction",
+      "status": "REMOTE_OCR_CONFIRMED"
+    },
+    {
+      "id": "loc.perring.plate_chamber_scale",
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0025 \u2014 sepulchral chamber figures with scale",
+      "target": "chamber geometry crosscheck",
+      "status": "REMOTE_FACSIMILE_CONFIRMED"
+    },
+    {
+      "id": "loc.hoelscher.contents",
+      "candidate_id": "bytes.hoelscher1912.heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0017 \u2014 contents/plate list",
+      "target": "temple program and plate inventory",
+      "status": "REMOTE_OCR_CONFIRMED"
+    },
+    {
+      "id": "loc.hoelscher.gateway_hall",
+      "candidate_id": "bytes.hoelscher1912.heidelberg",
+      "locator_type": "HEIDELBERG_PAGE",
+      "locator": "#0040 \u2014 gateway pillared hall",
+      "target": "Valley Temple statuary/light environment",
+      "status": "REMOTE_OCR_CONFIRMED",
+      "notes": "H\u00f6lscher describes statue settings, polished materials and light entering from high openings; environmental reconstruction, not measured photometry."
+    },
+    {
+      "id": "loc.hoelscher.plate_iii",
+      "candidate_id": "bytes.hoelscher1912.heidelberg",
+      "locator_type": "PLATE",
+      "locator": "Plate III \u2014 Der Totentempel des Chephren",
+      "target": "Pyramid Temple overview plan",
+      "status": "RIGHTS_GATED_REMOTE_PLATE"
+    },
+    {
+      "id": "loc.arce.valley_100",
+      "candidate_id": "bytes.arce.khafre_valley_1_100",
+      "locator_type": "ARCHIVE_DRAWING_CLASS",
+      "locator": "Khafre Valley Temple detailed maps, scale 1:100",
+      "target": "metric lower-temple wall/stone geometry",
+      "status": "ARCHIVE_CLASS_CONFIRMED_ITEM_URI_PENDING"
+    }
+  ]
+}

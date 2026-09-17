@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "hard_rules": [
+    "No object is promoted by appearance alone.",
+    "No single-view photograph can directly promote a stone to MAPPED_ELEMENT.",
+    "Perspective-uncorrected photo measurements remain DERIVED estimates.",
+    "Every geometry mutation cites immutable evidence IDs and a source snapshot/hash when bytes are locally ingested.",
+    "UNVERIFIED geometry cannot become MEASURED through simulation.",
+    "Solver outputs are SIMULATED and never overwrite source/survey geometry.",
+    "A promotion creates a new revision; it does not rewrite the history of the prior model."
+  ],
+  "gates": {
+    "E0_to_E1": {
+      "requires": [
+        "licensed_or_referenceable_media",
+        "at_least_one_metric_anchor",
+        "pixel_endpoints",
+        "same_plane_assessment",
+        "uncertainty_statement"
+      ]
+    },
+    "E1_to_E2": {
+      "requires": [
+        "at_least_3_images",
+        "camera_solution",
+        "scale_anchor",
+        "reprojection_metrics",
+        "coverage_diversity_review"
+      ]
+    },
+    "E2_to_E3": {
+      "requires": [
+        "survey_or_plan_constraint",
+        "coordinate_frame_alignment",
+        "residual_report",
+        "source_locator"
+      ]
+    },
+    "E3_to_E4": {
+      "requires": [
+        "specific_element_identity",
+        "boundary_geometry",
+        "metric_scale",
+        "uncertainty",
+        "review_receipt"
+      ],
+      "recommended": [
+        "second_independent_view_or_measurement"
+      ]
+    },
+    "E4_to_E5": {
+      "requires": [
+        "independent_modality_or_team",
+        "reproduction_receipt",
+        "difference_metrics",
+        "acceptance_threshold"
+      ]
+    }
+  },
+  "provenance_mapping": {
+    "E0": [
+      "SOURCE",
+      "UNVERIFIED"
+    ],
+    "E1": [
+      "DERIVED"
+    ],
+    "E2": [
+      "DERIVED",
+      "GENERATED"
+    ],
+    "E3": [
+      "DERIVED",
+      "MEASURED"
+    ],
+    "E4": [
+      "DERIVED",
+      "MEASURED"
+    ],
+    "E5": [
+      "VALIDATED",
+      "MEASURED"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "run.gravity.example",
+  "solver_id": "solver.gravity",
+  "solver_version": "example",
+  "geometry_revision": "rev.0003",
+  "geometry_hash": "REPLACE_FROM_geometry_snapshot.json",
+  "input_hash": "REPLACE_AFTER_INPUT_FREEZE",
+  "parameters": {},
+  "controls": {"required": "null/no-void control"},
+  "outputs": {},
+  "uncertainty": {},
+  "status": "DRAFT",
+  "created_at": "example",
+  "provenance_class": "SIMULATED"
+}

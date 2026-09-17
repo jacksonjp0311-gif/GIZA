@@ -1,0 +1,44 @@
+{
+  "id": "photos",
+  "version": "0.10.7",
+  "title": "Open Photo Coverage Map",
+  "coordinate_mode": "COVERAGE_MATRIX",
+  "metric": false,
+  "guard": "Coverage is evidence availability, not georeferenced camera position. No asset is plotted geographically without a solved/QA-passed registration.",
+  "source_ids": [
+    "src.digitalgiza.khafre.photos",
+    "src.opencontext.arce_sphinx"
+  ],
+  "coverage": [
+    {
+      "target": "KHAFRE EXTERIOR",
+      "reviewed_assets": 5,
+      "registration_state": "CONTROL_CANDIDATES_READY"
+    },
+    {
+      "target": "KHAFRE INTERIOR",
+      "reviewed_assets": 4,
+      "registration_state": "CONTROL_CANDIDATES_READY"
+    },
+    {
+      "target": "CASING / MASONRY",
+      "reviewed_assets": 3,
+      "registration_state": "CONTROL_CANDIDATES_READY"
+    },
+    {
+      "target": "SPHINX / LOWER COMPLEX",
+      "reviewed_assets": 2,
+      "registration_state": "ARCHIVE_RICH / NOT_POSITION_SOLVED"
+    },
+    {
+      "target": "HISTORICAL PLANS / SECTIONS",
+      "reviewed_assets": 2,
+      "registration_state": "SOURCE_BOUND / NOT_METRIC_PROMOTED"
+    }
+  ],
+  "layers": [
+    "photos",
+    "sources",
+    "uncertainty"
+  ]
+}

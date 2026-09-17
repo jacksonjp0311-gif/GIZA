@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "statuses": [
+    {
+      "source_id": "src.biondi2022.sar",
+      "status": "RETRACTED",
+      "effective_date": "2026-08-10",
+      "authority_effect": "ZERO_METHOD_AND_GEOMETRY_AUTHORITY_IN_GIZA",
+      "status_source_id": "src.mdpi2026.sar_retraction"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "measurements": [
+    {
+      "id": "cx.court.paving.thickness",
+      "target": "khafre_pyramid_court",
+      "quantity": "white_limestone_paving_thickness",
+      "min": 0.4,
+      "max": 0.45,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.60",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.base",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "base_edge",
+      "value": 20.1,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY",
+      "warning": "Source also labels this 40 cubits; preserve source text because this equivalence merits independent audit before deriving a cubit constant."
+    },
+    {
+      "id": "cx.subpyramid.base_projection",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "base_slab_projection",
+      "value": 0.35,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.base_height",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "base_slab_height",
+      "value": 0.26,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.passage.section",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "passage_square_side",
+      "value": 1.05,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.chamber.length",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "chamber_length",
+      "value": 7.86,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.chamber.width",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "chamber_width",
+      "value": 2.63,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.subpyramid.chamber.height",
+      "target": "khafre_subsidiary_pyramid",
+      "quantity": "chamber_height",
+      "value": 2.1,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.68",
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.workers.gallery.length",
+      "target": "khafre_workers_galleries",
+      "quantity": "gallery_clear_length",
+      "native_value": 50,
+      "native_unit": "Egyptian_cubits",
+      "si_value": null,
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.70",
+      "status": "HISTORICAL_APPROX",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.workers.gallery.width",
+      "target": "khafre_workers_galleries",
+      "quantity": "gallery_clear_width",
+      "native_value": 5,
+      "native_unit": "Egyptian_cubits",
+      "si_value": null,
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.70",
+      "status": "HISTORICAL_APPROX",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.workers.wall.base",
+      "target": "khafre_workers_galleries",
+      "quantity": "longitudinal_wall_base_thickness",
+      "native_value": 3,
+      "native_unit": "Egyptian_cubits",
+      "si_value": null,
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.70",
+      "status": "HISTORICAL_APPROX",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.workers.door.width",
+      "target": "khafre_workers_galleries",
+      "quantity": "door_width",
+      "native_value": 4,
+      "native_unit": "Egyptian_cubits",
+      "si_value": null,
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.70",
+      "status": "HISTORICAL_APPROX",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    },
+    {
+      "id": "cx.workers.clear_height",
+      "target": "khafre_workers_galleries",
+      "quantity": "minimum_clear_height",
+      "value": 2.1,
+      "unit": "m",
+      "source_id": "src.hoelscher1912",
+      "source_locator": "printed p.70",
+      "status": "HISTORICAL_MINIMUM",
+      "geometry_use": "FUTURE_SCOPE_ONLY"
+    }
+  ]
+}

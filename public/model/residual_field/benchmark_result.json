@@ -1,0 +1,38 @@
+{
+  "version": "0.10.11",
+  "id": "residual.synthetic.localized_sector.v1",
+  "summary": {
+    "count": 6,
+    "rms": 0.08550633504795614,
+    "median": 0.014422205101855958,
+    "max": 0.15940200751558933,
+    "directional_coherence": 0.524664900740347,
+    "sectors": {
+      "T_HALL": {
+        "count": 2,
+        "rms": 0.013114877048604002
+      },
+      "TRANSVERSE_HALL": {
+        "count": 1,
+        "rms": 0.014212670403551895
+      },
+      "EAST_TRANSITION": {
+        "count": 1,
+        "rms": 0.1332253729587574
+      },
+      "CAUSEWAY": {
+        "count": 1,
+        "rms": 0.15940200751558933
+      },
+      "WEST_LOCULI": {
+        "count": 1,
+        "rms": 0.012806248474865698
+      }
+    },
+    "sector_rms_ratio": 12.447205583152721
+  },
+  "classification": "LOCALIZED_DISAGREEMENT_CANDIDATE",
+  "expected": "LOCALIZED_DISAGREEMENT_CANDIDATE",
+  "passed": true,
+  "authority_effect": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "PLAN CONCORDANCE + VISIBILITY LAB",
+  "purpose": "Falsifiable intent reconstruction enriched by plan concordance and topology/visibility constraints without converting agreement or access structure into historical certainty.",
+  "counts": {
+    "hypotheses": 8,
+    "evidence_links": 25,
+    "tests": 5,
+    "source_registry_total": 73,
+    "knowledge_nodes_total": 40
+  },
+  "truth_rules": [
+    "intent score is not probability",
+    "historical meaning cannot be recovered from geometry alone",
+    "contextual Old Kingdom evidence is not Khafre-specific testimony",
+    "absence of evidence is a limitation signal, not proof of impossibility",
+    "multiple linked components from one source family are not treated as independent confirmations",
+    "future-message and advanced-technology hypotheses remain testable but unestablished until direct evidence exists",
+    "no intent hypothesis can mutate geometry or evidence maturity"
+  ],
+  "entrypoints": [
+    "public/model/intent/hypotheses.json",
+    "public/model/intent/evidence_links.json",
+    "public/model/intent/test_matrix.json",
+    "public/model/intent/synthesis.json",
+    "docs/INTENT_RECONSTRUCTION.md"
+  ]
+}

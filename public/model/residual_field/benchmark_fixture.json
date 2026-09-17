@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "id": "residual.synthetic.localized_sector.v1",
+  "benchmark_class": "SYNTHETIC_DIAGNOSTIC_ONLY",
+  "residuals": [
+    {
+      "id": "h1",
+      "sector": "T_HALL",
+      "dx": 0.012,
+      "dy": -0.008
+    },
+    {
+      "id": "h2",
+      "sector": "T_HALL",
+      "dx": -0.01,
+      "dy": 0.006
+    },
+    {
+      "id": "h3",
+      "sector": "TRANSVERSE_HALL",
+      "dx": 0.009,
+      "dy": 0.011
+    },
+    {
+      "id": "h4",
+      "sector": "EAST_TRANSITION",
+      "dx": 0.105,
+      "dy": 0.082
+    },
+    {
+      "id": "h5",
+      "sector": "CAUSEWAY",
+      "dx": 0.128,
+      "dy": 0.095
+    },
+    {
+      "id": "h6",
+      "sector": "WEST_LOCULI",
+      "dx": -0.008,
+      "dy": 0.01
+    }
+  ],
+  "expected_classification": "LOCALIZED_DISAGREEMENT_CANDIDATE",
+  "authority_effect": false
+}

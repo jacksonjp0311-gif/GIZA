@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "targets": [
+    {
+      "priority": 1,
+      "id": "field.terrain",
+      "target": "part.plateau.reference",
+      "goal": "Replace flat reference plane with registered DEM context",
+      "requirements": [
+        "SRTM/Copernicus DEM bytes",
+        "CRS",
+        "vertical metadata",
+        "hash",
+        "transform receipt"
+      ],
+      "status": "READY_FOR_DESKTOP_INGEST"
+    },
+    {
+      "priority": 2,
+      "id": "field.summit_casing",
+      "target": "part.casing.granite.lower",
+      "goal": "Begin real mapped-block replacement of FORGE cells",
+      "requirements": [
+        "licensed multi-view exterior photos",
+        "feature match",
+        "camera solve",
+        "scale anchor",
+        "reprojection QA"
+      ],
+      "status": "NEEDS_MEDIA_GRAPH_EXPANSION"
+    },
+    {
+      "priority": 3,
+      "id": "field.burial_roof",
+      "target": "part.burial.gable_envelope",
+      "goal": "Resolve individual roof beams",
+      "requirements": [
+        "multi-view chamber photos",
+        "survey scale lock",
+        "beam segmentation",
+        "review receipt"
+      ],
+      "status": "NEEDS_MORE_VIEWS"
+    },
+    {
+      "priority": 4,
+      "id": "field.sarcophagus",
+      "target": "part.sarcophagus.body",
+      "goal": "Validate existing E4 mesh against modern capture",
+      "requirements": [
+        "independent modern scan or photogrammetry",
+        "difference metrics"
+      ],
+      "status": "READY_IF_CAPTURE_FOUND"
+    },
+    {
+      "priority": 5,
+      "id": "field.photo_graph",
+      "target": "khafre_interior",
+      "goal": "Expand current photo graph into reconstructable view clusters",
+      "requirements": [
+        "Commons metadata crawl",
+        "license filter",
+        "EXIF extraction",
+        "feature overlap analysis"
+      ],
+      "status": "DESKTOP_METADATA_TASK"
+    }
+  ],
+  "software_rule": "GIZA should tell the operator the next missing observation rather than merely display a confidence score."
+}

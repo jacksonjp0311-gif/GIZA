@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.6",
+  "policy": "If media bytes are cached later, preserve these attribution/licensing records beside the asset and record a content hash. Harvester must refuse files without recognized free/PD license metadata unless explicitly reviewed.",
+  "assets": [
+    {
+      "media_id": "media.commons.khafre_casing_2004",
+      "title": "Khafre casing.jpg",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 (also other listed CC BY-SA/GFDL options)",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Khafre_casing.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_casing.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Khafre_casing.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_burial_chamber_2007",
+      "title": "06 khafre chamber.jpg",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use permission as documented by Wikimedia Commons / Egypt Archive",
+      "source_page": "https://commons.wikimedia.org/wiki/File:06_khafre_chamber.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/06_khafre_chamber.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "06_khafre_chamber.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_sarcophagus_detail_2006",
+      "title": "PiramideKefren - interior - detalle 04.JPG",
+      "author": "Hispalois",
+      "license": "CC BY-SA 3.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_04.JPG",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PiramideKefren_-_interior_-_detalle_04.JPG",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "PiramideKefren-interior-sarcophagus-detail.JPG"
+    },
+    {
+      "media_id": "media.commons.khafre_granite_casing",
+      "title": "Khafre red granite casing block.jpg",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable (also older CC BY-SA/GFDL options listed)",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Khafre_red_granite_casing_block.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_red_granite_casing_block.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Khafre_red_granite_casing_block.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_exterior_geotagged",
+      "title": "Khafre's Pyramid at Giza.jpg",
+      "author": "David Evers",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Khafre%27s_Pyramid_at_Giza.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre%27s_Pyramid_at_Giza.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Khafre_exterior_geotagged.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_passage_2007",
+      "title": "04 khafre passage.jpg",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "source_page": "https://commons.wikimedia.org/wiki/File:04_khafre_passage.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/04_khafre_passage.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "04_khafre_passage.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_belzoni_2007",
+      "title": "05 khafre belzoni.jpg",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "source_page": "https://commons.wikimedia.org/wiki/File:05_khafre_belzoni.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/05_khafre_belzoni.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "05_khafre_belzoni.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_coffer_2007",
+      "title": "07 khafre coffer.jpg",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "source_page": "https://commons.wikimedia.org/wiki/File:07_khafre_coffer.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/07_khafre_coffer.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "07_khafre_coffer.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_interior_2022",
+      "title": "Interior of Khafra Pyramid 2022 02.jpg",
+      "author": "Onceinawhile",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Interior_of_Khafra_Pyramid_2022_02.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_interior_liber_2006",
+      "title": "Inside the Pyramid - Flickr - liber.jpg",
+      "author": "Ricardo Liberato",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Inside_the_Pyramid-Flickr-liber.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_section_belzoni_1821",
+      "title": "Section of the Pyramid.jpg",
+      "author": "Agostino Aglio (after Belzoni expedition)",
+      "license": "Public domain; PD-Art / PD-old",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Section_of_the_Pyramid.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Section_of_the_Pyramid.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Section_of_the_Pyramid_Belzoni_1821.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_causeway_2006",
+      "title": "Khafre's causeway.jpg",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable; GFDL/older CC BY-SA also listed",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Khafre%27s_causeway.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre%27s_causeway.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Khafres_causeway.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_exterior_cc0_2002",
+      "title": "Giza Pyramid of Khafre (9793862935).jpg",
+      "author": "Gary Todd",
+      "license": "CC0 1.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Giza_Pyramid_of_Khafre_2002_CC0.jpg"
+    },
+    {
+      "media_id": "media.commons.khafre_valley_temple_02",
+      "title": "By ovedc - Valley Temple of Khafra 02.jpg",
+      "author": "ovedc",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:By_ovedc_-_Valley_Temple_of_Khafra_02.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/By_ovedc_-_Valley_Temple_of_Khafra_02.jpg",
+      "rights_verified_on": "2026-09-12",
+      "suggested_filename": "Valley_Temple_of_Khafra_02.jpg"
+    }
+  ]
+}

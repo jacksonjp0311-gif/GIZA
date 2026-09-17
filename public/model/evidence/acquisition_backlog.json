@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "backlog": [
+    {
+      "priority": 1,
+      "id": "acq.opencontext.sphinx",
+      "source_id": "src.opencontext.arce_sphinx",
+      "goal": "Ingest open stone-by-stone Sphinx/Sphinx Temple/Khafre Valley Temple records and their URI-level provenance.",
+      "desktop_action": "Use Open Context machine-readable API; cache JSON metadata first; download media only where record license permits.",
+      "expected_gain": "E4-capable broader-complex mapped elements",
+      "size_risk": "HIGH if full media; metadata-first recommended"
+    },
+    {
+      "priority": 2,
+      "id": "acq.commons.kh_int",
+      "source_id": "src.commons.khafre.interior",
+      "goal": "Build deduplicated Khafre interior photo graph by object/viewpoint/license.",
+      "desktop_action": "Fetch Commons API metadata and originals for per-file allowed licenses; hash every asset; EXIF/camera grouping.",
+      "expected_gain": "E1/E2 passage/chamber/roof/sarcophagus photogrammetry candidates",
+      "size_risk": "LOW-MEDIUM"
+    },
+    {
+      "priority": 3,
+      "id": "acq.petrie.facsimile",
+      "source_id": "src.petrie1883",
+      "goal": "Create page-image/text locator map for every current measurement.",
+      "desktop_action": "Cache public-domain page images or OCR with exact page/section hash where legally available.",
+      "expected_gain": "Better traceability, no geometry promotion by itself",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 4,
+      "id": "acq.hoelscher.audit",
+      "source_id": "src.hoelscher1912",
+      "goal": "Audit complex-level measurements and plans against OCR/facsimile.",
+      "desktop_action": "Reference Heidelberg IIIF/pages; do not redistribute In-Copyright page images unless rights permit. Store locators and manually transcribed numeric facts.",
+      "expected_gain": "Complex expansion and independent historical crosscheck",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 5,
+      "id": "acq.digitalgiza.mr",
+      "source_id": "src.digitalgiza.home",
+      "goal": "Audit Khafre plan/section records (005/008/009/013/014) and bibliography.",
+      "desktop_action": "Store record IDs/URLs and derived annotations; do not bundle images unless record-level rights explicitly allow.",
+      "expected_gain": "Topology/plan crosschecks",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 6,
+      "id": "acq.terrain.srtm",
+      "source_id": "src.nasa.srtmgl1v003",
+      "goal": "Replace flat plateau context with georeferenced terrain.",
+      "desktop_action": "Download Giza tile, preserve CRS/vertical datum, crop, generate local mesh + transform receipt.",
+      "expected_gain": "E3_CONTEXT terrain",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 7,
+      "id": "acq.terrain.copdem",
+      "source_id": "src.copernicus.dem",
+      "goal": "Crosscheck SRTM with GLO-30/90 surface model.",
+      "desktop_action": "Check current CDSE access eligibility/service; cache product metadata and local transform.",
+      "expected_gain": "terrain crosscheck",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 8,
+      "id": "acq.scidep.request",
+      "source_id": "src.scidep2025",
+      "goal": "Obtain real Khafre muography supporting data if collaboration grants access.",
+      "desktop_action": "Prepare a polite data request referencing DOI and desired machine-readable products; quarantine received data and preserve terms.",
+      "expected_gain": "Potential future E5 density validation",
+      "size_risk": "UNKNOWN"
+    },
+    {
+      "priority": 9,
+      "id": "acq.materials",
+      "source_id": "src.npj2020.materials",
+      "goal": "Populate solver priors for backing limestone and mortar.",
+      "desktop_action": "Use sample ranges with uncertainty distributions; never apply one mean uniformly without sensitivity analysis.",
+      "expected_gain": "Geomechanics/acoustic prior realism",
+      "size_risk": "NONE"
+    },
+    {
+      "priority": 10,
+      "id": "acq.smithsonian",
+      "source_id": "src.smithsonian.elisofon.khafre",
+      "goal": "Reference historical casing/complex condition imagery.",
+      "desktop_action": "Use IIIF metadata/viewer as reference; no redistribution without permission.",
+      "expected_gain": "historical visual context",
+      "size_risk": "NONE"
+    },
+    {
+      "priority": 1,
+      "id": "acq.room.arce_valley_plan",
+      "source_id": "src.opencontext.arce_sphinx",
+      "goal": "Acquire checksum-bound 1:100 Khafre Valley Temple plan/drawing records from the ARCE Sphinx Project archive.",
+      "desktop_action": "Resolve Open Context/Zenodo item URIs, cache legal source bytes, hash each file, retain scale/datum metadata, and parse linework only after receipt.",
+      "expected_gain": "Room-level Valley Temple metric control and threshold geometry",
+      "size_risk": "MEDIUM"
+    },
+    {
+      "priority": 2,
+      "id": "acq.room.hoelscher_plateIII",
+      "source_id": "src.hoelscher1912",
+      "goal": "Acquire a legally usable source representation of Hölscher Plate III (Khafre mortuary-temple overview plan) or manually transcribe plan control with page/plate locator.",
+      "desktop_action": "Do not bundle Heidelberg facsimile by default; obtain licensed/public-domain scan or create a measurement transcription with explicit source locator and uncertainty.",
+      "expected_gain": "Pyramid Temple room topology and dimensions",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 3,
+      "id": "acq.room.hoelscher_plateX",
+      "source_id": "src.hoelscher1912",
+      "goal": "Acquire/transcribe Hölscher longitudinal causeway and Valley Temple entrance section (Plate X).",
+      "desktop_action": "Preserve historical measurement context; reconcile against modern survey before geometry promotion.",
+      "expected_gain": "Causeway slope, elevation and entrance-section constraints",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 4,
+      "id": "acq.room.perring_second_pyramid_plans",
+      "source_id": "src.perring1840.khafre",
+      "goal": "Acquire checksum-bound public-domain Perring Volume II plates I-IV for the Second Pyramid.",
+      "desktop_action": "Cache a public-domain scan, hash it, parse plate geometry and compare to Petrie/M&R before any canonical update.",
+      "expected_gain": "Interior passages/chambers room graph and historical plan crosscheck",
+      "size_risk": "LOW"
+    },
+    {
+      "priority": 5,
+      "id": "acq.room.mr1966_plates11_13",
+      "source_id": "src.mr1966.plate013",
+      "goal": "Obtain legal access to Maragioglio & Rinaldi Khafre plates 11-13 at sufficient resolution for plan cross-checking.",
+      "desktop_action": "Respect rights restrictions; use measurements as reference-only until rights and source bytes are resolved.",
+      "expected_gain": "Independent 20th-century plan crosscheck",
+      "size_risk": "LOW"
+    }
+  ]
+}

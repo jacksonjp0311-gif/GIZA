@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.1.0",
+  "approved_change": "2026-09-17: user requested removing the five mode tabs and moving title and surface controls to the top to free 3D space. Historical reference images retained unchanged.",
+  "contract": "GIZA_NEXUS_UI",
+  "product_version": "0.10.7",
+  "baseline": {
+    "path": "docs/design/APPROVED-UI-TARGET.png",
+    "sha256": "500b514d21a3dcbc040c934f794aec9adc48b0584ddfff9ab6d0a5dd4abac3a3",
+    "width_px": 1672,
+    "height_px": 941,
+    "role": "canonical visual intent; not a runtime screenshot"
+  },
+  "runtime_reference": {
+    "path": "docs/design/REFERENCE-RUNTIME-v0.9.2.png",
+    "sha256": "d2f92d8ca18cc3cdb5e26d893b2a66a1609a71c2bfe470ea091eb685c3bc138c",
+    "width_px": 1600,
+    "height_px": 960,
+    "role": "last source-faithful runtime-style reference before UI restore"
+  },
+  "desktop_shell": {
+    "app_rows": "76px minmax(0,1fr) 28px",
+    "top_columns": "minmax(280px,1fr) auto auto",
+    "workspace_columns": "252px minmax(0,1fr) 410px",
+    "workspace_gap_px": 5,
+    "inspector_rows": "auto minmax(0,1fr) 112px 126px",
+    "inspector_tabs": "4 columns x 2 rows",
+    "inspector_overlap_allowed": false,
+    "viewport_priority": "central dominant",
+    "quick_views_location": "below central viewport"
+  },
+  "navigation": [
+    "3D MODEL",
+    "MAP ATLAS",
+    "REGISTRATION"
+  ],
+  "brand": {
+    "primary": "GIZA NEXUS",
+    "tagline": "CINEMATIC SPATIAL REVERSE-ENGINEERING WORKSTATION",
+    "product_identity_must_not_be_replaced_by_feature_codename": true
+  },
+  "locked_semantics": {
+    "cyan": "information/navigation/verified workstation state",
+    "amber": "analysis/caution/active technical emphasis",
+    "green": "runtime readiness/status",
+    "red": "unverified/critical warning only",
+    "simulation_guard_required": true
+  },
+  "extension_rules": [
+    "New capabilities may add inspector content or tabs without moving the workstation shell.",
+    "New solver names may not replace GIZA NEXUS as the primary brand.",
+    "User-approved model-first navigation has three surface buttons; analysis and simulation remain in the inspector.",
+    "FINDINGS and solver panels must scroll inside the fixed inspector instead of changing dock geometry.",
+    "If a runtime screenshot cannot be captured, state that explicitly; never substitute a fabricated design freeze and label it runtime truth.",
+    "Central viewport content may switch between 3-D MODEL and internally scrollable MAP ATLAS without changing shell geometry.",
+    "ACTION GRAPH may add an internal atlas view and action layer but may not alter global navigation, inspector dock, or central viewport bounds.",
+    "VISIBILITY LAB may add a tenth internal atlas view and visibility layer but may not change central viewport bounds, global navigation, or inspector dock.",
+    "METRIC READINESS may add an internal atlas view but may not alter global shell geometry; readiness bars are workflow state only."
+  ],
+  "breakpoints": {
+    "compact_desktop_px": 1450,
+    "narrow_desktop_px": 1200,
+    "hide_inspector_below_px": 1020
+  },
+  "design_baseline_version": "0.9.3.1-UI-RESTORE"
+}

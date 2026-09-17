@@ -1,0 +1,410 @@
+{
+  "features": [],
+  "datums": [
+    {
+      "id": "datum.survey.a",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        116.96122999999999,
+        -0.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_A",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node A from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.b",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        84.49122999999999,
+        -12.9
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_B",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node B from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.c",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        76.61122999999999,
+        -12.9
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_C",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node C from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.d",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        76.61122999999999,
+        -15.34
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_D",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node D from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.e",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        68.73122999999998,
+        -12.9
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_E",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node E from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.f",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        55.24122999999999,
+        -7.18
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_F",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node F from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.g",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        46.26122999999999,
+        -3.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_G",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node G from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.h",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        6.891229999999993,
+        -3.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_H",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node H from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.i",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        4.401229999999984,
+        -3.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_I",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node I from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.j",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        62.28122999999999,
+        -3.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_J",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node J from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.k",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        64.86122999999998,
+        -3.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_K",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node K from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.survey.l",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_node",
+      "origin_m": [
+        12.453619999999999,
+        97.94122999999999,
+        12.92
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "Legon_Table_II_node_L",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Computed survey node L from Legon Table II.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.pyramid.origin",
+      "host": "part.pyramid.khafre",
+      "kind": "world_origin",
+      "origin_m": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "semantic_role": "base_center",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Model coordinate convention; not a physical mark.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "datum.passage.axis.northface",
+      "host": "part.pyramid.khafre",
+      "kind": "survey_axis_anchor",
+      "origin_m": [
+        12.453619999999999,
+        107.63122999999999,
+        0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "semantic_role": "Petrie_axis_offset_anchor",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie 490.3 in east of north-face midpoint.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "constraints": []
+}

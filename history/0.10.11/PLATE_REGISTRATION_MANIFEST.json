@@ -1,0 +1,136 @@
+{
+  "version": "0.10.11",
+  "codename": "CHECKSUM HANDOFF + LANDMARK FREEZE",
+  "generated_at": "2026-09-15T13:39:29.695Z",
+  "canonical_geometry_changed": false,
+  "actual_registered_plans": 0,
+  "actual_metric_rays": 0,
+  "raw_petrie_bytes": 0,
+  "frozen_controls": 0,
+  "frozen_holdouts": 0,
+  "synthetic_benchmark_passed": true,
+  "invariants": [
+    "plate-local metric frame is separate from global georeferencing",
+    "holdouts and thresholds freeze before archaeological fit",
+    "synthetic benchmark has zero archaeological authority",
+    "remote provider metadata cannot replace local SHA-256",
+    "named landmarks can be planned remotely but pixel coordinates freeze only against a checksum-bound local render"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/plate_registration/manifest.json",
+      "sha256": "6ed4860f37190ff7fe46af324df0dabd3dc71c039d23dc388adae6d41008f881",
+      "bytes": 1777
+    },
+    {
+      "path": "public/model/plate_registration/preregistered_thresholds.json",
+      "sha256": "11d421c62abd69606181b9b686f1c0281cbf8da3fbc20e34ed78f19a571db4fa",
+      "bytes": 2067
+    },
+    {
+      "path": "public/model/plate_registration/frames.json",
+      "sha256": "cac36abf0b678dc4e425603ca19e697d506838940491b93c5dcf0448fa809f7c",
+      "bytes": 1142
+    },
+    {
+      "path": "public/model/plate_registration/first_plate_campaign.json",
+      "sha256": "9f073620c0619074f2d7cbccc461a96123e9119fe229041b15f9405ee37993a3",
+      "bytes": 1347
+    },
+    {
+      "path": "public/model/plate_registration/cross_source_holdout.json",
+      "sha256": "dd3dc53082e4fda1395cde07a3fffdbabcc23bc59f247661a88466ceeab3be48",
+      "bytes": 995
+    },
+    {
+      "path": "public/model/plate_registration/benchmark_result.json",
+      "sha256": "1e5b135f586755f94cb80a632531836eedc61dbc4b6c4796c5ca70ce75430147",
+      "bytes": 2182
+    },
+    {
+      "path": "public/model/plate_registration/remote_plate_witness.json",
+      "sha256": "93587a44a145fff4c036d72b08e263b453cbe7a52a5e3f3ce3a096a03e4bd419",
+      "bytes": 1399
+    },
+    {
+      "path": "public/model/plate_registration/remote_file_fingerprint.json",
+      "sha256": "3ca8000e2330232bf57ff185b9c2af95ed70bc074e0dd75ac22723e66b6e2fa8",
+      "bytes": 1312
+    },
+    {
+      "path": "public/model/plate_registration/dimension_graph.json",
+      "sha256": "47a53301eeb4a3d50502dbbc1c9a9ae7243ec63331bd6d41f81950e6e8fc6084",
+      "bytes": 8142
+    },
+    {
+      "path": "public/model/plate_registration/registration_readiness.json",
+      "sha256": "fa49a87138333a4d59e19a65d3ffaaf2f6a3715c62db8fa5b0474eeea728ab97",
+      "bytes": 1335
+    },
+    {
+      "path": "public/model/plate_registration/custody_handoff.json",
+      "sha256": "8d556cb6bd291f519417d762382060b332a1dad06e7572e67fcb05ba2fbe2136",
+      "bytes": 1165
+    },
+    {
+      "path": "public/model/plate_registration/landmark_protocol.json",
+      "sha256": "fe1141bfb4ab75be08f708db6f1dd7015b586154e138919b57b399f4fc4ebb85",
+      "bytes": 3263
+    },
+    {
+      "path": "public/model/plate_registration/landmark_input.example.json",
+      "sha256": "7d78805551802215fa128a751f638c345c2241888dcc460ec747b8aa52333c01",
+      "bytes": 637
+    },
+    {
+      "path": "scripts/plate_registration/math.mjs",
+      "sha256": "7921bc42418d8b6205da09f4b28b673ece6030e5cd578e7828c060f893b87993",
+      "bytes": 1866
+    },
+    {
+      "path": "scripts/plate_registration/benchmark.mjs",
+      "sha256": "2ab8af0e2f782dc2c6759bd146aaf7814e97b991680b4cf865d46e5733680741",
+      "bytes": 2070
+    },
+    {
+      "path": "scripts/plate_registration/render-plate-vi.mjs",
+      "sha256": "b54025fb0ee2413f29bb4cd8dbacb24299a81e5af1cd63540b1f46de6d65769e",
+      "bytes": 1708
+    },
+    {
+      "path": "scripts/plate_registration/confirm-plate-vi.mjs",
+      "sha256": "2bcb58a3e2233fea63cb62020902881826e104cdcc531a5c8bbf3003730331a9",
+      "bytes": 1143
+    },
+    {
+      "path": "scripts/plate_registration/freeze-landmarks.mjs",
+      "sha256": "240ebd0670216f18ce388a78611a968e6fe38b756b8e3f036c2362196427e29c",
+      "bytes": 3263
+    },
+    {
+      "path": "scripts/plate_registration/register-similarity.mjs",
+      "sha256": "0a3ae77f7c4812ab6c4c59cbacef7ef18f8c157c6dc3eed7418c85c08ac7fad0",
+      "bytes": 2739
+    },
+    {
+      "path": "scripts/plate_registration/validate.mjs",
+      "sha256": "31a0bd1bbb2c0ea62048cff5d9bf3630e36e2af9dfd7d49e4098cb08229a4e6e",
+      "bytes": 5068
+    },
+    {
+      "path": "docs/PLATE_REGISTRATION.md",
+      "sha256": "4940f7b688cc28c5f65872723812d4ffa3eb62e8f781f7d7f531cf3b35179303",
+      "bytes": 2872
+    },
+    {
+      "path": "docs/FIRST_PLATE_CAMPAIGN.md",
+      "sha256": "725b37ee3603ee61455ac1f53e10cb0e8ca2f9bab687e5c3887583e6fae463ce",
+      "bytes": 2668
+    },
+    {
+      "path": "docs/PLATE_VI_LANDMARK_PROTOCOL.md",
+      "sha256": "7bd1a49033bffd075306911dde24a7eaae3f73c1e075319d7457f8d126602420",
+      "bytes": 1616
+    }
+  ]
+}

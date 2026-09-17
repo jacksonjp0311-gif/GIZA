@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "codename": "CONTROL NET",
+  "purpose": "Bind published survey orientation/frame control to Registration Lab without inventing translation, elevation, pixel correspondences or real camera poses.",
+  "counts": {
+    "frames": 4,
+    "survey_constraints": 7,
+    "survey_points": 6,
+    "asset_receipts": 4,
+    "registration_links": 3,
+    "orientation_receipts": 1
+  },
+  "status": {
+    "orientation_prior": "DERIVABLE_FROM_MEASURED_TOTAL_STATION_SIDES",
+    "gpmp_translation_to_khafre_local": "UNRESOLVED",
+    "real_photo_pixel_correspondences": 0,
+    "real_camera_poses_promoted": 0,
+    "photo_derived_geometry_promotions": 0,
+    "projective_camera_benchmark": "PASS"
+  },
+  "entrypoints": [
+    "public/model/control_net/frames.json",
+    "public/model/control_net/survey_constraints.json",
+    "public/model/control_net/survey_points.json",
+    "public/model/control_net/orientation_receipts.json",
+    "public/model/control_net/quality_gates.json",
+    "public/model/control_net/registration_links.json",
+    "scripts/controlnet/derive-khafre-orientation.mjs",
+    "scripts/controlnet/projective-camera.mjs",
+    "scripts/controlnet/benchmark.mjs",
+    "scripts/controlnet/validate.mjs",
+    "docs/CONTROL_NET.md"
+  ],
+  "hard_rules": [
+    "Survey-backed orientation is a prior, not a geometry mutation.",
+    "Translation and vertical datum remain unresolved until explicit transform receipts exist.",
+    "Projective DLT is not calibrated PnP.",
+    "Real photo jobs stay unsolved until actual pixel correspondences are marked.",
+    "Published coordinate variants are preserved, not silently averaged."
+  ],
+  "generated_at": "2026-09-12T16:00:31.325Z"
+}

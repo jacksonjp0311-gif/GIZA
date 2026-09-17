@@ -1,0 +1,149 @@
+{
+  "id": "ritual",
+  "version": "0.10.7",
+  "title": "Khafre Ritual Sequence",
+  "coordinate_mode": "SCHEMATIC_PROCESSIONAL",
+  "metric": false,
+  "guard": "This map reconstructs an architectural/ritual sequence from documented components and Old Kingdom mortuary context. Sequence does not prove a unique ceremony or spoken message.",
+  "source_ids": [
+    "src.digitalgiza.royal_pyramid_complexes",
+    "src.digitalgiza.khafre_valley_temple",
+    "src.digitalgiza.khafre_pyramid_temple",
+    "src.aera.kh_monuments_unit"
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "id": "lower_approach",
+      "label": "LOWER APPROACH",
+      "role": "arrival / threshold",
+      "evidence": "CONTEXTUAL",
+      "x": 8,
+      "y": 72,
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ],
+      "action_graph_ids": [
+        "place.lower_approach",
+        "action.enter_valley_complex"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "valley_temple",
+      "label": "VALLEY TEMPLE",
+      "role": "ritual preparation / royal cult architecture",
+      "evidence": "DIRECT_ARCHITECTURE",
+      "x": 25,
+      "y": 62,
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple"
+      ],
+      "action_graph_ids": [
+        "place.valley_temple",
+        "action.encounter_royal_images"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "causeway",
+      "label": "CAUSEWAY",
+      "role": "controlled ascent and processional connection",
+      "evidence": "DIRECT_ARCHITECTURE",
+      "x": 47,
+      "y": 50,
+      "source_ids": [
+        "src.aera.kh_monuments_unit"
+      ],
+      "action_graph_ids": [
+        "action.traverse_causeway",
+        "place.causeway"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "pyramid_temple",
+      "label": "PYRAMID TEMPLE",
+      "role": "upper cult / offering complex",
+      "evidence": "DIRECT_ARCHITECTURE",
+      "x": 69,
+      "y": 38,
+      "source_ids": [
+        "src.digitalgiza.khafre_pyramid_temple"
+      ],
+      "action_graph_ids": [
+        "action.cross_royal_threshold",
+        "place.pyramid_temple_court",
+        "action.present_offerings_readings"
+      ]
+    },
+    {
+      "order": 5,
+      "id": "pyramid",
+      "label": "PYRAMID",
+      "role": "royal burial monument / transformed royal presence",
+      "evidence": "DIRECT_ARCHITECTURE",
+      "x": 88,
+      "y": 27,
+      "source_ids": [
+        "src.petrie1883"
+      ],
+      "part_id": "part.pyramid.khafre",
+      "action_graph_ids": [
+        "action.move_to_burial",
+        "place.burial_chamber"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "continuing_cult",
+      "label": "CONTINUING CULT",
+      "role": "post-burial offerings and institutional memory",
+      "evidence": "OLD_KINGDOM_CONTEXT",
+      "x": 88,
+      "y": 76,
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ],
+      "action_graph_ids": [
+        "action.maintain_cult",
+        "place.upper_cult_zone"
+      ]
+    }
+  ],
+  "sequence_edges": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "questions": [
+    "Where are access choices constrained?",
+    "Which thresholds change material, elevation or visibility?",
+    "Which stages are funerary, cultic, administrative or symbolic?",
+    "What survives as a repeated rule across royal complexes?"
+  ],
+  "layers": [
+    "monuments",
+    "ritual",
+    "sources",
+    "intent",
+    "action"
+  ]
+}

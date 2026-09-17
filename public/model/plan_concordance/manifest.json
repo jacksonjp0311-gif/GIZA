@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "PLAN CONCORDANCE",
+  "purpose": "Track which Khafre plan/room facts converge across independent source families and which remain disputed, interpretive, derivative, or byte-pending.",
+  "counts": {
+    "facts": 14,
+    "strong": 6,
+    "conflict_or_interpretive": 2,
+    "source_families": 10
+  },
+  "agreement_counts": {
+    "STRONG": 5,
+    "MODERATE": 1,
+    "SINGLE_SYNTHESIS": 2,
+    "AGREE_WITH_ROUNDING_DIFFERENCE": 1,
+    "ARCHITECTURE_STRONG_RECONSTRUCTION_DISPUTED": 1,
+    "ARCHITECTURE_STRONG_FUNCTION_INTERPRETIVE": 1,
+    "STRONG_TOPOLOGY": 1,
+    "ARCHIVE_CONFIRMED_BYTES_PENDING": 1,
+    "DEPENDENCE_IDENTIFIED": 1
+  },
+  "truth_rules": [
+    "agreement is not metric registration",
+    "source dependence does not count as independent replication",
+    "cataloged plan existence is not parsed wall geometry",
+    "architecture/function/reconstruction remain separate",
+    "concordance cannot write canonical geometry"
+  ],
+  "generated_at": "2026-09-13T14:49:47.042Z"
+}

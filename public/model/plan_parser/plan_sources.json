@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "phase": "PLAN_CONCORDANCE_VISIBILITY_HARVEST",
+  "truth_rule": "Plan availability, OCR text, and source-level descriptions do not become metric geometry until source bytes, scale, frame, and parser receipts are all present.",
+  "sources": [
+    {
+      "id": "plan.hoelscher.plateIII",
+      "source_id": "src.hoelscher1912",
+      "locator": "Plate III — Der Totentempel des Chephren (Übersichtsplan)",
+      "subject": "khafre_pyramid_temple",
+      "scale": "SOURCE_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_DIGITIZED_VIEW_NOT_CACHED",
+      "rights": "IN_COPYRIGHT_DIGITAL_REPRODUCTION",
+      "parse_state": "TEXT_AND_LAYOUT_METADATA_ONLY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.hoelscher.plateX",
+      "source_id": "src.hoelscher1912",
+      "locator": "Plate X — longitudinal causeway / northern entrance / vestibule sections",
+      "subject": "khafre_causeway_and_valley_temple",
+      "scale": "SOURCE_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_DIGITIZED_VIEW_NOT_CACHED",
+      "rights": "IN_COPYRIGHT_DIGITAL_REPRODUCTION",
+      "parse_state": "TEXT_AND_LAYOUT_METADATA_ONLY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.arce.valley.1_100",
+      "source_id": "src.opencontext.arce_sphinx",
+      "locator": "ARCE Sphinx Project archive — detailed Khafre Valley Temple map",
+      "subject": "khafre_valley_temple",
+      "scale": "1:100",
+      "custody": "REMOTE_OPEN_DATASET_NOT_CACHED",
+      "rights": "CC_BY_4_0_ITEM_URI_ATTRIBUTION_REQUIRED",
+      "parse_state": "ARCHIVE_INVENTORY_CONFIRMED_BYTES_PENDING",
+      "geometry_authority": "NONE_UNTIL_BYTES_HASHED_AND_FRAME_PARSED"
+    },
+    {
+      "id": "plan.perring.second.platesI_IV",
+      "source_id": "src.perring1840.khafre",
+      "locator": "The Pyramids of Gizeh, Vol. II, Plates I–IV",
+      "subject": "khafre_pyramid_interior",
+      "scale": "HISTORICAL_PLATE_DIMENSIONS_PRESENT",
+      "custody": "REMOTE_PUBLIC_DOMAIN_SCAN_NOT_CACHED",
+      "rights": "PUBLIC_DOMAIN_OR_NO_KNOWN_US_RESTRICTIONS",
+      "parse_state": "OCR_FACTS_EXTRACTED_IMAGE_BYTES_PENDING",
+      "geometry_authority": "NONE_EXISTING_INTERIOR_CROSSCHECK"
+    },
+    {
+      "id": "plan.mr1966.kh_plates",
+      "source_id": "src.mr1966.plate013",
+      "locator": "L’Architettura delle Piramidi Menfite V, plates 11–13",
+      "subject": "khafre_pyramid_temple_and_pyramid",
+      "scale": "PUBLISHED_PLAN",
+      "custody": "REFERENCE_ONLY_NOT_CACHED",
+      "rights": "REFERENCE_ONLY",
+      "parse_state": "CATALOG_REFERENCE_ONLY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.digitalgiza.pt3d",
+      "source_id": "src.digitalgiza.khafre_pyramid_temple",
+      "locator": "Digital Giza 3D model GPH_3D_Khafre Pyramid Temple",
+      "subject": "khafre_pyramid_temple",
+      "scale": "DIGITAL_RECONSTRUCTION",
+      "custody": "REMOTE_INTERACTIVE_MODEL",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "BIBLIOGRAPHIC_CROSSCHECK",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.digitalgiza.vt3d",
+      "source_id": "src.digitalgiza.khafre_valley_temple",
+      "locator": "Digital Giza 3D model GPH_3D_Khafre Valley Temple",
+      "subject": "khafre_valley_temple",
+      "scale": "DIGITAL_RECONSTRUCTION",
+      "custody": "REMOTE_INTERACTIVE_MODEL",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "BIBLIOGRAPHIC_CROSSCHECK",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.dg.mr1966.pt013",
+      "source_id": "src.mr1966.plate013",
+      "locator": "Digital Giza record 88326 / maragioglio-rinaldi_v_plate_013",
+      "subject": "khafre_pyramid_temple",
+      "scale": "PUBLISHED_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_CATALOG_ASSET_NOT_CACHED",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "CATALOG_ID_AND_SUBJECT_VERIFIED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.dg.mr1966.vt014",
+      "source_id": "src.mr1966.plate014",
+      "locator": "Digital Giza record 88327 / maragioglio-rinaldi_v_plate_014",
+      "subject": "khafre_valley_and_sphinx_temples",
+      "scale": "PUBLISHED_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_CATALOG_ASSET_NOT_CACHED",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "CATALOG_ID_AND_SUBJECT_VERIFIED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.dg.mr1966.vt015",
+      "source_id": "src.mr1966.plate015",
+      "locator": "Digital Giza record 88328 / maragioglio-rinaldi_v_plate_015",
+      "subject": "khafre_valley_temple",
+      "scale": "PUBLISHED_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_CATALOG_ASSET_NOT_CACHED",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "CATALOG_ID_AND_SUBJECT_VERIFIED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.dg.mr1966.vt014_ann",
+      "source_id": "src.mr1966.plate014",
+      "locator": "Digital Giza record 88232 / maragioglio-rinaldi_v_plate_014_ann",
+      "subject": "khafre_valley_temple",
+      "scale": "ANNOTATED_DIGITAL_CROP",
+      "custody": "REMOTE_CATALOG_ASSET_NOT_CACHED",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "MODERN_3D_TEXTURE_REFERENCE_ONLY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.dg.mr1966.pyr009",
+      "source_id": "src.mr1966.plate009",
+      "locator": "Digital Giza record 88222 / maragioglio-rinaldi_v_plate_009",
+      "subject": "khafre_pyramid_interior",
+      "scale": "PUBLISHED_PLATE_SCALE_NOT_PARSED",
+      "custody": "REMOTE_CATALOG_ASSET_NOT_CACHED",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "parse_state": "CATALOG_ID_AND_SUBJECT_VERIFIED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "plan.isac.model_source_basis",
+      "source_id": "src.isac.giza_model_sources",
+      "locator": "ISAC Giza Plateau Computer Model — architectural/topography source list",
+      "subject": "giza_plateau_model_method",
+      "scale": "MIXED / SOURCE_DEPENDENT",
+      "custody": "PUBLIC_METHOD_PAGE",
+      "rights": "REFERENCE_ONLY",
+      "parse_state": "SOURCE_LINEAGE_ONLY",
+      "geometry_authority": "NONE"
+    }
+  ]
+}

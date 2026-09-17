@@ -1,0 +1,3366 @@
+{
+  "parts": [
+    {
+      "id": "part.plateau.reference",
+      "name": "Artificially leveled plateau reference",
+      "parent": "asm.surface",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "site_reference_datum",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "hidden",
+      "spatial": {
+        "origin_m": [
+          0.0,
+          0.0,
+          -2.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 520.0,
+          "sy": 520.0,
+          "sz": 4.0
+        },
+        "assembly_stage": 1,
+        "explosion_vector": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "explosion_distance_m": 40.0,
+        "radial_group": "surface",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Display envelope for the artificially leveled site; 520 m extent is visualization, not a surveyed boundary.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.pyramid.khafre",
+      "name": "Khafre original casing envelope \u2014 Petrie mean",
+      "parent": "asm.surface",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_derived_original_envelope",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          0.0,
+          0.0,
+          71.9328
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 215.26245999999998,
+          "sy": 215.26245999999998,
+          "sz": 143.8656
+        },
+        "assembly_stage": 2,
+        "explosion_vector": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "explosion_distance_m": 150.0,
+        "radial_group": "surface",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/khafre_pyramid_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Survey-derived idealized original outer envelope; not current-surface photogrammetry.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Exterior idealized square pyramid from Petrie mean base and best slope-derived height; not current eroded surface scan.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.height.conflict"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.casing.granite.lower",
+      "name": "Lowest granite casing belt \u2014 measured SW course",
+      "parent": "asm.surface",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_lower_casing_reference",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          0.0,
+          0.0,
+          0.527304
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 215.26245999999998,
+          "sy": 215.26245999999998,
+          "sz": 1.054608
+        },
+        "assembly_stage": 3,
+        "explosion_vector": [
+          0.0,
+          -0.2,
+          0.15
+        ],
+        "explosion_distance_m": 30.0,
+        "radial_group": "surface",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/khafre_lower_granite_casing_belt.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Thin display shell. Vertical course height is measured; 0.06 m render thickness is not a historical measurement.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Display shell uses Petrie measured 41.52 in course vertical height; shell thickness is visualization only.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.entrance.reconstructed",
+      "name": "Upper entrance \u2014 lost casing extension",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "reconstructed_missing_entrance",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          96.56581292966821,
+          12.23
+        ],
+        "rpy_rad": [
+          0.4649795322411601,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.0487659999999999,
+          "sy": 3.0775783449719376,
+          "sz": 1.201166
+        },
+        "assembly_stage": 4,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "explosion_distance_m": 24.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            97.94122999999999,
+            12.92
+          ],
+          [
+            12.453619999999999,
+            95.19039585933643,
+            11.54
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Reconstructed endpoint from Legon Table I/II and note 7; this segment is not extant.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.entrance.existing",
+      "name": "Upper entrance \u2014 surviving granite passage",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_existing_entrance",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          80.0258129296682,
+          3.9949999999999997
+        ],
+        "rpy_rad": [
+          0.46167838191504185,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.0487659999999999,
+          "sy": 33.875749463637554,
+          "sz": 1.201166
+        },
+        "assembly_stage": 5,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          0.5
+        ],
+        "explosion_distance_m": 34.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            95.19039585933643,
+            11.54
+          ],
+          [
+            12.453619999999999,
+            64.86122999999998,
+            -3.55
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Existing 33.88 m segment from Legon note 7 with Petrie measured cross-section.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.roll",
+      "name": "Upper half-round roof roll",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_transition_roll",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          64.71327499999998,
+          -2.946242
+        ],
+        "rpy_rad": [
+          0.0,
+          1.5707963267948966,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 0.600583,
+          "height": 1.056386
+        },
+        "assembly_stage": 6,
+        "explosion_vector": [
+          1.0,
+          0.0,
+          0.3
+        ],
+        "explosion_distance_m": 8.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie measured transition length 11.6-11.7 in; cylinder radius is display-only envelope.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.portcullis.slab",
+      "name": "Upper granite portcullis slab",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_portcullis_envelope",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          64.06122999999998,
+          -2.647538
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.5521939999999999,
+          "sy": 0.380492,
+          "sz": 1.804924
+        },
+        "assembly_stage": 7,
+        "explosion_vector": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Width/grooves measured by Petrie; slab vertical extent remains display envelope pending plate extraction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.horizontal.kj",
+      "name": "Upper horizontal K\u2013J",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_kj",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          63.571229999999986,
+          -3.55
+        ],
+        "rpy_rad": [
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.056386,
+          "sy": 2.579999999999991,
+          "sz": 1.804924
+        },
+        "assembly_stage": 8,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            64.86122999999998,
+            -3.55
+          ],
+          [
+            12.453619999999999,
+            62.28122999999999,
+            -3.55
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I measured centerline segment; cross-section from Petrie.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.horizontal.jg",
+      "name": "Upper horizontal J\u2013G",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_jg",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          54.27122999999999,
+          -3.55
+        ],
+        "rpy_rad": [
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.056386,
+          "sy": 16.019999999999996,
+          "sz": 1.804924
+        },
+        "assembly_stage": 9,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "explosion_distance_m": 16.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            62.28122999999999,
+            -3.55
+          ],
+          [
+            12.453619999999999,
+            46.26122999999999,
+            -3.55
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I measured centerline segment; cross-section from Petrie.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.horizontal.gh",
+      "name": "Upper horizontal G\u2013H",
+      "parent": "asm.known.upper",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_gh",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          26.576229999999992,
+          -3.55
+        ],
+        "rpy_rad": [
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.056386,
+          "sy": 39.37,
+          "sz": 1.804924
+        },
+        "assembly_stage": 10,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "explosion_distance_m": 35.0,
+        "radial_group": "known.upper",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            46.26122999999999,
+            -3.55
+          ],
+          [
+            12.453619999999999,
+            6.891229999999993,
+            -3.55
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I segment to north wall of Great Chamber; cross-section from Petrie.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.entrance.reconstructed",
+      "name": "Lower entrance \u2014 reconstructed pavement extension",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "reconstructed_missing_lower_entrance",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          116.52623,
+          -0.1725
+        ],
+        "rpy_rad": [
+          0.37753019542354194,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 0.9359086493883808,
+          "sz": 1.201166
+        },
+        "assembly_stage": 11,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          -0.5
+        ],
+        "explosion_distance_m": 24.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            116.96122999999999,
+            -0.0
+          ],
+          [
+            12.453619999999999,
+            116.09123,
+            -0.345
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Reconstructed entrance A to extant sill from Legon Table II and note 7. Height reuses upper entrance clearance only as display envelope.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.entrance.existing",
+      "name": "Lower entrance \u2014 surviving rock passage",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "measured_existing_lower_entrance",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          100.29122999999998,
+          -6.6225000000000005
+        ],
+        "rpy_rad": [
+          0.37818537205075015,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 34.0027649611028,
+          "sz": 1.201166
+        },
+        "assembly_stage": 12,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          -0.4
+        ],
+        "explosion_distance_m": 34.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            116.09123,
+            -0.345
+          ],
+          [
+            12.453619999999999,
+            84.49122999999999,
+            -12.9
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Existing 34.01 m length to sill from Legon; width constrained by Petrie lower-passage observations. Height is display assumption pending M&R plate metric extraction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.horizontal.bc",
+      "name": "Lower horizontal B\u2013C",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_bc",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          80.55122999999999,
+          -12.9
+        ],
+        "rpy_rad": [
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 7.8799999999999955,
+          "sz": 1.804924
+        },
+        "assembly_stage": 13,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          -0.2
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            84.49122999999999,
+            -12.9
+          ],
+          [
+            12.453619999999999,
+            76.61122999999999,
+            -12.9
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I centerline; width constrained by Petrie lower-route measurements; height display uses raised horizontal clearance.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.horizontal.ce",
+      "name": "Lower horizontal C\u2013E",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_ce",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          72.67122999999998,
+          -12.9
+        ],
+        "rpy_rad": [
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 7.88000000000001,
+          "sz": 1.804924
+        },
+        "assembly_stage": 14,
+        "explosion_vector": [
+          0.0,
+          1.0,
+          -0.2
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            76.61122999999999,
+            -12.9
+          ],
+          [
+            12.453619999999999,
+            68.73122999999998,
+            -12.9
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I centerline; width constrained by Petrie lower-route measurements.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.turning_recess",
+      "name": "Lower-route turning recess",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "measured_turning_space",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          13.842999999999998,
+          76.61122999999999,
+          -12.092538000000001
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.7271999999999998,
+          "sy": 3.12166,
+          "sz": 1.614924
+        },
+        "assembly_stage": 15,
+        "explosion_vector": [
+          1.0,
+          0.0,
+          -0.2
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Plan dimensions from Petrie; vertical extent is a visualization approximation pending plate extraction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.branch.cd",
+      "name": "Lower chamber branch C\u2013D",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_cd",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          9.328619999999999,
+          76.61122999999999,
+          -14.120000000000001
+        ],
+        "rpy_rad": [
+          0.0,
+          2.7693894346762855,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 6.709403848331086,
+          "sy": 1.0413999999999999,
+          "sz": 1.201166
+        },
+        "assembly_stage": 16,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          -0.4
+        ],
+        "explosion_distance_m": 18.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            76.61122999999999,
+            -12.9
+          ],
+          [
+            6.203619999999999,
+            76.61122999999999,
+            -15.34
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon Table I lower-chamber passage length/angle; Petrie branch width. Centerline target D interpreted as chamber-axis point.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.chamber",
+      "name": "Lower / subsidiary chamber",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "measured_plan_assumed_height",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          6.203619999999999,
+          76.61122999999999,
+          -14.14
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 10.453369999999998,
+          "sy": 3.1330899999999997,
+          "sz": 2.4
+        },
+        "assembly_stage": 17,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          -0.3
+        ],
+        "explosion_distance_m": 34.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie plan dimensions (mean 411.55 in E-W \u00d7 123.35 in N-S); Legon node-D vertical level. 2.40 m height is display-only because rev.0003 has not extracted a reliable primary-source chamber height.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.lower",
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.portcullis.slab",
+      "name": "Lower granite portcullis \u2014 envelope only",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "known_object_unresolved_dimensions",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          80.55122999999999,
+          -11.997538
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.40156,
+          "sy": 0.32,
+          "sz": 1.804924
+        },
+        "assembly_stage": 18,
+        "explosion_vector": [
+          1.0,
+          0.0,
+          -0.2
+        ],
+        "explosion_distance_m": 10.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "ASSUMED",
+        "created_by": "archeon.model02",
+        "reason": "Existence is historical; dimensions and exact world position are not yet resolved in rev.0003. This is a visible placeholder, not measurement.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.connect.ef",
+      "name": "Connecting passage E\u2013F",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_ef",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          61.986229999999985,
+          -10.04
+        ],
+        "rpy_rad": [
+          -0.40103841347644953,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 14.652593627068208,
+          "sz": 1.201166
+        },
+        "assembly_stage": 19,
+        "explosion_vector": [
+          0.0,
+          -1.0,
+          -0.4
+        ],
+        "explosion_distance_m": 20.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            68.73122999999998,
+            -12.9
+          ],
+          [
+            12.453619999999999,
+            55.24122999999999,
+            -7.18
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon measured length/angle centerline.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.lower.connect.fg",
+      "name": "Connecting passage F\u2013G",
+      "parent": "asm.known.lower",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "survey_segment_fg",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          12.453619999999999,
+          50.75122999999999,
+          -5.365
+        ],
+        "rpy_rad": [
+          -0.3841489990381435,
+          0.0,
+          -3.141592653589793
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 1.05156,
+          "sy": 9.68593309908756,
+          "sz": 1.201166
+        },
+        "assembly_stage": 20,
+        "explosion_vector": [
+          0.0,
+          -1.0,
+          -0.4
+        ],
+        "explosion_distance_m": 18.0,
+        "radial_group": "known.lower",
+        "parent_axis": null,
+        "service_path": [
+          [
+            12.453619999999999,
+            55.24122999999999,
+            -7.18
+          ],
+          [
+            12.453619999999999,
+            46.26122999999999,
+            -3.55
+          ]
+        ]
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Legon measured length/angle centerline.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.burial.chamber",
+      "name": "Great / burial chamber wall-volume envelope",
+      "parent": "asm.known.burial",
+      "system": "sys.giza",
+      "material": "mat.limestone.local",
+      "semantic_role": "measured_burial_chamber",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          8.536304999999999,
+          4.401229999999984,
+          -0.9287199999999998
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 14.164309999999999,
+          "sy": 4.97459,
+          "sz": 5.24256
+        },
+        "assembly_stage": 21,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          0.2
+        ],
+        "explosion_distance_m": 55.0,
+        "radial_group": "known.burial",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie four wall plan dimensions and wall height; center y from Legon node I; x derived from Petrie doorway offset against passage axis.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior",
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.burial.gable_envelope",
+      "name": "Burial chamber gable roof envelope",
+      "parent": "asm.known.burial",
+      "system": "sys.giza",
+      "material": "mat.limestone.casing",
+      "semantic_role": "historical_gable_envelope",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          8.536304999999999,
+          4.401229999999984,
+          1.6925600000000003
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 14.164309999999999,
+          "sy": 4.97459,
+          "sz": 0.9652
+        },
+        "assembly_stage": 22,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          0.8
+        ],
+        "explosion_distance_m": 38.0,
+        "radial_group": "known.burial",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/burial_gable_envelope.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Triangular prism using Petrie plan mean and Vyse/Petrie 38 in roof-rise value.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Gable exists and is limestone-beam roof; 38 in rise is Vyse value reported by Petrie. STL is an interior-envelope visualization, not beam-by-beam CAD.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.burial.floor_paving",
+      "name": "Burial chamber fine-limestone floor paving",
+      "parent": "asm.known.burial",
+      "system": "sys.giza",
+      "material": "mat.limestone.casing",
+      "semantic_role": "measured_thickness_range",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          8.536304999999999,
+          4.401229999999984,
+          -3.40395
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 14.164309999999999,
+          "sy": 4.97459,
+          "sz": 0.29209999999999997
+        },
+        "assembly_stage": 23,
+        "explosion_vector": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "explosion_distance_m": 12.0,
+        "radial_group": "known.burial",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie reports fine limestone paving 9\u201314 in thick except around coffer; midpoint used only as display thickness.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.sarcophagus.body",
+      "name": "Khafre granite sarcophagus body",
+      "parent": "asm.known.burial",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_hollow_sarcophagus",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          3.8630860000000005,
+          4.401229999999984,
+          -3.065876
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 2.6334720000000003,
+          "sy": 1.065911,
+          "sz": 0.9682479999999999
+        },
+        "assembly_stage": 24,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          0.2
+        ],
+        "explosion_distance_m": 18.0,
+        "radial_group": "known.burial",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/khafre_sarcophagus_body.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hollow display mesh from Petrie measured outer/inner dimensions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie measured outer/inner dimensions; hollow STL assembled from measured envelope dimensions.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.sarcophagus.lid",
+      "name": "Khafre sarcophagus sliding lid",
+      "parent": "asm.known.burial",
+      "system": "sys.giza",
+      "material": "mat.granite.reference",
+      "semantic_role": "measured_lid_envelope",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          3.8630860000000005,
+          4.401229999999984,
+          -2.4668805
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 2.634742,
+          "sy": 1.067562,
+          "sz": 0.22974299999999998
+        },
+        "assembly_stage": 25,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          1.0
+        ],
+        "explosion_distance_m": 24.0,
+        "radial_group": "known.burial",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/khafre_sarcophagus_lid.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Measured plan envelope; midpoint thickness visualization.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Lid plan dimensions measured by Petrie; thickness is midpoint of measured nonuniform 8.20\u20139.89 in range.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.1",
+      "name": "Reported Upper Structure 1",
+      "parent": "asm.upper",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_upper_structure",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -55.0,
+          -55.0,
+          -18.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 24.0,
+          "sy": 24.0,
+          "sz": 14.0
+        },
+        "assembly_stage": 33,
+        "explosion_vector": [
+          -0.6875,
+          -0.6875,
+          0.25
+        ],
+        "explosion_distance_m": 90,
+        "radial_group": "upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Shape and exact placement are conceptual placeholders for the reported five near-base structures.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.2",
+      "name": "Reported Upper Structure 2",
+      "parent": "asm.upper",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_upper_structure",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          55.0,
+          -55.0,
+          -18.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 24.0,
+          "sy": 24.0,
+          "sz": 14.0
+        },
+        "assembly_stage": 33,
+        "explosion_vector": [
+          0.6875,
+          -0.6875,
+          0.25
+        ],
+        "explosion_distance_m": 90,
+        "radial_group": "upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Shape and exact placement are conceptual placeholders for the reported five near-base structures.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.3",
+      "name": "Reported Upper Structure 3",
+      "parent": "asm.upper",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_upper_structure",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -55.0,
+          55.0,
+          -18.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 24.0,
+          "sy": 24.0,
+          "sz": 14.0
+        },
+        "assembly_stage": 33,
+        "explosion_vector": [
+          -0.6875,
+          0.6875,
+          0.25
+        ],
+        "explosion_distance_m": 90,
+        "radial_group": "upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Shape and exact placement are conceptual placeholders for the reported five near-base structures.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.4",
+      "name": "Reported Upper Structure 4",
+      "parent": "asm.upper",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_upper_structure",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          55.0,
+          55.0,
+          -18.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 24.0,
+          "sy": 24.0,
+          "sz": 14.0
+        },
+        "assembly_stage": 33,
+        "explosion_vector": [
+          0.6875,
+          0.6875,
+          0.25
+        ],
+        "explosion_distance_m": 90,
+        "radial_group": "upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Shape and exact placement are conceptual placeholders for the reported five near-base structures.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.upper.5",
+      "name": "Reported Upper Structure 5",
+      "parent": "asm.upper",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_upper_structure",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          0.0,
+          0.0,
+          -18.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 24.0,
+          "sy": 24.0,
+          "sz": 14.0
+        },
+        "assembly_stage": 33,
+        "explosion_vector": [
+          0.0,
+          0.0,
+          0.25
+        ],
+        "explosion_distance_m": 90,
+        "radial_group": "upper",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Shape and exact placement are conceptual placeholders for the reported five near-base structures.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.alpha.1",
+      "name": "Reported Shaft Alpha 1",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          -72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          -1.0,
+          -0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.alpha.1",
+      "name": "Reported Helical Path Alpha 1",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          -72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          -1.0,
+          -0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.alpha.1",
+      "name": "Reported Connector Alpha 1",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -110.0,
+          -36.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.58959188,
+          2.40877755
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 129.49131244990917,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          -1.0,
+          -0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.alpha.2",
+      "name": "Reported Shaft Alpha 2",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          -24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          -1.0,
+          -0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.alpha.2",
+      "name": "Reported Helical Path Alpha 2",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          -24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          -1.0,
+          -0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.alpha.2",
+      "name": "Reported Connector Alpha 2",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -110.0,
+          -12.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.71144461,
+          2.85013586
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 110.27239001672177,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          -1.0,
+          -0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.alpha.3",
+      "name": "Reported Shaft Alpha 3",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          -1.0,
+          0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.alpha.3",
+      "name": "Reported Helical Path Alpha 3",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          -1.0,
+          0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.alpha.3",
+      "name": "Reported Connector Alpha 3",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -110.0,
+          12.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.71144461,
+          -2.85013586
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 110.27239001672177,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          -1.0,
+          0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.alpha.4",
+      "name": "Reported Shaft Alpha 4",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          -1.0,
+          0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.alpha.4",
+      "name": "Reported Helical Path Alpha 4",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -70.0,
+          72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          -1.0,
+          0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.alpha.4",
+      "name": "Reported Connector Alpha 4",
+      "parent": "asm.deep.alpha",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -110.0,
+          36.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.58959188,
+          -2.40877755
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 129.49131244990917,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          -1.0,
+          0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "alpha",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.beta.1",
+      "name": "Reported Shaft Beta 1",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          -72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          1.0,
+          -0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.beta.1",
+      "name": "Reported Helical Path Beta 1",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          -72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          1.0,
+          -0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.beta.1",
+      "name": "Reported Connector Beta 1",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          110.0,
+          -36.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.58959188,
+          0.7328151
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 129.49131244990917,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          1.0,
+          -0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.beta.2",
+      "name": "Reported Shaft Beta 2",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          -24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          1.0,
+          -0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.beta.2",
+      "name": "Reported Helical Path Beta 2",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          -24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          1.0,
+          -0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.beta.2",
+      "name": "Reported Connector Beta 2",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          110.0,
+          -12.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.71144461,
+          0.29145679
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 110.27239001672177,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          1.0,
+          -0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.beta.3",
+      "name": "Reported Shaft Beta 3",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          1.0,
+          0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.beta.3",
+      "name": "Reported Helical Path Beta 3",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          24.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          1.0,
+          0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.beta.3",
+      "name": "Reported Connector Beta 3",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          110.0,
+          12.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.71144461,
+          -0.29145679
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 110.27239001672177,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          1.0,
+          0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.shaft.beta.4",
+      "name": "Reported Shaft Beta 4",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_deep_shaft",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 5.5,
+          "height": 648.0
+        },
+        "assembly_stage": 34,
+        "explosion_vector": [
+          1.0,
+          0.18,
+          -0.1
+        ],
+        "explosion_distance_m": 125,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Reported ~648 m cylindrical shaft; diameter is a visualization assumption, not measured ground truth.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.helix.beta.4",
+      "name": "Reported Helical Path Beta 4",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_helical_access",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          70.0,
+          72.0,
+          -324.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "cylinder",
+          "radius": 16.0,
+          "height": 648.0
+        },
+        "assembly_stage": 35,
+        "explosion_vector": [
+          1.0,
+          0.28,
+          0.1
+        ],
+        "explosion_distance_m": 165,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": [],
+        "cad": {
+          "format": "stl",
+          "path": "cad/helix_access_preview.stl",
+          "preview": null,
+          "truth": "GENERATED",
+          "geometry_class": "GENERATED_PREVIEW",
+          "note": "Hypothesis visualization of a reported spiral path. Pitch/radius are modeling assumptions.",
+          "coordinate_frame": "CAD_LOCAL",
+          "local_origin": [
+            0,
+            0,
+            0
+          ],
+          "units": "m",
+          "geometry_revision": "rev.0003",
+          "source": "GENERATED",
+          "up_axis": "Z",
+          "handedness": "RIGHT_HANDED",
+          "forward_axis": "X"
+        }
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Helix pitch, width, and radius are visualization assumptions; only the existence of spiral-like paths is part of the reported claim.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "stl",
+          "primitive_fallback"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.connector.beta.4",
+      "name": "Reported Connector Beta 4",
+      "parent": "asm.deep.beta",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_connector_gallery",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          110.0,
+          36.0,
+          -684.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.58959188,
+          -0.7328151
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 129.49131244990917,
+          "sy": 6.0,
+          "sz": 6.0
+        },
+        "assembly_stage": 36,
+        "explosion_vector": [
+          1.0,
+          0.25,
+          -0.25
+        ],
+        "explosion_distance_m": 130,
+        "radial_group": "beta",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Connector gallery routing is a conceptual straight-line approximation between reported deep arrays and terminal volumes.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.terminal.alpha",
+      "name": "Reported Terminal Chamber Alpha",
+      "parent": "asm.terminals",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_terminal_volume",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          -150.0,
+          0.0,
+          -720.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 80.0,
+          "sy": 80.0,
+          "sz": 80.0
+        },
+        "assembly_stage": 37,
+        "explosion_vector": [
+          -1.0,
+          0.0,
+          -0.25
+        ],
+        "explosion_distance_m": 200,
+        "radial_group": "terminal",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Cube-like 80 m-scale terminal chamber from reported claim geometry; not independently confirmed.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "part.terminal.beta",
+      "name": "Reported Terminal Chamber Beta",
+      "parent": "asm.terminals",
+      "system": "sys.giza",
+      "material": null,
+      "semantic_role": "reported_terminal_volume",
+      "qty": 1,
+      "catalog_ref": null,
+      "component_class": null,
+      "detail_tier": "primary",
+      "spatial": {
+        "origin_m": [
+          150.0,
+          0.0,
+          -720.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "primitive": {
+          "kind": "box",
+          "sx": 80.0,
+          "sy": 80.0,
+          "sz": 80.0
+        },
+        "assembly_stage": 37,
+        "explosion_vector": [
+          1.0,
+          0.0,
+          -0.25
+        ],
+        "explosion_distance_m": 200,
+        "radial_group": "terminal",
+        "parent_axis": null,
+        "service_path": []
+      },
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Cube-like 80 m-scale terminal chamber from reported claim geometry; not independently confirmed.",
+        "requirement_ids": [],
+        "agent_id": "cad-designer",
+        "tools": [
+          "primitive"
+        ],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ]
+}

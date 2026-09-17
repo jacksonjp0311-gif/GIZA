@@ -1,0 +1,1300 @@
+{
+  "run_id": "run.strata.strata.deep-claim-screening.47505c0a0969",
+  "experiment_id": "strata.deep-claim-screening",
+  "solver_id": "solver.strata",
+  "solver_version": "0.9.3-screening-analytic",
+  "provenance_class": "SIMULATED",
+  "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+  "geometry_revision": "rev.0003",
+  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+  "input_hash": "47505c0a096970b3822eb17282553dfa323a3dc8255a426660bbba1cc276d548",
+  "parameters": {
+    "gravity_m_s2": 9.80665,
+    "rock_density_kg_m3": 2600,
+    "water_density_kg_m3": 1000,
+    "shaft_bottom_depth_m": 648,
+    "terminal_center_depth_m": 720,
+    "vertical_sample_step_m": 54
+  },
+  "material_prior": {
+    "source_id": "src.npj2020.materials",
+    "scope": "Khafre/Chephren backing fossiliferous limestone samples",
+    "ucs_mpa": {
+      "min": 12.1,
+      "max": 17.8
+    },
+    "warning": "These are sample-level ranges from one study. Spatial heterogeneity, weathering, moisture and block-to-block variation must be modeled explicitly before FEA/acoustic conclusions."
+  },
+  "geomechanics": {
+    "kind": "VERTICAL_OVERBURDEN_PROXY_NOT_FEA",
+    "shaft_bottom": {
+      "depth_m": 648,
+      "vertical_overburden_proxy_mpa": 16.522243919999998,
+      "sample_ucs_mpa": {
+        "min": 12.1,
+        "max": 17.8
+      },
+      "proxy_to_ucs_ratio": {
+        "best_case": 0.9282159505617976,
+        "worst_case": 1.3654747041322313
+      },
+      "classification": "PROXY_OVERLAPS_SAMPLE_UCS_RANGE"
+    },
+    "terminal_center": {
+      "depth_m": 720,
+      "vertical_overburden_proxy_mpa": 18.358048799999995,
+      "sample_ucs_mpa": {
+        "min": 12.1,
+        "max": 17.8
+      },
+      "proxy_to_ucs_ratio": {
+        "best_case": 1.031351056179775,
+        "worst_case": 1.517194115702479
+      },
+      "classification": "PROXY_EXCEEDS_SAMPLE_UCS_RANGE"
+    },
+    "known_lower_chamber_reference": {
+      "depth_m": 14.14,
+      "vertical_overburden_proxy_mpa": 0.36053168059999996,
+      "sample_ucs_mpa": {
+        "min": 12.1,
+        "max": 17.8
+      },
+      "proxy_to_ucs_ratio": {
+        "best_case": 0.020254588797752805,
+        "worst_case": 0.02979600666115702
+      },
+      "classification": "PROXY_BELOW_SAMPLE_UCS_RANGE"
+    },
+    "density_sensitivity": [
+      {
+        "rock_density_kg_m3": 2300,
+        "shaft_bottom_mpa": 14.615831159999999,
+        "terminal_center_mpa": 16.239812399999998
+      },
+      {
+        "rock_density_kg_m3": 2600,
+        "shaft_bottom_mpa": 16.522243919999998,
+        "terminal_center_mpa": 18.358048799999995
+      },
+      {
+        "rock_density_kg_m3": 2800,
+        "shaft_bottom_mpa": 17.793185759999997,
+        "terminal_center_mpa": 19.7702064
+      }
+    ],
+    "warning": "Vertical rho*g*h is a screening proxy only. It omits in-situ horizontal stress, discontinuities, cavity shape stress concentration, support, anisotropy, water weakening, scale effects and excavation history. Ratios are NOT factors of safety."
+  },
+  "hydraulics": {
+    "kind": "STATIC_FRESHWATER_HEAD_IF_FILLED",
+    "shaft_bottom": {
+      "depth_m": 648,
+      "hypothetical_freshwater_pressure_mpa": 6.3547092,
+      "gravitational_potential_kwh_per_m3": 1.7651970000000001,
+      "flow_rate_status": "NOT_COMPUTABLE_WITHOUT_PERMEABILITY_CONNECTIVITY_AND_BOUNDARY_HEAD"
+    },
+    "terminal_center": {
+      "depth_m": 720,
+      "hypothetical_freshwater_pressure_mpa": 7.060788,
+      "gravitational_potential_kwh_per_m3": 1.96133,
+      "flow_rate_status": "NOT_COMPUTABLE_WITHOUT_PERMEABILITY_CONNECTIVITY_AND_BOUNDARY_HEAD"
+    },
+    "dry_null_pressure_mpa": 0,
+    "warning": "Pressure and potential energy are conditional on a connected water column. No flooding, permeability, recharge, discharge or usable flow rate is established."
+  },
+  "field_points": [
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.alpha.1",
+      "coordinates_m": [
+        -70,
+        -72,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.alpha.2",
+      "coordinates_m": [
+        -70,
+        -24,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.alpha.3",
+      "coordinates_m": [
+        -70,
+        24,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.alpha.4",
+      "coordinates_m": [
+        -70,
+        72,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.beta.1",
+      "coordinates_m": [
+        70,
+        -72,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.beta.2",
+      "coordinates_m": [
+        70,
+        -24,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.beta.3",
+      "coordinates_m": [
+        70,
+        24,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        0
+      ],
+      "depth_m": 0,
+      "stress_mpa": 0,
+      "hydraulic_pressure_mpa": 0
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -54
+      ],
+      "depth_m": 54,
+      "stress_mpa": 1.3768536599999999,
+      "hydraulic_pressure_mpa": 0.5295591
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -108
+      ],
+      "depth_m": 108,
+      "stress_mpa": 2.7537073199999997,
+      "hydraulic_pressure_mpa": 1.0591182
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -162
+      ],
+      "depth_m": 162,
+      "stress_mpa": 4.130560979999999,
+      "hydraulic_pressure_mpa": 1.5886773
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -216
+      ],
+      "depth_m": 216,
+      "stress_mpa": 5.5074146399999995,
+      "hydraulic_pressure_mpa": 2.1182364
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -270
+      ],
+      "depth_m": 270,
+      "stress_mpa": 6.884268299999999,
+      "hydraulic_pressure_mpa": 2.6477955
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -324
+      ],
+      "depth_m": 324,
+      "stress_mpa": 8.261121959999999,
+      "hydraulic_pressure_mpa": 3.1773546
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -378
+      ],
+      "depth_m": 378,
+      "stress_mpa": 9.637975619999999,
+      "hydraulic_pressure_mpa": 3.7069137
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -432
+      ],
+      "depth_m": 432,
+      "stress_mpa": 11.014829279999999,
+      "hydraulic_pressure_mpa": 4.2364728
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -486
+      ],
+      "depth_m": 486,
+      "stress_mpa": 12.391682939999999,
+      "hydraulic_pressure_mpa": 4.7660319
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -540
+      ],
+      "depth_m": 540,
+      "stress_mpa": 13.768536599999997,
+      "hydraulic_pressure_mpa": 5.295591
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -594
+      ],
+      "depth_m": 594,
+      "stress_mpa": 15.145390259999997,
+      "hydraulic_pressure_mpa": 5.825150099999999
+    },
+    {
+      "component_id": "part.shaft.beta.4",
+      "coordinates_m": [
+        70,
+        72,
+        -648
+      ],
+      "depth_m": 648,
+      "stress_mpa": 16.522243919999998,
+      "hydraulic_pressure_mpa": 6.3547092
+    },
+    {
+      "component_id": "part.terminal.alpha",
+      "coordinates_m": [
+        -150,
+        0,
+        -720
+      ],
+      "depth_m": 720,
+      "stress_mpa": 18.358048799999995,
+      "hydraulic_pressure_mpa": 7.060788
+    },
+    {
+      "component_id": "part.terminal.beta",
+      "coordinates_m": [
+        150,
+        0,
+        -720
+      ],
+      "depth_m": 720,
+      "stress_mpa": 18.358048799999995,
+      "hydraulic_pressure_mpa": 7.060788
+    }
+  ],
+  "controls": {
+    "hydraulic_null": "DRY_NO_WATER_COLUMN",
+    "mechanical_reference": "VERTICAL_OVERBURDEN_PROXY_NO_CAVITY_STRESS_CONCENTRATION",
+    "density_sensitivity_kg_m3": [
+      2300,
+      2600,
+      2800
+    ]
+  },
+  "uncertainty": {
+    "kind": "SCREENING_PRIOR_RANGE_NOT_POSTERIOR",
+    "rock_strength": "sample-level Khafre backing-limestone range only",
+    "hydraulic": "permeability/connectivity/head boundaries unresolved",
+    "geometry": "deep components remain UNVERIFIED"
+  },
+  "human_summary": {
+    "headline": "Deep conditional geometry enters a high-overburden regime and would require explicit rock-mass and groundwater evidence before structural or hydraulic claims are credible.",
+    "shaft_bottom_stress_mpa": 16.522243919999998,
+    "terminal_center_stress_mpa": 18.358048799999995,
+    "shaft_bottom_water_pressure_mpa": 6.3547092,
+    "terminal_center_water_pressure_mpa": 7.060788,
+    "flow_status": "UNRESOLVED",
+    "stability_status": "UNRESOLVED_REQUIRES_ROCK_MASS_MODEL"
+  },
+  "status": "COMPLETE",
+  "created_at": "2026-09-11T15:32:37.407Z",
+  "interpretation_guard": "This is a first-order screening calculation. It is not an FEA stability result, does not establish flooding, and cannot confirm or reject unverified deep geometry by itself."
+}

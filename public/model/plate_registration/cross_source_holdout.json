@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "comparison_id": "valley_temple.petrie_vs_arce",
+  "state": "WAITING_FOR_INDEPENDENT_REGISTRATIONS",
+  "source_a": "bytes.petrie1883.public_domain_pdf",
+  "source_b": "bytes.arce.khafre_valley_1_100",
+  "rule": "Register each source independently to its own plate-local metric frame before comparing shared architectural correspondences. Never fit one source directly to the other and then claim independence.",
+  "holdout_design": {
+    "minimum_shared_holdouts": 5,
+    "sectors": [
+      "east entrances",
+      "T-hall junction",
+      "west wall",
+      "north arm",
+      "south arm"
+    ],
+    "report": [
+      "translation offset after best rigid alignment",
+      "rotation offset",
+      "scale ratio",
+      "shared-point RMS",
+      "sector-specific residuals"
+    ]
+  },
+  "promotion": "Cross-source agreement may increase confidence in wall topology/dimensions but still requires manual review before geometry promotion."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "policy": "FAIL_CLOSED",
+  "rules": [
+    "Public visibility is not redistribution permission.",
+    "ACCESS_RESTRICTED assets must never have a download URL in the vault.",
+    "LOCAL_CACHED release assets require explicit redistribution permission and a local SHA-256.",
+    "Unknown or ambiguous rights remain REFERENCE_ONLY or DOWNLOAD_URL_UNRESOLVED.",
+    "No fetcher may bypass authentication, robots controls, paywalls, member gates, signed URL requirements or rate limits.",
+    "Per-file media rights override collection-level assumptions.",
+    "Source bytes never acquire geometry-write authority merely by being cached."
+  ],
+  "private_cache_path": ".vault-cache",
+  "release_cache_path": "public/vault/raw"
+}

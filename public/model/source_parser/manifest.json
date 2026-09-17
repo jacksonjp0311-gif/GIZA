@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "SOURCE PARSER",
+  "purpose": "Convert source-addressed normalized observations into portable parsed records with explicit locators and byte-custody state; never imply raw-byte parsing when source bytes are absent.",
+  "counts": {
+    "targets": 26,
+    "parsed_records": 26,
+    "receipts": 26,
+    "raw_byte_verified": 0
+  },
+  "truth_rules": [
+    "normalized-source parsing is not raw-byte parsing",
+    "source locator is mandatory",
+    "raw-byte verification requires checksum-bound local vault bytes",
+    "parser cannot increase geometry authority",
+    "parsed interpretation remains distinguishable from direct observation"
+  ],
+  "entrypoints": [
+    "public/model/source_parser/targets.json",
+    "public/model/source_parser/parsed_records.json",
+    "public/model/source_parser/parser_receipts.json",
+    "public/model/source_parser/locator_contract.json",
+    "docs/SOURCE_PARSER.md"
+  ],
+  "generated_at": "2026-09-16T10:21:08.099Z",
+  "generator_version": "0.10.12"
+}

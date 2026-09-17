@@ -1,0 +1,112 @@
+{
+  "materials": [
+    {
+      "id": "mat.limestone.local",
+      "name": "Local Giza limestone \u2014 identity sourced; density assumed for simulation",
+      "density_kg_m3": 2600.0,
+      "notes": "Material identity is historical/official. 2600 kg/m\u00b3 is an analysis reference, not a site-specific bulk-density measurement.",
+      "appearance": "stone",
+      "provenance": {
+        "class": "ASSUMED",
+        "created_by": "archeon.model02",
+        "reason": "Representative density for sensitivity calculations; do not treat as sampled material property.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.ministry.materials"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "mat.limestone.casing",
+      "name": "Fine casing limestone \u2014 identity sourced; density assumed",
+      "density_kg_m3": 2600.0,
+      "notes": "Official Ministry identifies high-quality limestone casing; Petrie describes upper casing limestone. Density is analysis-only.",
+      "appearance": "stone",
+      "provenance": {
+        "class": "ASSUMED",
+        "created_by": "archeon.model02",
+        "reason": "Material identity sourced, density assumed.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.ministry.materials",
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "mat.granite.reference",
+      "name": "Granite \u2014 object identity sourced; density assumed",
+      "density_kg_m3": 2700.0,
+      "notes": "Granite occurs in lower casing, passage work, portcullis and coffer descriptions. 2700 kg/m\u00b3 is a generic analysis reference.",
+      "appearance": "stone",
+      "provenance": {
+        "class": "ASSUMED",
+        "created_by": "archeon.model02",
+        "reason": "Representative density only.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.petrie.interior",
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "loads": [],
+  "functions": [
+    {
+      "id": "fn.inspect.geometry",
+      "name": "Inspect measured geometry with evidence provenance",
+      "parts": [
+        "part.pyramid.khafre",
+        "part.upper.entrance.existing",
+        "part.lower.entrance.existing",
+        "part.burial.chamber"
+      ],
+      "provenance": {
+        "class": "GENERATED",
+        "created_by": "archeon.model02",
+        "reason": "Reverse-engineering inspection function.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "fn.compare.hypotheses",
+      "name": "Compare physical hypotheses without promoting unverified geometry",
+      "parts": [
+        "part.pyramid.khafre",
+        "part.burial.chamber"
+      ],
+      "provenance": {
+        "class": "GENERATED",
+        "created_by": "archeon.model02",
+        "reason": "Hypothesis testing function; no energy-generation claim encoded.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "flows": []
+}

@@ -1,0 +1,7 @@
+
+> giza-nexus-registration-workbench@0.10.12 validate:visual
+> node scripts/validate-visual-contract.mjs
+
+GIZA v0.10.7 visual contract
+baseline=1672x941 shell=LOCKED brand=GIZA_NEXUS nav=5 inspector=DOCKED_4x2
+PASS

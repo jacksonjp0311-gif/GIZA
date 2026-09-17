@@ -1,0 +1,140 @@
+{
+  "frame": {
+    "origin": "pyramid base-center",
+    "x": "+east",
+    "y": "+north",
+    "z": "+up",
+    "status": "MODEL_CONVENTION"
+  },
+  "parts": {
+    "part.pyramid.khafre": {
+      "base_xy": [
+        "m.surface.base.mean"
+      ],
+      "height": [
+        "m.surface.height.petrie"
+      ],
+      "placement_z": "DERIVED_FROM_HEIGHT",
+      "mesh": "GENERATED_PREVIEW"
+    },
+    "part.casing.granite.lower": {
+      "vertical_height": [
+        "m.casing.low.course_height"
+      ],
+      "render_shell_thickness": "DISPLAY_ONLY_0.06m"
+    },
+    "part.upper.entrance.existing": {
+      "centerline": [
+        "m.legon.upper_existing",
+        "m.legon.segment.KL.angle",
+        "m.legon.node.K.south",
+        "m.legon.node.K.z",
+        "m.legon.upper_sill_z"
+      ],
+      "cross_section": [
+        "m.upper.section.width",
+        "m.upper.section.height"
+      ]
+    },
+    "part.upper.entrance.reconstructed": {
+      "centerline": [
+        "m.legon.segment.KL.length",
+        "m.legon.node.L.south",
+        "m.legon.node.L.z"
+      ],
+      "status": "DERIVED_RECONSTRUCTED_LOST_CASING"
+    },
+    "part.lower.entrance.existing": {
+      "centerline": [
+        "m.legon.lower_existing",
+        "m.legon.segment.AB.angle",
+        "m.legon.lower_sill_z",
+        "m.legon.lower_sill_north"
+      ],
+      "width": [
+        "m.lower.main_width_min",
+        "m.lower.main_width_max"
+      ],
+      "height": "DISPLAY_ONLY_REUSES_UPPER_1.201166m"
+    },
+    "part.lower.chamber": {
+      "plan": [
+        "m.lower.north_length",
+        "m.lower.south_length",
+        "m.lower.east_width",
+        "m.lower.west_width"
+      ],
+      "level": [
+        "m.legon.node.D.z"
+      ],
+      "height": "DISPLAY_ONLY_2.40m_UNRESOLVED"
+    },
+    "part.burial.chamber": {
+      "plan": [
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.length_n",
+        "m.burial.length_s"
+      ],
+      "wall_height": [
+        "m.burial.wall_height"
+      ],
+      "y_center": [
+        "m.legon.node.I.south",
+        "m.legon.node.I.z"
+      ],
+      "x_center": "DERIVED_FROM_PETRIE_AXIS_AND_DOOR_OFFSETS"
+    },
+    "part.burial.gable_envelope": {
+      "rise": [
+        "m.burial.gable_rise.vyse"
+      ],
+      "status": "HISTORICAL_REPORTED_BY_PETRIE"
+    },
+    "part.sarcophagus.body": {
+      "outer": [
+        "m.coffer.outer_length",
+        "m.coffer.outer_width",
+        "m.coffer.outer_height"
+      ],
+      "inner": [
+        "m.coffer.inner_length",
+        "m.coffer.inner_width",
+        "m.coffer.inner_depth"
+      ]
+    },
+    "part.sarcophagus.lid": {
+      "plan": [
+        "m.coffer.lid_length",
+        "m.coffer.lid_width"
+      ],
+      "thickness": [
+        "m.coffer.lid_thickness_min",
+        "m.coffer.lid_thickness_max"
+      ],
+      "render_thickness": "MIDPOINT_OF_MEASURED_RANGE"
+    }
+  },
+  "unresolved": [
+    {
+      "field": "lower_passage.clear_height",
+      "reason": "Not yet extracted from a primary metric table; rev.0003 uses 1.201166 m display envelope only."
+    },
+    {
+      "field": "lower_chamber.clear_height",
+      "reason": "Primary-source vertical dimension not yet robustly extracted; render height 2.40 m is display-only."
+    },
+    {
+      "field": "lower_portcullis.dimensions_and_exact_position",
+      "reason": "Existence documented by Petrie; current geometry is an ASSUMED visible placeholder."
+    },
+    {
+      "field": "passage_axis.azimuth_to_world_x_drift",
+      "reason": "Petrie/Smyth azimuth retained; sign/frame reconciliation with local chamber placement deferred to joint fit rather than forcing false precision."
+    },
+    {
+      "field": "current_eroded_outer_surface",
+      "reason": "No photogrammetric/current-surface mesh was ingested; main pyramid is original idealized survey envelope."
+    }
+  ]
+}

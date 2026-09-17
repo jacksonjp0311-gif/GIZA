@@ -1,0 +1,104 @@
+import { useEffect, useMemo, useRef } from 'react';
+import { type ThreeEvent } from '@react-three/fiber';
+import * as THREE from 'three';
+import type { StoneField } from '../lib/model';
+import { buildStoneCells, clippingPlanes, explodedCellPosition } from './geometry';
+import type { SectionAxis, StoneCellInfo } from './types';
+
+function StoneFieldMesh({ field, explode, visible, selectedStoneId, sectionAxis, sectionPos, onSelectStone }: {
+  field: StoneField; explode: number; visible: boolean; selectedStoneId?: string | null;
+  sectionAxis: SectionAxis; sectionPos: number; onSelectStone: (cell: StoneCellInfo) => void;
+}) {
+  const ref = useRef<THREE.InstancedMesh>(null);
+  const cells = useMemo(() => buildStoneCells(field), [field]);
+  const matrix = useMemo(() => new THREE.Matrix4(), []);
+  const position = useMemo(() => new THREE.Vector3(), []);
+  const quaternion = useMemo(() => new THREE.Quaternion(), []);
+  const rotation = useMemo(() => new THREE.Euler(), []);
+  const scale = useMemo(() => new THREE.Vector3(), []);
+  const cellColor = useMemo(() => new THREE.Color(), []);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    ref.current.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    const gap = Math.max(0.76, 1 - field.joint_gap_fraction);
+
+    cells.forEach((cell, i) => {
+      const [x, y, z] = explodedCellPosition(cell, field, explode);
+      position.set(x, y, z);
+      const individual = (((cell.index * 13 + cell.course * 7) % 17) - 8) / 8;
+      const separationScale = 1 - Math.min(0.18, explode * 0.065);
+      rotation.set(individual * explode * 0.025, (cell.course % 3 - 1) * explode * 0.012, individual * explode * 0.035);
+      quaternion.setFromEuler(rotation);
+      if (cell.face === 'N' || cell.face === 'S') scale.set(cell.width_m * gap * separationScale, cell.depth_m * gap * separationScale, cell.height_m * gap * separationScale);
+      else scale.set(cell.depth_m * gap * separationScale, cell.width_m * gap * separationScale, cell.height_m * gap * separationScale);
+      matrix.compose(position, quaternion, scale);
+      ref.current!.setMatrixAt(i, matrix);
+      if (cell.id === selectedStoneId) cellColor.set('#ffe3a3');
+      else {
+        const coursePhase = cell.course / field.visual_course_count;
+        const faceColor = cell.face === 'N' ? '#e8d19a'
+          : cell.face === 'E' ? '#dcb56f'
+            : cell.face === 'S' ? '#c98e5e'
+              : '#f1dda6';
+        cellColor.set(faceColor).offsetHSL(
+          ((cell.index % 7) - 3) * 0.0025,
+          ((cell.index % 5) - 2) * 0.012,
+          coursePhase * 0.075 + ((cell.index % 4) - 1.5) * 0.012,
+        );
+      }
+      ref.current!.setColorAt(i, cellColor);
+    });
+
+    ref.current.instanceMatrix.needsUpdate = true;
+    if (ref.current.instanceColor) ref.current.instanceColor.needsUpdate = true;
+  }, [cells, explode, field, selectedStoneId, matrix, position, quaternion, rotation, scale, cellColor]);
+
+  if (!visible) return null;
+  const clip = clippingPlanes(sectionAxis, sectionPos);
+  const handleClick = (e: ThreeEvent<MouseEvent>) => {
+    if (e.instanceId === undefined) return;
+    e.stopPropagation();
+    const cell = cells[e.instanceId];
+    if (cell) onSelectStone(cell);
+  };
+
+  return (
+    <instancedMesh ref={ref} args={[undefined, undefined, cells.length]} castShadow={false} receiveShadow onClick={handleClick} frustumCulled>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial vertexColors roughness={0.84} metalness={0.01} emissive="#9a7240" emissiveIntensity={0.34} clippingPlanes={clip} />
+    </instancedMesh>
+  );
+}
+
+function SelectedStoneOutline({ cell, field, explode }: { cell: StoneCellInfo | null; field: StoneField; explode: number }) {
+  if (!cell) return null;
+  const p = explodedCellPosition(cell, field, explode);
+  const size: [number, number, number] = cell.face === 'N' || cell.face === 'S'
+    ? [cell.width_m * 1.05, cell.depth_m * 1.18, cell.height_m * 1.12]
+    : [cell.depth_m * 1.18, cell.width_m * 1.05, cell.height_m * 1.12];
+  return (
+    <mesh position={p}>
+      <boxGeometry args={size} />
+      <meshBasicMaterial color="#ffe3a3" wireframe transparent opacity={0.98} depthTest={false} />
+    </mesh>
+  );
+}
+
+export function MasonryLayer({ field, explode, visible, selectedStone, sectionAxis, sectionPos, onSelectStone }: {
+  field: StoneField; explode: number; visible: boolean; selectedStone: StoneCellInfo | null;
+  sectionAxis: SectionAxis; sectionPos: number; onSelectStone: (cell: StoneCellInfo) => void;
+}) {
+  return <>
+    <StoneFieldMesh
+      field={field}
+      explode={explode}
+      visible={visible}
+      selectedStoneId={selectedStone?.id}
+      sectionAxis={sectionAxis}
+      sectionPos={sectionPos}
+      onSelectStone={onSelectStone}
+    />
+    <SelectedStoneOutline cell={selectedStone} field={field} explode={explode} />
+  </>;
+}

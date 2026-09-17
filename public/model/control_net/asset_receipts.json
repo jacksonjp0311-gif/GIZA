@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "assets": [
+    {
+      "id": "asset.dash.giza_corner_points",
+      "name": "Giza-Corner-Points-2v17.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "source_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+      "status": "DISCOVERED_NOT_CACHED",
+      "expected_content": "Khufu/Khafre/Menkaure projected original corners and base centers plus selected controls",
+      "geometry_write_authority": "NONE_UNTIL_ACQUIRED_HASHED_PARSED",
+      "guard": "Khafre corner estimates are based on Petrie; preserve provenance and elevation source separately."
+    },
+    {
+      "id": "asset.dash.gpmp_control_monuments",
+      "name": "GPMP-Control-Monuments.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "source_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+      "status": "DISCOVERED_NOT_CACHED",
+      "expected_content": "GPMP control monuments",
+      "geometry_write_authority": "NONE_UNTIL_ACQUIRED_HASHED_PARSED"
+    },
+    {
+      "id": "asset.dash.petrie_stations",
+      "name": "Petries-Stations.kmz",
+      "source_id": "src.dash.petrie_stations2017",
+      "source_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+      "status": "DISCOVERED_NOT_CACHED",
+      "expected_content": "Petrie survey stations and derived casing/base features",
+      "geometry_write_authority": "NONE_UNTIL_ACQUIRED_HASHED_PARSED"
+    },
+    {
+      "id": "asset.dash.gdfs2015",
+      "name": "GDFS-2015-Master-25iii17-edited-child.xlsx",
+      "source_id": "src.dash.gpmp_frame2015",
+      "source_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+      "status": "DISCOVERED_NOT_CACHED",
+      "expected_content": "GDFS 2015 survey points",
+      "geometry_write_authority": "NONE_UNTIL_ACQUIRED_HASHED_PARSED"
+    }
+  ]
+}

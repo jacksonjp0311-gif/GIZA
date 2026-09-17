@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "independent_axis_note": "Evidence maturity is NOT the same thing as provenance class. A DERIVED object may have high maturity; an open photograph may still be E0 for metric geometry.",
+  "levels": [
+    {
+      "id": "E0",
+      "name": "REFERENCE_ONLY",
+      "meaning": "Visual, textual, or claim context; no metric model mutation allowed.",
+      "allowed_mutation": false
+    },
+    {
+      "id": "E1",
+      "name": "CALIBRATED_SINGLE_VIEW",
+      "meaning": "Single image with one or more known scale anchors. Local 2-D estimates only; perspective uncertainty explicit.",
+      "allowed_mutation": "DERIVED_ESTIMATE_ONLY"
+    },
+    {
+      "id": "E2",
+      "name": "MULTIVIEW_RECONSTRUCTION",
+      "meaning": "Multi-image camera solution with scale anchor(s), QA metrics, and bounded reprojection error.",
+      "allowed_mutation": "DERIVED_GEOMETRY_CANDIDATE"
+    },
+    {
+      "id": "E3",
+      "name": "SURVEY_CONSTRAINED",
+      "meaning": "Geometry constrained by published/direct survey measurements or authoritative plan dimensions.",
+      "allowed_mutation": "DERIVED_GEOMETRY"
+    },
+    {
+      "id": "E4",
+      "name": "MAPPED_ELEMENT",
+      "meaning": "Specific slab/stone/object boundary mapped with direct metric evidence or convergent survey + image geometry.",
+      "allowed_mutation": "MAPPED_ELEMENT"
+    },
+    {
+      "id": "E5",
+      "name": "INDEPENDENTLY_VALIDATED",
+      "meaning": "Mapped element independently reproduced or cross-validated by a second measurement modality/team.",
+      "allowed_mutation": "VALIDATED_ELEMENT"
+    }
+  ]
+}

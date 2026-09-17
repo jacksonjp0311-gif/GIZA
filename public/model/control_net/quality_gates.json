@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "gates": {
+    "orientation_prior": {
+      "min_independent_sides": 4,
+      "require_side_residuals": true,
+      "require_source_observations": true,
+      "allow_geometry_mutation": false
+    },
+    "projective_camera_dlt": {
+      "min_fit_controls": 6,
+      "min_holdout_controls": 2,
+      "max_fit_rmse_px": 2.0,
+      "max_holdout_rmse_px": 3.0,
+      "require_3d_spread_review": true,
+      "require_pixel_spread_review": true,
+      "calibrated_pose_claim_allowed": false,
+      "promotion_cap": "PROJECTIVE_REGISTRATION_CANDIDATE"
+    },
+    "survey_to_local_transform": {
+      "min_horizontal_controls": 2,
+      "require_independent_holdout": true,
+      "require_crs_definition": true,
+      "require_vertical_datum_for_z": true,
+      "status": "BLOCKED_TRANSLATION_UNRESOLVED"
+    },
+    "photo_geometry_promotion": {
+      "require_registration_review": true,
+      "require_residual_receipt": true,
+      "require_holdout": true,
+      "require_field_or_vault_review": true,
+      "automatic_write": false
+    }
+  },
+  "hard_rules": [
+    "A projective camera matrix is not a calibrated Euclidean pose.",
+    "Survey point variants remain distinct until reconciled by an explicit adjustment.",
+    "Orientation-only control cannot establish translation or elevation.",
+    "No photo-derived geometry promotion occurs in CONTROL NET v0.9.8."
+  ]
+}

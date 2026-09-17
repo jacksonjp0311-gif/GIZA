@@ -1,0 +1,888 @@
+{
+  "interfaces": [
+    {
+      "id": "if.upper.1",
+      "name": "Upper route 1",
+      "kind": "structural",
+      "a": "part.upper.entrance.reconstructed",
+      "b": "part.upper.entrance.existing",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.2",
+      "name": "Upper route 2",
+      "kind": "structural",
+      "a": "part.upper.entrance.existing",
+      "b": "part.upper.roll",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.3",
+      "name": "Upper route 3",
+      "kind": "structural",
+      "a": "part.upper.roll",
+      "b": "part.upper.portcullis.slab",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.4",
+      "name": "Upper route 4",
+      "kind": "structural",
+      "a": "part.upper.portcullis.slab",
+      "b": "part.upper.horizontal.kj",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.5",
+      "name": "Upper route 5",
+      "kind": "structural",
+      "a": "part.upper.horizontal.kj",
+      "b": "part.upper.horizontal.jg",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.6",
+      "name": "Upper route 6",
+      "kind": "structural",
+      "a": "part.upper.horizontal.jg",
+      "b": "part.upper.horizontal.gh",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.upper.7",
+      "name": "Upper route 7",
+      "kind": "structural",
+      "a": "part.upper.horizontal.gh",
+      "b": "part.burial.chamber",
+      "semantic_role": "passage_continuity",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.1",
+      "name": "Lower route 1",
+      "kind": "structural",
+      "a": "part.lower.entrance.reconstructed",
+      "b": "part.lower.entrance.existing",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.2",
+      "name": "Lower route 2",
+      "kind": "structural",
+      "a": "part.lower.entrance.existing",
+      "b": "part.lower.horizontal.bc",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.3",
+      "name": "Lower route 3",
+      "kind": "structural",
+      "a": "part.lower.horizontal.bc",
+      "b": "part.lower.horizontal.ce",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.4",
+      "name": "Lower route 4",
+      "kind": "structural",
+      "a": "part.lower.horizontal.ce",
+      "b": "part.lower.connect.ef",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.5",
+      "name": "Lower route 5",
+      "kind": "structural",
+      "a": "part.lower.connect.ef",
+      "b": "part.lower.connect.fg",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.6",
+      "name": "Lower route 6",
+      "kind": "structural",
+      "a": "part.lower.connect.fg",
+      "b": "part.upper.horizontal.jg",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.7",
+      "name": "Lower route 7",
+      "kind": "structural",
+      "a": "part.lower.horizontal.bc",
+      "b": "part.lower.branch.cd",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.lower.8",
+      "name": "Lower route 8",
+      "kind": "structural",
+      "a": "part.lower.branch.cd",
+      "b": "part.lower.chamber",
+      "semantic_role": "passage_continuity_or_branch",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Connectivity from historical passage topology.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.burial.gable",
+      "name": "Burial wall-to-gable envelope",
+      "kind": "structural",
+      "a": "part.burial.chamber",
+      "b": "part.burial.gable_envelope",
+      "semantic_role": "roof_interface",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie describes rock-cut walls with limestone gabled roof.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.burial.floor",
+      "name": "Burial chamber floor paving",
+      "kind": "structural",
+      "a": "part.burial.chamber",
+      "b": "part.burial.floor_paving",
+      "semantic_role": "floor_interface",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie describes partial fine-limestone paving.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "if.coffer.body_lid",
+      "name": "Sarcophagus body/lid",
+      "kind": "mechanical",
+      "a": "part.sarcophagus.body",
+      "b": "part.sarcophagus.lid",
+      "semantic_role": "sliding_lid_interface",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie describes sliding lid and measured lid/body.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.1.shaft-helix",
+      "name": "Alpha 1 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.alpha.1",
+      "b": "part.helix.alpha.1",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.1.shaft-connector",
+      "name": "Alpha 1 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.alpha.1",
+      "b": "part.connector.alpha.1",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.1.connector-terminal",
+      "name": "Alpha 1 terminal link",
+      "kind": "logical",
+      "a": "part.connector.alpha.1",
+      "b": "part.terminal.alpha",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.2.shaft-helix",
+      "name": "Alpha 2 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.alpha.2",
+      "b": "part.helix.alpha.2",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.2.shaft-connector",
+      "name": "Alpha 2 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.alpha.2",
+      "b": "part.connector.alpha.2",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.2.connector-terminal",
+      "name": "Alpha 2 terminal link",
+      "kind": "logical",
+      "a": "part.connector.alpha.2",
+      "b": "part.terminal.alpha",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.3.shaft-helix",
+      "name": "Alpha 3 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.alpha.3",
+      "b": "part.helix.alpha.3",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.3.shaft-connector",
+      "name": "Alpha 3 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.alpha.3",
+      "b": "part.connector.alpha.3",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.3.connector-terminal",
+      "name": "Alpha 3 terminal link",
+      "kind": "logical",
+      "a": "part.connector.alpha.3",
+      "b": "part.terminal.alpha",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.4.shaft-helix",
+      "name": "Alpha 4 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.alpha.4",
+      "b": "part.helix.alpha.4",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.4.shaft-connector",
+      "name": "Alpha 4 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.alpha.4",
+      "b": "part.connector.alpha.4",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.alpha.4.connector-terminal",
+      "name": "Alpha 4 terminal link",
+      "kind": "logical",
+      "a": "part.connector.alpha.4",
+      "b": "part.terminal.alpha",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.1.shaft-helix",
+      "name": "Beta 1 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.beta.1",
+      "b": "part.helix.beta.1",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.1.shaft-connector",
+      "name": "Beta 1 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.beta.1",
+      "b": "part.connector.beta.1",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.1.connector-terminal",
+      "name": "Beta 1 terminal link",
+      "kind": "logical",
+      "a": "part.connector.beta.1",
+      "b": "part.terminal.beta",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.2.shaft-helix",
+      "name": "Beta 2 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.beta.2",
+      "b": "part.helix.beta.2",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.2.shaft-connector",
+      "name": "Beta 2 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.beta.2",
+      "b": "part.connector.beta.2",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.2.connector-terminal",
+      "name": "Beta 2 terminal link",
+      "kind": "logical",
+      "a": "part.connector.beta.2",
+      "b": "part.terminal.beta",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.3.shaft-helix",
+      "name": "Beta 3 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.beta.3",
+      "b": "part.helix.beta.3",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.3.shaft-connector",
+      "name": "Beta 3 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.beta.3",
+      "b": "part.connector.beta.3",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.3.connector-terminal",
+      "name": "Beta 3 terminal link",
+      "kind": "logical",
+      "a": "part.connector.beta.3",
+      "b": "part.terminal.beta",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.4.shaft-helix",
+      "name": "Beta 4 shaft/helix",
+      "kind": "logical",
+      "a": "part.shaft.beta.4",
+      "b": "part.helix.beta.4",
+      "semantic_role": "claimed_coaxial_relationship",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.4.shaft-connector",
+      "name": "Beta 4 shaft/connector",
+      "kind": "logical",
+      "a": "part.shaft.beta.4",
+      "b": "part.connector.beta.4",
+      "semantic_role": "claimed_flow_or_access_path",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "int.claim.beta.4.connector-terminal",
+      "name": "Beta 4 terminal link",
+      "kind": "logical",
+      "a": "part.connector.beta.4",
+      "b": "part.terminal.beta",
+      "semantic_role": "claimed_terminal_connection",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Claimed/model adjacency; not independently verified.",
+        "requirement_ids": [
+          "req.truth"
+        ],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "ports": [],
+  "mates": []
+}

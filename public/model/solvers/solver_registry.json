@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "invariant": "A solver consumes a frozen geometry/evidence revision and emits SIMULATED output. It cannot mutate source geometry or raise evidence maturity by itself.",
+  "required_run_fields": [
+    "run_id",
+    "solver_id",
+    "solver_version",
+    "geometry_revision",
+    "geometry_hash",
+    "input_hash",
+    "parameters",
+    "controls",
+    "outputs",
+    "uncertainty",
+    "status",
+    "created_at"
+  ],
+  "solvers": [
+    {
+      "id": "solver.gravity",
+      "name": "Gravity Forward Model",
+      "purpose": "Predict density-contrast gravity signatures at observation points",
+      "contract": "contracts/gravity.json"
+    },
+    {
+      "id": "solver.acoustic",
+      "name": "Acoustic Modal Model",
+      "purpose": "Estimate geometry/material-dependent mode families and perturbation sensitivity",
+      "contract": "contracts/acoustic.json"
+    },
+    {
+      "id": "solver.em",
+      "name": "Electromagnetic / Dielectric Model",
+      "purpose": "Frequency-domain field response for stated materials and external excitation",
+      "contract": "contracts/em.json"
+    },
+    {
+      "id": "solver.hydraulic",
+      "name": "Hydraulic Connectivity Model",
+      "purpose": "Head, pressure, flow-path and connectivity tests for explicit fluid hypotheses",
+      "contract": "contracts/hydraulic.json"
+    },
+    {
+      "id": "solver.geomechanics",
+      "name": "Geomechanics Model",
+      "purpose": "Stress, stability and cavity plausibility screening under stated material laws",
+      "contract": "contracts/geomechanics.json"
+    },
+    {
+      "id": "solver.muography",
+      "name": "Muon Transmission / Tomography Model",
+      "purpose": "Forward predict line-integrated density and detector response for declared detector geometry",
+      "contract": "contracts/muography.json"
+    },
+    {
+      "id": "solver.strata",
+      "name": "STRATA Screening Orchestrator",
+      "purpose": "Combined first-order geomechanics overburden and conditional hydrostatic-head screening",
+      "contract": "contracts/strata.json"
+    }
+  ]
+}

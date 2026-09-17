@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "method": "Exact shipped HTML/CSS/JS loaded from disk; real Node loopback API via host bridge. Managed browser forbids URL navigation. No mocked API responses.",
+  "checks": [
+    "10 source landmarks rendered",
+    "freeze and fit blocked without source",
+    "synthetic test 6 controls/3 untouched holdouts",
+    "demo does not mutate archaeological experiment",
+    "zero JavaScript errors",
+    "390px responsive view has no document overflow"
+  ],
+  "javascript_errors": [],
+  "mobile": {
+    "width": 390,
+    "body": 390
+  }
+}

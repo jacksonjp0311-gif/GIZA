@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "rule": "World anchors are candidates, not image matches. External survey control supersedes derived model anchors when registered.",
+  "count": 33,
+  "anchors": [
+    {
+      "id": "khafre.base.NW",
+      "target_id": "part.pyramid.khafre",
+      "xyz_m": [
+        -107.63122999999999,
+        107.63122999999999,
+        0
+      ],
+      "truth_class": "DERIVED_PETRIE_ENVELOPE",
+      "anchor_kind": "ORIGINAL_BASE_CORNER_CANDIDATE",
+      "image_match_status": "UNMATCHED"
+    },
+    {
+      "id": "khafre.base.NE",
+      "target_id": "part.pyramid.khafre",
+      "xyz_m": [
+        107.63122999999999,
+        107.63122999999999,
+        0
+      ],
+      "truth_class": "DERIVED_PETRIE_ENVELOPE",
+      "anchor_kind": "ORIGINAL_BASE_CORNER_CANDIDATE",
+      "image_match_status": "UNMATCHED"
+    },
+    {
+      "id": "khafre.base.SE",
+      "target_id": "part.pyramid.khafre",
+      "xyz_m": [
+        107.63122999999999,
+        -107.63122999999999,
+        0
+      ],
+      "truth_class": "DERIVED_PETRIE_ENVELOPE",
+      "anchor_kind": "ORIGINAL_BASE_CORNER_CANDIDATE",
+      "image_match_status": "UNMATCHED"
+    },
+    {
+      "id": "khafre.base.SW",
+      "target_id": "part.pyramid.khafre",
+      "xyz_m": [
+        -107.63122999999999,
+        -107.63122999999999,
+        0
+      ],
+      "truth_class": "DERIVED_PETRIE_ENVELOPE",
+      "anchor_kind": "ORIGINAL_BASE_CORNER_CANDIDATE",
+      "image_match_status": "UNMATCHED"
+    },
+    {
+      "id": "khafre.summit",
+      "target_id": "part.pyramid.khafre",
+      "xyz_m": [
+        0,
+        0,
+        143.8656
+      ],
+      "truth_class": "DERIVED_PETRIE_ENVELOPE",
+      "anchor_kind": "SUMMIT_CANDIDATE",
+      "image_match_status": "UNMATCHED"
+    },
+    {
+      "id": "burial.corner.1",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        1.4541499999999994,
+        1.913934999999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.2",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        1.4541499999999994,
+        1.913934999999984,
+        1.6925600000000003
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.3",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        1.4541499999999994,
+        6.888524999999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.4",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        1.4541499999999994,
+        6.888524999999984,
+        1.6925600000000003
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.5",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        15.618459999999999,
+        1.913934999999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.6",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        15.618459999999999,
+        1.913934999999984,
+        1.6925600000000003
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.7",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        15.618459999999999,
+        6.888524999999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "burial.corner.8",
+      "target_id": "part.burial.chamber",
+      "xyz_m": [
+        15.618459999999999,
+        6.888524999999984,
+        1.6925600000000003
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.1",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        2.5463500000000003,
+        3.868274499999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.2",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        2.5463500000000003,
+        3.868274499999984,
+        -2.581752
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.3",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        2.5463500000000003,
+        4.934185499999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.4",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        2.5463500000000003,
+        4.934185499999984,
+        -2.581752
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.5",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        5.179822000000001,
+        3.868274499999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.6",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        5.179822000000001,
+        3.868274499999984,
+        -2.581752
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.7",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        5.179822000000001,
+        4.934185499999984,
+        -3.55
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "sarcophagus.corner.8",
+      "target_id": "part.sarcophagus.body",
+      "xyz_m": [
+        5.179822000000001,
+        4.934185499999984,
+        -2.581752
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.1",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        0.9769350000000001,
+        75.04468499999999,
+        -15.34
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.2",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        0.9769350000000001,
+        75.04468499999999,
+        -12.940000000000001
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.3",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        0.9769350000000001,
+        78.177775,
+        -15.34
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.4",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        0.9769350000000001,
+        78.177775,
+        -12.940000000000001
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.5",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        11.430304999999997,
+        75.04468499999999,
+        -15.34
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.6",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        11.430304999999997,
+        75.04468499999999,
+        -12.940000000000001
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.7",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        11.430304999999997,
+        78.177775,
+        -15.34
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "lower.corner.8",
+      "target_id": "part.lower.chamber",
+      "xyz_m": [
+        11.430304999999997,
+        78.177775,
+        -12.940000000000001
+      ],
+      "truth_class": "DERIVED_MODEL_ANCHOR",
+      "anchor_kind": "BOX_CORNER",
+      "image_match_status": "UNMATCHED",
+      "guard": "Candidate world anchor only; image correspondence must be manually/algorithmically reviewed."
+    },
+    {
+      "id": "part.upper.entrance.existing.centerline.1",
+      "target_id": "part.upper.entrance.existing",
+      "xyz_m": [
+        12.453619999999999,
+        95.19039585933643,
+        11.54
+      ],
+      "truth_class": "DERIVED_SURVEY_PATH_ANCHOR",
+      "anchor_kind": "CENTERLINE_ENDPOINT",
+      "image_match_status": "UNMATCHED",
+      "guard": "Centerline is not a visible wall corner unless independently matched."
+    },
+    {
+      "id": "part.upper.entrance.existing.centerline.2",
+      "target_id": "part.upper.entrance.existing",
+      "xyz_m": [
+        12.453619999999999,
+        64.86122999999998,
+        -3.55
+      ],
+      "truth_class": "DERIVED_SURVEY_PATH_ANCHOR",
+      "anchor_kind": "CENTERLINE_ENDPOINT",
+      "image_match_status": "UNMATCHED",
+      "guard": "Centerline is not a visible wall corner unless independently matched."
+    },
+    {
+      "id": "part.upper.horizontal.gh.centerline.1",
+      "target_id": "part.upper.horizontal.gh",
+      "xyz_m": [
+        12.453619999999999,
+        46.26122999999999,
+        -3.55
+      ],
+      "truth_class": "DERIVED_SURVEY_PATH_ANCHOR",
+      "anchor_kind": "CENTERLINE_ENDPOINT",
+      "image_match_status": "UNMATCHED",
+      "guard": "Centerline is not a visible wall corner unless independently matched."
+    },
+    {
+      "id": "part.upper.horizontal.gh.centerline.2",
+      "target_id": "part.upper.horizontal.gh",
+      "xyz_m": [
+        12.453619999999999,
+        6.891229999999993,
+        -3.55
+      ],
+      "truth_class": "DERIVED_SURVEY_PATH_ANCHOR",
+      "anchor_kind": "CENTERLINE_ENDPOINT",
+      "image_match_status": "UNMATCHED",
+      "guard": "Centerline is not a visible wall corner unless independently matched."
+    }
+  ]
+}

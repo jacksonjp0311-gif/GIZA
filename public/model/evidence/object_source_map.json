@@ -1,0 +1,1166 @@
+{
+  "version": "1.0.0",
+  "canon_phase": "CANON-01",
+  "rule": "Mappings express what a source can support for an object; they do not automatically mutate geometry.",
+  "part_count": 56,
+  "parts": {
+    "part.plateau.reference": [
+      {
+        "source_id": "src.aera.gpmp",
+        "role": "REGISTRATION_CONTROL",
+        "write_authority": "CONTROL_NETWORK_REFERENCE"
+      },
+      {
+        "source_id": "src.nasa.srtmgl1v003",
+        "role": "COARSE_TERRAIN",
+        "write_authority": "CONTEXT_ONLY"
+      },
+      {
+        "source_id": "src.copernicus.dem",
+        "role": "COARSE_TERRAIN",
+        "write_authority": "CONTEXT_ONLY"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGY_CONTEXT",
+        "write_authority": "CONTEXT_ONLY"
+      }
+    ],
+    "part.pyramid.khafre": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "PRIMARY_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.egypt_ministry",
+        "role": "OFFICIAL_CONTEXT",
+        "write_authority": "SUMMARY_ONLY"
+      },
+      {
+        "source_id": "src.digitalgiza.giza3d",
+        "role": "VISUAL_CROSSCHECK",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.smithsonian.elisofon.khafre",
+        "role": "HISTORICAL_PHOTO",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.scidep2025",
+        "role": "MODERN_CONTEXT",
+        "write_authority": "SUMMARY_ONLY"
+      }
+    ],
+    "part.casing.granite.lower": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.npj2020.materials",
+        "role": "MATERIAL_CONTEXT",
+        "write_authority": "MATERIAL_PRIOR"
+      },
+      {
+        "source_id": "src.commons.khafre",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.entrance.reconstructed": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.entrance.existing": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.roll": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.portcullis.slab": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.horizontal.kj": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.horizontal.jg": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.upper.horizontal.gh": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.entrance.reconstructed": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.entrance.existing": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.horizontal.bc": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.horizontal.ce": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.turning_recess": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.branch.cd": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.chamber": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.mr1966.plate009",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.portcullis.slab": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "HISTORICAL_DESCRIPTION",
+        "write_authority": "INSUFFICIENT_FOR_EXACT_GEOMETRY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      }
+    ],
+    "part.lower.connect.ef": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.lower.connect.fg": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.legon1989",
+        "role": "GEOMETRIC_CROSSCHECK",
+        "write_authority": "DERIVED_ONLY"
+      },
+      {
+        "source_id": "src.mr1966.plate008",
+        "role": "PLAN_SECTION_CROSSCHECK",
+        "write_authority": "REVIEW_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "EXCAVATION_DESCRIPTION",
+        "write_authority": "CROSSCHECK"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      }
+    ],
+    "part.burial.chamber": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "ARCHITECTURAL_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      }
+    ],
+    "part.burial.gable_envelope": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "ARCHITECTURAL_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      }
+    ],
+    "part.burial.floor_paving": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "PRIMARY_METRIC",
+        "write_authority": "DIRECT_SURVEY_OR_DERIVED"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "PHOTO_CANDIDATE",
+        "write_authority": "CALIBRATED_ONLY"
+      },
+      {
+        "source_id": "src.hoelscher1912",
+        "role": "ARCHITECTURAL_CROSSCHECK",
+        "write_authority": "CROSSCHECK"
+      }
+    ],
+    "part.sarcophagus.body": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "DIRECT_DIMENSIONS",
+        "write_authority": "MEASURED_OBJECT"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "DIRECT_PHOTO_IDENTITY",
+        "write_authority": "VISUAL_EVIDENCE"
+      },
+      {
+        "source_id": "src.smithsonian.elisofon.khafre",
+        "role": "HISTORICAL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.sarcophagus.lid": [
+      {
+        "source_id": "src.petrie1883",
+        "role": "DIRECT_DIMENSIONS",
+        "write_authority": "MEASURED_OBJECT"
+      },
+      {
+        "source_id": "src.commons.khafre.interior",
+        "role": "DIRECT_PHOTO_IDENTITY",
+        "write_authority": "VISUAL_EVIDENCE"
+      },
+      {
+        "source_id": "src.smithsonian.elisofon.khafre",
+        "role": "HISTORICAL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.upper.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.upper.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.upper.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.upper.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.upper.5": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.alpha.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.alpha.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.alpha.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.alpha.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.alpha.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.alpha.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.alpha.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.alpha.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.alpha.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.alpha.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.alpha.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.alpha.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.beta.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.beta.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.beta.1": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.beta.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.beta.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.beta.2": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.beta.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.beta.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.beta.3": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.shaft.beta.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.helix.beta.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.connector.beta.4": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.terminal.alpha": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ],
+    "part.terminal.beta": [
+      {
+        "source_id": "src.ahrama.deep_claim_2025",
+        "role": "CLAIM_PROVENANCE",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+        "role": "METHOD_RISK_CONTEXT",
+        "write_authority": "NONE"
+      },
+      {
+        "source_id": "src.aigner1983",
+        "role": "GEOLOGICAL_NULL_CONTEXT",
+        "write_authority": "NONE"
+      }
+    ]
+  },
+  "future_scope": {
+    "khafre_complex": [
+      "src.mr1966.plate005",
+      "src.hoelscher1912",
+      "src.digitalgiza.home",
+      "src.digitalgiza.khafre.photos"
+    ],
+    "khafre_pyramid_temple": [
+      "src.mr1966.plate013",
+      "src.digitalgiza.home"
+    ],
+    "khafre_valley_temple": [
+      "src.mr1966.plate014",
+      "src.opencontext.arce_sphinx",
+      "src.aera.sphinx_stone_mapping"
+    ],
+    "sphinx_and_sphinx_temple": [
+      "src.opencontext.arce_sphinx",
+      "src.aera.sphinx_stone_mapping",
+      "src.zenodo.arce_media"
+    ],
+    "khafre_quarry": [
+      "src.digitalgiza.khafre_quarry",
+      "src.npj2020.materials",
+      "src.aigner1983"
+    ],
+    "khafre_subsidiary_pyramid": [
+      "src.hoelscher1912",
+      "src.digitalgiza.giia"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "policy": "Claims about hidden structure are tracked separately from evidence. Publication status and method lineage affect claim credibility but do not by themselves prove or disprove a specific geometry.",
+  "claims": [
+    {
+      "id": "claim.method.sar_doppler_tomography",
+      "title": "SAR Doppler / micro-motion tomography method lineage used in pyramid hidden-structure claims",
+      "target": "pyramid_internal_structure",
+      "status": "METHOD_PUBLICATION_RETRACTED",
+      "source_ids": [
+        "src.biondi2022.sar",
+        "src.mdpi2026.sar_retraction"
+      ],
+      "peer_review_status": "RETRACTED",
+      "retraction_date": "2026-08-10",
+      "publisher_reason_summary": "Publisher investigation reported serious methodological flaws and statistical errors undermining the scientific conclusions. Authors disagreed with the retraction.",
+      "geometry_write_authority": "NONE",
+      "model_policy": "No GIZA geometry may be promoted from this method lineage without independent, non-retracted validation and raw-data reproducibility."
+    },
+    {
+      "id": "claim.deep_geometry.khafre",
+      "title": "Large deep subsurface Khafre geometry currently represented in GIZA",
+      "target": "deep_claim_layer",
+      "status": "UNVERIFIED_PUBLIC_CLAIM",
+      "source_ids": [],
+      "peer_review_status": "NO_PEER_REVIEWED_KHAFRE_RESULT_INGESTED",
+      "geometry_write_authority": "NONE",
+      "model_policy": "Remain UNVERIFIED. Forward simulations are conditional consequences only. Independent survey/geophysics evidence required for promotion."
+    }
+  ]
+}

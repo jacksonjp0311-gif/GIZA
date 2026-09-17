@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "gates": [
+    {
+      "candidate_id": "bytes.petrie1883.public_domain_pdf",
+      "gate": "ALLOW_LOCAL_ACQUISITION",
+      "reason": "Underlying work and Commons scan marked public domain.",
+      "bundle_policy": "ALLOWED_IF_ACTUAL_BYTES_ACQUIRED_AND_HASHED"
+    },
+    {
+      "candidate_id": "bytes.perring1840.vol2_heidelberg",
+      "gate": "ACQUIRE_ONLY_AFTER_PROVIDER_TERMS_CHECK",
+      "reason": "Underlying 1840 work is public domain; Heidelberg digital reproduction terms must be respected.",
+      "bundle_policy": "DO_NOT_BUNDLE_FROM_HEIDELBERG_UNTIL_TERMS_REVIEW"
+    },
+    {
+      "candidate_id": "bytes.hoelscher1912.heidelberg",
+      "gate": "BLOCK_IMAGE_BUNDLE",
+      "reason": "Heidelberg facsimile pages are marked Image: License: In Copyright.",
+      "bundle_policy": "OCR_METADATA_REFERENCE_ONLY"
+    },
+    {
+      "candidate_id": "bytes.arce.khafre_valley_1_100",
+      "gate": "ALLOW_ITEM_LEVEL_CC_BY_AFTER_URI_RESOLUTION",
+      "reason": "Open Context project uses item-level attribution/licensing; exact drawing record must be resolved.",
+      "bundle_policy": "ATTRIBUTION_REQUIRED_PER_ITEM"
+    }
+  ]
+}

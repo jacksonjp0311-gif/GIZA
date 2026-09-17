@@ -1,0 +1,31 @@
+{
+  "benchmark_id": "benchmark.acoustic.analytic.v1",
+  "solver_id": "solver.acoustic",
+  "provenance_class": "SIMULATED",
+  "sound_speed_m_s": 343.42,
+  "tests": [
+    {
+      "id": "open_open_tube_fundamental",
+      "expected_hz": 17.171,
+      "actual_hz": 17.171,
+      "relative_error": 0,
+      "pass": true
+    },
+    {
+      "id": "rectangular_cavity_100",
+      "expected_hz": 17.171,
+      "actual_hz": 17.171000000000003,
+      "relative_error": 2.0690196720054168e-16,
+      "pass": true
+    },
+    {
+      "id": "closed_open_tube_fundamental",
+      "expected_hz": 8.5855,
+      "actual_hz": 8.5855,
+      "relative_error": 0,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "created_at": "2026-09-16T10:22:23.201Z"
+}

@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "node_count": 6,
+  "edge_count": 5,
+  "rule": "Edges never imply pixel overlap unless feature matching or camera solving proves it.",
+  "nodes": [
+    {
+      "id": "photo.kh.exterior",
+      "title": "Pyramid of Khafre — exterior",
+      "kind": "photograph",
+      "view_class": "EXTERIOR_OBLIQUE_UNCALIBRATED",
+      "targets": [
+        "part.pyramid.khafre",
+        "part.casing.granite.lower"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_SOLVED",
+      "photogrammetry_role": "CANDIDATE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Khafre.JPG",
+      "license": "CC BY-SA 3.0 / GFDL; attribution required — see source page"
+    },
+    {
+      "id": "photo.kh.passage",
+      "title": "Khafre interior passage",
+      "kind": "photograph",
+      "view_class": "INTERIOR_PASSAGE_UNCALIBRATED",
+      "targets": [
+        "part.upper.entrance.existing",
+        "part.upper.horizontal.kj",
+        "part.upper.horizontal.jg",
+        "part.upper.horizontal.gh",
+        "part.lower.entrance.existing",
+        "part.lower.horizontal.bc",
+        "part.lower.horizontal.ce",
+        "part.lower.connect.ef",
+        "part.lower.connect.fg"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_SOLVED",
+      "photogrammetry_role": "CANDIDATE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:04_khafre_passage.jpg",
+      "license": "Copyrighted free use; unrestricted reuse per source permission"
+    },
+    {
+      "id": "photo.kh.chamber",
+      "title": "Khafre burial chamber",
+      "kind": "photograph",
+      "view_class": "BURIAL_CHAMBER_WIDE_UNCALIBRATED",
+      "targets": [
+        "part.burial.chamber",
+        "part.burial.gable_envelope",
+        "part.burial.floor_paving"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_SOLVED",
+      "photogrammetry_role": "CANDIDATE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:06_khafre_chamber.jpg",
+      "license": "Copyrighted free use; unrestricted reuse per source permission"
+    },
+    {
+      "id": "photo.kh.coffer",
+      "title": "Khafre granite sarcophagus",
+      "kind": "photograph",
+      "view_class": "SARCOPHAGUS_CLOSE_UNCALIBRATED",
+      "targets": [
+        "part.sarcophagus.body",
+        "part.sarcophagus.lid"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_SOLVED",
+      "photogrammetry_role": "CANDIDATE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:07_khafre_coffer.jpg",
+      "license": "Copyrighted free use; unrestricted reuse per source permission"
+    },
+    {
+      "id": "photo.kh.belzoni",
+      "title": "Khafre interior — Belzoni inscription",
+      "kind": "photograph",
+      "view_class": "BURIAL_CHAMBER_DETAIL_UNCALIBRATED",
+      "targets": [
+        "part.burial.chamber"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_SOLVED",
+      "photogrammetry_role": "CANDIDATE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "diagram.kh.section",
+      "title": "Khafre reference section",
+      "kind": "diagram",
+      "view_class": "REFERENCE_DIAGRAM_NOT_CAMERA",
+      "targets": [
+        "part.pyramid.khafre",
+        "part.upper.entrance.existing",
+        "part.lower.entrance.existing",
+        "part.lower.chamber",
+        "part.burial.chamber"
+      ],
+      "camera_pose": null,
+      "intrinsics": null,
+      "calibration_status": "NOT_APPLICABLE",
+      "photogrammetry_role": "SEMANTIC_REFERENCE",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Chephren-Pyramide.png",
+      "license": "See Wikimedia Commons source page"
+    }
+  ],
+  "edges": [
+    {
+      "a": "photo.kh.chamber",
+      "b": "photo.kh.belzoni",
+      "relation": "SHARED_TARGET",
+      "target": "part.burial.chamber",
+      "overlap_status": "NEEDS_FEATURE_MATCH",
+      "photogrammetry_use": "CANDIDATE_ONLY"
+    },
+    {
+      "a": "photo.kh.chamber",
+      "b": "photo.kh.coffer",
+      "relation": "SAME_ROOM_CONTEXT",
+      "target": "part.burial.chamber",
+      "overlap_status": "NOT_ESTABLISHED",
+      "photogrammetry_use": "NO_AUTOMATIC_PAIR"
+    },
+    {
+      "a": "photo.kh.coffer",
+      "b": "photo.kh.belzoni",
+      "relation": "SAME_ROOM_CONTEXT",
+      "target": "part.burial.chamber",
+      "overlap_status": "NOT_ESTABLISHED",
+      "photogrammetry_use": "NO_AUTOMATIC_PAIR"
+    },
+    {
+      "a": "photo.kh.passage",
+      "b": "diagram.kh.section",
+      "relation": "SEMANTIC_TOPOLOGY_REFERENCE",
+      "target": "khafre_interior",
+      "overlap_status": "NOT_A_CAMERA_PAIR",
+      "photogrammetry_use": "NONE"
+    },
+    {
+      "a": "photo.kh.exterior",
+      "b": "diagram.kh.section",
+      "relation": "MONUMENT_REFERENCE",
+      "target": "part.pyramid.khafre",
+      "overlap_status": "NOT_A_CAMERA_PAIR",
+      "photogrammetry_use": "NONE"
+    }
+  ],
+  "upgrade_gate": {
+    "E1": "calibrated same-plane measurement with uncertainty",
+    "E2": "multi-view camera solve + scale lock + reprojection QA",
+    "camera_pose_required_for_3d_frustum": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "candidate_count": 4,
+  "guard": "A remotely located downloadable object is not LOCAL_CACHED and not RAW_BYTE_VERIFIED. Only bytes present in the release with a computed SHA-256 can enter registration.",
+  "candidates": [
+    {
+      "id": "bytes.petrie1883.public_domain_pdf",
+      "source_id": "src.petrie1883",
+      "title": "The Pyramids and Temples of Gizeh (1883 scan)",
+      "content_authority": "PRIMARY_HISTORICAL_SURVEY",
+      "provider": "Petrie Project / Wikimedia Commons / Internet Archive",
+      "landing_url": "https://commons.wikimedia.org/wiki/File:The_pyramids_and_temples_of_Gizeh_(IA_cu31924012038927).pdf",
+      "byte_url": "https://pdfs.petrieproject.com/cu31924012038927.pdf",
+      "rights_state": "PUBLIC_DOMAIN",
+      "acquisition_state": "REMOTE_FILE_IDENTITY_LOCKED_LOCAL_BYTES_UNAVAILABLE",
+      "reported_page_count": 315,
+      "reported_size_mb": 8.87,
+      "local_path": null,
+      "sha256": null,
+      "raw_byte_verified": false,
+      "priority": "P0",
+      "registration_value": [
+        "Plate VI Granite Temple plan",
+        "Plate VII sections",
+        "Khafre temple/causeway text",
+        "historical survey crosscheck"
+      ],
+      "alternate_byte_urls": [
+        "https://archive.org/download/cu31924012038927/cu31924012038927.pdf"
+      ],
+      "remote_metadata_fingerprint_id": "fingerprint.petrie1883.wikimedia_current",
+      "current_original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_pyramids_and_temples_of_Gizeh_%28IA_cu31924012038927%29.pdf"
+    },
+    {
+      "id": "bytes.perring1840.vol2_heidelberg",
+      "source_id": "src.perring1840.khafre",
+      "title": "The Pyramids of Gizeh Part II: Second and Third Pyramids",
+      "content_authority": "PRIMARY_HISTORICAL_SURVEY",
+      "provider": "Heidelberg University Library",
+      "landing_url": "https://digi.ub.uni-heidelberg.de/diglit/perring1840bd2",
+      "iiif_manifest_url": "https://digi.ub.uni-heidelberg.de/diglit/iiif/perring1840bd2/manifest.json",
+      "rights_state": "PUBLIC_DOMAIN_UNDERLYING_WORK_DIGITAL_REPRODUCTION_TERMS_REVIEW",
+      "acquisition_state": "REMOTE_IIIF_MANIFEST_LOCATED_NOT_CACHED",
+      "reported_page_count": null,
+      "local_path": null,
+      "sha256": null,
+      "raw_byte_verified": false,
+      "priority": "P0",
+      "registration_value": [
+        "Plate I section and plan",
+        "Plate II passages/chambers",
+        "Plate III Belzoni chamber",
+        "Plate IV lower chamber and portcullis"
+      ]
+    },
+    {
+      "id": "bytes.hoelscher1912.heidelberg",
+      "source_id": "src.hoelscher1912",
+      "title": "Das Grabdenkmal des K\u00f6nigs Chephren",
+      "content_authority": "PRIMARY_EXCAVATION_MONOGRAPH",
+      "provider": "Heidelberg University Library",
+      "landing_url": "https://digi.ub.uni-heidelberg.de/diglit/hoelscher1912",
+      "iiif_manifest_url": "https://digi.ub.uni-heidelberg.de/diglit/iiif/hoelscher1912/manifest.json",
+      "rights_state": "DIGITAL_IMAGES_MARKED_IN_COPYRIGHT",
+      "acquisition_state": "RIGHTS_BLOCKED_FOR_BUNDLED_FACSIMILE",
+      "local_path": null,
+      "sha256": null,
+      "raw_byte_verified": false,
+      "priority": "P0_METADATA_OCR_ONLY",
+      "registration_value": [
+        "Plate II site plan",
+        "Plate III Pyramid Temple overview",
+        "Plate X causeway/gateway sections",
+        "Valley Temple hall reconstruction",
+        "excavation find context"
+      ],
+      "allowed_mode": "REMOTE_OCR_METADATA_AND_MANIFEST_REFERENCE_ONLY"
+    },
+    {
+      "id": "bytes.arce.khafre_valley_1_100",
+      "source_id": "src.opencontext.arce_sphinx",
+      "title": "ARCE Sphinx Project detailed Khafre Valley Temple mapping",
+      "content_authority": "MODERN_ARCHAEOLOGICAL_SURVEY_ARCHIVE",
+      "provider": "Open Context / AERA / ARCE",
+      "landing_url": "https://opencontext.org/projects/141e814a-ba2d-4560-879f-80f1afb019e9",
+      "rights_state": "CC_BY_4_0_ITEM_URI_ATTRIBUTION_REQUIRED",
+      "acquisition_state": "ITEM_URI_AND_EXACT_DRAWING_BYTES_UNRESOLVED",
+      "reported_scale": "1:100",
+      "local_path": null,
+      "sha256": null,
+      "raw_byte_verified": false,
+      "priority": "P0",
+      "registration_value": [
+        "stone-by-stone Valley Temple map",
+        "Sphinx/Valley Temple common survey context",
+        "modern metric wall/opening registration"
+      ]
+    }
+  ]
+}

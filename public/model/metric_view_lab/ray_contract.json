@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "metric_rays_enabled": false,
+  "enable_only_when": [
+    "at least one room/temple plan has checksum-bound legal local source bytes",
+    "wall polygons/openings are registered into a declared metric frame",
+    "registration controls and holdouts pass preregistered residual limits",
+    "observer/target height assumptions are explicit",
+    "occluder heights are source-backed or sensitivity-bounded"
+  ],
+  "prohibited": [
+    "casting rays through schematic room-graph coordinates",
+    "inferring ritual privilege from graph chokepoints alone",
+    "calling qualitative light descriptions photometric measurements",
+    "using an optimized fit with no independent holdout as geometric truth"
+  ],
+  "future_outputs": [
+    "visibility polygons",
+    "mutual-view matrices",
+    "doorway cone-of-view",
+    "statue-field visibility",
+    "sunlight aperture sensitivity",
+    "route-by-route reveal timing"
+  ]
+}

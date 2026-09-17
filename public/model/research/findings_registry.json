@@ -1,0 +1,804 @@
+{
+  "version": "0.10.11",
+  "registry_id": "giza.findings.registry",
+  "purpose": "Persistent, model-independent record of interesting patterns, model consequences, null-model outcomes, and research priorities. Entries are hypotheses-to-test or simulation consequences unless explicitly backed by observation.",
+  "status_vocabulary": {
+    "PATTERN_WATCH": "Statistically or structurally interesting; requires stronger controls or data.",
+    "MODEL_CONSEQUENCE": "Follows from stated assumptions; not an observation.",
+    "RESEARCH_PRIORITY": "Important unresolved measurement or test.",
+    "NEGATIVE_RESULT": "A tested pattern did not survive controls.",
+    "CONFIRMED_OBSERVATION": "Reserved for directly supported observational evidence; simulation alone cannot assign this.",
+    "SOURCE_CONFLICT": "Two source locations or versions disagree; preserve both until scope/error is resolved.",
+    "SYNTHESIS_BASELINE": "Cross-source explanatory baseline supported by the current corpus; not recovered ancient testimony and not geometry truth."
+  },
+  "invariants": [
+    "A finding never changes geometry provenance or evidence maturity by itself.",
+    "Simulation-only findings must say SIMULATED or MODEL_CONSEQUENCE.",
+    "Pattern significance must record its null/control family.",
+    "Missing uncertainty is never treated as zero.",
+    "Every release reviews existing findings for supersession, strengthening, weakening, or closure."
+  ],
+  "entries": [
+    {
+      "id": "finding.gravity.deep-model.surface-dominated",
+      "title": "Conditional deep gravity signature is shaft-dominated",
+      "status": "MODEL_CONSEQUENCE",
+      "priority": "HIGH",
+      "domain": "GRAVITY",
+      "introduced_version": "0.9.0",
+      "updated_version": "0.9.3",
+      "truth_class": "SIMULATED",
+      "summary": "In the current conditional deep geometry, the shaft-only map peaks near 251.96 \u00b5Gal while the terminal-only map peaks near 31.75 \u00b5Gal. The modeled near-surface shaft geometry dominates the peak surface signature.",
+      "why_interesting": "If the literal shaft geometry existed, a gravity survey should be designed around the near-surface column signature rather than only the deep terminal volumes.",
+      "controls": [
+        "null.no_void",
+        "null.terminals_removed",
+        "null.shafts_removed"
+      ],
+      "related_runs": [
+        "run.gravity.gravity.deep-claim-conditional.6da5f2c3c8f1"
+      ],
+      "next_test": "Use site-realistic topography, geological density heterogeneity, instrument noise and survey geometry before detectability claims.",
+      "guard": "Conditional model consequence only; not evidence that the shafts exist."
+    },
+    {
+      "id": "finding.echo.coincidence-density",
+      "title": "Known-interior acoustic mode coincidences remain a pattern watch",
+      "status": "PATTERN_WATCH",
+      "priority": "MEDIUM",
+      "domain": "ACOUSTICS",
+      "introduced_version": "0.9.2",
+      "updated_version": "0.9.3",
+      "truth_class": "SIMULATED",
+      "summary": "The known/derived interior produced 7 near-coincidence clusters. It lies near the 97th percentile of the independent \u00b15% null and 91th percentile of the construction-aware null.",
+      "why_interesting": "The signal weakens under a more realistic null that preserves repeated construction relationships, so it is worth tracking but does not establish deliberate tuning.",
+      "controls": [
+        "null.acoustic_independent_perturb",
+        "null.acoustic_constraint_preserving"
+      ],
+      "related_runs": [
+        "run.acoustic.acoustic.known-interiors-screening.1ffcc551ebdb"
+      ],
+      "next_test": "Add gabled geometry, measured loss parameters, coupled-volume FEM and in-situ impulse-response data.",
+      "guard": "Pattern watch, not tuning evidence."
+    },
+    {
+      "id": "finding.strata.deep-overburden",
+      "title": "Deep conditional geometry enters a high-overburden regime",
+      "status": "MODEL_CONSEQUENCE",
+      "priority": "HIGH",
+      "domain": "GEOMECHANICS",
+      "introduced_version": "0.9.3",
+      "updated_version": "0.9.3",
+      "truth_class": "SIMULATED",
+      "summary": "The vertical overburden proxy is 16.52 MPa at 648 m and 18.36 MPa at 720 m. The Khafre backing-limestone sample UCS prior is 12.1\u201317.8 MPa.",
+      "why_interesting": "The simple load proxy overlaps or exceeds the sample-scale UCS range, making rock-mass structure, joints, confinement, support and excavation history first-order requirements for any literal deep-cavity interpretation.",
+      "controls": [
+        "density sensitivity 2300/2600/2800 kg/m\u00b3",
+        "known lower-chamber depth reference"
+      ],
+      "related_runs": [
+        "run.strata.strata.deep-claim-screening.47505c0a0969"
+      ],
+      "next_test": "Build a rock-mass model with stratigraphy, discontinuities, horizontal stress, water state and cavity-shape stress concentration; then run mesh-converged FEA.",
+      "guard": "rho\u00b7g\u00b7h / UCS ratios are not factors of safety and cannot prove impossibility."
+    },
+    {
+      "id": "finding.strata.hydraulic-head",
+      "title": "A connected deep water column would carry multi-MPa pressure",
+      "status": "MODEL_CONSEQUENCE",
+      "priority": "HIGH",
+      "domain": "HYDRAULICS",
+      "introduced_version": "0.9.3",
+      "updated_version": "0.9.3",
+      "truth_class": "SIMULATED",
+      "summary": "If a fresh-water column were hydraulically connected to 648 m depth, static pressure would be about 6.35 MPa and gravitational potential about 1.77 kWh/m\u00b3. At 720 m the static pressure would be about 7.06 MPa.",
+      "why_interesting": "Hydraulic claims become quantitatively demanding at these depths, but pressure head alone says nothing about actual water, recharge, permeability, flow rate or extractable power.",
+      "controls": [
+        "dry/no-water null"
+      ],
+      "related_runs": [
+        "run.strata.strata.deep-claim-screening.47505c0a0969"
+      ],
+      "next_test": "Acquire groundwater level, permeability, fracture/connectivity and boundary-head evidence before any flow model.",
+      "guard": "Conditional hydrostatic consequence only; GIZA currently has no evidence of a connected water column."
+    },
+    {
+      "id": "finding.strata.flow-unresolved",
+      "title": "Flow rate is intentionally unresolved",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "HYDRAULICS",
+      "introduced_version": "0.9.3",
+      "updated_version": "0.9.3",
+      "truth_class": "GOVERNANCE",
+      "summary": "STRATA refuses to compute a flow rate because permeability, connectivity, recharge/discharge boundaries and hydraulic gradients are unresolved.",
+      "why_interesting": "This prevents hydrostatic head from being misrepresented as evidence of a functioning hydraulic system.",
+      "controls": [
+        "required-parameter gate"
+      ],
+      "related_runs": [
+        "run.strata.strata.deep-claim-screening.47505c0a0969"
+      ],
+      "next_test": "Populate permeability/connectivity/head-boundary evidence with provenance before enabling Darcy-flow calculations.",
+      "guard": "Unknown inputs remain unknown rather than receiving convenient defaults."
+    },
+    {
+      "id": "finding.observatory.modern-surface-gap",
+      "title": "Modern Khafre surface survey is the highest-value evidence gap",
+      "status": "RESEARCH_PRIORITY",
+      "truth_class": "OBSERVATION_AND_ACQUISITION_GAP",
+      "domain": "evidence",
+      "summary": "AERA publicly lists a 2025 first laser survey of Khafre, while GIZA still lacks the underlying measurements/point cloud. Public GPMP/Dash survey-control resources now provide a concrete registration path for exterior imagery, but no modern Khafre laser values are ingested.",
+      "why_interesting": "This is the cleanest path to reducing exterior geometry uncertainty without relying on speculative physics.",
+      "controls": [
+        "Do not infer unpublished laser values",
+        "Preserve Petrie as historical backbone until modern data are actually acquired and registered",
+        "Require CRS/scale/uncertainty/rights metadata before geometry promotion"
+      ],
+      "next_test": "Acquire authorized Khafre laser-survey data or published derived measurements plus Dash/GPMP control files; register CRS/datum and compare residuals against Petrie/M&R before any geometry promotion.",
+      "guard": "Publication existence is not measurement access. No laser-derived geometry was invented or promoted.",
+      "priority": "CRITICAL",
+      "first_seen_version": "0.9.4",
+      "last_updated_version": "0.9.7"
+    },
+    {
+      "id": "finding.register.kh_tensile-source-conflict",
+      "title": "Khafre tensile minimum has a source-internal discrepancy",
+      "status": "SOURCE_CONFLICT",
+      "priority": "HIGH",
+      "domain": "MATERIALS",
+      "introduced_version": "0.9.5",
+      "updated_version": "0.9.5",
+      "truth_class": "PUBLISHED_SOURCE_AUDIT",
+      "summary": "The Heritage Science prose reports a Khafre/Chephren split-tensile range of 1.79\u20133.71 MPa, while Table 13 sample 5 reports 1.49 MPa. REGISTER preserves both rather than normalizing the conflict away.",
+      "why_interesting": "A 0.30 MPa change at the low end is material to weak-rock screening and demonstrates why sample rows are safer than broad prose summaries for solver priors.",
+      "controls": [
+        "same-paper paragraph vs Table 13 row audit",
+        "sample-level register"
+      ],
+      "related_runs": [],
+      "next_test": "Verify the published PDF/table typesetting and any corrigendum; retain sample 5 = 1.49 MPa unless primary-source correction establishes otherwise.",
+      "guard": "This is a source audit, not a new laboratory measurement and not a monument-wide material property."
+    },
+    {
+      "id": "finding.register.sar-method-retraction",
+      "title": "SAR Doppler tomography method lineage is retracted",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "CRITICAL",
+      "domain": "REMOTE_SENSING",
+      "introduced_version": "0.9.5",
+      "updated_version": "0.9.5",
+      "truth_class": "PUBLISHER_STATUS",
+      "summary": "Remote Sensing retracted the 2022 SAR Doppler tomography pyramid paper on 10 August 2026 after its investigation reported serious methodological flaws and statistical errors that undermined the paper\u2019s scientific conclusions.",
+      "why_interesting": "Any Khafre hidden-structure narrative relying on the same method lineage needs independent raw-data validation and non-retracted replication before it can influence geometry.",
+      "controls": [
+        "publisher retraction notice",
+        "publication-status registry",
+        "zero geometry-write authority"
+      ],
+      "related_runs": [],
+      "next_test": "Seek independent raw data, independent method validation, peer-reviewed Khafre-specific results, or orthogonal sensing such as muography/survey data.",
+      "guard": "Retraction of a method paper does not directly disprove every separate claim; it removes GIZA\u2019s basis for treating that method as validated evidence."
+    },
+    {
+      "id": "finding.atlas.open-media-time-series",
+      "title": "Open historical + modern imagery can become a registered condition time series",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "IMAGERY_FIELD",
+      "introduced_version": "0.9.6",
+      "updated_version": "0.9.6",
+      "truth_class": "EVIDENCE_RESOURCE",
+      "summary": "Khafre now has a registered open-media discovery surface spanning Commons pyramid/interior/detail/historical/temple categories plus 406 Digital Giza photo records. A 2016 open-access condition study reports facade photography from 2009\u20132012 with in-situ crack verification in 2012.",
+      "why_interesting": "Once images are camera/plan registered with residuals, repeated viewpoints may support condition-change, casing, fracture and surface-state studies without relying on memory or visual impression alone.",
+      "controls": [
+        "per-asset license verification",
+        "camera/plan calibration",
+        "historical-vs-modern registration residuals",
+        "no metric inference from uncalibrated single views"
+      ],
+      "related_runs": [],
+      "next_test": "Run desktop Commons harvester, cache license-eligible originals with hashes, select repeat-view pairs, solve camera pose/control against survey geometry, and quantify registration residuals before extracting measurements.",
+      "guard": "Open-image abundance is not evidence of new structures and is not metric geometry until calibration/control passes."
+    },
+    {
+      "id": "finding.registration.control-bridge",
+      "title": "Khafre photo registration can be anchored to public survey-control resources",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "CRITICAL",
+      "domain": "IMAGERY_SURVEY",
+      "introduced_version": "0.9.7",
+      "updated_version": "0.9.7",
+      "truth_class": "EVIDENCE_INFRASTRUCTURE",
+      "summary": "The open-media atlas now has a defensible bridge toward spatial registration: AERA documents the GPMP survey-control network, while the Dash survey index identifies public Giza corner/center and GPMP control datasets. REGISTRATION LAB seeds camera priors and world-control candidates but does not claim any photo pose is solved yet.",
+      "why_interesting": "This replaces \u201calign it until it looks right\u201d with a residual-audited route from photographs to survey-referenced spatial evidence.",
+      "controls": [
+        "consumer GPS remains context only",
+        "native survey CRS/datum retained until transform receipt",
+        "reprojection residual required",
+        "holdout/control-spread review required",
+        "no geometry write before VAULT/FIELD review"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire Giza-Corner-Points-2v17.kmz and GPMP-Control-Monuments.kmz, register their coordinate frame, download eligible photo originals, mark pixel correspondences, and solve the first exterior camera poses with holdout residuals.",
+      "guard": "No camera pose or metric geometry has been inferred from metadata alone."
+    },
+    {
+      "id": "finding.controlnet.khafre-orientation-noncardinal",
+      "title": "Khafre casing foundation is measurably counterclockwise from true cardinality",
+      "status": "CONFIRMED_OBSERVATION",
+      "priority": "HIGH",
+      "domain": "SURVEY_CONTROL",
+      "introduced_version": "0.9.8",
+      "updated_version": "0.9.8",
+      "truth_class": "DERIVED_FROM_MEASURED_TOTAL_STATION",
+      "summary": "The 2006 Total Station survey gives casing-foundation DFCs of -3.8\u2032 north, -4.0\u2032 east, -5.8\u2032 south and -4.2\u2032 west. A common-yaw least-squares summary is -4.45\u2032 (-0.07417\u00b0), with 0.792\u2032 RMS side residual and 2.0\u2032 total side spread across 54 measured points.",
+      "why_interesting": "This is the first survey-derived Khafre angular control in the GIZA registration stack and can constrain exterior photo registration without pretending the pyramid is an exact square.",
+      "controls": [
+        "retain all four side-specific measurements",
+        "retain side residuals instead of averaging them away",
+        "reported 0.2\u2032 repeatability treated as repeatability, not total uncertainty",
+        "no canonical geometry rotation"
+      ],
+      "related_runs": [
+        "receipt.orientation.khafre.nell2006.rigid_square"
+      ],
+      "next_test": "Acquire/parse Khafre survey control coordinates and mark real exterior image correspondences; test whether survey-constrained camera solutions agree on held-out points.",
+      "guard": "This confirms a surveyed casing-foundation orientation pattern only. It does not prove every masonry course shares the same yaw and does not establish GPMP translation or elevation."
+    },
+    {
+      "id": "finding.controlnet.photo-pose-gate",
+      "title": "Survey orientation is ready, but real camera poses remain correctly blocked",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "CRITICAL",
+      "domain": "IMAGERY_SURVEY",
+      "introduced_version": "0.9.8",
+      "updated_version": "0.9.8",
+      "truth_class": "GOVERNANCE",
+      "summary": "CONTROL NET can now supply a measured Khafre orientation prior and published GPMP frame/control context, but all real registration jobs still have zero marked pixel correspondences and zero promoted camera poses.",
+      "why_interesting": "The remaining bottleneck is now concrete: acquire/hash the control assets, solve the survey-to-local translation, and mark real image controls rather than adding more schema or aligning photos by eye.",
+      "controls": [
+        "real jobs stay unsolved without pixel controls",
+        "projective DLT benchmark is synthetic only",
+        "consumer photo GPS remains context only",
+        "holdout residual required",
+        "translation receipt required for GPMP-to-local use"
+      ],
+      "related_runs": [
+        "benchmark.controlnet.projective_camera.0.9.8"
+      ],
+      "next_test": "Cache the corner/control KMZ assets, parse Khafre/GPMP controls, issue the first horizontal transform receipt, then solve one exterior photo with fit and independent holdout residuals.",
+      "guard": "No real camera pose or photo-derived metric geometry has been promoted."
+    },
+    {
+      "id": "finding.controlnet.gpmp-public-frame",
+      "title": "Public GPMP controls provide a concrete bridge from historical survey to modern registration",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "SURVEY_INFRASTRUCTURE",
+      "introduced_version": "0.9.8",
+      "updated_version": "0.9.8",
+      "truth_class": "PUBLISHED_SURVEY_CONTROL",
+      "summary": "The GPMP frame is explicitly defined with the computed Khufu center assigned N100000/E500000, published control-marker coordinates exist, and SP4 near the Khafre Valley Temple is published at E500390.022/N99459.759. Public Dash survey assets identify Khafre corner/center and GPMP-control datasets for acquisition.",
+      "why_interesting": "These resources can convert Registration Lab from model-relative controls into an externally surveyed control network once the assets are cached, hashed, parsed and transformed with residuals.",
+      "controls": [
+        "preserve published coordinate variants separately",
+        "do not invent missing Z",
+        "keep native GPMP coordinates until transform receipt",
+        "Khafre corner estimates preserve Petrie provenance"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire Giza-Corner-Points-2v17.kmz, GPMP-Control-Monuments.kmz and the Petrie-station table; reconcile frame metadata and solve a survey-to-Khafre local horizontal transform with holdout.",
+      "guard": "Published frame/control availability is not equivalent to a solved Khafre-local transform."
+    },
+    {
+      "id": "finding.archive.sphinx-sequence-convergence",
+      "title": "Independent institutional/archaeological sources converge on the Khafre lower-complex sequence",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "ARCHAEOLOGY",
+      "introduced_version": "0.9.9",
+      "updated_version": "0.9.9",
+      "truth_class": "SYNTHESIS",
+      "summary": "Egyptian Ministry and AERA/ARCE sequence/geology sources independently point toward the Valley Temple preceding the Sphinx Temple and Sphinx-quarry phase within a Khafre-period program.",
+      "why_interesting": "This provides a constrained relative-construction sequence that future 3-D reconstruction should respect instead of treating lower-complex monuments as simultaneous ideal geometry.",
+      "controls": [
+        "source independence tracked",
+        "interpretation vs measurement separated"
+      ],
+      "related_runs": [],
+      "next_test": "Bind ARCE 1:100 temple maps and geological block/strata records to the spatial graph with item-level provenance.",
+      "guard": "Strong archaeological convergence is not an absolute date or metric survey transform."
+    },
+    {
+      "id": "finding.archive.historical-modern-time-series",
+      "title": "Historical Khafre plates can be linked to modern registered imagery as a long-baseline condition record",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "IMAGERY",
+      "introduced_version": "0.9.9",
+      "updated_version": "0.9.9",
+      "truth_class": "SYNTHESIS",
+      "summary": "Belzoni/Perring-era sections and condition descriptions now coexist with rights-reviewed modern photos and survey-control infrastructure.",
+      "why_interesting": "Once common features are registered, the corpus can test whether visible conditions changed over decades/centuries rather than relying on anecdotal comparison.",
+      "controls": [
+        "historical plate distortion",
+        "camera registration residual",
+        "feature identity review"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire Perring plate bytes/IIIF legally, mark shared visible features, and quantify registration residuals against survey-constrained geometry.",
+      "guard": "Historical drawings are not photographs or modern survey geometry."
+    },
+    {
+      "id": "finding.archive.confirmed-does-not-imply-exotic",
+      "title": "The confirmed corpus supports sophisticated engineering but does not currently require exotic or AI-era technology",
+      "status": "NEGATIVE_RESULT",
+      "priority": "MEDIUM",
+      "domain": "SYNTHESIS",
+      "introduced_version": "0.9.9",
+      "updated_version": "0.9.9",
+      "truth_class": "CORPUS_AUDIT",
+      "summary": "Across survey, archaeology, materials, geology, imagery, chronology and museum records, no direct artifact or measurement currently establishes AI, digital computation, power machinery or other modern-equivalent technology at Giza.",
+      "why_interesting": "This defines a falsifiable baseline: future extraordinary-technology hypotheses must contribute new independently verifiable evidence beyond precision, scale or geometric regularity.",
+      "controls": [
+        "cross-domain source audit",
+        "claim/evidence separation",
+        "retraction/status audit"
+      ],
+      "related_runs": [],
+      "next_test": "Continue harvesting primary excavation/survey datasets and register actual tool-mark/material evidence before revisiting technology claims.",
+      "guard": "Absence of current evidence is not proof of impossibility; it is the present evidence state."
+    },
+    {
+      "id": "finding.vault.sphinx-local-datum-bridge",
+      "title": "The ARCE Sphinx archive exposes an explicit local grid and approximate vertical bridge to MSL",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "SURVEY_INFRASTRUCTURE",
+      "introduced_version": "0.10.0",
+      "updated_version": "0.10.0",
+      "truth_class": "PUBLISHED_PROJECT_METHOD",
+      "summary": "ARCE/Open Context project documentation records the Sphinx local N3000/E500 grid, its 1978 magnetic-north orientation, a +10 m local elevation marker, and an approximate +9.331 m conversion from Sphinx local elevations to mean sea level according to the project tie.",
+      "why_interesting": "This is a concrete published datum definition that may eventually help reconcile Sphinx/Valley Temple mapping with GPMP and Khafre control, but only after independent frame/datum checks.",
+      "controls": [
+        "preserve ARCE local frame",
+        "do not apply +9.331 m to Khafre automatically",
+        "reconcile magnetic-north epoch",
+        "require common control points and residuals"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire/hash the Open Context project JSON and relevant map/control records, then solve an explicit ARCE-Sphinx\u2192GPMP transform with independent holdouts.",
+      "guard": "The documented Sphinx datum relation is not automatically a Khafre pyramid vertical tie."
+    },
+    {
+      "id": "finding.vault.primary-byte-chain-gap",
+      "title": "Primary-source bytes are now the main remaining provenance gap between verified web facts and reproducible extraction",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "PROVENANCE",
+      "introduced_version": "0.10.0",
+      "updated_version": "0.10.0",
+      "truth_class": "CORPUS_AUDIT",
+      "summary": "GIZA has a large verified source corpus, but reproducible datum extraction requires byte-level custody: exact source file, checksum, locator, parser version and output receipt. The chat sandbox cannot currently fetch those binaries directly.",
+      "why_interesting": "Closing this gap makes future measurements independently reproducible and prevents a later model from silently extracting from a changed webpage, different scan, or unlicensed copy.",
+      "controls": [
+        "remote verification is not local possession",
+        "checksum every cached source",
+        "rights gate before bundling",
+        "parser receipt per extracted datum"
+      ],
+      "related_runs": [],
+      "next_test": "Run the vault fetcher on a networked desktop for Petrie, Open Context and other rights-cleared assets, verify checksums, then issue first parser receipts.",
+      "guard": "A remote source lock or normalized snapshot is not raw source bytes and cannot be represented as such."
+    },
+    {
+      "id": "finding.intent.mortuary-cult-convergence",
+      "title": "Royal mortuary transition and continuing cult are the strongest current intent models",
+      "status": "SYNTHESIS_BASELINE",
+      "priority": "HIGH",
+      "domain": "INTENT_RECONSTRUCTION",
+      "introduced_version": "0.10.1",
+      "updated_version": "0.10.1",
+      "truth_class": "CROSS_SOURCE_SYNTHESIS",
+      "summary": "Current corpus independently supports burial architecture, royal funeral/afterlife function, and post-burial offering cult as central purposes of Old Kingdom pyramid complexes; these explain more observed architecture than machine or future-message hypotheses.",
+      "why_interesting": "This provides a falsifiable baseline intent model against which more exotic explanations must add explanatory power rather than merely fit selected geometry.",
+      "controls": [
+        "truth-class separation",
+        "source-family independence groups",
+        "no geometry-derived meaning promotion"
+      ],
+      "related_runs": [],
+      "next_test": "Bind room-level Khafre excavation finds and processional constraints to the intent graph and test component-by-component predictions.",
+      "guard": "A strong mortuary/cult baseline does not imply every architectural or symbolic feature is fully understood."
+    },
+    {
+      "id": "finding.intent.future-message-unresolved",
+      "title": "A distant-future encoded message remains unestablished",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "MEDIUM",
+      "domain": "INTENT_RECONSTRUCTION",
+      "introduced_version": "0.10.1",
+      "updated_version": "0.10.1",
+      "truth_class": "HYPOTHESIS_AUDIT",
+      "summary": "Precision, durability and symbolic monumentality are compatible with long-lived communication, but the current corpus contains no explicit future-audience marker or independently decodable technical payload.",
+      "why_interesting": "The question can be tested rigorously once survey-grade geometry is available by preregistering encoding hypotheses and using cross-monument holdouts and multiple-comparisons controls.",
+      "controls": [
+        "pre-register encoding families",
+        "construction nulls",
+        "metrology nulls",
+        "multiple-comparisons correction",
+        "independent monument holdouts"
+      ],
+      "related_runs": [],
+      "next_test": "After survey-frame reconciliation, run a blinded cross-monument encoding test that forbids post-hoc ratio selection.",
+      "guard": "Do not infer intended future communication from numerical coincidence or monument durability alone."
+    },
+    {
+      "id": "finding.action.valley-statuary-threshold",
+      "title": "Khafre Valley Temple concentrated repeated royal-image evidence at the lower complex",
+      "status": "CONFIRMED_OBSERVATION",
+      "priority": "HIGH",
+      "domain": "ACTION_GRAPH",
+      "introduced_version": "0.10.3",
+      "updated_version": "0.10.3",
+      "truth_class": "CROSS_SOURCE_OBJECT_PROVENANCE",
+      "summary": "Digital Giza catalogs multiple Khafre statues/fragments from the Valley Temple, while the Egyptian Museum records a 168 cm diorite Khafre statue from the temple and describes it as one of about 23 similar statues.",
+      "why_interesting": "This makes encounter with royal imagery a stronger action-graph constraint than a generic symbolic guess, even though exact ancient positions remain unresolved.",
+      "controls": [
+        "separate find provenance from original placement",
+        "no ritual action inferred solely from iconography",
+        "no geometry promotion"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire rights-cleared valley-temple plans/excavation records and map statue bases/findspots to exact rooms and sightlines.",
+      "guard": "Repeated statuary establishes royal-image presence, not the exact ceremony performed around it."
+    },
+    {
+      "id": "finding.action.sequence-is-topological-not-script",
+      "title": "The complex supports a constrained place/action sequence but not a recovered ritual script",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "ACTION_GRAPH",
+      "introduced_version": "0.10.3",
+      "updated_version": "0.10.3",
+      "truth_class": "CROSS_SOURCE_SYNTHESIS",
+      "summary": "Valley Temple, causeway, pyramid-temple court, burial architecture and post-burial cult function can be linked into a source-addressed behavioral graph, but exact actors, spoken rites, timing and room-level choreography remain only partially constrained.",
+      "why_interesting": "This converts the \u201cwhat were they doing?\u201d question into explicit missing measurements and source targets instead of unconstrained narrative.",
+      "controls": [
+        "every action node requires source-addressed evidence",
+        "direct architecture separated from inferred behavior",
+        "no score interpreted as historical probability"
+      ],
+      "related_runs": [],
+      "next_test": "Parse H\u00f6lscher/Petrie/Perring plans and excavation locators to replace component-level nodes with room/threshold-level action constraints.",
+      "guard": "Graph connectivity is a research model, not ancient testimony."
+    },
+    {
+      "id": "finding.room.threshold-density",
+      "title": "Khafre lower-to-upper route contains repeated architectural thresholding",
+      "status": "PATTERN_WATCH",
+      "domain": "room_topology",
+      "summary": "Room-level reconstruction now exposes repeated transitions\u2014dual lower entrances, vestibule/hall transitions, causeway termination/branching, pillared halls, court, inner cult spaces, and burial passage controls. This is a topological pattern to test, not proof of a scripted initiation sequence.",
+      "evidence": [
+        "obs.room.oxford.valley_entries",
+        "obs.room.hoelscher.entry_branch",
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.room.perring.two_entrances"
+      ],
+      "null_or_control": "Compare threshold density and access hierarchy with contemporaneous Old Kingdom royal complexes once equivalent room graphs are built.",
+      "geometry_write_authority": "NONE",
+      "first_seen_version": "0.10.4",
+      "last_reviewed_version": "0.10.4",
+      "truth_class": "CROSS_SOURCE_TOPOLOGICAL_SYNTHESIS",
+      "priority": "HIGH",
+      "introduced_version": "0.10.4",
+      "updated_version": "0.10.4",
+      "why_interesting": "Repeated thresholding may encode functional hierarchy, circulation control, or ritual staging. The pattern is testable against peer Old Kingdom complexes rather than being accepted as symbolic by inspection.",
+      "controls": [
+        "peer_complex_room_graphs",
+        "plan_registration_residuals",
+        "alternative_route_topology"
+      ],
+      "related_runs": [],
+      "next_test": "Build equivalent room graphs for Khufu/Menkaure and register metric Khafre plans; compare threshold density, branching, route depth and access centrality under matched definitions.",
+      "guard": "Topological pattern only. Repeated thresholds do not prove an initiation sequence, secret message, or specific ritual script."
+    },
+    {
+      "id": "finding.room.statuary-as-spatial-program",
+      "title": "Royal imagery appears spatially integrated with circulation rather than merely collected",
+      "status": "PATTERN_WATCH",
+      "domain": "architecture_statuary",
+      "summary": "Valley Temple niche fields and Pyramid Temple court emplacement evidence make royal statuary part of the movement environment. Exact original placements remain partly reconstructed.",
+      "evidence": [
+        "obs.room.oxford.valley_niches",
+        "obs.room.hoelscher.court_statue_holes",
+        "obs.met.architrave.doorway_context"
+      ],
+      "null_or_control": "Compare with statue placement/circulation in other Fourth\u2013Fifth Dynasty pyramid complexes and preserve findspot-vs-original-placement distinctions.",
+      "geometry_write_authority": "NONE",
+      "first_seen_version": "0.10.4",
+      "last_reviewed_version": "0.10.4",
+      "truth_class": "CROSS_SOURCE_ARCHITECTURE_OBJECT_SYNTHESIS",
+      "priority": "HIGH",
+      "introduced_version": "0.10.4",
+      "updated_version": "0.10.4",
+      "why_interesting": "If royal images were repeatedly positioned along architectural movement states, imagery may have structured experience rather than functioning as an undifferentiated statue collection.",
+      "controls": [
+        "findspot_vs_original_placement",
+        "peer_complex_statuary_programs",
+        "alternative_statue_reconstructions"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire plan/source bytes for Valley Temple and Pyramid Temple, map only securely anchored installation traces, and compare circulation-relative placement across peer royal complexes.",
+      "guard": "Presence and installation traces are evidence; exact statue identities, original positions, viewing order and ritual meaning remain partly reconstructed."
+    },
+    {
+      "id": "finding.room.metric-plan-gap",
+      "title": "Primary plan bytes are now the bottleneck for room-level reconstruction",
+      "status": "RESEARCH_PRIORITY",
+      "domain": "source_custody",
+      "summary": "The archive inventory proves that room-scale drawings exist, including a 1:100 Khafre Valley Temple map, but this runtime still lacks checksum-bound plan bytes. The next promotion bottleneck is source custody and metric registration, not more narrative inference.",
+      "evidence": [
+        "obs.room.arce.valley_plan_1_100",
+        "obs.room.arce.detail_sections"
+      ],
+      "null_or_control": "Acquire/hash plan bytes, parse with independent holdouts, and compare against historical plans before geometry promotion.",
+      "geometry_write_authority": "NONE",
+      "first_seen_version": "0.10.4",
+      "last_reviewed_version": "0.10.4",
+      "truth_class": "SOURCE_CUSTODY_GAP",
+      "priority": "CRITICAL",
+      "introduced_version": "0.10.4",
+      "updated_version": "0.10.4",
+      "why_interesting": "Room-level interpretation has reached the limit of schematic topology. The highest-value uncertainty reduction now comes from exact primary plan custody and registration rather than additional narrative detail.",
+      "controls": [
+        "sha256_source_custody",
+        "native_scale_frame_receipt",
+        "independent_plan_crosscheck",
+        "registration_holdout_residuals"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire legal/open plan bytes, hash them, parse native scale/frame, register independent controls and holdouts, then compare extracted room polygons against at least one independent historical or modern plan.",
+      "guard": "Plan availability, OCR and published scale metadata do not authorize metric geometry or zero uncertainty."
+    },
+    {
+      "id": "finding.concordance.plan-agreement-is-structured",
+      "title": "Khafre plan evidence separates into convergent architecture and disputed reconstruction",
+      "status": "SYNTHESIS_BASELINE",
+      "priority": "HIGH",
+      "domain": "PLAN_CONCORDANCE",
+      "introduced_version": "0.10.5",
+      "updated_version": "0.10.5",
+      "truth_class": "CROSS_SOURCE_CONCORDANCE",
+      "summary": "Independent source families converge on the Valley Temple dual-entry/T-hall program, 23 statuary positions, covered causeway, Pyramid Temple hall/court/five-chapel program, and core pyramid-interior topology, while court statue form/placement and some cult-room contents remain explicitly disputed or interpretive.",
+      "why_interesting": "GIZA can now use agreement structure rather than a single preferred reconstruction, reducing the risk of baking one scholar\u2019s restoration into the model.",
+      "controls": [
+        "source-family independence",
+        "architecture/function separation",
+        "no plan catalog record treated as parsed metric geometry"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire/hash source plan bytes, parse scales and wall polygons, then measure residual agreement between independently registered plans.",
+      "guard": "Cross-source agreement increases confidence in topology, not automatic geometry authority."
+    },
+    {
+      "id": "finding.visibility.repeated-state-transitions",
+      "title": "The documented route crosses repeated changes in spatial/visual environment",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "VISIBILITY_LAB",
+      "introduced_version": "0.10.5",
+      "updated_version": "0.10.5",
+      "truth_class": "TOPOLOGY_DERIVED_HYPOTHESIS",
+      "summary": "The source-backed topology moves through exterior thresholds, a pillar-and-royal-image hall, a covered linear ascent, a branching upper entrance, pillared halls/court, inner rooms, physical closure and an enclosed burial endpoint. This creates a testable sequence of environmental state changes.",
+      "why_interesting": "If metric plans and heights later confirm strong visual/illumination/access contrasts at the same thresholds, GIZA can test whether the sequence is architecturally staged rather than merely connected.",
+      "controls": [
+        "qualitative until metric registration",
+        "no ritual inference from contrast alone",
+        "holdout against other Old Kingdom complexes"
+      ],
+      "related_runs": [],
+      "next_test": "Register legal plan bytes and compute actual line-of-sight/occlusion, sky visibility and route-choice metrics with uncertainty envelopes.",
+      "guard": "A repeated environmental transition pattern is not proof of ceremony, symbolism, or intended emotional effect."
+    },
+    {
+      "id": "finding.metric.procedural-grammar",
+      "title": "A procedural architectural grammar is the strongest pre-metric pattern",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "METRIC_VIEW_LAB",
+      "introduced_version": "0.10.6",
+      "updated_version": "0.10.6",
+      "truth_class": "CROSS_SOURCE_PREMETRIC_SYNTHESIS",
+      "summary": "Across independently supported room programs, the Khafre complex repeatedly transforms movement: dual entry converges, royal-image space precedes a covered linear ascent, the upper temple branches and deepens, and the pyramid interior introduces literal closure before the burial endpoint.",
+      "why_interesting": "This is more structurally constrained than isolated numerical coincidences and yields direct metric tests at doors, wall openings, turns, image fields and closure points.",
+      "controls": [
+        "topology is not ritual meaning",
+        "compare against Khufu/Menkaure nulls",
+        "metric registration required before sightline claims",
+        "preserve source dependence"
+      ],
+      "related_runs": [],
+      "next_test": "Register independent Valley Temple and pyramid-interior plan sources, then test whether visibility/reveal transitions survive metric geometry and comparative controls.",
+      "guard": "The grammar is a design hypothesis, not an ancient script, code or evidence of advanced computation."
+    },
+    {
+      "id": "finding.metric.valley-sensory-field",
+      "title": "Valley Temple material-image-light staging is a concrete metric test target",
+      "status": "HYPOTHESIS_TO_TEST",
+      "priority": "HIGH",
+      "domain": "METRIC_VIEW_LAB",
+      "introduced_version": "0.10.6",
+      "updated_version": "0.10.6",
+      "truth_class": "HISTORICAL_RECONSTRUCTION_CANDIDATE",
+      "summary": "H\u00f6lscher reconstructs a Valley Temple hall combining dark granite, bright alabaster, royal statues and light entering from high openings with reflected effects. ARCE\u2019s 1:100 mapping offers a route to test the geometry behind that reconstruction.",
+      "why_interesting": "It converts a vivid historical description into a falsifiable spatial question: where could light enter and which image positions could be visible from each route state?",
+      "controls": [
+        "historical reconstruction not photometry",
+        "exact ARCE item bytes required",
+        "height/aperture uncertainty sensitivity",
+        "no emotional-effect inference"
+      ],
+      "related_runs": [],
+      "next_test": "Resolve ARCE 1:100 drawing bytes and register wall/opening geometry; compare against H\u00f6lscher reconstruction without forcing a match.",
+      "guard": "Even a successful geometric reconstruction would establish physical plausibility, not intended symbolism or psychological effect."
+    },
+    {
+      "id": "finding.registration.plate-local-decoupling",
+      "title": "Plate-local metric visibility can precede plateau-wide georeferencing",
+      "status": "METHOD_RESULT",
+      "priority": "HIGH",
+      "domain": "PLATE_REGISTRATION",
+      "introduced_version": "0.10.7",
+      "updated_version": "0.10.7",
+      "truth_class": "METHOD_INVARIANT",
+      "summary": "A checksum-bound plan can be registered to PLATE_LOCAL_METERS and support intra-building wall/opening geometry and metric rays without first solving GPMP\u2192Khafre global translation.",
+      "why_interesting": "This separates room-scale visibility from the harder plateau geodesy problem and prevents an unnecessary global-frame bottleneck.",
+      "controls": [
+        "local scale/frame receipt",
+        "frozen fit controls",
+        "independent holdouts",
+        "no global coordinate promotion"
+      ],
+      "related_runs": [
+        "plate.synthetic.similarity.v1"
+      ],
+      "next_test": "Acquire Petrie Plate VI bytes and run the frozen similarity/holdout protocol.",
+      "guard": "Local metric validity does not imply correct placement on the Giza plateau."
+    },
+    {
+      "id": "finding.registration.holdout-preregistered",
+      "title": "First archaeological plate fit is now protected by preregistered holdout thresholds",
+      "status": "METHOD_RESULT",
+      "priority": "HIGH",
+      "domain": "PLATE_REGISTRATION",
+      "introduced_version": "0.10.7",
+      "updated_version": "0.10.7",
+      "truth_class": "GOVERNANCE_RESULT",
+      "summary": "Similarity-model choice, minimum controls/holdouts, residual normalization, outlier policy and acceptance limits are frozen before the first source-byte fit.",
+      "why_interesting": "This blocks post-hoc threshold selection and model escalation after seeing the archaeological residuals.",
+      "controls": [
+        "no automatic outlier removal",
+        "holdouts excluded from fit",
+        "model complexity cannot increase without new preregistration"
+      ],
+      "related_runs": [
+        "plate.synthetic.similarity.v1"
+      ],
+      "next_test": "Run unchanged thresholds against Petrie Plate VI and report pass/fail without tuning.",
+      "guard": "Passing a registration validates map geometry within the declared frame; it does not prove ritual meaning."
+    },
+    {
+      "id": "finding.source.petrie-transfer-blocked",
+      "title": "Petrie source identity is verified while local byte custody remains blocked by runtime transfer",
+      "status": "CONFIRMED_OBSERVATION",
+      "priority": "HIGH",
+      "domain": "SOURCE_BYTE_REGISTRATION",
+      "introduced_version": "0.10.7",
+      "updated_version": "0.10.7",
+      "truth_class": "REMOTE_PROVIDER_METADATA_PLUS_EXECUTION_RECEIPT",
+      "summary": "Wikimedia Commons identifies the 315-page 8.87 MB public-domain Petrie scan and Digital Giza independently catalogs the 1883 work; two local acquisition paths failed in this execution environment, so SHA-256/local custody remains absent.",
+      "why_interesting": "The evidence model distinguishes source existence, licensing and catalog identity from the separate operational fact of local byte possession.",
+      "controls": [
+        "no synthetic download",
+        "no copied hash from unverified third party",
+        "raw_byte_verified remains false"
+      ],
+      "related_runs": [],
+      "next_test": "Run desktop acquisition script with network access and compare computed SHA-256 to a second independently downloaded copy.",
+      "guard": "Transfer failure is not evidence against the source and is not permission to fabricate source bytes."
+    },
+    {
+      "id": "finding.plate.vi.dimension-rich-but-byte-blocked",
+      "title": "Petrie Plate VI is dimension-rich and exactly located, but original-byte custody remains blocked",
+      "status": "RESEARCH_PRIORITY",
+      "priority": "HIGH",
+      "domain": "PLATE_REGISTRATION",
+      "introduced_version": "0.10.8",
+      "updated_version": "0.10.8",
+      "truth_class": "REMOTE_PLATE_WITNESS_PLUS_PRIMARY_TEXT",
+      "summary": "Petrie Plate VI is now exactly located at PDF page 305 and remotely verified as the 1:200 Granite Temple plan. Petrie chapter XIV provides numerous scalar dimensions, but the original PDF bytes are not locally checksum-bound, so pixel registration remains prohibited.",
+      "why_interesting": "The campaign has moved from unknown plate identity to a reproducible target with source-reported dimensional constraints without crossing the byte-custody boundary.",
+      "controls": [
+        "local SHA-256 still required",
+        "remote render grants no pixel authority",
+        "dimension graph preserves approximate and lower-bound qualifiers",
+        "no wall polygons from scalar facts alone"
+      ],
+      "related_runs": [],
+      "next_test": "Acquire exact PDF bytes, hash them, visually confirm page 305, freeze pixel controls/holdouts, and run the preregistered similarity fit once.",
+      "guard": "A remotely viewed plan and source dimensions are not equivalent to a registered metric plan."
+    },
+    {
+      "id": "finding.design.topography-negotiates-geometry",
+      "title": "Khafre lower-complex geometry appears to negotiate ridge topography rather than obey a perfect abstract grid",
+      "status": "PATTERN_WATCH",
+      "priority": "HIGH",
+      "domain": "ARCHITECTURAL_GRAMMAR",
+      "introduced_version": "0.10.8",
+      "updated_version": "0.10.8",
+      "truth_class": "PRIMARY_SOURCE_OBSERVATION_PLUS_PETRIE_INTERPRETATION",
+      "summary": "Petrie reports that the causeway is not due east/square to the temple-pyramid system and attributes the divergence to the ridge topography; he further interprets the lower entrance passage as adjusted to meet that route.",
+      "why_interesting": "This makes landscape constraint a testable design variable and weakens simplistic perfect-grid narratives while strengthening integrated architecture-plus-geology models.",
+      "controls": [
+        "compare with modern survey",
+        "separate observed misalignment from Petrie causal interpretation",
+        "test terrain-constrained null routes",
+        "do not infer symbolism from misalignment alone"
+      ],
+      "related_runs": [],
+      "next_test": "Register modern and historical lower-complex plans and compare causeway/entrance axes against mapped ridge and quarry topography.",
+      "guard": "Observed/sketched misalignment does not by itself establish why the ancient builders chose the route."
+    },
+    {
+      "id": "finding.design.controlled-contrast-testable",
+      "title": "Petrie description makes controlled light/visibility contrast a falsifiable architectural hypothesis",
+      "status": "PATTERN_WATCH",
+      "priority": "HIGH",
+      "domain": "VISIBILITY",
+      "introduced_version": "0.10.8",
+      "updated_version": "0.10.8",
+      "truth_class": "PRIMARY_SOURCE_DESCRIPTION_WITH_RECONSTRUCTION",
+      "summary": "Petrie describes long internal vistas, reflected roof light and a bright extended causeway in his reconstruction of the Granite Temple environment. Combined with the constrained movement graph, this motivates a future metric visibility/light test.",
+      "why_interesting": "The sensory hypothesis can eventually be tested against registered apertures, wall geometry and solar bounds instead of being treated as atmosphere or symbolism.",
+      "controls": [
+        "Petrie reconstruction is not measured photometry",
+        "aperture heights/roof state uncertain",
+        "test multiple solar dates/times",
+        "no psychological-effect inference"
+      ],
+      "related_runs": [],
+      "next_test": "After plate registration, digitize only evidence-supported openings/walls and compute visibility first; defer lighting simulation until heights/apertures are bounded.",
+      "guard": "Physical visibility or illumination plausibility does not prove ritual intent."
+    },
+    {
+      "id": "finding.registration.landmark-selection-preregistered",
+      "title": "First-plate landmark classes are fixed before archaeological pixel coordinates exist",
+      "status": "METHOD_RESULT",
+      "priority": "HIGH",
+      "domain": "PLATE_REGISTRATION",
+      "introduced_version": "0.10.11",
+      "updated_version": "0.10.11",
+      "truth_class": "GOVERNANCE_RESULT",
+      "summary": "Ten named Plate VI landmark classes are distributed across five architectural sectors while every pixel and metric coordinate remains null until a checksum-bound local render exists.",
+      "why_interesting": "This removes another researcher degree of freedom: candidate correspondence types are chosen before residuals can influence which features are selected.",
+      "controls": [
+        "source PDF SHA-256 required",
+        "render SHA-256 required",
+        "controls span at least three sectors",
+        "holdouts span at least two sectors",
+        "target-coordinate provenance required",
+        "holdouts excluded from fit"
+      ],
+      "related_runs": [
+        "plate.synthetic.similarity.v1"
+      ],
+      "next_test": "Populate the preregistered landmarks against a checksum-bound Plate VI render and freeze roles before the first archaeological solve.",
+      "guard": "Preregistering landmark classes improves falsifiability; it does not make the historical plan accurate or metric by itself."
+    }
+  ],
+  "last_reviewed_version": "0.10.11",
+  "generated_at": "2026-09-15T13:40:00Z"
+}

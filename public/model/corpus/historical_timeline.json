@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "event_count": 17,
+  "events": [
+    {
+      "id": "time.kh4",
+      "period": "c. 2558–2532 BCE",
+      "event": "Khafre reign in Egyptian Ministry chronology; construction program of second Giza pyramid complex.",
+      "source_ids": [
+        "src.egypt_ministry"
+      ],
+      "status": "OFFICIAL_CHRONOLOGY_CONTEXT"
+    },
+    {
+      "id": "time.sphinx.kh4",
+      "period": "4th Dynasty",
+      "event": "Great Sphinx carved from bedrock; official and AERA archaeological interpretations strongly associate its final construction sequence with Khafre.",
+      "source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.aera.kh_sequence",
+        "src.aera.kh_monuments_unit"
+      ],
+      "status": "STRONG_ARCHAEOLOGICAL_SUPPORT"
+    },
+    {
+      "id": "time.thutmose4",
+      "period": "18th Dynasty, c. 1400–1390 BCE",
+      "event": "Thutmose IV erected the Dream Stela between the Sphinx paws; later royal cult/restoration context.",
+      "source_ids": [
+        "src.egypt_ministry.sphinx"
+      ],
+      "status": "OFFICIAL_HISTORICAL_CONTEXT"
+    },
+    {
+      "id": "time.belzoni1818",
+      "date": "1818-03-02",
+      "event": "Belzoni discovered the entrance/passages leading to Khafre burial chamber; date independently preserved in museum/historical records.",
+      "source_ids": [
+        "src.britishmuseum.belzoni_medal",
+        "src.perring1840.khafre"
+      ],
+      "status": "CROSS_SOURCE_CONFIRMED"
+    },
+    {
+      "id": "time.perring1837",
+      "period": "1837",
+      "event": "Vyse/Perring team cleared/re-entered and documented passages/chambers, with survey plates later published by Perring.",
+      "source_ids": [
+        "src.perring1840.khafre"
+      ],
+      "status": "PRIMARY_HISTORICAL_RECORD"
+    },
+    {
+      "id": "time.perring1840",
+      "date": "1840",
+      "event": "Perring Vol. II published survey/admeasurement of Second and Third Pyramids.",
+      "source_ids": [
+        "src.perring1840.khafre"
+      ],
+      "status": "PUBLICATION"
+    },
+    {
+      "id": "time.petrie1881",
+      "period": "1880–1881",
+      "event": "Petrie undertook high-precision Giza survey that remains a primary metric backbone.",
+      "source_ids": [
+        "src.petrie1883"
+      ],
+      "status": "PRIMARY_SURVEY"
+    },
+    {
+      "id": "time.petrie1883",
+      "date": "1883",
+      "event": "Petrie published The Pyramids and Temples of Gizeh.",
+      "source_ids": [
+        "src.petrie1883"
+      ],
+      "status": "PUBLICATION"
+    },
+    {
+      "id": "time.kh_excavations1910",
+      "period": "1910",
+      "event": "Digital Giza preserves excavation diary context for Khafre Valley Temple; Hölscher-era complex excavation documentation continues in early 20th century.",
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple",
+        "src.hoelscher1912"
+      ],
+      "status": "SCHOLARLY_ARCHIVE"
+    },
+    {
+      "id": "time.arce1979",
+      "period": "1979–1983",
+      "event": "ARCE Sphinx Project produced the first detailed scale plans/elevations, geological/topographic mapping and photogrammetric archive of the Sphinx complex.",
+      "source_ids": [
+        "src.opencontext.arce_sphinx",
+        "src.arce.sphinx_archive_final"
+      ],
+      "status": "SURVEY_ARCHIVE"
+    },
+    {
+      "id": "time.unesco1979",
+      "date": "1979",
+      "event": "Memphis and its Necropolis including Giza pyramid fields inscribed as UNESCO World Heritage property 86.",
+      "source_ids": [
+        "src.unesco.memphis_necropolis"
+      ],
+      "status": "INSTITUTIONAL_RECORD"
+    },
+    {
+      "id": "time.nell2006",
+      "period": "December 2006",
+      "event": "Nell and Ruggles conducted Total Station survey of Giza pyramid/associated-structure orientations.",
+      "source_ids": [
+        "src.nell_ruggles2014"
+      ],
+      "status": "MODERN_SURVEY"
+    },
+    {
+      "id": "time.condition2009",
+      "period": "2009–2012",
+      "event": "Khafre facade photographic condition campaign documented fractures/cracks, with major features checked in situ in 2012.",
+      "source_ids": [
+        "src.procedia2016.khafre_deformations"
+      ],
+      "status": "PEER_REVIEWED_CONDITION_CAMPAIGN"
+    },
+    {
+      "id": "time.sphinx2018",
+      "period": "2018–2019",
+      "event": "AERA reports renewed Sphinx documentation using mapping/topographic survey/GPR, with Japanese drone, photogrammetry and laser-scanning work.",
+      "source_ids": [
+        "src.arce.sphinx_archive_final",
+        "src.kawae2019.drone3d"
+      ],
+      "status": "MODERN_SURVEY_METHOD_CONTEXT"
+    },
+    {
+      "id": "time.kawae2019",
+      "date": "2019",
+      "event": "Kawae published overview of drone 3-D survey at Giza.",
+      "source_ids": [
+        "src.kawae2019.drone3d"
+      ],
+      "status": "PUBLICATION"
+    },
+    {
+      "id": "time.scidep2025",
+      "date": "2025-07-23",
+      "event": "ScIDEP Khafre muography project paper published in Journal of Applied Physics.",
+      "source_ids": [
+        "src.scidep2025"
+      ],
+      "status": "PEER_REVIEWED_PUBLICATION"
+    },
+    {
+      "id": "time.laser2025",
+      "date": "2025",
+      "event": "AERA bibliography records First Laser Survey of the Second Great Pyramid. Underlying data remain an acquisition target.",
+      "source_ids": [
+        "src.aera2025.khafre_laser"
+      ],
+      "status": "PUBLICATION_METADATA_ONLY"
+    }
+  ]
+}

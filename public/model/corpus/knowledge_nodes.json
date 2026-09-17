@@ -1,0 +1,843 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "policy": "Every node must be traceable to observations/sources and carry an explicit geometry-authority boundary.",
+  "node_count": 42,
+  "nodes": [
+    {
+      "id": "kn.khafre.official.height",
+      "domain": "architecture",
+      "subject": "khafre_pyramid",
+      "label": "Official original-height summary",
+      "value": "143.5 m",
+      "observation_ids": [
+        "obs.ministry.height"
+      ],
+      "source_ids": [
+        "src.egypt_ministry"
+      ],
+      "truth_class": "PUBLISHED_SUMMARY",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE_CONFLICT_PRESERVED",
+      "caveat": "Official summary coexists with detailed survey reconstruction.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.material.core",
+      "domain": "materials",
+      "subject": "khafre_pyramid",
+      "label": "Core/backing stone",
+      "value": "Local fossiliferous limestone",
+      "observation_ids": [
+        "obs.ministry.core_material",
+        "obs.material.kh.local_quarry_context"
+      ],
+      "source_ids": [
+        "src.egypt_ministry",
+        "src.npj2020.materials"
+      ],
+      "truth_class": "PUBLISHED_OBSERVATION",
+      "verification_state": "CROSS_SOURCE_CONFIRMED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "MATERIAL_CONTEXT_ONLY",
+      "caveat": "Material context does not write block geometry.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.material.casing",
+      "domain": "materials",
+      "subject": "khafre_pyramid",
+      "label": "Casing system",
+      "value": "Fine Tura limestone survives at upper levels; published materials study reports granite at base courses",
+      "observation_ids": [
+        "obs.ministry.core_material",
+        "obs.material.kh.granite_base_casing"
+      ],
+      "source_ids": [
+        "src.egypt_ministry",
+        "src.npj2020.materials"
+      ],
+      "truth_class": "PUBLISHED_OBSERVATION",
+      "verification_state": "CROSS_SOURCE_CONFIRMED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "MATERIAL_CONTEXT_ONLY",
+      "caveat": "Course-by-course extent still requires survey evidence.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.orientation",
+      "domain": "survey",
+      "subject": "khafre_pyramid",
+      "label": "Casing-foundation orientation prior",
+      "value": "-4.45 arcmin derived rigid-square prior",
+      "observation_ids": [
+        "obs.nell2006.khafre.north_casing_orientation",
+        "obs.nell2006.khafre.east_casing_orientation",
+        "obs.nell2006.khafre.south_casing_orientation",
+        "obs.nell2006.khafre.west_casing_orientation"
+      ],
+      "source_ids": [
+        "src.nell_ruggles2014"
+      ],
+      "truth_class": "SURVEY_DERIVED",
+      "verification_state": "SURVEY_RECEIPT_CONFIRMED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "ORIENTATION_PRIOR_ONLY",
+      "caveat": "Translation/elevation unresolved; individual side residuals retained.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.belzoni.date",
+      "domain": "exploration_history",
+      "subject": "khafre_interior",
+      "label": "Belzoni entry date",
+      "value": "2 March 1818",
+      "observation_ids": [
+        "obs.belzoni.discovery_date"
+      ],
+      "source_ids": [
+        "src.britishmuseum.belzoni_medal",
+        "src.perring1840.khafre"
+      ],
+      "truth_class": "DOCUMENTED_EVENT",
+      "verification_state": "CROSS_SOURCE_CONFIRMED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Historical event only.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.burial_chamber.roof",
+      "domain": "architecture",
+      "subject": "khafre_burial_chamber",
+      "label": "Burial chamber roof form",
+      "value": "Rock-excavated chamber with angular/gabled compact-stone roof blocks",
+      "observation_ids": [
+        "obs.perring1840.chamber_roof"
+      ],
+      "source_ids": [
+        "src.perring1840.khafre"
+      ],
+      "truth_class": "HISTORICAL_PRIMARY_OBSERVATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "HISTORICAL_CROSSCHECK_ONLY",
+      "caveat": "Modern metric geometry requires survey confirmation.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.sarcophagus.setting",
+      "domain": "architecture",
+      "subject": "khafre_sarcophagus",
+      "label": "Sarcophagus setting",
+      "value": "Sunk into western floor zone with surrounding granite and granite bedding slab",
+      "observation_ids": [
+        "obs.perring1840.sarcophagus_setting"
+      ],
+      "source_ids": [
+        "src.perring1840.khafre"
+      ],
+      "truth_class": "HISTORICAL_PRIMARY_OBSERVATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "HISTORICAL_CROSSCHECK_ONLY",
+      "caveat": "Do not infer hidden passages from nineteenth-century analogy.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.lower_chamber.water_stain",
+      "domain": "condition_history",
+      "subject": "khafre_lower_chamber",
+      "label": "Historic water stain",
+      "value": "Perring reported an approximately 12-inch water-stain height",
+      "observation_ids": [
+        "obs.perring1840.lower_water_stain"
+      ],
+      "source_ids": [
+        "src.perring1840.khafre"
+      ],
+      "truth_class": "HISTORICAL_PRIMARY_OBSERVATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Not a modern groundwater level or evidence of a hydraulic system.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.valley.materials",
+      "domain": "materials",
+      "subject": "khafre_valley_temple",
+      "label": "Valley Temple materials",
+      "value": "Massive limestone blocks encased in granite, alabaster floors, monolithic granite pillars",
+      "observation_ids": [
+        "obs.ministry.valley_materials"
+      ],
+      "source_ids": [
+        "src.egypt_ministry"
+      ],
+      "truth_class": "OFFICIAL_SUMMARY",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "MATERIAL_CONTEXT_ONLY",
+      "caveat": "Detailed stone-by-stone provenance needs ARCE/survey records.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.valley.finds",
+      "domain": "archaeology",
+      "subject": "khafre_valley_temple",
+      "label": "Digital Giza find inventory",
+      "value": "17 indexed finds",
+      "observation_ids": [
+        "obs.digitalgiza.valley.finds17"
+      ],
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple"
+      ],
+      "truth_class": "CATALOG_FACT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Catalog count, not excavation-total completeness.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.pyramid_temple.finds",
+      "domain": "archaeology",
+      "subject": "khafre_pyramid_temple",
+      "label": "Digital Giza find inventory",
+      "value": "5 indexed finds",
+      "observation_ids": [
+        "obs.digitalgiza.pyramid_temple.finds5"
+      ],
+      "source_ids": [
+        "src.digitalgiza.khafre_pyramid_temple"
+      ],
+      "truth_class": "CATALOG_FACT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Catalog count, not excavation-total completeness.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.architrave",
+      "domain": "epigraphy",
+      "subject": "khafre_pyramid_temple",
+      "label": "Khafre named architrave",
+      "value": "Original red-granite architrave bears Khafre titulary; probable pyramid-temple origin; later reused at Lisht",
+      "observation_ids": [
+        "obs.met.architrave.origin",
+        "obs.met.architrave.reuse"
+      ],
+      "source_ids": [
+        "src.met.khafre_architrave"
+      ],
+      "truth_class": "CURATORIAL_INTERPRETATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Probable original placement remains curatorial reconstruction.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.sphinx.bedrock",
+      "domain": "archaeology",
+      "subject": "great_sphinx",
+      "label": "Fabric",
+      "value": "Carved directly from Giza bedrock",
+      "observation_ids": [
+        "obs.ministry.sphinx.bedrock"
+      ],
+      "source_ids": [
+        "src.egypt_ministry.sphinx"
+      ],
+      "truth_class": "OFFICIAL_SUMMARY",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "No metric geometry authority.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.sphinx.khafre_attribution",
+      "domain": "chronology",
+      "subject": "great_sphinx",
+      "label": "Khafre attribution",
+      "value": "Evidence strongly favors Khafre-period construction",
+      "observation_ids": [
+        "obs.ministry.sphinx.khafre_attribution",
+        "obs.aera.valley_before_sphinx_temple",
+        "obs.aera.sphinx_quarry_link"
+      ],
+      "source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.aera.kh_sequence",
+        "src.aera.kh_monuments_unit"
+      ],
+      "truth_class": "ARCHAEOLOGICAL_INTERPRETATION",
+      "verification_state": "CROSS_SOURCE_STRONG_SUPPORT",
+      "confidence": "MEDIUM_HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Strong support is not mathematical proof; preserve alternative claims separately.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.sphinx.sequence.valley_first",
+      "domain": "construction_sequence",
+      "subject": "khafre_lower_complex",
+      "label": "Relative sequence",
+      "value": "Valley Temple precedes Sphinx Temple; causeway precedes Sphinx quarry",
+      "observation_ids": [
+        "obs.ministry.sphinx.sequence",
+        "obs.aera.valley_before_sphinx_temple",
+        "obs.aera.causeway_precedes_sphinx_quarry"
+      ],
+      "source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.aera.kh_sequence",
+        "src.aera.kh_monuments_unit"
+      ],
+      "truth_class": "ARCHAEOLOGICAL_INTERPRETATION",
+      "verification_state": "CROSS_SOURCE_STRONG_SUPPORT",
+      "confidence": "MEDIUM_HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Relative sequence, not absolute calendar date.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.sphinx.quarry.block_matching",
+      "domain": "geology_archaeology",
+      "subject": "sphinx_temple",
+      "label": "Quarry-construction link",
+      "value": "AERA/ARCE geological mapping links Sphinx-quarry strata to Sphinx Temple core blocks",
+      "observation_ids": [
+        "obs.aera.sphinx_quarry_link"
+      ],
+      "source_ids": [
+        "src.aera.kh_monuments_unit",
+        "src.opencontext.arce_sphinx"
+      ],
+      "truth_class": "EXPERT_ARCHAEOLOGICAL_INTERPRETATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Block-source matching is expert interpretation based on mapped strata.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.giza.area_c.function",
+      "domain": "workforce_archaeology",
+      "subject": "area_c",
+      "label": "Gallery function",
+      "value": "Re-excavation favors storage/craft use rather than worker barracks",
+      "observation_ids": [
+        "obs.aera.area_c.function"
+      ],
+      "source_ids": [
+        "src.aera.area_c"
+      ],
+      "truth_class": "EXCAVATION_INTERPRETATION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Does not by itself identify all occupants/workforce organization.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.giza.geology.cliffline",
+      "domain": "geology",
+      "subject": "giza_plateau",
+      "label": "Plateau geomorphology",
+      "value": "Pliocene cliff-line context with lithology, joints and faults as morphogenetic controls",
+      "observation_ids": [
+        "obs.geology.giza_cliffline"
+      ],
+      "source_ids": [
+        "src.aigner1983"
+      ],
+      "truth_class": "PEER_REVIEWED_GEOLOGY",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Regional geological context; not a deep-void model.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.giza.radiocarbon.sample_program",
+      "domain": "chronology",
+      "subject": "old_kingdom_chronology",
+      "label": "Radiocarbon program",
+      "value": "More than 450 organic samples collected across Old/Middle Kingdom monuments",
+      "observation_ids": [
+        "obs.bonani.sample_count"
+      ],
+      "source_ids": [
+        "src.bonani2001.radiocarbon"
+      ],
+      "truth_class": "PEER_REVIEWED_METHOD_RECORD",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Not all samples are Khafre-specific.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.giza.radiocarbon.oldwood",
+      "domain": "chronology_method",
+      "subject": "old_kingdom_chronology",
+      "label": "Old-wood caveat",
+      "value": "Reused/old wood can bias charcoal ages older than construction event",
+      "observation_ids": [
+        "obs.aera.radiocarbon.oldwood"
+      ],
+      "source_ids": [
+        "src.aera.radiocarbon",
+        "src.bonani2001.radiocarbon"
+      ],
+      "truth_class": "METHOD_CAVEAT",
+      "verification_state": "CONFIRMED_METHOD_CONTEXT",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Radiocarbon offsets must not be read as direct proof of earlier pyramid construction.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.giza.unesco.status",
+      "domain": "heritage",
+      "subject": "giza_plateau",
+      "label": "World Heritage context",
+      "value": "Giza lies within UNESCO property 86, inscribed 1979",
+      "observation_ids": [
+        "obs.unesco.inscription1979"
+      ],
+      "source_ids": [
+        "src.unesco.memphis_necropolis"
+      ],
+      "truth_class": "INSTITUTIONAL_RECORD",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Heritage status, not archaeological proof.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.condition.facade",
+      "domain": "conservation",
+      "subject": "khafre_pyramid",
+      "label": "Facade fracture monitoring",
+      "value": "2009–2012 photographic documentation with in-situ verification of major cracks in 2012",
+      "observation_ids": [
+        "obs.khafre.facade_photo_condition_2009_2012"
+      ],
+      "source_ids": [
+        "src.procedia2016.khafre_deformations"
+      ],
+      "truth_class": "PEER_REVIEWED_CONDITION_STUDY",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE_CONDITION_ONLY",
+      "caveat": "Does not establish ancient crack origin or hidden geometry.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.muography.status",
+      "domain": "geophysics",
+      "subject": "khafre_pyramid",
+      "label": "ScIDEP status",
+      "value": "2025 peer-reviewed paper documents project design/construction and planned multi-view muography; not a finished hidden-void result",
+      "observation_ids": [
+        "obs.scidep.multiview_plan"
+      ],
+      "source_ids": [
+        "src.scidep2025"
+      ],
+      "truth_class": "PEER_REVIEWED_METHOD_STATUS",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Method/project status only; no hidden-space claim promotion.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.laser2025.status",
+      "domain": "survey",
+      "subject": "khafre_surface",
+      "label": "2025 laser survey",
+      "value": "AERA bibliography records a first laser survey of the Second Great Pyramid; underlying geometry data remain pending access",
+      "observation_ids": [
+        "obs.khafre.laser_survey_2025_exists"
+      ],
+      "source_ids": [
+        "src.aera2025.khafre_laser"
+      ],
+      "truth_class": "PUBLICATION_METADATA",
+      "verification_state": "CONFIRMED_METADATA",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE_UNTIL_DATA_ACQUIRED",
+      "caveat": "Existence of publication does not authorize point-cloud geometry.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.khafre.open_media",
+      "domain": "imagery",
+      "subject": "khafre_complex",
+      "label": "Open visual evidence",
+      "value": "Rights-reviewed Commons assets plus Digital Giza catalog surface provide multi-date visual evidence",
+      "observation_ids": [
+        "obs.commons.khafre_media_surface",
+        "obs.digitalgiza.khafre_photo_count"
+      ],
+      "source_ids": [
+        "src.commons.khafre",
+        "src.commons.khafre.interior",
+        "src.digitalgiza.khafre.photos"
+      ],
+      "truth_class": "MEDIA_COLLECTION_FACT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE_UNTIL_REGISTERED",
+      "caveat": "Photos remain visual observations until camera registration and residual QA.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.intent.royal_funeral_afterlife",
+      "domain": "ritual_function",
+      "subject": "old_kingdom_royal_pyramid_complex",
+      "label": "Royal funeral / afterlife transition function",
+      "value": "Royal pyramid complexes functioned as settings for funeral, procession and preparation of the deceased king for the afterlife.",
+      "observation_ids": [
+        "obs.intent.royal_complex.funeral_afterlife"
+      ],
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ],
+      "truth_class": "SCHOLARLY_SYNTHESIS",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Functional interpretation applies to the royal pyramid-complex tradition; it does not identify every Khafre architectural detail with one ritual act.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.intent.perpetual_offering_cult",
+      "domain": "ritual_function",
+      "subject": "old_kingdom_royal_pyramid_complex",
+      "label": "Post-burial royal offering cult",
+      "value": "After burial, priests used pyramid-complex spaces to maintain offerings and ritual service for the deceased king.",
+      "observation_ids": [
+        "obs.intent.royal_complex.offering_cult"
+      ],
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ],
+      "truth_class": "SCHOLARLY_SYNTHESIS",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "This supports continuing cult function, not a claim that every surviving room has a securely identified ritual use.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.intent.solar_kingship_context",
+      "domain": "ideology",
+      "subject": "old_kingdom_royal_pyramid_tradition",
+      "label": "Solar kingship context",
+      "value": "Old Kingdom pyramid architecture participated in an ideological environment of increasingly prominent solar kingship.",
+      "observation_ids": [
+        "obs.intent.old_kingdom.solar_symbolism"
+      ],
+      "source_ids": [
+        "src.met.old_kingdom"
+      ],
+      "truth_class": "SCHOLARLY_CONTEXT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "MEDIUM_HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "General Old Kingdom context is not a Khafre-specific inscription proving a particular encoded solar message.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.intent.centralized_state_context",
+      "domain": "political_organization",
+      "subject": "old_kingdom_state",
+      "label": "Centralized-state context",
+      "value": "The pyramid-building environment operated within a highly centralized royal state capable of planned monumental landscapes and concentrated administration.",
+      "observation_ids": [
+        "obs.intent.old_kingdom.centralized_state"
+      ],
+      "source_ids": [
+        "src.met.old_kingdom"
+      ],
+      "truth_class": "SCHOLARLY_CONTEXT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "State capacity explains coordination context; it does not by itself establish the monument’s religious meaning.",
+      "confirmed_on": "2026-09-12"
+    },
+    {
+      "id": "kn.action.valley_temple.statuary",
+      "domain": "ritual_architecture",
+      "subject": "khafre_valley_temple",
+      "label": "Repeated royal statuary in Valley Temple",
+      "value": "Multiple Khafre statues/fragments are cataloged from the Valley Temple; official museum record describes one 168 cm diorite statue as one of about 23 similar statues.",
+      "observation_ids": [
+        "obs.digitalgiza.valley.finds17",
+        "obs.egyptianmuseum.khafre_valley_statue"
+      ],
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple",
+        "src.egyptianmuseum.khafre_statue"
+      ],
+      "truth_class": "CROSS_SOURCE_OBJECT_PROVENANCE",
+      "verification_state": "CROSS_SOURCE_CONFIRMED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Presence of statuary does not by itself reconstruct exact statue positions or a unique ritual action.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.action.valley_temple.kingship_iconography",
+      "domain": "iconography",
+      "subject": "khafre_valley_temple",
+      "label": "Kingship/unification iconography",
+      "value": "Official museum description links the enthroned Khafre image with sema-tawy unification symbolism and Horus protection.",
+      "observation_ids": [
+        "obs.egyptianmuseum.khafre_iconography"
+      ],
+      "source_ids": [
+        "src.egyptianmuseum.khafre_statue"
+      ],
+      "truth_class": "CURATORIAL_ICONOGRAPHIC_CONTEXT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH_CURATORIAL",
+      "geometry_write_authority": "NONE",
+      "caveat": "Iconographic meaning belongs to the statue/object context and cannot be projected onto every temple action.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.action.causeway.statue_find",
+      "domain": "archaeology",
+      "subject": "khafre_causeway",
+      "label": "Statuary find associated with causeway",
+      "value": "Digital Giza indexes a limestone statue head as a Khafre Causeway find.",
+      "observation_ids": [
+        "obs.digitalgiza.causeway.statue_head"
+      ],
+      "source_ids": [
+        "src.digitalgiza.khafre_causeway"
+      ],
+      "truth_class": "CATALOG_FACT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Find association does not establish original display position or processional use.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.action.pyramid_temple.royal_threshold",
+      "domain": "architecture_epigraphy",
+      "subject": "khafre_pyramid_temple",
+      "label": "Royal titulary at court doorway",
+      "value": "Met curatorial reconstruction places Khafre’s cartouche on a red-granite architrave spanning a court doorway, with falcon/statue imagery associated with the piers.",
+      "observation_ids": [
+        "obs.met.architrave.origin",
+        "obs.met.architrave.doorway_context"
+      ],
+      "source_ids": [
+        "src.met.khafre_architrave"
+      ],
+      "truth_class": "CURATORIAL_ARCHITECTURAL_RECONSTRUCTION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH_CURATORIAL",
+      "geometry_write_authority": "NONE",
+      "caveat": "Exact original pier/doorway placement requires primary excavation/plan reconciliation.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.action.pyramid_temple.statuary",
+      "domain": "archaeology",
+      "subject": "khafre_pyramid_temple",
+      "label": "Royal statuary in pyramid temple",
+      "value": "Digital Giza indexes a lower part of a diorite striding statue of Khafre and another statue fragment among five finds from the pyramid temple.",
+      "observation_ids": [
+        "obs.digitalgiza.pyramid_temple.finds5"
+      ],
+      "source_ids": [
+        "src.digitalgiza.khafre_pyramid_temple"
+      ],
+      "truth_class": "CATALOG_FACT",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Find inventory does not establish exact ancient placement.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.action.royal_complex.offering_to_images",
+      "domain": "ritual_function",
+      "subject": "old_kingdom_royal_pyramid_complex",
+      "label": "Offerings/readings directed to royal images",
+      "value": "Digital Giza describes living priests presenting offerings and religious readings to statues of the deceased king as part of the post-burial royal offering cult.",
+      "observation_ids": [
+        "obs.intent.royal_complex.offering_cult"
+      ],
+      "source_ids": [
+        "src.digitalgiza.royal_pyramid_complexes"
+      ],
+      "truth_class": "SCHOLARLY_SYNTHESIS",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH_CONTEXTUAL",
+      "geometry_write_authority": "NONE",
+      "caveat": "General Old Kingdom royal-complex function; exact Khafre room-by-room rite remains unresolved.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.room.valley.dual_entry",
+      "domain": "architecture_epigraphy",
+      "subject": "khafre_valley_temple",
+      "label": "Dual east entrance with goddess associations",
+      "value": "The east façade is reconstructed with two entrances; source synthesis associates Bastet with the north entrance and Hathor with the south.",
+      "observation_ids": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "source_ids": [
+        "src.oxford.flentye2018",
+        "src.hoelscher1912"
+      ],
+      "truth_class": "CROSS_SOURCE_ARCHITECTURAL_SYNTHESIS",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Associated flanking sphinx/lion reconstruction remains interpretive.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.room.valley.statuary_grid",
+      "domain": "architecture_statuary",
+      "subject": "khafre_valley_temple_t_hall",
+      "label": "23-position Valley Temple statuary field",
+      "value": "The T-shaped hall preserves/reports 23 floor niches, with a 3/7/3/7/3 arrangement in Seidel’s reconstruction.",
+      "observation_ids": [
+        "obs.room.oxford.valley_niches",
+        "obs.egyptianmuseum.khafre_valley_statue"
+      ],
+      "source_ids": [
+        "src.oxford.flentye2018",
+        "src.egyptianmuseum.khafre_statue"
+      ],
+      "truth_class": "ARCHITECTURE_PLUS_RECONSTRUCTION",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH_WITH_PLACEMENT_CAVEAT",
+      "geometry_write_authority": "NONE",
+      "caveat": "Specific statue-to-niche assignments remain reconstructed.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.room.pyramid_temple.program",
+      "domain": "architecture",
+      "subject": "khafre_pyramid_temple",
+      "label": "Pyramid Temple room program",
+      "value": "Independent scholarly synthesis and Hölscher’s excavation monograph converge on pillared halls, a court, five chapel/serdab-like cult spaces, side/magazine spaces and a western inner zone.",
+      "observation_ids": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "source_ids": [
+        "src.hoelscher1912",
+        "src.oxford.flentye2018"
+      ],
+      "truth_class": "CROSS_SOURCE_ROOM_PROGRAM",
+      "verification_state": "CONFIRMED_SOURCE",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Exact room outlines require plan-byte parsing and modern survey reconciliation.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.room.court.reconstruction_conflict",
+      "domain": "source_conflict",
+      "subject": "khafre_pyramid_temple_statue_court",
+      "label": "Statue-court reconstruction remains non-unique",
+      "value": "Physical emplacement evidence supports major statuary/stone installations, but statue type/pose and exact court reconstruction differ among Hölscher, Ricke, Arnold and Jánosi.",
+      "observation_ids": [
+        "obs.room.hoelscher.court_statue_holes",
+        "obs.room.oxford.court_reconstruction_dispute"
+      ],
+      "source_ids": [
+        "src.hoelscher1912",
+        "src.oxford.flentye2018"
+      ],
+      "truth_class": "SOURCE_CONFLICT_SYNTHESIS",
+      "verification_state": "CONFLICT_PRESERVED",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Do not render one disputed reconstruction as canonical ancient reality.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.room.plan.metric_gap",
+      "domain": "research_priority",
+      "subject": "khafre_lower_complex",
+      "label": "Room topology is ahead of metric plan custody",
+      "value": "Room-level topology can now be source-addressed, while the highest-value 1:100 ARCE Valley Temple plan and key Hölscher plates are not yet checksum-bound local source bytes.",
+      "observation_ids": [
+        "obs.room.arce.valley_plan_1_100",
+        "obs.room.hoelscher.program"
+      ],
+      "source_ids": [
+        "src.opencontext.arce_sphinx",
+        "src.hoelscher1912"
+      ],
+      "truth_class": "PROVENANCE_GAP",
+      "verification_state": "RESEARCH_PRIORITY",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Topology must remain schematic until source bytes and metric frame receipts exist.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.metric.registration.public_domain_targets",
+      "domain": "metric_registration",
+      "subject": "khafre_plan_sources",
+      "label": "Two primary plan families are acquisition-ready or remotely accessible",
+      "value": "Petrie 1883 is available as a public-domain scan and Perring Part II is available as a digitized plate volume; neither is locally checksum-bound in this release.",
+      "observation_ids": [
+        "obs.metric.perring.plate_i"
+      ],
+      "source_ids": [
+        "src.petrie1883",
+        "src.perring1840.khafre"
+      ],
+      "truth_class": "SOURCE_BYTE_READINESS",
+      "verification_state": "REMOTE_BYTES_LOCATED_LOCAL_CUSTODY_MISSING",
+      "confidence": "HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "Availability is not registration. No plan receives metric authority until local bytes, checksums, scale/frame parse and holdout residuals exist.",
+      "confirmed_on": "2026-09-13"
+    },
+    {
+      "id": "kn.sensory.valley_hall.testable",
+      "domain": "sensory_architecture",
+      "subject": "khafre_valley_temple_pillared_hall",
+      "label": "Valley Temple light/material/image staging is now a falsifiable candidate",
+      "value": "Hölscher’s description links polished granite/alabaster, statue positions and high-aperture light in the Valley Temple hall. Registered openings and wall geometry could test whether the reconstructed reveal/light field is physically plausible.",
+      "observation_ids": [
+        "obs.sensory.hoelscher.gateway_hall",
+        "obs.metric.arce.valley_scale_archive"
+      ],
+      "source_ids": [
+        "src.hoelscher1912",
+        "src.opencontext.arce_sphinx"
+      ],
+      "truth_class": "HISTORICAL_RECONSTRUCTION_PLUS_MODERN_SURVEY_TARGET",
+      "verification_state": "METRIC_TEST_PENDING",
+      "confidence": "MEDIUM_HIGH",
+      "geometry_write_authority": "NONE",
+      "caveat": "No photometric claim, emotional-effect claim or ritual meaning is established.",
+      "confirmed_on": "2026-09-13"
+    }
+  ]
+}

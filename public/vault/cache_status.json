@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "local_cached_release_assets": 0,
+  "local_cached_private_assets": 0,
+  "raw_primary_binaries_present": 0,
+  "status": "EMPTY_OR_PRIVATE_ONLY",
+  "network_note": "Direct container DNS/network acquisition is unavailable in this environment. No remote source is represented as locally cached.",
+  "last_checked": "2026-09-12T23:01:04.967Z",
+  "assets": {}
+}

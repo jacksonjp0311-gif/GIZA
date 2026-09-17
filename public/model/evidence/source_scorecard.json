@@ -1,0 +1,535 @@
+{
+  "version": "1.1.0",
+  "scores": [
+    {
+      "id": "src.petrie1883",
+      "title": "The Pyramids and Temples of Gizeh",
+      "geometry_authority": 5,
+      "materials_authority": 3,
+      "visual_authority": 2,
+      "method_authority": 3,
+      "rights_class": "PUBLIC_DOMAIN_OR_NO_KNOWN_US_RESTRICTIONS",
+      "asset_action": "TEXT_AND_MEASUREMENT_INGEST"
+    },
+    {
+      "id": "src.hoelscher1912",
+      "title": "Das Grabdenkmal des Königs Chephren",
+      "geometry_authority": 5,
+      "materials_authority": 4,
+      "visual_authority": 3,
+      "method_authority": 4,
+      "rights_class": "IN_COPYRIGHT_DIGITAL_REPRODUCTION",
+      "asset_action": "TEXT_REFERENCE_AND_MANUAL_MEASUREMENT_ONLY"
+    },
+    {
+      "id": "src.legon1989",
+      "title": "The Design of the Pyramid of Khafre",
+      "geometry_authority": 3,
+      "materials_authority": 1,
+      "visual_authority": 1,
+      "method_authority": 3,
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.egypt_ministry",
+      "title": "Pyramid Complex of Khafre (Khefren)",
+      "geometry_authority": 3,
+      "materials_authority": 4,
+      "visual_authority": 2,
+      "method_authority": 1,
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.home",
+      "title": "Digital Giza — Harvard University",
+      "geometry_authority": 4,
+      "materials_authority": 3,
+      "visual_authority": 4,
+      "method_authority": 4,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.khafre.photos",
+      "title": "Digital Giza — Khafre Pyramid All Photos (406 records)",
+      "geometry_authority": 2,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 2,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.mr1966.plate005",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 005",
+      "geometry_authority": 4,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.mr1966.plate008",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 008",
+      "geometry_authority": 4,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.mr1966.plate009",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 009",
+      "geometry_authority": 4,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.mr1966.plate013",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 013",
+      "geometry_authority": 4,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.mr1966.plate014",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 014 / Digital Giza annotation",
+      "geometry_authority": 4,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.giza3d",
+      "title": "Digital Giza 3D",
+      "geometry_authority": 3,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 3,
+      "rights_class": "REFERENCE_ONLY_UNLESS_EXPORT_RIGHTS_EXPLICIT",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.khafre_quarry",
+      "title": "Digital Giza — Khafre Quarry",
+      "geometry_authority": 2,
+      "materials_authority": 4,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.giia",
+      "title": "Digital Giza — G II-a (Khafre Queen's Pyramid a)",
+      "geometry_authority": 3,
+      "materials_authority": 2,
+      "visual_authority": 3,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.commons.khafre",
+      "title": "Wikimedia Commons — Pyramid of Khafra",
+      "geometry_authority": 1,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 1,
+      "rights_class": "PER_FILE_LICENSE",
+      "asset_action": "PER_FILE_LICENSE_CHECK"
+    },
+    {
+      "id": "src.commons.khafre.interior",
+      "title": "Wikimedia Commons — Interior of Khafra Pyramid",
+      "geometry_authority": 1,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 1,
+      "rights_class": "PER_FILE_LICENSE",
+      "asset_action": "PER_FILE_LICENSE_CHECK"
+    },
+    {
+      "id": "src.opencontext.arce_sphinx",
+      "title": "ARCE Sphinx Project 1979–1983 Archive",
+      "geometry_authority": 5,
+      "materials_authority": 5,
+      "visual_authority": 5,
+      "method_authority": 5,
+      "rights_class": "CC_BY_4_0",
+      "asset_action": "INGEST_ALLOWED_WITH_ATTRIBUTION"
+    },
+    {
+      "id": "src.arce.sphinx_database",
+      "title": "Sphinx Mapping Digital Database",
+      "geometry_authority": 4,
+      "materials_authority": 4,
+      "visual_authority": 4,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.zenodo.arce_media",
+      "title": "ARCE Sphinx Project aggregated media files",
+      "geometry_authority": 2,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 2,
+      "rights_class": "SOURCE_RECORD_LINKS_TO_OPEN_CONTEXT_RIGHTS",
+      "asset_action": "INGEST_AFTER_RECORD_LICENSE_MATCH"
+    },
+    {
+      "id": "src.aera.gpmp",
+      "title": "Giza, Meter by Meter — GPMP survey grid",
+      "geometry_authority": 5,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_AND_TRANSFORM_SPEC"
+    },
+    {
+      "id": "src.aera.sphinx_stone_mapping",
+      "title": "Who Built the Sphinx? — Stone by Stone mapping summary",
+      "geometry_authority": 4,
+      "materials_authority": 5,
+      "visual_authority": 3,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.npj2020.materials",
+      "title": "Sustainability problems of the Giza pyramids",
+      "geometry_authority": 2,
+      "materials_authority": 5,
+      "visual_authority": 3,
+      "method_authority": 4,
+      "rights_class": "OPEN_ACCESS_ARTICLE_RECORD",
+      "asset_action": "NUMERIC_AND_TEXTUAL_RESULT_INGEST"
+    },
+    {
+      "id": "src.aigner1983",
+      "title": "A Pliocene cliff-line around the Giza pyramids plateau, Egypt",
+      "geometry_authority": 2,
+      "materials_authority": 5,
+      "visual_authority": 1,
+      "method_authority": 4,
+      "rights_class": "PUBLISHER_COPYRIGHT",
+      "asset_action": "REFERENCE_ONLY"
+    },
+    {
+      "id": "src.smithsonian.elisofon.khafre",
+      "title": "Eliot Elisofon Khafre photographic records",
+      "geometry_authority": 1,
+      "materials_authority": 2,
+      "visual_authority": 5,
+      "method_authority": 1,
+      "rights_class": "USAGE_CONDITIONS_APPLY",
+      "asset_action": "REFERENCE_ONLY_NO_REDISTRIBUTION"
+    },
+    {
+      "id": "src.scidep2025",
+      "title": "The ScIDEP muon radiography project at the Egyptian Pyramid of Khafre",
+      "geometry_authority": 2,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "OPEN_ACCESS_ARTICLE",
+      "asset_action": "ARTICLE_AND_METHOD_REFERENCE"
+    },
+    {
+      "id": "src.scanpyramids2017.khufu",
+      "title": "Discovery of a big void in Khufu’s Pyramid by observation of cosmic-ray muons",
+      "geometry_authority": 1,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "PUBLISHER_ARTICLE",
+      "asset_action": "METHOD_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.scanpyramids2023.khufu_nfc",
+      "title": "Precise characterization of a corridor-shaped structure in Khufu’s Pyramid by cosmic-ray muons",
+      "geometry_authority": 1,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "OPEN_ACCESS_ARTICLE",
+      "asset_action": "METHOD_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.nasa.srtmgl1v003",
+      "title": "NASA SRTM Global 1 arc-second V003",
+      "geometry_authority": 1,
+      "materials_authority": 0,
+      "visual_authority": 2,
+      "method_authority": 4,
+      "rights_class": "US_GOVERNMENT_OPEN_DATA",
+      "asset_action": "TERRAIN_INGEST_ALLOWED"
+    },
+    {
+      "id": "src.copernicus.dem",
+      "title": "Copernicus DEM GLO-30 / GLO-90",
+      "geometry_authority": 1,
+      "materials_authority": 0,
+      "visual_authority": 2,
+      "method_authority": 4,
+      "rights_class": "FULL_FREE_OPEN_LICENSE_WITH_SERVICE_ACCESS_RULES",
+      "asset_action": "TERRAIN_INGEST_AFTER_ACCESS_CHECK"
+    },
+    {
+      "id": "src.copernicus.sentinel2",
+      "title": "Copernicus Sentinel-2 Level-2A",
+      "geometry_authority": 0,
+      "materials_authority": 1,
+      "visual_authority": 4,
+      "method_authority": 4,
+      "rights_class": "COPERNICUS_OPEN_DATA",
+      "asset_action": "SITE_IMAGERY_INGEST_ALLOWED"
+    },
+    {
+      "id": "src.usgs.landsat_c2",
+      "title": "Landsat Collection 2 Surface Reflectance",
+      "geometry_authority": 0,
+      "materials_authority": 1,
+      "visual_authority": 3,
+      "method_authority": 4,
+      "rights_class": "NO_USE_RESTRICTIONS",
+      "asset_action": "SITE_IMAGERY_INGEST_ALLOWED"
+    },
+    {
+      "id": "src.ahrama.deep_claim_2025",
+      "title": "Controversy over Pyramid claims",
+      "geometry_authority": 0,
+      "materials_authority": 0,
+      "visual_authority": 1,
+      "method_authority": 0,
+      "rights_class": "NEWS_COPYRIGHT",
+      "asset_action": "CLAIM_PROVENANCE_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.ahrama.deep_claim_retraction_context_2026",
+      "title": "Great Pyramid radar study on hidden structures retracted over serious methodological flaws",
+      "geometry_authority": 0,
+      "materials_authority": 0,
+      "visual_authority": 0,
+      "method_authority": 1,
+      "rights_class": "NEWS_COPYRIGHT",
+      "asset_action": "CLAIM_RISK_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.wikidata.khafre",
+      "title": "Wikidata — Pyramid of Khafre",
+      "geometry_authority": 1,
+      "materials_authority": 0,
+      "visual_authority": 1,
+      "method_authority": 0,
+      "rights_class": "CC0_STRUCTURED_DATA",
+      "asset_action": "CONTEXT_METADATA_INGEST"
+    },
+    {
+      "id": "src.aera.kh2025_laser",
+      "title": "The First Laser Survey of the Second Great Pyramid",
+      "geometry_authority": 5,
+      "materials_authority": 1,
+      "visual_authority": 4,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "METADATA_AND_ACQUISITION_TARGET_ONLY"
+    },
+    {
+      "id": "src.dash.giza_surveys",
+      "title": "Surveys at Giza on Google Earth",
+      "geometry_authority": 4,
+      "materials_authority": 0,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_DATA_PORTAL",
+      "asset_action": "METADATA_AND_NUMERIC_CONTEXT_INGEST"
+    },
+    {
+      "id": "src.dash.corner_conundrum",
+      "title": "Corner Conundrum: A Mapping Mantra",
+      "geometry_authority": 4,
+      "materials_authority": 2,
+      "visual_authority": 2,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_METHOD_INGEST"
+    },
+    {
+      "id": "src.aera.online_data",
+      "title": "AERA Online Data — ARCE Sphinx Project Archive inventory",
+      "geometry_authority": 4,
+      "materials_authority": 3,
+      "visual_authority": 5,
+      "method_authority": 5,
+      "rights_class": "MIXED_OPEN_ARCHIVE_CHECK_ITEM_LICENSE",
+      "asset_action": "METADATA_INGEST_AND_PER_ASSET_REVIEW"
+    },
+    {
+      "id": "src.lehner.sphinx1992",
+      "title": "The First International Symposium on the Great Sphinx: Book of Proceedings",
+      "geometry_authority": 4,
+      "materials_authority": 3,
+      "visual_authority": 3,
+      "method_authority": 4,
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_NUMERIC_CONTEXT_INGEST"
+    },
+    {
+      "id": "src.egypt_ministry.sphinx",
+      "title": "The Great Sphinx",
+      "geometry_authority": 2,
+      "materials_authority": 2,
+      "visual_authority": 2,
+      "method_authority": 1,
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.egypt_ministry.giza_plateau",
+      "title": "Giza Plateau",
+      "geometry_authority": 1,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 1,
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.khafre_valley_temple",
+      "title": "Digital Giza — Khafre Valley Temple",
+      "geometry_authority": 3,
+      "materials_authority": 2,
+      "visual_authority": 4,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "CATALOG_METADATA_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.digitalgiza.khafre_pyramid_temple",
+      "title": "Digital Giza — Khafre Pyramid Temple",
+      "geometry_authority": 3,
+      "materials_authority": 2,
+      "visual_authority": 4,
+      "method_authority": 3,
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "CATALOG_METADATA_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.perring1840.khafre",
+      "title": "The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids",
+      "geometry_authority": 4,
+      "materials_authority": 3,
+      "visual_authority": 4,
+      "method_authority": 3,
+      "rights_class": "PUBLIC_DOMAIN_UNDERLYING_WORK_DIGITAL_ASSET_REVIEW",
+      "asset_action": "TEXT_AND_NUMERIC_FACTS_INGEST_FACSIMILE_REVIEW"
+    },
+    {
+      "id": "src.britishmuseum.belzoni_medal",
+      "title": "Medal commemorating Giovanni Belzoni and the Second Pyramid discovery",
+      "geometry_authority": 0,
+      "materials_authority": 0,
+      "visual_authority": 2,
+      "method_authority": 1,
+      "rights_class": "REFERENCE_ONLY_UNLESS_OBJECT_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.met.khafre_face",
+      "title": "Fragmentary Face of King Khafre",
+      "geometry_authority": 0,
+      "materials_authority": 2,
+      "visual_authority": 4,
+      "method_authority": 2,
+      "rights_class": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT",
+      "asset_action": "CATALOG_FACTS_AND_OPEN_ACCESS_ASSET_IF_MARKED"
+    },
+    {
+      "id": "src.met.khafre_architrave",
+      "title": "Cast of an architrave with the name of Khafre",
+      "geometry_authority": 0,
+      "materials_authority": 2,
+      "visual_authority": 4,
+      "method_authority": 3,
+      "rights_class": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT",
+      "asset_action": "CATALOG_FACTS_AND_OPEN_ACCESS_ASSET_IF_MARKED"
+    },
+    {
+      "id": "src.unesco.memphis_necropolis",
+      "title": "Memphis and its Necropolis — Pyramid Fields from Giza to Dahshur",
+      "geometry_authority": 1,
+      "materials_authority": 1,
+      "visual_authority": 2,
+      "method_authority": 2,
+      "rights_class": "TEXT_CC_BY_SA_IGO_3_MEDIA_PER_ITEM",
+      "asset_action": "TEXT_CONTEXT_INGEST_MEDIA_PER_ITEM_REVIEW"
+    },
+    {
+      "id": "src.aera.kh_monuments_unit",
+      "title": "Khafre’s Monuments as a Unit",
+      "geometry_authority": 2,
+      "materials_authority": 3,
+      "visual_authority": 2,
+      "method_authority": 4,
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.aera.kh_sequence",
+      "title": "Why Sequence is Important",
+      "geometry_authority": 2,
+      "materials_authority": 2,
+      "visual_authority": 2,
+      "method_authority": 4,
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.aera.area_c",
+      "title": "Area C (Petrie’s Worker’s Barracks)",
+      "geometry_authority": 1,
+      "materials_authority": 2,
+      "visual_authority": 2,
+      "method_authority": 4,
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.aera.radiocarbon",
+      "title": "How Old Are the Pyramids?",
+      "geometry_authority": 0,
+      "materials_authority": 1,
+      "visual_authority": 1,
+      "method_authority": 4,
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY"
+    },
+    {
+      "id": "src.bonani2001.radiocarbon",
+      "title": "Radiocarbon Dates of Old and Middle Kingdom Monuments in Egypt",
+      "geometry_authority": 0,
+      "materials_authority": 1,
+      "visual_authority": 0,
+      "method_authority": 5,
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "CITATION_AND_NUMERIC_FACTS_ONLY"
+    }
+  ]
+}

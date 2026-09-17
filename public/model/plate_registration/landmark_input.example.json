@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "source_sha256": "REPLACE_WITH_LOCAL_PDF_SHA256",
+  "render_sha256": "REPLACE_WITH_LOCAL_PLATE_VI_RENDER_SHA256",
+  "landmarks": [
+    {
+      "id": "lm.transverse_hall.west_north_corner",
+      "role": "CONTROL",
+      "source_px": {"x": null, "y": null},
+      "target_m": {"x": null, "y": null},
+      "target_source": "RECORD_EXACT_PROVENANCE_HERE"
+    },
+    {
+      "id": "lm.t_hall.north_arm_tip",
+      "role": "HOLDOUT",
+      "source_px": {"x": null, "y": null},
+      "target_m": {"x": null, "y": null},
+      "target_source": "RECORD_EXACT_PROVENANCE_HERE"
+    }
+  ]
+}

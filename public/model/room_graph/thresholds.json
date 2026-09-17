@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "threshold_count": 21,
+  "thresholds": [
+    {
+      "id": "thr.vt.north",
+      "from": "EXTERIOR",
+      "to": "room.vt.north_entry",
+      "kind": "MONUMENT_ENTRANCE",
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.south",
+      "from": "EXTERIOR",
+      "to": "room.vt.south_entry",
+      "kind": "MONUMENT_ENTRANCE",
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.n_to_vest",
+      "from": "room.vt.north_entry",
+      "to": "room.vt.vestibule",
+      "kind": "PASSAGE",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.s_to_vest",
+      "from": "room.vt.south_entry",
+      "to": "room.vt.vestibule",
+      "kind": "PASSAGE",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.vest_to_hall",
+      "from": "room.vt.vestibule",
+      "to": "room.vt.t_hall",
+      "kind": "INTERNAL_THRESHOLD",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.vt.hall_to_causeway",
+      "from": "room.vt.t_hall",
+      "to": "room.vt.nw_causeway_exit",
+      "kind": "ROUTE_TRANSITION",
+      "evidence": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.cw.route",
+      "from": "room.vt.nw_causeway_exit",
+      "to": "room.cw.covered_corridor",
+      "kind": "ASCENDING_ROUTE",
+      "evidence": [
+        "obs.room.hoelscher.causeway_slope"
+      ],
+      "status": "HISTORICAL_MEASUREMENT",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.cw.to_pt",
+      "from": "room.cw.covered_corridor",
+      "to": "room.pt.entry_branch",
+      "kind": "CAUSEWAY_TERMINATION",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.branch_side",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.side_rooms",
+      "kind": "SIDE_BRANCH",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.branch_main",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.vestibule",
+      "kind": "MAIN_BRANCH",
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.vest_wide",
+      "from": "room.pt.vestibule",
+      "to": "room.pt.wide_hall",
+      "kind": "SEQUENTIAL_THRESHOLD",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.wide_deep",
+      "from": "room.pt.wide_hall",
+      "to": "room.pt.deep_hall",
+      "kind": "SEQUENTIAL_THRESHOLD",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.deep_court",
+      "from": "room.pt.deep_hall",
+      "to": "room.pt.statue_court",
+      "kind": "COURT_ENTRY",
+      "evidence": [
+        "obs.room.hoelscher.court_passages"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_ambulatory",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.ambulatory",
+      "kind": "MULTIPLE_OPENINGS",
+      "evidence": [
+        "obs.room.hoelscher.court_passages"
+      ],
+      "status": "SOURCE_BACKED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_chapels",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.five_chapels",
+      "kind": "CULT_TRANSITION",
+      "evidence": [
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.court_inner",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.inner_zone",
+      "kind": "INNER_TRANSITION",
+      "evidence": [
+        "obs.room.hoelscher.public_private"
+      ],
+      "status": "FUNCTIONAL_INTERPRETATION",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.pt.inner_pycourt",
+      "from": "room.pt.inner_zone",
+      "to": "room.pt.pyramid_court",
+      "kind": "WEST_TRANSITION",
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.upper_port",
+      "from": "room.py.upper_entry",
+      "to": "room.py.portcullis",
+      "kind": "DESCENDING_PASSAGE",
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.lower_port",
+      "from": "room.py.lower_entry",
+      "to": "room.py.portcullis",
+      "kind": "LOWER_ROUTE_CONVERGENCE",
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.lower_chamber",
+      "from": "room.py.lower_entry",
+      "to": "room.py.lower_chamber",
+      "kind": "LOWER_BRANCH",
+      "evidence": [
+        "obs.room.perring.lower_chamber"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "thr.py.port_burial",
+      "from": "room.py.portcullis",
+      "to": "room.py.burial_chamber",
+      "kind": "HORIZONTAL_PASSAGE_TO_BURIAL",
+      "evidence": [
+        "obs.room.perring.belzoni_chamber"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "geometry_authority": "NONE"
+    }
+  ]
+}

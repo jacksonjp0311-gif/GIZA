@@ -1,0 +1,6 @@
+{
+  "analysis_cell_id": "cell.c049.N.022",
+  "evidence_item_id": "REPLACE_WITH_E4_OR_E5_STONE_SPECIFIC_RECEIPT",
+  "canonical_mutation": false,
+  "expected_result": "REVIEW_REQUIRED only when evidence maturity is E4 or E5"
+}

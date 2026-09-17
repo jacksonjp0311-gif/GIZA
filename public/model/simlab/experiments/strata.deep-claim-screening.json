@@ -1,0 +1,26 @@
+{
+  "version": "0.9.3",
+  "experiment_id": "strata.deep-claim-screening",
+  "title": "STRATA deep-claim geomechanics + hydraulic screening",
+  "truth_scope": "UNVERIFIED_CONDITIONAL_GEOMETRY",
+  "components": [
+    "part.shaft.alpha.1", "part.shaft.alpha.2", "part.shaft.alpha.3", "part.shaft.alpha.4",
+    "part.shaft.beta.1", "part.shaft.beta.2", "part.shaft.beta.3", "part.shaft.beta.4",
+    "part.terminal.alpha", "part.terminal.beta"
+  ],
+  "reference_components": ["part.lower.chamber", "part.burial.chamber"],
+  "parameters": {
+    "gravity_m_s2": 9.80665,
+    "rock_density_kg_m3": 2600,
+    "water_density_kg_m3": 1000,
+    "shaft_bottom_depth_m": 648,
+    "terminal_center_depth_m": 720,
+    "vertical_sample_step_m": 54
+  },
+  "controls": {
+    "hydraulic_null": "DRY_NO_WATER_COLUMN",
+    "mechanical_reference": "VERTICAL_OVERBURDEN_PROXY_NO_CAVITY_STRESS_CONCENTRATION",
+    "density_sensitivity_kg_m3": [2300, 2600, 2800]
+  },
+  "guard": "This is a first-order screening calculation. It is not an FEA stability result, does not establish flooding, and cannot confirm or reject unverified deep geometry by itself."
+}

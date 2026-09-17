@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "canonical_engineering_frame": {
+    "units": "m",
+    "handedness": "right",
+    "up_axis": "Z",
+    "surface_reference": "project local z=0",
+    "origin": "project-defined local survey frame"
+  },
+  "geospatial_bridge": {
+    "status": "UNRESOLVED_FOR_PRECISION_WORK",
+    "rule": "Terrain/satellite products retain their native CRS and vertical datum until an explicit transformation receipt maps them into the local engineering frame."
+  },
+  "required_transform_receipt_fields": [
+    "source_crs",
+    "source_vertical_datum",
+    "target_frame",
+    "control_points",
+    "transform_type",
+    "residuals",
+    "uncertainty",
+    "created_by",
+    "source_ids"
+  ],
+  "rules": [
+    "Never mix WGS84 latitude/longitude degrees directly with local meter coordinates.",
+    "Never infer a vertical datum from a visual match.",
+    "Every imported DEM/point cloud retains native CRS metadata and a transform receipt."
+  ]
+}

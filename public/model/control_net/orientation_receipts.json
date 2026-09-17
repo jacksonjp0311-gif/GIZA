@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "receipts": [
+    {
+      "receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "version": "0.9.8",
+      "kind": "SURVEY_DERIVED_ORIENTATION_PRIOR",
+      "provenance_class": "DERIVED_FROM_MEASURED_TOTAL_STATION",
+      "source_observation_ids": [
+        "obs.nell2006.khafre.north_casing_orientation",
+        "obs.nell2006.khafre.east_casing_orientation",
+        "obs.nell2006.khafre.south_casing_orientation",
+        "obs.nell2006.khafre.west_casing_orientation"
+      ],
+      "source_ids": [
+        "src.nell_ruggles2014"
+      ],
+      "method": "unweighted least-squares common yaw of four casing-foundation DFC measurements; equivalent to arithmetic mean for equal side weights",
+      "input_geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+      "input_hash": "b89014949f7e4ed1c720fd55b0b8bbfc12c2bdd3ba2b3253d2df0da3373c084d",
+      "side_measurements": [
+        {
+          "id": "obs.nell2006.khafre.north_casing_orientation",
+          "dfc_arcmin": -3.8,
+          "point_count": 13,
+          "azimuth_deg": 89.93666666666667,
+          "source_id": "src.nell_ruggles2014",
+          "residual_from_common_yaw_arcmin": 0.6500000000000004
+        },
+        {
+          "id": "obs.nell2006.khafre.east_casing_orientation",
+          "dfc_arcmin": -4,
+          "point_count": 19,
+          "azimuth_deg": 359.93333333333334,
+          "source_id": "src.nell_ruggles2014",
+          "residual_from_common_yaw_arcmin": 0.4500000000000002
+        },
+        {
+          "id": "obs.nell2006.khafre.south_casing_orientation",
+          "dfc_arcmin": -5.8,
+          "point_count": 11,
+          "azimuth_deg": 89.90333333333334,
+          "source_id": "src.nell_ruggles2014",
+          "residual_from_common_yaw_arcmin": -1.3499999999999996
+        },
+        {
+          "id": "obs.nell2006.khafre.west_casing_orientation",
+          "dfc_arcmin": -4.2,
+          "point_count": 11,
+          "azimuth_deg": 359.93,
+          "source_id": "src.nell_ruggles2014",
+          "residual_from_common_yaw_arcmin": 0.25
+        }
+      ],
+      "result": {
+        "yaw_from_true_cardinal_arcmin": -4.45,
+        "yaw_from_true_cardinal_deg": -0.07416666666666667,
+        "yaw_from_true_cardinal_rad": -0.0012944525285624611,
+        "rms_side_residual_arcmin": 0.7921489758877429,
+        "max_abs_side_residual_arcmin": 1.3499999999999996,
+        "side_spread_arcmin": 2,
+        "aggregated_measured_point_count": 54,
+        "reported_repeatability_arcmin": 0.2
+      },
+      "uncertainty_interpretation": {
+        "repeatability_note": "The 0.2 arcmin figure is a reported repeatability check for a repeated >10-point line, not the total absolute yaw uncertainty.",
+        "side_residual_note": "The four side measurements are not identical; residuals are retained rather than forcing an exact square.",
+        "absolute_survey_context": "Nell & Ruggles report survey-grid agreement with true north within their own margins; this receipt does not re-estimate that full uncertainty budget."
+      },
+      "translation_status": "UNRESOLVED",
+      "vertical_status": "UNRESOLVED",
+      "scale_status": "EXISTING_MODEL_SCALE_NOT_REESTIMATED",
+      "geometry_write_authority": "ORIENTATION_PRIOR_ONLY",
+      "canonical_geometry_mutation": false,
+      "status": "ACCEPTED_AS_CONTROL_PRIOR",
+      "created_at": "2026-09-12T16:00:31.282Z",
+      "guard": "This receipt constrains a monument yaw prior only. It does not rotate parts.json, solve GPMP translation, establish elevation, or prove every masonry course shares the casing-foundation orientation."
+    }
+  ]
+}

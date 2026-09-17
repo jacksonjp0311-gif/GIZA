@@ -1,0 +1,1253 @@
+{
+  "run_id": "run.acoustic.acoustic.known-interiors-screening.1ffcc551ebdb",
+  "experiment_id": "acoustic.known-interiors-screening",
+  "solver_id": "solver.acoustic",
+  "solver_version": "0.9.2-screening-analytic",
+  "provenance_class": "SIMULATED",
+  "truth_status": "CONDITIONAL_DERIVED_GEOMETRY",
+  "geometry_revision": "rev.0003",
+  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+  "input_hash": "1ffcc551ebdb76a7adbdcb8374765d529bd4ac4a7161e1f356d89e1d40197ee8",
+  "atmosphere": {
+    "temperature_c": 20,
+    "relative_humidity_percent": null,
+    "pressure_pa": null,
+    "note": "Dry-air first-order sound speed only. Humidity and pressure are deliberately unresolved in v0.9.2.",
+    "sound_speed_m_s": 343.42,
+    "model": "dry-air first-order screening"
+  },
+  "boundary_model": {
+    "kind": "RIGID_WALL_SCREENING",
+    "passages": "OPEN_OPEN_1D_SCREENING",
+    "cavities": "RECTANGULAR_RIGID_ENVELOPE",
+    "warning": "Burial chamber gable and junction scattering are not resolved by this analytical screening model."
+  },
+  "loss_model": {
+    "kind": "SCREENING_Q",
+    "q_screening": 12,
+    "warning": "Q=12 is a visualization/screening parameter, not a measured Khafre reverberation value."
+  },
+  "frequency": {
+    "min_hz": 1,
+    "max_hz": 150,
+    "step_hz": 0.25,
+    "max_mode_order": 8
+  },
+  "components": [
+    {
+      "id": "burial_chamber",
+      "part_id": "part.burial.chamber",
+      "model": "CAVITY_BOX",
+      "dims_m": [
+        14.164309999999999,
+        4.97459,
+        5.24256
+      ],
+      "weight": 1.4,
+      "modes": [
+        {
+          "frequency_hz": 12.122722532901356,
+          "mode": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 24.245445065802713,
+          "mode": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 32.75308246352927,
+          "mode": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 34.517417515815374,
+          "mode": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 34.9245588729831,
+          "mode": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 36.368167598704076,
+          "mode": [
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 36.58432059736565,
+          "mode": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 40.75053395112272,
+          "mode": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 42.18167514928699,
+          "mode": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 47.58378424236419,
+          "mode": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 48.490890131605425,
+          "mode": [
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 48.94290577142082,
+          "mode": [
+            3,
+            0,
+            1
+          ]
+        }
+      ],
+      "truth_note": "Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen."
+    },
+    {
+      "id": "lower_chamber",
+      "part_id": "part.lower.chamber",
+      "model": "CAVITY_BOX",
+      "dims_m": [
+        10.453369999999998,
+        3.1330899999999997,
+        2.4
+      ],
+      "weight": 1,
+      "modes": [
+        {
+          "frequency_hz": 16.42628166801711,
+          "mode": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 32.85256333603422,
+          "mode": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 49.278845004051334,
+          "mode": [
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 54.80531998761607,
+          "mode": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 57.21403523945872,
+          "mode": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 63.89768396971153,
+          "mode": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 65.70512667206845,
+          "mode": [
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 71.54583333333333,
+          "mode": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 73.40728163335125,
+          "mode": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 73.70229076411604,
+          "mode": [
+            3,
+            1,
+            0
+          ]
+        },
+        {
+          "frequency_hz": 78.72799492626021,
+          "mode": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "frequency_hz": 82.13140834008557,
+          "mode": [
+            5,
+            0,
+            0
+          ]
+        }
+      ],
+      "truth_note": "Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact."
+    },
+    {
+      "id": "upper_entrance_existing",
+      "part_id": "part.upper.entrance.existing",
+      "model": "DUCT_1D",
+      "length_m": 33.87574946363756,
+      "weight": 0.75,
+      "modes": [
+        {
+          "frequency_hz": 5.068817744809294,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 10.137635489618589,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 15.206453234427883,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 20.275270979237177,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 25.344088724046472,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 30.412906468855766,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 35.48172421366506,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 40.550541958474355,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 45.61935970328365,
+          "mode": [
+            9
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 50.688177448092944,
+          "mode": [
+            10
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 55.75699519290224,
+          "mode": [
+            11
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 60.82581293771153,
+          "mode": [
+            12
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Surviving upper entrance centerline and measured clear section."
+    },
+    {
+      "id": "upper_horizontal_kj",
+      "part_id": "part.upper.horizontal.kj",
+      "model": "DUCT_1D",
+      "length_m": 2.579999999999991,
+      "weight": 0.55,
+      "modes": [
+        {
+          "frequency_hz": 66.5542635658917,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 133.1085271317834,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known upper horizontal segment."
+    },
+    {
+      "id": "upper_horizontal_jg",
+      "part_id": "part.upper.horizontal.jg",
+      "model": "DUCT_1D",
+      "length_m": 16.019999999999996,
+      "weight": 0.7,
+      "modes": [
+        {
+          "frequency_hz": 10.718476903870165,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 21.43695380774033,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 32.15543071161049,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 42.87390761548066,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 53.59238451935083,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 64.31086142322098,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 75.02933832709115,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 85.74781523096132,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 96.46629213483149,
+          "mode": [
+            9
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 107.18476903870166,
+          "mode": [
+            10
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 117.90324594257183,
+          "mode": [
+            11
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 128.62172284644197,
+          "mode": [
+            12
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known upper horizontal segment."
+    },
+    {
+      "id": "upper_horizontal_gh",
+      "part_id": "part.upper.horizontal.gh",
+      "model": "DUCT_1D",
+      "length_m": 39.37,
+      "weight": 1,
+      "modes": [
+        {
+          "frequency_hz": 4.361442722885446,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 8.722885445770892,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 13.084328168656338,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 17.445770891541784,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 21.807213614427233,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 26.168656337312676,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 30.530099060198122,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 34.89154178308357,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 39.25298450596902,
+          "mode": [
+            9
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 43.61442722885447,
+          "mode": [
+            10
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 47.97586995173991,
+          "mode": [
+            11
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 52.33731267462535,
+          "mode": [
+            12
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Main upper horizontal route to burial chamber."
+    },
+    {
+      "id": "lower_entrance_existing",
+      "part_id": "part.lower.entrance.existing",
+      "model": "DUCT_1D",
+      "length_m": 34.002764961102805,
+      "weight": 0.75,
+      "modes": [
+        {
+          "frequency_hz": 5.049883449079106,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 10.099766898158212,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 15.149650347237317,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 20.199533796316423,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 25.24941724539553,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 30.299300694474635,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 35.34918414355374,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 40.399067592632846,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 45.44895104171196,
+          "mode": [
+            9
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 50.49883449079106,
+          "mode": [
+            10
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 55.548717939870166,
+          "mode": [
+            11
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 60.59860138894927,
+          "mode": [
+            12
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Surviving lower entrance centerline."
+    },
+    {
+      "id": "lower_horizontal_bc",
+      "part_id": "part.lower.horizontal.bc",
+      "model": "DUCT_1D",
+      "length_m": 7.8799999999999955,
+      "weight": 0.6,
+      "modes": [
+        {
+          "frequency_hz": 21.790609137055853,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 43.581218274111706,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 65.37182741116754,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 87.16243654822341,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 108.95304568527926,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 130.7436548223351,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known lower horizontal segment."
+    },
+    {
+      "id": "lower_horizontal_ce",
+      "part_id": "part.lower.horizontal.ce",
+      "model": "DUCT_1D",
+      "length_m": 7.88000000000001,
+      "weight": 0.6,
+      "modes": [
+        {
+          "frequency_hz": 21.79060913705581,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 43.58121827411162,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 65.37182741116743,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 87.16243654822324,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 108.95304568527906,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 130.74365482233486,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known lower horizontal segment."
+    },
+    {
+      "id": "connecting_ef",
+      "part_id": "part.lower.connect.ef",
+      "model": "DUCT_1D",
+      "length_m": 14.652593627068208,
+      "weight": 0.65,
+      "modes": [
+        {
+          "frequency_hz": 11.718744433258191,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 23.437488866516382,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 35.15623329977457,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 46.874977733032765,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 58.59372216629095,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 70.31246659954914,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 82.03121103280733,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 93.74995546606553,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 105.46869989932372,
+          "mode": [
+            9
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 117.1874443325819,
+          "mode": [
+            10
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 128.9061887658401,
+          "mode": [
+            11
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 140.62493319909828,
+          "mode": [
+            12
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known connecting route."
+    },
+    {
+      "id": "connecting_fg",
+      "part_id": "part.lower.connect.fg",
+      "model": "DUCT_1D",
+      "length_m": 9.68593309908756,
+      "weight": 0.65,
+      "modes": [
+        {
+          "frequency_hz": 17.72777059715347,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 35.45554119430694,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 53.1833117914604,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 70.91108238861388,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 88.63885298576734,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 106.3666235829208,
+          "mode": [
+            6
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 124.09439418007427,
+          "mode": [
+            7
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 141.82216477722775,
+          "mode": [
+            8
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Known connecting route."
+    },
+    {
+      "id": "lower_branch_cd",
+      "part_id": "part.lower.branch.cd",
+      "model": "DUCT_1D",
+      "length_m": 6.709403848331087,
+      "weight": 0.5,
+      "modes": [
+        {
+          "frequency_hz": 25.592437701109848,
+          "mode": [
+            1
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 51.184875402219696,
+          "mode": [
+            2
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 76.77731310332953,
+          "mode": [
+            3
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 102.36975080443939,
+          "mode": [
+            4
+          ],
+          "boundary": "OPEN_OPEN"
+        },
+        {
+          "frequency_hz": 127.96218850554924,
+          "mode": [
+            5
+          ],
+          "boundary": "OPEN_OPEN"
+        }
+      ],
+      "truth_note": "Branch connecting the lower route to the subsidiary chamber."
+    }
+  ],
+  "coincidence_screen": {
+    "tolerance_hz": 0.35,
+    "min_components": 3,
+    "first_modes": 8,
+    "actual_cluster_count": 7,
+    "clusters": [
+      {
+        "frequency_hz": 21.796143962846298,
+        "component_count": 3,
+        "components": [
+          "lower_horizontal_ce",
+          "lower_horizontal_bc",
+          "upper_horizontal_gh"
+        ],
+        "members": [
+          {
+            "f": 21.79060913705581,
+            "component_id": "lower_horizontal_ce",
+            "mode": [
+              1
+            ]
+          },
+          {
+            "f": 21.790609137055853,
+            "component_id": "lower_horizontal_bc",
+            "mode": [
+              1
+            ]
+          },
+          {
+            "f": 21.807213614427233,
+            "component_id": "upper_horizontal_gh",
+            "mode": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 25.395314556850618,
+        "component_count": 3,
+        "components": [
+          "lower_entrance_existing",
+          "upper_entrance_existing",
+          "lower_branch_cd"
+        ],
+        "members": [
+          {
+            "f": 25.24941724539553,
+            "component_id": "lower_entrance_existing",
+            "mode": [
+              5
+            ]
+          },
+          {
+            "f": 25.344088724046472,
+            "component_id": "upper_entrance_existing",
+            "mode": [
+              5
+            ]
+          },
+          {
+            "f": 25.592437701109848,
+            "component_id": "lower_branch_cd",
+            "mode": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 30.41410207450951,
+        "component_count": 3,
+        "components": [
+          "lower_entrance_existing",
+          "upper_entrance_existing",
+          "upper_horizontal_gh"
+        ],
+        "members": [
+          {
+            "f": 30.299300694474635,
+            "component_id": "lower_entrance_existing",
+            "mode": [
+              6
+            ]
+          },
+          {
+            "f": 30.412906468855766,
+            "component_id": "upper_entrance_existing",
+            "mode": [
+              6
+            ]
+          },
+          {
+            "f": 30.530099060198122,
+            "component_id": "upper_horizontal_gh",
+            "mode": [
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 34.99077798528041,
+        "component_count": 3,
+        "components": [
+          "upper_horizontal_gh",
+          "burial_chamber",
+          "connecting_ef"
+        ],
+        "members": [
+          {
+            "f": 34.89154178308357,
+            "component_id": "upper_horizontal_gh",
+            "mode": [
+              8
+            ]
+          },
+          {
+            "f": 34.9245588729831,
+            "component_id": "burial_chamber",
+            "mode": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "f": 35.15623329977457,
+            "component_id": "connecting_ef",
+            "mode": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 35.36067071282508,
+        "component_count": 4,
+        "components": [
+          "connecting_ef",
+          "lower_entrance_existing",
+          "connecting_fg",
+          "upper_entrance_existing"
+        ],
+        "members": [
+          {
+            "f": 35.15623329977457,
+            "component_id": "connecting_ef",
+            "mode": [
+              3
+            ]
+          },
+          {
+            "f": 35.34918414355374,
+            "component_id": "lower_entrance_existing",
+            "mode": [
+              7
+            ]
+          },
+          {
+            "f": 35.45554119430694,
+            "component_id": "connecting_fg",
+            "mode": [
+              2
+            ]
+          },
+          {
+            "f": 35.48172421366506,
+            "component_id": "upper_entrance_existing",
+            "mode": [
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 40.56671450074331,
+        "component_count": 3,
+        "components": [
+          "lower_entrance_existing",
+          "upper_entrance_existing",
+          "burial_chamber"
+        ],
+        "members": [
+          {
+            "f": 40.399067592632846,
+            "component_id": "lower_entrance_existing",
+            "mode": [
+              8
+            ]
+          },
+          {
+            "f": 40.550541958474355,
+            "component_id": "upper_entrance_existing",
+            "mode": [
+              8
+            ]
+          },
+          {
+            "f": 40.75053395112272,
+            "component_id": "burial_chamber",
+            "mode": [
+              2,
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "frequency_hz": 65.48292716480114,
+        "component_count": 3,
+        "components": [
+          "lower_horizontal_ce",
+          "lower_horizontal_bc",
+          "lower_chamber"
+        ],
+        "members": [
+          {
+            "f": 65.37182741116743,
+            "component_id": "lower_horizontal_ce",
+            "mode": [
+              3
+            ]
+          },
+          {
+            "f": 65.37182741116754,
+            "component_id": "lower_horizontal_bc",
+            "mode": [
+              3
+            ]
+          },
+          {
+            "f": 65.70512667206845,
+            "component_id": "lower_chamber",
+            "mode": [
+              4,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "independent_null": {
+      "n": 200,
+      "mean": 3.825,
+      "stddev": 1.9350387593017362,
+      "min": 0,
+      "max": 12,
+      "actual_percentile_le": 0.97
+    },
+    "constraint_preserving_null": {
+      "n": 200,
+      "mean": 4.85,
+      "stddev": 1.8241436346954696,
+      "min": 1,
+      "max": 9,
+      "actual_percentile_le": 0.91
+    },
+    "interpretation": "Coincidence density is exploratory. Repeated passage lengths and construction constraints can create spectral coincidences without deliberate acoustic tuning."
+  },
+  "controls": {
+    "primary_null": "geometry perturbation family",
+    "random_scenarios": 200,
+    "perturb_fraction": 0.05,
+    "seed": 49382,
+    "required_reference": "simple analytical tube/cavity benchmarks"
+  },
+  "uncertainty": {
+    "kind": "SCENARIO_SENSITIVITY_NOT_POSTERIOR",
+    "dimension_measurement_uncertainty": "Use published uncertainty where available; unresolved chamber uncertainties are not replaced by zero.",
+    "atmosphere": "temperature parameterized; humidity/pressure refinement deferred"
+  },
+  "status": "COMPLETE",
+  "created_at": "2026-09-11T15:27:40.194Z",
+  "human_summary": {
+    "headline": "Known Khafre interior screening predicts 354 analytical modes below 150 Hz across 12 components.",
+    "burial_fundamental_hz": 12.122722532901356,
+    "lower_fundamental_hz": 16.42628166801711,
+    "first_pass_interpretation": "The geometry produces multiple low-frequency mode families and several near-coincidences. This is expected for coupled chambers/passages; controls are required before any tuning claim.",
+    "design_claim_status": "NOT_ESTABLISHED"
+  },
+  "interpretation_guard": "Resonance is normal physical behavior. This screening result is not evidence of intentional acoustic design and does not promote any archaeological interpretation.",
+  "result_path": "public/model/simlab/results/acoustic.known-interiors-screening.json"
+}

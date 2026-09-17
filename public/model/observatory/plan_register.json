@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "policy": "Plan records are authoritative references at their stated scope but image bytes remain record-level-rights controlled.",
+  "plans": [
+    {
+      "id": "plan.mr005",
+      "source_id": "src.mr1966.plate005",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_005",
+      "target": "khafre_complex",
+      "content": "Plan of Khafre Pyramid Complex",
+      "url": "https://giza.fas.harvard.edu/photos/88218/full/",
+      "geometry_role": "COMPLEX_PLAN_CROSSCHECK"
+    },
+    {
+      "id": "plan.mr008",
+      "source_id": "src.mr1966.plate008",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_008",
+      "target": "khafre_lower_corridor",
+      "content": "Khafre Pyramid lower-corridor plans and sections",
+      "url": "https://giza.fas.harvard.edu/photos/88221/full/",
+      "geometry_role": "INTERIOR_SECTION_CROSSCHECK"
+    },
+    {
+      "id": "plan.mr009",
+      "source_id": "src.mr1966.plate009",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_009",
+      "target": "lower_chamber",
+      "content": "Lower chamber plan and sections",
+      "url": "https://giza.fas.harvard.edu/photos/88222/full/",
+      "geometry_role": "CHAMBER_SECTION_CROSSCHECK"
+    },
+    {
+      "id": "plan.mr013",
+      "source_id": "src.mr1966.plate013",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_013",
+      "target": "khafre_pyramid_temple",
+      "content": "Plans, sections and elevations of Khafre Pyramid Temple",
+      "url": "https://giza.fas.harvard.edu/photos/88326/full/",
+      "geometry_role": "TEMPLE_REFERENCE"
+    },
+    {
+      "id": "plan.mr014",
+      "source_id": "src.digitalgiza.home",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_014",
+      "target": "khafre_valley_and_sphinx_temples",
+      "content": "Plans and sections of Khafre Valley Temple and Sphinx Temple",
+      "url": "https://giza.fas.harvard.edu/photos/88327/full/",
+      "geometry_role": "TEMPLE_REFERENCE"
+    },
+    {
+      "id": "plan.mr015",
+      "source_id": "src.digitalgiza.home",
+      "digital_giza_id": "maragioglio-rinaldi_v_plate_015",
+      "target": "khafre_valley_temple",
+      "content": "Plan and sections of Khafre Valley Temple",
+      "url": "https://giza.fas.harvard.edu/photos/88328/full/",
+      "geometry_role": "TEMPLE_REFERENCE"
+    }
+  ]
+}

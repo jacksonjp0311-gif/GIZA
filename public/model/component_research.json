@@ -1,0 +1,549 @@
+{
+  "version": 4,
+  "reviewed": "2026-09-17",
+  "photos": [
+    {
+      "id": "photo.kh.belzoni.graffiti2006",
+      "title": "Burial chamber — Belzoni inscription",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20graffiti.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_graffiti.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Photograph of the inscription naming Belzoni and dated 2 March 1818. This is modern historical graffiti, not Old Kingdom decoration. Exact placement is not registered to the model.",
+      "bind": [
+        "part.burial.chamber"
+      ],
+      "reviewed": "2026-09-17",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.interior.petrosyan4",
+      "title": "Khafre interior — additional 2021 reference",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Pyramide%20of%20Khofru%204.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:The_Pyramide_of_Khofru_4.jpg",
+      "author": "Leon Petrosyan",
+      "date": "2021-01-07",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Leon Petrosyan · CC BY-SA 4.0 · Wikimedia Commons",
+      "caption": "Catalogued in the Khafre interior collection. Source filename uses Khofru; precise subcomponent is unresolved, so this remains a pyramid-level reference only. No measured geometry extracted.",
+      "bind": [
+        "part.pyramid.khafre"
+      ],
+      "reviewed": "2026-09-17",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.interior.holt1995",
+      "title": "Khafre interior — David Holt, 1995",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyramid%20of%20Khaphre%20-%20inside.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Khaphre_-_inside.jpg",
+      "author": "David Holt",
+      "date": "1995-02-01 (catalog date)",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "credit": "David Holt · CC BY-SA 2.0 · Flickr / Wikimedia Commons",
+      "caption": "Interior reference catalogued as Khafre by its photographer. Exact passage segment is not established; bound only to the pyramid, not a surveyed subcomponent. Uncalibrated image.",
+      "bind": ["part.pyramid.khafre"],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.chamber.petrosyan2021",
+      "title": "Burial chamber — January 2021",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Pyramide%20of%20Khofru%203.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:The_Pyramide_of_Khofru_3.jpg",
+      "author": "Leon Petrosyan",
+      "date": "2021-01-07",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Leon Petrosyan · CC BY-SA 4.0 · Wikimedia Commons",
+      "caption": "The source description identifies Khafre's burial chamber despite the filename spelling Khofru. Documentary condition reference, not calibrated geometry or a measured texture.",
+      "bind": ["part.burial.chamber"],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "diagram.kh.apartments.plan",
+      "title": "Funerary apartments — chamber and passage plan",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Appartements-fun%C3%A9raires-khephren.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Appartements-fun%C3%A9raires-khephren.jpg",
+      "author": "Franck Monnier, after Perring and Maragioglio / Rinaldi",
+      "date": "2007-04-04",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Franck Monnier · Public domain · Wikimedia Commons",
+      "caption": "Modern interpretive plan based on earlier surveys. Useful for route relationships; not a registered plate or independent measurement source.",
+      "bind": ["part.burial.chamber", "part.lower.chamber", "part.upper.entrance.existing", "part.lower.entrance.existing", "part.lower.branch.cd"],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.coffer.orifice2006",
+      "title": "Sarcophagus — opening close-up",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20detalle%2003.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_03.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "An opening in the sarcophagus, documented in 2006. No scale or camera calibration; its function and depth are not established by this photograph.",
+      "bind": [
+        "part.sarcophagus.body"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.coffer.rim2006",
+      "title": "Sarcophagus — rim detail",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20detalle%2004.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_04.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Close-up documentary view of the coffer. Use for surface-condition comparison, not photogrammetric dimensions.",
+      "bind": [
+        "part.sarcophagus.body"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.coffer.detail2006",
+      "title": "Sarcophagus — second detail view",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20detalle%2005.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_05.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Additional documentary close-up of the sarcophagus. Not registered to the model or used as a metric texture.",
+      "bind": [
+        "part.sarcophagus.body"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.floor2006",
+      "title": "Burial chamber — floor condition",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20detalle%2006.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_06.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Chamber floor photographed in 2006. Modern visible condition must not be confused with the reconstructed original paving.",
+      "bind": [
+        "part.burial.floor_paving",
+        "part.burial.chamber"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "diagram.kh.lower.junction",
+      "title": "Lower-route junction — axonometric reference",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khephren-axono-embranchement.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khephren-axono-embranchement.jpg",
+      "author": "Franck Monnier",
+      "date": "2007-05-05",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Franck Monnier · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Interpretive junction drawing; not measured geometry. The source requests notification for commercial uses; no contact or commercial reuse clearance has been undertaken.",
+      "bind": [
+        "part.lower.turning_recess",
+        "part.lower.branch.cd",
+        "part.lower.chamber"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "diagram.kh.chamber.axono",
+      "title": "Burial chamber — axonometric reference",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khephren-axono-chambre.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khephren-axono-chambre.jpg",
+      "author": "Franck Monnier",
+      "date": "2007-05-05",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5/",
+      "credit": "Franck Monnier · CC BY 2.5 · Wikimedia Commons",
+      "caption": "Interpretive drawing; not a metric survey or texture.",
+      "bind": [
+        "part.burial.chamber",
+        "part.burial.gable_envelope",
+        "part.sarcophagus.body"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.interior.portrait2022",
+      "title": "Khafre interior — 2022 portrait",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior%20of%20Khafra%20Pyramid%202022.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022.jpg",
+      "author": "Onceinawhile",
+      "date": "2022",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Onceinawhile · CC BY-SA 4.0 · Wikimedia Commons",
+      "caption": "Uncalibrated documentary photograph; no geometry extracted.",
+      "bind": [
+        "part.burial.chamber"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "photo.kh.roof.detail2006",
+      "title": "Burial chamber — limestone roof detail",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PiramideKefren%20-%20interior%20-%20detalle%2001.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_01.JPG",
+      "author": "Hispalois",
+      "date": "2006-03-30",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Hispalois · CC BY-SA 3.0 · Wikimedia Commons",
+      "caption": "Roof construction reference; beam widths have not been surveyed in this model.",
+      "bind": [
+        "part.burial.gable_envelope",
+        "part.burial.chamber"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "diagram.kh.chamber.aglio1821",
+      "title": "Great chamber — Aglio / Belzoni, 1821",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Chamber%20in%20the%20second%20pyramid%20of%20Gizeh.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Great_Chamber_in_the_second_pyramid_of_Gizeh.jpg",
+      "author": "Agostino Aglio",
+      "date": "1821",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Agostino Aglio · Public domain · Wikimedia Commons",
+      "caption": "Historical illustration; not a present-day condition record.",
+      "bind": [
+        "part.burial.chamber",
+        "part.sarcophagus.body",
+        "part.sarcophagus.lid"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "diagram.kh.section.monnier",
+      "title": "Khafre chambers and passages — section",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khephren-plan.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khephren-plan.jpg",
+      "author": "Franck Monnier",
+      "date": "2007-04-04",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Franck Monnier · Public domain · Wikimedia Commons",
+      "caption": "Interpretive section; use cited survey measurements for dimensions.",
+      "bind": [
+        "part.lower.chamber",
+        "part.upper.entrance.existing",
+        "part.lower.entrance.existing"
+      ],
+      "reviewed": "2026-09-16",
+      "geometry_authority": "VISUAL_REFERENCE_ONLY"
+    }
+  ],
+  "sources": [
+    {
+      "id": "detail.petrie1883",
+      "title": "Petrie 1883 — Chapter IX, §§75–78, pp.105–109",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "kind": "PRIMARY_SURVEY_TRANSCRIPT",
+      "geometry_authority": "CITED_MEASUREMENTS_ONLY",
+      "note": "Transcript checked against existing dimensions; scan/plate registration remains unperformed."
+    },
+    {
+      "id": "detail.harvard.chamber",
+      "title": "Harvard Digital Giza — Khafre burial chamber model reference",
+      "url": "https://giza.fas.harvard.edu/photos/88582/full/",
+      "kind": "INSTITUTIONAL_RECONSTRUCTION",
+      "geometry_authority": "REFERENCE_ONLY",
+      "note": "Catalog record for a work-in-progress reconstruction; image/mesh not bundled, all rights reserved."
+    }
+  ],
+  "observations": [
+    {
+      "id": "burial.paving.thickness_min",
+      "value": 9,
+      "unit": "in",
+      "si_value": 0.2286,
+      "source": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Lower end of reported limestone paving thickness; not a uniform slab thickness or current floor survey.",
+      "bind": ["part.burial.floor_paving", "part.burial.chamber"]
+    },
+    {
+      "id": "burial.paving.thickness_max",
+      "value": 14,
+      "unit": "in",
+      "si_value": 0.3556,
+      "source": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Upper end of the limestone paving range. Granite blocks around the coffer are described separately.",
+      "bind": ["part.burial.floor_paving", "part.burial.chamber"]
+    },
+    {
+      "id": "coffer.bottom.saw_overcut",
+      "value": 0.2,
+      "unit": "in",
+      "si_value": 0.00508,
+      "source": "detail.petrie1883",
+      "locator": "§76, p.106",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Petrie's reported maximum saw overcut below the dressed bottom. Not applied to the mesh without a mapped location/profile.",
+      "bind": ["part.sarcophagus.body"]
+    },
+    {
+      "id": "coffer.surface.finish",
+      "value": "Petrie describes polished inner and outer sides, with the underside left rough and showing sawing.",
+      "source": "detail.petrie1883",
+      "locator": "§76, p.106",
+      "status": "REPORTED_DESCRIPTION",
+      "note": "Historical condition description; no exact surface scan or finish map is available.",
+      "bind": ["part.sarcophagus.body"]
+    },
+    {
+      "id": "burial.wall.construction",
+      "value": "Rock-cut chamber walls with stone repairs and stucco; the gabled roof is assembled from limestone beams.",
+      "source": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "status": "REPORTED_DESCRIPTION",
+      "note": "Construction description, not a surveyed map of every joint or repair.",
+      "bind": ["part.burial.chamber", "part.burial.gable_envelope"]
+    },
+    {
+      "id": "burial.floor.disturbance",
+      "value": "Petrie reports earlier disturbance of the paving during Perring's search for other chambers.",
+      "source": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "status": "REPORTED_DESCRIPTION",
+      "note": "Historic account; do not treat an idealized complete floor as present-day condition.",
+      "bind": ["part.burial.floor_paving", "part.burial.chamber"]
+    },
+    {
+      "id": "coffer.pin_n.from_n_inner",
+      "value": 5.91,
+      "unit": "in",
+      "si_value": 0.150114,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "status": "DERIVED_MIDPOINT",
+      "note": "Mean of reported edges 5.40–6.42 in from the north inner end. Derived marker location only; bore depth unmeasured.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.pin_n.from_w_outer",
+      "value": 4.3,
+      "unit": "in",
+      "si_value": 0.10922,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "status": "DERIVED_MIDPOINT",
+      "note": "Mean of reported edges 3.76–4.84 in from west outside.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.pin_s.from_s_inner",
+      "value": 6.295,
+      "unit": "in",
+      "si_value": 0.159893,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "status": "DERIVED_MIDPOINT",
+      "note": "Mean of reported edges 5.74–6.85 in from the south inner end. Derived marker location only.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.pin_s.from_w_outer",
+      "value": 4.39,
+      "unit": "in",
+      "si_value": 0.111506,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "status": "DERIVED_MIDPOINT",
+      "note": "Mean of reported edges 3.86–4.92 in from west outside.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.ledge_n.width_min",
+      "value": 1.2,
+      "unit": "in",
+      "si_value": 0.03048,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Reported minimum north ledge width. Range recorded, not forced into a uniform groove.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.ledge_n.width_max",
+      "value": 2.3,
+      "unit": "in",
+      "si_value": 0.05842,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Reported maximum north ledge width.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.ledge_s.width_min",
+      "value": 1.08,
+      "unit": "in",
+      "si_value": 0.027432,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Reported minimum south ledge width.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "coffer.ledge_s.width_max",
+      "value": 1.9,
+      "unit": "in",
+      "si_value": 0.04826,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Reported maximum south ledge width.",
+      "bind": [
+        "part.sarcophagus.body"
+      ]
+    },
+    {
+      "id": "lower.door.from_north",
+      "value": 40.9,
+      "unit": "in",
+      "si_value": 1.03886,
+      "source": "detail.petrie1883",
+      "locator": "§78, pp.108–109",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "North jamb offset on the east wall. Together with 41.2 in door width and 41.0 in south clearance closes the measured 123.1 in east wall.",
+      "bind": [
+        "part.lower.chamber"
+      ]
+    },
+    {
+      "id": "lower.door.from_south",
+      "value": 41,
+      "unit": "in",
+      "si_value": 1.0414,
+      "source": "detail.petrie1883",
+      "locator": "§78, pp.108–109",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "South jamb clearance on east wall. Door height remains unverified.",
+      "bind": [
+        "part.lower.chamber"
+      ]
+    },
+    {
+      "id": "coffer.west_clearance",
+      "value": 43,
+      "unit": "in",
+      "si_value": 1.0922,
+      "source": "detail.petrie1883",
+      "locator": "§75, p.106",
+      "status": "DERIVED_MEAN",
+      "note": "Mean of 43.1 in at N and 42.9 in at S; Petrie notes subsequent movement. Local detail placement only."
+    },
+    {
+      "id": "coffer.north_clearance",
+      "value": 42.5,
+      "unit": "in",
+      "si_value": 1.0795,
+      "source": "detail.petrie1883",
+      "locator": "§75, p.106",
+      "status": "REPORTED_MEASUREMENT"
+    },
+    {
+      "id": "coffer.orientation",
+      "value": "Long axis north–south, near west wall",
+      "source": "detail.petrie1883",
+      "locator": "§§75–77, pp.106–108",
+      "status": "DERIVED_FROM_SURVEY",
+      "note": "Existing overview preview has its long axis east–west. Detail scene corrects this locally without rewriting the canonical model."
+    },
+    {
+      "id": "coffer.floor",
+      "value": "Originally recessed to sliding-lid level",
+      "source": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "status": "REPORTED_DESCRIPTION",
+      "note": "Floor opening shown schematically; present-day disturbed paving and precise recess profile not reconstructed."
+    },
+    {
+      "id": "coffer.lid",
+      "value": "Detached lid described on chamber floor; closure slid from west",
+      "source": "detail.petrie1883",
+      "locator": "§76, pp.106–107",
+      "status": "REPORTED_DESCRIPTION",
+      "note": "The lifted lid control is an inspection pose, not a historical or present-day location."
+    },
+    {
+      "id": "coffer.pin_diameter",
+      "value": 1.07,
+      "unit": "in",
+      "si_value": 0.027178,
+      "source": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "status": "REPORTED_MEASUREMENT",
+      "note": "Two locking-pin bores. Optional survey markers use transcript-derived midpoint positions; physical holes and depths are not reconstructed without scan/plate checks."
+    }
+  ],
+  "limitations": [
+    "No calibrated photogrammetry, laser scan or per-stone mapped surface has been acquired.",
+    "Sarcophagus dimensions constrain a hollow idealized body; chips, salt, lid taper, grooves and tool marks are not exact.",
+    "Room walls use measured interior extents; display wall thickness and material grain are illustrative.",
+    "Lower chamber height is an inherited display assumption (2.40 m), not a measured value."
+  ]
+}

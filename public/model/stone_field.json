@@ -1,0 +1,21 @@
+{
+  "version": "0.3.0",
+  "id": "field.khafre.outer_analysis_cells",
+  "name": "Khafre procedural outer masonry analysis field",
+  "provenance": "ASSUMED",
+  "base_m": 215.26246,
+  "height_m": 143.8656,
+  "visual_course_count": 72,
+  "target_block_width_m": 3.1,
+  "radial_depth_m": 1.25,
+  "joint_gap_fraction": 0.06,
+  "seed": 2600,
+  "truth_warning": "These instances are analysis cells generated from the pyramid envelope. They are not claimed to match individual historical block joints. A cell can be replaced by a mapped stone when photographic/survey control exists.",
+  "explode_modes": [
+    "RADIAL",
+    "COURSE",
+    "FACE",
+    "CASCADE"
+  ],
+  "measured_anchors_ref": "stone_registry.json#course_anchors"
+}

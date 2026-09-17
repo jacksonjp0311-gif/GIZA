@@ -1,0 +1,46 @@
+{
+  "version": "0.3.0",
+  "methodology": "A photo can be calibrated only against a known in-plane reference span. Perspective/foreshortening remain explicit uncertainty unless a planar homography is solved. Survey values always outrank photo estimates.",
+  "calibrations": [
+    {
+      "photo_id": "photo.kh.coffer",
+      "object_id": "part.sarcophagus.body",
+      "status": "INTERACTIVE_REQUIRED",
+      "reference_quantity": "outer_length",
+      "reference_m": 2.633472,
+      "source_measurement_id": "m.coffer.outer_length",
+      "perspective_model": "single-span local scale",
+      "uncertainty_rule": "user must keep target on same approximate image plane; otherwise do not promote result"
+    },
+    {
+      "photo_id": "photo.kh.coffer.detail",
+      "object_id": "part.sarcophagus.body",
+      "status": "INTERACTIVE_REQUIRED",
+      "reference_quantity": "outer_width_mean",
+      "reference_m": 1.065911,
+      "source_measurement_id": "m.coffer.outer_width",
+      "perspective_model": "single-span local scale",
+      "uncertainty_rule": "close image still has perspective; calibration is local only"
+    },
+    {
+      "photo_id": "photo.kh.chamber",
+      "object_id": "part.burial.chamber",
+      "status": "VISUAL_EVIDENCE_ONLY",
+      "reference_quantity": "chamber_width",
+      "reference_m": 4.97459,
+      "source_measurement_id": "derived mean of m.burial.width_e/w",
+      "perspective_model": "uncalibrated perspective",
+      "uncertainty_rule": "do not derive depth-axis dimensions from this image without control points"
+    },
+    {
+      "photo_id": "photo.kh.casing.underside",
+      "object_id": "part.pyramid.khafre",
+      "status": "VISUAL_EVIDENCE_ONLY",
+      "reference_quantity": "lowest casing course height",
+      "reference_m": 1.054608,
+      "source_measurement_id": "m.casing.low.course_height",
+      "perspective_model": "uncalibrated oblique view",
+      "uncertainty_rule": "use to identify visible block boundaries, not metric scale without local survey control"
+    }
+  ]
+}

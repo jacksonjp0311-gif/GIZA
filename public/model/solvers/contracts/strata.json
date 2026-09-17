@@ -1,0 +1,41 @@
+{
+  "solver_id": "solver.strata",
+  "inputs_required": [
+    "geometry_snapshot",
+    "declared_depths",
+    "rock_density_assumption",
+    "sample_level_strength_prior",
+    "conditional_water_density"
+  ],
+  "parameters": [
+    "gravity_m_s2",
+    "rock_density_kg_m3",
+    "water_density_kg_m3",
+    "shaft_bottom_depth_m",
+    "terminal_center_depth_m"
+  ],
+  "controls_required": [
+    "dry_no_water_null",
+    "rock_density_sensitivity",
+    "known_depth_reference"
+  ],
+  "outputs_required": [
+    "vertical_overburden_proxy_mpa",
+    "conditional_hydrostatic_pressure_mpa",
+    "potential_energy_kwh_per_m3",
+    "depth_field_points"
+  ],
+  "uncertainty_required": [
+    "rock_strength_sample_scope",
+    "rock_mass_discontinuities_unresolved",
+    "groundwater_connectivity_unresolved",
+    "deep_geometry_unverified"
+  ],
+  "falsification": "This screening cannot establish stability or flow. High-fidelity progression requires a rock-mass stress model and evidence-bound hydraulic connectivity/head conditions.",
+  "forbidden_claims": [
+    "factor of safety from rho*g*h/UCS",
+    "observed flooding",
+    "flow rate without permeability/connectivity",
+    "extractable power from static head alone"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "candidates": [
+    {
+      "id": "candidate.kh.summit_casing_blocks",
+      "target_zone": "Khafre summit casing",
+      "goal": "Map visible casing block boundaries from multiple licensed exterior photographs",
+      "current_maturity": "E0",
+      "target_maturity": "E2",
+      "next_requirements": [
+        "licensed multi-view media",
+        "camera solve",
+        "scale anchor from measured casing/base geometry",
+        "reprojection QA"
+      ]
+    },
+    {
+      "id": "candidate.kh.sarcophagus_refine",
+      "target_zone": "Sarcophagus body/lid",
+      "goal": "Refine mesh from multiple photographs while preserving Petrie dimensions as hard scale constraints",
+      "current_maturity": "E4",
+      "target_maturity": "E5",
+      "next_requirements": [
+        "independent modern metric capture or published scan",
+        "difference metrics"
+      ]
+    },
+    {
+      "id": "candidate.kh.burial_roof_beams",
+      "target_zone": "Burial chamber gabled roof",
+      "goal": "Promote roof-beam decomposition from envelope to individually mapped elements",
+      "current_maturity": "E3",
+      "target_maturity": "E4",
+      "next_requirements": [
+        "multi-view interior media",
+        "specific beam boundaries",
+        "survey-constrained scale",
+        "review receipt"
+      ]
+    },
+    {
+      "id": "candidate.kh.terrain",
+      "target_zone": "Giza plateau context",
+      "goal": "Replace flat terrain reference with coarse georeferenced terrain layer",
+      "current_maturity": "E0",
+      "target_maturity": "E3_CONTEXT",
+      "next_requirements": [
+        "SRTM or Copernicus DEM tile",
+        "CRS record",
+        "vertical datum",
+        "local-to-world transform"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "version": "0.10.7",
+  "codename": "SOURCE PARSER",
+  "phase": "SOURCE_PARSER",
+  "generated_at": "2026-09-13T22:45:42.866Z",
+  "canonical_geometry_changed": false,
+  "counts": {
+    "parsed_records": 26,
+    "raw_byte_verified": 0,
+    "source_locators_bound": 26
+  },
+  "invariants": [
+    "normalized observations are not raw-byte receipts",
+    "source locator required",
+    "parser may not increase geometry authority",
+    "raw-byte verification requires checksum-bound local source bytes"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/source_parser/manifest.json",
+      "sha256": "5ed3ba241e239e0b7f9b87a01361cc719b27035027183a5abb51148b25543640",
+      "bytes": 1015
+    },
+    {
+      "path": "public/model/source_parser/targets.json",
+      "sha256": "bcc30e959af5d1f245be514da34a53e94139e641baf6d84180cf062a629ff0e0",
+      "bytes": 4376
+    },
+    {
+      "path": "public/model/source_parser/parsed_records.json",
+      "sha256": "ff6f892471ae66256f5e0f3a7fedb1fe0f59b124ddacbe62a357c906f61668b5",
+      "bytes": 23347
+    },
+    {
+      "path": "public/model/source_parser/parser_receipts.json",
+      "sha256": "bb37d82ee95f59cee35743a30fd02e7b37829c360bf5fee15b137ca63783fd54",
+      "bytes": 13592
+    },
+    {
+      "path": "public/model/source_parser/locator_contract.json",
+      "sha256": "2ba905d040f15960ade0f66b1a0239eaff4cd9b6963499ba48dd82414a76074e",
+      "bytes": 923
+    },
+    {
+      "path": "scripts/source_parser/build.mjs",
+      "sha256": "25f783479217cb0a77019cd50cd88d221878ad1098256a20ec596e48d495284b",
+      "bytes": 2812
+    },
+    {
+      "path": "scripts/source_parser/validate.mjs",
+      "sha256": "cb37610a8ee49aeb0b5fc5f67049bd67ddfbe97f023fa5bd6162704ab3aa6d05",
+      "bytes": 1730
+    },
+    {
+      "path": "docs/SOURCE_PARSER.md",
+      "sha256": "3032f5799ba071c5c07c428c99b1034d179d34f8cedef9487c44bd38f9f4b17f",
+      "bytes": 2552
+    }
+  ]
+}

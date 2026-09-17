@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "space_count": 24,
+  "coordinate_mode": "SCHEMATIC_TOPOLOGY_NOT_SURVEY",
+  "spaces": [
+    {
+      "id": "room.vt.north_entry",
+      "complex": "VALLEY_TEMPLE",
+      "label": "North east entrance",
+      "kind": "ENTRANCE",
+      "x": 10,
+      "y": 24,
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "access": "EXTERIOR_TO_TEMPLE",
+      "visibility": "ENTRY_THRESHOLD",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.vt.south_entry",
+      "complex": "VALLEY_TEMPLE",
+      "label": "South east entrance",
+      "kind": "ENTRANCE",
+      "x": 10,
+      "y": 39,
+      "evidence": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "access": "EXTERIOR_TO_TEMPLE",
+      "visibility": "ENTRY_THRESHOLD",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.vt.vestibule",
+      "complex": "VALLEY_TEMPLE",
+      "label": "Transverse vestibule",
+      "kind": "ROOM",
+      "x": 20,
+      "y": 31,
+      "evidence": [
+        "obs.room.oxford.valley_plan",
+        "obs.room.ministry.valley_hall"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "access": "DUAL_ENTRY_CONVERGENCE",
+      "visibility": "TRANSITIONAL",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.vt.t_hall",
+      "complex": "VALLEY_TEMPLE",
+      "label": "T-shaped pillared hall",
+      "kind": "PILLARED_HALL",
+      "x": 31,
+      "y": 31,
+      "evidence": [
+        "obs.room.oxford.valley_plan",
+        "obs.room.oxford.valley_niches",
+        "obs.room.ministry.valley_hall"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "access": "MAIN_INTERIOR",
+      "visibility": "ROYAL_STATUARY_FIELD",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.vt.statue_niches",
+      "complex": "VALLEY_TEMPLE",
+      "label": "23 niche / statue positions",
+      "kind": "INSTALLATION_FIELD",
+      "x": 31,
+      "y": 49,
+      "evidence": [
+        "obs.room.oxford.valley_niches",
+        "obs.egyptianmuseum.khafre_valley_statue"
+      ],
+      "status": "ARCHITECTURE_PLUS_RECONSTRUCTION",
+      "access": "WITHIN_T_HALL",
+      "visibility": "HIGH_ROYAL_IMAGE_DENSITY",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.vt.nw_causeway_exit",
+      "complex": "VALLEY_TEMPLE",
+      "label": "NW causeway transition",
+      "kind": "THRESHOLD",
+      "x": 42,
+      "y": 31,
+      "evidence": [
+        "obs.room.oxford.valley_plan",
+        "obs.room.hoelscher.causeway_environment"
+      ],
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "access": "T_HALL_TO_CAUSEWAY",
+      "visibility": "CONTROLLED_TRANSITION",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.cw.covered_corridor",
+      "complex": "CAUSEWAY",
+      "label": "Covered ascending causeway",
+      "kind": "CORRIDOR",
+      "x": 51,
+      "y": 31,
+      "evidence": [
+        "obs.room.hoelscher.causeway_length",
+        "obs.room.hoelscher.causeway_slope",
+        "obs.room.hoelscher.causeway_environment"
+      ],
+      "status": "PRIMARY_DESCRIPTION_PLUS_HISTORICAL_MEASUREMENT",
+      "access": "LINEAR_ASCENT",
+      "visibility": "CONSTRAINED_COVERED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.cw.lower_drain",
+      "complex": "CAUSEWAY",
+      "label": "Lower drainage provision",
+      "kind": "HYDROLOGIC_FEATURE",
+      "x": 49,
+      "y": 47,
+      "evidence": [
+        "obs.room.hoelscher.causeway_drain"
+      ],
+      "status": "PRIMARY_ARCHITECTURAL_OBSERVATION",
+      "access": "SERVICE_FEATURE",
+      "visibility": "NOT_RITUAL_INFERENCE",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.entry_branch",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Causeway termination / branch",
+      "kind": "JUNCTION",
+      "x": 61,
+      "y": 31,
+      "evidence": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "status": "PRIMARY_TOPOLOGY",
+      "access": "CAUSEWAY_TO_TEMPLE",
+      "visibility": "CHOICE_POINT",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.side_rooms",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Side / magazine rooms",
+      "kind": "SERVICE_ROOMS",
+      "x": 61,
+      "y": 48,
+      "evidence": [
+        "obs.room.hoelscher.entry_branch",
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "status": "SOURCE_BACKED_PROGRAM",
+      "access": "SIDE_BRANCH",
+      "visibility": "ACCESS_UNKNOWN",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.vestibule",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Transverse vestibule",
+      "kind": "PILLARED_ROOM",
+      "x": 69,
+      "y": 31,
+      "evidence": [
+        "obs.room.hoelscher.vestibule_materials"
+      ],
+      "status": "PRIMARY_EXCAVATION_DESCRIPTION",
+      "access": "MAIN_BRANCH",
+      "visibility": "TRANSITIONAL",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.wide_hall",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Wide pillared hall",
+      "kind": "PILLARED_HALL",
+      "x": 76,
+      "y": 24,
+      "evidence": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "status": "CROSS_SOURCE_PROGRAM",
+      "access": "SEQUENTIAL",
+      "visibility": "ROYAL_STATUARY_POSSIBLE",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.deep_hall",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Deep pillared hall",
+      "kind": "PILLARED_HALL",
+      "x": 76,
+      "y": 39,
+      "evidence": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_program"
+      ],
+      "status": "CROSS_SOURCE_PROGRAM",
+      "access": "SEQUENTIAL",
+      "visibility": "ROYAL_STATUARY_POSSIBLE",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.serdabs",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Serdab / enclosed cult rooms",
+      "kind": "ENCLOSED_ROOMS",
+      "x": 83,
+      "y": 18,
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "PRIMARY_ROOM_LABEL_HISTORICAL",
+      "access": "RESTRICTED_UNKNOWN",
+      "visibility": "LOW_OR_CONTROLLED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.statue_court",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Statue court",
+      "kind": "COURT",
+      "x": 84,
+      "y": 31,
+      "evidence": [
+        "obs.room.hoelscher.court_passages",
+        "obs.room.hoelscher.court_materials",
+        "obs.room.hoelscher.court_statue_holes"
+      ],
+      "status": "PRIMARY_ARCHITECTURE_RECONSTRUCTION_SPLIT",
+      "access": "MULTIPLE_OPENINGS",
+      "visibility": "MONUMENTAL_ROYAL_IMAGE_FIELD",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.ambulatory",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Court ambulatory",
+      "kind": "CIRCULATION",
+      "x": 84,
+      "y": 47,
+      "evidence": [
+        "obs.room.hoelscher.court_materials",
+        "obs.room.hoelscher.court_level_step"
+      ],
+      "status": "PRIMARY_ARCHITECTURAL_OBSERVATION",
+      "access": "AROUND_COURT",
+      "visibility": "COURT_FACING",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.five_chapels",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Five western chapels",
+      "kind": "CULT_ROOM_SET",
+      "x": 91,
+      "y": 22,
+      "evidence": [
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.room.oxford.five_chapels_function"
+      ],
+      "status": "ARCHITECTURE_STRONG_FUNCTION_INTERPRETIVE",
+      "access": "WEST_OF_COURT",
+      "visibility": "RESTRICTED_CULT_CANDIDATE",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.inner_zone",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Inner / “intimate” cult zone",
+      "kind": "CULT_ZONE",
+      "x": 92,
+      "y": 39,
+      "evidence": [
+        "obs.room.hoelscher.public_private",
+        "obs.room.hoelscher.program"
+      ],
+      "status": "HISTORICAL_FUNCTIONAL_INTERPRETATION",
+      "access": "WESTERN_INNER_ZONE",
+      "visibility": "RESTRICTED_CANDIDATE",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.pt.pyramid_court",
+      "complex": "PYRAMID_TEMPLE",
+      "label": "Pyramid court / west transition",
+      "kind": "COURT_THRESHOLD",
+      "x": 96,
+      "y": 31,
+      "evidence": [
+        "obs.room.hoelscher.program"
+      ],
+      "status": "PRIMARY_ROOM_PROGRAM",
+      "access": "TOWARD_PYRAMID",
+      "visibility": "PYRAMID_ADJACENT",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.py.upper_entry",
+      "complex": "PYRAMID_INTERIOR",
+      "label": "Upper entrance / descending passage",
+      "kind": "PASSAGE",
+      "x": 72,
+      "y": 76,
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "access": "NORTH_FACE_ROUTE",
+      "visibility": "ENCLOSED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.py.lower_entry",
+      "complex": "PYRAMID_INTERIOR",
+      "label": "Lower entrance / passage",
+      "kind": "PASSAGE",
+      "x": 72,
+      "y": 89,
+      "evidence": [
+        "obs.room.perring.two_entrances"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "access": "BEDROCK_ROUTE",
+      "visibility": "ENCLOSED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.py.portcullis",
+      "complex": "PYRAMID_INTERIOR",
+      "label": "Portcullis control point",
+      "kind": "CLOSURE",
+      "x": 82,
+      "y": 82,
+      "evidence": [
+        "obs.room.perring.two_entrances",
+        "obs.room.perring.portcullis_mechanism"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "access": "CONTROLLED_PASSAGE",
+      "visibility": "ENCLOSED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.py.lower_chamber",
+      "complex": "PYRAMID_INTERIOR",
+      "label": "Lower chamber",
+      "kind": "CHAMBER",
+      "x": 82,
+      "y": 94,
+      "evidence": [
+        "obs.room.perring.lower_chamber"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "access": "LOWER_ROUTE_BRANCH",
+      "visibility": "ENCLOSED",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "room.py.burial_chamber",
+      "complex": "PYRAMID_INTERIOR",
+      "label": "Belzoni / burial chamber",
+      "kind": "BURIAL_CHAMBER",
+      "x": 93,
+      "y": 82,
+      "evidence": [
+        "obs.room.perring.belzoni_chamber",
+        "obs.perring1840.sarcophagus_setting"
+      ],
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "access": "INTERIOR_ENDPOINT",
+      "visibility": "ENCLOSED",
+      "geometry_authority": "NONE"
+    }
+  ]
+}

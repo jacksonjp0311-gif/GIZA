@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "frames": [
+    {
+      "id": "PLATE_LOCAL_METERS",
+      "kind": "LOCAL_METRIC",
+      "origin": "ARBITRARY_PLAN_LOCAL",
+      "axes": "plan-native x/y after accepted similarity transform",
+      "global_translation": "UNRESOLVED",
+      "vertical_datum": "NOT_APPLICABLE_2D_PLAN",
+      "allowed_uses": [
+        "room-scale lengths",
+        "wall/opening geometry",
+        "intra-building metric visibility"
+      ],
+      "prohibited_uses": [
+        "plateau georeferencing",
+        "global monument alignment claims",
+        "GPMP coordinate write"
+      ],
+      "key_rule": "A valid plate-local metric frame can support intra-building rays before a global Giza transform exists."
+    },
+    {
+      "id": "KHAFRE_LOCAL_METERS",
+      "kind": "MODEL_LOCAL_METRIC",
+      "global_translation_to_gpmp": "UNRESOLVED",
+      "vertical_tie": "UNRESOLVED",
+      "allowed_uses": [
+        "existing canonical model geometry"
+      ],
+      "prohibited_uses": [
+        "assuming direct identity with a historical plate-local frame without registration receipt"
+      ]
+    }
+  ]
+}

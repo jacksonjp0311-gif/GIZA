@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "fact_count": 14,
+  "facts": [
+    {
+      "id": "conc.vt.dual_east_entries",
+      "subject": "khafre_valley_temple",
+      "statement": "Two entrances occupy the east façade and feed the Valley Temple interior.",
+      "category": "TOPOLOGY",
+      "support": [
+        "obs.room.oxford.valley_entries",
+        "obs.plan.dg.vt.014",
+        "obs.plan.dg.vt.015"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.t_plan",
+      "subject": "khafre_valley_temple",
+      "statement": "The Valley Temple interior has a T-shaped hall/plan organization.",
+      "category": "ROOM_PROGRAM",
+      "support": [
+        "obs.room.oxford.valley_plan",
+        "obs.plan.dg.vt.014",
+        "obs.plan.dg.vt.015"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.23_positions",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "The T-shaped hall preserves twenty-three statuary positions/bases/niches.",
+      "category": "STATUARY_ARCHITECTURE",
+      "support": [
+        "obs.room.oxford.valley_niches",
+        "obs.visibility.smithsonian.valley_hall"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "SMITHSONIAN_ARCHIVE"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.16_pillars",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "The Valley Temple T-shaped hall is supported by sixteen granite pillars.",
+      "category": "COLUMN_PROGRAM",
+      "support": [
+        "obs.visibility.smithsonian.valley_hall",
+        "obs.room.ministry.valley_hall"
+      ],
+      "independence_groups": [
+        "SMITHSONIAN_ARCHIVE",
+        "EGYPT_MINISTRY"
+      ],
+      "agreement": "MODERATE",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.statue_pattern",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "A 3/7/3/7/3 arrangement is a scholarly reconstruction of the 23 positions.",
+      "category": "RECONSTRUCTION",
+      "support": [
+        "obs.room.oxford.valley_niches"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "SINGLE_SYNTHESIS",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.causeway.covered",
+      "subject": "khafre_causeway",
+      "statement": "The causeway functioned as a covered, narrow/linear route between lower and upper complex.",
+      "category": "MOVEMENT_ENVIRONMENT",
+      "support": [
+        "obs.room.hoelscher.causeway_environment",
+        "obs.room.oxford.causeway",
+        "obs.room.oxford.causeway_relief_program"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.causeway.length",
+      "subject": "khafre_causeway",
+      "statement": "Published total length values cluster at 494–494.6 m.",
+      "category": "MEASUREMENT",
+      "support": [
+        "obs.room.hoelscher.causeway_length",
+        "obs.room.oxford.causeway"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "AGREE_WITH_ROUNDING_DIFFERENCE",
+      "metric_authority": "NONE_PENDING_COMMON_FRAME"
+    },
+    {
+      "id": "conc.pt.program",
+      "subject": "khafre_pyramid_temple",
+      "statement": "The Pyramid Temple program includes wide/deep pillared halls, a court, five western chapels and magazines.",
+      "category": "ROOM_PROGRAM",
+      "support": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.plan.dg.pt.013"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.dimensions",
+      "subject": "khafre_pyramid_temple",
+      "statement": "Modern synthesis reports the Pyramid Temple at approximately 56.2 × 111.2 m.",
+      "category": "MEASUREMENT",
+      "support": [
+        "obs.room.oxford.pyramid_temple_dimensions"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "SINGLE_SYNTHESIS",
+      "metric_authority": "NONE_PENDING_PLAN_PARSE"
+    },
+    {
+      "id": "conc.pt.court_statuary",
+      "subject": "khafre_pyramid_temple_statue_court",
+      "statement": "The court carried monumental royal-image architecture, but statue form/placement reconstruction is non-unique.",
+      "category": "RECONSTRUCTION_CONFLICT",
+      "support": [
+        "obs.room.hoelscher.court_statue_holes",
+        "obs.room.oxford.court_reconstruction_dispute",
+        "obs.room.met.court_doorway_program"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS",
+        "MET_CURATORIAL"
+      ],
+      "agreement": "ARCHITECTURE_STRONG_RECONSTRUCTION_DISPUTED",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.five_chapels",
+      "subject": "khafre_pyramid_temple_five_chapels",
+      "statement": "Five chapels beyond the court are architectural program elements; statues/barques as contents remain probable reconstruction.",
+      "category": "ARCHITECTURE_VS_FUNCTION",
+      "support": [
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.room.oxford.five_chapels_function",
+        "obs.plan.dg.pt.013"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "ARCHITECTURE_STRONG_FUNCTION_INTERPRETIVE",
+      "metric_authority": "NONE"
+    },
+    {
+      "id": "conc.py.interior_plan",
+      "subject": "khafre_pyramid_interior",
+      "statement": "Upper/lower entrance systems, lower chamber and burial route are represented in historical survey and later plan records.",
+      "category": "INTERIOR_TOPOLOGY",
+      "support": [
+        "obs.room.perring.two_entrances",
+        "obs.room.perring.lower_chamber",
+        "obs.room.perring.belzoni_chamber",
+        "obs.plan.dg.pyr.009"
+      ],
+      "independence_groups": [
+        "PERRING_PRIMARY",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG_TOPOLOGY",
+      "metric_authority": "NONE_EXISTING_MODEL_CROSSCHECK"
+    },
+    {
+      "id": "conc.arce.vt.scale",
+      "subject": "khafre_valley_temple",
+      "statement": "ARCE/Open Context archive inventory confirms a detailed Khafre Valley Temple map at 1:100.",
+      "category": "SURVEY_ASSET",
+      "support": [
+        "obs.room.arce.valley_plan_1_100"
+      ],
+      "independence_groups": [
+        "ARCE_ARCHIVE"
+      ],
+      "agreement": "ARCHIVE_CONFIRMED_BYTES_PENDING",
+      "metric_authority": "NONE_UNTIL_BYTES_FRAME_PARSED"
+    },
+    {
+      "id": "conc.model.lineage",
+      "subject": "digital_reconstruction_method",
+      "statement": "Independent reconstruction projects explicitly rely on Maragioglio/Rinaldi plan families rather than constituting new independent measurements.",
+      "category": "SOURCE_DEPENDENCE",
+      "support": [
+        "obs.plan.isac.source_lineage",
+        "obs.plan.digitalgiza.pyramid_temple_refs",
+        "obs.plan.digitalgiza.valley_temple_refs"
+      ],
+      "independence_groups": [
+        "ISAC_METHOD",
+        "DIGITAL_GIZA_BIBLIOGRAPHY"
+      ],
+      "agreement": "DEPENDENCE_IDENTIFIED",
+      "metric_authority": "NONE"
+    }
+  ]
+}

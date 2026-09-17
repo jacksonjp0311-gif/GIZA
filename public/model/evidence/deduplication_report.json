@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "rule": "Related records are linked as facets; they are not collapsed when they represent different legal, archival, or evidentiary objects.",
+  "families": [
+    {
+      "id": "family.digitalgiza",
+      "canonical_hub": "src.digitalgiza.home",
+      "members": [
+        "src.digitalgiza.home",
+        "src.digitalgiza.giza3d",
+        "src.digitalgiza.khafre.photos",
+        "src.mr1966.plate005",
+        "src.mr1966.plate008",
+        "src.mr1966.plate009",
+        "src.mr1966.plate013",
+        "src.mr1966.plate014",
+        "src.digitalgiza.khafre_quarry",
+        "src.digitalgiza.giia"
+      ],
+      "decision": "KEEP_SEPARATE_FACETS",
+      "reason": "Different records/assets have different geometry roles and potentially different rights."
+    },
+    {
+      "id": "family.arce_sphinx",
+      "canonical_dataset": "src.opencontext.arce_sphinx",
+      "members": [
+        "src.opencontext.arce_sphinx",
+        "src.arce.sphinx_database",
+        "src.zenodo.arce_media",
+        "src.aera.sphinx_stone_mapping"
+      ],
+      "decision": "KEEP_DATASET_SUMMARY_MEDIA_AND_METHOD_SEPARATE",
+      "reason": "Open Context is canonical structured dataset; ARCE/AERA are project/method summaries; Zenodo is byte-preservation deposit."
+    },
+    {
+      "id": "family.khafre_muography",
+      "canonical_current": "src.scidep2025",
+      "members": [
+        "src.scidep2025",
+        "src.scanpyramids2017.khufu",
+        "src.scanpyramids2023.khufu_nfc"
+      ],
+      "decision": "SEPARATE_BY_MONUMENT",
+      "reason": "Only ScIDEP is Khafre-specific. Khufu results are method-validation precedents only."
+    },
+    {
+      "id": "family.remote_terrain",
+      "members": [
+        "src.nasa.srtmgl1v003",
+        "src.copernicus.dem",
+        "src.copernicus.sentinel2",
+        "src.usgs.landsat_c2"
+      ],
+      "decision": "SEPARATE_BY_SENSOR_PRODUCT",
+      "reason": "Elevation and multispectral products have different semantics/resolution; no resampling creates new source resolution."
+    },
+    {
+      "id": "family.deep_claim",
+      "members": [
+        "src.ahrama.deep_claim_2025",
+        "src.ahrama.deep_claim_retraction_context_2026"
+      ],
+      "decision": "KEEP_CLAIM_AND_RISK_CONTEXT_SEPARATE",
+      "reason": "One records the claim/public controversy; the later source records retraction/methodological context and the non-peer-reviewed status of the later Khafre claims."
+    }
+  ]
+}

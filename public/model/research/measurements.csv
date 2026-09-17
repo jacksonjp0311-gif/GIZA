@@ -1,0 +1,128 @@
+id,component,quantity,native_value,native_unit,si_value,si_unit,uncertainty_si,source_id,source_locator,status,model_use,notes
+m.surface.base.north,pyramid,base_side_length,8471.9,in,215.18625999999998,m,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,direct,Adopted square from 12 fixed points; mean side is canonical rev.0003 exterior envelope.
+m.surface.base.east,pyramid,base_side_length,8475.2,in,215.27008,m,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,direct,Adopted square from 12 fixed points; mean side is canonical rev.0003 exterior envelope.
+m.surface.base.south,pyramid,base_side_length,8476.9,in,215.31325999999999,m,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,direct,Adopted square from 12 fixed points; mean side is canonical rev.0003 exterior envelope.
+m.surface.base.west,pyramid,base_side_length,8475.5,in,215.27769999999998,m,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,direct,Adopted square from 12 fixed points; mean side is canonical rev.0003 exterior envelope.
+m.surface.base.mean,pyramid,base_side_length,8474.9,in,215.26245999999998,m,,src.petrie1883,"ch. VIII §66, p.97",DERIVED_MEAN,derived,Adopted square from 12 fixed points; mean side is canonical rev.0003 exterior envelope.
+m.surface.azimuth.north,pyramid,north_side_azimuth,-5.516666666666667,arcmin,-0.09194444444444444,deg,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,metadata,Negative = west of true north/equivalent side axis per Petrie convention.
+m.surface.azimuth.east,pyramid,east_side_azimuth,-6.216666666666667,arcmin,-0.10361111111111111,deg,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,metadata,Negative = west of true north/equivalent side axis per Petrie convention.
+m.surface.azimuth.south,pyramid,south_side_azimuth,-5.666666666666667,arcmin,-0.09444444444444446,deg,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,metadata,Negative = west of true north/equivalent side axis per Petrie convention.
+m.surface.azimuth.west,pyramid,west_side_azimuth,-4.35,arcmin,-0.0725,deg,,src.petrie1883,"ch. VIII §66, p.97",MEASURED,metadata,Negative = west of true north/equivalent side axis per Petrie convention.
+m.surface.azimuth.mean,pyramid,casing_mean_azimuth,-5′26″,arcmin_arcsec,-0.09055555555555556,deg,0.0044444444444444444,src.petrie1883,"ch. XIII §93, p.125",MEASURED,metadata,Petrie casing mean.
+m.surface.slope,pyramid,casing_face_slope,53°10′,deg_arcmin,53.166666666666664,deg,0.06666666666666667,src.petrie1883,"ch. VIII §67, p.98",MEASURED,direct,Petrie best statement combining in-situ and fallen casing measures.
+m.surface.height.petrie,pyramid,original_height,5664,in,143.8656,m,0.3302,src.petrie1883,"ch. VIII §67, p.98",DERIVED_FROM_MEASUREMENT,direct,Derived by Petrie from base/slope.
+m.surface.height.ministry,pyramid,original_height,143.5,m,143.5,m,,src.egypt_ministry,Khafre monument page,PUBLISHED_SUMMARY,comparison,Official Egyptian Ministry value; retained as a conflicting/reference estimate rather than averaged into Petrie.
+m.surface.height.current.scidep,pyramid,current_height,136.4,m,136.4,m,,src.scidep2025,"JAP 138 044901, Introduction",PUBLISHED_SUMMARY,comparison,"Modern current-height value used as context only, not to morph the original envelope."
+m.surface.base.scidep,pyramid,base_length,215.3,m,215.3,m,,src.scidep2025,"JAP 138 044901, Introduction",PUBLISHED_SUMMARY,comparison,Modern rounded base value.
+m.casing.low.course_height,casing,lowest_granite_casing_sloped_vertical_height,41.52,in,1.054608,m,0.00127,src.petrie1883,"ch. VIII §68, p.98",MEASURED,direct,Measured at SW surviving casing.
+m.casing.low.vertical_foot,casing,lowest_granite_casing_vertical_foot,11.0,in,0.2794,m,,src.petrie1883,"ch. VIII §68, p.98",MEASURED,direct,Vertical face beneath slope at SW.
+m.terrace.west.nw,terrace,west_cut_edge_offset_from_NW,1105,in,28.067,m,,src.petrie1883,"ch. VIII §70, p.99",MEASURED,metadata,Cut shelf top edge; not assumed constant around site.
+m.terrace.west.sw,terrace,west_cut_edge_offset_from_SW,1083,in,27.5082,m,,src.petrie1883,"ch. VIII §70, p.99",MEASURED,metadata,Cut shelf top edge.
+m.terrace.north.nw,terrace,north_cut_edge_offset_from_NW,2255,in,57.277,m,,src.petrie1883,"ch. VIII §70, p.99",MEASURED,metadata,Cut shelf top edge.
+m.terrace.north.mid,terrace,north_cut_edge_offset_near_mid,2312,in,58.724799999999995,m,,src.petrie1883,"ch. VIII §70, p.99",MEASURED,metadata,Cut shelf top edge.
+m.axis.offset,passage_system,axis_offset_east_of_north_face_midpoint,490.3,in,12.453619999999999,m,,src.petrie1883,"ch. IX §73, p.104",MEASURED,direct,Fixed from station mark near lost upper doorway.
+m.axis.azimuth,passage_system,passage_azimuth,−5′37″,arcmin_arcsec,-0.0936111111111111,deg,0.002777777777777778,src.petrie1883,ch. IX §73 / ch. XIII §93,MEASURED,metadata,Smyth observation reported by Petrie. Stored as metadata; rev.0003 route centerline uses Table II N-S distances and a common x-axis anchor rather than forcing an ambiguous historic sign convention.
+m.upper.section.height,upper_entrance,clear_height_mean,47.29,in,1.201166,m,0.000762,src.petrie1883,"ch. IX §73, p.104",MEASURED,direct,"Mean from mouth, halfway, near end."
+m.upper.section.width,upper_entrance,clear_width_mean,41.29,in,1.0487659999999999,m,0.00127,src.petrie1883,"ch. IX §73, p.104",MEASURED,direct,"Mean from mouth, halfway, near end."
+m.horizontal.section.height,upper_horizontal,clear_height_mean,71.06,in,1.804924,m,0.003302,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,Mean after roof rise.
+m.horizontal.section.width,upper_horizontal,clear_width_mean,41.59,in,1.056386,m,0.001016,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,Mean of Petrie table.
+m.upper.roll.length.e,upper_roll,roof_roll_transition_length_east,11.7,in,0.29717999999999994,m,,src.petrie1883,"ch. IX §74, p.104",MEASURED,direct,End of sloping roof to far side of half-round roll.
+m.upper.roll.length.w,upper_roll,roof_roll_transition_length_west,11.6,in,0.29463999999999996,m,,src.petrie1883,"ch. IX §74, p.104",MEASURED,direct,End of sloping roof to far side of half-round roll.
+m.upper.portcullis.passage_width,upper_portcullis,passage_width_at_portcullis,41.38,in,1.051052,m,,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,
+m.upper.portcullis.groove_e_depth,upper_portcullis,east_groove_depth,9.68,in,0.24587199999999998,m,,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,
+m.upper.portcullis.groove_w_depth,upper_portcullis,west_groove_depth,10.05,in,0.25527,m,,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,
+m.upper.portcullis.housing_width,upper_portcullis,total_groove_housing_width,61.11,in,1.5521939999999999,m,,src.petrie1883,"ch. IX §74, p.105",DERIVED_SUM,direct,Passage + both groove depths.
+m.upper.portcullis.groove_e_along,upper_portcullis,east_groove_width_along_passage,15.77,in,0.40055799999999997,m,,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,Slab is described as about 0.5 in thinner.
+m.upper.portcullis.groove_w_along,upper_portcullis,west_groove_width_along_passage,15.19,in,0.38582599999999995,m,,src.petrie1883,"ch. IX §74, p.105",MEASURED,direct,
+m.legon.segment.AB.length,lower_entrance,centerline_length,34.94,m,34.94,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.AB.angle,lower_entrance,slope_angle,21.666666666666668,deg,21.666666666666668,deg,,src.legon1989,Table I p.30,MEASURED,direct,"Clinometer over sloping passage, except full entrance length endpoints reconstructed."
+m.legon.segment.AB.vertical,lower_entrance,vertical_component,12.9,m,12.9,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed from measured length/angle.
+m.legon.segment.AB.horizontal,lower_entrance,horizontal_component,32.47,m,32.47,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.BC.length,lower_horizontal_1,centerline_length,7.88,m,7.88,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.BC.horizontal,lower_horizontal_1,horizontal_component,7.88,m,7.88,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.CE.length,lower_horizontal_2,centerline_length,7.88,m,7.88,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.CE.horizontal,lower_horizontal_2,horizontal_component,7.88,m,7.88,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.CD.length,lower_chamber_branch,centerline_length,6.71,m,6.71,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.CD.angle,lower_chamber_branch,slope_angle,21.316666666666666,deg,21.316666666666666,deg,,src.legon1989,Table I p.30,MEASURED,direct,"Clinometer over sloping passage, except full entrance length endpoints reconstructed."
+m.legon.segment.CD.vertical,lower_chamber_branch,vertical_component,2.44,m,2.44,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed from measured length/angle.
+m.legon.segment.CD.horizontal,lower_chamber_branch,horizontal_component,6.25,m,6.25,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.EF.length,connecting_lower,centerline_length,14.65,m,14.65,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.EF.angle,connecting_lower,slope_angle,23.0,deg,23.0,deg,,src.legon1989,Table I p.30,MEASURED,direct,"Clinometer over sloping passage, except full entrance length endpoints reconstructed."
+m.legon.segment.EF.vertical,connecting_lower,vertical_component,5.72,m,5.72,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed from measured length/angle.
+m.legon.segment.EF.horizontal,connecting_lower,horizontal_component,13.49,m,13.49,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.FG.length,connecting_upper,centerline_length,9.69,m,9.69,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.FG.angle,connecting_upper,slope_angle,22.0,deg,22.0,deg,,src.legon1989,Table I p.30,MEASURED,direct,"Clinometer over sloping passage, except full entrance length endpoints reconstructed."
+m.legon.segment.FG.vertical,connecting_upper,vertical_component,3.63,m,3.63,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed from measured length/angle.
+m.legon.segment.FG.horizontal,connecting_upper,horizontal_component,8.98,m,8.98,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.GH.length,upper_horizontal_main,centerline_length,39.37,m,39.37,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.GH.horizontal,upper_horizontal_main,horizontal_component,39.37,m,39.37,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.GI.length,upper_to_chamber_axis,centerline_length,41.86,m,41.86,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.GI.horizontal,upper_to_chamber_axis,horizontal_component,41.86,m,41.86,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.GJ.length,upper_horizontal_north,centerline_length,16.02,m,16.02,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.GJ.horizontal,upper_horizontal_north,horizontal_component,16.02,m,16.02,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.JK.length,upper_short,centerline_length,2.58,m,2.58,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.JK.horizontal,upper_short,horizontal_component,2.58,m,2.58,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.segment.KL.length,upper_entrance,centerline_length,36.95,m,36.95,m,,src.legon1989,Table I p.30,MEASURED_OR_RECONSTRUCTED,direct,Legon states own passage measurements supported by M&R; entrance AB/KL include reconstruction to lost casing/pavement.
+m.legon.segment.KL.angle,upper_entrance,slope_angle,26.466666666666665,deg,26.466666666666665,deg,,src.legon1989,Table I p.30,MEASURED,direct,"Clinometer over sloping passage, except full entrance length endpoints reconstructed."
+m.legon.segment.KL.vertical,upper_entrance,vertical_component,16.47,m,16.47,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed from measured length/angle.
+m.legon.segment.KL.horizontal,upper_entrance,horizontal_component,33.08,m,33.08,m,,src.legon1989,Table I p.30,DERIVED_FROM_MEASUREMENT,direct,Computed horizontal component.
+m.legon.lower_existing,lower_entrance,existing_length_to_sill,34.01,m,34.01,m,,src.legon1989,note 7 p.34,MEASURED,direct,To sill 0.345 m below base and 8.46 m north of base.
+m.legon.lower_sill_z,lower_entrance,existing_sill_level,-0.345,m,-0.345,m,,src.legon1989,note 7 p.34,MEASURED,direct,Negative = below base plane.
+m.legon.lower_sill_north,lower_entrance,existing_sill_north_of_base,8.46,m,8.46,m,,src.legon1989,note 7 p.34,MEASURED,direct,
+m.legon.upper_existing,upper_entrance,existing_length_to_sill,33.88,m,33.88,m,,src.legon1989,note 7 p.34,MEASURED,direct,To sill 11.54 m above base.
+m.legon.upper_sill_z,upper_entrance,existing_sill_level,11.54,m,11.54,m,,src.legon1989,note 7 p.34,MEASURED,direct,Positive = above base plane.
+m.legon.node.A.south,passage_system,node_A_south_from_north_base,-9.33,m,-9.33,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.A.z,passage_system,node_A_z,-0.0,m,-0.0,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.B.south,passage_system,node_B_south_from_north_base,23.14,m,23.14,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.B.z,passage_system,node_B_z,-12.9,m,-12.9,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.C.south,passage_system,node_C_south_from_north_base,31.02,m,31.02,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.C.z,passage_system,node_C_z,-12.9,m,-12.9,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.D.south,passage_system,node_D_south_from_north_base,31.02,m,31.02,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.D.z,passage_system,node_D_z,-15.34,m,-15.34,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.E.south,passage_system,node_E_south_from_north_base,38.9,m,38.9,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.E.z,passage_system,node_E_z,-12.9,m,-12.9,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.F.south,passage_system,node_F_south_from_north_base,52.39,m,52.39,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.F.z,passage_system,node_F_z,-7.18,m,-7.18,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.G.south,passage_system,node_G_south_from_north_base,61.37,m,61.37,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.G.z,passage_system,node_G_z,-3.55,m,-3.55,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.H.south,passage_system,node_H_south_from_north_base,100.74,m,100.74,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.H.z,passage_system,node_H_z,-3.55,m,-3.55,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.I.south,passage_system,node_I_south_from_north_base,103.23,m,103.23,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.I.z,passage_system,node_I_z,-3.55,m,-3.55,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.J.south,passage_system,node_J_south_from_north_base,45.35,m,45.35,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.J.z,passage_system,node_J_z,-3.55,m,-3.55,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.K.south,passage_system,node_K_south_from_north_base,42.77,m,42.77,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.K.z,passage_system,node_K_z,-3.55,m,-3.55,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.legon.node.L.south,passage_system,node_L_south_from_north_base,9.69,m,9.69,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,Computed positions relative to north base from Legon measurements.
+m.legon.node.L.z,passage_system,node_L_z,12.92,m,12.92,m,,src.legon1989,Table II p.31,COMPUTED_POSITION,direct,World z relative to pyramid base; converted sign from level-below-base table.
+m.burial.width_e,burial_chamber,north_south_width_at_east,195.8,in,4.97332,m,,src.petrie1883,"ch. IX §75, p.105",MEASURED,direct,
+m.burial.width_w,burial_chamber,north_south_width_at_west,195.9,in,4.97586,m,,src.petrie1883,"ch. IX §75, p.105",MEASURED,direct,
+m.burial.length_n,burial_chamber,east_west_length_at_north,557.9,in,14.170659999999998,m,,src.petrie1883,"ch. IX §75, p.105",MEASURED,direct,
+m.burial.length_s,burial_chamber,east_west_length_at_south,557.4,in,14.15796,m,,src.petrie1883,"ch. IX §75, p.105",MEASURED,direct,
+m.burial.wall_height,burial_chamber,wall_height,206.4,in,5.24256,m,,src.petrie1883,"ch. IX §75, p.105",MEASURED,direct,Representative wall height; Petrie lists small corner variation.
+m.burial.gable_rise.vyse,burial_chamber,gable_roof_rise,38,in,0.9652,m,,src.petrie1883,"ch. IX §75, p.106 (Vyse value)",HISTORICAL_REPORTED,direct,Historical roof-rise value reported by Petrie; other modern summaries differ. Kept as explicit source-specific parameter.
+m.burial.door_from_e.start,burial_chamber,door_start_from_east_wall,104.3,in,2.6492199999999997,m,,src.petrie1883,"ch. IX §75, p.106",MEASURED,derived_placement,
+m.burial.door_from_e.end,burial_chamber,door_end_from_east_wall,144.9,in,3.68046,m,,src.petrie1883,"ch. IX §75, p.106",MEASURED,derived_placement,
+m.coffer.outer_length,sarcophagus,outer_length,103.68,in,2.6334720000000003,m,0.000508,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.outer_width,sarcophagus,outer_width_mean,41.965,in,1.065911,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.outer_height,sarcophagus,outer_height,38.12,in,0.9682479999999999,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.side_thickness,sarcophagus,side_thickness_top_mean,7.645,in,0.194183,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.inner_length,sarcophagus,inner_length,84.73,in,2.152142,m,0.000508,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.inner_width,sarcophagus,inner_width,26.69,in,0.677926,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.inner_depth,sarcophagus,inner_depth,29.58,in,0.7513319999999999,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.lid_length,sarcophagus,lid_length_west,103.73,in,2.634742,m,0.000508,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.lid_width,sarcophagus,lid_width_south,42.03,in,1.067562,m,,src.petrie1883,"ch. IX §77, pp.107-108",MEASURED,direct,
+m.coffer.lid_thickness_min,sarcophagus,lid_thickness_min_measured,8.2,in,0.20827999999999997,m,,src.petrie1883,"ch. IX §77, p.108",MEASURED,range,Measured points range through 9.89 in; lid is not uniform.
+m.coffer.lid_thickness_max,sarcophagus,lid_thickness_max_measured,9.89,in,0.251206,m,,src.petrie1883,"ch. IX §77, p.108",MEASURED,range,
+m.lower.north_length,lower_chamber,east_west_length_north,411.9,in,10.462259999999999,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.south_length,lower_chamber,east_west_length_south,411.2,in,10.444479999999999,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.east_width,lower_chamber,north_south_width_east,123.1,in,3.12674,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.west_width,lower_chamber,north_south_width_west,123.6,in,3.1394399999999996,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.door_width,lower_chamber,east_door_width,41.2,in,1.04648,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.branch_width,lower_chamber,branch_passage_width,41.0,in,1.0413999999999999,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.recess_length_front,lower_chamber,turning_recess_length_front,123.8,in,3.14452,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.recess_length_back,lower_chamber,turning_recess_length_back,122.0,in,3.0987999999999998,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.recess_width_n,lower_chamber,turning_recess_width_north,68.2,in,1.73228,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.recess_width_s,lower_chamber,turning_recess_width_south,67.8,in,1.7221199999999999,m,,src.petrie1883,"ch. IX §78, p.108-109",MEASURED,direct,
+m.lower.main_width_min,lower_passage,main_passage_width_min,41.2,in,1.04648,m,,src.petrie1883,"ch. IX §78, p.108",MEASURED,direct,Petrie gives 41.2 and 41.6 in at branch.
+m.lower.main_width_max,lower_passage,main_passage_width_max,41.6,in,1.05664,m,,src.petrie1883,"ch. IX §78, p.108",MEASURED,direct,

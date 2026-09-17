@@ -1,0 +1,311 @@
+{
+  "model": "ARCHEON Model 02 \u2014 Giza / Khafre Reverse Engineering",
+  "revision": "rev.0003",
+  "generated_utc": "2026-09-10T07:36:36Z",
+  "counts": {
+    "parts": 56,
+    "assemblies": 9,
+    "interfaces": 42,
+    "datums": 14,
+    "measurements": 127,
+    "unverified_claim_parts": 31
+  },
+  "validation_errors": 0,
+  "files": [
+    {
+      "path": "Install-GizaModel02.ps1",
+      "bytes": 803,
+      "sha256": "184aecb0fdd98609c1dcc3377964d6f2676a79249b46bb3992aa01b75a84e3bd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3306,
+      "sha256": "d7c33cce78eeb6fa8f9715061d4fa781ce710ed9aa69057623540dc9a039ef5f"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2495,
+      "sha256": "6af5952df54eef1525bad90987349daa9ce81156903d925d6673ceb0c367274a"
+    },
+    {
+      "path": "assemblies.json",
+      "bytes": 8365,
+      "sha256": "661159cd4e540d907a039a75423b6f3df1ab2f350a4076ee8bb6bd8a8db1845e"
+    },
+    {
+      "path": "assembly_plan.json",
+      "bytes": 27,
+      "sha256": "5dd5991bee119f3b7a094e10bedf21bd74479b81d44b9e6a57bee66bb06facf5"
+    },
+    {
+      "path": "assembly_sequence.json",
+      "bytes": 1765,
+      "sha256": "e2c72f53e200da66254483964040e6786a6d4bbc004ef2f3dfeb4e975cbc3b4f"
+    },
+    {
+      "path": "cad/burial_gable_envelope.stl",
+      "bytes": 1813,
+      "sha256": "f2f1700728f518b9ead5ae640a76a6787715ef1f957f2ad4ab605de65ff33d81"
+    },
+    {
+      "path": "cad/helix_access_preview.stl",
+      "bytes": 20675,
+      "sha256": "5409c2595bf27e9c79ed6778009408056995e7c3804de51af14a0a5f97e7415e"
+    },
+    {
+      "path": "cad/khafre_lower_granite_casing_belt.stl",
+      "bytes": 5748,
+      "sha256": "f2481622d69718091b6d3fb5ac061b93e4215c71cdf1ac45a033d8c6f3c5975e"
+    },
+    {
+      "path": "cad/khafre_pyramid_preview.stl",
+      "bytes": 1500,
+      "sha256": "91fefaf9b90f734e6b1389e8230f798d6b311eae26ee3d69a384c0befd5e9e0c"
+    },
+    {
+      "path": "cad/khafre_sarcophagus_body.stl",
+      "bytes": 12746,
+      "sha256": "18364bc51845e4cf4a3636ae6af95281b453268587b4bae8c63b7936fea0783d"
+    },
+    {
+      "path": "cad/khafre_sarcophagus_lid.stl",
+      "bytes": 2594,
+      "sha256": "e1ade4e767341d5bf4f6e2299a5fca489d83806a40dbb83959234f409b790770"
+    },
+    {
+      "path": "fasteners.json",
+      "bytes": 28,
+      "sha256": "ab9d2f0ff23907fe174e5eb7d60c44b32fc230823099d13806a9e640d60877d2"
+    },
+    {
+      "path": "features.json",
+      "bytes": 9714,
+      "sha256": "15aa9bb6483ad5826c2c073064d8de78b1b3569a604d8e4932eaa5b56a0b6b81"
+    },
+    {
+      "path": "fits.json",
+      "bytes": 26,
+      "sha256": "b3ae305e0b6080921f8e34eb027d0dfe86377fe9f52c525b372778011039352c"
+    },
+    {
+      "path": "interfaces.json",
+      "bytes": 26238,
+      "sha256": "07a39abce52e50ae420da2126d431abb1fc37c40bd2e1273dd6fb633d019e0d6"
+    },
+    {
+      "path": "library.json",
+      "bytes": 53,
+      "sha256": "ee4f6ad7f54bebc5d509a290b9e17abadd7deb00a351dc7cf482f45912c10e8f"
+    },
+    {
+      "path": "materials.json",
+      "bytes": 3612,
+      "sha256": "efcf45aa105353f393b716aafb9545494a731c90861468cee7540463d7c9cbfc"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 10601,
+      "sha256": "0552b90853f41493c91102dc4e69685f4317cdd7bf7e435bc698a3595b383115"
+    },
+    {
+      "path": "parts.json",
+      "bytes": 88782,
+      "sha256": "a7a1ce355cd3da7256ae5793b9ce7b3fa317908ff25a219a4845c3c65bc4e21a"
+    },
+    {
+      "path": "project.json",
+      "bytes": 924,
+      "sha256": "13e2017f53a5d208d3c4ae3134fac56d2cf1b010b883cabd2750374835a34ec6"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 9412,
+      "sha256": "6fa2746e636ff652de5c202ff3c8f9773517c9b32b49f8ac56b1fb15dfc65560"
+    },
+    {
+      "path": "requirements.json",
+      "bytes": 4676,
+      "sha256": "b516a3e70f4dbd6187f3aae8566236a5e2eb05482a154873af70ecb390665962"
+    },
+    {
+      "path": "research/REVERSE_ENGINEERING_MATH.md",
+      "bytes": 3400,
+      "sha256": "97e204f154a439e4fe72772f481f3225c94bbe429e92ca10f324dd1b3dbb8721"
+    },
+    {
+      "path": "research/SURVEY_RECONSTRUCTION.md",
+      "bytes": 2256,
+      "sha256": "4654d4efed1c4cb5ea2b3474a52c2f017e98c4e4cc5ee7961e0c282aafa1136e"
+    },
+    {
+      "path": "research/TEST_PLAN.md",
+      "bytes": 1828,
+      "sha256": "c34ea9a74fe8a3ab01ece16d039671557d9be7372490bfd89973e9b1f04118f8"
+    },
+    {
+      "path": "research/calculations.json",
+      "bytes": 2221,
+      "sha256": "d32bdbce40eca9f5af42792b2d5474c263c42b7e70053289bbd7d1fb43af15c6"
+    },
+    {
+      "path": "research/geometry_field_provenance.json",
+      "bytes": 3838,
+      "sha256": "70fc36fc17e0ed656ec918cd8806b59dd55ae0e2f5df503cef8722dc1bed7743"
+    },
+    {
+      "path": "research/hypotheses.json",
+      "bytes": 3885,
+      "sha256": "6b545564d825e43a162a7154051a85a4619709d00ff364a0bba5226724f52c65"
+    },
+    {
+      "path": "research/iterations/0001-ui.png",
+      "bytes": 96365,
+      "sha256": "5486c6afd81865843c031a8633629d828ff3c1755cdc372bf8a48e38e3ec1c14"
+    },
+    {
+      "path": "research/iterations/0001.md",
+      "bytes": 1242,
+      "sha256": "2309df94315a5f08b88a867cdcb14de9033dc69e04592c25cd961c7ac843bcbc"
+    },
+    {
+      "path": "research/iterations/0002-ui.png",
+      "bytes": 93483,
+      "sha256": "9891926e0af9457899440e2870d155baebc4b6be7096814380d0cbc0e38a9314"
+    },
+    {
+      "path": "research/iterations/0002.md",
+      "bytes": 866,
+      "sha256": "99be51977b90d6cccf56131a8fcead6f7621cd1dc32f28e167f1303aabadf129"
+    },
+    {
+      "path": "research/iterations/0003-ui.png",
+      "bytes": 220700,
+      "sha256": "9edb1aa79604235ac96f11d9675d3e4d231ca788a36ad150a508e5c1413526c3"
+    },
+    {
+      "path": "research/iterations/0003.md",
+      "bytes": 1336,
+      "sha256": "e694de1a6739ad1a42787e6238caa87240178581394dd718bb3f07be1e3e1d0d"
+    },
+    {
+      "path": "research/measurements.csv",
+      "bytes": 23950,
+      "sha256": "2e11fe7f2248978987be96930ee46b72b4f7061172a41e5b88c050918c695dd1"
+    },
+    {
+      "path": "research/measurements.json",
+      "bytes": 60747,
+      "sha256": "8f6bc61927821986d0982dd672b7be4920ce28420f690f6fbd7638490261c793"
+    },
+    {
+      "path": "research/model_parameters.json",
+      "bytes": 3325,
+      "sha256": "795738d01d5332443653580058cb5d5a86938fb57a949774f531a981a9502f83"
+    },
+    {
+      "path": "research/predictions.json",
+      "bytes": 2036,
+      "sha256": "0fe4a016022bf483b6599d5e774194a1f6f04145689e775f29f98891d6236073"
+    },
+    {
+      "path": "research/reconstruction_residuals.json",
+      "bytes": 755,
+      "sha256": "787be0339898cba3d3b5a5ccf41e202c5042913adc1e41a950bb8d9291a5ef3d"
+    },
+    {
+      "path": "research/results/rev0002_burial_acoustic_modes.csv",
+      "bytes": 1858,
+      "sha256": "d1ddb09f0dce99d30664ed296700c26142f596bd53baa4ff79842e08f2fe543d"
+    },
+    {
+      "path": "research/results/rev0002_gravity_sensitivity.csv",
+      "bytes": 748,
+      "sha256": "69bb26ee56b7f579b25e7fc44f5633e1b067c31f528e38b20b0ea47fa8109f9d"
+    },
+    {
+      "path": "research/results/rev0002_gravity_sensitivity.png",
+      "bytes": 104315,
+      "sha256": "8f668696af1ae05420dd49552940b999e8b9538a435b1b682cb8924c7028415c"
+    },
+    {
+      "path": "research/results/rev0002_metrics_runtime.json",
+      "bytes": 222,
+      "sha256": "fc446e2112ae50286dcec2d2136883e3e0f532d867a96bbe482734bc510c5c78"
+    },
+    {
+      "path": "research/results/rev0002_plasma_field_sweep.csv",
+      "bytes": 2892,
+      "sha256": "8bb97910275550c007ff2301a55f58d6da9cdc9a3453e3d055579e68311c5889"
+    },
+    {
+      "path": "research/results/rev0002_plasma_field_sweep.png",
+      "bytes": 131092,
+      "sha256": "d1a0baef8fa0deb84b2300b48f4823de05d98e9f1966fd2de908c7911dacb335"
+    },
+    {
+      "path": "research/results/rev0003_survey_section.svg",
+      "bytes": 2830,
+      "sha256": "50f6c79264a82e59e63c14526a49a2017c16fa7733e55f152adbc7d75c960840"
+    },
+    {
+      "path": "research/results/rev0003_validation.json",
+      "bytes": 2416,
+      "sha256": "a6ed6e38d5a9b875f06ad578e56967628e8b76e189f35f2afb18208261fe6cd9"
+    },
+    {
+      "path": "research/run_rev0002.py",
+      "bytes": 963,
+      "sha256": "665b68acd8a4dac4e869bf465d414e2e7b16a54fd194cf7f347450463ec38b3b"
+    },
+    {
+      "path": "research/run_rev0003.py",
+      "bytes": 371,
+      "sha256": "84f1b70583d9a1f1a801e4b5b4aae70b6d79fd0b284bb9144aa58fe632eb0ab2"
+    },
+    {
+      "path": "research/sources.json",
+      "bytes": 2480,
+      "sha256": "fcffc5e9b6113394d75f66ab33611895595d15fddc68833fdd2caf794138021a"
+    },
+    {
+      "path": "research/survey_nodes.csv",
+      "bytes": 1232,
+      "sha256": "0238fa1ce656fb943f8ac6c35c8d98757a96eeb1417c135b72be244d62654bde"
+    },
+    {
+      "path": "research/survey_nodes.json",
+      "bytes": 3549,
+      "sha256": "ac74e33568bb3bd2feb240a55f0fa0639343c9a862ec5106a6dddc6d60a2f7f1"
+    },
+    {
+      "path": "research/validate_rev0003.py",
+      "bytes": 2410,
+      "sha256": "53a340b91d16a940df40b59ca3bb49ea74a90871c792076fbb7331bd96186eba"
+    },
+    {
+      "path": "transactions.json",
+      "bytes": 25,
+      "sha256": "5506370220272f52b820523a5d9485a5d60b2e521538d39ecdfbdea4b70872e4"
+    },
+    {
+      "path": "ui-freeze-rev0003.svg",
+      "bytes": 22889,
+      "sha256": "5655029a47bb4faaecec1c9b8eb7561c20119d962ce78da670d2079665010492"
+    },
+    {
+      "path": "ui-preview-rev0003.png",
+      "bytes": 220700,
+      "sha256": "9edb1aa79604235ac96f11d9675d3e4d231ca788a36ad150a508e5c1413526c3"
+    },
+    {
+      "path": "ui-preview-standalone.html",
+      "bytes": 12664,
+      "sha256": "eb8a52f96ac845f9c3ff787dd67a941fdd4532a2fd0c507304995fc61f6da3d9"
+    },
+    {
+      "path": "ui-preview.html",
+      "bytes": 12423,
+      "sha256": "6fb624aaaaae4566771e3b29641a697ccf29cb5db313b35d57f26e4482f3ad9d"
+    }
+  ]
+}

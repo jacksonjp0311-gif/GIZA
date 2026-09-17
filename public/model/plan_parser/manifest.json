@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "PRIMARY PLAN PARSER + SOURCE-BYTE TARGETS",
+  "purpose": "Normalize plan facts while handing byte-level registration responsibility to SOURCE-BYTE REGISTRATION.",
+  "counts": {
+    "plan_sources": 13,
+    "extractions": 34,
+    "raw_byte_verified": 0,
+    "preserved_conflicts": 3
+  },
+  "truth_rules": [
+    "remote text/OCR is not source-byte custody",
+    "plan scale metadata is not parsed coordinates",
+    "scholarly reconstruction is not direct architecture",
+    "room topology cannot mutate canonical geometry",
+    "metric promotion requires checksum, parser, frame and residual receipts"
+  ],
+  "generated_at": "2026-09-13T14:49:46.979Z"
+}

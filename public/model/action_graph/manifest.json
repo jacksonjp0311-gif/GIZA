@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "ACTION GRAPH",
+  "purpose": "Compile a source-addressed place→action→place network for Khafre that separates direct architectural constraints from scholarly function and behavioral inference.",
+  "counts": {
+    "nodes": 14,
+    "actions": 7,
+    "places": 7,
+    "edges": 14,
+    "parsed_evidence_records_used": 10
+  },
+  "truth_rules": [
+    "graph is a research reconstruction, not a ritual transcript",
+    "every ACTION node requires at least one parsed evidence record",
+    "topological edges do not imply ceremonial certainty",
+    "action graph has zero geometry-write authority",
+    "actors/timing remain unresolved unless source-backed"
+  ],
+  "entrypoints": [
+    "public/model/action_graph/seeds.json",
+    "public/model/action_graph/graph.json",
+    "public/model/action_graph/traversal.json",
+    "public/model/maps/layers/action_graph.json",
+    "docs/ACTION_GRAPH.md"
+  ],
+  "generated_at": "2026-09-13T08:22:00Z"
+}

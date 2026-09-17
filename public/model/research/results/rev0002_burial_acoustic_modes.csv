@@ -1,0 +1,25 @@
+m,n,p,frequency_hz,model
+1,0,0,12.120141342756185,rectangular-air approximation; gabled roof ignored
+2,0,0,24.24028268551237,rectangular-air approximation; gabled roof ignored
+0,0,1,25.073099415204677,rectangular-air approximation; gabled roof ignored
+1,0,1,27.84884450840151,rectangular-air approximation; gabled roof ignored
+0,1,0,34.300000000000004,rectangular-air approximation; gabled roof ignored
+2,0,1,34.87479919595649,rectangular-air approximation; gabled roof ignored
+3,0,0,36.360424028268554,rectangular-air approximation; gabled roof ignored
+1,1,0,36.37839779551029,rectangular-air approximation; gabled roof ignored
+2,1,0,42.00096790162759,rectangular-air approximation; gabled roof ignored
+0,1,1,42.48706055124004,rectangular-air approximation; gabled roof ignored
+3,0,1,44.16719087513067,rectangular-air approximation; gabled roof ignored
+1,1,1,44.18198886936989,rectangular-air approximation; gabled roof ignored
+2,1,1,48.915658218593855,rectangular-air approximation; gabled roof ignored
+3,1,0,49.98570231091577,rectangular-air approximation; gabled roof ignored
+0,0,2,50.146198830409354,rectangular-air approximation; gabled roof ignored
+1,0,2,51.59010644791631,rectangular-air approximation; gabled roof ignored
+2,0,2,55.69768901680302,rectangular-air approximation; gabled roof ignored
+3,1,1,55.92164831083064,rectangular-air approximation; gabled roof ignored
+0,1,2,60.75468094837589,rectangular-air approximation; gabled roof ignored
+3,0,2,61.941276162623886,rectangular-air approximation; gabled roof ignored
+1,1,2,61.951828732551036,rectangular-air approximation; gabled roof ignored
+2,1,2,65.41194510035992,rectangular-air approximation; gabled roof ignored
+0,2,0,68.60000000000001,rectangular-air approximation; gabled roof ignored
+1,2,0,69.66245636042694,rectangular-air approximation; gabled roof ignored

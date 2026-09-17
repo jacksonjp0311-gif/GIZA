@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "id": "fingerprint.petrie1883.wikimedia_current",
+  "candidate_id": "bytes.petrie1883.public_domain_pdf",
+  "truth_class": "REMOTE_PROVIDER_METADATA_FINGERPRINT_NONCRYPTOGRAPHIC",
+  "provider": "Wikimedia Commons",
+  "verified_on": "2026-09-15",
+  "file_page": "https://commons.wikimedia.org/wiki/File:The_pyramids_and_temples_of_Gizeh_(IA_cu31924012038927).pdf",
+  "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_pyramids_and_temples_of_Gizeh_%28IA_cu31924012038927%29.pdf",
+  "internet_archive_identifier": "cu31924012038927",
+  "provider_displayed": {
+    "page_count": 315,
+    "file_size_display": "8.87 MB",
+    "display_dimensions_pixels": [
+      1037,
+      1541
+    ],
+    "mime_type": "application/pdf",
+    "file_history_timestamp_utc": "2020-12-13T21:27:00Z",
+    "pdf_format_version": "1.5",
+    "software": "Digitized by the Internet Archive",
+    "conversion_program": "Recoded by LuraDocument PDF v2.28"
+  },
+  "rights_state": "PUBLIC_DOMAIN",
+  "cryptographic_hash": null,
+  "cryptographic_authority": "NONE",
+  "local_byte_authority": "NONE",
+  "guard": "A provider metadata fingerprint helps identify the intended remote object but cannot substitute for a SHA-256 computed from locally possessed bytes."
+}

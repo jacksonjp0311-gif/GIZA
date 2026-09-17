@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "rule": "A FORGE analysis cell can never become a mapped stone by user naming alone; promotion requires a spatial evidence receipt and geometry replacement record.",
+  "states": [
+    {
+      "target_id": "part.pyramid.khafre",
+      "current": "E3",
+      "target": "E4_ZONE_MAPPING",
+      "status": "SURVEY_CONSTRAINED_ENVELOPE",
+      "blockers": [
+        "individual exterior block boundaries are not mapped"
+      ]
+    },
+    {
+      "target_id": "part.casing.granite.lower",
+      "current": "E3",
+      "target": "E4_MAPPED_ELEMENTS",
+      "status": "ZONE_MEASURED_NOT_STONE_MAPPED",
+      "blockers": [
+        "multi-view licensed imagery",
+        "stone boundary solve",
+        "scale lock"
+      ]
+    },
+    {
+      "target_id": "part.burial.gable_envelope",
+      "current": "E3",
+      "target": "E4_MAPPED_ELEMENTS",
+      "status": "ENVELOPE_ONLY",
+      "blockers": [
+        "multi-view interior imagery",
+        "individual roof-beam boundaries"
+      ]
+    },
+    {
+      "target_id": "part.sarcophagus.body",
+      "current": "E4",
+      "target": "E5",
+      "status": "MAPPED_SURVIVING_OBJECT",
+      "blockers": [
+        "independent modern metric scan or validated photogrammetry"
+      ]
+    },
+    {
+      "target_id": "part.sarcophagus.lid",
+      "current": "E4",
+      "target": "E5",
+      "status": "MAPPED_SURVIVING_OBJECT",
+      "blockers": [
+        "independent modern metric scan or validated photogrammetry"
+      ]
+    },
+    {
+      "target_id": "part.plateau.reference",
+      "current": "E0_CONTEXT",
+      "target": "E3_CONTEXT",
+      "status": "FLAT_REFERENCE_ONLY",
+      "blockers": [
+        "DEM bytes",
+        "CRS metadata",
+        "vertical datum",
+        "local transform receipt"
+      ]
+    }
+  ],
+  "queue": [
+    {
+      "id": "candidate.kh.summit_casing_blocks",
+      "target_zone": "Khafre summit casing",
+      "goal": "Map visible casing block boundaries from multiple licensed exterior photographs",
+      "current_maturity": "E0",
+      "target_maturity": "E2",
+      "next_requirements": [
+        "licensed multi-view media",
+        "camera solve",
+        "scale anchor from measured casing/base geometry",
+        "reprojection QA"
+      ]
+    },
+    {
+      "id": "candidate.kh.sarcophagus_refine",
+      "target_zone": "Sarcophagus body/lid",
+      "goal": "Refine mesh from multiple photographs while preserving Petrie dimensions as hard scale constraints",
+      "current_maturity": "E4",
+      "target_maturity": "E5",
+      "next_requirements": [
+        "independent modern metric capture or published scan",
+        "difference metrics"
+      ]
+    },
+    {
+      "id": "candidate.kh.burial_roof_beams",
+      "target_zone": "Burial chamber gabled roof",
+      "goal": "Promote roof-beam decomposition from envelope to individually mapped elements",
+      "current_maturity": "E3",
+      "target_maturity": "E4",
+      "next_requirements": [
+        "multi-view interior media",
+        "specific beam boundaries",
+        "survey-constrained scale",
+        "review receipt"
+      ]
+    },
+    {
+      "id": "candidate.kh.terrain",
+      "target_zone": "Giza plateau context",
+      "goal": "Replace flat terrain reference with coarse georeferenced terrain layer",
+      "current_maturity": "E0",
+      "target_maturity": "E3_CONTEXT",
+      "next_requirements": [
+        "SRTM or Copernicus DEM tile",
+        "CRS record",
+        "vertical datum",
+        "local-to-world transform"
+      ]
+    }
+  ]
+}

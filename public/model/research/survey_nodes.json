@@ -1,0 +1,131 @@
+{
+  "frame": {
+    "handedness": "RIGHT_HANDED",
+    "x": "+EAST",
+    "y": "+NORTH",
+    "z": "+UP",
+    "origin": "pyramid casing-envelope center at base plane"
+  },
+  "nodes": [
+    {
+      "node": "A",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 116.96122999999999,
+      "z_up_m": -0.0,
+      "south_from_north_base_m": -9.33,
+      "level_below_base_m": 0.0,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "B",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 84.49122999999999,
+      "z_up_m": -12.9,
+      "south_from_north_base_m": 23.14,
+      "level_below_base_m": 12.9,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "C",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 76.61122999999999,
+      "z_up_m": -12.9,
+      "south_from_north_base_m": 31.02,
+      "level_below_base_m": 12.9,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "D",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 76.61122999999999,
+      "z_up_m": -15.34,
+      "south_from_north_base_m": 31.02,
+      "level_below_base_m": 15.34,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "E",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 68.73122999999998,
+      "z_up_m": -12.9,
+      "south_from_north_base_m": 38.9,
+      "level_below_base_m": 12.9,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "F",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 55.24122999999999,
+      "z_up_m": -7.18,
+      "south_from_north_base_m": 52.39,
+      "level_below_base_m": 7.18,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "G",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 46.26122999999999,
+      "z_up_m": -3.55,
+      "south_from_north_base_m": 61.37,
+      "level_below_base_m": 3.55,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "H",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 6.891229999999993,
+      "z_up_m": -3.55,
+      "south_from_north_base_m": 100.74,
+      "level_below_base_m": 3.55,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "I",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 4.401229999999984,
+      "z_up_m": -3.55,
+      "south_from_north_base_m": 103.23,
+      "level_below_base_m": 3.55,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "J",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 62.28122999999999,
+      "z_up_m": -3.55,
+      "south_from_north_base_m": 45.35,
+      "level_below_base_m": 3.55,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "K",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 64.86122999999998,
+      "z_up_m": -3.55,
+      "south_from_north_base_m": 42.77,
+      "level_below_base_m": 3.55,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    },
+    {
+      "node": "L",
+      "x_east_m": 12.453619999999999,
+      "y_north_m": 97.94122999999999,
+      "z_up_m": 12.92,
+      "south_from_north_base_m": 9.69,
+      "level_below_base_m": -12.92,
+      "source": "Legon 1989 Table II",
+      "status": "COMPUTED_POSITION"
+    }
+  ]
+}

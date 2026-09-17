@@ -1,0 +1,378 @@
+{
+  "parameters": {
+    "khafre.base.mean": {
+      "name": "khafre.base.mean",
+      "value": 215.26245999999998,
+      "unit": "m",
+      "si": 215.26245999999998,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie mean of four adopted side lengths.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.height.petrie": {
+      "name": "khafre.height.petrie",
+      "value": 143.8656,
+      "unit": "m",
+      "si": 143.8656,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie height from measured slope/base.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.height.official": {
+      "name": "khafre.height.official",
+      "value": 143.5,
+      "unit": "m",
+      "si": 143.5,
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "Egyptian Ministry summary value; retained separately.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.height.conflict"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.height.current": {
+      "name": "khafre.height.current",
+      "value": 136.4,
+      "unit": "m",
+      "si": 136.4,
+      "provenance": {
+        "class": "SOURCE",
+        "created_by": "archeon.model02",
+        "reason": "ScIDEP 2025 current-height context.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.scidep"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.slope": {
+      "name": "khafre.slope",
+      "value": 53.166666666666664,
+      "unit": "deg",
+      "si": 0.9279333856436518,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie best measured slope statement.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.axis.offset_east": {
+      "name": "khafre.axis.offset_east",
+      "value": 12.453619999999999,
+      "unit": "m",
+      "si": 12.453619999999999,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie passage-axis offset.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.axis.azimuth": {
+      "name": "khafre.axis.azimuth",
+      "value": -0.0936111111111111,
+      "unit": "deg",
+      "si": -0.0016338221053391361,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Smyth passage azimuth as reported by Petrie; metadata-only pending frame reconciliation.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.upper.width": {
+      "name": "khafre.upper.width",
+      "value": 1.0487659999999999,
+      "unit": "m",
+      "si": 1.0487659999999999,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie mean upper entrance clear width.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.upper.height": {
+      "name": "khafre.upper.height",
+      "value": 1.201166,
+      "unit": "m",
+      "si": 1.201166,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie mean upper entrance clear height.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.horizontal.width": {
+      "name": "khafre.horizontal.width",
+      "value": 1.056386,
+      "unit": "m",
+      "si": 1.056386,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie mean raised horizontal passage width.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.horizontal.height": {
+      "name": "khafre.horizontal.height",
+      "value": 1.804924,
+      "unit": "m",
+      "si": 1.804924,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie mean raised horizontal passage height.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.burial.length": {
+      "name": "khafre.burial.length",
+      "value": 14.164309999999999,
+      "unit": "m",
+      "si": 14.164309999999999,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Mean of Petrie N/S wall lengths.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.burial.width": {
+      "name": "khafre.burial.width",
+      "value": 4.97459,
+      "unit": "m",
+      "si": 4.97459,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Mean of Petrie E/W wall widths.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.burial.wall_height": {
+      "name": "khafre.burial.wall_height",
+      "value": 5.24256,
+      "unit": "m",
+      "si": 5.24256,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie representative wall height.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.coffer.outer_length": {
+      "name": "khafre.coffer.outer_length",
+      "value": 2.6334720000000003,
+      "unit": "m",
+      "si": 2.6334720000000003,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie coffer mean outer length.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.coffer.outer_width": {
+      "name": "khafre.coffer.outer_width",
+      "value": 1.065911,
+      "unit": "m",
+      "si": 1.065911,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie coffer outer width mean.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "khafre.coffer.outer_height": {
+      "name": "khafre.coffer.outer_height",
+      "value": 0.9682479999999999,
+      "unit": "m",
+      "si": 0.9682479999999999,
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie coffer outer height.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.coffer"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "claim.deep.depth": {
+      "name": "claim.deep.depth",
+      "value": 648.0,
+      "unit": "m",
+      "si": 648.0,
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Retained reported-claim parameter only; not archaeological fact.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "analysis.limestone_density": {
+      "name": "analysis.limestone_density",
+      "value": 2600.0,
+      "unit": "kg/m3",
+      "si": 2600.0,
+      "provenance": {
+        "class": "ASSUMED",
+        "created_by": "archeon.model02",
+        "reason": "Reference density for sensitivity calculations; not site sample.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    "analysis.design_fidelity": {
+      "name": "analysis.design_fidelity",
+      "value": 2,
+      "unit": "enum",
+      "si": 2,
+      "provenance": {
+        "class": "USER_LOCKED",
+        "created_by": "archeon.model02",
+        "reason": "1=CONCEPT, 2=ENGINEERING, 3=DETAILED. rev.0003 targets engineering semantics while geometry remains survey reconstruction.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "schema": {
+    "job_id": "string",
+    "media_id": "string",
+    "image_width_px": "integer",
+    "image_height_px": "integer",
+    "camera_model": "optional",
+    "anchors": "array",
+    "targets": "array",
+    "status": "DRAFT|CALIBRATED|REVIEWED|REJECTED",
+    "output_maturity_max": "E1"
+  },
+  "hard_limits": [
+    "Single-view pixel scaling is local and plane-dependent.",
+    "No perspective correction may be implied unless camera geometry or planar rectification is actually solved.",
+    "All output values must carry uncertainty and the calibration anchor ID.",
+    "Single-view results cannot promote a stone beyond E1."
+  ],
+  "jobs": []
+}

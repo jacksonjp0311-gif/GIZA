@@ -1,0 +1,56 @@
+{
+  "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+  "version": "0.10.0",
+  "source_id": "src.opencontext.arce_sphinx",
+  "native_identifier": "OpenContext:141e814a-ba2d-4560-879f-80f1afb019e9",
+  "verified_landing_url": "https://opencontext.org/projects/141e814a-ba2d-4560-879f-80f1afb019e9",
+  "machine_endpoint": "https://opencontext.org/projects/141e814a-ba2d-4560-879f-80f1afb019e9.json",
+  "license": "CC_BY_4_0",
+  "facts": {
+    "project_bounds_wgs84": {
+      "min_lon": 31.1357787161,
+      "max_lon": 31.140880199,
+      "min_lat": 29.9742719132,
+      "max_lat": 29.9761673823
+    },
+    "local_grid": {
+      "northing_axis_reference": "N3000 east-west line",
+      "easting_axis_reference": "E500 north-south line",
+      "origin_description": "arbitrary point approximately 3.5 m in front of the south forepaw on approximate temple axis",
+      "orientation_reference": "magnetic north",
+      "orientation_date": "1978-02-20"
+    },
+    "vertical_datum": {
+      "local_marker_value_m": 10.0,
+      "marker_description": "cement marker east of Sphinx",
+      "approx_msl_conversion_add_m": 9.331,
+      "guard": "Applies to ARCE Sphinx local elevations according to project tie; not automatically a Khafre/GPMP vertical transform."
+    },
+    "photogrammetry": {
+      "camera": "Jena-Optic stereo-metric SMK 120",
+      "stereo_base_cm": 120,
+      "elevations": [
+        "front",
+        "north",
+        "south"
+      ],
+      "profile_interval_m": 5,
+      "original_drawing_scale": "1:50"
+    },
+    "mapping_scales": [
+      "1:50 Sphinx master plan",
+      "1:20 and 1:10 detail mapping",
+      "1:100 temple mapping",
+      "1:200 wider-area mapping"
+    ],
+    "head_triangulated_points": 63,
+    "cad_model": {
+      "software": "AutoCAD Release 10",
+      "approx_faces": 250000
+    },
+    "zenodo_aggregate_records": 7
+  },
+  "geometry_write_authority": "SPHINX_COMPLEX_CONTEXT_ONLY_UNTIL_FRAME_RECONCILED",
+  "canonical_mutation": false,
+  "confirmed_on": "2026-09-12"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "INTENT RECONSTRUCTION",
+  "policy": "Intent hypotheses are explanatory models, not recovered ancient testimony. Scores are triage indices, never probabilities of historical truth.",
+  "hypotheses": [
+    {
+      "id": "intent.royal_mortuary_transition",
+      "label": "Royal mortuary transformation",
+      "question": "Was the complex primarily built to conduct the king from death into an enduring afterlife state?",
+      "prior_status": "STRONGLY_SUPPORTED",
+      "critical_expected_evidence": [
+        "burial architecture",
+        "funerary procession infrastructure",
+        "royal mortuary temple",
+        "afterlife ritual context"
+      ],
+      "falsifier": "A securely demonstrated primary function incompatible with burial/royal mortuary use across the complex."
+    },
+    {
+      "id": "intent.perpetual_royal_cult",
+      "label": "Perpetual royal cult maintenance",
+      "question": "Was the complex designed to sustain continuing offerings, ritual service and the king’s posthumous presence?",
+      "prior_status": "STRONGLY_SUPPORTED",
+      "critical_expected_evidence": [
+        "temple service spaces",
+        "royal statuary",
+        "offering cult evidence",
+        "long-term priestly maintenance"
+      ],
+      "falsifier": "Evidence that temple spaces were never intended or used for post-burial royal cult activity."
+    },
+    {
+      "id": "intent.cosmic_order_solar_kingship",
+      "label": "Cosmic-order / solar kingship expression",
+      "question": "Did orientation and monument form intentionally materialize cosmic and solar kingship concepts?",
+      "prior_status": "SUPPORTED_CONTEXTUAL",
+      "critical_expected_evidence": [
+        "precise orientation",
+        "repeated astronomical relationships",
+        "contemporary ideological parallels",
+        "iconographic/textual links"
+      ],
+      "falsifier": "Measured patterns fully explained by construction convenience with no independent ideological or comparative support."
+    },
+    {
+      "id": "intent.state_integration_legitimacy",
+      "label": "State integration and royal legitimacy",
+      "question": "Did building and maintaining the complex also function as a state-scale demonstration and reproduction of centralized royal power?",
+      "prior_status": "SUPPORTED_CONTEXTUAL",
+      "critical_expected_evidence": [
+        "centralized logistics",
+        "planned labor organization",
+        "administrative/craft infrastructure",
+        "elite cemetery relationships"
+      ],
+      "falsifier": "Evidence that construction was decentralized and politically marginal rather than a royal state program."
+    },
+    {
+      "id": "intent.ritual_landscape_journey",
+      "label": "Staged ritual landscape",
+      "question": "Did valley temple, causeway, pyramid temple, pyramid and associated monuments form a deliberately sequenced ritual journey?",
+      "prior_status": "SUPPORTED_ARCHITECTURALLY",
+      "critical_expected_evidence": [
+        "linked architectural sequence",
+        "processional route",
+        "functional differentiation of temples",
+        "construction-sequence coherence"
+      ],
+      "falsifier": "Evidence that the linked components are chronologically/functionally unrelated or accidental."
+    },
+    {
+      "id": "intent.future_audience_message",
+      "label": "Distant-future encoded message",
+      "question": "Was part of the complex deliberately designed as a technical/scientific message for people far beyond the builders’ own cultural horizon?",
+      "prior_status": "NOT_ESTABLISHED",
+      "critical_expected_evidence": [
+        "explicit future-audience marker",
+        "redundant decodable encoding independent of construction function",
+        "cross-monument invariant payload",
+        "contemporary evidence of intended remote transmission"
+      ],
+      "falsifier": "All candidate encodings collapse under construction, ritual, metrological or selection-effect controls."
+    },
+    {
+      "id": "intent.machine_or_power_system",
+      "label": "Machine / power-system function",
+      "question": "Was the pyramid complex principally an engineered machine for hydraulic, acoustic, electromagnetic or power production?",
+      "prior_status": "NOT_SUPPORTED",
+      "critical_expected_evidence": [
+        "energy source",
+        "working-fluid or electrical pathway",
+        "machine-specific wear/residue",
+        "power output interface",
+        "function-specific components"
+      ],
+      "falsifier": "No machine-specific evidence after targeted measurement; observed physics fully explained as passive consequences of architecture."
+    },
+    {
+      "id": "intent.advanced_computation",
+      "label": "Advanced computational technology",
+      "question": "Did the builders use AI, digital computation or modern-equivalent computational machinery?",
+      "prior_status": "NO_DIRECT_EVIDENCE",
+      "critical_expected_evidence": [
+        "computational artifact",
+        "machine-readable storage medium",
+        "manufacturing signature requiring such machinery",
+        "documented computational infrastructure"
+      ],
+      "falsifier": "Known surveying, craft and organizational methods remain sufficient and no direct artifact appears."
+    }
+  ]
+}

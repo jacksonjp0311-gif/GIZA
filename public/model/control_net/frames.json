@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "codename": "CONTROL NET",
+  "frames": [
+    {
+      "id": "frame.gpmp.native",
+      "name": "Giza Plateau Mapping Project native planar grid",
+      "kind": "SURVEY_PLANAR_FRAME",
+      "units": "m",
+      "axes": {
+        "x": "+EASTING",
+        "y": "+NORTHING",
+        "z": "+UP_OR_REPORTED_ELEVATION"
+      },
+      "origin_definition": {
+        "feature": "computed center of Great Pyramid / Khufu",
+        "northing_m": 100000.0,
+        "easting_m": 500000.0
+      },
+      "horizontal_status": "PUBLISHED_FRAME_DEFINITION",
+      "vertical_status": "DATUM_REALIZATION_UNRESOLVED_IN_GIZA",
+      "source_ids": [
+        "src.dash.gpmp_frame2015",
+        "src.dash.giza_surveys"
+      ],
+      "geometry_write_authority": "FRAME_DEFINITION_ONLY",
+      "guard": "GPMP coordinates may be stored natively. Do not translate them into frame.giza.local until a transform receipt is issued."
+    },
+    {
+      "id": "frame.giza.local",
+      "name": "GIZA canonical Khafre local engineering frame",
+      "kind": "LOCAL_ENGINEERING_FRAME",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "origin_definition": {
+        "feature": "canonical Khafre local model origin",
+        "coordinates_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "translation_to_gpmp_status": "UNRESOLVED",
+      "rotation_to_true_cardinal_status": "SURVEY_ORIENTATION_PRIOR_AVAILABLE",
+      "scale_status": "EXISTING_MODEL_SCALE_NOT_REESTIMATED",
+      "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "geometry_write_authority": "CANONICAL_FRAME_WITHOUT_SURVEY_TRANSLATION",
+      "guard": "The new orientation receipt constrains yaw only; it does not establish GPMP translation, Z datum, or a new monument scale."
+    },
+    {
+      "id": "frame.khafre.casing.2006",
+      "name": "Khafre casing-foundation survey orientation frame",
+      "kind": "ORIENTATION_ONLY_SURVEY_FRAME",
+      "units": "m",
+      "axes": {
+        "x": "nominal east-west casing axis",
+        "y": "nominal north-south casing axis",
+        "z": "unresolved"
+      },
+      "yaw_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "translation_status": "UNRESOLVED",
+      "scale_status": "NOT_SOLVED_BY_ORIENTATION_SURVEY",
+      "source_ids": [
+        "src.nell_ruggles2014"
+      ],
+      "geometry_write_authority": "ORIENTATION_PRIOR_ONLY",
+      "guard": "This frame represents a least-squares orientation prior derived from four independently measured casing-foundation sides; the measured non-square residuals remain explicit."
+    },
+    {
+      "id": "frame.wgs84.context",
+      "name": "WGS84 geodetic context frame",
+      "kind": "GEODETIC_CONTEXT",
+      "units": "deg+m",
+      "axes": {
+        "x": "longitude",
+        "y": "latitude",
+        "z": "ellipsoidal_or_reported_height"
+      },
+      "anchor_id": "anchor.khafre.wikidata",
+      "status": "CONTEXT_ONLY",
+      "geometry_write_authority": "NONE",
+      "guard": "Consumer GPS and WGS84 context do not replace survey control."
+    }
+  ]
+}

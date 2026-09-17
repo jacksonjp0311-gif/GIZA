@@ -1,0 +1,40 @@
+{
+  "revision": "rev.0003",
+  "principle": "Predictions are generated before interpreting any future measurement.",
+  "tests": [
+    {
+      "id": "test.gravity.terminals",
+      "hypothesis": "deep structure exists",
+      "observable": "microgravity",
+      "model": "point-mass screening approximation",
+      "prediction": "An 80 m cube-shaped void with 2600 kg/m^3 density contrast at 648 m directly below a station gives ~21.2 microGal peak-order signal per chamber before finite-body/lateral corrections.",
+      "falsifier": "Survey sensitivity is sufficient and no correlated anomaly exists at predicted locations.",
+      "caveats": [
+        "not a finite-prism solution",
+        "lateral offset reduces signal",
+        "partial fill reduces density contrast"
+      ]
+    },
+    {
+      "id": "test.acoustic.column",
+      "hypothesis": "long vertical resonator",
+      "observable": "acoustic eigenfrequency",
+      "prediction": "Ideal 648 m air half-wave fundamental ~0.2647 Hz; water ~1.1420 Hz. Boundary conditions change this.",
+      "falsifier": "No geometry-correlated modes beyond ordinary cavity response."
+    },
+    {
+      "id": "test.plasma.field",
+      "hypothesis": "magnetic/plasma system",
+      "observable": "required B versus ion temperature and target gyro-radius",
+      "prediction": "Use r_L = m v_perp/(qB) as a necessary-not-sufficient kinematic scale; compare required B to any measured field architecture.",
+      "falsifier": "No credible field source/topology or power balance exists."
+    },
+    {
+      "id": "test.geometry.perturb",
+      "hypothesis": "intentional resonant optimization",
+      "observable": "objective sensitivity under perturbation",
+      "prediction": "If exact geometry is functional, preregistered performance should degrade under small slope/chamber/material perturbations more strongly than under matched null geometries.",
+      "falsifier": "Actual geometry is not a statistically unusual optimum after correction for multiple tested objectives."
+    }
+  ]
+}

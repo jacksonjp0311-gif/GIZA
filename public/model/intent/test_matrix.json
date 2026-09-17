@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "tests": [
+    {
+      "id": "test.intent.cross_complex_function",
+      "targets": [
+        "intent.royal_mortuary_transition",
+        "intent.perpetual_royal_cult",
+        "intent.ritual_landscape_journey"
+      ],
+      "method": "Map independently documented functions of valley temple, causeway, pyramid temple, pyramid, subsidiary pyramid and Sphinx/Sphinx Temple; test whether sequence is coherent without forcing unknown rooms into ritual labels.",
+      "required_data": [
+        "primary excavation plans",
+        "room-level finds",
+        "processional access constraints",
+        "construction sequence"
+      ],
+      "status": "READY_FOR_SOURCE_ENRICHMENT"
+    },
+    {
+      "id": "test.intent.orientation_comparative",
+      "targets": [
+        "intent.cosmic_order_solar_kingship"
+      ],
+      "method": "Compare measured orientations across Khufu, Khafre, Menkaure and associated structures against survey/construction nulls; separate astronomical intent from cardinal construction standardization.",
+      "required_data": [
+        "survey-frame reconciled orientations",
+        "uncertainty",
+        "construction-edge quality",
+        "comparative Old Kingdom sites"
+      ],
+      "status": "PARTIAL_DATA"
+    },
+    {
+      "id": "test.intent.future_message_null",
+      "targets": [
+        "intent.future_audience_message"
+      ],
+      "method": "Pre-register candidate encoding families before inspecting ratios; test against construction constraints, metrological systems, multiple-comparisons correction and cross-monument holdouts.",
+      "required_data": [
+        "survey-grade geometry",
+        "pre-registered encoding families",
+        "independent monuments",
+        "null models"
+      ],
+      "status": "BLOCKED_BY_GEOMETRY_PRECISION"
+    },
+    {
+      "id": "test.intent.machine_signature",
+      "targets": [
+        "intent.machine_or_power_system"
+      ],
+      "method": "List function-specific physical signatures that a real machine would require, then test residues, wear, fluid connectivity, energy balance and interfaces rather than geometry resemblance.",
+      "required_data": [
+        "surface/residue analyses",
+        "hydrology",
+        "wear mapping",
+        "material joins",
+        "energy source/output evidence"
+      ],
+      "status": "NO_MACHINE_SIGNATURE_DATA"
+    },
+    {
+      "id": "test.intent.computation_signature",
+      "targets": [
+        "intent.advanced_computation"
+      ],
+      "method": "Search primary artifact corpus for computational devices, notation, storage media, manufacturing signatures or infrastructure that cannot be explained by known surveying/craft systems.",
+      "required_data": [
+        "artifact catalog",
+        "tool-mark metrology",
+        "workshop archaeology",
+        "inscriptions/administrative records"
+      ],
+      "status": "NO_DIRECT_SIGNATURES"
+    }
+  ]
+}

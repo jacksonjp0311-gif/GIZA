@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const obs=read('public/model/observatory/observations.json').observations;
+const queue=read('public/model/observatory/acquisition_queue.json').queue;
+const findings=read('public/model/research/findings_registry.json').entries;
+const disc=read('public/model/observatory/source_discrepancies.json').discrepancies;
+const claims=read('public/model/observatory/claims_registry.json').claims;
+const domains={}; for(const o of obs) domains[o.domain]=(domains[o.domain]||0)+1;
+console.log('GIZA REGISTER / OBSERVATORY v0.10.1');
+console.log('REAL-WORLD OBSERVATIONS');
+for(const [k,v] of Object.entries(domains).sort((a,b)=>b[1]-a[1])) console.log(`  ${k.padEnd(18)} ${v}`);
+console.log('\nTOP ACQUISITION TARGETS');
+for(const q of [...queue].sort((a,b)=>a.priority-b.priority).slice(0,6)) console.log(`  ${q.priority}. ${q.target} [${q.status}]`);
+console.log(`\nSource discrepancies: ${disc.length}`);
+console.log(`Claim/method audit records: ${claims.length}`);
+console.log(`Persistent findings: ${findings.length}`);
+console.log('Rule: source information and cross-domain patterns never bypass VAULT/CANON promotion.');

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "codename": "METRIC VIEW LAB — HOLDOUT GATE",
+  "purpose": "Make metric visibility impossible until checksum-bound plan registration and wall/opening geometry pass independent residual gates; meanwhile expose registration readiness and the strongest pre-metric patterns.",
+  "counts": {
+    "readiness_targets": 4,
+    "metric_rays": 0,
+    "registered_plans": 0,
+    "emergent_patterns": 7
+  },
+  "truth_rules": [
+    "zero metric rays until a legal source-byte registration exists",
+    "schematic room coordinates remain nonmetric",
+    "historical lighting prose is not photometry",
+    "registration residual thresholds must be preregistered",
+    "metric visibility can constrain experience but cannot prove ritual meaning",
+    "accepted plate-local metric geometry may enable intra-building rays without solving GPMP translation"
+  ],
+  "generated_at": "2026-09-13T22:15:00Z"
+}

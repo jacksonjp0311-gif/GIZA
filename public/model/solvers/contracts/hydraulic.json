@@ -1,0 +1,30 @@
+{
+  "solver_id": "solver.hydraulic",
+  "inputs_required": [
+    "geometry_snapshot",
+    "connectivity_graph",
+    "fluid_model",
+    "boundary_heads"
+  ],
+  "parameters": [
+    "fluid_density_kg_m3",
+    "viscosity_pa_s",
+    "roughness_model"
+  ],
+  "controls_required": [
+    "disconnected_network",
+    "alternative_head_conditions"
+  ],
+  "outputs_required": [
+    "pressure_pa",
+    "flow_rate_m3_s",
+    "path_connectivity",
+    "residence_or_transit_metrics"
+  ],
+  "uncertainty_required": [
+    "roughness",
+    "geometry",
+    "boundary_heads"
+  ],
+  "falsification": "A hydraulic hypothesis requires a continuous source-to-sink path and predicted residues/erosion signatures."
+}

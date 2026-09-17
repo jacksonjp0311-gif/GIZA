@@ -1,0 +1,279 @@
+{
+  "systems": [
+    {
+      "id": "sys.giza",
+      "name": "Giza Reverse Engineering System",
+      "parent": null,
+      "provenance": {
+        "class": "GENERATED",
+        "created_by": "archeon.model02",
+        "reason": "Top-level evidence-separated reverse-engineering system.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "asm.giza",
+      "name": "Giza Model 02 \u2014 Khafre Survey Reconstruction",
+      "parent": null,
+      "system": "sys.giza",
+      "children": [
+        "asm.surface",
+        "asm.known.upper",
+        "asm.known.lower",
+        "asm.known.burial",
+        "asm.upper",
+        "asm.deep.alpha",
+        "asm.deep.beta",
+        "asm.terminals"
+      ],
+      "semantic_role": "root_reverse_engineering_model",
+      "provenance": {
+        "class": "GENERATED",
+        "created_by": "archeon.model02",
+        "reason": "rev.0003 separates measured/reconstructed passage assemblies from unverified deep-claim assemblies.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.surface",
+      "name": "Surface / Original Exterior Envelope",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.plateau.reference",
+        "part.pyramid.khafre",
+        "part.casing.granite.lower"
+      ],
+      "semantic_role": "survey_surface_context",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie survey-derived idealized original envelope plus measured lower casing reference.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.surface",
+          "ev.height.conflict"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.known.upper",
+      "name": "Known Upper Route",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.upper.entrance.reconstructed",
+        "part.upper.entrance.existing",
+        "part.upper.roll",
+        "part.upper.portcullis.slab",
+        "part.upper.horizontal.kj",
+        "part.upper.horizontal.jg",
+        "part.upper.horizontal.gh"
+      ],
+      "semantic_role": "measured_and_reconstructed_upper_route",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Upper route uses Legon measured lengths/angles and Petrie cross-sections; missing entrance casing segment is explicit.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.interior"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.known.lower",
+      "name": "Known Lower Route + Subsidiary Chamber",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.lower.entrance.reconstructed",
+        "part.lower.entrance.existing",
+        "part.lower.horizontal.bc",
+        "part.lower.horizontal.ce",
+        "part.lower.turning_recess",
+        "part.lower.branch.cd",
+        "part.lower.chamber",
+        "part.lower.portcullis.slab",
+        "part.lower.connect.ef",
+        "part.lower.connect.fg"
+      ],
+      "semantic_role": "measured_and_reconstructed_lower_route",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Lower route uses Legon A-G framework and Petrie lower chamber measurements. Unresolved heights/placeholders remain explicit.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.legon.passages",
+          "ev.petrie.lower"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.known.burial",
+      "name": "Known Burial System",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.burial.chamber",
+        "part.burial.gable_envelope",
+        "part.burial.floor_paving",
+        "part.sarcophagus.body",
+        "part.sarcophagus.lid"
+      ],
+      "semantic_role": "measured_burial_chamber_and_sarcophagus",
+      "provenance": {
+        "class": "DERIVED",
+        "created_by": "archeon.model02",
+        "reason": "Petrie chamber/coffer dimensions + Legon chamber centerline location.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [
+          "ev.petrie.interior",
+          "ev.petrie.coffer",
+          "ev.legon.passages"
+        ],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.upper",
+      "name": "Reported Upper Subsurface Structures",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.upper.1",
+        "part.upper.2",
+        "part.upper.3",
+        "part.upper.4",
+        "part.upper.5"
+      ],
+      "semantic_role": "reported_upper_subsurface",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Retained from rev.0002 only as claimed geometry. No independent confirmation.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.deep.alpha",
+      "name": "Reported Deep Array Alpha",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.shaft.alpha.1",
+        "part.helix.alpha.1",
+        "part.connector.alpha.1",
+        "part.shaft.alpha.2",
+        "part.helix.alpha.2",
+        "part.connector.alpha.2",
+        "part.shaft.alpha.3",
+        "part.helix.alpha.3",
+        "part.connector.alpha.3",
+        "part.shaft.alpha.4",
+        "part.helix.alpha.4",
+        "part.connector.alpha.4"
+      ],
+      "semantic_role": "reported_four_channel_array",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Retained claim geometry, isolated from measured Khafre model.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.deep.beta",
+      "name": "Reported Deep Array Beta",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.shaft.beta.1",
+        "part.helix.beta.1",
+        "part.connector.beta.1",
+        "part.shaft.beta.2",
+        "part.helix.beta.2",
+        "part.connector.beta.2",
+        "part.shaft.beta.3",
+        "part.helix.beta.3",
+        "part.connector.beta.3",
+        "part.shaft.beta.4",
+        "part.helix.beta.4",
+        "part.connector.beta.4"
+      ],
+      "semantic_role": "reported_four_channel_array",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Retained claim geometry, isolated from measured Khafre model.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    },
+    {
+      "id": "asm.terminals",
+      "name": "Reported Terminal Volumes",
+      "parent": "asm.giza",
+      "system": "sys.giza",
+      "children": [
+        "part.terminal.alpha",
+        "part.terminal.beta"
+      ],
+      "semantic_role": "reported_terminal_volumes",
+      "provenance": {
+        "class": "UNVERIFIED",
+        "created_by": "archeon.model02",
+        "reason": "Retained claim geometry, isolated from measured Khafre model.",
+        "requirement_ids": [],
+        "agent_id": "architect",
+        "tools": [],
+        "evidence_ids": [],
+        "revision_id": "rev.0003",
+        "user_approved": true
+      }
+    }
+  ]
+}

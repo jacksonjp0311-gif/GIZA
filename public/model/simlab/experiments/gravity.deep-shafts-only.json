@@ -1,0 +1,50 @@
+{
+  "experiment_id": "gravity.deep-shafts-only",
+  "name": "Deep-claim ablation control: shafts only",
+  "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+  "require_unverified": true,
+  "part_ids": [
+    "part.shaft.alpha.1",
+    "part.shaft.alpha.2",
+    "part.shaft.alpha.3",
+    "part.shaft.alpha.4",
+    "part.shaft.beta.1",
+    "part.shaft.beta.2",
+    "part.shaft.beta.3",
+    "part.shaft.beta.4"
+  ],
+  "excluded_claim_geometry": [
+    "helical envelopes are excluded because the current cylinders are visualization envelopes, not verified void cross-sections",
+    "connector galleries are excluded from the first solver release to avoid orientation/section assumptions dominating the baseline"
+  ],
+  "density_contrast_kg_m3": -2600,
+  "density_status": "ASSUMED_MODEL_INPUT_FROM_EXISTING_GIZA_SCREENING_CALCULATION",
+  "observation_grid": {
+    "xmin": -300,
+    "xmax": 300,
+    "ymin": -300,
+    "ymax": 300,
+    "step": 20,
+    "z": 5
+  },
+  "integration": {
+    "method": "finite-volume direct summation",
+    "target_cell_m": 10
+  },
+  "controls": [
+    "no_void_density_contrast"
+  ],
+  "uncertainty": {
+    "kind": "SCENARIO_SENSITIVITY_NOT_POSTERIOR",
+    "density_note": "2600 kg/m^3 is a modeling contrast, not a measured density field for every location.",
+    "geometry_note": "The geometry itself is UNVERIFIED; conventional confidence intervals would be misleading.",
+    "required_future_sweeps": [
+      "density contrast",
+      "terminal dimensions",
+      "terminal depth",
+      "shaft radius",
+      "regional geology/topography"
+    ]
+  },
+  "interpretation_guard": "A detectable predicted anomaly does not establish that the modeled structures exist. It only states what would be expected if the specified geometry and density contrast were real."
+}

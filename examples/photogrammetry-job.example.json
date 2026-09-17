@@ -1,0 +1,18 @@
+{
+  "id": "pg.example.summit-casing",
+  "target_id": "part.pyramid.khafre",
+  "state": "DRAFT",
+  "media_ids": [],
+  "scale_anchor_ids": [],
+  "camera_solution": null,
+  "qa": {
+    "reprojection_rmse_px": null,
+    "coverage_diversity_reviewed": false,
+    "coordinate_frame_receipt": false
+  },
+  "outputs": {
+    "mesh_path": null,
+    "point_cloud_path": null
+  },
+  "note": "Example only. A photogrammetry job cannot promote geometry until the VAULT gates pass."
+}

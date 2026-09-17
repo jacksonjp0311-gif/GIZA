@@ -1,0 +1,516 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "policy": "Media records may be bundled only when the per-asset license permits it and attribution/derivative requirements are satisfied. Remote visibility is not reuse permission.",
+  "asset_count": 16,
+  "assets": [
+    {
+      "id": "media.commons.khafre_casing_2004",
+      "source_id": "src.commons.khafre",
+      "title": "Khafre casing.jpg",
+      "depicts": [
+        "khafre_casing",
+        "core_masonry"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_casing.jpg",
+      "original_dimensions": [
+        1600,
+        1200
+      ],
+      "date": "2004-10-25",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 (also other listed CC BY-SA/GFDL options)",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "visual_reference",
+        "casing_detail",
+        "construction_observation"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_casing.jpg",
+      "suggested_filename": "Khafre_casing.jpg",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "exif": {
+        "camera": "Casio QV-2900UX",
+        "focal_length_mm": 35.201,
+        "f_number": 8,
+        "captured_at": "2004-10-25T10:11:00"
+      }
+    },
+    {
+      "id": "media.commons.khafre_burial_chamber_2007",
+      "source_id": "src.commons.khafre.interior",
+      "title": "06 khafre chamber.jpg",
+      "depicts": [
+        "khafre_burial_chamber",
+        "khafre_sarcophagus"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:06_khafre_chamber.jpg",
+      "original_dimensions": [
+        500,
+        667
+      ],
+      "date": "2007-04-04",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use permission as documented by Wikimedia Commons / Egypt Archive",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_PERMISSION_VERIFIED_ON_COMMONS_PAGE",
+      "observatory_use": [
+        "interior_reference",
+        "photo_metrology_candidate",
+        "sarcophagus_context"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/06_khafre_chamber.jpg",
+      "suggested_filename": "06_khafre_chamber.jpg",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12"
+    },
+    {
+      "id": "media.commons.khafre_sarcophagus_detail_2006",
+      "source_id": "src.commons.khafre.interior",
+      "title": "PiramideKefren - interior - detalle 04.JPG",
+      "depicts": [
+        "khafre_sarcophagus"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:PiramideKefren_-_interior_-_detalle_04.JPG",
+      "original_dimensions": [
+        1280,
+        960
+      ],
+      "date": "2006-03-30",
+      "author": "Hispalois",
+      "license": "CC BY-SA 3.0",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "sarcophagus_detail",
+        "photo_metrology_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PiramideKefren_-_interior_-_detalle_04.JPG",
+      "suggested_filename": "PiramideKefren-interior-sarcophagus-detail.JPG",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "exif": {
+        "camera": "Sony DSC-T7",
+        "focal_length_mm": 6.33,
+        "f_number": 3.5,
+        "iso": 320,
+        "captured_at": "2006-03-30T14:42:00"
+      }
+    },
+    {
+      "id": "media.commons.khafre_granite_casing",
+      "source_id": "src.commons.khafre",
+      "title": "Khafre red granite casing block.jpg",
+      "depicts": [
+        "khafre_lower_granite_casing"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_red_granite_casing_block.jpg",
+      "original_dimensions": [
+        1600,
+        1200
+      ],
+      "date": "2004-10-25",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable (also older CC BY-SA/GFDL options listed)",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "material_reference",
+        "casing_detail"
+      ],
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_red_granite_casing_block.jpg",
+      "suggested_filename": "Khafre_red_granite_casing_block.jpg",
+      "exif": {
+        "camera": "Casio QV-2900UX",
+        "focal_length_mm": 14.639,
+        "f_number": 4.8,
+        "captured_at": "2004-10-25T10:13:00"
+      }
+    },
+    {
+      "id": "media.commons.khafre_exterior_geotagged",
+      "source_id": "src.commons.khafre",
+      "title": "Khafre's Pyramid at Giza.jpg",
+      "depicts": [
+        "khafre_pyramid"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre%27s_Pyramid_at_Giza.jpg",
+      "original_dimensions": [
+        1903,
+        1900
+      ],
+      "date": "2006-09-08",
+      "author": "David Evers",
+      "camera_location": {
+        "lat": 29.97278,
+        "lon": 31.130962
+      },
+      "license": "CC BY 2.0",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "exterior_reference",
+        "camera_context_not_survey_control"
+      ],
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre%27s_Pyramid_at_Giza.jpg",
+      "suggested_filename": "Khafre_exterior_geotagged.jpg",
+      "exif": {
+        "camera": "Nikon D50",
+        "focal_length_mm": 65,
+        "f_number": 9,
+        "captured_at": "2006-09-08T09:51:00"
+      }
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_passage_2007",
+      "title": "04 khafre passage.jpg",
+      "depicts": [
+        "khafre_interior_passage_branch"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:04_khafre_passage.jpg",
+      "original_dimensions": [
+        500,
+        667
+      ],
+      "date": "2007-04-04",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "asset_action": "REMOTE_REFERENCE_PERMISSION_VERIFIED_ON_COMMONS_PAGE",
+      "observatory_use": [
+        "interior_reference",
+        "passage_topology_observation",
+        "photo_metrology_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/04_khafre_passage.jpg",
+      "suggested_filename": "04_khafre_passage.jpg"
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_belzoni_2007",
+      "title": "05 khafre belzoni.jpg",
+      "depicts": [
+        "khafre_belzoni_inscription",
+        "burial_chamber_wall"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:05_khafre_belzoni.jpg",
+      "original_dimensions": [
+        667,
+        500
+      ],
+      "date": "2007-04-04",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "asset_action": "REMOTE_REFERENCE_PERMISSION_VERIFIED_ON_COMMONS_PAGE",
+      "observatory_use": [
+        "interior_reference",
+        "inscription_documentation",
+        "time_series_anchor"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/05_khafre_belzoni.jpg",
+      "suggested_filename": "05_khafre_belzoni.jpg",
+      "visible_text": "Scoperta da S. Belzoni. 2. Mar. 1818"
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_coffer_2007",
+      "title": "07 khafre coffer.jpg",
+      "depicts": [
+        "khafre_sarcophagus"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:07_khafre_coffer.jpg",
+      "original_dimensions": [
+        667,
+        500
+      ],
+      "date": "2007-04-04",
+      "author": "Jon Bodsworth",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "asset_action": "REMOTE_REFERENCE_PERMISSION_VERIFIED_ON_COMMONS_PAGE",
+      "observatory_use": [
+        "sarcophagus_reference",
+        "photo_metrology_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/07_khafre_coffer.jpg",
+      "suggested_filename": "07_khafre_coffer.jpg"
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_interior_2022",
+      "title": "Interior of Khafra Pyramid 2022 02.jpg",
+      "depicts": [
+        "khafre_interior",
+        "belzoni_inscription_area"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "original_dimensions": [
+        4032,
+        3024
+      ],
+      "date": "2022",
+      "author": "Onceinawhile",
+      "license": "CC BY-SA 4.0",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "modern_interior_reference",
+        "high_resolution_time_series",
+        "photo_metrology_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "suggested_filename": "Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "exif": {
+        "camera": "Apple iPhone 13 Pro Max",
+        "captured_at": "2022-02-16T11:48:00",
+        "focal_length_mm": 1.57,
+        "f_number": 1.8,
+        "iso": 1250,
+        "equivalent_focal_length_mm": 22
+      }
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_interior_liber_2006",
+      "title": "Inside the Pyramid - Flickr - liber.jpg",
+      "depicts": [
+        "khafre_interior_passage"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "original_dimensions": [
+        3758,
+        2887
+      ],
+      "date": "2006-06-19",
+      "author": "Ricardo Liberato",
+      "license": "CC BY-SA 2.0",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "high_resolution_interior_reference",
+        "photo_metrology_candidate",
+        "lighting_context"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "suggested_filename": "Inside_the_Pyramid-Flickr-liber.jpg",
+      "exif": {
+        "camera": "Canon EOS 5D",
+        "captured_at": "2006-06-19T13:15:00",
+        "focal_length_mm": 15,
+        "f_number": 5,
+        "iso": 1000
+      }
+    },
+    {
+      "source_id": "src.commons.khafre.interior",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_section_belzoni_1821",
+      "title": "Section of the Pyramid.jpg",
+      "depicts": [
+        "khafre_historical_section",
+        "internal_layout"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Section_of_the_Pyramid.jpg",
+      "original_dimensions": [
+        977,
+        615
+      ],
+      "date": "1821 work; digital file 2014",
+      "author": "Agostino Aglio (after Belzoni expedition)",
+      "license": "Public domain; PD-Art / PD-old",
+      "asset_action": "REMOTE_REFERENCE_PUBLIC_DOMAIN_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "historical_layout_reference",
+        "source_comparison",
+        "time_series_document"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Section_of_the_Pyramid.jpg",
+      "suggested_filename": "Section_of_the_Pyramid_Belzoni_1821.jpg"
+    },
+    {
+      "source_id": "src.commons.khafre",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_causeway_2006",
+      "title": "Khafre's causeway.jpg",
+      "depicts": [
+        "khafre_causeway",
+        "khafre_pyramid_context"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre%27s_causeway.jpg",
+      "original_dimensions": [
+        1600,
+        1200
+      ],
+      "date": "2006-11-06",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable; GFDL/older CC BY-SA also listed",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "causeway_context",
+        "complex_spatial_context",
+        "time_series_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre%27s_causeway.jpg",
+      "suggested_filename": "Khafres_causeway.jpg"
+    },
+    {
+      "source_id": "src.commons.khafre",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "id": "media.commons.khafre_exterior_cc0_2002",
+      "title": "Giza Pyramid of Khafre (9793862935).jpg",
+      "depicts": [
+        "khafre_pyramid"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "original_dimensions": [
+        3651,
+        2492
+      ],
+      "date": "2002-06-07",
+      "author": "Gary Todd",
+      "license": "CC0 1.0",
+      "asset_action": "REMOTE_REFERENCE_CC0_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "exterior_reference",
+        "geotagged_camera_context",
+        "time_series_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "suggested_filename": "Giza_Pyramid_of_Khafre_2002_CC0.jpg",
+      "camera_location": {
+        "lat": 29.976063,
+        "lon": 31.130683
+      },
+      "exif": {
+        "camera": "Canon EOS 400D",
+        "focal_length_mm": 34,
+        "f_number": 4.5,
+        "iso": 400
+      }
+    },
+    {
+      "id": "media.commons.khafre_valley_temple_02",
+      "source_id": "src.commons.khafre",
+      "title": "By ovedc - Valley Temple of Khafra 02.jpg",
+      "depicts": [
+        "khafre_valley_temple_interior"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:By_ovedc_-_Valley_Temple_of_Khafra_02.jpg",
+      "original_dimensions": [
+        5312,
+        2988
+      ],
+      "date": null,
+      "author": "ovedc",
+      "license": "CC BY-SA 4.0",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "valley_temple_material_context",
+        "megalithic_masonry_context",
+        "complex_time_series"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/By_ovedc_-_Valley_Temple_of_Khafra_02.jpg",
+      "suggested_filename": "Valley_Temple_of_Khafra_02.jpg",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "exif": {
+        "focal_length_mm": 4.3,
+        "f_number": 1.9,
+        "iso": 40
+      }
+    },
+    {
+      "id": "media.commons.khafre_valley_statue_sockets",
+      "source_id": "src.commons.khafre",
+      "title": "Khafre valley statue sockets.jpg",
+      "depicts": [
+        "khafre_valley_temple",
+        "statue_sockets",
+        "pillared_hall"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_valley_statue_sockets.jpg",
+      "original_dimensions": [
+        1200,
+        1600
+      ],
+      "date": "2006-11-06",
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable (also older CC BY-SA/GFDL options)",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "valley_temple_interior",
+        "statue_socket_context",
+        "photo_registration_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_valley_statue_sockets.jpg",
+      "suggested_filename": "Khafre_valley_statue_sockets.jpg",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "exif": {
+        "camera": "Casio QV-2900UX",
+        "focal_length_mm": 7.282,
+        "f_number": 3.2,
+        "captured_at": "2006-11-06T14:33:00"
+      }
+    },
+    {
+      "id": "media.commons.khafre_valley_corner",
+      "source_id": "src.commons.khafre",
+      "title": "Khafre valley corner.jpg",
+      "depicts": [
+        "khafre_valley_temple",
+        "corner_masonry"
+      ],
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_valley_corner.jpg",
+      "original_dimensions": [
+        1200,
+        1600
+      ],
+      "author": "HoremWeb",
+      "license": "CC BY-SA 4.0 selectable (also older CC BY-SA/GFDL options)",
+      "storage": "REMOTE_REFERENCE_ONLY",
+      "asset_action": "REMOTE_REFERENCE_VERIFIED_LICENSE_CACHE_ELIGIBLE",
+      "observatory_use": [
+        "valley_temple_interior",
+        "masonry_joint_context",
+        "photo_registration_candidate"
+      ],
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_valley_corner.jpg",
+      "suggested_filename": "Khafre_valley_corner.jpg",
+      "download_eligible": true,
+      "rights_verified_on": "2026-09-12",
+      "exif": {
+        "camera": "Casio QV-2900UX",
+        "focal_length_mm": 6.189,
+        "f_number": 3.2
+      }
+    }
+  ],
+  "bundle_status": "REMOTE_REFERENCE_ONLY_IN_CHAT_ENVIRONMENT; DESKTOP_HARVESTER_AVAILABLE"
+}

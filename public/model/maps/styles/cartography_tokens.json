@@ -1,0 +1,26 @@
+{
+  "version": "0.10.7",
+  "name": "NEXUS Cartography R1.2",
+  "tokens": {
+    "background": "#031018",
+    "grid": "#0d3d52",
+    "cyan": "#55d6ff",
+    "cyan_dim": "#1b6f91",
+    "amber": "#ffad45",
+    "green": "#4ce3b2",
+    "red": "#ff6677",
+    "text": "#dff4fb",
+    "muted": "#7f9fac"
+  },
+  "semantic": {
+    "SOURCE": "cyan",
+    "INTERPRETATION": "amber",
+    "READY": "green",
+    "UNVERIFIED": "red",
+    "UNRESOLVED": "amber",
+    "PLACE": "cyan",
+    "ACTION": "amber",
+    "VISIBILITY": "violet"
+  },
+  "rule": "Color encodes epistemic role; decorative glow must never hide uncertainty/authority labels."
+}

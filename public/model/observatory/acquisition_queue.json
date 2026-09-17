@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "queue": [
+    {
+      "id": "acq.kh2025.pointcloud",
+      "priority": 1,
+      "target": "2025 Khafre laser survey underlying point cloud / derived measurements",
+      "source_id": "src.aera.kh2025_laser",
+      "status": "PENDING_ACCESS",
+      "purpose": "Highest-value modern surface-geometry constraint; ingest only with explicit rights and coordinate-frame metadata.",
+      "promotion_path": "QUARANTINE -> HASH -> CRS/scale audit -> uncertainty audit -> EVIDENCE REVIEW -> geometry candidate"
+    },
+    {
+      "id": "acq.gpmp.control",
+      "priority": 2,
+      "target": "GPMP/GDFS Khafre control/corner/center coordinates and elevations",
+      "source_id": "src.dash.giza_surveys",
+      "status": "PUBLIC_PORTAL_REVIEW_NEEDED",
+      "purpose": "Tie historical Petrie geometry to modern survey frame without guessing coordinate transforms."
+    },
+    {
+      "id": "acq.arce.maps",
+      "priority": 3,
+      "target": "ARCE Sphinx/Khafre Valley Temple survey maps and water-table profile",
+      "source_id": "src.opencontext.arce_sphinx",
+      "status": "OPEN_CONTEXT_AVAILABLE_PER_ITEM",
+      "purpose": "Geology/hydrology/complex geometry context; preserve item-level URI and license."
+    },
+    {
+      "id": "acq.digitalgiza.plan_images",
+      "priority": 3,
+      "target": "High-resolution Digital Giza / M&R plan images or IIIF-compatible derivatives where rights permit",
+      "source_id": "src.digitalgiza.home",
+      "status": "RECORD_LEVEL_RIGHTS_AND_EXPORT_REVIEW",
+      "purpose": "Register lower corridor/chamber/temple plan pixels to model coordinates; preserve scale and source identifiers."
+    },
+    {
+      "id": "acq.digitalgiza.khphotos",
+      "priority": 4,
+      "target": "Digital Giza Khafre photo set metadata and eligible images",
+      "source_id": "src.digitalgiza.khafre.photos",
+      "status": "PER_ASSET_RIGHTS_REVIEW",
+      "purpose": "Expand photo graph and candidate camera/feature correspondences without assuming redistribution permission."
+    },
+    {
+      "id": "acq.kh_material_primary_tables",
+      "priority": 4,
+      "target": "Archive exact Table 10/13/14 representations and citation locators for Khafre material tests",
+      "source_id": "src.npj2020.materials",
+      "status": "NUMERIC_ROWS_INGESTED_IMAGE_TABLE_SNAPSHOT_NOT_BUNDLED",
+      "purpose": "Independent audit of sample values and source-internal discrepancy."
+    },
+    {
+      "id": "acq.commons.calibrated_photos",
+      "priority": 5,
+      "target": "Wikimedia Khafre exterior/interior images with EXIF/known viewpoints",
+      "source_id": "src.commons.khafre",
+      "status": "HARVESTER_IMPLEMENTED_METADATA_PENDING_DESKTOP_NETWORK_RUN",
+      "purpose": "Harvest all registered Khafre Commons categories, retain per-file free-license/EXIF metadata, cache eligible originals with hashes, then select camera-registration candidates.",
+      "promotion_path": "API HARVEST -> LICENSE FILTER -> HASH CACHE -> CAMERA/CONTROL REGISTRATION -> RESIDUAL AUDIT -> FIELD CANDIDATE"
+    },
+    {
+      "id": "acq.scidep.results",
+      "priority": 6,
+      "target": "Future ScIDEP Khafre muography data/results",
+      "source_id": "src.scidep2025",
+      "status": "PROJECT_IN_PROGRESS_OR_RESULTS_NOT_INGESTED",
+      "purpose": "Independent density-path evidence if/when result data become available; method description alone has zero geometry-write authority."
+    },
+    {
+      "id": "acq.sar.raw_validation",
+      "priority": 8,
+      "target": "Any independent raw-data/reproducibility package for SAR Doppler tomography method lineage",
+      "source_id": "src.biondi2022.sar",
+      "status": "BLOCKED_RETRACTED_METHOD",
+      "purpose": "No promotion unless independent non-retracted validation becomes available."
+    },
+    {
+      "id": "acq.facade.condition_timeseries",
+      "priority": 4,
+      "target": "Repeat-view Khafre facade imagery spanning archival, 2009–2012 condition campaign, and modern open photographs",
+      "source_id": "src.procedia2016.khafre_deformations",
+      "status": "SOURCE_METHOD_REGISTERED_IMAGES_REQUIRE_POSE_MATCHING",
+      "purpose": "Build registered crack/casing/surface condition time series with residual-controlled camera alignment; no single-image metric inference."
+    },
+    {
+      "id": "acq.registration.dash_corner_control",
+      "priority": 1,
+      "target": "Giza-Corner-Points-2v17.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "status": "PUBLIC_ASSET_IDENTIFIED_DOWNLOAD_PENDING",
+      "purpose": "Acquire Khafre original-corner/center estimates and associated geographic elevations as external monument control; import with source CRS/datum receipt before use.",
+      "promotion_path": "DOWNLOAD -> RIGHTS CHECK -> KML/KMZ PARSE -> CRS/DATUM RECEIPT -> CONTROL QA -> EXTERIOR REGISTRATION"
+    },
+    {
+      "id": "acq.registration.gpmp_controls",
+      "priority": 1,
+      "target": "GPMP-Control-Monuments.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "status": "PUBLIC_ASSET_IDENTIFIED_DOWNLOAD_PENDING",
+      "purpose": "Acquire GPMP survey control monument positions for plateau registration and camera pose constraints.",
+      "promotion_path": "DOWNLOAD -> RIGHTS CHECK -> PARSE -> DATUM/FRAME RECEIPT -> CONTROL NETWORK QA"
+    },
+    {
+      "id": "acq.registration.khafre_laser2025",
+      "priority": 1,
+      "target": "Authorized 2025 first-laser-survey Khafre measurements/point cloud or published derived values",
+      "source_id": "src.aera2025.khafre_laser",
+      "status": "PUBLICATION_KNOWN_DATA_NOT_INGESTED",
+      "purpose": "Reduce exterior geometry uncertainty using modern direct surface survey rather than photographic inference.",
+      "promotion_path": "AUTHORIZED ACQUISITION -> RIGHTS/CRS/SCALE METADATA -> VAULT RECEIPT -> FIELD REGISTRATION -> RESIDUAL COMPARISON -> GEOMETRY CANDIDATE"
+    },
+    {
+      "id": "acq.controlnet.petrie_station_table",
+      "priority": 1,
+      "target": "Coordinates-for-Petrie-Stations.docx",
+      "source_id": "src.dash.petrie_stations2017",
+      "status": "PUBLIC_WORKING_PAPER_IDENTIFIED_DOWNLOAD_PENDING",
+      "purpose": "Acquire Petrie-to-GPMP station coordinates and geographic coordinates as an independent historical/modern control bridge.",
+      "promotion_path": "DOWNLOAD -> HASH -> TABLE PARSE -> POINT-ID AUDIT -> FRAME RECEIPT -> CONTROL NET"
+    },
+    {
+      "id": "acq.controlnet.kh_corner_kmz",
+      "priority": 1,
+      "target": "Giza-Corner-Points-2v17.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "status": "PUBLIC_FILENAME_AND_OFFICIAL_HOST_PATH_IDENTIFIED_NETWORK_FETCH_PENDING",
+      "purpose": "Acquire explicit Khafre corner/center coordinates for direct exterior camera control.",
+      "promotion_path": "DOWNLOAD -> HASH -> KMZ PARSE -> CRS/DATUM AUDIT -> KHAFRE CONTROL NET"
+    },
+    {
+      "id": "acq.controlnet.gpmp_monuments",
+      "priority": 1,
+      "target": "GPMP-Control-Monuments.kmz",
+      "source_id": "src.dash.giza_surveys",
+      "status": "PUBLIC_FILENAME_IDENTIFIED_NETWORK_FETCH_PENDING",
+      "purpose": "Acquire plateau control monuments for frame validation and redundancy.",
+      "promotion_path": "DOWNLOAD -> HASH -> KMZ PARSE -> FRAME AUDIT -> CONTROL NET"
+    },
+    {
+      "id": "acq.perring1840.iiif",
+      "priority": 2,
+      "target": "Heidelberg Perring 1840 IIIF manifest and plate images with reuse-term audit",
+      "source_id": "src.perring1840.khafre",
+      "status": "PUBLIC_DIGITIZED_AVAILABLE_RIGHTS_REVIEW",
+      "purpose": "Register historical plates against modern model while keeping OCR/manual-measurement uncertainty explicit."
+    },
+    {
+      "id": "acq.arce.sphinx.maps.deep",
+      "priority": 2,
+      "target": "Open Context ARCE Sphinx master plans/elevations/geology items with item-level URIs/licenses",
+      "source_id": "src.opencontext.arce_sphinx",
+      "status": "OPEN_CONTEXT_AVAILABLE_PER_ITEM",
+      "purpose": "Bind Valley Temple/Sphinx geology and architecture into local spatial graph."
+    },
+    {
+      "id": "acq.digitalgiza.temple.records",
+      "priority": 3,
+      "target": "Khafre Valley/Pyramid Temple object/photo/plan records with per-record rights",
+      "source_id": "src.digitalgiza.khafre_valley_temple",
+      "status": "PUBLIC_CATALOG_RECORD_RIGHTS_REVIEW",
+      "purpose": "Expand object/architecture links without assuming redistribution rights."
+    },
+    {
+      "id": "acq.commons.valley_full",
+      "priority": 3,
+      "target": "All openly licensed Khafre Valley Temple Commons originals + metadata",
+      "source_id": "src.commons.khafre",
+      "status": "DESKTOP_HARVEST_READY",
+      "purpose": "Build multi-view valley-temple registration set."
+    },
+    {
+      "id": "acq.radiocarbon.primary_table",
+      "priority": 4,
+      "target": "Bonani et al. 2001 sample-level chronology table / DOI-accessible data",
+      "source_id": "src.bonani2001.radiocarbon",
+      "status": "ACCESS_REVIEW",
+      "purpose": "Store sample-level dates/context rather than secondary summary offsets."
+    },
+    {
+      "id": "acq.intent.khafre_temple_room_map",
+      "priority": 1,
+      "target": "Room-level Khafre Valley Temple + Pyramid Temple plans, finds, statues and access paths with exact source locators",
+      "source_id": "src.digitalgiza.khafre_valley_temple",
+      "status": "PUBLIC_CATALOG_RECORD_RIGHTS_REVIEW",
+      "purpose": "Build a ritual/function map so intent hypotheses predict specific rooms rather than the complex in general."
+    },
+    {
+      "id": "acq.intent.khafre_statuary_provenance",
+      "priority": 2,
+      "target": "Khafre royal statuary findspots, inscriptions and original architectural contexts",
+      "source_id": "src.met.khafre_face",
+      "status": "OBJECT_RECORDS_AVAILABLE_CONTEXT_RECONSTRUCTION_NEEDED",
+      "purpose": "Test continuing royal-presence/cult hypotheses against object provenance rather than iconography alone."
+    },
+    {
+      "id": "acq.intent.processional_sequence",
+      "priority": 2,
+      "target": "Causeway/temple access sequence, thresholds, route geometry and construction chronology",
+      "source_id": "src.aera.kh_monuments_unit",
+      "status": "PUBLIC_RESEARCH_SYNTHESIS_PRIMARY_PLAN_BINDING_PENDING",
+      "purpose": "Test staged ritual-landscape predictions and separate processional design from topographic necessity."
+    }
+  ]
+}

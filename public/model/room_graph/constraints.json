@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "visibility_constraints": [
+    {
+      "id": "vis.valley.statuary",
+      "space_id": "room.vt.t_hall",
+      "state": "ROYAL_IMAGES_INTEGRATED_WITH_HALL",
+      "basis": [
+        "obs.room.oxford.valley_niches"
+      ],
+      "certainty": "ARCHITECTURE_STRONG_PLACEMENT_PARTLY_RECONSTRUCTED"
+    },
+    {
+      "id": "vis.causeway.enclosed",
+      "space_id": "room.cw.covered_corridor",
+      "state": "COVERED_NARROW_ROUTE_LIMITS_LATERAL_VIEW",
+      "basis": [
+        "obs.room.hoelscher.causeway_environment"
+      ],
+      "certainty": "HISTORICAL_RECONSTRUCTION"
+    },
+    {
+      "id": "vis.pt.court",
+      "space_id": "room.pt.statue_court",
+      "state": "COURT_SURROUNDED_BY_MULTIPLE_OPENINGS_AND_MONUMENTAL_INSTALLATION_EVIDENCE",
+      "basis": [
+        "obs.room.hoelscher.court_passages",
+        "obs.room.hoelscher.court_statue_holes"
+      ],
+      "certainty": "DIRECT_TRACES_PLUS_RECONSTRUCTION"
+    }
+  ],
+  "movement_constraints": [
+    {
+      "id": "move.causeway.linear",
+      "space_id": "room.cw.covered_corridor",
+      "constraint": "LINEAR_ASCENT",
+      "basis": [
+        "obs.room.hoelscher.causeway_slope",
+        "obs.nell2006.khafre.causeway_width"
+      ],
+      "certainty": "MEASURED/HISTORICAL"
+    },
+    {
+      "id": "move.pt.branch",
+      "space_id": "room.pt.entry_branch",
+      "constraint": "SIDE_BRANCH_PLUS_MAIN_VESTIBULE_BRANCH",
+      "basis": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "certainty": "PRIMARY_TOPOLOGY"
+    },
+    {
+      "id": "move.py.portcullis",
+      "space_id": "room.py.portcullis",
+      "constraint": "PHYSICAL_CLOSURE/ACCESS_CONTROL_FEATURE",
+      "basis": [
+        "obs.room.perring.portcullis_mechanism",
+        "obs.room.perring.two_entrances"
+      ],
+      "certainty": "PRIMARY_HISTORICAL_SURVEY_DIRECT_FEATURE"
+    }
+  ],
+  "uncertainty_rules": [
+    "No role-specific access control is asserted without textual/archaeological evidence.",
+    "Sightlines are qualitative until metric plan coordinates and wall heights are parsed.",
+    "Schematic x/y values support UI layout only.",
+    "Findspots do not establish original object placement."
+  ]
+}

@@ -1,0 +1,112 @@
+component_id,part_id,model,mode,frequency_hz,truth_note
+burial_chamber,part.burial.chamber,CAVITY_BOX,1-0-0,12.122722533,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,2-0-0,24.245445066,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,0-0-1,32.753082464,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,0-1-0,34.517417516,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,1-0-1,34.924558873,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,3-0-0,36.368167599,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,1-1-0,36.584320597,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,2-0-1,40.750533951,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,2-1-0,42.181675149,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,0-1-1,47.583784242,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,4-0-0,48.490890132,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+burial_chamber,part.burial.chamber,CAVITY_BOX,3-0-1,48.942905771,Rectangular wall-volume envelope; gabled roof scattering is not resolved in this analytical screen.
+lower_chamber,part.lower.chamber,CAVITY_BOX,1-0-0,16.426281668,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,2-0-0,32.852563336,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,3-0-0,49.278845004,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,0-1-0,54.805319988,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,1-1-0,57.214035239,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,2-1-0,63.897683970,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,4-0-0,65.705126672,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,0-0-1,71.545833333,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,1-0-1,73.407281633,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,3-1-0,73.702290764,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,2-0-1,78.727994926,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+lower_chamber,part.lower.chamber,CAVITY_BOX,5-0-0,82.131408340,Lower chamber plan is survey constrained; current 2.4 m clear-height envelope is less certain and must not be treated as exact.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,1,5.068817745,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,2,10.137635490,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,3,15.206453234,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,4,20.275270979,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,5,25.344088724,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,6,30.412906469,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,7,35.481724214,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,8,40.550541958,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,9,45.619359703,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,10,50.688177448,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,11,55.756995193,Surviving upper entrance centerline and measured clear section.
+upper_entrance_existing,part.upper.entrance.existing,DUCT_1D,12,60.825812938,Surviving upper entrance centerline and measured clear section.
+upper_horizontal_kj,part.upper.horizontal.kj,DUCT_1D,1,66.554263566,Known upper horizontal segment.
+upper_horizontal_kj,part.upper.horizontal.kj,DUCT_1D,2,133.108527132,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,1,10.718476904,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,2,21.436953808,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,3,32.155430712,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,4,42.873907615,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,5,53.592384519,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,6,64.310861423,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,7,75.029338327,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,8,85.747815231,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,9,96.466292135,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,10,107.184769039,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,11,117.903245943,Known upper horizontal segment.
+upper_horizontal_jg,part.upper.horizontal.jg,DUCT_1D,12,128.621722846,Known upper horizontal segment.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,1,4.361442723,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,2,8.722885446,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,3,13.084328169,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,4,17.445770892,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,5,21.807213614,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,6,26.168656337,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,7,30.530099060,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,8,34.891541783,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,9,39.252984506,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,10,43.614427229,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,11,47.975869952,Main upper horizontal route to burial chamber.
+upper_horizontal_gh,part.upper.horizontal.gh,DUCT_1D,12,52.337312675,Main upper horizontal route to burial chamber.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,1,5.049883449,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,2,10.099766898,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,3,15.149650347,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,4,20.199533796,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,5,25.249417245,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,6,30.299300694,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,7,35.349184144,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,8,40.399067593,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,9,45.448951042,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,10,50.498834491,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,11,55.548717940,Surviving lower entrance centerline.
+lower_entrance_existing,part.lower.entrance.existing,DUCT_1D,12,60.598601389,Surviving lower entrance centerline.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,1,21.790609137,Known lower horizontal segment.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,2,43.581218274,Known lower horizontal segment.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,3,65.371827411,Known lower horizontal segment.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,4,87.162436548,Known lower horizontal segment.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,5,108.953045685,Known lower horizontal segment.
+lower_horizontal_bc,part.lower.horizontal.bc,DUCT_1D,6,130.743654822,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,1,21.790609137,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,2,43.581218274,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,3,65.371827411,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,4,87.162436548,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,5,108.953045685,Known lower horizontal segment.
+lower_horizontal_ce,part.lower.horizontal.ce,DUCT_1D,6,130.743654822,Known lower horizontal segment.
+connecting_ef,part.lower.connect.ef,DUCT_1D,1,11.718744433,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,2,23.437488867,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,3,35.156233300,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,4,46.874977733,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,5,58.593722166,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,6,70.312466600,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,7,82.031211033,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,8,93.749955466,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,9,105.468699899,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,10,117.187444333,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,11,128.906188766,Known connecting route.
+connecting_ef,part.lower.connect.ef,DUCT_1D,12,140.624933199,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,1,17.727770597,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,2,35.455541194,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,3,53.183311791,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,4,70.911082389,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,5,88.638852986,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,6,106.366623583,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,7,124.094394180,Known connecting route.
+connecting_fg,part.lower.connect.fg,DUCT_1D,8,141.822164777,Known connecting route.
+lower_branch_cd,part.lower.branch.cd,DUCT_1D,1,25.592437701,Branch connecting the lower route to the subsidiary chamber.
+lower_branch_cd,part.lower.branch.cd,DUCT_1D,2,51.184875402,Branch connecting the lower route to the subsidiary chamber.
+lower_branch_cd,part.lower.branch.cd,DUCT_1D,3,76.777313103,Branch connecting the lower route to the subsidiary chamber.
+lower_branch_cd,part.lower.branch.cd,DUCT_1D,4,102.369750804,Branch connecting the lower route to the subsidiary chamber.
+lower_branch_cd,part.lower.branch.cd,DUCT_1D,5,127.962188506,Branch connecting the lower route to the subsidiary chamber.

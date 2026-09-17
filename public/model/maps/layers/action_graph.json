@@ -1,0 +1,290 @@
+{
+  "id": "action",
+  "version": "0.10.7",
+  "title": "Place → Action → Place",
+  "coordinate_mode": "SCHEMATIC_BEHAVIORAL_GRAPH",
+  "metric": false,
+  "guard": "Behavioral nodes are source-addressed research reconstructions. Direct architecture, object provenance, contextual function and inference remain visibly distinct; no node or edge writes geometry.",
+  "source_ids": [
+    "src.digitalgiza.royal_pyramid_complexes",
+    "src.digitalgiza.khafre_valley_temple",
+    "src.egyptianmuseum.khafre_statue",
+    "src.nell_ruggles2014",
+    "src.digitalgiza.khafre_causeway",
+    "src.met.khafre_architrave",
+    "src.digitalgiza.khafre_pyramid_temple",
+    "src.perring1840.khafre"
+  ],
+  "nodes": [
+    {
+      "id": "place.lower_approach",
+      "kind": "PLACE",
+      "label": "Lower approach",
+      "x": 10,
+      "y": 76,
+      "epistemic_status": "CONTEXTUAL",
+      "evidence_strength_index": 0.5,
+      "evidence_record_ids": [
+        "parse.funeral_function"
+      ]
+    },
+    {
+      "id": "action.enter_valley_complex",
+      "kind": "ACTION",
+      "label": "ENTER LOWER COMPLEX",
+      "x": 20,
+      "y": 69,
+      "epistemic_status": "FUNCTIONAL_INFERENCE",
+      "evidence_strength_index": 0.6,
+      "evidence_record_ids": [
+        "parse.funeral_function"
+      ]
+    },
+    {
+      "id": "place.valley_temple",
+      "kind": "PLACE",
+      "label": "Valley Temple",
+      "x": 31,
+      "y": 61,
+      "epistemic_status": "DIRECT_ARCHITECTURE",
+      "evidence_strength_index": 0.95,
+      "evidence_record_ids": [
+        "parse.valley_finds",
+        "parse.valley_statue"
+      ]
+    },
+    {
+      "id": "action.encounter_royal_images",
+      "kind": "ACTION",
+      "label": "ENCOUNTER ROYAL IMAGES",
+      "x": 31,
+      "y": 45,
+      "epistemic_status": "EVIDENCE_SUPPORTED_ACTION",
+      "evidence_strength_index": 0.78,
+      "evidence_record_ids": [
+        "parse.valley_statue",
+        "parse.valley_iconography"
+      ]
+    },
+    {
+      "id": "place.valley_statuary_field",
+      "kind": "PLACE",
+      "label": "Royal statuary context",
+      "x": 42,
+      "y": 52,
+      "epistemic_status": "FIND_PROVENANCE",
+      "evidence_strength_index": 0.9,
+      "evidence_record_ids": [
+        "parse.valley_statue"
+      ]
+    },
+    {
+      "id": "action.traverse_causeway",
+      "kind": "ACTION",
+      "label": "TRAVERSE / ASCEND",
+      "x": 51,
+      "y": 44,
+      "epistemic_status": "ARCHITECTURE_PLUS_FUNCTION_INFERENCE",
+      "evidence_strength_index": 0.72,
+      "evidence_record_ids": [
+        "parse.causeway_width",
+        "parse.funeral_function"
+      ]
+    },
+    {
+      "id": "place.causeway",
+      "kind": "PLACE",
+      "label": "Causeway",
+      "x": 61,
+      "y": 38,
+      "epistemic_status": "DIRECT_ARCHITECTURE",
+      "evidence_strength_index": 0.95,
+      "evidence_record_ids": [
+        "parse.causeway_width",
+        "parse.causeway_statue"
+      ]
+    },
+    {
+      "id": "action.cross_royal_threshold",
+      "kind": "ACTION",
+      "label": "CROSS ROYAL THRESHOLD",
+      "x": 70,
+      "y": 31,
+      "epistemic_status": "THRESHOLD_INFERENCE",
+      "evidence_strength_index": 0.7,
+      "evidence_record_ids": [
+        "parse.pyramid_temple_doorway"
+      ]
+    },
+    {
+      "id": "place.pyramid_temple_court",
+      "kind": "PLACE",
+      "label": "Pyramid Temple court",
+      "x": 79,
+      "y": 25,
+      "epistemic_status": "ARCHAEOLOGICAL_CONTEXT",
+      "evidence_strength_index": 0.82,
+      "evidence_record_ids": [
+        "parse.pyramid_temple_doorway",
+        "parse.pyramid_temple_finds"
+      ]
+    },
+    {
+      "id": "action.present_offerings_readings",
+      "kind": "ACTION",
+      "label": "OFFER / RECITE",
+      "x": 73,
+      "y": 48,
+      "epistemic_status": "CONTEXTUAL_RITUAL_FUNCTION",
+      "evidence_strength_index": 0.66,
+      "evidence_record_ids": [
+        "parse.offering_cult",
+        "parse.pyramid_temple_finds"
+      ]
+    },
+    {
+      "id": "place.upper_cult_zone",
+      "kind": "PLACE",
+      "label": "Upper cult zone",
+      "x": 82,
+      "y": 55,
+      "epistemic_status": "FUNCTIONAL_CONTEXT",
+      "evidence_strength_index": 0.65,
+      "evidence_record_ids": [
+        "parse.offering_cult",
+        "parse.pyramid_temple_finds"
+      ]
+    },
+    {
+      "id": "action.move_to_burial",
+      "kind": "ACTION",
+      "label": "FUNERAL TRANSITION",
+      "x": 86,
+      "y": 37,
+      "epistemic_status": "FUNCTIONAL_INFERENCE",
+      "evidence_strength_index": 0.6,
+      "evidence_record_ids": [
+        "parse.funeral_function",
+        "parse.sarcophagus_setting"
+      ]
+    },
+    {
+      "id": "place.burial_chamber",
+      "kind": "PLACE",
+      "label": "Burial chamber / sarcophagus",
+      "x": 93,
+      "y": 29,
+      "epistemic_status": "DIRECT_BURIAL_ARCHITECTURE",
+      "evidence_strength_index": 0.98,
+      "evidence_record_ids": [
+        "parse.sarcophagus_setting"
+      ]
+    },
+    {
+      "id": "action.maintain_cult",
+      "kind": "ACTION",
+      "label": "MAINTAIN ROYAL CULT",
+      "x": 88,
+      "y": 72,
+      "epistemic_status": "SCHOLARLY_FUNCTIONAL_SYNTHESIS",
+      "evidence_strength_index": 0.68,
+      "evidence_record_ids": [
+        "parse.offering_cult"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "place.lower_approach",
+      "to": "action.enter_valley_complex",
+      "relation": "ENABLES",
+      "status": "INFERRED_FROM_COMPLEX_FUNCTION"
+    },
+    {
+      "from": "action.enter_valley_complex",
+      "to": "place.valley_temple",
+      "relation": "LEADS_TO",
+      "status": "TOPOLOGICAL"
+    },
+    {
+      "from": "place.valley_temple",
+      "to": "action.encounter_royal_images",
+      "relation": "CONTAINS_CONTEXT_FOR",
+      "status": "OBJECT_PROVENANCE_SUPPORTED"
+    },
+    {
+      "from": "action.encounter_royal_images",
+      "to": "place.valley_statuary_field",
+      "relation": "FOCUSES_ON",
+      "status": "OBJECT_PROVENANCE_SUPPORTED"
+    },
+    {
+      "from": "place.valley_statuary_field",
+      "to": "action.traverse_causeway",
+      "relation": "SEQUENCE_CANDIDATE",
+      "status": "INFERRED"
+    },
+    {
+      "from": "action.traverse_causeway",
+      "to": "place.causeway",
+      "relation": "OCCURS_IN",
+      "status": "ARCHITECTURALLY_CONSTRAINED"
+    },
+    {
+      "from": "place.causeway",
+      "to": "action.cross_royal_threshold",
+      "relation": "LEADS_TO",
+      "status": "TOPOLOGICAL"
+    },
+    {
+      "from": "action.cross_royal_threshold",
+      "to": "place.pyramid_temple_court",
+      "relation": "ENTERS",
+      "status": "CURATORIAL_ARCHITECTURAL_CONTEXT"
+    },
+    {
+      "from": "place.pyramid_temple_court",
+      "to": "action.present_offerings_readings",
+      "relation": "MAY_SUPPORT",
+      "status": "CONTEXTUAL_NOT_ROOM_SPECIFIC"
+    },
+    {
+      "from": "action.present_offerings_readings",
+      "to": "place.upper_cult_zone",
+      "relation": "OCCURS_IN",
+      "status": "OLD_KINGDOM_FUNCTIONAL_CONTEXT"
+    },
+    {
+      "from": "place.pyramid_temple_court",
+      "to": "action.move_to_burial",
+      "relation": "FUNERARY_SEQUENCE_CANDIDATE",
+      "status": "SCHOLARLY_SYNTHESIS"
+    },
+    {
+      "from": "action.move_to_burial",
+      "to": "place.burial_chamber",
+      "relation": "CULMINATES_AT",
+      "status": "BURIAL_ARCHITECTURE_SUPPORTED"
+    },
+    {
+      "from": "place.burial_chamber",
+      "to": "action.maintain_cult",
+      "relation": "POST_BURIAL_TRANSITION",
+      "status": "SCHOLARLY_SYNTHESIS"
+    },
+    {
+      "from": "action.maintain_cult",
+      "to": "place.upper_cult_zone",
+      "relation": "RETURNS_TO_CULT_SPACE",
+      "status": "SCHOLARLY_SYNTHESIS"
+    }
+  ],
+  "layers": [
+    "monuments",
+    "ritual",
+    "action",
+    "sources",
+    "uncertainty",
+    "intent"
+  ]
+}

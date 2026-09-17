@@ -1,0 +1,152 @@
+{
+  "id": "plateau",
+  "version": "0.10.7",
+  "title": "Plateau Master Map",
+  "coordinate_mode": "SCHEMATIC_NORMALIZED",
+  "metric": false,
+  "guard": "Positions are a topology-preserving visual schematic derived from authoritative plateau maps. They are not survey coordinates and cannot constrain geometry.",
+  "source_ids": [
+    "src.aera.gpmp_survey",
+    "src.digitalgiza.home",
+    "src.aera.kh_monuments_unit"
+  ],
+  "extent": {
+    "x": [
+      0,
+      100
+    ],
+    "y": [
+      0,
+      100
+    ],
+    "north": "UP"
+  },
+  "features": [
+    {
+      "id": "khufu",
+      "label": "KHUFU",
+      "kind": "pyramid",
+      "x": 31,
+      "y": 24,
+      "size": 13,
+      "status": "DOCUMENTED",
+      "source_ids": [
+        "src.digitalgiza.home"
+      ]
+    },
+    {
+      "id": "khafre",
+      "label": "KHAFRE",
+      "kind": "pyramid",
+      "x": 49,
+      "y": 42,
+      "size": 12,
+      "status": "ACTIVE_MODEL",
+      "source_ids": [
+        "src.petrie1883"
+      ],
+      "part_id": "part.pyramid.khafre"
+    },
+    {
+      "id": "menkaure",
+      "label": "MENKAURE",
+      "kind": "pyramid",
+      "x": 67,
+      "y": 67,
+      "size": 8,
+      "status": "DOCUMENTED",
+      "source_ids": [
+        "src.digitalgiza.home"
+      ]
+    },
+    {
+      "id": "sphinx",
+      "label": "GREAT SPHINX",
+      "kind": "sphinx",
+      "x": 70,
+      "y": 42,
+      "size": 7,
+      "status": "ARCHAEOLOGICALLY_MAPPED",
+      "source_ids": [
+        "src.opencontext.arce_sphinx"
+      ]
+    },
+    {
+      "id": "sphinx_temple",
+      "label": "SPHINX TEMPLE",
+      "kind": "temple",
+      "x": 76,
+      "y": 43,
+      "size": 5,
+      "status": "ARCHAEOLOGICALLY_MAPPED",
+      "source_ids": [
+        "src.opencontext.arce_sphinx"
+      ]
+    },
+    {
+      "id": "valley_temple",
+      "label": "KHAFRE VALLEY TEMPLE",
+      "kind": "temple",
+      "x": 81,
+      "y": 47,
+      "size": 6,
+      "status": "ARCHAEOLOGICALLY_DOCUMENTED",
+      "source_ids": [
+        "src.digitalgiza.khafre_valley_temple"
+      ]
+    },
+    {
+      "id": "pyramid_temple",
+      "label": "KHAFRE PYRAMID TEMPLE",
+      "kind": "temple",
+      "x": 56,
+      "y": 43,
+      "size": 5,
+      "status": "ARCHAEOLOGICALLY_DOCUMENTED",
+      "source_ids": [
+        "src.digitalgiza.khafre_pyramid_temple"
+      ]
+    },
+    {
+      "id": "area_c",
+      "label": "AREA C / WORK INFRASTRUCTURE",
+      "kind": "settlement",
+      "x": 45,
+      "y": 82,
+      "size": 5,
+      "status": "BROADER_CONTEXT",
+      "source_ids": [
+        "src.aera.area_c"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "valley_temple",
+      "to": "pyramid_temple",
+      "kind": "causeway",
+      "label": "KHAFRE CAUSEWAY",
+      "status": "DOCUMENTED"
+    },
+    {
+      "from": "pyramid_temple",
+      "to": "khafre",
+      "kind": "ritual_link",
+      "label": "UPPER COMPLEX",
+      "status": "DOCUMENTED"
+    },
+    {
+      "from": "sphinx",
+      "to": "sphinx_temple",
+      "kind": "complex_relation",
+      "label": "LOWER COMPLEX",
+      "status": "DOCUMENTED"
+    }
+  ],
+  "layers": [
+    "monuments",
+    "ritual",
+    "sources",
+    "uncertainty"
+  ]
+}

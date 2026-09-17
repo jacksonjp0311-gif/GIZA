@@ -1,0 +1,693 @@
+{
+  "version": "0.2.0",
+  "product": "GIZA",
+  "codename": "ATLAS",
+  "sources": [
+    {
+      "id": "src.petrie1883",
+      "title": "W. M. Flinders Petrie — The Pyramids and Temples of Gizeh (1883)",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "role": "Historical precision-survey backbone"
+    },
+    {
+      "id": "src.egymonuments.khafre",
+      "title": "Egyptian Ministry of Tourism and Antiquities — Pyramid Complex of Khafre",
+      "url": "https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren",
+      "role": "Official monument context and public baseline"
+    },
+    {
+      "id": "src.digitalgiza",
+      "title": "Digital Giza — Harvard University",
+      "url": "https://giza.fas.harvard.edu/",
+      "role": "Plateau archive, object records and 3-D/site context"
+    },
+    {
+      "id": "src.commons.interior",
+      "title": "Wikimedia Commons — Interior of Khafra Pyramid",
+      "url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Khafra_Pyramid",
+      "role": "Reuse-friendly interior photo discovery"
+    }
+  ],
+  "objects": {
+    "part.plateau.reference": {
+      "title": "Leveled plateau reference",
+      "simple": "A simple engineering reference plane used to locate the pyramid and passages in one coordinate frame.",
+      "why_known": "It is a derived modeling datum, not a claim that the modern plateau is perfectly flat.",
+      "measurement_components": [
+        "plateau"
+      ],
+      "questions": []
+    },
+    "part.pyramid.khafre": {
+      "title": "Khafre pyramid envelope",
+      "simple": "The reconstructed original geometric envelope of Khafre’s pyramid — the clean outer form before later erosion and casing loss.",
+      "why_known": "Its dimensions come from historical survey measurements and surviving architectural evidence, not from the controversial deep-structure claims.",
+      "measurement_components": [
+        "pyramid",
+        "casing",
+        "terrace"
+      ],
+      "questions": [
+        "Does the exact 53°10′ slope create unusual physical behavior?",
+        "How much do predicted effects change if the slope or height is perturbed?"
+      ]
+    },
+    "part.casing.granite.lower": {
+      "title": "Lower granite casing belt",
+      "simple": "A separately modeled lower casing zone so material and geometry can be inspected independently.",
+      "why_known": "Historical descriptions and surviving casing distinguish this zone from the limestone core.",
+      "measurement_components": [
+        "casing"
+      ],
+      "questions": []
+    },
+    "part.upper.entrance.existing": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.upper.horizontal.kj": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.upper.horizontal.jg": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.upper.horizontal.gh": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.entrance.existing": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.horizontal.bc": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.horizontal.ce": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.connect.ef": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.connect.fg": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.branch.cd": {
+      "title": "Measured / derived passage segment",
+      "simple": "A real passage segment reconstructed as its own spatial object. Select it to see its dimensions, coordinates, connections and evidence.",
+      "why_known": "These segments are constrained by published survey geometry. Missing original extensions are modeled separately rather than silently merged.",
+      "measurement_components": [
+        "passage_system",
+        "upper_entrance",
+        "upper_horizontal",
+        "lower_entrance",
+        "lower_horizontal_1",
+        "lower_horizontal_2",
+        "connecting_lower",
+        "connecting_upper",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.upper.entrance.reconstructed": {
+      "title": "Upper entrance — reconstructed extension",
+      "simple": "A reconstructed continuation through lost casing needed to visualize the original entrance path.",
+      "why_known": "This extension is derived from the surviving passage geometry; it is not treated as directly surviving fabric.",
+      "measurement_components": [
+        "upper_entrance"
+      ],
+      "questions": []
+    },
+    "part.lower.entrance.reconstructed": {
+      "title": "Lower entrance — reconstructed extension",
+      "simple": "A reconstructed continuation through the original pavement/terrace zone.",
+      "why_known": "It is retained as DERIVED geometry so the original path can be visualized without calling it directly measured.",
+      "measurement_components": [
+        "lower_entrance"
+      ],
+      "questions": []
+    },
+    "part.upper.roll": {
+      "title": "Upper half-round roof roll",
+      "simple": "A distinct shaped element in the upper entrance system.",
+      "why_known": "It is preserved as a separate entity because its geometry differs from the rectangular passage around it.",
+      "measurement_components": [
+        "upper_entrance"
+      ],
+      "questions": []
+    },
+    "part.upper.portcullis.slab": {
+      "title": "Upper granite portcullis slab",
+      "simple": "A granite blocking element associated with the upper entrance route.",
+      "why_known": "It is modeled separately from the corridor because material, dimensions and function are distinct.",
+      "measurement_components": [
+        "upper_entrance"
+      ],
+      "questions": []
+    },
+    "part.lower.turning_recess": {
+      "title": "Lower-route turning recess",
+      "simple": "A local widening/recess in the lower passage system.",
+      "why_known": "Its location is derived from the surveyed passage network.",
+      "measurement_components": [
+        "lower_passage"
+      ],
+      "questions": []
+    },
+    "part.lower.chamber": {
+      "title": "Lower / subsidiary chamber",
+      "simple": "A known rock-cut chamber on the lower route — part of Khafre’s actual internal architecture, not the viral deep-shaft claim.",
+      "why_known": "Its plan and location are reconstructed from published measurements.",
+      "measurement_components": [
+        "lower_chamber",
+        "lower_chamber_branch"
+      ],
+      "questions": []
+    },
+    "part.lower.portcullis.slab": {
+      "title": "Lower portcullis — unresolved envelope",
+      "simple": "A placeholder envelope for a lower blocking element whose exact geometry has not yet been resolved to the same standard as the main survey network.",
+      "why_known": "ATLAS deliberately keeps this ASSUMED so later evidence can replace it cleanly.",
+      "measurement_components": [
+        "lower_passage"
+      ],
+      "questions": [
+        "Resolve exact slab dimensions and placement from stronger source material."
+      ]
+    },
+    "part.burial.chamber": {
+      "title": "Main burial chamber",
+      "simple": "The principal chamber containing Khafre’s granite sarcophagus. The walls, gabled roof envelope and fine floor layer are separate inspectable objects.",
+      "why_known": "The chamber survives, has been surveyed and photographed, and is part of the established internal plan.",
+      "measurement_components": [
+        "burial_chamber"
+      ],
+      "questions": [
+        "Compare measured chamber geometry with acoustic and structural modes without assuming intentional resonance."
+      ]
+    },
+    "part.burial.gable_envelope": {
+      "title": "Main burial chamber",
+      "simple": "The principal chamber containing Khafre’s granite sarcophagus. The walls, gabled roof envelope and fine floor layer are separate inspectable objects.",
+      "why_known": "The chamber survives, has been surveyed and photographed, and is part of the established internal plan.",
+      "measurement_components": [
+        "burial_chamber"
+      ],
+      "questions": [
+        "Compare measured chamber geometry with acoustic and structural modes without assuming intentional resonance."
+      ]
+    },
+    "part.burial.floor_paving": {
+      "title": "Main burial chamber",
+      "simple": "The principal chamber containing Khafre’s granite sarcophagus. The walls, gabled roof envelope and fine floor layer are separate inspectable objects.",
+      "why_known": "The chamber survives, has been surveyed and photographed, and is part of the established internal plan.",
+      "measurement_components": [
+        "burial_chamber"
+      ],
+      "questions": [
+        "Compare measured chamber geometry with acoustic and structural modes without assuming intentional resonance."
+      ]
+    },
+    "part.sarcophagus.body": {
+      "title": "Khafre granite sarcophagus",
+      "simple": "The granite coffer inside the burial chamber. Body and lid are separate objects so their geometry can be inspected and exploded.",
+      "why_known": "The object survives in place and is documented by both measurements and photographs.",
+      "measurement_components": [
+        "sarcophagus"
+      ],
+      "questions": []
+    },
+    "part.sarcophagus.lid": {
+      "title": "Khafre granite sarcophagus",
+      "simple": "The granite coffer inside the burial chamber. Body and lid are separate objects so their geometry can be inspected and exploded.",
+      "why_known": "The object survives in place and is documented by both measurements and photographs.",
+      "measurement_components": [
+        "sarcophagus"
+      ],
+      "questions": []
+    },
+    "part.upper.1": {
+      "title": "Reported Upper Structure 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.upper.2": {
+      "title": "Reported Upper Structure 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.upper.3": {
+      "title": "Reported Upper Structure 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.upper.4": {
+      "title": "Reported Upper Structure 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.upper.5": {
+      "title": "Reported Upper Structure 5",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.alpha.1": {
+      "title": "Reported Shaft Alpha 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.alpha.1": {
+      "title": "Reported Helical Path Alpha 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.alpha.1": {
+      "title": "Reported Connector Alpha 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.alpha.2": {
+      "title": "Reported Shaft Alpha 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.alpha.2": {
+      "title": "Reported Helical Path Alpha 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.alpha.2": {
+      "title": "Reported Connector Alpha 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.alpha.3": {
+      "title": "Reported Shaft Alpha 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.alpha.3": {
+      "title": "Reported Helical Path Alpha 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.alpha.3": {
+      "title": "Reported Connector Alpha 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.alpha.4": {
+      "title": "Reported Shaft Alpha 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.alpha.4": {
+      "title": "Reported Helical Path Alpha 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.alpha.4": {
+      "title": "Reported Connector Alpha 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.beta.1": {
+      "title": "Reported Shaft Beta 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.beta.1": {
+      "title": "Reported Helical Path Beta 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.beta.1": {
+      "title": "Reported Connector Beta 1",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.beta.2": {
+      "title": "Reported Shaft Beta 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.beta.2": {
+      "title": "Reported Helical Path Beta 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.beta.2": {
+      "title": "Reported Connector Beta 2",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.beta.3": {
+      "title": "Reported Shaft Beta 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.beta.3": {
+      "title": "Reported Helical Path Beta 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.beta.3": {
+      "title": "Reported Connector Beta 3",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.shaft.beta.4": {
+      "title": "Reported Shaft Beta 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.helix.beta.4": {
+      "title": "Reported Helical Path Beta 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.connector.beta.4": {
+      "title": "Reported Connector Beta 4",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.terminal.alpha": {
+      "title": "Reported Terminal Chamber Alpha",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    },
+    "part.terminal.beta": {
+      "title": "Reported Terminal Chamber Beta",
+      "simple": "This object is part of the controversial deep-structure reconstruction. It is included so the claim can be tested geometrically — not because ATLAS considers it discovered.",
+      "why_known": "No independently verified photograph or direct subsurface measurement confirms this exact object. It remains isolated in the UNVERIFIED layer.",
+      "measurement_components": [],
+      "questions": [
+        "Can seismic, gravity, resistivity or another independent method recover this same geometry?",
+        "Would a void of this size produce a detectable physical signature?",
+        "Are repeated shapes more consistent with engineered construction or reconstruction artifacts?"
+      ]
+    }
+  }
+}

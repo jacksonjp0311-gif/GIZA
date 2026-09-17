@@ -1,0 +1,59 @@
+{
+  "sources": [
+    {
+      "id": "src.petrie1883",
+      "title": "The Pyramids and Temples of Gizeh",
+      "author": "W. M. Flinders Petrie",
+      "year": 1883,
+      "type": "primary_historical_survey",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "use": "Primary dimension and orientation source for rev.0003."
+    },
+    {
+      "id": "src.legon1989",
+      "title": "The Design of the Pyramid of Khafre",
+      "author": "John A. R. Legon",
+      "year": 1989,
+      "type": "field_measurement_plus_geometric_reconstruction",
+      "url": "https://rombergintegrali.org/pdf/legon/Khaefre.pdf",
+      "use": "Passage lengths/angles and computed A-L node positions; entrance endpoints include reconstructed lost casing/pavement."
+    },
+    {
+      "id": "src.mr1966.plate008",
+      "title": "L’Architettura delle Piramidi Menfite V, plate 008",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "type": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88221/full/",
+      "use": "Authoritative visual cross-check for lower corridor; plate not bundled."
+    },
+    {
+      "id": "src.mr1966.plate009",
+      "title": "L’Architettura delle Piramidi Menfite V, plate 009",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "type": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88222/full/",
+      "use": "Authoritative visual cross-check for lower chamber; plate not bundled."
+    },
+    {
+      "id": "src.egypt_ministry",
+      "title": "Pyramid Complex of Khafre (Khefren)",
+      "author": "Egyptian Ministry of Tourism and Antiquities",
+      "year": null,
+      "type": "official_summary",
+      "url": "https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren",
+      "use": "Official original-height and material/context reference."
+    },
+    {
+      "id": "src.scidep2025",
+      "title": "The ScIDEP muon radiography project at the Egyptian Pyramid of Khafre",
+      "author": "Gamal et al.",
+      "year": 2025,
+      "type": "peer_reviewed_modern_context",
+      "url": "https://doi.org/10.1063/5.0273135",
+      "use": "Modern current height/base context and muography project status; not used to invent hidden geometry."
+    }
+  ],
+  "policy": "No scan/plate images are redistributed in this package. URLs and bibliographic locators are retained so the user can audit the model against the original sources."
+}

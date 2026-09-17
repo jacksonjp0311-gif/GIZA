@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "accessed_on": "2026-09-12",
+  "policy": "Observations state what is visibly/documentarily present. No dimensions are inferred from uncalibrated images. Attribution of damage causes requires separate evidence.",
+  "observations": [
+    {
+      "id": "photoobs.casing.2004",
+      "media_id": "media.commons.khafre_casing_2004",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_casing",
+      "observation": "Close view documents surviving casing blocks and exposed core/backing context.",
+      "metrology_status": "UNCALIBRATED_SINGLE_VIEW",
+      "guard": "Uploader comments about earthquake distortion are not adopted as causal evidence."
+    },
+    {
+      "id": "photoobs.granite_casing.2004",
+      "media_id": "media.commons.khafre_granite_casing",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_lower_granite_casing",
+      "observation": "Photograph documents a red-granite casing block associated with the Khafre pyramid.",
+      "metrology_status": "UNCALIBRATED_SINGLE_VIEW",
+      "guard": "Material identification follows file/source description; object-scale dimensions are not inferred."
+    },
+    {
+      "id": "photoobs.passage.2007",
+      "media_id": "media.commons.khafre_passage_2007",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_interior_passages",
+      "observation": "Interior photograph documents a passage junction/branch and visible masonry/rock surfaces.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "No absolute section dimensions without a calibrated scale/control."
+    },
+    {
+      "id": "photoobs.chamber.2007",
+      "media_id": "media.commons.khafre_burial_chamber_2007",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_burial_chamber",
+      "observation": "Photograph documents the burial chamber interior with the sarcophagus visible in context.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "Perspective geometry requires camera calibration/control before measurement."
+    },
+    {
+      "id": "photoobs.belzoni.2007",
+      "media_id": "media.commons.khafre_belzoni_2007",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "belzoni_inscription",
+      "observation": "Photograph documents the Belzoni inscription; the Commons description transcribes “Scoperta da S. Belzoni. 2. Mar. 1818.”",
+      "metrology_status": "DOCUMENTARY_ONLY",
+      "guard": "Graffiti text is historical-documentary context, not ancient construction evidence."
+    },
+    {
+      "id": "photoobs.coffer.2007",
+      "media_id": "media.commons.khafre_coffer_2007",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_sarcophagus",
+      "observation": "Photograph documents the granite sarcophagus/coffer in the burial chamber.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "Do not infer dimensions from the image without scale/camera solution."
+    },
+    {
+      "id": "photoobs.interior.2022",
+      "media_id": "media.commons.khafre_interior_2022",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_interior",
+      "observation": "High-resolution modern interior photograph provides a 2022 visual state and camera metadata.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "EXIF camera metadata is useful but insufficient by itself for metric registration."
+    },
+    {
+      "id": "photoobs.interior.2006.highres",
+      "media_id": "media.commons.khafre_interior_liber_2006",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_interior",
+      "observation": "High-resolution 2006 interior photograph with camera/lens metadata adds an independent modern visual state.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "Scene scale/control points still required."
+    },
+    {
+      "id": "photoobs.section.1821",
+      "media_id": "media.commons.khafre_section_belzoni_1821",
+      "truth_class": "ARCHIVAL_IMAGE_OBSERVATION",
+      "target": "khafre_internal_layout_history",
+      "observation": "Public-domain 1821 Belzoni/Aglio section preserves an early documented interpretation of the internal layout.",
+      "metrology_status": "REFERENCE_CROSSCHECK_ONLY",
+      "guard": "Historical illustration is not treated as a modern precision survey."
+    },
+    {
+      "id": "photoobs.causeway.2006",
+      "media_id": "media.commons.khafre_causeway_2006",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_causeway",
+      "observation": "Photograph documents the causeway with the pyramid behind and later surface features along the route.",
+      "metrology_status": "CONTEXT_ONLY",
+      "guard": "Causeway is not yet represented as a dedicated semantic geometry part in GIZA."
+    },
+    {
+      "id": "photoobs.exterior.cc0.2002",
+      "media_id": "media.commons.khafre_exterior_cc0_2002",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_exterior",
+      "observation": "Geotagged exterior view supplies a 2002 camera-context record suitable for future registration sanity checks.",
+      "metrology_status": "CAMERA_CONTEXT_NOT_SURVEY_CONTROL",
+      "guard": "Consumer geotag is not accepted as precision survey control."
+    },
+    {
+      "id": "photoobs.valley_temple.02",
+      "media_id": "media.commons.khafre_valley_temple_02",
+      "truth_class": "PHOTO_OBSERVATION",
+      "target": "khafre_valley_temple",
+      "observation": "High-resolution interior view documents cuboid/megalithic masonry context in the Valley Temple.",
+      "metrology_status": "PHOTO_METROLOGY_CANDIDATE",
+      "guard": "Valley Temple is complex-context evidence and is not silently bound to pyramid-interior geometry."
+    },
+    {
+      "id": "photoobs.facade.deformations.2009_2012",
+      "source_id": "src.procedia2016.khafre_deformations",
+      "truth_class": "PUBLICATION_FIELD_OBSERVATION",
+      "target": "khafre_facades",
+      "observation": "The 2016 open-access study reports photographic documentation during 2009–2012 and in-situ verification of major fractures/cracks in 2012.",
+      "metrology_status": "CONDITION_MONITORING_SOURCE",
+      "guard": "Crack/fracture locations are condition evidence; causal mechanisms and stability require independent structural analysis."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": "0.9.3.1",
+  "codename": "UI RESTORE",
+  "phase": "NEXUS_VISUAL_RESTORATION_AND_GOVERNANCE",
+  "scientific_semantics_changed": false,
+  "geometry_changed": false,
+  "evidence_maturity_changed": false,
+  "shell_contract": {
+    "brand": "GIZA NEXUS",
+    "primary_navigation": [
+      "DISCOVER",
+      "EXPLORE",
+      "REVERSE ENGINEER",
+      "ANALYZE",
+      "SIMULATE"
+    ],
+    "desktop_workspace_columns": "252px minmax(0,1fr) 410px",
+    "inspector_tabs": "4x2",
+    "inspector_overlay_allowed": false
+  },
+  "rejected_artifact": "docs/archive/REJECTED-v0.9.3-DESIGN-FREEZE.png",
+  "runtime_capture_status": "UNAVAILABLE_IN_CHAT_SANDBOX_NO_VITE_DEPENDENCIES",
+  "files": [
+    {
+      "path": "src/workstation/WorkstationHeader.tsx",
+      "sha256": "1a1974142f4533951d633df77e65621e09e4a094ebbd95d22fb219f5d970bd87",
+      "bytes": 1239
+    },
+    {
+      "path": "src/workstation/LeftRail.tsx",
+      "sha256": "b5f16869a3e58fddfff5779609c70ea20ee339c4b47f83c297b689c508492ad2",
+      "bytes": 3374
+    },
+    {
+      "path": "src/workstation/SpatialViewport.tsx",
+      "sha256": "5d8e642367e689e7756cc127a0c54a50cb2bda325731830a7c79a6bdd7afb232",
+      "bytes": 4144
+    },
+    {
+      "path": "src/workstation/ObjectInspectorPanel.tsx",
+      "sha256": "21f17d491551745e3686b5ed87ec1b77e22cf80cc53bd1d8a55b862a0bbb6b26",
+      "bytes": 35925
+    },
+    {
+      "path": "src/workstation/WorkstationFooter.tsx",
+      "sha256": "5767ea913abe3b314e699b8c7427744d5d1f57f740240babd411dd46841bb5ad",
+      "bytes": 380
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "dd185ef851878159dd84e51199e02f755c8367044aa3c9364ae0e53a045c402f",
+      "bytes": 37753
+    },
+    {
+      "path": "docs/design/APPROVED-UI-TARGET.png",
+      "sha256": "500b514d21a3dcbc040c934f794aec9adc48b0584ddfff9ab6d0a5dd4abac3a3",
+      "bytes": 2622141
+    },
+    {
+      "path": "docs/design/REFERENCE-RUNTIME-v0.9.2.png",
+      "sha256": "d2f92d8ca18cc3cdb5e26d893b2a66a1609a71c2bfe470ea091eb685c3bc138c",
+      "bytes": 1749828
+    },
+    {
+      "path": "docs/design/LAYOUT_CONTRACT.json",
+      "sha256": "04893348be50d6ccc473098b1761b1f87aebe129a46de8fadf8acdcb09138468",
+      "bytes": 2338
+    },
+    {
+      "path": "docs/design/COMPONENT_CONTRACT.json",
+      "sha256": "a66f1d4ae4bf549ac9b695787d3f5446bde86d59c6c127113ed8cf45a0847251",
+      "bytes": 1569
+    },
+    {
+      "path": "docs/design/VISUAL_REGRESSION.md",
+      "sha256": "959d250bbc90b8ac18c2c32305c2b51e9a339286007ac0ce401ccf3743f78ee4",
+      "bytes": 1563
+    },
+    {
+      "path": "scripts/validate-visual-contract.mjs",
+      "sha256": "c8f6f96ae1c02f8a92852fba1f715b5e84e1b5589c4b3d8b2d7b72cc0ad19c8a",
+      "bytes": 3966
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+  "version": "0.10.0",
+  "source_id": "src.dash.petrie_stations2017",
+  "verified_landing_url": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+  "facts": {
+    "published_assets": [
+      "Giza-Corner-Points-2v17.kmz",
+      "Petries-Stations.kmz",
+      "GDFS-2012-for-GE-21vii18.kmz",
+      "GDFS-2015-Master-25iii17-edited-child.xlsx",
+      "GPMP-Control-Monuments.kmz",
+      "GDFS-2016-23ix18.xlsx",
+      "GDFS-2018-12xii18.xlsx"
+    ],
+    "khafre_corner_basis": "Flinders Petrie 1880-1881 survey",
+    "listed_control_points": [
+      "G1.1",
+      "G1.2",
+      "G1.4",
+      "W-NW"
+    ],
+    "gpmp_control_asset": "GPMP-Control-Monuments.kmz"
+  },
+  "download_urls_state": "UNRESOLVED_DO_NOT_INVENT",
+  "geometry_write_authority": "ACQUISITION_INDEX_ONLY",
+  "canonical_mutation": false,
+  "confirmed_on": "2026-09-12"
+}

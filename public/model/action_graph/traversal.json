@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "primary_sequence": [
+    "place.lower_approach",
+    "action.enter_valley_complex",
+    "place.valley_temple",
+    "action.encounter_royal_images",
+    "place.valley_statuary_field",
+    "action.traverse_causeway",
+    "place.causeway",
+    "action.cross_royal_threshold",
+    "place.pyramid_temple_court",
+    "action.move_to_burial",
+    "place.burial_chamber",
+    "action.maintain_cult",
+    "place.upper_cult_zone"
+  ],
+  "alternative_or_cyclic_actions": [
+    {
+      "from": "place.burial_chamber",
+      "via": "action.maintain_cult",
+      "to": "place.upper_cult_zone",
+      "meaning": "post-burial cult continues after interment; this is functional synthesis, not a literal one-time procession route"
+    }
+  ],
+  "unresolved": [
+    "exact Valley Temple statue positions",
+    "exact funerary actors and choreography",
+    "exact offering room(s) for Khafre",
+    "timing/frequency of rites",
+    "spoken liturgy",
+    "visibility and access restrictions by role"
+  ]
+}

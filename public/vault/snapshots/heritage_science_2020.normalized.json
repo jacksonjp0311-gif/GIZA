@@ -1,0 +1,25 @@
+{
+  "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+  "version": "0.10.0",
+  "source_id": "src.npj2020.materials",
+  "doi": "10.1186/s40494-020-0356-9",
+  "license": "CC_BY_4_0_WITH_THIRD_PARTY_EXCEPTIONS",
+  "sample_count_total": 45,
+  "domains": [
+    "geology",
+    "petrography",
+    "geochemistry",
+    "physical_properties",
+    "mechanical_properties",
+    "mortar",
+    "condition",
+    "groundwater"
+  ],
+  "existing_normalized_tables": [
+    "public/model/observatory/material_samples_khafre.json",
+    "public/model/observatory/material_physical_khafre.json"
+  ],
+  "known_discrepancy": "Khafre split-tensile prose minimum 1.79 MPa differs from Table 13 specimen value 1.49 MPa; preserve both.",
+  "geometry_write_authority": "MATERIAL_PRIOR_ONLY",
+  "canonical_mutation": false
+}

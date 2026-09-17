@@ -1,0 +1,55 @@
+{
+  "version": "0.9.3",
+  "runs": [
+    {
+      "experiment_id": "gravity.deep-claim-conditional",
+      "run_id": "run.gravity.gravity.deep-claim-conditional.6da5f2c3c8f1",
+      "path": "simlab/results/gravity.deep-claim-conditional.json",
+      "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+      "status": "COMPLETE",
+      "peak_microgal": 283.42251151673264
+    },
+    {
+      "experiment_id": "gravity.deep-shafts-only",
+      "run_id": "run.gravity.gravity.deep-shafts-only.0489588ae559",
+      "path": "simlab/results/gravity.deep-shafts-only.json",
+      "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+      "status": "COMPLETE",
+      "peak_microgal": 251.95780717007176
+    },
+    {
+      "experiment_id": "gravity.deep-terminals-only",
+      "run_id": "run.gravity.gravity.deep-terminals-only.27b2b0a80d48",
+      "path": "simlab/results/gravity.deep-terminals-only.json",
+      "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+      "status": "COMPLETE",
+      "peak_microgal": 31.74639976189687
+    },
+    {
+      "experiment_id": "gravity.known-interiors-screening",
+      "run_id": "run.gravity.gravity.known-interiors-screening.591562caae08",
+      "path": "simlab/results/gravity.known-interiors-screening.json",
+      "truth_status": "CONDITIONAL_DERIVED_GEOMETRY",
+      "status": "COMPLETE",
+      "peak_microgal": 33.572677021939
+    },
+    {
+      "experiment_id": "acoustic.known-interiors-screening",
+      "run_id": "run.acoustic.acoustic.known-interiors-screening.1ffcc551ebdb",
+      "path": "simlab/results/acoustic.known-interiors-screening.json",
+      "truth_status": "CONDITIONAL_DERIVED_GEOMETRY",
+      "status": "COMPLETE",
+      "solver_id": "solver.acoustic",
+      "burial_fundamental_hz": 12.122722532901356,
+      "coincidence_clusters": 7
+    },
+    {
+      "run_id": "run.strata.strata.deep-claim-screening.47505c0a0969",
+      "experiment_id": "strata.deep-claim-screening",
+      "solver_id": "solver.strata",
+      "status": "COMPLETE",
+      "provenance_class": "SIMULATED",
+      "result": "results/strata.deep-claim-screening.json"
+    }
+  ]
+}

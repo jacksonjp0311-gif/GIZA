@@ -1,0 +1,31 @@
+{
+  "version": "0.9.3",
+  "codename": "STRATA",
+  "status": "ACTIVE",
+  "active_solvers": [
+    "solver.gravity",
+    "solver.acoustic",
+    "solver.strata"
+  ],
+  "planned_solvers": [
+    "solver.geomechanics",
+    "solver.hydraulic",
+    "solver.em",
+    "solver.muography"
+  ],
+  "first_experiment": "gravity.deep-claim-conditional",
+  "visualization": {
+    "layer": "SimulationLayer",
+    "default_visible": false,
+    "available_fields": [
+      "GRAVITY_MICROGAL",
+      "ACOUSTIC_PRESSURE_NORMALIZED",
+      "GEOMECHANICAL_STRESS_PROXY_MPA",
+      "HYDRAULIC_PRESSURE_PROXY_MPA"
+    ],
+    "truth_invariant": "Visualization is simulated output, never direct archaeological observation."
+  },
+  "truth_invariant": "Prediction is not observation. Simulation can test consequences of a hypothesis but cannot promote archaeology by itself.",
+  "second_experiment": "acoustic.known-interiors-screening",
+  "third_experiment": "strata.deep-claim-screening"
+}

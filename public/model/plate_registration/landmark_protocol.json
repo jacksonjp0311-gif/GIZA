@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "protocol_id": "plate_vi.landmark_protocol.v1",
+  "source_id": "src.petrie1883",
+  "candidate_id": "bytes.petrie1883.public_domain_pdf",
+  "plate": "VI",
+  "pdf_page_1_indexed": 305,
+  "frame": "SOURCE_RENDER_PIXELS_PENDING",
+  "landmarks": [
+    {
+      "id": "lm.west_loculi.north_tip",
+      "sector": "WEST_LOCULI",
+      "description": "north end of western three-loculus block",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.west_loculi.south_junction",
+      "sector": "WEST_LOCULI",
+      "description": "junction where western loculi meet the transverse hall",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.transverse_hall.west_north_corner",
+      "sector": "TRANSVERSE_HALL",
+      "description": "northwest interior corner of the long transverse hall",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.transverse_hall.west_south_corner",
+      "sector": "TRANSVERSE_HALL",
+      "description": "southwest interior corner of the long transverse hall",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.t_hall.north_arm_tip",
+      "sector": "T_HALL",
+      "description": "closed north end of the north arm",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.t_hall.south_arm_tip",
+      "sector": "T_HALL",
+      "description": "closed south end of the south arm",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.t_hall.stem_south_corner",
+      "sector": "T_HALL",
+      "description": "southern end/corner of the central T-hall stem",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.east_transition.upper_inner_corner",
+      "sector": "EAST_TRANSITION",
+      "description": "inner corner at the upper/eastern approach transition",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.east_transition.lower_inner_corner",
+      "sector": "EAST_TRANSITION",
+      "description": "inner corner at the lower/eastern approach transition",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    },
+    {
+      "id": "lm.causeway.axis_plate_edge",
+      "sector": "CAUSEWAY",
+      "description": "causeway centerline where it exits the Plate VI drawing footprint",
+      "source_px": null,
+      "target_m": null,
+      "role": "UNASSIGNED",
+      "frozen": false
+    }
+  ],
+  "minimums": {
+    "fit_controls": 4,
+    "holdouts": 2,
+    "control_sectors": 3,
+    "holdout_sectors": 2
+  },
+  "coordinate_authority": "NONE_UNTIL_LOCAL_CHECKSUM_BOUND_RENDER",
+  "guard": "Names may be planned from a remote witness; pixel coordinates and control/holdout roles may only freeze against a checksum-bound local render."
+}

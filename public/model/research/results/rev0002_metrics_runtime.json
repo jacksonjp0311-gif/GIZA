@@ -1,0 +1,8 @@
+{
+  "revision": "rev.0002",
+  "conditional": true,
+  "shaft_volume_m3": 61581.499195667115,
+  "hydrostatic_head_pa": 6356880.0,
+  "terminal_pointmass_microgal": 21.15918914799573,
+  "air_halfwave_hz": 0.2646604938271605
+}

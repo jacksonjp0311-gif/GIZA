@@ -1,0 +1,28 @@
+{
+  "id": "intent",
+  "version": "0.10.7",
+  "title": "Intent Reconstruction Map",
+  "coordinate_mode": "EVIDENCE_GRAPH",
+  "metric": false,
+  "guard": "Hypothesis placement and support bars are visualization only. Scores are triage indices, not probabilities of historical truth.",
+  "layers": [
+    "intent",
+    "sources",
+    "uncertainty"
+  ],
+  "center": {
+    "label": "KHAFRE COMPLEX",
+    "x": 50,
+    "y": 50
+  },
+  "hypothesis_ids": [
+    "intent.royal_mortuary_transition",
+    "intent.perpetual_royal_cult",
+    "intent.cosmic_order_solar_kingship",
+    "intent.state_integration_legitimacy",
+    "intent.ritual_landscape_journey",
+    "intent.future_audience_message",
+    "intent.machine_or_power_system",
+    "intent.advanced_computation"
+  ]
+}

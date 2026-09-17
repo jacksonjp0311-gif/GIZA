@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')); const errors=[]; const need=(x,m)=>{if(!x)errors.push(m)}; const V='0.10.7';
+const m=read('public/model/plan_parser/manifest.json'), s=read('public/model/plan_parser/plan_sources.json'), e=read('public/model/plan_parser/extractions.json'), c=read('public/model/plan_parser/conflicts.json');
+const sourceIds=new Set(read('public/model/evidence/source_registry.json').sources.map(x=>x.id)); const obsIds=new Set(read('public/model/observatory/observations.json').observations.map(x=>x.id));
+need(m.version===V,'plan manifest version drift');need(s.version===V&&e.version===V&&c.version===V,'plan artifact version drift');need(s.sources.length>=7,`expected >=7 plan sources, got ${s.sources.length}`);need(e.extractions.length>=24,`expected >=24 plan extractions, got ${e.extractions.length}`);need(e.raw_byte_verified_count===0,'chat release must not claim source plan bytes cached');need(c.conflicts.length>=3,'expected preserved plan conflicts');
+for(const p of s.sources){need(sourceIds.has(p.source_id),`${p.id}: unknown source`);need(Boolean(p.locator),`${p.id}: locator missing`);need(!String(p.geometry_authority).includes('FULL'),`${p.id}: illegal geometry authority`);}
+for(const x of e.extractions){need(obsIds.has(x.observation_id),`${x.id}: observation missing`);need(sourceIds.has(x.source_id),`${x.id}: source missing`);need(Boolean(x.source_locator),`${x.id}: locator missing`);need(x.raw_byte_verified===false,`${x.id}: raw byte claim unexpected`);need(x.geometry_write_authority==='NONE',`${x.id}: extraction may not write geometry`);}
+for(const x of c.conflicts)need(x.geometry_authority==='NONE',`${x.id}: conflict may not write geometry`);
+if(errors.length){console.error('PRIMARY PLAN PARSER validation FAILED');errors.forEach(x=>console.error('- '+x));process.exit(1)}
+console.log(`PRIMARY PLAN PARSER validation PASS sources=${s.sources.length} extractions=${e.extractions.length} raw_bytes=0 conflicts=${c.conflicts.length}`);

@@ -1,0 +1,122 @@
+{
+  "version": "0.10.7",
+  "codename": "FIRST-PLATE REGISTRATION + HOLDOUT GATE",
+  "phase": "FIRST_PLATE_REGISTRATION_HOLDOUT_GATE",
+  "generated_at": "2026-09-13T22:45:43.230Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "maps": 11,
+    "ritual_stages": 6,
+    "action_nodes": 14,
+    "room_spaces": 24,
+    "room_thresholds": 21,
+    "visibility_spaces": 24,
+    "metric_readiness_targets": 4,
+    "survey_points": 6,
+    "intent_nodes": 8,
+    "registered_plans": 0,
+    "metric_visibility_rays": 0
+  },
+  "invariants": [
+    "schematic maps have zero metric geometry authority",
+    "source-byte readiness is not source confidence",
+    "room topology is not a surveyed plan",
+    "metric view lab casts zero rays before legal byte registration",
+    "atlas remains inside locked central viewport"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/maps/manifest.json",
+      "sha256": "7714939bae377aae3c97a705af9fb5428c9a28fcfa1a48ff083bca8aed3d7a55",
+      "bytes": 5948
+    },
+    {
+      "path": "public/model/maps/layers/plateau_master.json",
+      "sha256": "ee3d4972e81cb8308ab2374ae6d3d58e24e558cf32fc22914d552c567f09f80b",
+      "bytes": 3159
+    },
+    {
+      "path": "public/model/maps/layers/ritual_route.json",
+      "sha256": "20b175dc2912cf4a5ef098e6c287e91b5fd0e03c41605fced1c42810a529b63b",
+      "bytes": 3528
+    },
+    {
+      "path": "public/model/maps/layers/action_graph.json",
+      "sha256": "818aad3ced478bf2cd7f75f2d513ea074e41b24ee45b06933dfd26c2c70da5c9",
+      "bytes": 7791
+    },
+    {
+      "path": "public/model/maps/layers/room_graph.json",
+      "sha256": "c1420c6a4e668dd88c47993af505878b8d0591289034da4c7c2d00795c0908c3",
+      "bytes": 15896
+    },
+    {
+      "path": "public/model/maps/layers/visibility_lab.json",
+      "sha256": "12f16361e2023fbff15480e4fe38b20bb0d0cd5bdc8b6129a565191ed046f7e8",
+      "bytes": 26750
+    },
+    {
+      "path": "public/model/maps/layers/metric_readiness.json",
+      "sha256": "ee6e7f1adfdd311195151a3ce3ac034906ded86397b8fe51b1fcbcaa57fd92d9",
+      "bytes": 2111
+    },
+    {
+      "path": "public/model/maps/layers/survey_control.json",
+      "sha256": "dafc941241d4f17e595084c281417da7cefd5c2036f36f012f5b41626bd26b76",
+      "bytes": 1842
+    },
+    {
+      "path": "public/model/maps/layers/geology_quarry.json",
+      "sha256": "9bbcec5564f8e87a77ad237766cf52849e2dbcb213213c403543b4c185a7d549",
+      "bytes": 1470
+    },
+    {
+      "path": "public/model/maps/layers/historical_sources.json",
+      "sha256": "fe07669fe0a88d13f1a61fc476cda448489b483296f54e1defccee493bee8e48",
+      "bytes": 1683
+    },
+    {
+      "path": "public/model/maps/layers/intent_map.json",
+      "sha256": "c2f8035d6513cc2607c33c3bb2e5362d1daa6bc016b3543a19e0660d558eccc1",
+      "bytes": 761
+    },
+    {
+      "path": "public/model/maps/layers/photo_coverage.json",
+      "sha256": "cd8a946ccf5337822fd542255bd31ab8e257e78b5c5d90b24413557fbe30e05f",
+      "bytes": 1176
+    },
+    {
+      "path": "src/maps/types.ts",
+      "sha256": "e6101df1634817bc498c4fd2ad451b5d487a466454009933bba512cd9196788d",
+      "bytes": 6000
+    },
+    {
+      "path": "src/maps/AtlasNavigator.tsx",
+      "sha256": "39a25fb140ebcb824052d3a0357fef0a9b178cda7562841a533fc864301e3fce",
+      "bytes": 1690
+    },
+    {
+      "path": "src/maps/MapVisuals.tsx",
+      "sha256": "211bad4915e0d77cb84c3b92611b1b453c455c13cb1e71498047f8b88932e26b",
+      "bytes": 21433
+    },
+    {
+      "path": "src/maps/MapAtlasPanel.tsx",
+      "sha256": "13b3315dcc2d55e7f8a69ccf22c6df53ad052b93769806c2b8ceecf09bc3b80c",
+      "bytes": 7060
+    },
+    {
+      "path": "scripts/maps/validate-maps.mjs",
+      "sha256": "2bfdfa2784468198238b9c9214dcb555be7f68dd842cd717cb22dd74a9695316",
+      "bytes": 5204
+    },
+    {
+      "path": "docs/RITUAL_MAP.md",
+      "sha256": "5ab3de52a45af812412112cee209425513b1e18f3f4f608bb86b53a8c6519d3d",
+      "bytes": 8219
+    }
+  ],
+  "release_version": "0.10.12",
+  "sealed_at": "2026-09-17T10:46:21.098Z"
+}

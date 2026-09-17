@@ -1,0 +1,74 @@
+{
+  "id": "survey",
+  "version": "0.10.7",
+  "title": "Survey Control / Native GPMP Frame",
+  "coordinate_mode": "GPMP_NATIVE_METERS",
+  "metric": true,
+  "frame_id": "frame.gpmp.native",
+  "vertical_status": "UNRESOLVED",
+  "translation_to_khafre_local": "UNRESOLVED",
+  "guard": "Points are shown in their published GPMP-native horizontal frame. Khafre local geometry is NOT translated onto this map until a transform receipt exists.",
+  "source_ids": [
+    "src.dash.gpmp_frame2015",
+    "src.dash.giza_surveys",
+    "src.dash.gpmp_geophys2006",
+    "src.nell_ruggles2014"
+  ],
+  "points": [
+    {
+      "id": "gpmp.origin.definition",
+      "label": "GPMP ORIGIN",
+      "e": 500000.0,
+      "n": 100000.0,
+      "kind": "FRAME_ORIGIN"
+    },
+    {
+      "id": "gpmp.g1_1.2015",
+      "label": "G1.1 / PETRIE Q",
+      "e": 500115.61,
+      "n": 100115.803,
+      "kind": "SURVEY_CONTROL"
+    },
+    {
+      "id": "gpmp.g1_1.2012",
+      "label": "G1.1 / Q (2012)",
+      "e": 500115.607,
+      "n": 100115.802,
+      "kind": "PUBLISHED_VARIANT"
+    },
+    {
+      "id": "gpmp.g1_2.2012",
+      "label": "G1.2 / PETRIE U",
+      "e": 500115.858,
+      "n": 99884.402,
+      "kind": "SURVEY_CONTROL"
+    },
+    {
+      "id": "gpmp.g1_4.2012",
+      "label": "G1.4 / PETRIE O",
+      "e": 499883.898,
+      "n": 100115.591,
+      "kind": "SURVEY_CONTROL"
+    },
+    {
+      "id": "gpmp.sp4.2006",
+      "label": "SP4 / SOUTH OF KVT",
+      "e": 500390.022,
+      "n": 99459.759,
+      "kind": "SURVEY_CONTROL"
+    }
+  ],
+  "orientation_prior": {
+    "yaw_arcmin": -4.45,
+    "yaw_deg": -0.07416666666666667,
+    "rms_side_residual_arcmin": 0.7921489758877429,
+    "max_abs_residual_arcmin": 1.35,
+    "measured_point_count": 54,
+    "status": "ORIENTATION_PRIOR_ONLY"
+  },
+  "layers": [
+    "survey",
+    "uncertainty",
+    "sources"
+  ]
+}

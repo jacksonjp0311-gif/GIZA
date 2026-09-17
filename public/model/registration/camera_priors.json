@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "count": 14,
+  "priors": [
+    {
+      "media_id": "media.commons.khafre_casing_2004",
+      "image_dimensions_px": [
+        1600,
+        1200
+      ],
+      "camera_model": "Casio QV-2900UX",
+      "focal_length_mm": 35.201,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        800,
+        600
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_burial_chamber_2007",
+      "image_dimensions_px": [
+        500,
+        667
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        250,
+        333.5
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_sarcophagus_detail_2006",
+      "image_dimensions_px": [
+        1280,
+        960
+      ],
+      "camera_model": "Sony DSC-T7",
+      "focal_length_mm": 6.33,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        640,
+        480
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_granite_casing",
+      "image_dimensions_px": [
+        1600,
+        1200
+      ],
+      "camera_model": "Casio QV-2900UX",
+      "focal_length_mm": 14.639,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        800,
+        600
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_exterior_geotagged",
+      "image_dimensions_px": [
+        1903,
+        1900
+      ],
+      "camera_model": "Nikon D50",
+      "focal_length_mm": 65,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        951.5,
+        950
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": {
+        "lat": 29.97278,
+        "lon": 31.130962
+      },
+      "camera_location_status": "CONTEXT_ONLY_NOT_SURVEY_CONTROL",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_passage_2007",
+      "image_dimensions_px": [
+        500,
+        667
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        250,
+        333.5
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_belzoni_2007",
+      "image_dimensions_px": [
+        667,
+        500
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        333.5,
+        250
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_coffer_2007",
+      "image_dimensions_px": [
+        667,
+        500
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        333.5,
+        250
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_interior_2022",
+      "image_dimensions_px": [
+        4032,
+        3024
+      ],
+      "camera_model": "Apple iPhone 13 Pro Max",
+      "focal_length_mm": 1.57,
+      "equivalent_focal_length_mm": 22,
+      "principal_point_px": [
+        2016,
+        1512
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_interior_liber_2006",
+      "image_dimensions_px": [
+        3758,
+        2887
+      ],
+      "camera_model": "Canon EOS 5D",
+      "focal_length_mm": 15,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        1879,
+        1443.5
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_section_belzoni_1821",
+      "image_dimensions_px": [
+        977,
+        615
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        488.5,
+        307.5
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_causeway_2006",
+      "image_dimensions_px": [
+        1600,
+        1200
+      ],
+      "camera_model": null,
+      "focal_length_mm": null,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        800,
+        600
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_exterior_cc0_2002",
+      "image_dimensions_px": [
+        3651,
+        2492
+      ],
+      "camera_model": "Canon EOS 400D",
+      "focal_length_mm": 34,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        1825.5,
+        1246
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": {
+        "lat": 29.976063,
+        "lon": 31.130683
+      },
+      "camera_location_status": "CONTEXT_ONLY_NOT_SURVEY_CONTROL",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    },
+    {
+      "media_id": "media.commons.khafre_valley_temple_02",
+      "image_dimensions_px": [
+        5312,
+        2988
+      ],
+      "camera_model": null,
+      "focal_length_mm": 4.3,
+      "equivalent_focal_length_mm": null,
+      "principal_point_px": [
+        2656,
+        1494
+      ],
+      "principal_point_status": "ASSUMED_IMAGE_CENTER",
+      "sensor_dimensions_mm": null,
+      "focal_length_px": null,
+      "distortion_model": "UNRESOLVED",
+      "camera_location": null,
+      "camera_location_status": "UNAVAILABLE",
+      "intrinsic_status": "PARTIAL_EXIF_SENSOR_UNRESOLVED",
+      "guard": "EXIF is a prior only. Metric pose requires calibrated intrinsics or jointly solved camera parameters plus spatial controls."
+    }
+  ]
+}

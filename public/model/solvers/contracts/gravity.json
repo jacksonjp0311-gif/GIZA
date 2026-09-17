@@ -1,0 +1,27 @@
+{
+  "solver_id": "solver.gravity",
+  "inputs_required": [
+    "geometry_snapshot",
+    "density_model",
+    "observation_points"
+  ],
+  "parameters": [
+    "density_kg_m3",
+    "background_density_kg_m3",
+    "integration_method"
+  ],
+  "controls_required": [
+    "null_density_model_or_no_void"
+  ],
+  "outputs_required": [
+    "predicted_delta_g_microgal",
+    "observation_coordinates_m",
+    "control_difference"
+  ],
+  "uncertainty_required": [
+    "geometry",
+    "density",
+    "numerical"
+  ],
+  "falsification": "Publish predicted spatial anomaly pattern before comparison with measurements."
+}

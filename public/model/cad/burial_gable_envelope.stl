@@ -1,0 +1,58 @@
+solid burial_gable_envelope
+  facet normal 0 -0.361768519 0.932267954
+    outer loop
+      vertex -7.082155000 -2.487295000 0.000000000
+      vertex 7.082155000 -2.487295000 0.000000000
+      vertex 7.082155000 0.000000000 0.965200000
+    endloop
+  endfacet
+  facet normal 0 -0.361768519 0.932267954
+    outer loop
+      vertex -7.082155000 -2.487295000 0.000000000
+      vertex 7.082155000 0.000000000 0.965200000
+      vertex -7.082155000 0.000000000 0.965200000
+    endloop
+  endfacet
+  facet normal 0 0.361768519 0.932267954
+    outer loop
+      vertex -7.082155000 2.487295000 0.000000000
+      vertex -7.082155000 0.000000000 0.965200000
+      vertex 7.082155000 0.000000000 0.965200000
+    endloop
+  endfacet
+  facet normal -0 0.361768519 0.932267954
+    outer loop
+      vertex -7.082155000 2.487295000 0.000000000
+      vertex 7.082155000 0.000000000 0.965200000
+      vertex 7.082155000 2.487295000 0.000000000
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -7.082155000 -2.487295000 0.000000000
+      vertex -7.082155000 0.000000000 0.965200000
+      vertex -7.082155000 2.487295000 0.000000000
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 7.082155000 -2.487295000 0.000000000
+      vertex 7.082155000 2.487295000 0.000000000
+      vertex 7.082155000 0.000000000 0.965200000
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex -7.082155000 -2.487295000 0.000000000
+      vertex -7.082155000 2.487295000 0.000000000
+      vertex 7.082155000 2.487295000 0.000000000
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex -7.082155000 -2.487295000 0.000000000
+      vertex 7.082155000 2.487295000 0.000000000
+      vertex 7.082155000 -2.487295000 0.000000000
+    endloop
+  endfacet
+endsolid burial_gable_envelope

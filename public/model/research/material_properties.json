@@ -1,0 +1,86 @@
+{
+  "version": "1.1.0",
+  "source_id": "src.npj2020.materials",
+  "material_scope": "Khafre/Chephren backing fossiliferous limestone samples",
+  "status": "MATERIAL_CONTEXT_NOT_UNIVERSAL_BLOCK_PROPERTY",
+  "solver_use": {
+    "allowed_as_prior": true,
+    "requires_uncertainty_sampling": true,
+    "cannot_override_measured_block_specific_data": true
+  },
+  "properties": [
+    {
+      "id": "mat.kh.backing.ucs",
+      "quantity": "uniaxial_compressive_strength",
+      "min": 12.1,
+      "max": 17.8,
+      "unit": "MPa",
+      "sample_context": "five tested backing-limestone samples"
+    },
+    {
+      "id": "mat.kh.backing.youngs",
+      "quantity": "youngs_modulus",
+      "mean": 13.82,
+      "unit": "GPa",
+      "sample_context": "five tested cylinders"
+    },
+    {
+      "id": "mat.kh.backing.tensile",
+      "quantity": "split_tensile_strength",
+      "min": 1.79,
+      "max": 3.71,
+      "unit": "MPa"
+    },
+    {
+      "id": "mat.kh.backing.shear",
+      "quantity": "single_shear_strength",
+      "min": 1.67,
+      "max": 2.28,
+      "unit": "MPa"
+    },
+    {
+      "id": "mat.kh.backing.vp",
+      "quantity": "p_wave_velocity",
+      "min": 4.5,
+      "max": 6.8,
+      "unit": "km/s"
+    },
+    {
+      "id": "mat.kh.backing.schmidt",
+      "quantity": "schmidt_rebound_number",
+      "min": 24,
+      "max": 36,
+      "unit": "RN"
+    },
+    {
+      "id": "mat.giza.backing.bulk_density_context",
+      "quantity": "bulk_density_context",
+      "min": 1.99,
+      "max": 2.31,
+      "unit": "g/cm3",
+      "sample_context": "backing-limestone samples across the three Giza pyramids; contextual range, not Khafre-block-specific"
+    },
+    {
+      "id": "mat.giza.backing.water_absorption_context",
+      "quantity": "water_absorption",
+      "min": 12,
+      "max": 20,
+      "unit": "percent",
+      "sample_context": "backing-limestone samples across the three Giza pyramids; contextual range"
+    },
+    {
+      "id": "mat.giza.backing.total_porosity_context",
+      "quantity": "total_porosity",
+      "min": 21,
+      "max": 33,
+      "unit": "percent",
+      "sample_context": "backing-limestone samples across the three Giza pyramids; contextual range"
+    }
+  ],
+  "petrography": {
+    "backing_limestone": "Fossiliferous limestone (biomicrite), mainly calcite with rare iron oxides, microcrystalline quartz and opaque minerals.",
+    "structural_mortar": "Gypsum and anhydrite with mainly calcitic rock fragments; minor quartz, biotite, iron oxides/opaques; matrix includes gypsum/calcite/anhydrite with halite contamination reported."
+  },
+  "model_warning": "These are sample-level ranges from one study. Spatial heterogeneity, weathering, moisture and block-to-block variation must be modeled explicitly before FEA/acoustic conclusions.",
+  "observatory_note": "OBSERVATORY adds physically measured context ranges while preserving the sample-scope guard. Cross-pyramid ranges are not promoted to Khafre-specific constants."
+}

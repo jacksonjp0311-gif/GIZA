@@ -1,0 +1,91 @@
+{
+  "version": "0.10.11",
+  "codename": "SOURCE-BYTE CUSTODY HANDOFF",
+  "generated_at": "2026-09-15T13:39:28.761Z",
+  "canonical_geometry_changed": false,
+  "counts": {
+    "candidates": 4,
+    "raw_byte_verified": 0,
+    "remote_receipts": 4,
+    "acquisition_attempts": 4
+  },
+  "invariants": [
+    "remote URL is not source-byte custody",
+    "provider metadata is not a cryptographic checksum",
+    "failed transfer does not alter source truth",
+    "local import computes SHA-256 from the exact received bytes",
+    "registration needs a checksum-bound render and frozen control + holdout residuals"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/source_byte_registration/manifest.json",
+      "sha256": "7fa8cc2b84c0b7f58672f70ead1a3f57d27413a8c097b32675d1bbf661cf0147",
+      "bytes": 1516
+    },
+    {
+      "path": "public/model/source_byte_registration/candidates.json",
+      "sha256": "d2fe48158b5d8c3765f0a82f67c5b2ee645dbfdd8f850b4c78f58726f296e304",
+      "bytes": 4450
+    },
+    {
+      "path": "public/model/source_byte_registration/page_locators.json",
+      "sha256": "240662a18f75dfc7bea30774cb9a0332090ca2a49ef4600a4451aca5de5fe4a3",
+      "bytes": 4077
+    },
+    {
+      "path": "public/model/source_byte_registration/rights_gates.json",
+      "sha256": "225ad554de5036e91d1e0b08eb0faaf92066097664a2cb49ba89960027bc79aa",
+      "bytes": 1195
+    },
+    {
+      "path": "public/model/source_byte_registration/registration_jobs.json",
+      "sha256": "18c76bdc084e3c110f2d84fa976b2d7bcb5ac4fc7fb3e04adff4b8c89167c808",
+      "bytes": 2688
+    },
+    {
+      "path": "public/model/source_byte_registration/remote_receipts.json",
+      "sha256": "d676912160a352c6c4acede6bca4d72cc9248a240b2ae1661a342d2b55ba317d",
+      "bytes": 2591
+    },
+    {
+      "path": "public/model/source_byte_registration/acquisition_attempts.json",
+      "sha256": "334903b5b201a68ea498ec0d7f8fb76519ec9ae0dc43a9059e15ec862e89ae59",
+      "bytes": 2541
+    },
+    {
+      "path": "public/model/plate_registration/remote_file_fingerprint.json",
+      "sha256": "3ca8000e2330232bf57ff185b9c2af95ed70bc074e0dd75ac22723e66b6e2fa8",
+      "bytes": 1312
+    },
+    {
+      "path": "public/model/plate_registration/custody_handoff.json",
+      "sha256": "8d556cb6bd291f519417d762382060b332a1dad06e7572e67fcb05ba2fbe2136",
+      "bytes": 1165
+    },
+    {
+      "path": "scripts/source_bytes/acquire-petrie.mjs",
+      "sha256": "b2a4bda162df4371b22b3d6152a2b85e562b33401ab7e2f2618228050f9937ba",
+      "bytes": 2035
+    },
+    {
+      "path": "scripts/source_bytes/import-petrie.mjs",
+      "sha256": "e52ab15a79988dd46d03d921c0552302d7aadcdbf9db1a96ca47c0d326953b38",
+      "bytes": 2905
+    },
+    {
+      "path": "scripts/source_bytes/validate.mjs",
+      "sha256": "ba9b244a1ba18d913223eea841fe3481df889095af5283f15222b6a6bffd15ec",
+      "bytes": 3843
+    },
+    {
+      "path": "docs/SOURCE_BYTE_REGISTRATION.md",
+      "sha256": "69628862e4f6e3e90d46ea5aa8c5af65b139be89f11487723a594c06fc5199cb",
+      "bytes": 3067
+    },
+    {
+      "path": "docs/CHECKSUM_HANDOFF.md",
+      "sha256": "bbb6647e5b0a2f7873bc0ceaf9413f5ffd607fe69a23f8bd5fb24b35fc61d0ad",
+      "bytes": 1681
+    }
+  ]
+}

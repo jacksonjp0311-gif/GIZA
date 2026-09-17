@@ -1,0 +1,3 @@
+# Preserve exact bytes: release manifests and historical receipts hash file content.
+# Do not normalize line endings silently on clone or checkout.
+* -text

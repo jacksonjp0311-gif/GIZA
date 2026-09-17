@@ -1,0 +1,9 @@
+{
+  "source_id": "src.nasa.srtmgl1v003",
+  "native_crs": "EPSG:4326",
+  "native_vertical_datum": "VERIFY_FROM_PRODUCT_METADATA",
+  "status": "QUARANTINED",
+  "qa_status": "PENDING",
+  "transform_receipt": null,
+  "display_allowed": false
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "policy": "Only files whose per-file page explicitly states reusable/public-domain rights are cache candidates. Metadata discovery is not equivalent to permission.",
+  "verified_files": [
+    {
+      "media_id": "media.commons.khafre_casing_2004",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_casing.jpg",
+      "license": "CC BY-SA 4.0 selectable",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_passage_2007",
+      "page_url": "https://commons.wikimedia.org/wiki/File:04_khafre_passage.jpg",
+      "license": "Copyrighted free use permission on Commons page",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_interior_2022",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_section_belzoni_1821",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Section_of_the_Pyramid.jpg",
+      "license": "Public domain / PD-Art",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_causeway_2006",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre%27s_causeway.jpg",
+      "license": "CC BY-SA 4.0 selectable",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_valley_statue_sockets",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_valley_statue_sockets.jpg",
+      "license": "CC BY-SA 4.0 selectable",
+      "status": "VERIFIED_OPEN"
+    },
+    {
+      "media_id": "media.commons.khafre_valley_corner",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_valley_corner.jpg",
+      "license": "CC BY-SA 4.0 selectable",
+      "status": "VERIFIED_OPEN"
+    }
+  ],
+  "collection_surfaces": [
+    {
+      "id": "commons.khafre.root",
+      "url": "https://commons.wikimedia.org/wiki/Category:Pyramid_of_Khafra",
+      "overlap_warning": true
+    },
+    {
+      "id": "commons.khafre.interior",
+      "url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Khafra_Pyramid",
+      "overlap_warning": true
+    },
+    {
+      "id": "commons.khafre.valley",
+      "url": "https://commons.wikimedia.org/wiki/Category:Valley_Temple_of_Khafra",
+      "overlap_warning": true
+    }
+  ],
+  "cache_status": "SELECTED_FILES_REMOTE_REFERENCE_ONLY_IN_THIS_RELEASE"
+}

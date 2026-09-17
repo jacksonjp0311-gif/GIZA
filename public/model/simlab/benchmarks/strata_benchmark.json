@@ -1,0 +1,30 @@
+{
+  "benchmark_id": "benchmark.strata.analytic.0.9.3",
+  "solver_id": "solver.strata",
+  "provenance_class": "SIMULATED",
+  "tests": [
+    {
+      "id": "overburden_100m",
+      "expected_mpa": 2.549729,
+      "computed_mpa": 2.5497289999999997,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "hydrostatic_100m",
+      "expected_mpa": 0.980665,
+      "computed_mpa": 0.980665,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "water_energy_648m",
+      "expected_kwh_m3": 1.765197,
+      "computed_kwh_m3": 1.7651970000000001,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "created_at": "2026-09-16T10:22:23.227Z"
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "monument_count": 9,
+  "monuments": [
+    {
+      "id": "mon.khafre_pyramid",
+      "name": "Pyramid of Khafre",
+      "kind": "royal_pyramid",
+      "relation": "PRIMARY_MONUMENT",
+      "evidence_state": "SURVEY_CONSTRAINED_CORE_MODEL",
+      "source_ids": [
+        "src.petrie1883",
+        "src.nell_ruggles2014",
+        "src.egypt_ministry"
+      ],
+      "notes": "Detailed local model exists; modern surface point cloud still pending."
+    },
+    {
+      "id": "mon.khafre_pyramid_temple",
+      "name": "Khafre Pyramid/Mortuary Temple",
+      "kind": "mortuary_temple",
+      "relation": "COMPLEX_COMPONENT",
+      "evidence_state": "ARCHAEOLOGICALLY_DOCUMENTED",
+      "source_ids": [
+        "src.hoelscher1912",
+        "src.digitalgiza.khafre_pyramid_temple"
+      ],
+      "notes": "Digital Giza indexes finds and publications; detailed geometry requires rights-aware plans/survey."
+    },
+    {
+      "id": "mon.khafre_causeway",
+      "name": "Khafre Causeway",
+      "kind": "causeway",
+      "relation": "COMPLEX_COMPONENT",
+      "evidence_state": "DOCUMENTED_AND_SURVEYED_PARTIALLY",
+      "source_ids": [
+        "src.aera.kh_monuments_unit",
+        "src.nell_ruggles2014"
+      ],
+      "notes": "Relative sequence to Sphinx quarry is archaeologically informative."
+    },
+    {
+      "id": "mon.khafre_valley_temple",
+      "name": "Khafre Valley Temple",
+      "kind": "valley_temple",
+      "relation": "COMPLEX_COMPONENT",
+      "evidence_state": "ARCHAEOLOGICALLY_DOCUMENTED",
+      "source_ids": [
+        "src.egypt_ministry",
+        "src.digitalgiza.khafre_valley_temple",
+        "src.opencontext.arce_sphinx"
+      ],
+      "notes": "Major open photo/plan target."
+    },
+    {
+      "id": "mon.great_sphinx",
+      "name": "Great Sphinx",
+      "kind": "rock_cut_monument",
+      "relation": "LOWER_COMPLEX_ASSOCIATED",
+      "evidence_state": "HIGH_RESOLUTION_ARCHIVE_EXISTS",
+      "source_ids": [
+        "src.egypt_ministry.sphinx",
+        "src.opencontext.arce_sphinx",
+        "src.aera.kh_monuments_unit"
+      ],
+      "notes": "Khafre attribution strongly supported but kept as archaeological interpretation."
+    },
+    {
+      "id": "mon.sphinx_temple",
+      "name": "Sphinx Temple",
+      "kind": "temple",
+      "relation": "LOWER_COMPLEX_ASSOCIATED",
+      "evidence_state": "ARCHAEOLOGICALLY_MAPPED",
+      "source_ids": [
+        "src.opencontext.arce_sphinx",
+        "src.aera.kh_sequence"
+      ],
+      "notes": "Geological block matching and construction sequence are key research evidence."
+    },
+    {
+      "id": "mon.gii_a",
+      "name": "G II-a subsidiary/satellite pyramid",
+      "kind": "subsidiary_pyramid",
+      "relation": "COMPLEX_COMPONENT",
+      "evidence_state": "CATALOGED",
+      "source_ids": [
+        "src.digitalgiza.giia"
+      ],
+      "notes": "Keep distinct from hypothetical queens-pyramid expectations."
+    },
+    {
+      "id": "mon.khafre_quarry",
+      "name": "Khafre quarry/trench context",
+      "kind": "quarry",
+      "relation": "CONSTRUCTION_SOURCE_CONTEXT",
+      "evidence_state": "CATALOGED_AND_GEOLOGICALLY_RELEVANT",
+      "source_ids": [
+        "src.digitalgiza.khafre_quarry",
+        "src.npj2020.materials"
+      ],
+      "notes": "Supports local stone sourcing context; not a block-by-block provenance map."
+    },
+    {
+      "id": "mon.area_c",
+      "name": "Area C galleries",
+      "kind": "work_infrastructure",
+      "relation": "BROADER_BUILDING_PROGRAM_CONTEXT",
+      "evidence_state": "REEXCAVATED_INTERPRETATION",
+      "source_ids": [
+        "src.aera.area_c"
+      ],
+      "notes": "Storage/craft interpretation preferred over old barracks label."
+    }
+  ]
+}

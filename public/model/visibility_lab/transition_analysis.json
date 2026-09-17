@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "transition_count": 22,
+  "high_contrast_count": 4,
+  "transitions": [
+    {
+      "threshold_id": "thr.vt.north",
+      "from": "EXTERIOR",
+      "to": "room.vt.north_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.south",
+      "from": "EXTERIOR",
+      "to": "room.vt.south_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.n_to_vest",
+      "from": "room.vt.north_entry",
+      "to": "room.vt.vestibule",
+      "from_environment": "THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.s_to_vest",
+      "from": "room.vt.south_entry",
+      "to": "room.vt.vestibule",
+      "from_environment": "THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "TOPOLOGY_RECONSTRUCTED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.vest_to_hall",
+      "from": "room.vt.vestibule",
+      "to": "room.vt.t_hall",
+      "from_environment": "INTERIOR",
+      "to_environment": "PILLARED_INTERIOR",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED_PROGRAM",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.vt.hall_to_causeway",
+      "from": "room.vt.t_hall",
+      "to": "room.vt.nw_causeway_exit",
+      "from_environment": "PILLARED_INTERIOR",
+      "to_environment": "THRESHOLD",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "SOURCE_BACKED_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.cw.route",
+      "from": "room.vt.nw_causeway_exit",
+      "to": "room.cw.covered_corridor",
+      "from_environment": "THRESHOLD",
+      "to_environment": "ENCLOSED_ROUTE",
+      "contrast_index": 3,
+      "contrast_class": "HIGH",
+      "status": "HISTORICAL_MEASUREMENT",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.cw.to_pt",
+      "from": "room.cw.covered_corridor",
+      "to": "room.pt.entry_branch",
+      "from_environment": "ENCLOSED_ROUTE",
+      "to_environment": "BRANCH_THRESHOLD",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "PRIMARY_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.branch_main",
+      "from": "room.pt.entry_branch",
+      "to": "room.pt.vestibule",
+      "from_environment": "BRANCH_THRESHOLD",
+      "to_environment": "INTERIOR",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.vest_wide",
+      "from": "room.pt.vestibule",
+      "to": "room.pt.wide_hall",
+      "from_environment": "INTERIOR",
+      "to_environment": "INTERIOR_HALL",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.wide_deep",
+      "from": "room.pt.wide_hall",
+      "to": "room.pt.deep_hall",
+      "from_environment": "INTERIOR_HALL",
+      "to_environment": "INTERIOR_HALL",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.deep_court",
+      "from": "room.pt.deep_hall",
+      "to": "room.pt.statue_court",
+      "from_environment": "INTERIOR_HALL",
+      "to_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_ambulatory",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.ambulatory",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "CIRCULATION",
+      "contrast_index": 0,
+      "contrast_class": "LOW",
+      "status": "SOURCE_BACKED",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_chapels",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.five_chapels",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "INNER_ROOMS",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "SOURCE_BACKED_PROGRAM",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.court_inner",
+      "from": "room.pt.statue_court",
+      "to": "room.pt.inner_zone",
+      "from_environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "to_environment": "INNER_ROOMS",
+      "contrast_index": 2,
+      "contrast_class": "MODERATE",
+      "status": "FUNCTIONAL_INTERPRETATION",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.pt.inner_pycourt",
+      "from": "room.pt.inner_zone",
+      "to": "room.pt.pyramid_court",
+      "from_environment": "INNER_ROOMS",
+      "to_environment": "COURT_THRESHOLD",
+      "contrast_index": 3,
+      "contrast_class": "HIGH",
+      "status": "ROOM_PROGRAM_TOPOLOGY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.upper_port",
+      "from": "room.py.upper_entry",
+      "to": "room.py.portcullis",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CLOSURE",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.lower_port",
+      "from": "room.py.lower_entry",
+      "to": "room.py.portcullis",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CLOSURE",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.lower_chamber",
+      "from": "room.py.lower_entry",
+      "to": "room.py.lower_chamber",
+      "from_environment": "INTERIOR_PASSAGE",
+      "to_environment": "CHAMBER",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "thr.py.port_burial",
+      "from": "room.py.portcullis",
+      "to": "room.py.burial_chamber",
+      "from_environment": "CLOSURE",
+      "to_environment": "BURIAL_CHAMBER",
+      "contrast_index": 1,
+      "contrast_class": "LOW",
+      "status": "PRIMARY_HISTORICAL_SURVEY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "synthetic.room.py.upper_entry.exterior",
+      "from": "EXTERIOR",
+      "to": "room.py.upper_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "INTERIOR_PASSAGE",
+      "contrast_index": 4,
+      "contrast_class": "HIGH",
+      "status": "TOPOLOGY_SEED_ONLY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    },
+    {
+      "threshold_id": "synthetic.room.py.lower_entry.exterior",
+      "from": "EXTERIOR",
+      "to": "room.py.lower_entry",
+      "from_environment": "EXTERIOR",
+      "to_environment": "INTERIOR_PASSAGE",
+      "contrast_index": 4,
+      "contrast_class": "HIGH",
+      "status": "TOPOLOGY_SEED_ONLY",
+      "guard": "Contrast index is a topology/display heuristic, not a physiological, ritual, or emotional measure."
+    }
+  ]
+}

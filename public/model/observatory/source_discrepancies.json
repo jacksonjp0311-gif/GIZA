@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "policy": "Never silently reconcile conflicting source statements. Preserve both values, scope, locator, and preferred operational interpretation.",
+  "discrepancies": [
+    {
+      "id": "disc.material.kh_tensile_min",
+      "domain": "materials",
+      "severity": "HIGH_FOR_MODEL_PRIOR",
+      "source_ids": [
+        "src.npj2020.materials"
+      ],
+      "quantity": "Khafre backing-limestone split tensile minimum",
+      "observations": [
+        {
+          "locator": "main-text splitting tensile paragraph",
+          "value": 1.79,
+          "unit": "MPa"
+        },
+        {
+          "locator": "Table 13 sample 5",
+          "value": 1.49,
+          "unit": "MPa"
+        }
+      ],
+      "status": "SOURCE_INTERNAL_CONFLICT",
+      "canonical_rule": "Do not collapse to one value. Sample-level calculations use Table 13 row values; prose summaries must mention the paragraph/table conflict.",
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "disc.arce.archive_counts",
+      "domain": "archive_inventory",
+      "severity": "MEDIUM",
+      "source_ids": [
+        "src.aera.online_data",
+        "src.arce.sphinx_archive_final"
+      ],
+      "quantity": "ARCE Sphinx archive media inventory",
+      "observations": [
+        {
+          "locator": "earlier AERA Online Data inventory",
+          "slides": 5000,
+          "black_white_photos": 2716
+        },
+        {
+          "locator": "ARCE/AERA final digitization release",
+          "maps_drawings": 364,
+          "slides": 3857,
+          "black_white_photos": 1740
+        }
+      ],
+      "status": "SCOPE_OR_PHASE_DIFFERENCE_UNRESOLVED",
+      "canonical_rule": "Treat the earlier figures as archive/inventory context and final figures as digitized-release counts. Do not overwrite either until collection scope is reconciled.",
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "disc.gpmp.g1_1.coordinate_variant",
+      "domain": "survey_control",
+      "severity": "LOW_EXPECTED_REESTABLISHMENT_VARIANT",
+      "source_ids": [
+        "src.dash.giza_surveys",
+        "src.dash.gpmp_frame2015"
+      ],
+      "quantity": "GPMP G1.1 / Petrie Q published coordinate",
+      "observations": [
+        {
+          "locator": "AERAGRAM 13-2 / 2012 New Angles plot",
+          "northing_m": 100115.802,
+          "easting_m": 500115.607
+        },
+        {
+          "locator": "GDFS 2015 / later published frame example",
+          "northing_m": 100115.803,
+          "easting_m": 500115.61
+        }
+      ],
+      "status": "PUBLISHED_VARIANT_PRESERVED",
+      "canonical_rule": "Preserve both publication values with their epochs/source context. Do not average them silently; use an explicit survey adjustment if one is required.",
+      "geometry_write_authority": "NONE_AUTOMATIC"
+    }
+  ]
+}

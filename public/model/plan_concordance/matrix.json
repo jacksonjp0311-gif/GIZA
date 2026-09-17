@@ -1,0 +1,559 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "row_count": 14,
+  "policy": "Agreement is descriptive evidence concordance, not probability. Independent source families are counted separately; derivative reconstructions are flagged as dependence rather than confirmations.",
+  "rows": [
+    {
+      "id": "conc.vt.dual_east_entries",
+      "subject": "khafre_valley_temple",
+      "statement": "Two entrances occupy the east façade and feed the Valley Temple interior.",
+      "category": "TOPOLOGY",
+      "support": [
+        "obs.room.oxford.valley_entries",
+        "obs.plan.dg.vt.014",
+        "obs.plan.dg.vt.015"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 3,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.valley_entries",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Valley Temple, lines 380–381"
+        },
+        {
+          "observation_id": "obs.plan.dg.vt.014",
+          "source_id": "src.mr1966.plate014",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 014",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88327 / ID maragioglio-rinaldi_v_plate_014"
+        },
+        {
+          "observation_id": "obs.plan.dg.vt.015",
+          "source_id": "src.mr1966.plate015",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 015",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88328 / ID maragioglio-rinaldi_v_plate_015"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.t_plan",
+      "subject": "khafre_valley_temple",
+      "statement": "The Valley Temple interior has a T-shaped hall/plan organization.",
+      "category": "ROOM_PROGRAM",
+      "support": [
+        "obs.room.oxford.valley_plan",
+        "obs.plan.dg.vt.014",
+        "obs.plan.dg.vt.015"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 3,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.valley_plan",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Valley Temple, lines 377–383"
+        },
+        {
+          "observation_id": "obs.plan.dg.vt.014",
+          "source_id": "src.mr1966.plate014",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 014",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88327 / ID maragioglio-rinaldi_v_plate_014"
+        },
+        {
+          "observation_id": "obs.plan.dg.vt.015",
+          "source_id": "src.mr1966.plate015",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 015",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88328 / ID maragioglio-rinaldi_v_plate_015"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.23_positions",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "The T-shaped hall preserves twenty-three statuary positions/bases/niches.",
+      "category": "STATUARY_ARCHITECTURE",
+      "support": [
+        "obs.room.oxford.valley_niches",
+        "obs.visibility.smithsonian.valley_hall"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "SMITHSONIAN_ARCHIVE"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE",
+      "support_count": 2,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.valley_niches",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Valley Temple, line 382"
+        },
+        {
+          "observation_id": "obs.visibility.smithsonian.valley_hall",
+          "source_id": "src.smithsonian.elisofon.khafre",
+          "source_title": "Eliot Elisofon Khafre photographic records",
+          "truth_class": "ARCHIVAL_PHOTO_RECORD_PLUS_CATALOG_DESCRIPTION",
+          "locator": "Eliot Elisofon Khafre Valley Temple interior records; Smithsonian object text"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.16_pillars",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "The Valley Temple T-shaped hall is supported by sixteen granite pillars.",
+      "category": "COLUMN_PROGRAM",
+      "support": [
+        "obs.visibility.smithsonian.valley_hall",
+        "obs.room.ministry.valley_hall"
+      ],
+      "independence_groups": [
+        "SMITHSONIAN_ARCHIVE",
+        "EGYPT_MINISTRY"
+      ],
+      "agreement": "MODERATE",
+      "metric_authority": "NONE",
+      "support_count": 2,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.visibility.smithsonian.valley_hall",
+          "source_id": "src.smithsonian.elisofon.khafre",
+          "source_title": "Eliot Elisofon Khafre photographic records",
+          "truth_class": "ARCHIVAL_PHOTO_RECORD_PLUS_CATALOG_DESCRIPTION",
+          "locator": "Eliot Elisofon Khafre Valley Temple interior records; Smithsonian object text"
+        },
+        {
+          "observation_id": "obs.room.ministry.valley_hall",
+          "source_id": "src.egypt_ministry",
+          "source_title": "Pyramid Complex of Khafre (Khefren)",
+          "truth_class": "OFFICIAL_SUMMARY",
+          "locator": "Official Khafre complex summary — Valley Temple"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.vt.statue_pattern",
+      "subject": "khafre_valley_temple_t_hall",
+      "statement": "A 3/7/3/7/3 arrangement is a scholarly reconstruction of the 23 positions.",
+      "category": "RECONSTRUCTION",
+      "support": [
+        "obs.room.oxford.valley_niches"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "SINGLE_SYNTHESIS",
+      "metric_authority": "NONE",
+      "support_count": 1,
+      "source_count": 1,
+      "independence_group_count": 1,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.valley_niches",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Valley Temple, line 382"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.causeway.covered",
+      "subject": "khafre_causeway",
+      "statement": "The causeway functioned as a covered, narrow/linear route between lower and upper complex.",
+      "category": "MOVEMENT_ENVIRONMENT",
+      "support": [
+        "obs.room.hoelscher.causeway_environment",
+        "obs.room.oxford.causeway",
+        "obs.room.oxford.causeway_relief_program"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.hoelscher.causeway_environment",
+          "source_id": "src.hoelscher1912",
+          "source_title": "Das Grabdenkmal des Königs Chephren",
+          "truth_class": "PRIMARY_EXCAVATION_INTERPRETATION",
+          "locator": "p. 24; Plate X"
+        },
+        {
+          "observation_id": "obs.room.oxford.causeway",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Causeway, lines 359–362"
+        },
+        {
+          "observation_id": "obs.room.oxford.causeway_relief_program",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "ACADEMIC_SYNTHESIS",
+          "locator": "Khafra’s Causeway, lines 359–376"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.causeway.length",
+      "subject": "khafre_causeway",
+      "statement": "Published total length values cluster at 494–494.6 m.",
+      "category": "MEASUREMENT",
+      "support": [
+        "obs.room.hoelscher.causeway_length",
+        "obs.room.oxford.causeway"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "AGREE_WITH_ROUNDING_DIFFERENCE",
+      "metric_authority": "NONE_PENDING_COMMON_FRAME",
+      "support_count": 2,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.hoelscher.causeway_length",
+          "source_id": "src.hoelscher1912",
+          "source_title": "Das Grabdenkmal des Königs Chephren",
+          "truth_class": "HISTORICAL_MEASUREMENT",
+          "locator": "p. 24 / detailed causeway discussion p. 49"
+        },
+        {
+          "observation_id": "obs.room.oxford.causeway",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Causeway, lines 359–362"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.program",
+      "subject": "khafre_pyramid_temple",
+      "statement": "The Pyramid Temple program includes wide/deep pillared halls, a court, five western chapels and magazines.",
+      "category": "ROOM_PROGRAM",
+      "support": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.plan.dg.pt.013"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 3,
+      "independence_group_count": 3,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.hoelscher.program",
+          "source_id": "src.hoelscher1912",
+          "source_title": "Das Grabdenkmal des Königs Chephren",
+          "truth_class": "PRIMARY_EXCAVATION_DESCRIPTION",
+          "locator": "Contents; pp. 24–30; plates III/VI"
+        },
+        {
+          "observation_id": "obs.room.oxford.pyramid_temple_program",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Pyramid Temple, lines 354–358"
+        },
+        {
+          "observation_id": "obs.plan.dg.pt.013",
+          "source_id": "src.mr1966.plate013",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 013",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88326 / ID maragioglio-rinaldi_v_plate_013"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.dimensions",
+      "subject": "khafre_pyramid_temple",
+      "statement": "Modern synthesis reports the Pyramid Temple at approximately 56.2 × 111.2 m.",
+      "category": "MEASUREMENT",
+      "support": [
+        "obs.room.oxford.pyramid_temple_dimensions"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS"
+      ],
+      "agreement": "SINGLE_SYNTHESIS",
+      "metric_authority": "NONE_PENDING_PLAN_PARSE",
+      "support_count": 1,
+      "source_count": 1,
+      "independence_group_count": 1,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.pyramid_temple_dimensions",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Pyramid Temple, lines 353–358"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.court_statuary",
+      "subject": "khafre_pyramid_temple_statue_court",
+      "statement": "The court carried monumental royal-image architecture, but statue form/placement reconstruction is non-unique.",
+      "category": "RECONSTRUCTION_CONFLICT",
+      "support": [
+        "obs.room.hoelscher.court_statue_holes",
+        "obs.room.oxford.court_reconstruction_dispute",
+        "obs.room.met.court_doorway_program"
+      ],
+      "independence_groups": [
+        "HOELSCHER_PRIMARY",
+        "OXFORD_SYNTHESIS",
+        "MET_CURATORIAL"
+      ],
+      "agreement": "ARCHITECTURE_STRONG_RECONSTRUCTION_DISPUTED",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 3,
+      "independence_group_count": 3,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.hoelscher.court_statue_holes",
+          "source_id": "src.hoelscher1912",
+          "source_title": "Das Grabdenkmal des Königs Chephren",
+          "truth_class": "PRIMARY_FIND_PLUS_RECONSTRUCTION",
+          "locator": "p. 56 (digital page #0088)"
+        },
+        {
+          "observation_id": "obs.room.oxford.court_reconstruction_dispute",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_CONFLICT_SYNTHESIS",
+          "locator": "Khafra’s Pyramid Temple, lines 355–358"
+        },
+        {
+          "observation_id": "obs.room.met.court_doorway_program",
+          "source_id": "src.met.khafre_architrave",
+          "source_title": "Cast of an architrave with the name of Khafre",
+          "truth_class": "CURATORIAL_RECONSTRUCTION",
+          "locator": "Met object N.A.1999.4.1 — architectural reconstruction of Khafre architrave"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.pt.five_chapels",
+      "subject": "khafre_pyramid_temple_five_chapels",
+      "statement": "Five chapels beyond the court are architectural program elements; statues/barques as contents remain probable reconstruction.",
+      "category": "ARCHITECTURE_VS_FUNCTION",
+      "support": [
+        "obs.room.oxford.pyramid_temple_program",
+        "obs.room.oxford.five_chapels_function",
+        "obs.plan.dg.pt.013"
+      ],
+      "independence_groups": [
+        "OXFORD_SYNTHESIS",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "ARCHITECTURE_STRONG_FUNCTION_INTERPRETIVE",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.oxford.pyramid_temple_program",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_SYNTHESIS",
+          "locator": "Khafra’s Pyramid Temple, lines 354–358"
+        },
+        {
+          "observation_id": "obs.room.oxford.five_chapels_function",
+          "source_id": "src.oxford.flentye2018",
+          "source_title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+          "truth_class": "SCHOLARLY_RECONSTRUCTION",
+          "locator": "Khafra’s Pyramid Temple, line 358"
+        },
+        {
+          "observation_id": "obs.plan.dg.pt.013",
+          "source_id": "src.mr1966.plate013",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 013",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88326 / ID maragioglio-rinaldi_v_plate_013"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.py.interior_plan",
+      "subject": "khafre_pyramid_interior",
+      "statement": "Upper/lower entrance systems, lower chamber and burial route are represented in historical survey and later plan records.",
+      "category": "INTERIOR_TOPOLOGY",
+      "support": [
+        "obs.room.perring.two_entrances",
+        "obs.room.perring.lower_chamber",
+        "obs.room.perring.belzoni_chamber",
+        "obs.plan.dg.pyr.009"
+      ],
+      "independence_groups": [
+        "PERRING_PRIMARY",
+        "MR1966_PLAN_CATALOG"
+      ],
+      "agreement": "STRONG_TOPOLOGY",
+      "metric_authority": "NONE_EXISTING_MODEL_CROSSCHECK",
+      "support_count": 4,
+      "source_count": 2,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.perring.two_entrances",
+          "source_id": "src.perring1840.khafre",
+          "source_title": "The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids",
+          "truth_class": "PRIMARY_HISTORICAL_SURVEY",
+          "locator": "Vol. II, Plates I–IV; digital page #0005"
+        },
+        {
+          "observation_id": "obs.room.perring.lower_chamber",
+          "source_id": "src.perring1840.khafre",
+          "source_title": "The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids",
+          "truth_class": "PRIMARY_HISTORICAL_SURVEY",
+          "locator": "Vol. II, Plate IV, digital page #0005"
+        },
+        {
+          "observation_id": "obs.room.perring.belzoni_chamber",
+          "source_id": "src.perring1840.khafre",
+          "source_title": "The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids",
+          "truth_class": "PRIMARY_HISTORICAL_SURVEY",
+          "locator": "Vol. II, Plate III, digital page #0005"
+        },
+        {
+          "observation_id": "obs.plan.dg.pyr.009",
+          "source_id": "src.mr1966.plate009",
+          "source_title": "L’Architettura delle Piramidi Menfite V — Plate 009",
+          "truth_class": "CATALOG_PLAN_RECORD",
+          "locator": "Digital Giza photo record 88222 / ID maragioglio-rinaldi_v_plate_009"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.arce.vt.scale",
+      "subject": "khafre_valley_temple",
+      "statement": "ARCE/Open Context archive inventory confirms a detailed Khafre Valley Temple map at 1:100.",
+      "category": "SURVEY_ASSET",
+      "support": [
+        "obs.room.arce.valley_plan_1_100"
+      ],
+      "independence_groups": [
+        "ARCE_ARCHIVE"
+      ],
+      "agreement": "ARCHIVE_CONFIRMED_BYTES_PENDING",
+      "metric_authority": "NONE_UNTIL_BYTES_FRAME_PARSED",
+      "support_count": 1,
+      "source_count": 1,
+      "independence_group_count": 1,
+      "support_detail": [
+        {
+          "observation_id": "obs.room.arce.valley_plan_1_100",
+          "source_id": "src.opencontext.arce_sphinx",
+          "source_title": "ARCE Sphinx Project 1979–1983 Archive",
+          "truth_class": "ARCHIVE_INVENTORY_FACT",
+          "locator": "Project archive inventory — detailed maps"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    },
+    {
+      "id": "conc.model.lineage",
+      "subject": "digital_reconstruction_method",
+      "statement": "Independent reconstruction projects explicitly rely on Maragioglio/Rinaldi plan families rather than constituting new independent measurements.",
+      "category": "SOURCE_DEPENDENCE",
+      "support": [
+        "obs.plan.isac.source_lineage",
+        "obs.plan.digitalgiza.pyramid_temple_refs",
+        "obs.plan.digitalgiza.valley_temple_refs"
+      ],
+      "independence_groups": [
+        "ISAC_METHOD",
+        "DIGITAL_GIZA_BIBLIOGRAPHY"
+      ],
+      "agreement": "DEPENDENCE_IDENTIFIED",
+      "metric_authority": "NONE",
+      "support_count": 3,
+      "source_count": 3,
+      "independence_group_count": 2,
+      "support_detail": [
+        {
+          "observation_id": "obs.plan.isac.source_lineage",
+          "source_id": "src.isac.giza_model_sources",
+          "source_title": "Sources for The Giza Plateau Computer Model",
+          "truth_class": "PROJECT_METHOD_FACT",
+          "locator": "Architectural features / Topography source list"
+        },
+        {
+          "observation_id": "obs.plan.digitalgiza.pyramid_temple_refs",
+          "source_id": "src.digitalgiza.khafre_pyramid_temple",
+          "source_title": "Digital Giza — Khafre Pyramid Temple",
+          "truth_class": "CATALOG_FACT",
+          "locator": "3D model/full bibliography record"
+        },
+        {
+          "observation_id": "obs.plan.digitalgiza.valley_temple_refs",
+          "source_id": "src.digitalgiza.khafre_valley_temple",
+          "source_title": "Digital Giza — Khafre Valley Temple",
+          "truth_class": "CATALOG_FACT",
+          "locator": "3D model/full bibliography record"
+        }
+      ],
+      "geometry_write_authority": "NONE"
+    }
+  ]
+}

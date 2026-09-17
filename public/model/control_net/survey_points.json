@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "frame_id": "frame.gpmp.native",
+  "variant_policy": "Preserve published coordinate variants as separate records; never silently average.",
+  "points": [
+    {
+      "id": "gpmp.origin.definition",
+      "label": "GPMP assigned grid origin",
+      "easting_m": 500000.0,
+      "northing_m": 100000.0,
+      "elevation_m": null,
+      "kind": "FRAME_ORIGIN_DEFINITION",
+      "source_id": "src.dash.gpmp_frame2015",
+      "epoch_or_release": "frame definition",
+      "status": "PUBLISHED",
+      "observation_id": "obs.gpmp.frame_origin"
+    },
+    {
+      "id": "gpmp.g1_1.2015",
+      "label": "G1.1 / Petrie Q survey marker",
+      "easting_m": 500115.61,
+      "northing_m": 100115.803,
+      "elevation_m": null,
+      "kind": "SURVEY_CONTROL",
+      "source_id": "src.dash.gpmp_frame2015",
+      "epoch_or_release": "GDFS 2015 publication",
+      "status": "PUBLISHED",
+      "variant_group": "gpmp.g1_1",
+      "observation_id": "obs.gpmp.g1_1.2015"
+    },
+    {
+      "id": "gpmp.g1_1.2012",
+      "label": "G1.1 / Petrie Q survey marker",
+      "easting_m": 500115.607,
+      "northing_m": 100115.802,
+      "elevation_m": null,
+      "kind": "SURVEY_CONTROL",
+      "source_id": "src.dash.giza_surveys",
+      "source_locator": "AERAGRAM 13-2 / New Angles on the Great Pyramid",
+      "epoch_or_release": "2012 publication",
+      "status": "PUBLISHED",
+      "variant_group": "gpmp.g1_1",
+      "observation_id": "obs.gpmp.g1_1.2012"
+    },
+    {
+      "id": "gpmp.g1_2.2012",
+      "label": "G1.2 / Petrie U survey marker",
+      "easting_m": 500115.858,
+      "northing_m": 99884.402,
+      "elevation_m": null,
+      "kind": "SURVEY_CONTROL",
+      "source_id": "src.dash.giza_surveys",
+      "source_locator": "AERAGRAM 13-2 / New Angles on the Great Pyramid",
+      "epoch_or_release": "2012 publication",
+      "status": "PUBLISHED",
+      "observation_id": "obs.gpmp.g1_2.2012"
+    },
+    {
+      "id": "gpmp.g1_4.2012",
+      "label": "G1.4 / Petrie O survey marker",
+      "easting_m": 499883.898,
+      "northing_m": 100115.591,
+      "elevation_m": null,
+      "kind": "SURVEY_CONTROL",
+      "source_id": "src.dash.giza_surveys",
+      "source_locator": "AERAGRAM 13-2 / New Angles on the Great Pyramid",
+      "epoch_or_release": "2012 publication",
+      "status": "PUBLISHED",
+      "observation_id": "obs.gpmp.g1_4.2012"
+    },
+    {
+      "id": "gpmp.sp4.2006",
+      "label": "SP4 south of Khafre Valley Temple",
+      "easting_m": 500390.022,
+      "northing_m": 99459.759,
+      "elevation_m": null,
+      "kind": "SURVEY_CONTROL",
+      "source_id": "src.dash.gpmp_geophys2006",
+      "epoch_or_release": "2006 geophysics survey",
+      "status": "PUBLISHED",
+      "guard": "No elevation was ingested; Z remains unresolved.",
+      "observation_id": "obs.gpmp.sp4"
+    }
+  ]
+}

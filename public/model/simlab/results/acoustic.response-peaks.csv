@@ -1,0 +1,13 @@
+frequency_hz,screening_amplitude,dominant_components
+8.750000,89.146771044,upper_horizontal_gh|burial_chamber|lower_chamber
+10.250000,100.839903142,burial_chamber|upper_entrance_existing|lower_entrance_existing
+12.000000,105.692963646,burial_chamber|upper_horizontal_gh|connecting_ef
+15.250000,105.751349948,upper_entrance_existing|lower_entrance_existing|burial_chamber
+17.500000,110.377926639,upper_horizontal_gh|burial_chamber|lower_chamber
+21.750000,130.753709563,upper_horizontal_gh|burial_chamber|upper_horizontal_jg
+25.250000,133.249044421,burial_chamber|upper_horizontal_gh|lower_entrance_existing
+35.000000,186.364619520,burial_chamber|upper_horizontal_gh|lower_chamber
+40.000000,132.296101671,burial_chamber|lower_chamber|lower_entrance_existing
+49.500000,99.620740009,lower_chamber|upper_horizontal_jg|connecting_ef
+54.000000,103.644255494,lower_chamber|upper_horizontal_jg|connecting_fg
+65.000000,110.141009627,lower_chamber|upper_horizontal_jg|lower_horizontal_ce

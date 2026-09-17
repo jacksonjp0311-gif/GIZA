@@ -1,0 +1,18 @@
+{
+  "version": "0.8.1",
+  "codename": "FIELD",
+  "geospatial_anchor": "CONTEXT_REGISTERED_NOT_SURVEY_TIED",
+  "terrain_active": false,
+  "photo_nodes": 6,
+  "photo_edges": 5,
+  "numeric_uncertainty_targets": 4,
+  "promotion_targets": 6,
+  "acquisition_targets": 5,
+  "truth_guards": [
+    "No DEM bytes -> no real terrain render",
+    "No solved camera -> no 3-D photo frustum",
+    "No numeric uncertainty -> no zero-width certainty assumption",
+    "No E4 evidence receipt -> no FORGE cell becomes mapped stone",
+    "No survey tie -> geographic anchor remains context-grade"
+  ]
+}

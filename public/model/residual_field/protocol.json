@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "codename": "RESIDUAL FIELD + CONSTRAINT HIERARCHY",
+  "state": "PREREGISTERED_BEFORE_ARCHAEOLOGICAL_RESIDUALS",
+  "input_contract": {
+    "required_fit_result": "public/model/plate_registration/first_plate_result.json",
+    "analyze_failures": true,
+    "required_fields": [
+      "fit",
+      "holdout_residuals",
+      "holdout_summary",
+      "source_sha256"
+    ]
+  },
+  "classification_rules": {
+    "UNIFORM_SYSTEMATIC_CANDIDATE": "directional coherence >=0.80 and sector RMS ratio <1.75",
+    "LOCALIZED_DISAGREEMENT_CANDIDATE": "sector RMS ratio >=2.0 or max residual >=2.5*median",
+    "MIXED_OR_UNRESOLVED": "otherwise"
+  },
+  "hard_rules": [
+    "classification labels are diagnostic candidates, not causal conclusions",
+    "all holdout residuals are retained",
+    "no threshold changes after archaeological residuals are observed",
+    "no automatic outlier removal",
+    "failed archaeological fits are analyzed and preserved",
+    "residual patterns cannot establish ritual meaning"
+  ]
+}

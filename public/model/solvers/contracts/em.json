@@ -1,0 +1,29 @@
+{
+  "solver_id": "solver.em",
+  "inputs_required": [
+    "geometry_snapshot",
+    "material_em",
+    "source_definition"
+  ],
+  "parameters": [
+    "relative_permittivity",
+    "conductivity_s_m",
+    "frequency_range_hz",
+    "polarization"
+  ],
+  "controls_required": [
+    "perturbed_geometry",
+    "homogeneous_material_reference"
+  ],
+  "outputs_required": [
+    "field_metric",
+    "resonance_or_response_spectrum",
+    "geometry_sensitivity"
+  ],
+  "uncertainty_required": [
+    "material_em",
+    "geometry",
+    "boundary_conditions"
+  ],
+  "falsification": "Do not infer an energy source from passive field concentration; require declared excitation and conversion chain."
+}

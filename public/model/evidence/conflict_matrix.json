@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "conflicts": [
+    {
+      "id": "conf.kh.original_height",
+      "quantity": "Khafre original height",
+      "scope": "part.pyramid.khafre",
+      "status": "RESOLVED_BY_SEMANTICS_AND_PRIORITY",
+      "observations": [
+        {
+          "source_id": "src.petrie1883",
+          "value_m": 143.8656,
+          "uncertainty_m": 0.3302,
+          "kind": "derived_from_measured_base_and_slope"
+        },
+        {
+          "source_id": "src.hoelscher1912",
+          "value_m": 143.5,
+          "uncertainty_m": null,
+          "kind": "geometric_relation_2_to_3"
+        },
+        {
+          "source_id": "src.egypt_ministry",
+          "value_m": 143.5,
+          "uncertainty_m": null,
+          "kind": "official_summary"
+        }
+      ],
+      "canonical_rule": "Use Petrie's survey-derived value for rev.0003 geometric envelope; preserve 143.5 m as historical/official summary context, not averaged into the metric model.",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "conf.kh.base_length",
+      "quantity": "Khafre base side",
+      "scope": "part.pyramid.khafre",
+      "status": "RESOLVED_BY_SOURCE_GRANULARITY",
+      "observations": [
+        {
+          "source_id": "src.petrie1883",
+          "value_m": 215.26246,
+          "kind": "mean_of_four_measured_sides"
+        },
+        {
+          "source_id": "src.hoelscher1912",
+          "value_m": 215.25,
+          "kind": "rounded/reconstructed_side_length"
+        },
+        {
+          "source_id": "src.scidep2025",
+          "value_m": 215.3,
+          "kind": "modern_rounded_context"
+        }
+      ],
+      "canonical_rule": "Retain four Petrie sides and their mean. Rounded later summaries are crosschecks only.",
+      "severity": "LOW"
+    },
+    {
+      "id": "conf.kh.current_vs_original_height",
+      "quantity": "height semantics",
+      "scope": "part.pyramid.khafre",
+      "status": "NOT_A_CONFLICT_DIFFERENT_EPOCH",
+      "observations": [
+        {
+          "source_id": "src.scidep2025",
+          "value_m": 136.4,
+          "kind": "modern/current_height_context"
+        },
+        {
+          "source_id": "src.egypt_ministry",
+          "value_m": 143.5,
+          "kind": "original_height_summary"
+        }
+      ],
+      "canonical_rule": "Store current_eroded_height and original_reconstructed_height as distinct fields. Never compare as competing measurements.",
+      "severity": "HIGH_IF_MERGED"
+    },
+    {
+      "id": "conf.kh.slope",
+      "quantity": "casing face slope",
+      "scope": "part.pyramid.khafre",
+      "status": "RESOLVED_BY_PRIMARY_MEASUREMENT",
+      "observations": [
+        {
+          "source_id": "src.petrie1883",
+          "value_deg": 53.1666667,
+          "uncertainty_deg": 0.0666667,
+          "kind": "best measured statement"
+        },
+        {
+          "source_id": "src.hoelscher1912",
+          "value_relation": "4:3",
+          "equivalent_deg_approx": 53.1301024,
+          "kind": "idealized_design_relation"
+        }
+      ],
+      "canonical_rule": "Measured Petrie slope controls current model; ideal 4:3 is retained as a design hypothesis/crosscheck.",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "conf.arce_archive_counts",
+      "quantity": "digitized archive inventory",
+      "scope": "future_scope.sphinx",
+      "status": "EXPLAIN_AS_SCOPE_DIFFERENCE_UNTIL_RECORD_LEVEL_AUDIT",
+      "observations": [
+        {
+          "source_id": "src.arce.sphinx_database",
+          "maps_drawings": 364,
+          "slides": 3857,
+          "black_white_photos": 1740,
+          "kind": "digitized/preserved inventory"
+        },
+        {
+          "source_id": "src.zenodo.arce_media",
+          "data_volume_gb_approx": 35,
+          "kind": "aggregated_media_deposit"
+        }
+      ],
+      "canonical_rule": "Do not derive total original archive size from summary counts. Track digitized item counts and aggregated byte-deposit size separately.",
+      "severity": "LOW"
+    },
+    {
+      "id": "conf.deep_claim_evidence_status",
+      "quantity": "reported Khafre deep shafts/helices/terminals",
+      "scope": "deep_claim_layer",
+      "status": "UNVERIFIED_NO_PROMOTION",
+      "observations": [
+        {
+          "source_id": "src.ahrama.deep_claim_2025",
+          "kind": "public_claim_reporting",
+          "geometry_authority": 0
+        },
+        {
+          "source_id": "src.ahrama.deep_claim_retraction_context_2026",
+          "kind": "later methodological/retraction context",
+          "geometry_authority": 0
+        },
+        {
+          "source_id": "src.scidep2025",
+          "kind": "independent_real_Khafre_muography_project_but_no_deep_claim_confirmation",
+          "geometry_authority": 0
+        }
+      ],
+      "canonical_rule": "All 31 deep-claim parts remain UNVERIFIED. No source in CANON-01 independently reproduces the claimed geometry.",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "conf.remote_data_resolution",
+      "quantity": "spatial resolution vs model detail",
+      "scope": "giza_plateau",
+      "status": "RESOLVED_BY_LOD_POLICY",
+      "observations": [
+        {
+          "source_id": "src.nasa.srtmgl1v003",
+          "resolution": "~30 m"
+        },
+        {
+          "source_id": "src.copernicus.dem",
+          "resolution": "30/90 m"
+        },
+        {
+          "source_id": "src.copernicus.sentinel2",
+          "resolution": "10/20/60 m"
+        },
+        {
+          "source_id": "src.usgs.landsat_c2",
+          "resolution": "30 m"
+        }
+      ],
+      "canonical_rule": "Remote-sensing products can drive terrain/site-context LOD only. They cannot create monument, chamber, block, or stone geometry.",
+      "severity": "CRITICAL_IF_MISUSED"
+    }
+  ]
+}

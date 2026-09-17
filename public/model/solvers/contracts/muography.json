@@ -1,0 +1,32 @@
+{
+  "solver_id": "solver.muography",
+  "inputs_required": [
+    "geometry_snapshot",
+    "density_model",
+    "detector_geometry",
+    "muon_flux_model"
+  ],
+  "parameters": [
+    "exposure_s",
+    "angular_bins",
+    "energy_model",
+    "reconstruction_method"
+  ],
+  "controls_required": [
+    "known_geometry_only",
+    "synthetic_void_injection"
+  ],
+  "outputs_required": [
+    "line_integrated_density",
+    "expected_counts",
+    "residual_or_significance_map",
+    "reconstruction_summary"
+  ],
+  "uncertainty_required": [
+    "flux_model",
+    "detector_efficiency",
+    "density",
+    "reconstruction"
+  ],
+  "falsification": "Do not call a void from a simulation. Compare pre-registered predicted signatures against measured detector data."
+}

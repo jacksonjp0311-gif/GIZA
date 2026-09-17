@@ -1,0 +1,70 @@
+{
+  "version": "0.10.12",
+  "codename": "REGISTRATION WORKBENCH",
+  "sealed_at": "2026-09-17T10:46:21.098Z",
+  "runtime": "Node.js built-ins + native browser modules",
+  "new_runtime_npm_dependencies": 0,
+  "archaeological_fit_created": false,
+  "artifacts": [
+    {
+      "path": "public/workbench/index.html",
+      "sha256": "af78219e99b6baea10de3810d336f216f1ce55d64f62bdbf6e8dc319acbc7f1d",
+      "bytes": 7156
+    },
+    {
+      "path": "public/workbench/workbench.css",
+      "sha256": "5c616b8a01a7c95da9e2a5e82cc6b11f3fbc577f709fae68d37eaada16faac3c",
+      "bytes": 10964
+    },
+    {
+      "path": "public/workbench/workbench.js",
+      "sha256": "8634eeecf3faa44da76805e0bb9a6bc8e03c03082f9fa0baa09f54034d54daf2",
+      "bytes": 15355
+    },
+    {
+      "path": "scripts/workbench/build.mjs",
+      "sha256": "c330cb1f37289effd817fa0718abfe6d18e40c2c3665f08949f2bcafc2fb3764",
+      "bytes": 697
+    },
+    {
+      "path": "scripts/workbench/server.mjs",
+      "sha256": "71c9f0ebabd04ffaea34de5905e59483d82d65070a966930de0b2bb06dff04a6",
+      "bytes": 8794
+    },
+    {
+      "path": "scripts/plate_registration/engine.mjs",
+      "sha256": "8b36a1ea45180e8630284da642809d6e615ec394733725d82be231e09ebb7a22",
+      "bytes": 13899
+    },
+    {
+      "path": "scripts/plate_registration/math.mjs",
+      "sha256": "162bb6c47a2926f5edad83b83910dcc441b0bb9d05ab819438838f66387ac9c1",
+      "bytes": 1781
+    },
+    {
+      "path": "scripts/plate_registration/freeze-landmarks.mjs",
+      "sha256": "f8bbea2616849902307d72b8db3a80804dd0191209273f3339285a1d5a912f33",
+      "bytes": 512
+    },
+    {
+      "path": "scripts/plate_registration/register-similarity.mjs",
+      "sha256": "f453c188ef20fbf4ea8c30866251eb2901f23142c72ac87f778b40dcc9826dca",
+      "bytes": 266
+    },
+    {
+      "path": "scripts/source_parser/build.mjs",
+      "sha256": "a6cf3bb15dc5b3fa18e4e508c5edb11c5d43976ca7db29c00d053f0763d35a2b",
+      "bytes": 2976
+    },
+    {
+      "path": "tests/registration-repairs.test.mjs",
+      "sha256": "082c7874073e48202161357ac64d8183053edd44137f30ea2ae113315e25797c",
+      "bytes": 9950
+    },
+    {
+      "path": "docs/REGISTRATION_WORKBENCH.md",
+      "sha256": "7444c75ec0d8ce1d4ca4bdf8ebb9967ca1db06e928c9fbf322354c8fe037f449",
+      "bytes": 3157
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "rule": "Shared target/date/camera metadata creates only a candidate pair. Pixel overlap is never assumed until feature matching/manual review establishes it.",
+  "clusters": [
+    {
+      "id": "regcluster.burial_chamber",
+      "target": "part.burial.chamber",
+      "media_ids": [
+        "media.commons.khafre_interior_liber_2006",
+        "media.commons.khafre_burial_chamber_2007",
+        "media.commons.khafre_belzoni_2007",
+        "media.commons.khafre_coffer_2007",
+        "media.commons.khafre_interior_2022",
+        "media.commons.khafre_sarcophagus_detail_2006"
+      ],
+      "status": "CANDIDATE_MULTI_DATE_VIEWS",
+      "overlap_status": "UNVERIFIED",
+      "priority": "HIGH",
+      "next": "Cache originals, establish room-feature overlap, then camera/scale solve."
+    },
+    {
+      "id": "regcluster.exterior",
+      "target": "part.pyramid.khafre",
+      "media_ids": [
+        "media.commons.khafre_exterior_cc0_2002",
+        "media.commons.khafre_casing_2004",
+        "media.commons.khafre_granite_casing",
+        "media.commons.khafre_exterior_geotagged"
+      ],
+      "status": "CANDIDATE_SURVEY_CONTROL_ALIGNMENT",
+      "overlap_status": "UNVERIFIED",
+      "priority": "CRITICAL",
+      "next": "Acquire survey control and solve exterior poses; do not use consumer GPS as control."
+    },
+    {
+      "id": "regcluster.passage",
+      "target": "part.upper.entrance.existing",
+      "media_ids": [
+        "media.commons.khafre_passage_2007"
+      ],
+      "status": "INSUFFICIENT_VIEWS",
+      "overlap_status": "NONE",
+      "priority": "MEDIUM",
+      "next": "Harvest additional interior passage viewpoints with identifiable common features."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const paths=['public/model/plan_concordance/facts.json','public/model/plan_concordance/matrix.json','public/model/plan_concordance/manifest.json','scripts/plan_concordance/build.mjs','scripts/plan_concordance/validate.mjs','docs/PLAN_CONCORDANCE.md'];
+const h=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');const m=JSON.parse(fs.readFileSync('public/model/plan_concordance/manifest.json','utf8'));
+const out={version:'0.10.7',codename:'PLAN CONCORDANCE',phase:'PLAN_CONCORDANCE',generated_at:new Date().toISOString(),canonical_geometry_changed:false,counts:m.counts,invariants:['agreement is not probability','dependent reconstructions are not independent confirmations','disagreement remains visible','concordance has zero geometry-write authority'],artifacts:paths.map(path=>({path,sha256:h(path),bytes:fs.statSync(path).size}))};
+fs.writeFileSync('PLAN_CONCORDANCE_MANIFEST.json',JSON.stringify(out,null,2)+'\n');console.log(`PLAN CONCORDANCE manifest facts=${m.counts.facts} strong=${m.counts.strong}`);

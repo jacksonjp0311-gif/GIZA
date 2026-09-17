@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "graph_id": "dimension_graph.petrie.granite_temple.v1",
+  "source_id": "src.petrie1883",
+  "purpose": "Bind scalar source-reported dimensions independently of unregistered plate pixels. Unit conversion is exact; source qualifiers remain explicit.",
+  "unit_conversion": {
+    "inch_to_meter": 0.0254,
+    "foot_to_meter": 0.3048,
+    "mile_to_meter": 1609.344
+  },
+  "fact_count": 22,
+  "facts": [
+    {
+      "id": "dim.causeway.width",
+      "label": "Causeway width",
+      "source_value": 15,
+      "source_unit": "ft",
+      "metric_value_m": 4.572,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.166",
+      "note": null
+    },
+    {
+      "id": "dim.causeway.length.lower_bound",
+      "label": "Causeway length lower bound",
+      "source_value": 0.25,
+      "source_unit": "mile",
+      "metric_value_m": 402.336,
+      "qualifier": "GREATER_THAN",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.166",
+      "note": "Petrie says over a quarter mile; metric value is the quarter-mile bound, not an equality."
+    },
+    {
+      "id": "dim.main_pillar.side",
+      "label": "Main hall pillar square side",
+      "source_value": 41,
+      "source_unit": "in",
+      "metric_value_m": 1.0414,
+      "qualifier": "REPORTED",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.167",
+      "note": null
+    },
+    {
+      "id": "dim.main_pillar.height",
+      "label": "Main hall pillar height",
+      "source_value": 174.2,
+      "source_unit": "in",
+      "metric_value_m": 4.42468,
+      "qualifier": "REPORTED",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.167",
+      "note": null
+    },
+    {
+      "id": "dim.junction_pillar.width",
+      "label": "Larger junction pillar width",
+      "source_value": 58,
+      "source_unit": "in",
+      "metric_value_m": 1.4732,
+      "qualifier": "REPORTED",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.167",
+      "note": null
+    },
+    {
+      "id": "dim.loculi.length.lower_bound",
+      "label": "Loculi length lower bound",
+      "source_value": 19,
+      "source_unit": "ft",
+      "metric_value_m": 5.7912,
+      "qualifier": "GREATER_THAN",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.168",
+      "note": null
+    },
+    {
+      "id": "dim.loculi.door.height",
+      "label": "Loculi doorway height",
+      "source_value": 80.45,
+      "source_unit": "in",
+      "metric_value_m": 2.04343,
+      "qualifier": "ABOUT_REPORTED",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.168",
+      "note": null
+    },
+    {
+      "id": "dim.temple.extent.approx",
+      "label": "Temple plan extent each direction",
+      "source_value": 140,
+      "source_unit": "ft",
+      "metric_value_m": 42.672,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.temple.height.approx",
+      "label": "Temple height",
+      "source_value": 40,
+      "source_unit": "ft",
+      "metric_value_m": 12.192,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.hall.long.length",
+      "label": "Hall long axis",
+      "source_value": 60,
+      "source_unit": "ft",
+      "metric_value_m": 18.288,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.hall.long.width",
+      "label": "Hall width",
+      "source_value": 12,
+      "source_unit": "ft",
+      "metric_value_m": 3.6576,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.hall.long.height.lower_bound",
+      "label": "Hall height lower bound",
+      "source_value": 30,
+      "source_unit": "ft",
+      "metric_value_m": 9.144,
+      "qualifier": "GREATER_THAN",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.a.length",
+      "label": "Great hall part A length",
+      "source_value": 81,
+      "source_unit": "ft",
+      "metric_value_m": 24.6888,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.a.width",
+      "label": "Great hall part A width",
+      "source_value": 22,
+      "source_unit": "ft",
+      "metric_value_m": 6.7056,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.a.height",
+      "label": "Great hall part A height",
+      "source_value": 19,
+      "source_unit": "ft",
+      "metric_value_m": 5.7912,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.b.length",
+      "label": "Great hall part B length",
+      "source_value": 55,
+      "source_unit": "ft",
+      "metric_value_m": 16.764,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.b.width",
+      "label": "Great hall part B width",
+      "source_value": 33,
+      "source_unit": "ft",
+      "metric_value_m": 10.0584,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.great_hall.b.height",
+      "label": "Great hall part B height",
+      "source_value": 18.5,
+      "source_unit": "ft",
+      "metric_value_m": 5.6388,
+      "qualifier": "ABOUT",
+      "truth_class": "SOURCE_REPORTED",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.upper_court.short",
+      "label": "Upper open-air court short dimension",
+      "source_value": 80,
+      "source_unit": "ft",
+      "metric_value_m": 24.384,
+      "qualifier": "ABOUT",
+      "truth_class": "PETRIE_INTERPRETIVE_RECONSTRUCTION",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.upper_court.long",
+      "label": "Upper open-air court long dimension",
+      "source_value": 100,
+      "source_unit": "ft",
+      "metric_value_m": 30.48,
+      "qualifier": "ABOUT",
+      "truth_class": "PETRIE_INTERPRETIVE_RECONSTRUCTION",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.upper_court.wall.lower_bound",
+      "label": "Upper court surrounding wall height lower bound",
+      "source_value": 15,
+      "source_unit": "ft",
+      "metric_value_m": 4.572,
+      "qualifier": "GREATER_THAN",
+      "truth_class": "PETRIE_INTERPRETIVE_RECONSTRUCTION",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    },
+    {
+      "id": "dim.reported_vista.max",
+      "label": "Reported/reconstructed vista span",
+      "source_value": 100,
+      "source_unit": "ft",
+      "metric_value_m": 30.48,
+      "qualifier": "AS_MUCH_AS",
+      "truth_class": "PETRIE_INTERPRETIVE_RECONSTRUCTION",
+      "source_locator": "Petrie 1883 ch. XIV p.171",
+      "note": null
+    }
+  ],
+  "authority": {
+    "scalar_measurement_constraints": "SOURCE_REPORTED_WITH_QUALIFIERS",
+    "2d_wall_polygons": "NONE",
+    "pixel_coordinates": "NONE",
+    "visibility_rays": "NONE"
+  },
+  "guard": "Scalar dimensions do not reconstruct a unique plan. They cannot be assembled into wall polygons without checksum-bound plate registration or independent surveyed coordinates."
+}

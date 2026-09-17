@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "conflict_count": 3,
+  "conflicts": [
+    {
+      "id": "planconf.court_statuary",
+      "subject": "khafre_pyramid_temple_statue_court",
+      "issue": "Statue form/placement reconstruction is non-unique.",
+      "positions": [
+        {
+          "source": "src.hoelscher1912",
+          "summary": "standing royal-statue reconstruction from emplacement holes and granite remnants"
+        },
+        {
+          "source": "src.oxford.flentye2018",
+          "summary": "reports Hölscher/Ricke/later revision disagreement"
+        }
+      ],
+      "resolution": "PRESERVE_MULTIPLE_MODELS",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "planconf.five_chapels_function",
+      "subject": "khafre_pyramid_temple_chapels",
+      "issue": "Five western spaces are architecturally present but precise cult contents/function are reconstructed.",
+      "positions": [
+        {
+          "source": "src.hoelscher1912",
+          "summary": "historical room labels/serdab-cult reconstruction"
+        },
+        {
+          "source": "src.oxford.flentye2018",
+          "summary": "probably statues and barques"
+        }
+      ],
+      "resolution": "ARCHITECTURE_SEPARATE_FROM_FUNCTION",
+      "geometry_authority": "NONE"
+    },
+    {
+      "id": "planconf.causeway_length",
+      "subject": "khafre_causeway",
+      "issue": "Hölscher reports 494.60 m; modern synthesis often rounds to 494 m; Nell/Ruggles measure only a surveyed section/width, not a replacement length.",
+      "positions": [
+        {
+          "source": "src.hoelscher1912",
+          "value_m": 494.6
+        },
+        {
+          "source": "src.oxford.flentye2018",
+          "value_m": 494
+        }
+      ],
+      "resolution": "PRESERVE_SOURCE_VALUES_UNTIL_COMMON_FRAME_REMEASUREMENT",
+      "geometry_authority": "NONE"
+    }
+  ]
+}

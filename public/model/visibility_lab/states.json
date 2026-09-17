@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "state_count": 20,
+  "states": [
+    {
+      "space_id": "room.vt.north_entry",
+      "state": "EXTERIOR_TO_INTERIOR_THRESHOLD",
+      "environment": "THRESHOLD",
+      "basis": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "space_id": "room.vt.south_entry",
+      "state": "EXTERIOR_TO_INTERIOR_THRESHOLD",
+      "environment": "THRESHOLD",
+      "basis": [
+        "obs.room.oxford.valley_entries"
+      ],
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "space_id": "room.vt.vestibule",
+      "state": "TRANSITIONAL_INTERIOR",
+      "environment": "INTERIOR",
+      "basis": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "certainty": "HIGH_ROOM_PROGRAM"
+    },
+    {
+      "space_id": "room.vt.t_hall",
+      "state": "PILLARED_ROYAL_IMAGE_FIELD",
+      "environment": "PILLARED_INTERIOR",
+      "basis": [
+        "obs.room.oxford.valley_niches",
+        "obs.visibility.smithsonian.valley_hall"
+      ],
+      "certainty": "HIGH_ARCHITECTURE / PLACEMENT_PARTLY_RECONSTRUCTED"
+    },
+    {
+      "space_id": "room.vt.nw_causeway_exit",
+      "state": "ROUTE_CHOKEPOINT",
+      "environment": "THRESHOLD",
+      "basis": [
+        "obs.room.oxford.valley_plan"
+      ],
+      "certainty": "MODERATE_TOPOLOGY"
+    },
+    {
+      "space_id": "room.cw.covered_corridor",
+      "state": "COVERED_LINEAR_ASCENT",
+      "environment": "ENCLOSED_ROUTE",
+      "basis": [
+        "obs.room.hoelscher.causeway_environment",
+        "obs.room.oxford.causeway"
+      ],
+      "certainty": "HIGH_FUNCTIONAL_FORM"
+    },
+    {
+      "space_id": "room.pt.entry_branch",
+      "state": "CONTROLLED_BRANCH",
+      "environment": "BRANCH_THRESHOLD",
+      "basis": [
+        "obs.room.hoelscher.entry_branch"
+      ],
+      "certainty": "HIGH_PRIMARY_TOPOLOGY"
+    },
+    {
+      "space_id": "room.pt.vestibule",
+      "state": "PILLARED_TRANSITION",
+      "environment": "INTERIOR",
+      "basis": [
+        "obs.room.hoelscher.vestibule_materials"
+      ],
+      "certainty": "HIGH_PRIMARY_DESCRIPTION"
+    },
+    {
+      "space_id": "room.pt.wide_hall",
+      "state": "PILLARED_HALL_IMAGE_CANDIDATE",
+      "environment": "INTERIOR_HALL",
+      "basis": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_hall_statuary"
+      ],
+      "certainty": "ARCHITECTURE_HIGH / STATUARY_MEDIUM"
+    },
+    {
+      "space_id": "room.pt.deep_hall",
+      "state": "PILLARED_HALL_IMAGE_CANDIDATE",
+      "environment": "INTERIOR_HALL",
+      "basis": [
+        "obs.room.hoelscher.program",
+        "obs.room.oxford.pyramid_temple_hall_statuary"
+      ],
+      "certainty": "ARCHITECTURE_HIGH / STATUARY_MEDIUM"
+    },
+    {
+      "space_id": "room.pt.statue_court",
+      "state": "MONUMENTAL_COURT_IMAGE_FIELD",
+      "environment": "COURT / SKY_STATE_NOT_METRICALLY_MODELED",
+      "basis": [
+        "obs.room.hoelscher.court_passages",
+        "obs.room.hoelscher.court_statue_holes",
+        "obs.room.oxford.court_reconstruction_dispute"
+      ],
+      "certainty": "COURT_ARCHITECTURE_HIGH / STATUE_FORM_DISPUTED"
+    },
+    {
+      "space_id": "room.pt.ambulatory",
+      "state": "PERIMETER_TRANSITION",
+      "environment": "CIRCULATION",
+      "basis": [
+        "obs.room.hoelscher.court_passages"
+      ],
+      "certainty": "HIGH_TOPOLOGY"
+    },
+    {
+      "space_id": "room.pt.five_chapels",
+      "state": "RESTRICTED_CULT_CANDIDATE",
+      "environment": "INNER_ROOMS",
+      "basis": [
+        "obs.room.oxford.five_chapels_function"
+      ],
+      "certainty": "ARCHITECTURE_HIGH / FUNCTION_INTERPRETIVE"
+    },
+    {
+      "space_id": "room.pt.inner_zone",
+      "state": "INNER_ACCESS_ZONE",
+      "environment": "INNER_ROOMS",
+      "basis": [
+        "obs.room.hoelscher.public_private"
+      ],
+      "certainty": "HISTORICAL_FUNCTIONAL_INTERPRETATION"
+    },
+    {
+      "space_id": "room.pt.pyramid_court",
+      "state": "PYRAMID_ADJACENT_TRANSITION",
+      "environment": "COURT_THRESHOLD",
+      "basis": [
+        "obs.room.hoelscher.program"
+      ],
+      "certainty": "HIGH_ROOM_PROGRAM"
+    },
+    {
+      "space_id": "room.py.upper_entry",
+      "state": "ENCLOSED_DESCENT",
+      "environment": "INTERIOR_PASSAGE",
+      "basis": [
+        "obs.room.perring.two_entrances"
+      ],
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "space_id": "room.py.lower_entry",
+      "state": "ENCLOSED_LOWER_ROUTE",
+      "environment": "INTERIOR_PASSAGE",
+      "basis": [
+        "obs.room.perring.two_entrances"
+      ],
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "space_id": "room.py.portcullis",
+      "state": "PHYSICAL_ACCESS_CHOKEPOINT",
+      "environment": "CLOSURE",
+      "basis": [
+        "obs.room.perring.portcullis_mechanism"
+      ],
+      "certainty": "HIGH_PHYSICAL_FEATURE / OPERATION_HISTORICAL_INTERPRETATION"
+    },
+    {
+      "space_id": "room.py.lower_chamber",
+      "state": "ENCLOSED_BRANCH_CHAMBER",
+      "environment": "CHAMBER",
+      "basis": [
+        "obs.room.perring.lower_chamber"
+      ],
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    },
+    {
+      "space_id": "room.py.burial_chamber",
+      "state": "ENCLOSED_BURIAL_ENDPOINT",
+      "environment": "BURIAL_CHAMBER",
+      "basis": [
+        "obs.room.perring.belzoni_chamber"
+      ],
+      "certainty": "HIGH_HISTORICAL_SURVEY"
+    }
+  ],
+  "guard": "These are source-linked qualitative visibility/environment states. They are not metric sightlines, illumination simulations, or ritual meanings."
+}

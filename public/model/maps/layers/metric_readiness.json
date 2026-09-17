@@ -1,0 +1,72 @@
+{
+  "id": "metric",
+  "version": "0.10.7",
+  "title": "First-Plate Holdout Gate",
+  "coordinate_mode": "READINESS_MATRIX",
+  "metric": false,
+  "guard": "Workflow status only. Public-domain source identity is remotely verified, but no local bytes or archaeological registration exists. Plate-local metric geometry can support intra-building rays only after frozen holdouts pass.",
+  "source_ids": [
+    "src.petrie1883",
+    "src.perring1840.khafre",
+    "src.hoelscher1912",
+    "src.opencontext.arce_sphinx"
+  ],
+  "targets": [
+    {
+      "id": "metric.valley.petrie",
+      "target": "Valley Temple / Petrie Plate VI",
+      "state": "REMOTE_BYTES_VERIFIED_TRANSFER_BLOCKED",
+      "progress": 0.52,
+      "blocking": [
+        "LOCAL_SOURCE_BYTES_MISSING",
+        "PLATE_PAGE_VISUAL_CONFIRMATION",
+        "CONTROL_HOLDOUT_FREEZE",
+        "REGISTRATION_RESIDUAL_PASS"
+      ],
+      "candidate_id": "bytes.petrie1883.public_domain_pdf"
+    },
+    {
+      "id": "metric.valley.arce",
+      "target": "Valley Temple / ARCE 1:100",
+      "state": "ITEM_URI_UNRESOLVED",
+      "progress": 0.38,
+      "blocking": [
+        "EXACT_DRAWING_URI_MISSING",
+        "SOURCE_BYTES_MISSING",
+        "SURVEY_FRAME_METADATA_PENDING"
+      ],
+      "candidate_id": "bytes.arce.khafre_valley_1_100"
+    },
+    {
+      "id": "metric.pyramid.perring",
+      "target": "Pyramid interior / Perring",
+      "state": "TERMS_AND_BYTES_PENDING",
+      "progress": 0.45,
+      "blocking": [
+        "PROVIDER_TERMS_REVIEW",
+        "SOURCE_BYTES_MISSING",
+        "PLATE_SCALE_PARSE_PENDING"
+      ],
+      "candidate_id": "bytes.perring1840.vol2_heidelberg"
+    },
+    {
+      "id": "metric.temple.hoelscher",
+      "target": "Pyramid Temple / Hölscher Plate III",
+      "state": "RIGHTS_BLOCKED_IMAGE",
+      "progress": 0.33,
+      "blocking": [
+        "DIGITAL_IMAGE_RIGHTS",
+        "SOURCE_BYTES_MISSING"
+      ],
+      "candidate_id": "bytes.hoelscher1912.heidelberg"
+    }
+  ],
+  "metric_ray_count": 0,
+  "registered_plan_count": 0,
+  "layers": [
+    "metric",
+    "sources",
+    "uncertainty",
+    "visibility"
+  ]
+}

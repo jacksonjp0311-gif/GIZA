@@ -1,0 +1,80 @@
+{
+  "run_id": "run.gravity.gravity.deep-terminals-only.27b2b0a80d48",
+  "experiment_id": "gravity.deep-terminals-only",
+  "solver_id": "solver.gravity",
+  "solver_version": "0.9.0-direct-summation",
+  "provenance_class": "SIMULATED",
+  "truth_status": "CONDITIONAL_UNVERIFIED_GEOMETRY",
+  "geometry_revision": "rev.0003",
+  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+  "input_hash": "27b2b0a80d48838d7d02289229937b10a9e474664299fa69a06c3b2fd33dde6c",
+  "parameters": {
+    "density_contrast_kg_m3": -2600,
+    "integration_method": "finite-volume point-element direct summation",
+    "target_cell_m": 10,
+    "observation_height_m": 5
+  },
+  "controls": {
+    "primary_null": "no_void_density_contrast",
+    "null_prediction_microgal": 0,
+    "additional_controls": [
+      "no_void_density_contrast"
+    ]
+  },
+  "uncertainty": {
+    "kind": "SCENARIO_SENSITIVITY_NOT_POSTERIOR",
+    "density_note": "2600 kg/m^3 is a modeling contrast, not a measured density field for every location.",
+    "geometry_note": "The geometry itself is UNVERIFIED; conventional confidence intervals would be misleading.",
+    "required_future_sweeps": [
+      "density contrast",
+      "terminal dimensions",
+      "terminal depth",
+      "shaft radius",
+      "regional geology/topography"
+    ]
+  },
+  "components": [
+    {
+      "id": "part.terminal.alpha",
+      "primitive": {
+        "kind": "box",
+        "sx": 80,
+        "sy": 80,
+        "sz": 80
+      },
+      "volume_m3": 512000
+    },
+    {
+      "id": "part.terminal.beta",
+      "primitive": {
+        "kind": "box",
+        "sx": 80,
+        "sy": 80,
+        "sz": 80
+      },
+      "volume_m3": 512000
+    }
+  ],
+  "total_modeled_void_volume_m3": 1024000,
+  "element_count": 1024,
+  "observation_count": 961,
+  "summary": {
+    "min_microgal": -31.74639976189687,
+    "max_microgal": -21.341344483582724,
+    "max_magnitude_microgal": 31.74639976189687,
+    "peak": {
+      "coordinates_m": [
+        0,
+        0,
+        5
+      ],
+      "upward_delta_g_microgal": 31.74639976189687,
+      "conventional_downward_delta_g_microgal": -31.74639976189687,
+      "magnitude_microgal": 31.74639976189687
+    }
+  },
+  "status": "COMPLETE",
+  "created_at": "2026-09-11T14:59:37.117Z",
+  "interpretation_guard": "This is a conditional forward prediction. It is not evidence that any UNVERIFIED component exists.",
+  "result_path": "public/model/simlab/results/gravity.deep-terminals-only.json"
+}

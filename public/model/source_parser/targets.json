@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "mode": "NORMALIZED_EVIDENCE_PARSER",
+  "guard": "v0.10.4 binds normalized room/plan observations to locators. Raw-byte verification remains false unless checksum-bound PRIMARY SOURCE VAULT bytes are present.",
+  "targets": [
+    {
+      "id": "parse.funeral_function",
+      "observation_id": "obs.intent.royal_complex.funeral_afterlife",
+      "output_kind": "FUNCTIONAL_CONTEXT"
+    },
+    {
+      "id": "parse.offering_cult",
+      "observation_id": "obs.intent.royal_complex.offering_cult",
+      "output_kind": "FUNCTIONAL_CONTEXT"
+    },
+    {
+      "id": "parse.valley_finds",
+      "observation_id": "obs.digitalgiza.valley.finds17",
+      "output_kind": "FIND_INVENTORY"
+    },
+    {
+      "id": "parse.valley_statue",
+      "observation_id": "obs.egyptianmuseum.khafre_valley_statue",
+      "output_kind": "OBJECT_PROVENANCE"
+    },
+    {
+      "id": "parse.valley_iconography",
+      "observation_id": "obs.egyptianmuseum.khafre_iconography",
+      "output_kind": "ICONOGRAPHIC_CONTEXT"
+    },
+    {
+      "id": "parse.causeway_statue",
+      "observation_id": "obs.digitalgiza.causeway.statue_head",
+      "output_kind": "FIND_INVENTORY"
+    },
+    {
+      "id": "parse.causeway_width",
+      "observation_id": "obs.nell2006.khafre.causeway_width",
+      "output_kind": "MOVEMENT_CONSTRAINT"
+    },
+    {
+      "id": "parse.pyramid_temple_finds",
+      "observation_id": "obs.digitalgiza.pyramid_temple.finds5",
+      "output_kind": "FIND_INVENTORY"
+    },
+    {
+      "id": "parse.pyramid_temple_doorway",
+      "observation_id": "obs.met.architrave.doorway_context",
+      "output_kind": "THRESHOLD_CONTEXT"
+    },
+    {
+      "id": "parse.sarcophagus_setting",
+      "observation_id": "obs.perring1840.sarcophagus_setting",
+      "output_kind": "BURIAL_ENDPOINT"
+    },
+    {
+      "id": "parse.room.causeway_length",
+      "observation_id": "obs.room.hoelscher.causeway_length",
+      "output_kind": "MOVEMENT_CONSTRAINT"
+    },
+    {
+      "id": "parse.room.causeway_slope",
+      "observation_id": "obs.room.hoelscher.causeway_slope",
+      "output_kind": "MOVEMENT_CONSTRAINT"
+    },
+    {
+      "id": "parse.room.causeway_environment",
+      "observation_id": "obs.room.hoelscher.causeway_environment",
+      "output_kind": "VISIBILITY_CONTEXT"
+    },
+    {
+      "id": "parse.room.pt_program",
+      "observation_id": "obs.room.hoelscher.program",
+      "output_kind": "ROOM_PROGRAM"
+    },
+    {
+      "id": "parse.room.pt_entry_branch",
+      "observation_id": "obs.room.hoelscher.entry_branch",
+      "output_kind": "THRESHOLD_TOPOLOGY"
+    },
+    {
+      "id": "parse.room.pt_vestibule",
+      "observation_id": "obs.room.hoelscher.vestibule_materials",
+      "output_kind": "ROOM_MATERIAL_CONTEXT"
+    },
+    {
+      "id": "parse.room.pt_court_passages",
+      "observation_id": "obs.room.hoelscher.court_passages",
+      "output_kind": "THRESHOLD_TOPOLOGY"
+    },
+    {
+      "id": "parse.room.pt_court_statue_holes",
+      "observation_id": "obs.room.hoelscher.court_statue_holes",
+      "output_kind": "INSTALLATION_CONTEXT"
+    },
+    {
+      "id": "parse.room.valley_entries",
+      "observation_id": "obs.room.oxford.valley_entries",
+      "output_kind": "THRESHOLD_TOPOLOGY"
+    },
+    {
+      "id": "parse.room.valley_niches",
+      "observation_id": "obs.room.oxford.valley_niches",
+      "output_kind": "INSTALLATION_FIELD"
+    },
+    {
+      "id": "parse.room.valley_plan",
+      "observation_id": "obs.room.oxford.valley_plan",
+      "output_kind": "ROOM_PROGRAM"
+    },
+    {
+      "id": "parse.room.pt_program_crosscheck",
+      "observation_id": "obs.room.oxford.pyramid_temple_program",
+      "output_kind": "ROOM_PROGRAM"
+    },
+    {
+      "id": "parse.room.perring_upper_lower",
+      "observation_id": "obs.room.perring.two_entrances",
+      "output_kind": "INTERIOR_TOPOLOGY"
+    },
+    {
+      "id": "parse.room.perring_lower_chamber",
+      "observation_id": "obs.room.perring.lower_chamber",
+      "output_kind": "INTERIOR_ROOM"
+    },
+    {
+      "id": "parse.room.perring_burial_chamber",
+      "observation_id": "obs.room.perring.belzoni_chamber",
+      "output_kind": "INTERIOR_ROOM"
+    },
+    {
+      "id": "parse.room.perring_portcullis",
+      "observation_id": "obs.room.perring.portcullis_mechanism",
+      "output_kind": "ACCESS_CONTROL_FEATURE"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "active_layer": null,
+  "render_status": "NO_DEM_BYTES_INGESTED",
+  "fallback": "canonical flat reference plane remains visible and must be labeled as reference geometry",
+  "layers": [
+    {
+      "id": "terrain.srtm30",
+      "source_id": "src.nasa.srtmgl1v003",
+      "native_resolution_m": 30,
+      "status": "AVAILABLE_PUBLIC",
+      "model_role": "REGIONAL_CONTEXT_ONLY",
+      "allowed_precision_claim": "regional terrain context",
+      "not_allowed": [
+        "stone geometry",
+        "pyramid face geometry",
+        "passage geometry"
+      ],
+      "field_status": "CATALOGED_NOT_INGESTED",
+      "local_asset": null,
+      "transform_receipt": null,
+      "display_allowed": false,
+      "truth_rule": "Cannot render as real terrain until source bytes, CRS, vertical metadata, hash, and transform receipt are present."
+    },
+    {
+      "id": "imagery.sentinel2",
+      "source_id": "src.copernicus.sentinel2",
+      "native_resolution_m": [
+        10,
+        20,
+        60
+      ],
+      "status": "AVAILABLE_PUBLIC",
+      "model_role": "SITE_CONTEXT_AND_CHANGE_DETECTION",
+      "allowed_precision_claim": "multispectral site context",
+      "not_allowed": [
+        "stone geometry",
+        "subsurface geometry"
+      ],
+      "field_status": "CATALOGED_NOT_INGESTED",
+      "local_asset": null,
+      "transform_receipt": null,
+      "display_allowed": false,
+      "truth_rule": "Cannot render as real terrain until source bytes, CRS, vertical metadata, hash, and transform receipt are present."
+    },
+    {
+      "id": "terrain.copdem",
+      "source_id": "src.copernicus.dem",
+      "native_resolution_m": [
+        30,
+        90
+      ],
+      "status": "ACCESS_CHECK_REQUIRED",
+      "model_role": "REGIONAL_CONTEXT_ONLY",
+      "allowed_precision_claim": "surface-model context",
+      "not_allowed": [
+        "stone geometry",
+        "pyramid face geometry"
+      ],
+      "field_status": "CATALOGED_NOT_INGESTED",
+      "local_asset": null,
+      "transform_receipt": null,
+      "display_allowed": false,
+      "truth_rule": "Cannot render as real terrain until source bytes, CRS, vertical metadata, hash, and transform receipt are present."
+    }
+  ],
+  "ingest_gate": {
+    "required": [
+      "source_file_sha256",
+      "native_crs",
+      "native_vertical_datum_or_explicit_unknown",
+      "source_bounds",
+      "transform_receipt",
+      "qa_status"
+    ],
+    "qa_status_required": "PASSED",
+    "allowed_model_role": "SITE_CONTEXT_ONLY"
+  }
+}

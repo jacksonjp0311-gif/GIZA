@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="70.0" y1="587.8571428571429" x2="1130.0" y2="587.8571428571429" stroke="black" stroke-width="1"/>
+<path d="M 172.6 587.9 L 1092.7 91.2" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="92.8,587.9 370.4,632.4" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="370.4,632.4 437.8,632.4 505.1,632.4" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="505.1,632.4 620.4,612.6 697.2,600.1" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="538.2,600.1 255.4,543.3" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="538.2,600.1 560.2,600.1 697.2,600.1 1033.7,600.1" fill="none" stroke="black" stroke-width="2"/>
+<circle cx="92.8" cy="587.9" r="4" fill="white" stroke="black"/>
+<text x="98.8" y="581.9" font-family="monospace" font-size="14">A</text>
+<circle cx="370.4" cy="632.4" r="4" fill="white" stroke="black"/>
+<text x="376.4" y="626.4" font-family="monospace" font-size="14">B</text>
+<circle cx="437.8" cy="632.4" r="4" fill="white" stroke="black"/>
+<text x="443.8" y="626.4" font-family="monospace" font-size="14">C</text>
+<circle cx="437.8" cy="640.8" r="4" fill="white" stroke="black"/>
+<text x="443.8" y="634.8" font-family="monospace" font-size="14">D</text>
+<circle cx="505.1" cy="632.4" r="4" fill="white" stroke="black"/>
+<text x="511.1" y="626.4" font-family="monospace" font-size="14">E</text>
+<circle cx="620.4" cy="612.6" r="4" fill="white" stroke="black"/>
+<text x="626.4" y="606.6" font-family="monospace" font-size="14">F</text>
+<circle cx="697.2" cy="600.1" r="4" fill="white" stroke="black"/>
+<text x="703.2" y="594.1" font-family="monospace" font-size="14">G</text>
+<circle cx="1033.7" cy="600.1" r="4" fill="white" stroke="black"/>
+<text x="1039.7" y="594.1" font-family="monospace" font-size="14">H</text>
+<circle cx="1055.0" cy="600.1" r="4" fill="white" stroke="black"/>
+<text x="1061.0" y="594.1" font-family="monospace" font-size="14">I</text>
+<circle cx="560.2" cy="600.1" r="4" fill="white" stroke="black"/>
+<text x="566.2" y="594.1" font-family="monospace" font-size="14">J</text>
+<circle cx="538.2" cy="600.1" r="4" fill="white" stroke="black"/>
+<text x="544.2" y="594.1" font-family="monospace" font-size="14">K</text>
+<circle cx="255.4" cy="543.3" r="4" fill="white" stroke="black"/>
+<text x="261.4" y="537.3" font-family="monospace" font-size="14">L</text>
+<text x="70" y="30" font-family="sans-serif" font-size="22" font-weight="700">Khafre rev.0003 survey reconstruction — N/S section</text>
+<text x="70" y="52" font-family="sans-serif" font-size="12">Legon Table II centerline nodes; Petrie exterior envelope. Model-generated audit drawing, not an archival plate.</text>
+</svg>

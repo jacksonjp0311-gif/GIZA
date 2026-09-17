@@ -1,0 +1,70 @@
+{
+  "id": "history",
+  "version": "0.10.7",
+  "title": "Historical Record / Observation Stack",
+  "coordinate_mode": "TIMELINE",
+  "metric": false,
+  "guard": "Timeline records source/observation history, not monument construction chronology unless explicitly stated.",
+  "source_ids": [
+    "src.petrie1883",
+    "src.opencontext.arce_sphinx",
+    "src.aera.gpmp_survey",
+    "src.scidep2025",
+    "src.aera2025.khafre_laser"
+  ],
+  "events": [
+    {
+      "year": 1818,
+      "label": "BELZONI ENTRY",
+      "kind": "HISTORICAL_EXPLORATION",
+      "status": "PRIMARY/HISTORICAL_RECORD"
+    },
+    {
+      "year": 1883,
+      "label": "PETRIE SURVEY PUBLICATION",
+      "kind": "SURVEY",
+      "status": "PRIMARY_SURVEY"
+    },
+    {
+      "year": 1912,
+      "label": "HÖLSCHER KHAFRE PUBLICATION",
+      "kind": "ARCHAEOLOGY",
+      "status": "HISTORICAL_PUBLICATION"
+    },
+    {
+      "year": 1979,
+      "label": "ARCE SPHINX PROJECT",
+      "kind": "MAPPING",
+      "status": "DETAILED_SCALE_MAPPING"
+    },
+    {
+      "year": 1984,
+      "label": "GPMP BEGINS",
+      "kind": "SURVEY_NETWORK",
+      "status": "HIGH_PRECISION_MAPPING_PROGRAM"
+    },
+    {
+      "year": 2012,
+      "label": "GDFS MONUMENT SURVEYS",
+      "kind": "SURVEY",
+      "status": "MODERN_SURVEY"
+    },
+    {
+      "year": 2019,
+      "label": "DRONE / PHOTOGRAMMETRY / LASER",
+      "kind": "3D_RECORDING",
+      "status": "MODERN_3D_RECORDING"
+    },
+    {
+      "year": 2025,
+      "label": "KHAFRE MUOGRAPHY + LASER SURVEY LITERATURE",
+      "kind": "MODERN_INSTRUMENTATION",
+      "status": "PUBLICATION/METHOD_RECORD"
+    }
+  ],
+  "layers": [
+    "sources",
+    "survey",
+    "photos"
+  ]
+}

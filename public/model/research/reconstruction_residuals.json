@@ -1,0 +1,15 @@
+{
+  "petrie_base_side_spread_m": 0.12700000000000955,
+  "petrie_base_side_spread_ppm": 589.9774628609631,
+  "petrie_height_vs_ministry_m": 0.3656000000000006,
+  "petrie_mean_base_vs_scidep_m": -0.037540000000035434,
+  "legon_411_cubit_base_m": 215.26125000000002,
+  "legon_411_cubit_minus_petrie_mean_m": -0.0012099999999577449,
+  "casing_vs_passage_azimuth_arcsec": 11.0,
+  "burial_chamber_width_mean_m": 4.97459,
+  "legon_chamber_width_target_m": 4.975,
+  "width_residual_m": -0.00040999999999957737,
+  "upper_existing_sill_geometry_z_m": 11.54,
+  "upper_existing_sill_source_z_m": 11.54,
+  "notes": "Residuals are diagnostics, not evidence of intentional mathematical coding. The package preserves source disagreement and reconstruction boundaries."
+}

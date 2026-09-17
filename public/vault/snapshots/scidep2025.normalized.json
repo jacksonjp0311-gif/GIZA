@@ -1,0 +1,13 @@
+{
+  "snapshot_class": "DERIVED_NORMALIZED_SNAPSHOT",
+  "version": "0.10.0",
+  "source_id": "src.scidep2025",
+  "arxiv": "2503.21959",
+  "doi": "10.1063/5.0273135",
+  "year": 2025,
+  "project_state": "DETECTOR_CONSTRUCTION_METHOD_AND_FIRST_DETECTOR_STUDIES",
+  "aim": "multi-view muon scanning of Khafre from burial chamber and exterior to potentially identify new internal structures",
+  "result_guard": "This source is not a confirmed new-void discovery report.",
+  "geometry_write_authority": "NONE_NO_DISCOVERY_RESULT",
+  "canonical_mutation": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "status": "PREMETRIC_CROSS_SOURCE_SYNTHESIS",
+  "headline": "The strongest emerging pattern is procedural architecture: repeated control of convergence, royal-image encounter, linearized ascent, branching, deeper cult zones, physical closure and burial endpoint. This is a design-grammar hypothesis, not a recovered ritual script.",
+  "patterns": [
+    {
+      "id": "emerge.sequence_gradient",
+      "label": "Ordered environmental gradient",
+      "strength": "ROBUST_TOPOLOGY",
+      "statement": "Independent room/program sources support a sequence from dual lower entries through convergence and royal-image space, a covered ascending causeway, upper-temple branching/halls/court, inner zones, then pyramid closure and burial endpoint.",
+      "supports": [
+        "conc.vt.dual_east_entries",
+        "conc.vt.t_plan",
+        "conc.causeway.covered",
+        "conc.pt.program",
+        "conc.py.interior_plan"
+      ],
+      "guard": "Sequence does not identify exact actors, liturgy or one mandatory historical traversal."
+    },
+    {
+      "id": "emerge.royal_image_recurrence",
+      "label": "Royal imagery recurs at lower and upper architectural nodes",
+      "strength": "CROSS_SOURCE_STRONG_CONTEXT",
+      "statement": "Valley Temple statuary architecture is strongly attested; upper-temple court/hall evidence also indicates a royal-image program, although exact statue forms/placements remain disputed.",
+      "supports": [
+        "conc.vt.23_positions",
+        "conc.pt.court_statuary"
+      ],
+      "guard": "Repeated image contexts do not establish identical ritual functions."
+    },
+    {
+      "id": "emerge.movement_control",
+      "label": "Movement control is architecturally repeated, not uniform",
+      "strength": "ROBUST_TOPOLOGY",
+      "statement": "The room graph repeatedly uses convergence, narrow linearization, controlled branches, sequential halls, deeper zones and literal closure rather than an undifferentiated open plan.",
+      "supports": [
+        "visibility articulation_points=12",
+        "visibility branches=3",
+        "visibility merges=2",
+        "max_depth=12"
+      ],
+      "guard": "Graph articulation is not proof of social restriction or ritual hierarchy."
+    },
+    {
+      "id": "emerge.causeway_transition",
+      "label": "The causeway behaves as an environmental transition, not merely a connector",
+      "strength": "STRONG_ARCHITECTURAL_SYNTHESIS",
+      "statement": "Cross-source descriptions support a long, covered, narrow/linear ascending route joining lower and upper components; this makes it a major state transition in the architectural system.",
+      "supports": [
+        "conc.causeway.covered",
+        "conc.causeway.length"
+      ],
+      "guard": "Calling it processional is plausible context, not proof of every use."
+    },
+    {
+      "id": "emerge.access_governance",
+      "label": "Access governance appears at multiple scales",
+      "strength": "DESIGN_GRAMMAR_CANDIDATE",
+      "statement": "Temple thresholds and branches regulate circulation topologically, while the pyramid interior includes a literal portcullis closure. The recurrence suggests a general concern with controlled access, though the functions of each control point differ.",
+      "supports": [
+        "room.pt.entry_branch",
+        "room.py.portcullis",
+        "articulation_points"
+      ],
+      "guard": "Shared control logic does not mean shared ritual semantics."
+    },
+    {
+      "id": "emerge.sensory_engineering_candidate",
+      "label": "Material, image and light may have been jointly staged in the Valley Temple",
+      "strength": "HISTORICAL_RECONSTRUCTION_CANDIDATE",
+      "statement": "Hölscher describes dark red granite, bright alabaster paving, royal statues and light entering through high openings with reflected light effects. This is a serious sensory-architecture hypothesis to test against registered wall/opening geometry.",
+      "supports": [
+        "loc.hoelscher.gateway_hall",
+        "conc.vt.23_positions"
+      ],
+      "guard": "Hölscher’s evocative reconstruction is not photometry and must be tested rather than rendered as fact."
+    },
+    {
+      "id": "emerge.procedural_meaning",
+      "label": "Meaning may be partly procedural",
+      "strength": "HYPOTHESIS",
+      "statement": "If metric registration confirms the topological sequence and visual reveal structure, part of the complex’s meaning may have been enacted through ordered movement and encounter rather than encoded only in static dimensions or inscriptions.",
+      "supports": [
+        "emerge.sequence_gradient",
+        "emerge.royal_image_recurrence",
+        "emerge.movement_control"
+      ],
+      "guard": "This is a research hypothesis; it is not direct ancient testimony and does not imply software/computation."
+    }
+  ],
+  "what_would_change_the_picture": [
+    "A registered plan showing the assumed sequence is topologically wrong",
+    "independent source bytes contradicting room/threshold placements",
+    "metric visibility showing royal images were not visible from hypothesized approach positions",
+    "evidence that covered-causeway reconstruction is incorrect",
+    "comparative Khufu/Menkaure layouts showing the same graph purely from generic construction constraints"
+  ],
+  "next_metric_tests": [
+    "Petrie Plate VI vs ARCE 1:100 independent Valley Temple registration",
+    "Perring Plate I/III/IV registration against existing Khafre interior model",
+    "rights-cleared Hölscher Pyramid Temple plan registration",
+    "metric doorway visibility around Valley Temple 23-position field",
+    "route reveal timing under bounded observer/occluder heights"
+  ]
+}

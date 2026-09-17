@@ -1,0 +1,29 @@
+{
+  "solver_id": "solver.geomechanics",
+  "inputs_required": [
+    "geometry_snapshot",
+    "rock_model",
+    "in_situ_stress_or_overburden"
+  ],
+  "parameters": [
+    "density_kg_m3",
+    "youngs_modulus_pa",
+    "poisson_ratio",
+    "strength_or_failure_model"
+  ],
+  "controls_required": [
+    "no_cavity_reference",
+    "alternate_fracture_assumptions"
+  ],
+  "outputs_required": [
+    "stress_field_summary",
+    "factor_of_safety_or_failure_index",
+    "deformation_summary"
+  ],
+  "uncertainty_required": [
+    "rock_properties",
+    "fractures",
+    "boundary_conditions"
+  ],
+  "falsification": "Deep-cavity geometry must be mechanically plausible under explicit rock assumptions; instability is a strong negative screen."
+}

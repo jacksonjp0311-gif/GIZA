@@ -1,0 +1,2460 @@
+{
+  "version": "0.10.7",
+  "canon_phase": "PLAN_CONCORDANCE_VISIBILITY_LAB",
+  "policy": {
+    "rule": "Scientific authority, legal reuse, spatial resolution, and geometry authority are independent dimensions.",
+    "default_asset_action": "REFERENCE_ONLY",
+    "promotion_requires_explicit_evidence_item": true,
+    "remote_visibility_is_not_reuse_permission": true,
+    "summary_dimensions_never_silently_override_detailed_surveys": true,
+    "khufu_method_sources_cannot_write_khafre_geometry": true,
+    "unverified_claim_sources_have_zero_geometry_authority": true
+  },
+  "source_count": 73,
+  "sources": [
+    {
+      "id": "src.petrie1883",
+      "title": "The Pyramids and Temples of Gizeh",
+      "author": "W. M. Flinders Petrie",
+      "year": 1883,
+      "kind": "primary_historical_survey",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "access": "PUBLIC_WEB",
+      "rights_class": "PUBLIC_DOMAIN_OR_NO_KNOWN_US_RESTRICTIONS",
+      "asset_action": "TEXT_AND_MEASUREMENT_INGEST",
+      "authority": {
+        "geometry": 5,
+        "materials": 3,
+        "visual": 2,
+        "method": 3
+      },
+      "resolution": "MONUMENT_TO_COMPONENT",
+      "roles": [
+        "metric_dimension",
+        "orientation",
+        "architectural_description",
+        "construction_observation"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_interior",
+        "sarcophagus",
+        "casing",
+        "passages"
+      ],
+      "notes": "Primary metric backbone. Preserve native inches/cubits and conversion provenance.",
+      "rights": "PUBLIC_DOMAIN_OR_NO_KNOWN_US_RESTRICTIONS. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "metric_dimension",
+        "orientation",
+        "architectural_description",
+        "construction_observation"
+      ],
+      "resolution_role": "MONUMENT_TO_COMPONENT"
+    },
+    {
+      "id": "src.hoelscher1912",
+      "title": "Das Grabdenkmal des Königs Chephren",
+      "author": "Uvo Hölscher",
+      "year": 1912,
+      "kind": "primary_excavation_monograph",
+      "url": "https://doi.org/10.11588/diglit.26793",
+      "access": "PUBLIC_DIGITIZED_VIEW",
+      "rights_class": "IN_COPYRIGHT_DIGITAL_REPRODUCTION",
+      "asset_action": "TEXT_REFERENCE_AND_MANUAL_MEASUREMENT_ONLY",
+      "authority": {
+        "geometry": 5,
+        "materials": 4,
+        "visual": 3,
+        "method": 4
+      },
+      "resolution": "COMPLEX_TO_COMPONENT",
+      "roles": [
+        "excavation_description",
+        "metric_crosscheck",
+        "complex_geometry",
+        "construction_detail"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "pyramid_court",
+        "subsidiary_pyramid",
+        "workers_galleries",
+        "mortuary_complex"
+      ],
+      "notes": "OCR/text is useful for citation and extraction; Heidelberg image pages are marked In Copyright, so do not redistribute facsimiles by default.",
+      "rights": "IN_COPYRIGHT_DIGITAL_REPRODUCTION. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "excavation_description",
+        "metric_crosscheck",
+        "complex_geometry",
+        "construction_detail"
+      ],
+      "resolution_role": "COMPLEX_TO_COMPONENT"
+    },
+    {
+      "id": "src.legon1989",
+      "title": "The Design of the Pyramid of Khafre",
+      "author": "John A. R. Legon",
+      "year": 1989,
+      "kind": "field_measurement_and_geometric_reconstruction",
+      "url": "https://rombergintegrali.org/pdf/legon/Khaefre.pdf",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 1,
+        "visual": 1,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "derived_passage_geometry",
+        "geometric_crosscheck"
+      ],
+      "targets": [
+        "khafre_interior"
+      ],
+      "notes": "Useful reconstruction cross-check; inferred endpoints remain DERIVED.",
+      "rights": "REFERENCE_DOCUMENT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "derived_passage_geometry",
+        "geometric_crosscheck"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.egypt_ministry",
+      "title": "Pyramid Complex of Khafre (Khefren)",
+      "author": "Egyptian Ministry of Tourism and Antiquities",
+      "year": null,
+      "kind": "official_monument_summary",
+      "url": "https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 4,
+        "visual": 2,
+        "method": 1
+      },
+      "resolution": "MONUMENT",
+      "roles": [
+        "canonical_identity",
+        "official_dimension_context",
+        "material_context"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_complex"
+      ],
+      "notes": "Official baseline; summary dimensions do not supersede detailed survey geometry.",
+      "rights": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "canonical_identity",
+        "official_dimension_context",
+        "material_context"
+      ],
+      "resolution_role": "MONUMENT"
+    },
+    {
+      "id": "src.digitalgiza.home",
+      "title": "Digital Giza — Harvard University",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "research_archive",
+      "url": "https://giza.fas.harvard.edu/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 3,
+        "visual": 4,
+        "method": 4
+      },
+      "resolution": "PLATEAU_TO_COMPONENT",
+      "roles": [
+        "archive_discovery",
+        "bibliography",
+        "site_context",
+        "3d_reference"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_complex"
+      ],
+      "notes": "Treat individual images/models according to their record-level rights; public visibility is not blanket redistribution permission.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "archive_discovery",
+        "bibliography",
+        "site_context",
+        "3d_reference"
+      ],
+      "resolution_role": "PLATEAU_TO_COMPONENT"
+    },
+    {
+      "id": "src.digitalgiza.khafre.photos",
+      "title": "Digital Giza — Khafre Pyramid All Photos (406 records)",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "archival_photo_catalog",
+      "url": "https://giza.fas.harvard.edu/sites/1775/allphotos/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 2,
+        "visual": 5,
+        "method": 2
+      },
+      "resolution": "MONUMENT_TO_COMPONENT",
+      "roles": [
+        "photo_discovery",
+        "historical_visual_crosscheck"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_complex"
+      ],
+      "notes": "Catalog reported 406 photo records at CANON-01 audit time. Each asset must retain its own rights metadata.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "photo_discovery",
+        "historical_visual_crosscheck"
+      ],
+      "resolution_role": "MONUMENT_TO_COMPONENT"
+    },
+    {
+      "id": "src.mr1966.plate005",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 005",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88218/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 1,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "COMPLEX",
+      "roles": [
+        "complex_plan_crosscheck"
+      ],
+      "targets": [
+        "khafre_complex"
+      ],
+      "notes": "Plan of Khafre Pyramid Complex.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "complex_plan_crosscheck"
+      ],
+      "resolution_role": "COMPLEX"
+    },
+    {
+      "id": "src.mr1966.plate008",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 008",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88221/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 1,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "lower_corridor_plan",
+        "section_crosscheck"
+      ],
+      "targets": [
+        "khafre_interior",
+        "passages"
+      ],
+      "notes": "Lower corridor plans and sections.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "lower_corridor_plan",
+        "section_crosscheck"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.mr1966.plate009",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 009",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88222/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 1,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "MONUMENT_INTERIOR",
+      "roles": [
+        "pyramid_plan",
+        "lower_chamber_plan",
+        "section"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_lower_chamber"
+      ],
+      "notes": "Digital Giza record: plan and sections of Khafre Pyramid including lower chamber.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. Catalog metadata/facts only unless asset rights separately clear."
+    },
+    {
+      "id": "src.mr1966.plate013",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 013",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88326/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 1,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "COMPLEX_COMPONENT",
+      "roles": [
+        "pyramid_temple_plan",
+        "section",
+        "elevation"
+      ],
+      "targets": [
+        "khafre_pyramid_temple"
+      ],
+      "notes": "Plans, sections and elevations of Khafre Pyramid Temple.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "pyramid_temple_plan",
+        "section",
+        "elevation"
+      ],
+      "resolution_role": "COMPLEX_COMPONENT"
+    },
+    {
+      "id": "src.mr1966.plate014",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 014",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88327/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 2,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "LOWER_COMPLEX",
+      "roles": [
+        "valley_temple_plan",
+        "sphinx_temple_plan",
+        "sections"
+      ],
+      "targets": [
+        "khafre_valley_temple",
+        "sphinx_temple"
+      ],
+      "notes": "Digital Giza record: plans and sections of Khafre Valley Temple and Sphinx Temple.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. Catalog metadata/facts only unless asset rights separately clear."
+    },
+    {
+      "id": "src.digitalgiza.giza3d",
+      "title": "Digital Giza 3D",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "reference_3d_model",
+      "url": "https://giza.fas.harvard.edu/giza3d/",
+      "access": "PUBLIC_INTERACTIVE",
+      "rights_class": "REFERENCE_ONLY_UNLESS_EXPORT_RIGHTS_EXPLICIT",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 2,
+        "visual": 5,
+        "method": 3
+      },
+      "resolution": "PLATEAU_TO_MONUMENT",
+      "roles": [
+        "visual_crosscheck",
+        "site_relationships",
+        "tour_reference"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_pyramid",
+        "khafre_temples"
+      ],
+      "notes": "Use as visual/spatial cross-check. Do not assume model bytes are licensed for redistribution.",
+      "rights": "REFERENCE_ONLY_UNLESS_EXPORT_RIGHTS_EXPLICIT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "visual_crosscheck",
+        "site_relationships",
+        "tour_reference"
+      ],
+      "resolution_role": "PLATEAU_TO_MONUMENT"
+    },
+    {
+      "id": "src.digitalgiza.khafre_quarry",
+      "title": "Digital Giza — Khafre Quarry",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "archaeological_catalog_record",
+      "url": "https://giza.fas.harvard.edu/sites/1776/full/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 4,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "SITE",
+      "roles": [
+        "quarry_context",
+        "bibliographic_discovery"
+      ],
+      "targets": [
+        "khafre_quarry",
+        "core_masonry"
+      ],
+      "notes": "Useful quarry-context node with unpublished-document links.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "quarry_context",
+        "bibliographic_discovery"
+      ],
+      "resolution_role": "SITE"
+    },
+    {
+      "id": "src.digitalgiza.giia",
+      "title": "Digital Giza — G II-a (Khafre Queen's Pyramid a)",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "archaeological_catalog_record",
+      "url": "https://giza.fas.harvard.edu/sites/1777/full/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 2,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "MONUMENT",
+      "roles": [
+        "subsidiary_pyramid_context",
+        "bibliographic_discovery"
+      ],
+      "targets": [
+        "khafre_subsidiary_pyramid"
+      ],
+      "notes": "Future-scope object; not in current 56-part core model.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "subsidiary_pyramid_context",
+        "bibliographic_discovery"
+      ],
+      "resolution_role": "MONUMENT"
+    },
+    {
+      "id": "src.commons.khafre",
+      "title": "Wikimedia Commons — Pyramid of Khafra",
+      "author": "Multiple contributors",
+      "year": null,
+      "kind": "open_media_catalog",
+      "url": "https://commons.wikimedia.org/wiki/Category:Pyramid_of_Khafra",
+      "access": "PUBLIC_WEB",
+      "rights_class": "PER_FILE_LICENSE",
+      "asset_action": "PER_FILE_LICENSE_CHECK",
+      "authority": {
+        "geometry": 1,
+        "materials": 2,
+        "visual": 5,
+        "method": 1
+      },
+      "resolution": "MONUMENT_TO_STONE",
+      "roles": [
+        "visual_evidence",
+        "photo_metrology_candidate",
+        "surface_mapping_candidate"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_complex"
+      ],
+      "notes": "Never infer a category-wide image license; inspect each file.",
+      "rights": "PER_FILE_LICENSE. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "visual_evidence",
+        "photo_metrology_candidate",
+        "surface_mapping_candidate"
+      ],
+      "resolution_role": "MONUMENT_TO_STONE"
+    },
+    {
+      "id": "src.commons.khafre.interior",
+      "title": "Wikimedia Commons — Interior of Khafra Pyramid",
+      "author": "Multiple contributors",
+      "year": null,
+      "kind": "open_media_catalog",
+      "url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Khafra_Pyramid",
+      "access": "PUBLIC_WEB",
+      "rights_class": "PER_FILE_LICENSE",
+      "asset_action": "PER_FILE_LICENSE_CHECK",
+      "authority": {
+        "geometry": 1,
+        "materials": 2,
+        "visual": 5,
+        "method": 1
+      },
+      "resolution": "COMPONENT_TO_STONE",
+      "roles": [
+        "interior_visual_evidence",
+        "photo_metrology_candidate",
+        "photogrammetry_candidate"
+      ],
+      "targets": [
+        "khafre_interior",
+        "sarcophagus"
+      ],
+      "notes": "Category contained 34 files at CANON-01 audit time; per-file license/metadata required.",
+      "rights": "PER_FILE_LICENSE. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "interior_visual_evidence",
+        "photo_metrology_candidate",
+        "photogrammetry_candidate"
+      ],
+      "resolution_role": "COMPONENT_TO_STONE"
+    },
+    {
+      "id": "src.opencontext.arce_sphinx",
+      "title": "ARCE Sphinx Project 1979–1983 Archive",
+      "author": "Mark Lehner; Megan Flowers; Rebekah Miracle (eds.)",
+      "year": 2017,
+      "kind": "open_archaeological_dataset",
+      "url": "https://opencontext.org/projects/141e814a-ba2d-4560-879f-80f1afb019e9",
+      "doi": "10.6078/M7CZ356B",
+      "access": "OPEN_DATASET",
+      "rights_class": "CC_BY_4_0",
+      "asset_action": "INGEST_ALLOWED_WITH_ATTRIBUTION",
+      "authority": {
+        "geometry": 5,
+        "materials": 5,
+        "visual": 5,
+        "method": 5
+      },
+      "resolution": "SITE_TO_STONE",
+      "roles": [
+        "stone_by_stone_mapping",
+        "survey_drawings",
+        "geology",
+        "photography",
+        "temple_geometry"
+      ],
+      "targets": [
+        "sphinx",
+        "sphinx_temple",
+        "khafre_valley_temple",
+        "sphinx_amphitheater"
+      ],
+      "notes": "High-value open data for expansion of the broader Khafre/Sphinx complex; URI-level attribution required.",
+      "rights": "CC_BY_4_0. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "stone_by_stone_mapping",
+        "survey_drawings",
+        "geology",
+        "photography",
+        "temple_geometry"
+      ],
+      "resolution_role": "SITE_TO_STONE"
+    },
+    {
+      "id": "src.arce.sphinx_database",
+      "title": "Sphinx Mapping Digital Database",
+      "author": "ARCE / AERA / Mark Lehner",
+      "year": 2018,
+      "kind": "project_documentation",
+      "url": "https://arce.org/project/sphinx-mapping-digital-database/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 4,
+        "visual": 4,
+        "method": 5
+      },
+      "resolution": "SITE_TO_STONE",
+      "roles": [
+        "dataset_scope",
+        "survey_method",
+        "archive_inventory"
+      ],
+      "targets": [
+        "sphinx",
+        "sphinx_temple",
+        "khafre_valley_temple"
+      ],
+      "notes": "Documents 1:50 Sphinx survey and stone-by-stone 1:100 Sphinx/Khafre Valley Temple mapping plus digitized archive inventory.",
+      "rights": "REFERENCE_WEB. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "dataset_scope",
+        "survey_method",
+        "archive_inventory"
+      ],
+      "resolution_role": "SITE_TO_STONE"
+    },
+    {
+      "id": "src.zenodo.arce_media",
+      "title": "ARCE Sphinx Project aggregated media files",
+      "author": "Lehner; Flowers; Miracle",
+      "year": 2018,
+      "kind": "open_archival_media_deposit",
+      "url": "https://zenodo.org/records/1256271",
+      "doi": "10.5281/zenodo.1256271",
+      "access": "OPEN_DATASET",
+      "rights_class": "SOURCE_RECORD_LINKS_TO_OPEN_CONTEXT_RIGHTS",
+      "asset_action": "INGEST_AFTER_RECORD_LICENSE_MATCH",
+      "authority": {
+        "geometry": 2,
+        "materials": 2,
+        "visual": 5,
+        "method": 2
+      },
+      "resolution": "SITE_TO_DETAIL",
+      "roles": [
+        "high_resolution_media_archive",
+        "bit_preservation"
+      ],
+      "targets": [
+        "sphinx",
+        "sphinx_temple",
+        "khafre_valley_temple"
+      ],
+      "notes": "~35 GB aggregated media deposit; connect each file back to its Open Context record for contextual metadata and license.",
+      "rights": "SOURCE_RECORD_LINKS_TO_OPEN_CONTEXT_RIGHTS. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "high_resolution_media_archive",
+        "bit_preservation"
+      ],
+      "resolution_role": "SITE_TO_DETAIL"
+    },
+    {
+      "id": "src.aera.gpmp",
+      "title": "Giza, Meter by Meter — GPMP survey grid",
+      "author": "AERA / Mark Lehner / David Goodman et al.",
+      "year": null,
+      "kind": "high_precision_site_survey_method",
+      "url": "https://aeraweb.org/giza-meter-by-meter/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_AND_TRANSFORM_SPEC",
+      "authority": {
+        "geometry": 5,
+        "materials": 1,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "PLATEAU_CONTROL_NETWORK",
+      "roles": [
+        "site_control_network",
+        "coordinate_registration",
+        "elevation_control"
+      ],
+      "targets": [
+        "giza_plateau",
+        "spatial_registration"
+      ],
+      "notes": "Primary traverse closure ~0.0165 m over ~6 km and elevation loop closure <0.02 m; valuable registration backbone, not a downloadable full survey dataset.",
+      "rights": "REFERENCE_WEB. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "site_control_network",
+        "coordinate_registration",
+        "elevation_control"
+      ],
+      "resolution_role": "PLATEAU_CONTROL_NETWORK"
+    },
+    {
+      "id": "src.aera.sphinx_stone_mapping",
+      "title": "Who Built the Sphinx? — Stone by Stone mapping summary",
+      "author": "Mark Lehner / AERA",
+      "year": null,
+      "kind": "research_summary",
+      "url": "https://aeraweb.org/projects/who-built-the-sphinx/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_WEB",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 5,
+        "visual": 3,
+        "method": 5
+      },
+      "resolution": "STONE",
+      "roles": [
+        "stone_mapping_method",
+        "geological_fingerprinting",
+        "quarry_sequence"
+      ],
+      "targets": [
+        "sphinx",
+        "sphinx_temple",
+        "khafre_valley_temple"
+      ],
+      "notes": "Methodological precedent: mapped Sphinx/Sphinx Temple/Khafre Valley Temple stone-by-stone; temple core blocks can span multiple geological layers.",
+      "rights": "REFERENCE_WEB. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "stone_mapping_method",
+        "geological_fingerprinting",
+        "quarry_sequence"
+      ],
+      "resolution_role": "STONE"
+    },
+    {
+      "id": "src.npj2020.materials",
+      "title": "Sustainability problems of the Giza pyramids",
+      "author": "A. M. Hemeda et al.",
+      "year": 2020,
+      "kind": "peer_reviewed_material_characterization",
+      "url": "https://www.nature.com/articles/s40494-020-0356-9",
+      "access": "OPEN_ACCESS_ARTICLE",
+      "rights_class": "OPEN_ACCESS_ARTICLE_RECORD",
+      "asset_action": "NUMERIC_AND_TEXTUAL_RESULT_INGEST",
+      "authority": {
+        "geometry": 2,
+        "materials": 5,
+        "visual": 3,
+        "method": 4
+      },
+      "resolution": "MATERIAL_SAMPLE",
+      "roles": [
+        "khafre_limestone_properties",
+        "mortar_composition",
+        "weathering_context",
+        "quarry_context"
+      ],
+      "targets": [
+        "core_masonry",
+        "structural_mortar",
+        "geomechanics_solver",
+        "acoustics_solver"
+      ],
+      "notes": "Treat tested sample ranges as material priors/context, not universal properties for every Khafre block.",
+      "rights": "OPEN_ACCESS_ARTICLE_RECORD. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "khafre_limestone_properties",
+        "mortar_composition",
+        "weathering_context",
+        "quarry_context"
+      ],
+      "resolution_role": "MATERIAL_SAMPLE"
+    },
+    {
+      "id": "src.aigner1983",
+      "title": "A Pliocene cliff-line around the Giza pyramids plateau, Egypt",
+      "author": "Thomas Aigner",
+      "year": 1983,
+      "kind": "peer_reviewed_geology",
+      "url": "https://doi.org/10.1016/0031-0182(83)90029-9",
+      "access": "ABSTRACT_PUBLIC",
+      "rights_class": "PUBLISHER_COPYRIGHT",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 5,
+        "visual": 1,
+        "method": 4
+      },
+      "resolution": "PLATEAU_GEOLOGY",
+      "roles": [
+        "lithology",
+        "joint_fault_context",
+        "geomorphology"
+      ],
+      "targets": [
+        "giza_plateau",
+        "geology_model",
+        "subsurface_null_model"
+      ],
+      "notes": "Important null-model context: lithology, joints and faults influence plateau morphology.",
+      "rights": "PUBLISHER_COPYRIGHT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "lithology",
+        "joint_fault_context",
+        "geomorphology"
+      ],
+      "resolution_role": "PLATEAU_GEOLOGY"
+    },
+    {
+      "id": "src.smithsonian.elisofon.khafre",
+      "title": "Eliot Elisofon Khafre photographic records",
+      "author": "Smithsonian Institution / Eliot Elisofon Photographic Archives",
+      "year": 1965,
+      "kind": "restricted_archival_photography",
+      "url": "https://www.si.edu/object/archives/components/sova-eepa-1973-001-ref8682",
+      "access": "PUBLIC_IIIF_VIEW",
+      "rights_class": "USAGE_CONDITIONS_APPLY",
+      "asset_action": "REFERENCE_ONLY_NO_REDISTRIBUTION",
+      "authority": {
+        "geometry": 1,
+        "materials": 2,
+        "visual": 5,
+        "method": 1
+      },
+      "resolution": "MONUMENT_TO_COMPLEX",
+      "roles": [
+        "historical_visual_reference",
+        "casing_condition_reference"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_complex"
+      ],
+      "notes": "IIIF/manifests aid viewing and metadata, but reproduction permission is restricted; do not bundle images by default.",
+      "rights": "USAGE_CONDITIONS_APPLY. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "historical_visual_reference",
+        "casing_condition_reference"
+      ],
+      "resolution_role": "MONUMENT_TO_COMPLEX"
+    },
+    {
+      "id": "src.scidep2025",
+      "title": "The ScIDEP muon radiography project at the Egyptian Pyramid of Khafre",
+      "author": "Gamal et al. / ScIDEP Collaboration",
+      "year": 2025,
+      "kind": "peer_reviewed_open_access_research",
+      "url": "https://doi.org/10.1063/5.0273135",
+      "access": "OPEN_ACCESS_ARTICLE",
+      "rights_class": "OPEN_ACCESS_ARTICLE",
+      "asset_action": "ARTICLE_AND_METHOD_REFERENCE",
+      "authority": {
+        "geometry": 2,
+        "materials": 1,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "MONUMENT_DENSITY_FIELD",
+      "roles": [
+        "khafre_muography_method",
+        "detector_geometry",
+        "simulation_framework",
+        "modern_dimension_context"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "muography_solver"
+      ],
+      "notes": "Underlying data are available from the corresponding author upon reasonable request, not a public raw-data download.",
+      "rights": "OPEN_ACCESS_ARTICLE. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "khafre_muography_method",
+        "detector_geometry",
+        "simulation_framework",
+        "modern_dimension_context"
+      ],
+      "resolution_role": "MONUMENT_DENSITY_FIELD"
+    },
+    {
+      "id": "src.scanpyramids2017.khufu",
+      "title": "Discovery of a big void in Khufu’s Pyramid by observation of cosmic-ray muons",
+      "author": "Morishima et al.",
+      "year": 2017,
+      "kind": "peer_reviewed_muography_validation_precedent",
+      "url": "https://doi.org/10.1038/nature24647",
+      "access": "ARTICLE_RECORD",
+      "rights_class": "PUBLISHER_ARTICLE",
+      "asset_action": "METHOD_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 1,
+        "materials": 1,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "MONUMENT_DENSITY_FIELD",
+      "roles": [
+        "independent_detector_validation_precedent",
+        "muography_method"
+      ],
+      "targets": [
+        "muography_solver"
+      ],
+      "notes": "KHUFU ONLY. Methodological precedent, not Khafre geometry. Big Void was confirmed by three detector technologies and independent analyses.",
+      "rights": "PUBLISHER_ARTICLE. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "independent_detector_validation_precedent",
+        "muography_method"
+      ],
+      "resolution_role": "MONUMENT_DENSITY_FIELD"
+    },
+    {
+      "id": "src.scanpyramids2023.khufu_nfc",
+      "title": "Precise characterization of a corridor-shaped structure in Khufu’s Pyramid by cosmic-ray muons",
+      "author": "Procureur et al.",
+      "year": 2023,
+      "kind": "peer_reviewed_open_muography_validation_precedent",
+      "url": "https://doi.org/10.1038/s41467-023-36351-0",
+      "access": "OPEN_ACCESS_ARTICLE",
+      "rights_class": "OPEN_ACCESS_ARTICLE",
+      "asset_action": "METHOD_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 1,
+        "materials": 1,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "SUBMETER_TO_COMPONENT_DENSITY",
+      "roles": [
+        "muography_precision_precedent",
+        "uncertainty_reporting",
+        "parameter_estimation"
+      ],
+      "targets": [
+        "muography_solver"
+      ],
+      "notes": "KHUFU ONLY. Methodological precedent for independent characterization and uncertainty; never import as Khafre geometry.",
+      "rights": "OPEN_ACCESS_ARTICLE. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "muography_precision_precedent",
+        "uncertainty_reporting",
+        "parameter_estimation"
+      ],
+      "resolution_role": "SUBMETER_TO_COMPONENT_DENSITY"
+    },
+    {
+      "id": "src.nasa.srtmgl1v003",
+      "title": "NASA SRTM Global 1 arc-second V003",
+      "author": "NASA/JPL/LP DAAC",
+      "year": null,
+      "kind": "public_elevation_dataset",
+      "url": "https://data.nasa.gov/dataset/nasa-shuttle-radar-topography-mission-global-1-arc-second-v003-e47e1",
+      "access": "PUBLIC_DATASET",
+      "rights_class": "US_GOVERNMENT_OPEN_DATA",
+      "asset_action": "TERRAIN_INGEST_ALLOWED",
+      "authority": {
+        "geometry": 1,
+        "materials": 0,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "~30M_TERRAIN",
+      "roles": [
+        "coarse_terrain_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "terrain_context"
+      ],
+      "notes": "Regional context only; never monument/stone geometry.",
+      "rights": "US_GOVERNMENT_OPEN_DATA. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "coarse_terrain_context"
+      ],
+      "resolution_role": "~30M_TERRAIN"
+    },
+    {
+      "id": "src.copernicus.dem",
+      "title": "Copernicus DEM GLO-30 / GLO-90",
+      "author": "Copernicus Data Space Ecosystem",
+      "year": null,
+      "kind": "digital_surface_model",
+      "url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+      "access": "SERVICE_ACCESS_CONDITIONS_CHANGE",
+      "rights_class": "FULL_FREE_OPEN_LICENSE_WITH_SERVICE_ACCESS_RULES",
+      "asset_action": "TERRAIN_INGEST_AFTER_ACCESS_CHECK",
+      "authority": {
+        "geometry": 1,
+        "materials": 0,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "30M_OR_90M_SURFACE",
+      "roles": [
+        "terrain_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "terrain_context"
+      ],
+      "notes": "License is full/free/open, but as of 2026-08-25 GLO-30 view-service access requires authorized CCM user category; keep access and rights separate.",
+      "rights": "FULL_FREE_OPEN_LICENSE_WITH_SERVICE_ACCESS_RULES. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "terrain_context"
+      ],
+      "resolution_role": "30M_OR_90M_SURFACE"
+    },
+    {
+      "id": "src.copernicus.sentinel2",
+      "title": "Copernicus Sentinel-2 Level-2A",
+      "author": "European Union Copernicus Programme",
+      "year": null,
+      "kind": "open_multispectral_satellite",
+      "url": "https://documentation.dataspace.copernicus.eu/Data/SentinelMissions/Sentinel2.html",
+      "access": "FREE_GENERAL_PUBLIC",
+      "rights_class": "COPERNICUS_OPEN_DATA",
+      "asset_action": "SITE_IMAGERY_INGEST_ALLOWED",
+      "authority": {
+        "geometry": 0,
+        "materials": 1,
+        "visual": 4,
+        "method": 4
+      },
+      "resolution": "10M_20M_60M",
+      "roles": [
+        "site_context",
+        "surface_reflectance",
+        "change_detection",
+        "terrain_texture_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "site_context"
+      ],
+      "notes": "10/20/60 m bands. Not stone-scale or chamber-scale geometry.",
+      "rights": "COPERNICUS_OPEN_DATA. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "site_context",
+        "surface_reflectance",
+        "change_detection",
+        "terrain_texture_context"
+      ],
+      "resolution_role": "10M_20M_60M"
+    },
+    {
+      "id": "src.usgs.landsat_c2",
+      "title": "Landsat Collection 2 Surface Reflectance",
+      "author": "USGS EROS / Landsat Missions",
+      "year": null,
+      "kind": "open_satellite_surface_reflectance",
+      "url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance",
+      "access": "PUBLIC_DATASET",
+      "rights_class": "NO_USE_RESTRICTIONS",
+      "asset_action": "SITE_IMAGERY_INGEST_ALLOWED",
+      "authority": {
+        "geometry": 0,
+        "materials": 1,
+        "visual": 3,
+        "method": 4
+      },
+      "resolution": "30M",
+      "roles": [
+        "long_term_change_context",
+        "surface_reflectance"
+      ],
+      "targets": [
+        "giza_plateau",
+        "site_context"
+      ],
+      "notes": "30 m Level-2 surface reflectance; time-series/site context only.",
+      "rights": "NO_USE_RESTRICTIONS. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "long_term_change_context",
+        "surface_reflectance"
+      ],
+      "resolution_role": "30M"
+    },
+    {
+      "id": "src.ahrama.deep_claim_2025",
+      "title": "Controversy over Pyramid claims",
+      "author": "Ahram Online / Al-Ahram Weekly",
+      "year": 2025,
+      "kind": "secondary_reporting_on_unverified_claim",
+      "url": "https://english.ahram.org.eg/NewsContentP/50/544236/AlAhram-Weekly/Controversy-over-Pyramid-claims.aspx",
+      "access": "PUBLIC_WEB",
+      "rights_class": "NEWS_COPYRIGHT",
+      "asset_action": "CLAIM_PROVENANCE_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 1,
+        "method": 0
+      },
+      "resolution": "CLAIM_ONLY",
+      "roles": [
+        "claim_provenance",
+        "criticism_context"
+      ],
+      "targets": [
+        "deep_claim_layer"
+      ],
+      "notes": "Records public claim and criticism. It confers zero geometry authority.",
+      "rights": "NEWS_COPYRIGHT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "claim_provenance",
+        "criticism_context"
+      ],
+      "resolution_role": "CLAIM_ONLY"
+    },
+    {
+      "id": "src.ahrama.deep_claim_retraction_context_2026",
+      "title": "Great Pyramid radar study on hidden structures retracted over serious methodological flaws",
+      "author": "Ahram Online",
+      "year": 2026,
+      "kind": "secondary_retraction_reporting",
+      "url": "https://english.ahram.org.eg/NewsContent/1/1238/576187/Egypt/Tourism/Great-Pyramid-radar-study-on-%3Bhidden-structures%3B-r.aspx",
+      "access": "PUBLIC_WEB",
+      "rights_class": "NEWS_COPYRIGHT",
+      "asset_action": "CLAIM_RISK_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 0,
+        "method": 1
+      },
+      "resolution": "CLAIM_CONTEXT",
+      "roles": [
+        "methodological_risk",
+        "retraction_context",
+        "khafre_claim_non_peer_review_status"
+      ],
+      "targets": [
+        "deep_claim_layer"
+      ],
+      "notes": "The retracted 2022 paper concerned KHUFU; later KHAFRE deep claims were not in that paper and were not separately peer reviewed. This is context, not direct evidence of absence.",
+      "rights": "NEWS_COPYRIGHT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "methodological_risk",
+        "retraction_context",
+        "khafre_claim_non_peer_review_status"
+      ],
+      "resolution_role": "CLAIM_CONTEXT"
+    },
+    {
+      "id": "src.wikidata.khafre",
+      "title": "Wikidata — Pyramid of Khafre",
+      "author": "Wikidata contributors",
+      "year": null,
+      "kind": "public_structured_context_record",
+      "url": "https://www.wikidata.org/wiki/Q208358",
+      "access": "PUBLIC_WEB",
+      "rights_class": "CC0_STRUCTURED_DATA",
+      "asset_action": "CONTEXT_METADATA_INGEST",
+      "authority": {
+        "geometry": 1,
+        "materials": 0,
+        "visual": 1,
+        "method": 0
+      },
+      "resolution": "MONUMENT_CONTEXT",
+      "roles": [
+        "geographic_context_anchor"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "giza_plateau"
+      ],
+      "notes": "Coordinate location is used only as a context-grade WGS84 anchor. It does not define the precision survey frame or vertical datum.",
+      "rights": "CC0 structured data; retain source record and context-only precision warning.",
+      "geometry_role": [
+        "geographic_context_anchor"
+      ],
+      "resolution_role": "MONUMENT_CONTEXT"
+    },
+    {
+      "id": "src.aera.kh2025_laser",
+      "title": "The First Laser Survey of the Second Great Pyramid",
+      "author": "Søren Sindbæk; Sarah Skytte Qvistgaard",
+      "year": 2025,
+      "kind": "modern_laser_survey_publication_metadata",
+      "url": "https://aeraweb.org/publications/reports/",
+      "access": "MEMBER_PUBLICATION_METADATA_PUBLIC",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "METADATA_AND_ACQUISITION_TARGET_ONLY",
+      "authority": {
+        "geometry": 5,
+        "materials": 1,
+        "visual": 4,
+        "method": 5
+      },
+      "resolution": "MONUMENT_TO_SURFACE",
+      "roles": [
+        "laser_survey",
+        "surface_geometry",
+        "modern_metric_acquisition"
+      ],
+      "targets": [
+        "khafre_pyramid"
+      ],
+      "notes": "AERAGRAM 26:1-2, pp. 3-6. Public AERA bibliography confirms the first laser survey of Khafre; detailed article/data were not publicly accessible during OBSERVATORY ingest. Do not invent point-cloud measurements.",
+      "geometry_role": [
+        "future_high_authority_surface_geometry"
+      ],
+      "resolution_role": "MONUMENT_TO_SURFACE",
+      "rights": "REFERENCE_DOCUMENT. OBSERVATORY: preserve source metadata and perform per-asset rights review before bundling media."
+    },
+    {
+      "id": "src.dash.giza_surveys",
+      "title": "Surveys at Giza on Google Earth",
+      "author": "Glen Dash Foundation for Archaeological Research / AERA",
+      "year": 2018,
+      "kind": "survey_data_portal",
+      "url": "https://www.dashfoundation.org/Surveys-at-Giza.htm",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_DATA_PORTAL",
+      "asset_action": "METADATA_AND_NUMERIC_CONTEXT_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 0,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "PLATEAU_TO_CONTROL_POINT",
+      "roles": [
+        "survey_control",
+        "coordinate_context",
+        "corner_center_estimates",
+        "method_provenance"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_pyramid"
+      ],
+      "notes": "Portal documents GPMP/GDFS survey products and states that Khafre corner/center estimates are based on Petrie with elevations cross-checked against Petrie and Maragioglio/Rinaldi.",
+      "geometry_role": [
+        "survey_context",
+        "future_coordinate_tie"
+      ],
+      "resolution_role": "PLATEAU_TO_CONTROL_POINT",
+      "rights": "REFERENCE_DATA_PORTAL. OBSERVATORY: preserve source metadata and perform per-asset rights review before bundling media."
+    },
+    {
+      "id": "src.dash.corner_conundrum",
+      "title": "Corner Conundrum: A Mapping Mantra",
+      "author": "Mark Lehner / Glen Dash Foundation Survey",
+      "year": 2012,
+      "kind": "survey_method_note",
+      "url": "https://www.dashfoundation.org/downloads/archaeology/clippings/AG13-1-GPMP-Circle.pdf",
+      "access": "PUBLIC_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_METHOD_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 2,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "BASELINE_DETAIL",
+      "roles": [
+        "baseline_definition",
+        "survey_uncertainty",
+        "casing_observation"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_casing"
+      ],
+      "notes": "Important physical definition of Khafre baseline: vertical cut at foot of lowest granite casing course where pyramid slope met court pavement.",
+      "geometry_role": [
+        "baseline_definition_context"
+      ],
+      "resolution_role": "BASELINE_DETAIL",
+      "rights": "REFERENCE_DOCUMENT. OBSERVATORY: preserve source metadata and perform per-asset rights review before bundling media."
+    },
+    {
+      "id": "src.aera.online_data",
+      "title": "AERA Online Data — ARCE Sphinx Project Archive inventory",
+      "author": "Ancient Egypt Research Associates",
+      "year": 2017,
+      "kind": "open_archive_inventory",
+      "url": "https://aeraweb.org/publications/data/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "MIXED_OPEN_ARCHIVE_CHECK_ITEM_LICENSE",
+      "asset_action": "METADATA_INGEST_AND_PER_ASSET_REVIEW",
+      "authority": {
+        "geometry": 4,
+        "materials": 3,
+        "visual": 5,
+        "method": 5
+      },
+      "resolution": "COMPLEX_TO_DETAIL",
+      "roles": [
+        "map_inventory",
+        "photo_archive",
+        "water_table_archive",
+        "geology_archive"
+      ],
+      "targets": [
+        "sphinx",
+        "khafre_valley_temple",
+        "giza_plateau"
+      ],
+      "notes": "Inventory exposes drawing scales, 5,000 slides, 2,716 B&W photographs, geology/topography maps, and 1981-82 water-table profile.",
+      "geometry_role": [
+        "context_geometry",
+        "archive_acquisition"
+      ],
+      "resolution_role": "COMPLEX_TO_DETAIL",
+      "rights": "MIXED_OPEN_ARCHIVE_CHECK_ITEM_LICENSE. OBSERVATORY: preserve source metadata and perform per-asset rights review before bundling media."
+    },
+    {
+      "id": "src.lehner.sphinx1992",
+      "title": "The First International Symposium on the Great Sphinx: Book of Proceedings",
+      "author": "Mark Lehner et al.",
+      "year": 1992,
+      "kind": "symposium_proceedings",
+      "url": "https://gizamedia.rc.fas.harvard.edu/images/MFA-images/Giza/GizaImage/full/library/lehner_sphinx_1992.pdf",
+      "access": "PUBLIC_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_NUMERIC_CONTEXT_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 3,
+        "visual": 3,
+        "method": 4
+      },
+      "resolution": "SPHINX_COMPLEX",
+      "roles": [
+        "survey_control",
+        "hydrology_context",
+        "geology_context"
+      ],
+      "targets": [
+        "sphinx",
+        "khafre_valley_temple",
+        "khafre_causeway",
+        "giza_plateau"
+      ],
+      "notes": "Proceedings preserve ARCE survey context and report 1981-82 water-table observations in the Sphinx/Khafre-valley-temple/causeway area. Context only; not evidence of water inside Khafre pyramid.",
+      "geometry_role": [
+        "context_only"
+      ],
+      "resolution_role": "SPHINX_COMPLEX",
+      "rights": "REFERENCE_DOCUMENT. OBSERVATORY: preserve source metadata and perform per-asset rights review before bundling media."
+    },
+    {
+      "id": "src.lehner1983.layout",
+      "title": "Some Observations on the Layout of the Khufu and Khafre Pyramids",
+      "author": "Mark Lehner",
+      "year": 1983,
+      "kind": "peer_reviewed_archaeological_survey_interpretation",
+      "url": "https://doi.org/10.2307/40000898",
+      "access": "PUBLIC_METADATA_AND_HARVARD_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_METHOD_CONTEXT_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 1,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "MONUMENT_BASELINE",
+      "roles": [
+        "khafre_layout",
+        "bedrock_and_baseline_context",
+        "survey_method"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_baseline"
+      ],
+      "notes": "JARCE 20 (1983), pp. 7–25. Preserve tentative/observational scope; use detailed metric geometry only where source locator is explicit.",
+      "rights": "REFERENCE_DOCUMENT. Cite DOI/JARCE; do not redistribute copyrighted PDF unless permitted."
+    },
+    {
+      "id": "src.arce.sphinx_archive_final",
+      "title": "Sphinx Mapping Digital Database — final digitized archive counts",
+      "author": "American Research Center in Egypt / AERA",
+      "year": 2017,
+      "kind": "final_digitization_archive_record",
+      "url": "https://arce.org/project/sphinx-mapping-digital-database/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "MIXED_ARCHIVE_ITEM_RIGHTS",
+      "asset_action": "METADATA_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 3,
+        "visual": 5,
+        "method": 5
+      },
+      "resolution": "COMPLEX_TO_DETAIL",
+      "roles": [
+        "archive_inventory",
+        "survey_map_context",
+        "photo_archive"
+      ],
+      "targets": [
+        "sphinx",
+        "khafre_valley_temple",
+        "giza_plateau"
+      ],
+      "notes": "Final digitization project reports 364 maps/drawings, 3,857 slides and 1,740 B&W photographs. Kept separately from earlier AERA inventory figures.",
+      "rights": "MIXED_ARCHIVE_ITEM_RIGHTS. Archive metadata may be referenced; individual asset rights must be checked."
+    },
+    {
+      "id": "src.biondi2022.sar",
+      "title": "Synthetic Aperture Radar Doppler Tomography Reveals Details of Undiscovered High-Resolution Internal Structure of the Great Pyramid of Giza",
+      "author": "Filippo Biondi; Corrado Malanga",
+      "year": 2022,
+      "kind": "retracted_peer_reviewed_method_paper",
+      "url": "https://doi.org/10.3390/rs14205231",
+      "access": "OPEN_ACCESS_RETRACTED",
+      "rights_class": "OPEN_ACCESS_ARTICLE",
+      "asset_action": "METHOD_LINEAGE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 0,
+        "method": 0
+      },
+      "resolution": "METHOD_ONLY",
+      "roles": [
+        "sar_method_lineage",
+        "claim_audit"
+      ],
+      "targets": [
+        "deep_claim_methodology"
+      ],
+      "status": "RETRACTED_2026-08-10",
+      "notes": "Retracted by Remote Sensing in 2026. No geometry-write authority.",
+      "rights": "OPEN_ACCESS_ARTICLE_RECORD; paper is RETRACTED and retained for method-lineage audit only."
+    },
+    {
+      "id": "src.mdpi2026.sar_retraction",
+      "title": "Retraction of Biondi & Malanga 2022 SAR Doppler tomography article",
+      "author": "Remote Sensing Editorial Office / MDPI",
+      "year": 2026,
+      "kind": "publisher_retraction_notice",
+      "url": "https://doi.org/10.3390/rs18162679",
+      "access": "OPEN_ACCESS",
+      "rights_class": "OPEN_ACCESS_NOTICE",
+      "asset_action": "STATUS_AUTHORITY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 0,
+        "method": 5
+      },
+      "resolution": "PUBLICATION_STATUS",
+      "roles": [
+        "publication_status",
+        "method_validity_audit"
+      ],
+      "targets": [
+        "src.biondi2022.sar",
+        "deep_claim_methodology"
+      ],
+      "notes": "Publisher states investigation confirmed serious methodological flaws and statistical errors undermining scientific conclusions; authors disagreed.",
+      "rights": "OPEN_ACCESS_NOTICE; publisher status record may be cited."
+    },
+    {
+      "id": "src.procedia2016.khafre_deformations",
+      "title": "Unknown Deformations on the Facades of the Pyramid of Khafre at Giza Pyramid Complex in Egypt",
+      "author": "I. Seglins; J. Kukela",
+      "year": 2016,
+      "kind": "open_access_facade_condition_study",
+      "url": "https://doi.org/10.1016/j.proeng.2016.08.777",
+      "access": "OPEN_ACCESS",
+      "rights_class": "CC_BY_NC_ND_4_0_OPEN_ACCESS",
+      "asset_action": "TEXT_NUMERIC_METHOD_AND_CONDITION_CONTEXT",
+      "authority": {
+        "geometry": 1,
+        "materials": 1,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "FACADE_CONDITION_DOCUMENTATION",
+      "roles": [
+        "facade_condition",
+        "crack_fracture_documentation",
+        "photo_time_series_method"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_facades"
+      ],
+      "notes": "Photographic documentation was performed during 2009–2012; major fracture/crack locations were verified in situ in 2012. Condition evidence only; no automatic geometry write authority.",
+      "rights": "Open access under Creative Commons license per publisher record; figures/articles may carry no-derivatives restriction, so do not rebundle modified figure assets."
+    },
+    {
+      "id": "src.aera.gpmp_survey",
+      "title": "AERA Archaeological Survey / Giza Plateau Mapping Project",
+      "author": "Ancient Egypt Research Associates",
+      "year": 2026,
+      "kind": "institutional_survey_program_record",
+      "url": "https://aeraweb.org/projects/gpmp/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "PUBLIC_WEB_METADATA",
+      "asset_action": "METHOD_CONTROL_NETWORK_METADATA",
+      "authority": {
+        "geometry": 5,
+        "materials": 1,
+        "visual": 3,
+        "method": 5
+      },
+      "resolution": "PLATEAU_TO_MONUMENT",
+      "roles": [
+        "survey_control_network",
+        "plateau_mapping",
+        "modern_survey_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_pyramid",
+        "khafre_complex"
+      ],
+      "notes": "AERA states GPMP began in 1984 to create a high-precision map and survey control network; GDFS from 2012 surveyed all three major pyramids and surrounding features. Use as method/control-network authority; raw coordinates must still be acquired and registered.",
+      "rights": "PUBLIC_WEB_METADATA; underlying survey datasets retain source-specific terms."
+    },
+    {
+      "id": "src.kawae2019.drone3d",
+      "title": "Drone 3D Survey at the Pyramids of Giza",
+      "author": "Yukinori Kawae",
+      "year": 2019,
+      "kind": "peer_reviewed_open_method_article",
+      "url": "https://doi.org/10.24572/iatssreview.44.2_117",
+      "access": "OPEN_ACCESS",
+      "rights_class": "JOURNAL_FREE_ACCESS",
+      "asset_action": "METHOD_CONTEXT",
+      "authority": {
+        "geometry": 2,
+        "materials": 0,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "METHOD_AND_SURVEY_CONTEXT",
+      "roles": [
+        "drone_photogrammetry",
+        "3d_survey_method",
+        "giza_survey_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "pyramids_of_giza"
+      ],
+      "notes": "Open-access 2019 article describes drone-based 3D survey work at Giza and the need to update pyramid form survey data. It is method context unless source-derived measurement tables are separately ingested.",
+      "rights": "JOURNAL_FREE_ACCESS; verify article license before rebundling figures."
+    },
+    {
+      "id": "src.aera2025.khafre_laser",
+      "title": "Beamoin in on Khafre: The First Laser Survey of the Second Great Pyramid",
+      "author": "Søren Sindbæk; Sarah Skytte Qvistgaard",
+      "year": 2025,
+      "kind": "institutional_laser_survey_publication_metadata",
+      "url": "https://aeraweb.org/publications/reports/",
+      "access": "MEMBER_ONLY_ARTICLE_METADATA_PUBLIC",
+      "rights_class": "PUBLIC_CITATION_METADATA_ARTICLE_RESTRICTED",
+      "asset_action": "ACQUISITION_PRIORITY_METADATA_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 0,
+        "method": 4
+      },
+      "resolution": "MODERN_KHAFRE_SURVEY_METADATA_ONLY",
+      "roles": [
+        "modern_khafre_laser_survey",
+        "acquisition_priority"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_exterior"
+      ],
+      "notes": "AERA 2025 bibliography/reports list the first laser survey of Khafre. Detailed measurements are not publicly ingested here; zero geometry-write authority until authorized data or published values are acquired.",
+      "rights": "PUBLIC_CITATION_METADATA; article access restricted to members at time of registry update."
+    },
+    {
+      "id": "src.nell_ruggles2014",
+      "title": "The Orientations of the Giza Pyramids and Associated Structures",
+      "author": "Erin Nell; Clive Ruggles",
+      "year": 2014,
+      "kind": "modern_total_station_survey",
+      "url": "https://arxiv.org/pdf/1302.5622",
+      "alternate_urls": [
+        "https://doi.org/10.1177/0021828614533065"
+      ],
+      "access": "OPEN_PREPRINT_AND_PUBLISHED_METADATA",
+      "rights_class": "OPEN_PREPRINT_REFERENCE",
+      "asset_action": "TEXT_AND_NUMERIC_MEASUREMENT_INGEST",
+      "authority": {
+        "geometry": 5,
+        "materials": 0,
+        "visual": 1,
+        "method": 5
+      },
+      "resolution": "MONUMENT_SIDE_ALIGNMENT",
+      "roles": [
+        "total_station_survey",
+        "orientation",
+        "best_fit_line",
+        "survey_repeatability",
+        "causeway_alignment"
+      ],
+      "targets": [
+        "khafre_pyramid",
+        "khafre_causeway",
+        "khafre_valley_temple",
+        "giza_plateau"
+      ],
+      "notes": "December 2006 Total Station survey. Khafre casing-foundation side alignments use 13/19/11/11 points respectively; repeated >10-point lines were reported consistent to within 0.2 arcmin. Store side-specific values; do not collapse non-square residuals into false exact cardinality.",
+      "geometry_role": [
+        "orientation_constraint",
+        "control_network_angular_constraint"
+      ],
+      "resolution_role": "MONUMENT_SIDE_ALIGNMENT",
+      "rights": "OPEN_PREPRINT_REFERENCE; numeric facts and citation metadata may be stored. Published journal version has separate publisher terms."
+    },
+    {
+      "id": "src.dash.gpmp_frame2015",
+      "title": "The Great Pyramid’s Footprint: Results from Our 2015 Survey",
+      "author": "Glen Dash",
+      "year": 2015,
+      "kind": "gpmp_control_frame_definition",
+      "url": "https://www.dashfoundation.org/downloads/archaeology/as-published/AERAGRAM16_2_GDash.pdf",
+      "access": "PUBLIC_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_NUMERIC_FRAME_INGEST",
+      "authority": {
+        "geometry": 5,
+        "materials": 0,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "PLATEAU_CONTROL_NETWORK",
+      "roles": [
+        "gpmp_frame_definition",
+        "control_coordinates",
+        "survey_method",
+        "confidence_bounds"
+      ],
+      "targets": [
+        "giza_plateau",
+        "spatial_registration"
+      ],
+      "notes": "Defines the GPMP planar grid: Khufu center is N100000 E500000; northing/easting axes are used. Includes published survey-marker examples. These values define frame context, not a Khafre translation tie.",
+      "geometry_role": [
+        "coordinate_frame_definition",
+        "survey_control_context"
+      ],
+      "resolution_role": "PLATEAU_CONTROL_NETWORK",
+      "rights": "REFERENCE_DOCUMENT; numeric survey facts/citation metadata may be stored; do not rebundle full PDF unless rights are separately cleared."
+    },
+    {
+      "id": "src.dash.gpmp_geophys2006",
+      "title": "Preliminary GPMP Geophysical Survey Report — 2006",
+      "author": "Glen Dash Foundation / GPMP survey team",
+      "year": 2007,
+      "kind": "survey_and_geophysics_working_report",
+      "url": "https://www.dashfoundation.org/downloads/archaeology/working-papers/Geo_GPMP_Survey_2006__Text_and_Figures_%28draft_of_8-07%29.pdf",
+      "access": "PUBLIC_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_AND_NUMERIC_CONTROL_INGEST",
+      "authority": {
+        "geometry": 4,
+        "materials": 0,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "PLATEAU_CONTROL_POINT",
+      "roles": [
+        "gpmp_control_point",
+        "geophysics_survey_context",
+        "khafre_valley_temple_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_valley_temple"
+      ],
+      "notes": "Publishes control point SP4 south of the Khafre Valley Temple at E500390.022 N99459.759 in the GPMP grid. Elevation not given in the cited passage; do not invent Z.",
+      "geometry_role": [
+        "survey_control_context"
+      ],
+      "resolution_role": "PLATEAU_CONTROL_POINT",
+      "rights": "REFERENCE_DOCUMENT; numeric facts/citation metadata may be stored."
+    },
+    {
+      "id": "src.dash.petrie_stations2017",
+      "title": "Finding Those Indelible Marks — Flinders Petrie’s Giza Survey Stations",
+      "author": "Glen Dash",
+      "year": 2017,
+      "kind": "survey_station_recovery_and_frame_bridge",
+      "url": "https://aeraweb.org/wp-content/uploads/2022/08/aeragram18_1.pdf",
+      "access": "PUBLIC_PDF",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "TEXT_METHOD_AND_ACQUISITION_METADATA",
+      "authority": {
+        "geometry": 4,
+        "materials": 0,
+        "visual": 2,
+        "method": 5
+      },
+      "resolution": "PLATEAU_CONTROL_POINT",
+      "roles": [
+        "petrie_station_recovery",
+        "gpmp_conversion",
+        "historical_modern_frame_bridge"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_pyramid_temple",
+        "survey_control"
+      ],
+      "notes": "Reports that Petrie station coordinates were converted to the modern GPMP grid and lat/lon in a public working-paper table; stations B and G were recovered in/near the Khafre complex. Underlying table remains an acquisition target.",
+      "geometry_role": [
+        "historical_control_bridge"
+      ],
+      "resolution_role": "PLATEAU_CONTROL_POINT",
+      "rights": "REFERENCE_DOCUMENT; working-paper table should be acquired and hashed before numeric station ingestion."
+    },
+    {
+      "id": "src.egypt_ministry.sphinx",
+      "title": "The Great Sphinx",
+      "author": "Egyptian Ministry of Tourism and Antiquities",
+      "year": null,
+      "kind": "official_monument_summary",
+      "url": "https://egymonuments.gov.eg/monuments/the-great-sphinx/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 2,
+        "visual": 2,
+        "method": 1
+      },
+      "resolution": "MONUMENT",
+      "roles": [
+        "official_identity",
+        "chronology_context",
+        "construction_sequence_summary"
+      ],
+      "targets": [
+        "great_sphinx",
+        "khafre_complex"
+      ],
+      "notes": "Official summary. Khafre attribution and sequence remain archaeological/historical context, not direct geometry control.",
+      "rights": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "official_identity",
+        "chronology_context",
+        "construction_sequence_summary"
+      ],
+      "resolution_role": "MONUMENT"
+    },
+    {
+      "id": "src.egypt_ministry.giza_plateau",
+      "title": "Giza Plateau",
+      "author": "Egyptian Ministry of Tourism and Antiquities",
+      "year": null,
+      "kind": "official_site_summary",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/giza-plateau/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 1,
+        "materials": 1,
+        "visual": 2,
+        "method": 1
+      },
+      "resolution": "SITE",
+      "roles": [
+        "site_context",
+        "complex_typology",
+        "chronology_context"
+      ],
+      "targets": [
+        "giza_plateau",
+        "khafre_complex"
+      ],
+      "notes": "Official site-level context; does not write detailed geometry.",
+      "rights": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "site_context",
+        "complex_typology",
+        "chronology_context"
+      ],
+      "resolution_role": "SITE"
+    },
+    {
+      "id": "src.digitalgiza.khafre_valley_temple",
+      "title": "Digital Giza — Khafre Valley Temple",
+      "author": "Harvard University / Digital Giza",
+      "year": null,
+      "kind": "scholarly_catalog_record",
+      "url": "https://giza.fas.harvard.edu/sites/1778/full/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "CATALOG_METADATA_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 2,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "excavator_history",
+        "find_inventory",
+        "bibliographic_context"
+      ],
+      "targets": [
+        "khafre_valley_temple"
+      ],
+      "notes": "Catalog record is authoritative for Digital Giza indexing. Per-asset rights still control redistribution.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "excavator_history",
+        "find_inventory",
+        "bibliographic_context"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.digitalgiza.khafre_pyramid_temple",
+      "title": "Digital Giza — Khafre Pyramid Temple",
+      "author": "Harvard University / Digital Giza",
+      "year": null,
+      "kind": "scholarly_catalog_record",
+      "url": "https://giza.fas.harvard.edu/sites/2294/full/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "CATALOG_METADATA_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 2,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "excavator_history",
+        "find_inventory",
+        "bibliographic_context"
+      ],
+      "targets": [
+        "khafre_pyramid_temple"
+      ],
+      "notes": "Catalog metadata only unless individual records carry reusable rights.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "excavator_history",
+        "find_inventory",
+        "bibliographic_context"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.perring1840.khafre",
+      "title": "The Pyramids of Gizeh, Vol. II: The Second and Third Pyramids",
+      "author": "John Shae Perring; E. J. Andrews (ed.)",
+      "year": 1840,
+      "kind": "primary_historical_survey",
+      "url": "https://doi.org/10.11588/diglit.3558",
+      "access": "PUBLIC_DIGITIZED_VIEW",
+      "rights_class": "PUBLIC_DOMAIN_UNDERLYING_WORK_DIGITAL_ASSET_REVIEW",
+      "asset_action": "TEXT_AND_NUMERIC_FACTS_INGEST_FACSIMILE_REVIEW",
+      "authority": {
+        "geometry": 4,
+        "materials": 3,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "historical_survey",
+        "chamber_description",
+        "exploration_history",
+        "architectural_plate_reference"
+      ],
+      "targets": [
+        "khafre_interior",
+        "burial_chamber",
+        "lower_chamber",
+        "sarcophagus"
+      ],
+      "notes": "Underlying 1840 work is public domain; digital facsimile reuse should follow Heidelberg terms. OCR values require plate/manual verification before geometry promotion.",
+      "rights": "PUBLIC_DOMAIN_UNDERLYING_WORK_DIGITAL_ASSET_REVIEW. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "historical_survey",
+        "chamber_description",
+        "exploration_history",
+        "architectural_plate_reference"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.britishmuseum.belzoni_medal",
+      "title": "Medal commemorating Giovanni Belzoni and the Second Pyramid discovery",
+      "author": "British Museum",
+      "year": 1821,
+      "kind": "museum_collection_record",
+      "url": "https://www.britishmuseum.org/collection/object/C_M-5597",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY_UNLESS_OBJECT_ASSET_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 2,
+        "method": 1
+      },
+      "resolution": "EVENT",
+      "roles": [
+        "exploration_history",
+        "date_crosscheck"
+      ],
+      "targets": [
+        "khafre_interior"
+      ],
+      "notes": "Museum record independently anchors the 2 March 1818 discovery date; no geometry authority.",
+      "rights": "REFERENCE_ONLY_UNLESS_OBJECT_ASSET_LICENSED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "exploration_history",
+        "date_crosscheck"
+      ],
+      "resolution_role": "EVENT"
+    },
+    {
+      "id": "src.met.khafre_face",
+      "title": "Fragmentary Face of King Khafre",
+      "author": "The Metropolitan Museum of Art",
+      "year": null,
+      "kind": "museum_collection_record",
+      "url": "https://www.metmuseum.org/art/collection/search/543896",
+      "access": "PUBLIC_WEB",
+      "rights_class": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT",
+      "asset_action": "CATALOG_FACTS_AND_OPEN_ACCESS_ASSET_IF_MARKED",
+      "authority": {
+        "geometry": 0,
+        "materials": 2,
+        "visual": 4,
+        "method": 2
+      },
+      "resolution": "OBJECT",
+      "roles": [
+        "object_provenance",
+        "royal_iconography"
+      ],
+      "targets": [
+        "khafre_royal_sculpture"
+      ],
+      "notes": "Museum curatorial attribution; use object-level Open Access flag for images.",
+      "rights": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "object_provenance",
+        "royal_iconography"
+      ],
+      "resolution_role": "OBJECT"
+    },
+    {
+      "id": "src.met.khafre_architrave",
+      "title": "Cast of an architrave with the name of Khafre",
+      "author": "The Metropolitan Museum of Art",
+      "year": null,
+      "kind": "museum_collection_record",
+      "url": "https://www.metmuseum.org/art/collection/search/551054",
+      "access": "PUBLIC_WEB",
+      "rights_class": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT",
+      "asset_action": "CATALOG_FACTS_AND_OPEN_ACCESS_ASSET_IF_MARKED",
+      "authority": {
+        "geometry": 0,
+        "materials": 2,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "OBJECT",
+      "roles": [
+        "inscription",
+        "temple_provenance",
+        "reuse_history"
+      ],
+      "targets": [
+        "khafre_pyramid_temple",
+        "khafre_titulary"
+      ],
+      "notes": "Curatorial record says original red-granite architrave probably came from Khafre pyramid temple and was later reused at Lisht.",
+      "rights": "MET_OPEN_ACCESS_DATA_ASSET_STATUS_PER_OBJECT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "inscription",
+        "temple_provenance",
+        "reuse_history"
+      ],
+      "resolution_role": "OBJECT"
+    },
+    {
+      "id": "src.unesco.memphis_necropolis",
+      "title": "Memphis and its Necropolis — Pyramid Fields from Giza to Dahshur",
+      "author": "UNESCO World Heritage Centre",
+      "year": 1979,
+      "kind": "world_heritage_record",
+      "url": "https://whc.unesco.org/en/list/86",
+      "access": "PUBLIC_WEB",
+      "rights_class": "TEXT_CC_BY_SA_IGO_3_MEDIA_PER_ITEM",
+      "asset_action": "TEXT_CONTEXT_INGEST_MEDIA_PER_ITEM_REVIEW",
+      "authority": {
+        "geometry": 1,
+        "materials": 1,
+        "visual": 2,
+        "method": 2
+      },
+      "resolution": "LANDSCAPE",
+      "roles": [
+        "heritage_boundary",
+        "site_context",
+        "conservation_status"
+      ],
+      "targets": [
+        "giza_plateau",
+        "memphis_necropolis"
+      ],
+      "notes": "UNESCO descriptive text is CC-BY-SA IGO 3.0; gallery images have item-specific copyright and must not be bulk-reused.",
+      "rights": "TEXT_CC_BY_SA_IGO_3_MEDIA_PER_ITEM. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "heritage_boundary",
+        "site_context",
+        "conservation_status"
+      ],
+      "resolution_role": "LANDSCAPE"
+    },
+    {
+      "id": "src.aera.kh_monuments_unit",
+      "title": "Khafre’s Monuments as a Unit",
+      "author": "Ancient Egypt Research Associates",
+      "year": null,
+      "kind": "archaeological_interpretation",
+      "url": "https://aeraweb.org/khafres-monuments/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 3,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "COMPLEX",
+      "roles": [
+        "construction_sequence",
+        "geology_block_matching",
+        "quarry_context"
+      ],
+      "targets": [
+        "khafre_complex",
+        "sphinx",
+        "sphinx_temple",
+        "valley_temple",
+        "causeway"
+      ],
+      "notes": "Expert archaeological synthesis; sequence claims remain interpretations supported by mapped structural/geological relationships.",
+      "rights": "REFERENCE_ONLY. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "construction_sequence",
+        "geology_block_matching",
+        "quarry_context"
+      ],
+      "resolution_role": "COMPLEX"
+    },
+    {
+      "id": "src.aera.kh_sequence",
+      "title": "Why Sequence is Important",
+      "author": "Ancient Egypt Research Associates",
+      "year": null,
+      "kind": "archaeological_interpretation",
+      "url": "https://aeraweb.org/why-sequence-is-important/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 2,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "COMPLEX",
+      "roles": [
+        "stratigraphic_sequence",
+        "relative_chronology"
+      ],
+      "targets": [
+        "valley_temple",
+        "sphinx_temple",
+        "sphinx"
+      ],
+      "notes": "Strong relative-sequence interpretation; not absolute dating or metric geometry.",
+      "rights": "REFERENCE_ONLY. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "stratigraphic_sequence",
+        "relative_chronology"
+      ],
+      "resolution_role": "COMPLEX"
+    },
+    {
+      "id": "src.aera.area_c",
+      "title": "Area C (Petrie’s Worker’s Barracks)",
+      "author": "Ancient Egypt Research Associates",
+      "year": null,
+      "kind": "excavation_project_summary",
+      "url": "https://aeraweb.org/projects/area-c/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 1,
+        "materials": 2,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "SITE_COMPONENT",
+      "roles": [
+        "settlement_archaeology",
+        "workforce_infrastructure",
+        "functional_interpretation"
+      ],
+      "targets": [
+        "giza_worker_infrastructure",
+        "area_c"
+      ],
+      "notes": "Re-excavation-based interpretation that galleries were storage/craft rather than barracks; association with Khafre construction is contextual.",
+      "rights": "REFERENCE_ONLY. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "settlement_archaeology",
+        "workforce_infrastructure",
+        "functional_interpretation"
+      ],
+      "resolution_role": "SITE_COMPONENT"
+    },
+    {
+      "id": "src.aera.radiocarbon",
+      "title": "How Old Are the Pyramids?",
+      "author": "Ancient Egypt Research Associates",
+      "year": null,
+      "kind": "research_summary",
+      "url": "https://aeraweb.org/projects/how-old-are-the-pyramids/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 1,
+        "visual": 1,
+        "method": 4
+      },
+      "resolution": "CHRONOLOGY",
+      "roles": [
+        "radiocarbon_summary",
+        "old_wood_caveat",
+        "chronology_context"
+      ],
+      "targets": [
+        "old_kingdom_chronology",
+        "khafre_chronology"
+      ],
+      "notes": "Research summary of 1984/1995 radiocarbon campaigns; use primary Radiocarbon paper for formal citation.",
+      "rights": "REFERENCE_ONLY. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "radiocarbon_summary",
+        "old_wood_caveat",
+        "chronology_context"
+      ],
+      "resolution_role": "CHRONOLOGY"
+    },
+    {
+      "id": "src.bonani2001.radiocarbon",
+      "title": "Radiocarbon Dates of Old and Middle Kingdom Monuments in Egypt",
+      "author": "G. Bonani et al.",
+      "year": 2001,
+      "kind": "peer_reviewed_chronology_study",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/radiocarbon-dates-of-old-and-middle-kingdom-monuments-in-egypt/A967302ADD527BFEB9226457682C0B4A",
+      "access": "ABSTRACT_PUBLIC_PDF_ACCESS_DEPENDS_SESSION",
+      "rights_class": "REFERENCE_DOCUMENT",
+      "asset_action": "CITATION_AND_NUMERIC_FACTS_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 1,
+        "visual": 0,
+        "method": 5
+      },
+      "resolution": "CHRONOLOGY",
+      "roles": [
+        "radiocarbon_dataset",
+        "chronology_method"
+      ],
+      "targets": [
+        "old_kingdom_chronology",
+        "khafre_chronology"
+      ],
+      "notes": "Peer-reviewed primary chronology study; >450 organic samples collected across Old/Middle Kingdom monuments.",
+      "rights": "REFERENCE_DOCUMENT. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "radiocarbon_dataset",
+        "chronology_method"
+      ],
+      "resolution_role": "CHRONOLOGY"
+    },
+    {
+      "id": "src.digitalgiza.royal_pyramid_complexes",
+      "title": "Digital Giza — Royal Pyramid Complexes",
+      "author": "Giza Project at Harvard University",
+      "year": null,
+      "kind": "scholarly_educational_synthesis",
+      "url": "https://giza.fas.harvard.edu/lessons/royal-pyramid-complexes/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 1,
+        "method": 4
+      },
+      "resolution": "OLD_KINGDOM_ROYAL_COMPLEX_FUNCTION",
+      "roles": [
+        "funerary_complex_function",
+        "royal_offering_cult",
+        "afterlife_ritual_context"
+      ],
+      "targets": [
+        "khafre_complex",
+        "old_kingdom_royal_pyramid_complexes"
+      ],
+      "notes": "Harvard Digital Giza teaching synthesis. Supports functional/ritual context; cannot write geometry.",
+      "rights": "REFERENCE_ONLY. Store citation metadata and paraphrased facts; do not redistribute page assets without item-level rights."
+    },
+    {
+      "id": "src.met.old_kingdom",
+      "title": "Egypt in the Old Kingdom (ca. 2649–2130 B.C.)",
+      "author": "The Metropolitan Museum of Art",
+      "year": 2018,
+      "kind": "museum_scholarly_synthesis",
+      "url": "https://www.metmuseum.org/essays/egypt-in-the-old-kingdom-ca-2649-2150-b-c",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 0,
+        "visual": 1,
+        "method": 4
+      },
+      "resolution": "OLD_KINGDOM_IDEOLOGICAL_CONTEXT",
+      "roles": [
+        "royal_kingship_context",
+        "solar_symbolism_context",
+        "centralized_state_context",
+        "royal_statuary_context"
+      ],
+      "targets": [
+        "old_kingdom_kingship",
+        "giza_plateau",
+        "khafre_complex"
+      ],
+      "notes": "Museum scholarly synthesis used as contextual evidence, not a Khafre-specific primary source.",
+      "rights": "REFERENCE_ONLY. Store citation metadata and paraphrased facts; object-image rights remain item-specific."
+    },
+    {
+      "id": "src.digitalgiza.khafre_causeway",
+      "title": "Digital Giza — Khafre Causeway",
+      "author": "Harvard University / Digital Giza",
+      "year": null,
+      "kind": "scholarly_catalog_record",
+      "url": "https://giza.fas.harvard.edu/sites/1773/full/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "CATALOG_METADATA_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 2,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "COMPONENT",
+      "roles": [
+        "find_inventory",
+        "bibliographic_context",
+        "processional_connection_context"
+      ],
+      "targets": [
+        "khafre_causeway"
+      ],
+      "notes": "Catalog identifies Khafre causeway and one indexed limestone statue-head find; per-asset rights control redistribution.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. See rights_matrix.json and source record before copying asset bytes.",
+      "geometry_role": [
+        "find_inventory",
+        "bibliographic_context",
+        "processional_connection_context"
+      ],
+      "resolution_role": "COMPONENT"
+    },
+    {
+      "id": "src.egyptianmuseum.khafre_statue",
+      "title": "Egyptian Museum Cairo — Statue of Khafre",
+      "author": "Egyptian Museum Cairo",
+      "year": null,
+      "kind": "museum_collection_record",
+      "url": "https://egyptianmuseumcairo.eg/artefacts/statue-of-khafre/",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED",
+      "asset_action": "CATALOG_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 0,
+        "materials": 3,
+        "visual": 4,
+        "method": 3
+      },
+      "resolution": "OBJECT",
+      "roles": [
+        "object_provenance",
+        "valley_temple_statuary",
+        "royal_iconography"
+      ],
+      "targets": [
+        "khafre_valley_temple",
+        "khafre_royal_sculpture"
+      ],
+      "notes": "Official museum record: 168 cm diorite Khafre statue discovered in Valley Temple; describes sema-tawy throne and Horus-falcon protective iconography. Museum statement says it was one of about 23 similar statues.",
+      "rights": "REFERENCE_ONLY_UNLESS_ASSET_LICENSED. Store catalog facts and citation metadata; do not bundle imagery without explicit rights.",
+      "geometry_role": [
+        "object_provenance",
+        "valley_temple_statuary",
+        "royal_iconography"
+      ],
+      "resolution_role": "OBJECT"
+    },
+    {
+      "id": "src.oxford.flentye2018",
+      "title": "The Art and Archaeology of the Giza Plateau: Mid to Late Fourth Dynasty",
+      "author": "Laurel Flentye",
+      "year": 2018,
+      "kind": "academic_handbook_chapter",
+      "url": "https://academic.oup.com/edited-volume/43506/chapter/364132852",
+      "doi": "10.1093/oxfordhb/9780199935413.013.29",
+      "access": "PUBLIC_WEB_TEXT",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 3,
+        "materials": 3,
+        "visual": 2,
+        "method": 4
+      },
+      "resolution": "COMPLEX_TO_ROOM_PROGRAM",
+      "roles": [
+        "architectural_synthesis",
+        "statuary_context",
+        "causeway_relief_context",
+        "room_program_crosscheck"
+      ],
+      "targets": [
+        "khafre_pyramid_temple",
+        "khafre_valley_temple",
+        "khafre_causeway"
+      ],
+      "notes": "Academic synthesis used to cross-check Hölscher/Arnold/Lehner room-program claims and preserve reconstruction disagreements. No automatic geometry write.",
+      "rights": "REFERENCE_ONLY. Store citation metadata and paraphrased factual observations; do not redistribute article text or figures."
+    },
+    {
+      "id": "src.met.arnold1999.statuary",
+      "title": "Old Kingdom Statues in their Architectural Setting",
+      "author": "Dieter Arnold",
+      "year": 1999,
+      "kind": "museum_scholarly_publication",
+      "url": "https://www.metmuseum.org/art/metpublications/Egyptian_Art_in_the_Age_of_the_Pyramids",
+      "access": "PUBLIC_DOWNLOAD_REFERENCE",
+      "rights_class": "REFERENCE_ONLY_UNLESS_EXPLICITLY_LICENSED",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 2,
+        "materials": 2,
+        "visual": 3,
+        "method": 4
+      },
+      "resolution": "ROOM_TO_OBJECT_PROGRAM",
+      "roles": [
+        "statuary_layout_interpretation",
+        "architectural_setting",
+        "chapel_function_hypothesis"
+      ],
+      "targets": [
+        "khafre_valley_temple",
+        "khafre_pyramid_temple",
+        "royal_statuary"
+      ],
+      "notes": "Scholarly interpretation of royal statuary placement and architectural setting. Treat proposed placements/functions as reconstructions, not direct measurements.",
+      "rights": "REFERENCE_ONLY_UNLESS_EXPLICITLY_LICENSED. Store facts/citations; do not bundle PDF/pages without a verified reuse license."
+    },
+    {
+      "id": "src.mr1966.plate015",
+      "title": "L’Architettura delle Piramidi Menfite V — Plate 015",
+      "author": "V. Maragioglio & C. Rinaldi",
+      "year": 1966,
+      "kind": "archival_plan",
+      "url": "https://giza.fas.harvard.edu/photos/88328/full/",
+      "access": "PUBLIC_CATALOG_VIEW",
+      "rights_class": "RECORD_LEVEL_RIGHTS_REQUIRED",
+      "asset_action": "REFERENCE_ONLY",
+      "authority": {
+        "geometry": 4,
+        "materials": 2,
+        "visual": 3,
+        "method": 3
+      },
+      "resolution": "VALLEY_TEMPLE",
+      "roles": [
+        "valley_temple_plan",
+        "valley_temple_sections"
+      ],
+      "targets": [
+        "khafre_valley_temple"
+      ],
+      "notes": "Digital Giza record: plan and sections of Khafre Valley Temple.",
+      "rights": "RECORD_LEVEL_RIGHTS_REQUIRED. Catalog metadata/facts only unless asset rights separately clear."
+    },
+    {
+      "id": "src.isac.giza_model_sources",
+      "title": "Sources for The Giza Plateau Computer Model",
+      "author": "Institute for the Study of Ancient Cultures, University of Chicago",
+      "year": null,
+      "kind": "research_project_source_bibliography",
+      "url": "https://isac.uchicago.edu/research/projects/sources-giza-plateau-computer-model",
+      "access": "PUBLIC_WEB",
+      "rights_class": "REFERENCE_ONLY",
+      "asset_action": "TEXT_FACTS_REFERENCE_ONLY",
+      "authority": {
+        "geometry": 1,
+        "materials": 0,
+        "visual": 1,
+        "method": 4
+      },
+      "resolution": "METHOD",
+      "roles": [
+        "reconstruction_source_lineage",
+        "topography_source_lineage"
+      ],
+      "targets": [
+        "giza_plateau_model",
+        "khafre_complex"
+      ],
+      "notes": "ISAC identifies Maragioglio/Rinaldi Parts IV–VI plans/text as architectural sources for its Giza Plateau computer model and a 1:5000 contour-map series for topography. Useful as source-lineage evidence, not an independent Khafre measurement.",
+      "rights": "REFERENCE_ONLY. Store citation/source-lineage facts only."
+    }
+  ]
+}

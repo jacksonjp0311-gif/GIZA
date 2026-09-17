@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "product_version": "0.10.6",
+  "components": {
+    "WorkstationHeader": {
+      "path": "src/workstation/WorkstationHeader.tsx",
+      "locked": [
+        "GIZA NEXUS brand",
+        "five primary navigation controls",
+        "right-side runtime status"
+      ]
+    },
+    "LeftRail": {
+      "path": "src/workstation/LeftRail.tsx",
+      "locked": [
+        "Project Explorer",
+        "Model Layers",
+        "View Controls",
+        "left dock"
+      ]
+    },
+    "SpatialViewport": {
+      "path": "src/workstation/SpatialViewport.tsx",
+      "locked": [
+        "largest visual region",
+        "three top metrics",
+        "Quick Views below viewport",
+        "local 3D MODEL / MAP ATLAS surface switch may change content, not viewport bounds"
+      ]
+    },
+    "ObjectInspectorPanel": {
+      "path": "src/workstation/ObjectInspectorPanel.tsx",
+      "locked": [
+        "right dock",
+        "4x2 tab matrix",
+        "independent scrolling",
+        "Related Components",
+        "Animation & Analysis"
+      ]
+    },
+    "WorkstationFooter": {
+      "path": "src/workstation/WorkstationFooter.tsx",
+      "locked": [
+        "data-source strip",
+        "center product identity",
+        "right readiness state"
+      ]
+    }
+  },
+  "content_extension_policy": {
+    "allowed_without_design_version": [
+      "new inspector data cards",
+      "new findings entries",
+      "new SIMLAB solver selector",
+      "new scene overlay toggles",
+      "new source/evidence rows",
+      "new central-viewport content surface that preserves viewport bounds and Quick Views",
+      "internal scrollable map atlas with local surface switch",
+      "pre-metric visibility/chokepoint atlas content that preserves shell geometry and truth labels"
+    ],
+    "requires_explicit_design_version": [
+      "moving or overlaying the inspector",
+      "changing primary brand",
+      "adding primary top-level navigation modes",
+      "changing workstation column proportions",
+      "replacing the typography hierarchy",
+      "removing Quick Views or the left rail"
+    ]
+  },
+  "design_baseline_version": "0.9.3.1-UI-RESTORE"
+}

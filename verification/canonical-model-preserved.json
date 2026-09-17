@@ -1,0 +1,22 @@
+[
+  {
+    "path": "public/model/parts.json",
+    "unchanged": true,
+    "sha256": "a7a1ce355cd3da7256ae5793b9ce7b3fa317908ff25a219a4845c3c65bc4e21a"
+  },
+  {
+    "path": "public/model/research/measurements.json",
+    "unchanged": true,
+    "sha256": "8f6bc61927821986d0982dd672b7be4920ce28420f690f6fbd7638490261c793"
+  },
+  {
+    "path": "public/model/assemblies.json",
+    "unchanged": true,
+    "sha256": "661159cd4e540d907a039a75423b6f3df1ab2f350a4076ee8bb6bd8a8db1845e"
+  },
+  {
+    "path": "public/model/stone_field.json",
+    "unchanged": true,
+    "sha256": "db582b32d5135caf562d06c462cfda2de5d74682473ea4d8ee1983074af7eadf"
+  }
+]

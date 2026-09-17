@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "witness_id": "witness.petrie.plate_vi.remote_render",
+  "candidate_id": "bytes.petrie1883.public_domain_pdf",
+  "source_id": "src.petrie1883",
+  "source_url": "https://pdfs.petrieproject.com/cu31924012038927.pdf",
+  "landing_url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+  "verified_on": "2026-09-15",
+  "pdf_page_count": 315,
+  "pdf_page_1_indexed": 305,
+  "pdf_page_0_indexed": 304,
+  "plate": "VI",
+  "printed_title": "THE GRANITE TEMPLE OF KHAFRA, AT GIZEH",
+  "printed_scale": "1:200",
+  "visual_features_confirmed": [
+    "plan drawing present",
+    "pillar/column locations visible",
+    "dimension annotations visible",
+    "entrance/causeway connection visible",
+    "side chambers/loculi visible"
+  ],
+  "truth_class": "REMOTE_PAGE_RENDER_VERIFIED_NOT_LOCAL_BYTES",
+  "raw_byte_verified": false,
+  "local_sha256": null,
+  "pixel_coordinate_authority": "NONE",
+  "metric_geometry_authority": "NONE",
+  "allowed_uses": [
+    "source identity",
+    "exact page/plate locator",
+    "printed scale metadata",
+    "manual visual target confirmation"
+  ],
+  "prohibited_uses": [
+    "pixel control coordinates",
+    "archaeological similarity solve",
+    "wall polygon promotion",
+    "metric visibility rays"
+  ],
+  "guard": "Rendered remote pages are derivative witnesses, not checksum-bound source bytes."
+}

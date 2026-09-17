@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "accessed_on": "2026-09-12",
+  "policy": "Collection counts describe discovery surfaces, not unique assets. Commons categories overlap. Per-file license verification is required before caching/bundling.",
+  "collections": [
+    {
+      "id": "collection.digitalgiza.khafre_allphotos",
+      "provider": "Digital Giza",
+      "url": "https://giza.fas.harvard.edu/sites/1775/allphotos/",
+      "catalog_count": 406,
+      "count_kind": "record_count",
+      "rights_model": "RECORD_LEVEL_REVIEW_REQUIRED",
+      "harvest_mode": "METADATA_DISCOVERY_ONLY",
+      "notes": "Institutional archive page explicitly reports All Photos 406."
+    },
+    {
+      "id": "collection.commons.khafre_root",
+      "provider": "Wikimedia Commons",
+      "category": "Pyramid of Khafra",
+      "url": "https://commons.wikimedia.org/wiki/Category:Pyramid_of_Khafra",
+      "catalog_count": 182,
+      "count_kind": "root_category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_interior",
+      "provider": "Wikimedia Commons",
+      "category": "Interior of Khafra Pyramid",
+      "url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Khafra_Pyramid",
+      "catalog_count": 34,
+      "count_kind": "category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_details",
+      "provider": "Wikimedia Commons",
+      "category": "Details of Khafra Pyramid",
+      "url": "https://commons.wikimedia.org/wiki/Category:Details_of_Khafra_Pyramid",
+      "catalog_count": 50,
+      "count_kind": "category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_historical",
+      "provider": "Wikimedia Commons",
+      "category": "Historical images of Khafra Pyramid",
+      "url": "https://commons.wikimedia.org/wiki/Category:Historical_images_of_Khafra_Pyramid",
+      "catalog_count": 38,
+      "count_kind": "category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_mortuary_complex",
+      "provider": "Wikimedia Commons",
+      "category": "Mortuary complex of Khafra",
+      "url": "https://commons.wikimedia.org/wiki/Category:Mortuary_complex_of_Khafra",
+      "catalog_count": 17,
+      "count_kind": "root_category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_valley",
+      "provider": "Wikimedia Commons",
+      "category": "Valley Temple of Khafra",
+      "url": "https://commons.wikimedia.org/wiki/Category:Valley_Temple_of_Khafra",
+      "catalog_count": 35,
+      "count_kind": "root_category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_valley_interior",
+      "provider": "Wikimedia Commons",
+      "category": "Interior of Valley Temple of Khafra",
+      "url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Valley_Temple_of_Khafra",
+      "catalog_count": 46,
+      "count_kind": "category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    },
+    {
+      "id": "collection.commons.khafre_mortuary_temple",
+      "provider": "Wikimedia Commons",
+      "category": "Mortuary Temple of Khafra",
+      "url": "https://commons.wikimedia.org/wiki/Category:Mortuary_Temple_of_Khafra",
+      "catalog_count": 20,
+      "count_kind": "category_files",
+      "rights_model": "PER_FILE_LICENSE_METADATA",
+      "harvest_mode": "MEDIAWIKI_API_FREE_LICENSE_FILTER"
+    }
+  ],
+  "overlap_guard": "Do not sum Commons category counts into a unique-photo total; files can appear in parent/subcategories and multiple thematic categories."
+}

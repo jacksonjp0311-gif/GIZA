@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.1",
+  "codename": "PRIMARY SOURCE VAULT",
+  "purpose": "Chain-of-custody layer for legally obtainable primary-source bytes, remote source locks, normalized snapshots, parser provenance and rights-aware acquisition.",
+  "counts": {
+    "assets": 14,
+    "normalized_snapshots": 5,
+    "verification_receipts": 5,
+    "remote_hash_locks": 2,
+    "local_primary_binaries": 0
+  },
+  "cache_state": "EMPTY_BY_DESIGN_IN_CHAT_SANDBOX",
+  "snapshots": [
+    {
+      "path": "public/vault/snapshots/dash_surveys_at_giza.normalized.json",
+      "sha256": "3ffb7e3339f94f03315afec37439df8b0389a51cd1ea03439fe8bc23b127cb6a",
+      "bytes": 893
+    },
+    {
+      "path": "public/vault/snapshots/heritage_science_2020.normalized.json",
+      "sha256": "52c2697d737af848c8a17047ea42778794c9b735870c786d80bfd2862e498984",
+      "bytes": 793
+    },
+    {
+      "path": "public/vault/snapshots/opencontext_arce_sphinx.normalized.json",
+      "sha256": "be29d44188f156f1d41d54e58fac145727efaa61fae845b78f5e5b1fb76cb887",
+      "bytes": 2003
+    },
+    {
+      "path": "public/vault/snapshots/petrie1883.normalized.json",
+      "sha256": "d2cc49f255be72cbecfcb56ab1ff7d229db684997889dd1df184be687cdccbef",
+      "bytes": 661
+    },
+    {
+      "path": "public/vault/snapshots/scidep2025.normalized.json",
+      "sha256": "9a83f61389a4bd9a6487c655fac5ad13f75be3407e6f115b7c9141bc44df8f21",
+      "bytes": 555
+    }
+  ],
+  "truth_rules": [
+    "Remote verification is not local possession.",
+    "Caching source bytes does not grant geometry-write authority.",
+    "Every parsed datum must preserve asset ID, byte hash or remote lock, locator, parser version and source coordinate frame.",
+    "Restricted sources remain blocked; no access-control bypass.",
+    "Normalized snapshots are derived metadata and are never mislabeled as raw source bytes."
+  ],
+  "generated_at": "2026-09-12T23:02:45.912Z"
+}

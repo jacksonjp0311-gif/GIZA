@@ -1,0 +1,46 @@
+{
+  "solver_id": "solver.acoustic",
+  "version": "0.9.2",
+  "status": "ACTIVE_SCREENING",
+  "inputs_required": [
+    "frozen_geometry_snapshot",
+    "known_or_derived_interior_components",
+    "atmospheric_parameters",
+    "boundary_model",
+    "loss_model"
+  ],
+  "parameters": [
+    "temperature_c",
+    "sound_speed_model",
+    "frequency_range_hz",
+    "frequency_step_hz",
+    "q_screening",
+    "mode_order_limit"
+  ],
+  "controls_required": [
+    "analytical_tube_benchmark",
+    "analytical_rectangular_cavity_benchmark",
+    "independent_geometry_perturbation",
+    "construction_relation_preserving_perturbation"
+  ],
+  "outputs_required": [
+    "component_mode_frequencies_hz",
+    "screening_response_peaks",
+    "pressure_mode_visualization",
+    "coincidence_null_comparison",
+    "run_receipt"
+  ],
+  "uncertainty_required": [
+    "dimensions_or_unresolved_statement",
+    "atmosphere_or_unresolved_statement",
+    "boundary_loss_model"
+  ],
+  "falsification": "A deliberate-tuning claim requires geometry-specific behavior that survives uncertainty and remains unusual under construction-aware null models. Existence of resonance alone is not evidence of design intent.",
+  "current_limitations": [
+    "rectangular chamber envelopes",
+    "1-D passage families",
+    "no junction scattering",
+    "no measured absorption/reverberation",
+    "no FEM mesh convergence yet"
+  ]
+}

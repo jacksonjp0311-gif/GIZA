@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.7",
+  "requirements": [
+    {
+      "stage": "BYTE_CUSTODY",
+      "must_have": [
+        "legal acquisition path",
+        "local bytes",
+        "sha256",
+        "source+provider metadata"
+      ]
+    },
+    {
+      "stage": "PLATE_PARSE",
+      "must_have": [
+        "page/plate locator",
+        "scale bar or stated scale",
+        "scan dimensions",
+        "crop transform receipt"
+      ]
+    },
+    {
+      "stage": "REGISTRATION",
+      "must_have": [
+        "declared target frame",
+        ">=4 controls",
+        ">=2 holdouts",
+        "fit model",
+        "residuals",
+        "outlier policy preregistered"
+      ]
+    },
+    {
+      "stage": "WALL_MODEL",
+      "must_have": [
+        "wall polygons",
+        "openings",
+        "uncertainty envelope",
+        "source linkage per polygon/opening"
+      ]
+    },
+    {
+      "stage": "METRIC_VIEW",
+      "must_have": [
+        "observer height assumption",
+        "target/occluder heights",
+        "ray algorithm version",
+        "sensitivity runs",
+        "no automatic ritual inference"
+      ]
+    }
+  ]
+}

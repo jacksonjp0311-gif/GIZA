@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "policy": "Numeric 3-D envelopes are rendered only from explicit published/model uncertainty. Absence of a numeric uncertainty is not treated as zero.",
+  "records": [
+    {
+      "target": "part.pyramid.khafre",
+      "maturity": "E3",
+      "status": "NUMERIC_PARTIAL",
+      "parameters": [
+        {
+          "quantity": "original_height",
+          "value": 143.8656,
+          "uncertainty": 0.3302,
+          "unit": "m",
+          "source_id": "src.petrie1883"
+        },
+        {
+          "quantity": "casing_face_slope",
+          "value": 53.1666666667,
+          "uncertainty": 0.0666666667,
+          "unit": "deg",
+          "source_id": "src.petrie1883"
+        },
+        {
+          "quantity": "casing_mean_azimuth",
+          "value": -0.0905555556,
+          "uncertainty": 0.0044444444,
+          "unit": "deg",
+          "source_id": "src.petrie1883"
+        }
+      ],
+      "render_envelope": {
+        "kind": "AXIS_PAD",
+        "pad_m": [
+          0,
+          0,
+          0.3302
+        ],
+        "meaning": "height uncertainty only; X/Y are not assigned numeric uncertainty"
+      }
+    },
+    {
+      "target": "part.casing.granite.lower",
+      "maturity": "E3",
+      "status": "NUMERIC_PARTIAL",
+      "parameters": [
+        {
+          "quantity": "lowest_granite_casing_sloped_vertical_height",
+          "value": 1.054608,
+          "uncertainty": 0.00127,
+          "unit": "m",
+          "source_id": "src.petrie1883"
+        }
+      ],
+      "render_envelope": {
+        "kind": "AXIS_PAD",
+        "pad_m": [
+          0,
+          0,
+          0.00127
+        ],
+        "meaning": "course-height uncertainty only"
+      }
+    },
+    {
+      "target": "part.sarcophagus.body",
+      "maturity": "E4",
+      "status": "NUMERIC_PARTIAL",
+      "parameters": [
+        {
+          "quantity": "outer_length",
+          "value": 2.633472,
+          "uncertainty": 0.000508,
+          "unit": "m",
+          "source_id": "src.petrie1883"
+        }
+      ],
+      "render_envelope": {
+        "kind": "AXIS_PAD",
+        "pad_m": [
+          0.000508,
+          0,
+          0
+        ],
+        "meaning": "outer-length uncertainty only"
+      }
+    },
+    {
+      "target": "part.sarcophagus.lid",
+      "maturity": "E4",
+      "status": "NUMERIC_PARTIAL",
+      "parameters": [
+        {
+          "quantity": "lid_length_west",
+          "value": 2.634742,
+          "uncertainty": 0.000508,
+          "unit": "m",
+          "source_id": "src.petrie1883"
+        }
+      ],
+      "render_envelope": {
+        "kind": "AXIS_PAD",
+        "pad_m": [
+          0.000508,
+          0,
+          0
+        ],
+        "meaning": "lid-length uncertainty only"
+      }
+    }
+  ],
+  "fallback": {
+    "status": "NO_NUMERIC_UNCERTAINTY_DECLARED",
+    "render": false
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "version": "0.3.0",
+  "policy": "Object-bound reuse-friendly media plus source/rights/caption metadata. Uncalibrated photographs are visual evidence, not metric geometry.",
+  "photos": [
+    {
+      "id": "photo.kh.exterior",
+      "title": "Pyramid of Khafre — exterior",
+      "kind": "photograph",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Pyramid_of_Khafre.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Khafre.JPG",
+      "author": "Ad Meskens",
+      "date": "2011-08-17",
+      "license": "CC BY-SA 3.0 / GFDL; attribution required — see source page",
+      "credit": "Ad Meskens / Wikimedia Commons",
+      "caption": "Exterior photograph of the Pyramid of Khafre with surviving casing visible near the summit.",
+      "bind": [
+        "part.pyramid.khafre",
+        "part.casing.granite.lower"
+      ]
+    },
+    {
+      "id": "photo.kh.passage",
+      "title": "Khafre interior passage",
+      "kind": "photograph",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/04_khafre_passage.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:04_khafre_passage.jpg",
+      "author": "Jon Bodsworth",
+      "date": "2007-04-04",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "credit": "Jon Bodsworth / Egypt Archive / Wikimedia Commons",
+      "caption": "Branch inside the Pyramid of Khafre.",
+      "bind": [
+        "part.upper.entrance.existing",
+        "part.upper.horizontal.kj",
+        "part.upper.horizontal.jg",
+        "part.upper.horizontal.gh",
+        "part.lower.entrance.existing",
+        "part.lower.horizontal.bc",
+        "part.lower.horizontal.ce",
+        "part.lower.connect.ef",
+        "part.lower.connect.fg"
+      ]
+    },
+    {
+      "id": "photo.kh.chamber",
+      "title": "Khafre burial chamber",
+      "kind": "photograph",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/06_khafre_chamber.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:06_khafre_chamber.jpg",
+      "author": "Jon Bodsworth",
+      "date": "2007-04-04",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "credit": "Jon Bodsworth / Egypt Archive / Wikimedia Commons",
+      "caption": "Burial chamber inside the Pyramid of Khafre, with the sarcophagus at the far end.",
+      "bind": [
+        "part.burial.chamber",
+        "part.burial.gable_envelope",
+        "part.burial.floor_paving"
+      ]
+    },
+    {
+      "id": "photo.kh.coffer",
+      "title": "Khafre granite sarcophagus",
+      "kind": "photograph",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/07_khafre_coffer.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:07_khafre_coffer.jpg",
+      "author": "Jon Bodsworth",
+      "date": "2007-04-04",
+      "license": "Copyrighted free use; unrestricted reuse per source permission",
+      "credit": "Jon Bodsworth / Egypt Archive / Wikimedia Commons",
+      "caption": "Granite sarcophagus/coffer and lid inside Khafre’s burial chamber.",
+      "bind": [
+        "part.sarcophagus.body",
+        "part.sarcophagus.lid"
+      ]
+    },
+    {
+      "id": "photo.kh.belzoni",
+      "title": "Khafre interior — Belzoni inscription",
+      "kind": "photograph",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "author": "Onceinawhile",
+      "date": "2022",
+      "license": "CC BY-SA 4.0",
+      "credit": "Onceinawhile / Wikimedia Commons, CC BY-SA 4.0",
+      "caption": "Modern interior photograph documenting the Belzoni inscription area.",
+      "bind": [
+        "part.burial.chamber"
+      ]
+    },
+    {
+      "id": "diagram.kh.section",
+      "title": "Khafre reference section",
+      "kind": "diagram",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Chephren-Pyramide.png",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chephren-Pyramide.png",
+      "author": "Bakha / GDK derivative",
+      "date": "2009-05-05",
+      "license": "See Wikimedia Commons source page",
+      "credit": "Bakha / GDK / Wikimedia Commons",
+      "caption": "Reference cross-section diagram of Khafre’s internal structure.",
+      "bind": [
+        "part.pyramid.khafre",
+        "part.upper.entrance.existing",
+        "part.lower.entrance.existing",
+        "part.lower.chamber",
+        "part.burial.chamber"
+      ]
+    },
+    {
+      "id": "photo.kh.casing.closeup",
+      "title": "Khafre surviving casing — close view",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_casing.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_casing.jpg",
+      "author": "HoremWeb",
+      "date": "2004-10-25",
+      "license": "CC BY-SA 4.0 (selectable)",
+      "credit": "HoremWeb / Wikimedia Commons",
+      "caption": "Close view of surviving Khafre casing and exposed backing/core context. Uploader causal comments are not adopted as archaeological fact.",
+      "bind": [
+        "part.pyramid.khafre"
+      ]
+    },
+    {
+      "id": "photo.kh.casing.granite",
+      "title": "Khafre red-granite casing block",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khafre_red_granite_casing_block.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Khafre_red_granite_casing_block.jpg",
+      "author": "HoremWeb",
+      "date": "2004-10-25",
+      "license": "CC BY-SA 4.0 (selectable)",
+      "credit": "HoremWeb / Wikimedia Commons",
+      "caption": "Documented red-granite casing block associated with the Khafre pyramid.",
+      "bind": [
+        "part.casing.granite.lower",
+        "part.pyramid.khafre"
+      ]
+    },
+    {
+      "id": "photo.kh.passage.highres",
+      "title": "Khafre interior — high-resolution passage view",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Inside_the_Pyramid_-_Flickr_-_liber.jpg",
+      "author": "Ricardo Liberato",
+      "date": "2006-06-19",
+      "license": "CC BY-SA 2.0",
+      "credit": "Ricardo Liberato / Flickr / Wikimedia Commons",
+      "caption": "High-resolution interior view with Canon EOS 5D metadata; candidate for future calibrated photo registration.",
+      "bind": [
+        "part.upper.entrance.existing",
+        "part.upper.horizontal.kj",
+        "part.upper.horizontal.jg",
+        "part.upper.horizontal.gh",
+        "part.lower.entrance.existing",
+        "part.lower.horizontal.bc",
+        "part.lower.horizontal.ce",
+        "part.lower.connect.ef",
+        "part.lower.connect.fg"
+      ]
+    },
+    {
+      "id": "photo.kh.belzoni.2007",
+      "title": "Belzoni inscription — documentary view",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/05_khafre_belzoni.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:05_khafre_belzoni.jpg",
+      "author": "Jon Bodsworth",
+      "date": "2007-04-04",
+      "license": "Copyrighted free use per source permission",
+      "credit": "Jon Bodsworth / Egypt Archive / Wikimedia Commons",
+      "caption": "Documents the Belzoni inscription inside the pyramid; documentary history, not ancient construction evidence.",
+      "bind": [
+        "part.burial.chamber"
+      ]
+    },
+    {
+      "id": "photo.kh.interior.2022",
+      "title": "Khafre interior — 2022 high-resolution view",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Khafra_Pyramid_2022_02.jpg",
+      "author": "Onceinawhile",
+      "date": "2022",
+      "license": "CC BY-SA 4.0",
+      "credit": "Onceinawhile / Wikimedia Commons",
+      "caption": "Modern high-resolution interior state with iPhone 13 Pro Max EXIF; useful for future time-series and registration work.",
+      "bind": [
+        "part.burial.chamber"
+      ]
+    },
+    {
+      "id": "diagram.kh.section.belzoni1821",
+      "title": "Belzoni/Aglio section — 1821 archival reference",
+      "kind": "diagram",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Section_of_the_Pyramid.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Section_of_the_Pyramid.jpg",
+      "author": "Agostino Aglio",
+      "date": "1821",
+      "license": "Public domain / PD-Art",
+      "credit": "Agostino Aglio / Belzoni atlas / Wikimedia Commons",
+      "caption": "Public-domain historical section used as an archival cross-check only, not as modern survey geometry.",
+      "bind": [
+        "part.pyramid.khafre",
+        "part.upper.entrance.existing",
+        "part.lower.entrance.existing",
+        "part.lower.chamber",
+        "part.burial.chamber"
+      ]
+    },
+    {
+      "id": "photo.kh.exterior.cc0.2002",
+      "title": "Khafre exterior — CC0 geotagged context",
+      "kind": "photograph",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_of_Khafre_(9793862935).jpg",
+      "author": "Gary Todd",
+      "date": "2002-06-07",
+      "license": "CC0 1.0",
+      "credit": "Gary Todd / Wikimedia Commons",
+      "caption": "Geotagged exterior image. Camera location is retained as context, not precision survey control.",
+      "bind": [
+        "part.pyramid.khafre",
+        "part.casing.granite.lower"
+      ]
+    }
+  ]
+}

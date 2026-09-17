@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "policy": "Survey controls remain in native coordinates until source CRS/vertical datum and a transform receipt are recorded. Consumer photo GPS is context only.",
+  "sources": [
+    {
+      "id": "survey.dash.corner_points",
+      "source_id": "src.dash.giza_surveys",
+      "priority": "CRITICAL",
+      "asset_name": "Giza-Corner-Points-2v17.kmz",
+      "asset_url": null,
+      "status": "PUBLIC_ASSET_NAME_AND_SOURCE_PAGE_VERIFIED_BYTES_NOT_CACHED",
+      "contains": [
+        "Khufu/Khafre/Menkaure original corner and base-center estimates",
+        "survey controls G1.1/G1.2/G1.4/Point W-NW"
+      ],
+      "khafre_basis": "Petrie 1880-1881 survey per source index",
+      "use": "Exterior photo pose/monument registration candidate after datum verification",
+      "geometry_write_authority": "NONE_UNTIL_IMPORTED_AND_REGISTERED",
+      "retrieval_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm"
+    },
+    {
+      "id": "survey.gpmp.control_monuments",
+      "source_id": "src.dash.giza_surveys",
+      "priority": "CRITICAL",
+      "asset_name": "GPMP-Control-Monuments.kmz",
+      "asset_url": null,
+      "status": "PUBLIC_ASSET_NAME_AND_SOURCE_PAGE_VERIFIED_BYTES_NOT_CACHED",
+      "contains": [
+        "AERA GPMP control monuments"
+      ],
+      "use": "Plateau control network for survey-to-local-frame bridge",
+      "geometry_write_authority": "NONE_UNTIL_IMPORTED_AND_REGISTERED",
+      "retrieval_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm"
+    },
+    {
+      "id": "survey.gdfs.2015",
+      "source_id": "src.dash.giza_surveys",
+      "priority": "HIGH",
+      "asset_name": "GDFS-2015-Master-25iii17-edited-child.xlsx",
+      "status": "PUBLIC_ASSET_NAME_AND_SOURCE_PAGE_VERIFIED_BYTES_NOT_CACHED",
+      "contains": [
+        "2015 Giza survey points"
+      ],
+      "use": "Cross-check plateau/monument control and modern survey context",
+      "geometry_write_authority": "NONE_UNTIL_IMPORTED_AND_REGISTERED",
+      "retrieval_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm"
+    },
+    {
+      "id": "survey.gdfs.2016",
+      "source_id": "src.dash.giza_surveys",
+      "priority": "HIGH",
+      "asset_name": "GDFS-2016-23ix18.xlsx",
+      "status": "PUBLIC_ASSET_NAME_AND_SOURCE_PAGE_VERIFIED_BYTES_NOT_CACHED",
+      "contains": [
+        "2016 Giza survey data"
+      ],
+      "use": "Modern survey context/control acquisition",
+      "geometry_write_authority": "NONE_UNTIL_IMPORTED_AND_REGISTERED",
+      "retrieval_page": "https://www.dashfoundation.org/Surveys-at-Giza.htm"
+    },
+    {
+      "id": "survey.khafre.laser2025",
+      "source_id": "src.aera2025.khafre_laser",
+      "priority": "CRITICAL",
+      "asset_name": "First laser survey of the Second Great Pyramid",
+      "status": "PUBLICATION_METADATA_ONLY_DATA_NOT_ACQUIRED",
+      "contains": [
+        "modern laser-survey results described by publication title/metadata only"
+      ],
+      "use": "Highest-value direct exterior geometry upgrade if authorized data/derived measurements become accessible",
+      "geometry_write_authority": "ZERO_UNTIL_DATA_ACQUIRED",
+      "retrieval_page": "https://aeraweb.org/publications/reports/"
+    },
+    {
+      "id": "survey.nell_ruggles.2006",
+      "source_id": "src.nell_ruggles2014",
+      "priority": "CRITICAL",
+      "asset_name": "Published 2006 Total Station orientation survey",
+      "retrieval_page": "https://arxiv.org/pdf/1302.5622",
+      "status": "NUMERIC_SURVEY_MEASUREMENTS_INGESTED",
+      "contains": [
+        "four Khafre casing-foundation side best-fit azimuths",
+        "survey repeatability context",
+        "Khafre causeway orientation and mean width"
+      ],
+      "use": "Survey-backed Khafre orientation prior and method uncertainty context",
+      "geometry_write_authority": "ORIENTATION_CONSTRAINT_ONLY"
+    }
+  ],
+  "count": 6
+}

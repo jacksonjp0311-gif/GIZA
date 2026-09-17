@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.9.8",
+  "links": [
+    {
+      "registration_job_id": "reg.media_commons_khafre_casing_2004",
+      "control_net_state": "SURVEY_ORIENTATION_PRIOR_READY",
+      "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "translation_receipt_id": null,
+      "pixel_correspondence_count": 0,
+      "pose_status": "UNSOLVED"
+    },
+    {
+      "registration_job_id": "reg.media_commons_khafre_granite_casing",
+      "control_net_state": "SURVEY_ORIENTATION_PRIOR_READY",
+      "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "translation_receipt_id": null,
+      "pixel_correspondence_count": 0,
+      "pose_status": "UNSOLVED"
+    },
+    {
+      "registration_job_id": "reg.media_commons_khafre_exterior_geotagged",
+      "control_net_state": "SURVEY_ORIENTATION_PRIOR_READY",
+      "orientation_receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+      "translation_receipt_id": null,
+      "pixel_correspondence_count": 0,
+      "pose_status": "UNSOLVED",
+      "guard": "Consumer GPS remains context only."
+    }
+  ],
+  "default_for_unlisted_jobs": {
+    "control_net_state": "MODEL_ANCHORS_ONLY",
+    "pose_status": "UNSOLVED"
+  }
+}

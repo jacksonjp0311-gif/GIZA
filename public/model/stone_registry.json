@@ -1,0 +1,124 @@
+{
+  "version": "0.3.0",
+  "policy": "Only individually identifiable objects or explicitly defined measured zones are mapped here. Unknown core blocks are not promoted to mapped stones.",
+  "mapped": [
+    {
+      "id": "stone.casing.sw.course1.reference",
+      "name": "SW surviving lowest casing-course reference",
+      "kind": "casing_reference",
+      "parent_part": "part.casing.granite.lower",
+      "provenance": "MEASURED",
+      "dimensions_m": {
+        "vertical_sloped_height": 1.054608,
+        "vertical_foot": 0.2794
+      },
+      "source": "Petrie 1883 ch. VIII §68 p.98",
+      "notes": "Petrie directly measured surviving casing at SW. This is a reference element, not a complete block survey."
+    },
+    {
+      "id": "stone.portcullis.upper",
+      "name": "Upper granite portcullis slab",
+      "kind": "blocking_slab",
+      "parent_part": "part.upper.portcullis.slab",
+      "provenance": "DERIVED",
+      "dimensions_m": {
+        "total_span_across_grooves": 1.552194,
+        "groove_e_depth": 0.245872,
+        "groove_w_depth": 0.25527,
+        "groove_width_e": 0.400558,
+        "groove_width_w": 0.385826
+      },
+      "source": "Petrie 1883 ch. IX §74 p.105",
+      "notes": "Slab thickness is described as about 0.5 inch thinner than groove width; slab vertical height remains unresolved."
+    },
+    {
+      "id": "stone.portcullis.lower",
+      "name": "Lower granite portcullis",
+      "kind": "blocking_slab",
+      "parent_part": "part.lower.portcullis.slab",
+      "provenance": "DERIVED",
+      "dimensions_m": {},
+      "source": "Petrie 1883 ch. IX §78 p.109",
+      "notes": "Petrie described it as 'nearly two tons.' FORGE preserves the historical wording because the ton convention is not normalized here. Exact geometry remains unresolved, so the 3-D envelope stays ASSUMED.",
+      "mass_source_text": "nearly two tons"
+    },
+    {
+      "id": "stone.coffer.body",
+      "name": "Granite sarcophagus body",
+      "kind": "monolithic_container",
+      "parent_part": "part.sarcophagus.body",
+      "provenance": "MEASURED",
+      "dimensions_m": {
+        "outer_length": 2.633472,
+        "outer_width": 1.065911,
+        "outer_height": 0.968248,
+        "inner_length": 2.152142,
+        "inner_width": 0.677926,
+        "inner_depth": 0.751332,
+        "side_thickness_top": 0.194183
+      },
+      "source": "Petrie 1883 ch. IX §77 pp.107–108"
+    },
+    {
+      "id": "stone.coffer.lid",
+      "name": "Sliding sarcophagus lid",
+      "kind": "slab",
+      "parent_part": "part.sarcophagus.lid",
+      "provenance": "MEASURED",
+      "dimensions_m": {
+        "length": 2.634742,
+        "width": 1.067562,
+        "thickness_min": 0.20828,
+        "thickness_max": 0.251206
+      },
+      "source": "Petrie 1883 ch. IX §77 p.108",
+      "notes": "Thickness varies over measured points."
+    },
+    {
+      "id": "zone.burial.floor.paving",
+      "name": "Burial-chamber fine limestone paving",
+      "kind": "paving_zone",
+      "parent_part": "part.burial.floor_paving",
+      "provenance": "MEASURED",
+      "dimensions_m": {
+        "thickness_min": 0.2286,
+        "thickness_max": 0.3556
+      },
+      "source": "Petrie 1883 ch. IX §75 p.105",
+      "notes": "Individual slab plan sizes are not resolved in the current source set."
+    },
+    {
+      "id": "zone.burial.roof.beams",
+      "name": "Burial-chamber gabled limestone roof beams",
+      "kind": "roof_zone",
+      "parent_part": "part.burial.gable_envelope",
+      "provenance": "SOURCE",
+      "dimensions_m": {},
+      "source": "Petrie 1883 ch. IX §75 p.105",
+      "notes": "Roof is explicitly described as limestone beams; count and individual beam geometry remain unresolved in this revision."
+    }
+  ],
+  "course_anchors": [
+    {
+      "course": 1,
+      "top_elevation_m": 1.054608,
+      "status": "MEASURED",
+      "source": "Petrie 1883 ch. VIII §68 p.98",
+      "note": "lowest casing course vertical slope height at SW"
+    },
+    {
+      "course": 5,
+      "top_elevation_m": 5.2705,
+      "status": "HISTORICAL_LEVEL_ANCHOR",
+      "source": "Petrie 1883 ch. VIII §68 pp.98–99",
+      "note": "fifth course ~10 cubits at SW, per Petrie discussion"
+    },
+    {
+      "course": 10,
+      "top_elevation_m": 10.5664,
+      "status": "HISTORICAL_LEVEL_ANCHOR",
+      "source": "Petrie 1883 ch. VIII §68 pp.98–99",
+      "note": "tenth course ~20 cubits all round, per Petrie discussion"
+    }
+  ]
+}

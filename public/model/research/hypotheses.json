@@ -1,0 +1,92 @@
+{
+  "model": "project.giza-khafre-reverse-engineering",
+  "revision": "rev.0003",
+  "rule": "No candidate function is promoted from hypothesis without a predicted signature and an independent measurement.",
+  "hypotheses": [
+    {
+      "id": "hyp.artifact",
+      "label": "Reconstruction / inverse-problem artifact",
+      "status": "LEADING_NULL",
+      "required_tests": [
+        "independent seismic tomography",
+        "microgravity",
+        "muography where geometry permits",
+        "algorithm null scans over unrelated terrain"
+      ],
+      "falsifier": "Independent methods recover the same shaft/chamber boundaries at the same coordinates.",
+      "prior_note": "",
+      "predictions": [
+        "Independent seismic/microgravity surveys fail to recover repeated 8-shaft boundaries at claimed coordinates.",
+        "Synthetic/null SAR processing may reproduce repeated motifs on unrelated geology."
+      ]
+    },
+    {
+      "id": "hyp.access",
+      "label": "Vertical access / excavation / transport infrastructure",
+      "status": "TESTABLE_IF_GEOMETRY_CONFIRMED",
+      "required_signatures": [
+        "continuous traversable helix/ramp geometry",
+        "connection surfaces",
+        "construction spoil / access evidence"
+      ],
+      "falsifier": "No independently verified continuous channels.",
+      "prior_note": "",
+      "predictions": [
+        "Continuous ramps/shafts should produce coherent void boundaries and reachable junctions rather than isolated anomalies.",
+        "Geometry should exhibit human-scale circulation clearances and construction interfaces."
+      ]
+    },
+    {
+      "id": "hyp.hydraulic",
+      "label": "Hydraulic / fluid-management system",
+      "status": "TESTABLE_IF_GEOMETRY_CONFIRMED",
+      "required_signatures": [
+        "hydraulic connectivity",
+        "water source/sink",
+        "erosion/mineral deposition consistent with sustained flow",
+        "head-compatible flow path"
+      ],
+      "falsifier": "No connected hydraulic path or flow residues.",
+      "prior_note": "",
+      "predictions": [
+        "A connected head path must exist between source and sink.",
+        "Surfaces should show mineral/erosion signatures consistent with sustained flow if ancient operation occurred."
+      ]
+    },
+    {
+      "id": "hyp.em_resonant",
+      "label": "Passive electromagnetic / acoustic resonator",
+      "status": "COMPUTATIONAL_TEST",
+      "required_signatures": [
+        "geometry-specific eigenmodes",
+        "actual geometry outperforms perturbed controls",
+        "material properties support predicted Q"
+      ],
+      "falsifier": "Mode structure is ordinary and insensitive to the exact geometry.",
+      "prior_note": "",
+      "predictions": [
+        "Measured/material-aware eigenmodes should be unusually sensitive to actual geometry and reproducible across solvers.",
+        "Perturbed pyramids/chambers should perform measurably worse under a preregistered objective."
+      ]
+    },
+    {
+      "id": "hyp.magnetic_plasma",
+      "label": "Magnetic / plasma energy system",
+      "status": "LOW_PRIOR_COMPUTATIONAL_HYPOTHESIS",
+      "required_signatures": [
+        "credible field source or remanent magnetic architecture",
+        "plasma-compatible chamber/material evidence",
+        "energy input path",
+        "thermal management",
+        "energy extraction path"
+      ],
+      "falsifier": "No physically plausible magnetic-field source or energy-conversion chain.",
+      "prior_note": "",
+      "predictions": [
+        "A field-generating architecture or remanent magnetic pattern must be identifiable.",
+        "There must be a closed energy chain: ionization/input \u2192 confinement/coupling \u2192 heat/charge extraction \u2192 waste path.",
+        "Required field/pressure parameters must be compatible with materials and geometry."
+      ]
+    }
+  ]
+}
