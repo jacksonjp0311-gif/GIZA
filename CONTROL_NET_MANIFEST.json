@@ -37,7 +37,7 @@
     },
     {
       "path": "public/model/control_net/benchmarks/projective_camera.json",
-      "sha256": "7e4d7b37a8ef53718820778319957a823b747f3d5b1158eee5f5514e6ec9696c",
+      "sha256": "72cf792f76e61b02614b913dcc50f1bdc227d8031f0e680a16d85c69225f49d4",
       "bytes": 12928
     },
     {
@@ -107,5 +107,5 @@
     }
   ],
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T10:46:21.098Z"
+  "sealed_at": "2026-09-17T10:50:17.079Z"
 }

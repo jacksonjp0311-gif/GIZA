@@ -55,6 +55,13 @@ No GitHub commits were made.
 
 ## Sealing
 
+### GitHub publication and code/data audit — 2026-09-17
+
+- User authorized repository creation and push. Created private jacksonjp0311-gif/GIZA, main branch; no existing repository/history was overwritten. Added environment/private-key ignore rules, retained checksum-referenced historical verification logs, and preserved bytes via .gitattributes.
+- Credential-pattern and sensitive-filename scans found no actionable matches; not a comprehensive security audit. No node_modules, dist or local raw-vault assets were staged.
+- `npm run check` passed again: strict TypeScript, inherited validators, 25 repair tests and 10 component tests. No runtime feature changes in this publication/audit pass.
+- Added SPATIAL_ENGINEERING_ROADMAP.md with all 56 part coverage rows, concrete code gaps and phased recommendations. Missing controls/geometry/acquisition work is documented, not claimed fixed.
+
 ### Restored icon identity and selection title — 2026-09-17
 
 - Copied the existing desktop GIZA-NEXUS.png icon artwork unchanged into public assets and reused it for the header and favicon. Header logo has CSS floating tilt and an orbit accent; reduced-motion disables both animations. No generated replacement artwork.

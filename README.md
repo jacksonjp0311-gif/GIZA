@@ -1,5 +1,11 @@
 # GIZA NEXUS v0.10.12 — Registration Workbench
 
+## Current repository status — 2026-09-17
+
+This project is now maintained as **GIZA**. The Explorer has since passed TypeScript and production compilation, with a model-first header, animated original logo and component Quick Views. The portable scripts below still differ from the external desktop compile/version launcher; a fresh clone does not include that external launcher. Historical verification artifacts are preserved with their original results.
+
+See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for code findings, all 56 component coverage rows, and the proposed evolution plan. These recommendations are not yet implemented.
+
 An executable local workbench for importing a source plate, recording landmarks, freezing an experiment, and inspecting every holdout residual. This is a software release, not an inspection report.
 
 The existing React / Three.js explorer, exploded-model controls, photo inspector, simulations and eleven-view atlas are retained. The new Registration surface opens from the central viewport; it does not replace the 3-D model or add another global navigation mode.
@@ -65,7 +71,7 @@ npm run dev
 
 Or use `Start-GIZA.ps1 -Mode Explorer`. The explorer runs on port 4173. Run the workbench in a second terminal to use the new **REGISTRATION** button (keyboard `H`); Vite proxies its local API and UI. `M` continues toggling the model and map atlas.
 
-The existing explorer dependency bundle was unavailable in this container. Its production Vite build has **not** been verified here. The standalone workbench is independently executable and was exercised with its real Node service.
+The original handoff environment lacked Explorer dependencies. Subsequent desktop verification passed its production build; see dated entries in VALIDATION.md. The standalone workbench remains independently executable.
 
 ## Tests
 
@@ -87,4 +93,4 @@ Optional Python integration tests are in `tests/`. They use synthetic PDFs only 
 - Shipped HTML/CSS/JavaScript rendered and responded correctly in Chromium, including the synthetic residual view and 390px responsive layout. Managed Chromium disallowed URL navigation, so the browser test loaded the actual files and bridged requests to the real loopback API. It did not mock the API or use a generated UI image.
 - No real Petrie PDF, archaeological registration, canonical wall geometry or archaeological metric ray was created in this release.
 
-Everything remains in this project folder. Previous release identities and manifests are preserved under `history/0.10.11/`; no GitHub commits were made.
+Previous release identities and manifests are preserved under `history/0.10.11/`. The project was first published to the private GitHub repository `jacksonjp0311-gif/GIZA` on 2026-09-17 with the user's authorization.

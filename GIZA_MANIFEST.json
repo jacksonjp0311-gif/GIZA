@@ -3,8 +3,8 @@
   "name": "GIZA NEXUS",
   "version": "0.10.12",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-17T10:46:21.098Z",
-  "file_count": 600,
+  "sealed_at": "2026-09-17T10:50:17.079Z",
+  "file_count": 601,
   "exclude": [
     "GIZA_MANIFEST.json",
     "node_modules/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "ACTION_GRAPH_MANIFEST.json",
-      "sha256": "7a597dc888b078a5f434ac2f345f0077eda464c58f8d7830cae4f3d6eb7eae78",
+      "sha256": "8dae1056cc1f8c087da16f2a1be3cb9d7cc29619963de04745bcec7cd65e7544",
       "bytes": 1961
     },
     {
@@ -34,12 +34,12 @@
     },
     {
       "path": "ARCHIVE_HARVEST_MANIFEST.json",
-      "sha256": "c3f089a9d956ed2e658654dee7a89d63d27b0df7417c6737df935ca985e12d0b",
+      "sha256": "5e60d5b1d153a552d309a19ff5392ca96ee3f724262d99ccd029f0e012598b3f",
       "bytes": 738
     },
     {
       "path": "ATLAS_INGEST_MANIFEST.json",
-      "sha256": "ea3bd948e747c736c4fd5615a7a635439ba7a1566cef50d5ef4411ecc18496dc",
+      "sha256": "f6839f4906b5fe7ba488a819151396fde15b814f13756f744eb3020bc3bb943a",
       "bytes": 1721
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "path": "CONTINUITY_MANIFEST.json",
-      "sha256": "fdce87feb5677c1040cdf53b079a01010a1d87ef166c1840b996b064d356c069",
+      "sha256": "d409e098b1f565edba0f7a340bd99248042873bfa2b0790c3efe88d30227c40a",
       "bytes": 23678
     },
     {
       "path": "CONTROL_NET_MANIFEST.json",
-      "sha256": "8e6bb13e3e77e867ae3e6849acb25dfe7a53bf661dff45d3d9c9edd9641ca998",
+      "sha256": "6fb9a8e220990e273eae7f68e596df3b10b631d0066026c5218a55fd2b01097e",
       "bytes": 3669
     },
     {
@@ -413,6 +413,11 @@
       "bytes": 2552
     },
     {
+      "path": "docs/SPATIAL_ENGINEERING_ROADMAP.md",
+      "sha256": "18ade53e670a34d8cc3cf34b667eee1fb6b3343abf7377e736a10d7b2461e2bd",
+      "bytes": 27884
+    },
+    {
       "path": "docs/SPATIAL_REGISTRATION.md",
       "sha256": "ebb2fb6e12df98501f000fddd3181af50c6a3d799b215170f6acaa1da9c3baf9",
       "bytes": 526
@@ -459,12 +464,12 @@
     },
     {
       "path": "ECHO_MANIFEST.json",
-      "sha256": "14f1040135921f45e52854ff2d9223a438928c21c7a3e6cfd38c2b033ca9eeed",
+      "sha256": "f6a633cb8f4f8bd797e3f8dc8e04ff2aed15b3680fca03b1cc51b43307efce66",
       "bytes": 7821
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
-      "sha256": "1ffcfcc663cb827a4bc2ed4bf5e072b17f9e9a9f67953945b764402a553cff5a",
+      "sha256": "19ac42ac5c6441b471a461865031a6c80f191f2e54938bf529cb75955d19db5a",
       "bytes": 3514
     },
     {
@@ -494,12 +499,12 @@
     },
     {
       "path": "FIELD_MANIFEST.json",
-      "sha256": "c40b25af4d7d17fb9bf54841ae026de3d68150fa1c6286bec5882cc557b038ec",
+      "sha256": "4aabef37c5ea4208dd3def5b56baf368b6ea752c4889fd1aab9809a425cac61d",
       "bytes": 2280
     },
     {
       "path": "FRAME_MANIFEST.json",
-      "sha256": "1c157c33e4de4eb89b7e80406f684b4a5ce5d26cee97dcf5ec520643b6c04011",
+      "sha256": "ea95974c37175341e57757205561ffaf9545fd2a82a429eef527ec442e86de6c",
       "bytes": 2512
     },
     {
@@ -684,7 +689,7 @@
     },
     {
       "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
-      "sha256": "57983e2ef017d0a2324fe73100dc4a441d8a98d62f25dfb9d58584b5b5a6dbd4",
+      "sha256": "48adb56f6522c5a9f5344b5ee01c62c523966b402aae7f3a7574efc1ae205309",
       "bytes": 2050
     },
     {
@@ -694,12 +699,12 @@
     },
     {
       "path": "METRIC_VIEW_LAB_MANIFEST.json",
-      "sha256": "324c17330d38c523450b9e3ce019cbe305f606b9c49ac39b18586a8123632c3d",
+      "sha256": "6eafbc2d13163c959085fdaefe70365c0707e944e2c5c521d0af273523572a45",
       "bytes": 2163
     },
     {
       "path": "OBSERVATORY_MANIFEST.json",
-      "sha256": "b54a53949bf7813f355789ce670c07002810eca9882a497e2d0f9a5139861dd0",
+      "sha256": "37b61848b05212dce217830f6ad33ff5b591fcafc1db7553a8c46bd20788f79f",
       "bytes": 996
     },
     {
@@ -709,22 +714,22 @@
     },
     {
       "path": "PLAN_CONCORDANCE_MANIFEST.json",
-      "sha256": "e1b9c48d62a7f4e70297de40563997671132e214aa772a4579e4c2ffca734843",
+      "sha256": "446c1c6bd25e8bae53cf6780a5b680a3c36e9b772b9ffd80e2ebac6e58d60a74",
       "bytes": 1630
     },
     {
       "path": "PLATE_REGISTRATION_MANIFEST.json",
-      "sha256": "b7596a8aaf729d4f83dd07023e0776ffe7840afdd993c250d46374b497c3744d",
+      "sha256": "4140709ce2c2c6d880f0c0757d0e00e90234d982c8eec1d32925b766092d1624",
       "bytes": 5030
     },
     {
       "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
-      "sha256": "d0bd245d2832d12563da64e9d11e07cf097a150a65e0bfc9262469014dd2958a",
+      "sha256": "a4f095a51b1d21cf662cc3d786d31c22671e1ef52d9afd1102d1e5d98f8250ef",
       "bytes": 1519
     },
     {
       "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
-      "sha256": "2b5ed5cf9335c868f89dcff735ad705986520b6252ecc690f6140cef1018393d",
+      "sha256": "18b908c326711a3bbf6d6a840a059f408d85ba18d21f1f64b770521f98428eb3",
       "bytes": 3255
     },
     {
@@ -834,7 +839,7 @@
     },
     {
       "path": "public/model/control_net/benchmarks/projective_camera.json",
-      "sha256": "7e4d7b37a8ef53718820778319957a823b747f3d5b1158eee5f5514e6ec9696c",
+      "sha256": "72cf792f76e61b02614b913dcc50f1bdc227d8031f0e680a16d85c69225f49d4",
       "bytes": 12928
     },
     {
@@ -1444,7 +1449,7 @@
     },
     {
       "path": "public/model/registration/benchmarks/planar_homography.json",
-      "sha256": "4df018ed5c7dd67e72c5f4a611152f87e51ee604a8f33fbaa1158fb0d2ae7640",
+      "sha256": "dc1ffa62bcd14b2b933f3166f120d30cb921561909522faa8bdf55d6abf97834",
       "bytes": 292
     },
     {
@@ -2114,32 +2119,32 @@
     },
     {
       "path": "README.md",
-      "sha256": "e6d33f1aaea4da52b7b7d6742f5961a00f80ab35b08643f7c432dac6353b2be9",
-      "bytes": 6457
+      "sha256": "1086e1a0be47d26d54998f509a97bdb146ddb0293e138f95980cda3aec11e1b4",
+      "bytes": 7180
     },
     {
       "path": "REGISTER_MANIFEST.json",
-      "sha256": "da1f6ebbaedec4160067db12bb0e3247fc429a5d6272ade64f67fb6046948c3e",
+      "sha256": "abd18141e575274e04949e166786f5e0daee074eb4d986caa547b7e24a398717",
       "bytes": 1610
     },
     {
       "path": "REGISTRATION_MANIFEST.json",
-      "sha256": "bbaac39ce8ce8fc29e5ec8b685c869f6d578112fa7406a82f5c823f4c09680ba",
+      "sha256": "01447b46713b1a349ef695be5cad8ed67fc712967d8c5acb0609e68993e6ddd8",
       "bytes": 3797
     },
     {
       "path": "RESIDUAL_FIELD_MANIFEST.json",
-      "sha256": "ed3d94b63212bb58b86774d877964bc7774e6c77de1ccab8ea6330abd5a64b86",
+      "sha256": "c3d7b3085e62fbbaa5503740622957fbe85dddf5b14424f593b96dce85ed3b4c",
       "bytes": 1286
     },
     {
       "path": "RITUAL_MAP_MANIFEST.json",
-      "sha256": "944af56596086daa102de851087cf33e5ad1f29ef6c49bc5fc2bdd974298bd00",
+      "sha256": "14598d059ea193efc34518ed8902717bf6d6b990c69c5be09afce9b509e2afd7",
       "bytes": 4033
     },
     {
       "path": "ROOM_GRAPH_MANIFEST.json",
-      "sha256": "c7a5314ed2c9772be9db97b970983068d925f4d675e4b797ed4acbccb3d4d6ea",
+      "sha256": "4a119085481a542d7e498e89e9606b844e2fa0ca7e3be98e537ce000f667caf1",
       "bytes": 2131
     },
     {
@@ -2684,17 +2689,17 @@
     },
     {
       "path": "SIMLAB_MANIFEST.json",
-      "sha256": "5abf3de880b185e4d2cd9a4d76c0eba0f2af731afadb0f3b909e02234e265fe9",
+      "sha256": "a41554d6a620f0aed7bad39bf69bf17ac5aaa2e627edc48f5a58f9504fe4960a",
       "bytes": 9101
     },
     {
       "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
-      "sha256": "cb2fc94c75033ea26968e64dac2a592f6ef97892dcde1f107c8516314c5e9f04",
+      "sha256": "33c7381c6b703e8d7025770463635fc46aff84e60e73b5d5db139b6cf9956d91",
       "bytes": 3272
     },
     {
       "path": "SOURCE_PARSER_MANIFEST.json",
-      "sha256": "9e9e5ce2c450ce81ea8f13cd948f2c1bb9f9fedc2504d631e9bd4f8d14f25a36",
+      "sha256": "bdcf048a38c4c9d296c505047d52541e7b2e16ae000bebca949390ae40860778",
       "bytes": 1990
     },
     {
@@ -2889,7 +2894,7 @@
     },
     {
       "path": "STRATA_MANIFEST.json",
-      "sha256": "3631e1269d46684edec4ee83712a93025cad44c52ce12ac68d5d128b36ff6ff4",
+      "sha256": "79444080e8d1d9dc21df272a87edfc9f2a004ee27b88e748f7ae9f1835242150",
       "bytes": 2928
     },
     {
@@ -2924,13 +2929,13 @@
     },
     {
       "path": "UI_RESTORE_MANIFEST.json",
-      "sha256": "4728511c1035361a5450a86fb98d1d25e95a671d8f8d62af02a4b16d6d5b1428",
+      "sha256": "1899e701e1ba7ea1494d3a5c9b4b6bf1414a2b3762c2430068518dec925e023d",
       "bytes": 2803
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "c9e51ecdad9d3bc84c35d5edcea03d4ea685c673f1670b1546873c37460ed0de",
-      "bytes": 11653
+      "sha256": "7e818f435f0855fa302111ddf63896fe1f43d49cab50c959bff33513ab0c6397",
+      "bytes": 12548
     },
     {
       "path": "verification/api-end-to-end.json",
@@ -2999,7 +3004,7 @@
     },
     {
       "path": "VISIBILITY_LAB_MANIFEST.json",
-      "sha256": "8e87018e55a2883dd2fca1c4fbfacf3fe37a4db55ee45271b6c8edd037731fa5",
+      "sha256": "ec96a1923655964e3c5c17e0436b307bab43652fbb131a961092c60b649b1da1",
       "bytes": 2132
     },
     {
@@ -3009,7 +3014,7 @@
     },
     {
       "path": "WORKBENCH_MANIFEST.json",
-      "sha256": "53daa6fc0dcf347f365e442fd03bdf5a232c83b78ebef5e2137b00b2f9b2c519",
+      "sha256": "83afe1049750c2540f5f2f4db5c005dd6b18c54bb811c552500517cdca74774e",
       "bytes": 2292
     }
   ]

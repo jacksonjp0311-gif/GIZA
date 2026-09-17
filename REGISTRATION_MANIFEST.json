@@ -25,7 +25,7 @@
   "files": [
     {
       "path": "public/model/registration/benchmarks/planar_homography.json",
-      "sha256": "4df018ed5c7dd67e72c5f4a611152f87e51ee604a8f33fbaa1158fb0d2ae7640",
+      "sha256": "dc1ffa62bcd14b2b933f3166f120d30cb921561909522faa8bdf55d6abf97834",
       "bytes": 292
     },
     {
@@ -105,5 +105,5 @@
     }
   ],
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T10:46:21.098Z"
+  "sealed_at": "2026-09-17T10:50:17.079Z"
 }
