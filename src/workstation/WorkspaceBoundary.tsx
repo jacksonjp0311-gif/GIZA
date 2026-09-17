@@ -13,12 +13,13 @@ export class WorkspaceBoundary extends Component<{name:string;children:ReactNode
 }
 
 export function UnavailableDataset({diagnostics,scope,onExit}:{diagnostics:RuntimeDiagnostic[];scope:string;onExit?:()=>void}){
-  return <section className="workspaceRecovery" role="status"><h2>{scope} data unavailable</h2><p>This workspace is paused because its source data could not be loaded or validated. Missing data is not a zero result, a failed benchmark, or evidence of absence.</p><ul>{diagnostics.filter(d=>d.scope===scope).map(d=><li key={d.url}><code>{d.url}</code><span>{d.reason}</span></li>)}</ul><button onClick={()=>window.location.reload()}>Retry data load</button>{onExit&&<button onClick={onExit}>Return to model</button>}</section>;
+  const loading=diagnostics.filter(d=>d.scope===scope).every(d=>d.status==='LOADING');
+  return <section className="workspaceRecovery" role="status"><h2>{scope} data {loading?'loading':'unavailable'}</h2><p>This workspace waits for validated source data. The main model remains usable. Missing data is not a zero result, a failed benchmark, or evidence of absence.</p><ul>{diagnostics.filter(d=>d.scope===scope).map(d=><li key={d.url}><code>{d.url}</code><span>{d.status}: {d.reason}</span></li>)}</ul>{!loading&&<button onClick={()=>window.location.reload()}>Retry data load</button>}{onExit&&<button onClick={onExit}>Return to model</button>}</section>;
 }
 
 export function DataHealthNotice({diagnostics}:{diagnostics:RuntimeDiagnostic[]}){
   if(!diagnostics.length)return null;
-  return <details className="dataHealthNotice"><summary role="status">{diagnostics.length} optional dataset{diagnostics.length===1?'':'s'} unavailable · affected research tools paused</summary><p>The model remains available. These gaps are not verified empty results. Retry the data load after restoring the named files.</p><ul>{diagnostics.map(d=><li key={d.url}><b>{d.scope}</b><code>{d.url}</code><span>{d.reason}</span></li>)}</ul><button onClick={()=>window.location.reload()}>Retry data load</button></details>;
+  return <details className="dataHealthNotice"><summary role="status">{diagnostics.filter(d=>d.status==='LOADING').length} optional datasets loading · {diagnostics.filter(d=>d.status!=='LOADING').length} unavailable/invalid · affected research tools paused</summary><p>The model remains available. These gaps are not verified empty results. Retry the data load after restoring the named files.</p><ul>{diagnostics.map(d=><li key={d.url}><b>{d.scope} · {d.status}</b><code>{d.url}</code><span>{d.reason}</span></li>)}</ul><button onClick={()=>window.location.reload()}>Retry data load</button></details>;
 }
 
 /** Mount inside an R3F Canvas. Listener cleanup also prevents duplicate notices under StrictMode. */

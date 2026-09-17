@@ -6,10 +6,11 @@ import {runCandidateExperiment,reviewCurrentExperiment,experimentApplicability,c
 import {downloadJson} from './export';
 import {formatValue} from './FeaturePanel';
 
-export function InvestigationPanel({assembly,graph,candidates,selected,feature,onCandidate,onLocate,context,journal,onAppend,journalMessage}:{assembly:EvidenceAssembly;graph:SpatialEvidenceGraph;candidates:InvestigationCandidate[];selected:string|null;feature:EvidenceFeature;onCandidate:(id:string)=>void;onLocate:(id:string)=>void;context:()=>ReceiptContext;journal:readonly EvidenceReceipt[];onAppend:(r:EvidenceReceipt)=>Promise<void>;journalMessage:string}){
+export function InvestigationPanel({assembly,graph,candidates,selected,feature,onCandidate,onLocate,context,journal,onAppend,journalMessage,onDraftChange}:{assembly:EvidenceAssembly;graph:SpatialEvidenceGraph;candidates:InvestigationCandidate[];selected:string|null;feature:EvidenceFeature;onCandidate:(id:string)=>void;onLocate:(id:string)=>void;context:()=>ReceiptContext;journal:readonly EvidenceReceipt[];onAppend:(r:EvidenceReceipt)=>Promise<void>;journalMessage:string;onDraftChange?:(dirty:boolean)=>void}){
   const candidate=candidates.find(c=>c.id===selected);
   const [busy,setBusy]=useState(false),[message,setMessage]=useState(''),[last,setLast]=useState<EvidenceReceipt|null>(null);
   const [review,setReview]=useState<ResearchReview>({reviewer:'',outcome:'INCONCLUSIVE',note:''});
+  useEffect(()=>onDraftChange?.(!!review.reviewer.trim()||!!review.note.trim()),[review,onDraftChange]);
   const [applicability,setApplicability]=useState<{receipt:EvidenceReceipt;state:string}[]>([]);
   useEffect(()=>{let live=true;setApplicability([]);if(candidate)Promise.all([...journal].reverse().filter(r=>r.kind==='EXPERIMENT'&&(r.payload.data.candidate as {id?:string})?.id===candidate.id).map(async receipt=>({receipt,state:await experimentApplicability(receipt,candidate,graph)}))).then(rows=>{if(live)setApplicability(rows);});return()=>{live=false;};},[journal,candidate,graph]);
   const experiment=applicability.find(r=>r.state==='CURRENT')?.receipt;

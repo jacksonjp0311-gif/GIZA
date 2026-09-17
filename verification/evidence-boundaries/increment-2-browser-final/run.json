@@ -1,0 +1,10 @@
+{
+  "schema": "giza.browser-checkpoint.v1",
+  "createdAt": "2026-09-17T23:27:58.388Z",
+  "commit": "c5a959825eb4ef15bd914aa86677d1b5869e860a",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 0,
+  "command": "npm run test:browser",
+  "authority": "SOFTWARE_TESTS_ONLY"
+}

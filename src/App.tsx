@@ -27,6 +27,7 @@ export default function App() {
   const [workspaceRevision,setWorkspaceRevision]=useState(0);
   const [model, setModel] = useState<ModelBundle | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loadRevision,setLoadRevision]=useState(0);
   const [initial] = useState(loadWorkspaceState);
   const [selectedId, setSelectedId] = useState<string | null>(initial.selectedId);
   const [selectedStone, setSelectedStone] = useState<StoneCellInfo | null>(null);
@@ -65,8 +66,10 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    loadModel().then(setModel).catch(e => setError(String(e)));
-  }, []);
+    const controller=new AbortController();
+    loadModel({signal:controller.signal,onUpdate:setModel}).then(value=>{if(!controller.signal.aborted)setModel(value);}).catch(e=>{if(!controller.signal.aborted)setError(String(e));});
+    return ()=>controller.abort();
+  }, [loadRevision]);
 
   useEffect(() => {
     saveWorkspaceState({
@@ -176,7 +179,7 @@ export default function App() {
     }));
   }, [model, activateView, openDetail]);
 
-  if (error) return <div className="fatal" role="alert"><h1>GIZA couldn’t load</h1><p>{error}</p><button onClick={()=>{setError(null);loadModel().then(setModel).catch(e=>setError(String(e)));}}>Retry loading</button><button onClick={()=>{clearWorkspaceState();window.location.reload();}}>Reset saved workspace</button></div>;
+  if (error) return <div className="fatal" role="alert"><h1>GIZA couldn’t load</h1><p>{error}</p><button onClick={()=>{setError(null);setLoadRevision(v=>v+1);}}>Retry loading</button><button onClick={()=>{clearWorkspaceState();window.location.reload();}}>Reset saved workspace</button></div>;
   if (!model) return <div className="boot"><b>GIZA NEXUS</b><span>Initializing evidence-governed workstation…</span></div>;
 
   return (

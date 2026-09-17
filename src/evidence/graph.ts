@@ -1,5 +1,6 @@
 import type { EvidenceAssembly } from './types';
-import {assertSafeDocument,validateObservation} from './observationContract';
+import {assertSafeDocument,validateObservation,validateFeatureSupport} from './observationContract';
+import type {EvidenceFeature,EvidenceObservation} from './types';
 
 export type EvidenceNodeKind = 'FEATURE' | 'OBSERVATION' | 'SOURCE' | 'SOURCE_BYTES' | 'REGISTRATION' | 'FRAME' | 'TRANSFORM' | 'UNCERTAINTY' | 'GEOMETRY' | 'ASSEMBLY' | 'CONSTRAINT' | 'EXPERIMENT' | 'FINDING' | 'RECEIPT';
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
@@ -101,6 +102,7 @@ export function parseEvidenceGraph(value: unknown): SpatialEvidenceGraph {
   if (!ids.has(graph.assemblyId) || !ids.has(graph.authoritativeFrameId)) throw new Error('Graph lacks assembly/frame identity');
   const sources=new Set(graph.nodes.filter(n=>n.kind==='SOURCE').map(n=>n.id));
   for(const node of graph.nodes)if(node.kind==='OBSERVATION'){validateObservation(node.data,sources);if(node.id!==node.data.id||node.authority!==node.data.authority)throw new Error('Observation graph identity/authority mismatch');}
+  for(const node of graph.nodes)if(node.kind==='FEATURE')validateFeatureSupport(node.data as unknown as EvidenceFeature,graph.nodes.filter(n=>n.kind==='OBSERVATION').map(n=>n.data as unknown as EvidenceObservation));
   for (const edge of graph.edges) if (!edge || !ids.has(edge.from) || !ids.has(edge.to) || typeof edge.relationship !== 'string' || !edge.relationship) throw new Error('Dangling evidence relationship');
   return graph;
 }

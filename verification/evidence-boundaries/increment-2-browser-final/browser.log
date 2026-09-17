@@ -1,0 +1,29 @@
+
+> giza-nexus-registration-workbench@0.10.12 test:browser
+> playwright test
+
+
+Running 8 tests using 1 worker
+
+  ok 1 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (15.2s)
+  ok 2 tests\browser\evidence-workflow.spec.ts:26:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (12.6s)
+  ok 3 tests\browser\evidence-workflow.spec.ts:39:91 › model-first layout and keyboard 1280x800 (3.6s)
+  ok 4 tests\browser\evidence-workflow.spec.ts:39:91 › model-first layout and keyboard 390x844 (2.6s)
+  ok 5 tests\browser\evidence-workflow.spec.ts:39:91 › model-first layout and keyboard 844x390 (2.3s)
+  ok 6 tests\browser\evidence-workflow.spec.ts:43:53 › optional atlas slow does not block core or force workspace navigation (2.5s)
+  ok 7 tests\browser\evidence-workflow.spec.ts:43:53 › optional atlas missing does not block core or force workspace navigation (2.8s)
+  ok 8 tests\browser\evidence-workflow.spec.ts:43:53 › optional atlas malformed does not block core or force workspace navigation (2.6s)
+
+  8 passed (1.1m)
+
+[WebServer] (node:18004) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:16344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:24196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

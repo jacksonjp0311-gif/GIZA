@@ -1,4 +1,4 @@
-import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,SectionPlane,Vec3} from './types';
+import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,RealityAuthority,SectionPlane,Vec3} from './types';
 import { invertRigid, pointInFrame, polygonArea, resolveTransform, sectionBox, transformPoint } from './spatial';
 import { displayPoint, inspectionPose, physicalPoint } from './presentation';
 
@@ -12,6 +12,16 @@ export function featureAnchors(feature:EvidenceFeature):Vec3[]{
 }
 export function featureCenter(feature:EvidenceFeature):Vec3{
   const points=featureAnchors(feature);return points.length?points.reduce<Vec3>((s,p)=>s.map((v,i)=>v+p[i]/points.length) as Vec3,[0,0,0]):[0,0,0];
+}
+export interface VisibilityState {layers:Record<RealityAuthority,boolean>;room:boolean;isolated:string|null;hotspots:boolean;selectedId:string}
+/** One display-space selection for rendering and camera fitting; never a physical transform. */
+export function visibleGeometry(assembly:EvidenceAssembly,state:VisibilityState):EvidenceFeature[]{
+  return assembly.features.filter(f=>state.layers[f.authority]&&(!state.isolated||f.objectId===state.isolated)&&(state.room||f.objectId.includes('sarcophagus'))&&featureAnchors(f).length>0&&(f.geometry.kind!=='segment'||state.hotspots||f.id===state.selectedId));
+}
+export function pickSectionCanonical(assembly:EvidenceAssembly,feature:EvidenceFeature,display:Vec3,explode:number,section:SectionPlane):CanonicalPoint{
+  const point=pickCanonical(assembly,feature,display,explode),at=pointInFrame(assembly,point,section.frameId);
+  if(!at||Math.abs(at.reduce((s,v,i)=>s+v*section.normal[i],-section.offset))>1e-5)throw new Error('Section pick does not lie on its physical plane');
+  return {...point,origin:{kind:'COMPUTED_SECTION',section:structuredClone(section),surfaceAuthority:'RECONSTRUCTED'}};
 }
 export function bodyOrigin(assembly:EvidenceAssembly):Vec3{
   const body=assembly.features.find(f=>f.objectId==='part.sarcophagus.body');

@@ -1,5 +1,5 @@
 import type {BoxGeometry,CanonicalPoint,EvidenceAssembly,Matrix4,SectionPlane,SpatialFrame,SpatialResult,SpatialTransform,Uncertainty,Vec3} from './types';
-import {assertSafeDocument,validateObservation} from './observationContract';
+import {assertSafeDocument,validateObservation,validateFeatureSupport} from './observationContract';
 
 export const unknownUncertainty=(note='No uncertainty supplied by the cited record.'):Uncertainty=>({status:'UNKNOWN',value:null,unit:'m',note});
 export const identityMatrix=():Matrix4=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
@@ -108,6 +108,7 @@ export function importCanonicalAssembly(input:unknown):EvidenceAssembly {
   for(const s of a.sources)if(typeof s.title!=='string'||typeof s.url!=='string'||(s.url!==''&&!/^https?:\/\//i.test(s.url))||s.byteStatus!=='UNKNOWN')throw new Error('Invalid source metadata / unsupported custody claim');
   for(const o of a.observations)validateObservation(o,sourceIds);
   for(const f of a.features){
+    validateFeatureSupport(f,a.observations);
     if(!ids.has(f.frameId)||!Array.isArray(f.observationIds)||f.observationIds.some(id=>!observationIds.has(id)))throw new Error('Invalid feature binding');
     if(f.value!==null&&(typeof f.value!=='number'||!Number.isFinite(f.value)))throw new Error('Invalid feature scalar');
     authority(f.authority);uncertainty(f.uncertainty);const g=f.geometry;

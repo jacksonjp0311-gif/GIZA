@@ -5,21 +5,22 @@ import type {OrbitControls as Controls} from 'three-stdlib';
 import * as THREE from 'three';
 import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,RealityAuthority,SectionPlane,Vec3} from './types';
 import type {CameraBookmark} from './presentation';
-import {bodyOrigin,featureAnchors,featureCenter,pickCanonical,pointForDisplay,assemblySections} from './viewGeometry';
+import {bodyOrigin,featureAnchors,featureCenter,pickCanonical,pickSectionCanonical,pointForDisplay,assemblySections,visibleGeometry} from './viewGeometry';
 import {resolveTransform} from './spatial';
 import {WebGLRecovery} from '../workstation/WorkspaceBoundary';
 import {GraniteMaterial} from '../scene/DetailMaterial';
 
-export interface CameraCommand {revision:number;mode:'OBJECT'|'ROOM'|'TOP'|'BOOKMARK'|'SAVE';bookmark?:CameraBookmark}
-function CameraRig({assembly,command,explode,onBookmark}:{assembly:EvidenceAssembly;command:CameraCommand;explode:number;onBookmark:(b:CameraBookmark)=>void}){
+export interface CameraCommand {revision:number;mode:'OBJECT'|'ROOM'|'TOP'|'ENTIRE'|'BOOKMARK'|'SAVE';bookmark?:CameraBookmark}
+function CameraRig({assembly,features,command,explode,onBookmark,onCameraReader}:{assembly:EvidenceAssembly;features:EvidenceFeature[];command:CameraCommand;explode:number;onBookmark:(b:CameraBookmark)=>void;onCameraReader:(read:()=>CameraBookmark|null)=>void}){
   const {camera,size}=useThree(),ref=useRef<Controls>(null);
+  useEffect(()=>{onCameraReader(()=>ref.current?{name:'Saved investigation camera',position:camera.position.toArray() as Vec3,target:ref.current.target.toArray() as Vec3}:null);return()=>onCameraReader(()=>null);},[camera,onCameraReader]);
   useEffect(()=>{
     const controls=ref.current;if(!controls)return;
     if(command.mode==='SAVE'){onBookmark({name:`View ${command.revision}`,position:camera.position.toArray() as Vec3,target:controls.target.toArray() as Vec3});return;}
     if(command.mode==='BOOKMARK'&&command.bookmark){camera.position.set(...command.bookmark.position);controls.target.set(...command.bookmark.target);}
     else{
-      const room=command.mode==='ROOM',bounds=new THREE.Box3();
-      for(const f of assembly.features.filter(f=>(room||f.objectId.includes('sarcophagus'))&&(f.geometry.kind==='box'||f.geometry.kind==='surface')))for(const p of featureAnchors(f))bounds.expandByPoint(new THREE.Vector3(...pointForDisplay(assembly,f,p,explode)));
+      const bounds=new THREE.Box3();
+      for(const f of command.mode==='ENTIRE'?assembly.features:features)for(const p of featureAnchors(f))bounds.expandByPoint(new THREE.Vector3(...pointForDisplay(assembly,f,p,explode)));
       const target=bounds.isEmpty()?bodyOrigin(assembly):bounds.getCenter(new THREE.Vector3()).toArray() as Vec3;
       const aspect=size.width/Math.max(1,size.height),fov=42*Math.PI/180,radius=bounds.isEmpty()?2.5:Math.max(.5,bounds.getSize(new THREE.Vector3()).length()/2);
       const distance=radius/Math.sin(Math.min(fov,2*Math.atan(Math.tan(fov/2)*aspect))/2);
@@ -67,24 +68,25 @@ function PhysicalFeature({assembly,feature,selected,explode,plane,hotspots,onPic
     {hotspots&&feature.authority==='OBSERVED'&&<Html position={center} center distanceFactor={7}><div className="evidenceCallout"><button onClick={()=>onPick(feature,{frameId:feature.frameId,position:featureCenter(feature),featureId:feature.id})}>{feature.label}</button></div></Html>}
   </group>;
 }
-function Cap({points}:{points:Vec3[]}){
+function Cap({points,onPick}:{points:Vec3[];onPick:(event:ThreeEvent<MouseEvent>)=>void}){
   const geometry=useMemo(()=>polygonGeometry(points),[points]);useEffect(()=>()=>geometry.dispose(),[geometry]);
-  return <mesh geometry={geometry}><meshBasicMaterial color="#d9a45c" side={THREE.DoubleSide} polygonOffset polygonOffsetFactor={-2}/></mesh>;
+  return <mesh geometry={geometry} onClick={onPick}><meshBasicMaterial color="#d9a45c" side={THREE.DoubleSide} polygonOffset polygonOffsetFactor={-2}/></mesh>;
 }
 export interface LegacyEnvelope {position:Vec3;size:Vec3;rotation:Vec3}
-export function AssemblyScene({assembly,selectedId,layers,room,isolated,explode,plane,caps,hotspots,points,camera,onBookmark,onPick,onLost,onRestored,comparison,legacy}:{
+export function AssemblyScene({assembly,selectedId,layers,room,isolated,explode,plane,caps,hotspots,points,camera,onBookmark,onCameraReader,onPick,onLost,onRestored,comparison,legacy}:{
+  onCameraReader:(read:()=>CameraBookmark|null)=>void;
   assembly:EvidenceAssembly;selectedId:string;layers:Record<RealityAuthority,boolean>;room:boolean;isolated:string|null;explode:number;plane:SectionPlane|null;caps:boolean;hotspots:boolean;points:CanonicalPoint[];camera:CameraCommand;onBookmark:(b:CameraBookmark)=>void;onPick:(f:EvidenceFeature,p:CanonicalPoint)=>void;onLost:()=>void;onRestored:()=>void;comparison:boolean;legacy:LegacyEnvelope|null;
 }){
-  const features=assembly.features.filter(f=>layers[f.authority]&&(!isolated||f.objectId===isolated)&&(room||f.objectId.includes('sarcophagus')));
+  const features=visibleGeometry(assembly,{layers,room,isolated,hotspots,selectedId});
   const cuts=plane?assemblySections(assembly,plane):[];
   const displayPoints=points.map(p=>{const f=assembly.features.find(f=>f.id===p.featureId)??assembly.features.find(f=>f.frameId===p.frameId);return f?pointForDisplay(assembly,f,p.position,explode):p.position;});
   return <Canvas dpr={[1,1.75]} gl={{antialias:true,alpha:false}} camera={{fov:42,near:.008,far:500,up:[0,0,1]}} onCreated={({gl})=>{gl.localClippingEnabled=true;}}>
     <color attach="background" args={['#080f14']}/><ambientLight intensity={1.1}/><hemisphereLight args={['#ffe6ba','#3e4d49',1.65]}/><directionalLight position={[2,-6,10]} intensity={2} color="#ffe8c7"/><directionalLight position={[-8,4,6]} intensity={1.1} color="#d7e9ec"/>
     {features.map(f=><PhysicalFeature key={f.id} assembly={assembly} feature={f} selected={f.id===selectedId} explode={explode} plane={plane} hotspots={hotspots} onPick={onPick}/>)}
-    {caps&&layers.RECONSTRUCTED&&cuts.filter(c=>features.some(f=>f.id===c.featureId)).map(c=>{const f=features.find(f=>f.id===c.featureId)!;return <Cap key={c.featureId} points={c.polygon.map(p=>pointForDisplay(assembly,f,p,explode))}/>;})}
+    {caps&&layers.RECONSTRUCTED&&cuts.filter(c=>features.some(f=>f.id===c.featureId)).map(c=>{const f=features.find(f=>f.id===c.featureId)!;return <Cap key={c.featureId} points={c.polygon.map(p=>pointForDisplay(assembly,f,p,explode))} onPick={e=>{e.stopPropagation();onPick(f,pickSectionCanonical(assembly,f,e.point.toArray() as Vec3,explode,plane!));}}/>;})}
     {displayPoints.length>1&&<Line points={displayPoints} color="#7eeac4" lineWidth={2} dashed dashSize={.055} gapSize={.025}/>}
     {displayPoints.map((p,i)=><group key={i} position={p}><mesh><sphereGeometry args={[.025,12,12]}/><meshBasicMaterial color="#7eeac4" depthTest={false}/></mesh><Html center position={[0,0,.1]}><span className="evidenceMark">{String.fromCharCode(65+i)}</span></Html></group>)}
     {comparison&&legacy&&<group position={legacy.position} rotation={legacy.rotation}><mesh><boxGeometry args={legacy.size}/><meshBasicMaterial wireframe color="#c397db" transparent opacity={.8}/></mesh><Html position={[0,0,legacy.size[2]/2+.2]} center><span className="evidenceMark">Legacy envelope · floor-aligned comparison ONLY</span></Html></group>}
-    <CameraRig assembly={assembly} command={camera} explode={explode} onBookmark={onBookmark}/><WebGLRecovery onLost={onLost} onRestored={onRestored}/>
+    <CameraRig assembly={assembly} features={features} command={camera} explode={explode} onBookmark={onBookmark} onCameraReader={onCameraReader}/><WebGLRecovery onLost={onLost} onRestored={onRestored}/>
   </Canvas>;
 }

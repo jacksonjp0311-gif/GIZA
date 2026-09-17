@@ -1,5 +1,5 @@
 import type { ActionGraphMapData, RoomGraphMapData, VisibilityLabMapData, MetricReadinessMapData, MapAtlasBundle, MapAtlasManifest, PlateauMapData, RitualMapData, SurveyMapData, GeologyMapData, HistoryMapData, IntentMapData, PhotoCoverageMapData, RitualNarrative } from '../maps/types';
-import { createRuntimeLoader, type RuntimeDiagnostic } from './runtimeData';
+import { createRuntimeLoader, runtimeContracts,requiredDatasets,inertRuntimeShape,runtimeScope,type RuntimeDiagnostic } from './runtimeData';
 import type { SimlabBundle, SimlabManifest, GravityResult, GravityBenchmark, AcousticResult, AcousticBenchmark, StrataResult, StrataBenchmark } from '../simlab/types';
 import type {
   FieldAcquisitionCatalog,
@@ -311,6 +311,7 @@ export interface IntentBundle {
 export interface ModelBundle {
   /** Missing optional data is quarantined, not silently interpreted as verified emptiness. */
   runtimeDiagnostics: RuntimeDiagnostic[];
+  runtimeStates:Record<string,'READY'|'LOADING'|'UNAVAILABLE'|'INVALID'>;
   componentResearch: ComponentResearch;
   project: Record<string,unknown>;
   parts: Part[];
@@ -347,9 +348,24 @@ export interface ModelBundle {
   };
 }
 
-export async function loadModel():Promise<ModelBundle> {
-  const runtimeDiagnostics:RuntimeDiagnostic[]=[];
-  const getJson=createRuntimeLoader(runtimeDiagnostics);
+export async function loadModel(options:{onUpdate?:(model:ModelBundle)=>void;signal?:AbortSignal;waitForOptional?:boolean}={}):Promise<ModelBundle> {
+  const documents=new Map<string,unknown>(),failures:RuntimeDiagnostic[]=[];
+  const loader=createRuntimeLoader(failures);
+  const pending=new Set(Object.keys(runtimeContracts).filter(url=>!requiredDatasets.has(url)));
+  await Promise.all([...requiredDatasets].map(async url=>documents.set(url,await loader(url))));
+  const snapshot=()=>assembleModel(async<T,>(url:string)=> (documents.has(url)?documents.get(url):inertRuntimeShape(runtimeContracts[url])) as T,[...failures,...[...pending].map(url=>({url,status:'LOADING' as const,scope:runtimeScope(url),reason:'Optional data is loading independently of the core model.'}))]);
+  const optional=async()=>{
+    await Promise.all([...pending].map(async url=>{
+      const value=await loader(url);documents.set(url,value);pending.delete(url);
+      if(options.onUpdate&&!options.signal?.aborted){const next=await snapshot();if(!options.signal?.aborted)options.onUpdate(next);}
+    }));
+  };
+  if(options.waitForOptional){await optional();return snapshot();}
+  const core=await snapshot();
+  setTimeout(()=>{if(!options.signal?.aborted)void optional();},0);
+  return core;
+}
+async function assembleModel(getJson:<T>(url:string)=>Promise<T>,runtimeDiagnostics:RuntimeDiagnostic[]):Promise<ModelBundle> {
   const [
     project, partsDoc, assembliesDoc, measurementsDoc, hypothesesDoc, calculations,
     photoDoc, atlasDoc, stoneField, evidenceDoc, sourceRegistryDoc, maturityDoc,
@@ -412,6 +428,7 @@ export async function loadModel():Promise<ModelBundle> {
   ]);
 
   return {
+    runtimeStates:Object.fromEntries(Object.keys(runtimeContracts).map(url=>[url,runtimeDiagnostics.find(d=>d.url===url)?.status??'READY'])),
     runtimeDiagnostics:runtimeDiagnostics.sort((a,b)=>a.url.localeCompare(b.url)),
     componentResearch,
     project,

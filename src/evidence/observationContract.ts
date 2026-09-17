@@ -1,4 +1,4 @@
-import type {EvidenceObservation,RealityAuthority,Uncertainty} from './types';
+import type {EvidenceFeature,EvidenceObservation,RealityAuthority,Uncertainty} from './types';
 
 /** Explicit vocabulary: adding a new source status requires a policy decision. */
 const statuses:Record<string,RealityAuthority>={MEASURED:'OBSERVED',REPORTED_MEASUREMENT:'OBSERVED',REPORTED_DESCRIPTION:'OBSERVED',HISTORICAL_REPORTED:'OBSERVED',PUBLISHED_SUMMARY:'OBSERVED',DERIVED_MEAN:'RECONSTRUCTED',DERIVED_SUM:'RECONSTRUCTED',DERIVED_MIDPOINT:'RECONSTRUCTED',DERIVED_FROM_MEASUREMENT:'RECONSTRUCTED',DERIVED_FROM_SURVEY:'RECONSTRUCTED',MEASURED_OR_RECONSTRUCTED:'RECONSTRUCTED',COMPUTED_POSITION:'RECONSTRUCTED',MISSING:'RECONSTRUCTED',UNVERIFIED:'HYPOTHESIS',HYPOTHESIS:'HYPOTHESIS',ASSUMED:'HYPOTHESIS',SIMULATED:'HYPOTHESIS'};
@@ -30,6 +30,7 @@ const units:Record<string,{dimension:string;unit:string;factor:number}>={m:{dime
 export interface ValidatedQuantity {schema:'giza.quantity.v1';dimension:string;native:{value:number|string|null;unit:string|null};normalized:{value:number;unit:string};conversion:{from:string;factor:number;rule:'explicit-unit-table.v1'};uncertaintyInterpretation:string}
 export function normalizeQuantity(value:number,unit:string,nativeValue:number|string|null,nativeUnit:string|null):ValidatedQuantity {
   const spec=units[unit];if(!spec||!Number.isFinite(value))throw new Error(`Unsupported quantity unit ${unit}`);
+  if(typeof nativeValue==='number'&&(!nativeUnit||!units[nativeUnit]))throw new Error('Numeric native observation requires a supported native unit');
   if(typeof nativeValue==='number'&&nativeUnit&&units[nativeUnit]){
     const source=units[nativeUnit];if(source.dimension!==spec.dimension)throw new Error('Native/normalized quantity dimension mismatch');
     // Preserve supplied rounding; inconsistent conversions cannot enter geometry.
@@ -38,6 +39,7 @@ export function normalizeQuantity(value:number,unit:string,nativeValue:number|st
   return {schema:'giza.quantity.v1',dimension:spec.dimension,native:{value:nativeValue,unit:nativeUnit},normalized:{value:value*spec.factor,unit:spec.unit},conversion:{from:unit,factor:spec.factor,rule:'explicit-unit-table.v1'},uncertaintyInterpretation:'UNSPECIFIED_MAGNITUDE'};
 }
 export function validateObservation(input:unknown,sourceIds?:Set<string>):asserts input is EvidenceObservation {
+  assertSafeDocument(input);
   if(!input||typeof input!=='object'||Array.isArray(input))throw new Error('Invalid observation');
   const o=input as EvidenceObservation;
   for(const key of ['id','sourceId','locator','status','derivation'] as const)if(typeof o[key]!=='string'||!o[key].trim())throw new Error(`Observation requires ${key}`);
@@ -56,6 +58,13 @@ export function validateObservation(input:unknown,sourceIds?:Set<string>):assert
       if(q.schema!=='giza.quantity.v1'||q.dimension!==quantity.dimension||q.normalized.value!==o.value||q.normalized.unit!==o.unit||q.native.value!==o.nativeValue||q.native.unit!==o.nativeUnit||q.conversion.rule!=='explicit-unit-table.v1'||!units[q.conversion.from]||q.conversion.factor!==units[q.conversion.from].factor)throw new Error('Quantity metadata inconsistent with observation');
     }
   }else if(o.quantity!==undefined)throw new Error('Non-numeric observation cannot carry numeric quantity');
+}
+export function validateFeatureSupport(feature:EvidenceFeature,observations:EvidenceObservation[]):void {
+  if(!Array.isArray(feature.observationIds))throw new Error('Feature requires observation bindings');
+  const bound=feature.observationIds.map(id=>observations.find(o=>o.id===id));
+  if(bound.some(o=>!o))throw new Error('Unbound feature observation');
+  if(feature.authority==='OBSERVED'&&(!bound.length||bound.some(o=>o!.authority!=='OBSERVED'||o!.value===null)))throw new Error('Observed feature cannot inherit lower-authority or missing support');
+  if(feature.authority==='RECONSTRUCTED'&&feature.geometry?.kind!=='unknown'&&bound.some(o=>o!.authority==='HYPOTHESIS'))throw new Error('Hypothetical support cannot establish reconstructed physical geometry');
 }
 export function lengthValue(o:EvidenceObservation|undefined):number|null {
   if(!o||o.authority==='HYPOTHESIS'||typeof o.value!=='number')return null;

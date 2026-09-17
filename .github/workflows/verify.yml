@@ -20,6 +20,8 @@ jobs:
       - run: node scripts/release/verify.mjs
       - run: npm ci
       - run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
       - run: npm start -- --smoke
         env:
           GIZA_EXPLORER_PORT: '4183'

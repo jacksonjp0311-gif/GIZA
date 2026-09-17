@@ -8,7 +8,8 @@
     "test:usability": "node --test tests/usability.test.mjs",
     "test:sphinx": "node --test tests/sphinx.test.mjs",
     "test:epigraphy": "node --test tests/epigraphy.test.mjs tests/epigraphy-storage.test.mjs tests/epigraphy-navigation.test.mjs",
-    "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs",
+    "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs",
+    "test:browser": "playwright test",
     "test:runtime": "node --test tests/runtime-resilience.test.mjs",
     "validate:evidence-assembly": "node scripts/evidence/validate.mjs",
     "dev": "vite --host 127.0.0.1",
@@ -128,6 +129,7 @@
     "three-stdlib": "^2.36.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@types/three": "^0.180.0",

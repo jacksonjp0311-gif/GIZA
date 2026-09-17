@@ -51,7 +51,10 @@ export function buildKhafreAssembly(model:AssemblyModel):EvidenceAssembly {
     transform('comparison.assembly.legacy-floor',ASSEMBLY_FRAME,MONUMENT_FRAME,chamber&&chamberFloor!==null?rigidMatrix([chamber.spatial.origin_m[0],chamber.spatial.origin_m[1],chamberFloor]):null,['m.burial.wall_height'],'Comparison adapter only: align reconstructed chamber floor with preserved envelope floor to quantify disagreement. NOT a promotion or measurement frame.','COMPARISON_ONLY'),
   ];
   const features:EvidenceFeature[]=[];
-  const add=(id:string,objectId:string,label:string,frameId:string,geometry:FeatureGeometry,observationIds:string[],derivation:string,unknowns:string[]=[],authority:RealityAuthority='RECONSTRUCTED',numeric:number|null=null,unit:string|null=null,uncertainty:Uncertainty=unknownUncertainty())=>features.push({id,objectId,label,frameId,geometry,observationIds,derivation,unknowns,authority,value:numeric,unit,uncertainty,coordinateAuthority:geometry.kind==='unknown'?'UNKNOWN':'RECONSTRUCTED'});
+  const add=(id:string,objectId:string,label:string,frameId:string,geometry:FeatureGeometry,observationIds:string[],derivation:string,unknowns:string[]=[],authority:RealityAuthority='RECONSTRUCTED',numeric:number|null=null,unit:string|null=null,uncertainty:Uncertainty=unknownUncertainty())=>{
+    if(authority==='RECONSTRUCTED'&&observationIds.some(id=>obs.get(id)?.authority==='HYPOTHESIS'))authority='HYPOTHESIS';
+    features.push({id,objectId,label,frameId,geometry,observationIds,derivation,unknowns,authority,value:numeric,unit,uncertainty,coordinateAuthority:geometry.kind==='unknown'?'UNKNOWN':'RECONSTRUCTED'});
+  };
   const bodyId='part.sarcophagus.body',lidId='part.sarcophagus.lid',roomId='part.burial.chamber';
   const cofferIds=['m.coffer.outer_width','m.coffer.outer_length','m.coffer.outer_height','m.coffer.inner_width','m.coffer.inner_length','m.coffer.inner_depth'];
   const ideal='Idealized planar reconstruction from reported dimensions; centred rectangular cavity is not a mapped survey surface.';

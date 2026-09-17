@@ -1,0 +1,61 @@
+{
+  "label": "after-core-split-initial",
+  "createdAt": "2026-09-17T23:13:37.082Z",
+  "commit": "c5a959825eb4ef15bd914aa86677d1b5869e860a",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "cpu": "AMD Ryzen 5 3500 6-Core Processor              ",
+  "browser": "153.0.8010.12",
+  "rendering": "Chromium headless SwiftShader, production preview; fresh contexts; unthrottled localhost",
+  "criterion": "Visible model canvas and enabled quick-view UI plus two animation frames. RAF is page scheduling, not GPU frame timing. Heap is Chromium estimate, not total process memory.",
+  "samples": [
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 1053.6000000238419,
+      "rafMedianMs": 31.40000009536743,
+      "rafP95Ms": 110.5,
+      "jsHeapBytes": 21700000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 513.5,
+      "rafMedianMs": 17.300000071525574,
+      "rafP95Ms": 51,
+      "jsHeapBytes": 19300000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 516.8999999761581,
+      "rafMedianMs": 17.700000047683716,
+      "rafP95Ms": 60.10000002384186,
+      "jsHeapBytes": 19300000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 5000,
+      "firstUsableMs": 670.5,
+      "rafMedianMs": 17.100000023841858,
+      "rafP95Ms": 40.5,
+      "jsHeapBytes": 18200000,
+      "resourceCount": 62,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    }
+  ]
+}

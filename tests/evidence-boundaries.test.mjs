@@ -39,6 +39,12 @@ test('unsupported source statuses reject rather than default to observation',()=
     assert.throws(()=>adaptObservation(row),/status/);
   }
 });
+test('valid hypothesis records cannot be laundered through imported observed features',()=>{
+  const changed=copy(assembly),o=changed.observations.find(o=>o.id==='m.coffer.outer_length');o.status='HYPOTHESIS';o.authority='HYPOTHESIS';
+  assert.throws(()=>importCanonicalAssembly(changed),/support|Hypothetical/);
+  const g=copy(graph),node=g.nodes.find(n=>n.id===o.id);node.authority='HYPOTHESIS';node.data=o;
+  assert.throws(()=>parseEvidenceGraph(g),/support|Hypothetical/);
+});
 test('observation value union is identical in direct, assembly, graph and checksum-valid receipt boundaries',async()=>{
   const original=await runCandidateExperiment(candidate,graph,context);
   for(const value of [true,false,[],{},undefined,NaN,Infinity]){

@@ -44,7 +44,7 @@ export interface EvidenceAssembly {
   observations:EvidenceObservation[];features:EvidenceFeature[];constraints:AssemblyConstraint[];
   audit:TransformAudit[];limitations:string[];
 }
-export interface CanonicalPoint {frameId:string;position:Vec3;featureId?:string}
+export interface CanonicalPoint {frameId:string;position:Vec3;featureId?:string;origin?:{kind:'COMPUTED_SECTION';section:SectionPlane;surfaceAuthority:'RECONSTRUCTED'}}
 export interface SpatialResult {status:'KNOWN'|'UNKNOWN';value:number|null;unit:'m'|'deg';frameId:string;reason:string;uncertainty:Uncertainty}
 /** Rendering state cannot be accepted by measurement/section/export APIs. No scale is allowed. */
 export interface PresentationPose {kind:'PRESENTATION_ONLY';objectId:string;translation:Vec3;rotationRad:Vec3;purpose:'EXPLODE'|'INSPECTION'|'FOCUS'}

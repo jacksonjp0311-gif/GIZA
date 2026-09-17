@@ -1,6 +1,6 @@
 /** Runtime trust boundary, not archaeological validation. Unknown keys are retained verbatim.
  * Failed optional documents are quarantined; their inert shape is NEVER a research result. */
-export interface RuntimeDiagnostic { url:string; status:'UNAVAILABLE'; reason:string; scope:string }
+export interface RuntimeDiagnostic { url:string; status:'LOADING'|'UNAVAILABLE'|'INVALID'; reason:string; scope:string }
 import {adaptObservation,assertSafeDocument,observationAuthority,scalar} from '../evidence/observationContract';
 type Rule = 'string'|'number'|'boolean'|'value'|'record'|{[key:string]:Rule}|Rule[];
 const S:Rule='string', N:Rule='number', B:Rule='boolean', V:Rule='value', R:Rule='record';
@@ -151,15 +151,16 @@ export function validateRuntimeDocument(url:string,value:unknown):void {
 
 export function createRuntimeLoader(diagnostics:RuntimeDiagnostic[],fetcher:typeof fetch=fetch){
   return async function getJson<T>(url:string):Promise<T>{
+    let received=false;
     try{
       const response=await fetcher(url,{signal:AbortSignal.timeout(15000)});
       if(!response.ok)throw new Error(`HTTP ${response.status}`);
-      const value:unknown=await response.json();validateRuntimeDocument(url,value);return value as T;
+      received=true;const value:unknown=await response.json();validateRuntimeDocument(url,value);return value as T;
     }catch(error){
       const reason=error instanceof Error?error.message:String(error);
       if(requiredDatasets.has(url))throw new Error(`Required dataset ${url} unavailable: ${reason}`);
       if(!runtimeContracts[url])throw error;
-      diagnostics.push({url,status:'UNAVAILABLE',reason,scope:runtimeScope(url)});
+      diagnostics.push({url,status:received?'INVALID':'UNAVAILABLE',reason,scope:runtimeScope(url)});
       return inertRuntimeShape(runtimeContracts[url]) as T;
     }
   };

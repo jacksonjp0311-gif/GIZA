@@ -57,11 +57,11 @@ test('missing optional bytes yield explicit unavailable diagnostics, never a pas
   assert.equal(diagnostics.length,2);assert.ok(diagnostics.every(d=>d.reason==='HTTP 404'));
 });
 test('invalid JSON, rejected fetches, and malformed optional schemas are quarantined',async()=>{
-  for(const fetcher of [async()=>{throw new Error('offline');},async()=>({ok:true,json:async()=>{throw new SyntaxError('invalid JSON');}}),async()=>response({records:'wrong'})]){
+  for(const [index,fetcher] of [async()=>{throw new Error('offline');},async()=>({ok:true,json:async()=>{throw new SyntaxError('invalid JSON');}}),async()=>response({records:'wrong'})].entries()){
     const diagnostics=[],get=createRuntimeLoader(diagnostics,fetcher);
     const result=await get('/model/field/uncertainty_envelopes.json');
     assert.deepEqual(result.records,[]);assert.equal(result.policy,'UNAVAILABLE');
-    assert.equal(diagnostics[0].scope,'FIELD');assert.equal(diagnostics[0].status,'UNAVAILABLE');
+    assert.equal(diagnostics[0].scope,'FIELD');assert.equal(diagnostics[0].status,index===0?'UNAVAILABLE':'INVALID');
   }
 });
 test('missing mandatory data is actionable and cannot be replaced with fabricated defaults',async()=>{
@@ -88,7 +88,7 @@ test('complete workstation loads when all optional research datasets are unavail
   const original=globalThis.fetch;
   globalThis.fetch=async url=>requiredDatasets.has(url)?response(fixture(url)):({ok:false,status:503});
   try{
-    const model=await loadModel();assert.equal(model.parts.length,56);assert.equal(model.runtimeDiagnostics.length,45);
+    const model=await loadModel({waitForOptional:true});assert.equal(model.parts.length,56);assert.equal(model.runtimeDiagnostics.length,45);
     assert.equal(model.simlab.acoustic.status,'UNAVAILABLE');assert.equal(model.maps.manifest.title,'UNAVAILABLE');
     assert.deepEqual(model.field.uncertaintyCatalog.records,[]);assert.deepEqual(model.componentResearch.observations,[]);
     assert.ok(model.runtimeDiagnostics.some(d=>d.scope==='COMPONENT'));
@@ -96,8 +96,19 @@ test('complete workstation loads when all optional research datasets are unavail
 });
 test('diagnostics do not leak between retries and healthy load retains the full research corpus',async()=>{
   const original=globalThis.fetch;globalThis.fetch=async url=>response(fixture(url));
-  try{const model=await loadModel();assert.deepEqual(model.runtimeDiagnostics,[]);assert.ok(model.findings.entries.length>30);assert.ok(model.componentResearch.photos.length>0);}
+  try{const model=await loadModel({waitForOptional:true});assert.deepEqual(model.runtimeDiagnostics,[]);assert.ok(model.findings.entries.length>30);assert.ok(model.componentResearch.photos.length>0);}
   finally{globalThis.fetch=original;}
+});
+test('core model resolves before hanging optional data and aborted subscriptions cannot replace newer state',async()=>{
+  const original=globalThis.fetch,updates=[],controller=new AbortController();let release;
+  const gate=new Promise(resolve=>{release=resolve;});
+  globalThis.fetch=async url=>{if(!requiredDatasets.has(url))await gate;return response(fixture(url));};
+  try{
+    const core=await loadModel({signal:controller.signal,onUpdate:m=>updates.push(m)});
+    assert.equal(core.parts.length,56);assert.equal(core.runtimeDiagnostics.filter(d=>d.status==='LOADING').length,45);
+    assert.equal(core.runtimeStates['/model/parts.json'],'READY');assert.equal(core.runtimeStates['/model/maps/manifest.json'],'LOADING');
+    await new Promise(r=>setTimeout(r,5));controller.abort();release();await new Promise(r=>setTimeout(r,20));assert.deepEqual(updates,[]);
+  }finally{release();globalThis.fetch=original;}
 });
 test('WebGL loss is cancelable, restoration clears status, and unmount removes listeners',()=>{
   const canvas=new EventTarget(),states=[],cleanup=watchWebGLContext(canvas,state=>states.push(state));
