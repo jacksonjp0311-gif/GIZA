@@ -1,0 +1,160 @@
+{
+  "version": "0.10.12",
+  "contract": "giza.evidence-assembly.v1",
+  "archaeological_fit_created": false,
+  "canonical_geometry_mutated": false,
+  "artifacts": [
+    {
+      "path": "public/model/evidence_assembly/validation-20260917-evolution-v1.json",
+      "sha256": "0c947fad5ee97f2a80fb7e48a57d0e58cb02714c86ef005893ee1c7f2405fd89",
+      "bytes": 4832754
+    },
+    {
+      "path": "verification/evidence-assembly/browser-validation-20260917.json",
+      "sha256": "da8bbfc2e3a7080ecfec71cd4031a3e076c7f5b05c1c8cb8deb850ad108792a6",
+      "bytes": 5032
+    },
+    {
+      "path": "docs/EVIDENCE_ASSEMBLY.md",
+      "sha256": "f635db56ef1c8e4f739ebbac0fbcbce4ebaf526006ae22027aaa85102df44a9a",
+      "bytes": 13225
+    },
+    {
+      "path": "src/evidence/types.ts",
+      "sha256": "9f31566155f3ef076bb3f4226988ef52b993f482c222f1e68184efff37afb1bd",
+      "bytes": 3449
+    },
+    {
+      "path": "src/evidence/assembly.ts",
+      "sha256": "500cef2f142d27b897a37b2bb10325e172e3f029ce0bd927f37957c9c75bf474",
+      "bytes": 24169
+    },
+    {
+      "path": "src/evidence/spatial.ts",
+      "sha256": "1cd863d2d847ab0714eaa01a66cd9ed0c7821533561762f3f832d67defee028c",
+      "bytes": 13473
+    },
+    {
+      "path": "src/evidence/authority.ts",
+      "sha256": "62924aed9a768eb484e6f35f84ed6f77d5edb96322b06a5cbb58eb2c5cec4433",
+      "bytes": 2446
+    },
+    {
+      "path": "src/evidence/graph.ts",
+      "sha256": "cf17ae8f4c543d6a5add75ee04d38c712fcb034a0b7d4754aae205747eafa6a2",
+      "bytes": 9704
+    },
+    {
+      "path": "src/evidence/intelligence.ts",
+      "sha256": "48a0ca6c6d07055a899b7ff3546bf00a6d4fe1b3b6b5448abd35c53b88c3bf6a",
+      "bytes": 10262
+    },
+    {
+      "path": "src/evidence/receipts.ts",
+      "sha256": "7f5c8661528ce4e80e8803386c0cf0769ddb4acc4b5183b79c7b12b23c3300ee",
+      "bytes": 21743
+    },
+    {
+      "path": "src/evidence/registration.ts",
+      "sha256": "9efa8cb7375f96379d6210eca9da29824f08522a1eff4f6cdd9b48e2db095a1f",
+      "bytes": 5104
+    },
+    {
+      "path": "src/evidence/presentation.ts",
+      "sha256": "e7fd16b4800424205acde3d71cfdd6e1ca91c8fccd81c3cf8267121bf007255d",
+      "bytes": 1806
+    },
+    {
+      "path": "src/evidence/viewGeometry.ts",
+      "sha256": "ac9e50f7d0d04607bc4607ab803a0c836ebf0d70ac3742b7bd3c2f48627353b5",
+      "bytes": 3302
+    },
+    {
+      "path": "src/evidence/AssemblyEntry.tsx",
+      "sha256": "2da08d4db084d50a2b3c236abf48daa858836e9065442180fa283273f77f2674",
+      "bytes": 629
+    },
+    {
+      "path": "src/evidence/AssemblyWorkbench.tsx",
+      "sha256": "41111b04245b78ace8ebbb961906d283c0a420374de656f37e7b1cf16987d308",
+      "bytes": 14001
+    },
+    {
+      "path": "src/evidence/AssemblyScene.tsx",
+      "sha256": "5bce7e78be4b7ee0331f7acdee5bef2e1ea023b3f68e8843b83236c4b4a591ec",
+      "bytes": 10091
+    },
+    {
+      "path": "src/evidence/FeaturePanel.tsx",
+      "sha256": "2ada0793429f5ed39e5f27c91eabc20a37631e737072c28a18eca90b5e380c4d",
+      "bytes": 4318
+    },
+    {
+      "path": "src/evidence/SpatialTools.tsx",
+      "sha256": "2325184c43b572c74b47a0b6d16dccca2e1317178bc60cb784d11a20cadda4a3",
+      "bytes": 7225
+    },
+    {
+      "path": "src/evidence/ComparisonPanel.tsx",
+      "sha256": "7caae7c3ba204175ee686ef37c54d443d1878b06b44ee2dba973ea5a7b0952bc",
+      "bytes": 5207
+    },
+    {
+      "path": "src/evidence/InvestigationPanel.tsx",
+      "sha256": "908c9a4fffdf7a9989f4ff4907a1928a336d78f1a9863009a304321132daaf02",
+      "bytes": 6518
+    },
+    {
+      "path": "src/evidence/UncertaintyReadout.tsx",
+      "sha256": "842362f6013d8c867ced031dd56082a3fcb00c6cdf2c7bc46116659016c0fa73",
+      "bytes": 1212
+    },
+    {
+      "path": "src/evidence/evidence.css",
+      "sha256": "cbd4fa76d5e44731ff5d2ace2e6fae8be3e3aa0e7bee589913a0c5cd544341f6",
+      "bytes": 8942
+    },
+    {
+      "path": "src/lib/runtimeData.ts",
+      "sha256": "ad04a0701ca6d958514069025ee1751a49f41c9723adf6ab2a9a1c529b847359",
+      "bytes": 19303
+    },
+    {
+      "path": "src/lib/runtimeWebGL.ts",
+      "sha256": "f0573fce4c119f15c05975ddf8ca28e79b5d1e21373801ca643e5277768634e4",
+      "bytes": 547
+    },
+    {
+      "path": "src/workstation/WorkspaceBoundary.tsx",
+      "sha256": "5057051847bd5024025e61ef24c36d92372808de0046269fc04d134fe542f6be",
+      "bytes": 3579
+    },
+    {
+      "path": "tests/evidence-assembly.test.mjs",
+      "sha256": "7bdcdf5048874782704d3646f20c5ddaf48d36bb27a5b350f8ca74d80ae2d0dc",
+      "bytes": 16112
+    },
+    {
+      "path": "tests/evidence-intelligence.test.mjs",
+      "sha256": "e8dcb2501d80c0a78cd48d446804fa39c2d78a1bcaf238e0fed7a4f640c28893",
+      "bytes": 18012
+    },
+    {
+      "path": "tests/evidence-view.test.mjs",
+      "sha256": "a7ba3b88efd1eff7dc06bb0852f4b5422d0079f915ad15cd950ec0532afd1514",
+      "bytes": 5701
+    },
+    {
+      "path": "tests/runtime-resilience.test.mjs",
+      "sha256": "a1d4766ecac7a162e9427d08633afbc8901bdf6fee262d506d294e5a7a2fc2f8",
+      "bytes": 8759
+    },
+    {
+      "path": "scripts/evidence/validate.mjs",
+      "sha256": "9d1d958e256836abaa16693eeb94598695d6ca58d283bf097ad041513dbc0b34",
+      "bytes": 7726
+    }
+  ],
+  "release_version": "0.10.12",
+  "sealed_at": "2026-09-17T20:36:54.608Z"
+}

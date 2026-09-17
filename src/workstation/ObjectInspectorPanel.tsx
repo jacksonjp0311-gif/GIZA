@@ -6,6 +6,8 @@ import type { StoneCellInfo } from '../scene/types';
 import type { InspectorTab, LayerKey } from './types';
 import type { ActiveSimulation } from '../simlab/types';
 import { uniquePhotos, type DetailContext } from '../lib/componentDetails';
+import { unavailable } from '../lib/runtimeData';
+import { UnavailableDataset } from './WorkspaceBoundary';
 
 function pretty(label: string) {
   return label.replaceAll('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -88,6 +90,9 @@ export function ObjectInspectorPanel({
   const strongestAcousticPeak = acoustic.response.peaks.reduce((best, peak) => !best || peak.screening_amplitude > best.screening_amplitude ? peak : best, acoustic.response.peaks[0]);
   const independentPercentile = acoustic.coincidence_screen.independent_null.actual_percentile_le * 100;
   const constrainedPercentile = acoustic.coincidence_screen.constraint_preserving_null.actual_percentile_le * 100;
+  const dataScope=tab==='CANON'?'EVIDENCE':tab;
+  const blockedScope=unavailable(model.runtimeDiagnostics,dataScope)?dataScope:null;
+  const surveyTie=model.field.geospatialFrame.local_frame.rotation_to_monument;
 
   return (
     <aside className="rightRail edgeRight inspectorDock">
@@ -181,7 +186,7 @@ export function ObjectInspectorPanel({
 
           {tab === 'PHOTOS' && <div className="photoEvidence">{activePhoto ? <div className="photoEvidenceMeta"><b>{activePhoto.title}</b><p>{activePhoto.caption}</p><div><span>{activePhoto.date}</span><span>{activePhoto.license}</span></div><a href={activePhoto.page_url} target="_blank" rel="noreferrer">SOURCE / RIGHTS ↗</a><small>VISUAL EVIDENCE · NO METRIC GEOMETRY WITHOUT CALIBRATION</small></div> : null}<div className="photoList">{photos.length ? photos.map((p, i) => <button key={p.id} className={i === photoIndex ? 'active' : ''} onClick={() => setPhotoIndex(i)}><b>{p.title}</b><span>{p.credit}</span></button>) : <p className="empty">No vetted reusable photos bound.</p>}</div></div>}
 
-          {tab === 'EVIDENCE' && (
+          {tab === 'EVIDENCE' && !blockedScope && (
             <div className="sourceList evidencePipeline">
               <div className="maturityCard"><span>EVIDENCE MATURITY</span><b>{selectedEvidence.maturity} · {selectedMaturity?.name ?? 'REFERENCE_ONLY'}</b><p>{selectedMaturity?.meaning ?? 'No explicit evidence receipt is bound to this object yet.'}</p></div>
               <h3>EVIDENCE RECEIPTS</h3>
@@ -193,7 +198,7 @@ export function ObjectInspectorPanel({
             </div>
           )}
 
-          {tab === 'CANON' && (
+          {tab === 'CANON' && !blockedScope && (
             <div className="canonPanel">
               {selectedStone ? <div className="canonWarning"><b>ASSUMED ANALYSIS CELL</b><p>This procedural cell has no stone-specific CANON authority. It inherits only the measured pyramid envelope. Promote it only after a mapped-stone evidence receipt exists.</p></div> : selected ? <>
                 <div className="canonSummary"><div><span>SOURCE MAP</span><b>{canonBindings.length}</b></div><div><span>CONFLICTS</span><b>{canonConflicts.length}</b></div><div><span>EVIDENCE</span><b>{selectedEvidence.maturity}</b></div></div>
@@ -208,12 +213,13 @@ export function ObjectInspectorPanel({
             </div>
           )}
 
-          {tab === 'FIELD' && (
+          {blockedScope&&<UnavailableDataset diagnostics={model.runtimeDiagnostics} scope={blockedScope}/>}
+          {tab === 'FIELD' && !blockedScope && (
             <div className="fieldPanel">
               {selectedStone ? <div className="fieldWarning"><b>FORGE CELL · NOT FIELD-MAPPED</b><p>This analysis cell has no independent world coordinate, camera observation, or mapped-stone receipt. FIELD cannot promote it until spatial evidence replaces the procedural cell.</p></div> : selected ? <>
                 <div className="fieldSummary"><div><span>GEO FRAME</span><b>{model.field.geospatialFrame.local_frame.status}</b></div><div><span>UNCERTAINTY</span><b>{selectedUncertainty?.status ?? 'UNRESOLVED'}</b></div><div><span>PHOTO VIEWS</span><b>{selectedFieldPhotos.nodes.length}</b></div><div><span>PROMOTION</span><b>{selectedPromotion?.current ?? selectedEvidence.maturity}</b></div></div>
                 <h3>WORLD REGISTRATION</h3>
-                <div className="fieldGeoCard"><div><span>WGS84 anchor</span><b>{model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}°, {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}°</b></div><div><span>Horizontal status</span><b>{model.field.geospatialFrame.reference_anchor.status}</b></div><div><span>Vertical datum</span><b>{model.field.geospatialFrame.reference_anchor.vertical_datum}</b></div><div><span>Survey tie</span><b>{model.field.geospatialFrame.local_frame.rotation_to_monument}</b></div><p>{model.field.geospatialFrame.transform.precision_rule}</p></div>
+                <div className="fieldGeoCard"><div><span>WGS84 anchor</span><b>{model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}°, {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}°</b></div><div><span>Horizontal status</span><b>{model.field.geospatialFrame.reference_anchor.status}</b></div><div><span>Vertical datum</span><b>{model.field.geospatialFrame.reference_anchor.vertical_datum}</b></div><div><span>Survey tie</span><b>{typeof surveyTie==='string'?surveyTie:`${surveyTie.status} · ${surveyTie.application}`}</b></div><p>{model.field.geospatialFrame.transform.precision_rule}</p></div>
                 <h3>3-D UNCERTAINTY</h3>
                 {selectedUncertainty ? <div className="uncertaintyCard"><b>{selectedUncertainty.maturity} · {selectedUncertainty.status}</b><p>{selectedUncertainty.render_envelope.meaning}</p>{selectedUncertainty.parameters.map(param => <div className="fieldMetric" key={`${selected.id}-${param.quantity}`}><span>{pretty(param.quantity)}</span><b>{param.value} ± {param.uncertainty} {param.unit}</b></div>)}</div> : <p className="empty">No explicit numeric uncertainty is registered. FIELD does not interpret missing uncertainty as zero.</p>}
                 <h3>PHOTO / VIEW GRAPH</h3>
@@ -231,7 +237,7 @@ export function ObjectInspectorPanel({
           )}
 
 
-          {tab === 'FINDINGS' && (
+          {tab === 'FINDINGS' && !blockedScope && (
             <div className="findingsPanel">
               <div className="findingsHero"><div><span>PERSISTENT RESEARCH MEMORY</span><b>{model.findings.entries.length}</b><small>tracked findings</small></div><p>Interesting patterns and model consequences live here so they survive chat, provider, and model changes. Every entry carries controls, a truth guard, and the next discriminating test.</p></div>
               <div className="findingsLegend"><span>PATTERN WATCH</span><span>MODEL CONSEQUENCE</span><span>RESEARCH PRIORITY</span></div>
@@ -239,14 +245,14 @@ export function ObjectInspectorPanel({
                 <header><div><span>{item.domain}</span><h3>{item.title}</h3></div><b>{item.status.replaceAll('_',' ')}</b></header>
                 <p>{item.summary}</p>
                 <div className="findingWhy"><strong>WHY IT MATTERS</strong><p>{item.why_interesting}</p></div>
-                <div className="findingMeta"><span>Priority <b>{item.priority}</b></span><span>Truth <b>{item.truth_class}</b></span><span>Updated <b>v{item.updated_version}</b></span></div>
+                <div className="findingMeta"><span>Priority <b>{item.priority}</b></span><span>Truth <b>{item.truth_class}</b></span><span>Updated <b>v{item.updated_version??item.last_updated_version}</b></span></div>
                 <details><summary>Controls, next test & guard</summary><p><b>Controls:</b> {item.controls.join(' · ')}</p><p><b>Next:</b> {item.next_test}</p><p><b>Guard:</b> {item.guard}</p></details>
               </article>)}
               <div className="findingsFooter"><b>REGISTRY RULE</b><p>{model.findings.purpose}</p><small>Last reviewed with software v{model.findings.last_reviewed_version}</small></div>
             </div>
           )}
 
-          {tab === 'SIMULATION' && (
+          {tab === 'SIMULATION' && !blockedScope && (
             <div className="simulationPanel echoPanel">
               <div className="simGuard"><b>PREDICTION · NOT OBSERVATION</b><p>{model.simlab.manifest.truth_invariant}</p></div>
 

@@ -1,5 +1,6 @@
 import type { ModelBundle } from '../lib/model';
 import { GIZA_DISPLAY_VERSION } from '../version';
+import { unavailable } from '../lib/runtimeData';
 
 export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / PYRAMID CORE',sphinx=false}: {
   sphinx?:boolean;
@@ -20,7 +21,7 @@ export function WorkstationHeader({model,surface,onSurface,modelTitle='KHAFRE / 
     <div className="modelIdentity" title="CINEMATIC SPATIAL REVERSE-ENGINEERING WORKSTATION">
       <small>GIZA <em>NEXUS</em> · v{GIZA_DISPLAY_VERSION}</small>
       <h1 aria-live="polite" title={modelTitle}>{surface==='MODEL'?modelTitle:surface==='ATLAS'?'GIZA / MAP ATLAS':'GIZA / REGISTRATION'}</h1>
-      {sphinx?<span>GIZA, EGYPT · LOCAL STUDY FRAME · ILLUSTRATIVE EXTERIOR</span>:<span>GIZA, EGYPT · {model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}° N · {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}° E · c. 2570 BCE</span>}
+      {sphinx?<span>GIZA, EGYPT · LOCAL STUDY FRAME · ILLUSTRATIVE EXTERIOR</span>:unavailable(model.runtimeDiagnostics,'FIELD')?<span>GIZA, EGYPT · FIELD REFERENCE UNAVAILABLE</span>:<span>GIZA, EGYPT · {model.field.geospatialFrame.reference_anchor.latitude_deg.toFixed(6)}° N · {model.field.geospatialFrame.reference_anchor.longitude_deg.toFixed(6)}° E · c. 2570 BCE</span>}
     </div>
     </div>
     <nav className="surfaceSwitch" aria-label="Viewport surface">

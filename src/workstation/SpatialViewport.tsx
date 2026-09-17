@@ -5,13 +5,16 @@ import type { UncertaintyRecord } from '../lib/field';
 import type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/types';
 import type { ActiveSimulation } from '../simlab/types';
 import type { QuickViewItem } from './types';
-import { MapAtlasPanel } from '../maps/MapAtlasPanel';
+import { ComponentWorkbench, MapAtlasPanel } from './OptionalWorkspaces';
+import { WorkspaceBoundary } from './WorkspaceBoundary';
+import { unavailable } from '../lib/runtimeData';
 import type { AtlasMapId } from '../maps/types';
-import { ComponentWorkbench } from './ComponentWorkbench';
 import type { DetailContext } from '../lib/componentDetails';
 import { DimensionReadout } from './DimensionReadout';
 import { INTERIOR_SCOPES, interiorParts, type InteriorScope } from '../lib/interiorInspection';
 import { InscriptionLauncher } from '../epigraphy/InscriptionLauncher';
+import { DEFAULT_REALITY_LAYERS, legacyObjectAuthority, objectVisibleInRealityLayer, type RealityLayers } from '../evidence/authority';
+import { RealityControls } from './RealityControls';
 
 export function SpatialViewport({
   model, parts, selectedId, selectedStone, explode, setExplode, mode, sectionAxis, sectionPos, viewPreset, cameraRevision,
@@ -54,47 +57,49 @@ export function SpatialViewport({
   onAtlasFocus: (id:AtlasMapId) => void;
 }) {
   const [expanded,setExpanded]=useState(false);
+  const [reality,setReality]=useState<RealityLayers>({...DEFAULT_REALITY_LAYERS});
   const [inspection,setInspection]=useState(false),[scope,setScope]=useState<InteriorScope>('ALL'),[fitRevision,setFitRevision]=useState(0);
-  const visibleParts=useMemo(()=>inspection?interiorParts(model.parts,scope):parts,[model,parts,inspection,scope]);
+  const visibleParts=useMemo(()=>(inspection?interiorParts(model.parts,scope):parts).filter(part=>objectVisibleInRealityLayer(legacyObjectAuthority(part),reality)),[model,parts,inspection,scope,reality]);
   const inspect=(value:boolean)=>{setInspection(value);setExplode(0);onSelectPart(null);setFitRevision(v=>v+1);};
   useEffect(()=>{const exit=(e:KeyboardEvent)=>{if(e.key==='Escape')setExpanded(false);};window.addEventListener('keydown',exit);return()=>window.removeEventListener('keydown',exit);},[]);
   const detailPart=detail?model.parts.find(p=>p.id===detail.id):null;
+  const simulationAvailable=!unavailable(model.runtimeDiagnostics,'SIMULATION');
 
   return (
     <section className={`sceneShell edgeSceneShell${expanded?' viewerExpanded':''}`}>
       <div className="sceneWrap edgeScene">
 
         {surface === 'MODEL' && detailPart && detail ? <ComponentWorkbench key={detail.id+':'+detail.revision} model={model} part={detailPart} initialContext={detail.context} dimensions={showDimensions} setDimensions={setShowDimensions} onClose={()=>{setInspection(false);onCloseDetail();}} onOpen={onOpenDetail} onSelect={id=>onSelectPart(id)}/> : surface === 'MODEL' ? <>
-        <GizaScene
+        <WorkspaceBoundary name="3-D model"><GizaScene
           animationSpeed={animationSpeed}
           parts={visibleParts}
           inspection={inspection}
           stoneField={model.stoneField}
-          showStoneField={showStoneField&&!inspection}
+          showStoneField={showStoneField&&!inspection&&reality.HYPOTHESIS}
           explode={explode}
           selectedId={selectedId}
-          selectedStone={selectedStone}
+          selectedStone={reality.HYPOTHESIS?selectedStone:null}
           viewPreset={viewPreset}
           cameraRevision={cameraRevision+fitRevision}
-          showUnverified={showUnverified&&!inspection}
+          showUnverified={showUnverified&&!inspection&&reality.HYPOTHESIS}
           mode={xray ? 'ENGINEER' : mode}
           sectionAxis={inspection?'OFF':sectionAxis}
           sectionPos={sectionPos}
           xray={xray&&!inspection}
           showLabels={showLabels}
-          showFieldFrame={showFieldFrame&&!inspection}
+          showFieldFrame={showFieldFrame&&!inspection&&reality.RECONSTRUCTED}
           uncertainty={uncertainty}
-          simulationVisible={showSimulation&&!inspection}
+          simulationVisible={showSimulation&&!inspection&&simulationAvailable&&reality.HYPOTHESIS}
           activeSimulation={activeSimulation}
           gravityResult={model.simlab.gravity}
           acousticResult={model.simlab.acoustic}
           strataResult={model.simlab.strata}
           onSelect={onSelectPart}
           onSelectStone={onSelectStone}
-        />
+        /></WorkspaceBoundary>
 
-        <div className="interiorControls"><button aria-pressed={inspection} onClick={()=>inspect(!inspection)}>{inspection?'Restore shell':'Remove shell / inspect inside'}</button>{inspection&&<><select aria-label="Internal system" value={scope} onChange={e=>{setScope(e.target.value as InteriorScope);setExplode(0);onSelectPart(null);}}>{INTERIOR_SCOPES.map(s=><option key={s.id} value={s.id}>{s.label}</option>)}</select><button onClick={()=>setFitRevision(v=>v+1)}>Fit interior</button><button disabled={!visibleParts.some(p=>p.id===selectedId)} onClick={()=>selectedId&&onOpenDetail(selectedId,'OBJECT')}>Isolate selected object</button><small>{visibleParts.length} source-linked reconstructions · envelopes, not a scan. Speculative structures excluded.</small></>}</div>
-        <div className="sceneModePill">{inspection?'INTERNAL SYSTEM':viewPreset} · {explode > 0.5 ? 'EXPLODED' : 'ASSEMBLED'}{showSimulation&&!inspection ? (activeSimulation === 'ACOUSTICS' ? ` · ECHO ${model.simlab.acoustic.selected_visualization.frequency_hz.toFixed(2)} Hz MODE` : activeSimulation === 'STRATA' ? ` · STRATA ${model.simlab.strata.geomechanics.shaft_bottom.vertical_overburden_proxy_mpa.toFixed(1)} MPa @ 648 m` : ` · GRAVITY ${model.simlab.gravity.summary.max_magnitude_microgal.toFixed(1)} µGal PEAK`) : ''}</div>
+        <div className="interiorControls"><button aria-pressed={inspection} onClick={()=>inspect(!inspection)}>{inspection?'Restore shell':'Remove shell / inspect inside'}</button><RealityControls layers={reality} onChange={value=>{setReality(value);onSelectPart(null);}} showUnverified={showUnverified}/>{inspection&&<><select aria-label="Internal system" value={scope} onChange={e=>{setScope(e.target.value as InteriorScope);setExplode(0);onSelectPart(null);}}>{INTERIOR_SCOPES.map(s=><option key={s.id} value={s.id}>{s.label}</option>)}</select><button onClick={()=>setFitRevision(v=>v+1)}>Fit interior</button><button disabled={!visibleParts.some(p=>p.id===selectedId)} onClick={()=>selectedId&&onOpenDetail(selectedId,'OBJECT')}>Isolate selected object</button><small>{visibleParts.length} source-linked reconstructions · envelopes, not a scan. Speculative structures excluded.</small></>}</div>
+        <div className="sceneModePill">{inspection?'INTERNAL SYSTEM':viewPreset} · {explode > 0.5 ? 'EXPLODED' : 'ASSEMBLED'}{showSimulation&&!inspection ? (!simulationAvailable?' · SIMULATION UNAVAILABLE':!reality.HYPOTHESIS?' · SIMULATION HIDDEN BY HYPOTHESIS LAYER':activeSimulation === 'ACOUSTICS' ? ` · HYPOTHESIS · ECHO ${model.simlab.acoustic.selected_visualization.frequency_hz.toFixed(2)} Hz MODE` : activeSimulation === 'STRATA' ? ` · HYPOTHESIS · STRATA ${model.simlab.strata.geomechanics.shaft_bottom.vertical_overburden_proxy_mpa.toFixed(1)} MPa @ 648 m` : ` · HYPOTHESIS · GRAVITY ${model.simlab.gravity.summary.max_magnitude_microgal.toFixed(1)} µGal PEAK`) : ''}</div>
         {showDimensions&&<DimensionReadout part={parts.find(p=>p.id===selectedId)}/>}
         <div className="viewportExplodeControl">
           <div><span>EXPLOSION DISTANCE</span><b>{Math.round(explode * 100)}%</b></div>

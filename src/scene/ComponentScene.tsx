@@ -7,6 +7,7 @@ import type { ModelBundle, Part } from '../lib/model';
 import { burialDimensions, detailParts, isBurialDetail, type DetailContext } from '../lib/componentDetails';
 import { BurialDetail, LowerChamberDetail } from './DetailGeometry';
 import { MonumentLayer } from './MonumentLayer';
+import { WebGLRecovery } from '../workstation/WorkspaceBoundary';
 
 type V3=[number,number,number];
 function DetailCamera({target,radius,revision,top}:{target:V3;radius:number;revision:number;top:boolean}) {
@@ -65,6 +66,7 @@ export function ComponentScene({model,part,context,lidLift,dimensions,roof,surve
   return <Canvas className="componentCanvas" dpr={[1,1.75]} gl={{antialias:true,alpha:false}} camera={{fov:42,near:.01,far:3000,up:[0,0,1]}}
     onCreated={({camera})=>{camera.up.set(0,0,1);}}>
     <color attach="background" args={['#080e11']}/>
+    <WebGLRecovery/>
     <ambientLight intensity={1.25}/>
     <hemisphereLight args={['#fff1cf','#4d4135',1.6]}/>
     <directionalLight position={[12,-14,18]} intensity={2.4} color="#ffedc8"/>

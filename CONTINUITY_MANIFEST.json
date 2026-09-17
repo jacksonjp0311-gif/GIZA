@@ -1,32 +1,32 @@
 {
   "version": "0.10.12",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-17T16:55:51.241Z",
+  "sealed_at": "2026-09-17T20:36:54.608Z",
   "required_handoff_files": [
     {
       "path": "README.md",
-      "sha256": "22127bf8d7764e787b027c4a5c1cfd4e61bbe3b60ec19a2d46a0015935feb0f4",
-      "bytes": 8744
+      "sha256": "4e3fd16b49ee4307aee0ffe7aaf879109f6c39c8923002b31cbfaefb1200ba21",
+      "bytes": 10217
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "766a821d6b97e5aaa4e538ab811f8f3d2d91ed02cca83d46ca833792aec0b508",
-      "bytes": 18012
+      "sha256": "28aacc20df432496db5353f86f26587318edff1761b3fd88ed996f9eee4603f2",
+      "bytes": 19769
     },
     {
       "path": "GIZA.json",
-      "sha256": "e9664c4a17c6fbc03d408bde562d20c7f49634306a211dffad3d60ee7405c0f0",
-      "bytes": 1604
+      "sha256": "a345f5f25d1b6df1038115bbf4b1bf5246eb09d970d73cf7f2b8381e1019ee1f",
+      "bytes": 1970
     },
     {
       "path": "CONTINUITY.json",
-      "sha256": "6524a338e1fdeaaae0063881635f119ce824c5eae5460d1ed9ca24df8a657b50",
-      "bytes": 24481
+      "sha256": "9c72176d7217597343e029be4886c7803afa4024d07aff8383c29a93bdf8727c",
+      "bytes": 27006
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "abcc0dd8ef4f4b12ca90d2995c787496506aeb1e302fe5ab4cb1ca1bf06784a9",
-      "bytes": 31442
+      "sha256": "484953943d298de3028760d1791b8394b687d993c8a0c033558af88c18f73323",
+      "bytes": 35761
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -165,7 +165,7 @@
     },
     {
       "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
-      "sha256": "0c1d728a25300fb3090ad6152639593f200fd6d06958cc3882cd52b07856a20f",
+      "sha256": "49849ee48f6edf36b20bcaca05af5d682eb464d0e8f0893c65ed2033c27630c1",
       "bytes": 3255
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
-      "sha256": "d9ad8dff431f6c663fd75ef0aeaeed81520543c02cff16c9f9224f30a1a95731",
+      "sha256": "4e59c9c699c5301da3b4822cf665e03ce161aefcb5df20271738cbb227b80c51",
       "bytes": 2050
     },
     {
@@ -250,7 +250,7 @@
     },
     {
       "path": "RITUAL_MAP_MANIFEST.json",
-      "sha256": "2e4d5eb30a5c8573795c70f4e130a6f9757bce3a6b04a97f3163ddb91191077e",
+      "sha256": "7e4607b73365ff58b9e7b61c4badc7e30b8eca2cc37433477f345fd7df4a6a78",
       "bytes": 4033
     },
     {
@@ -280,7 +280,7 @@
     },
     {
       "path": "SOURCE_PARSER_MANIFEST.json",
-      "sha256": "7aa7c7950728f843ee43d8b64213fb1953137987e59e711657e344c18cd9f20a",
+      "sha256": "2e03783b97ed5db2cbacbb2e1896aeda13945059149ee62db3a1669ad63460d6",
       "bytes": 1990
     },
     {
@@ -315,7 +315,7 @@
     },
     {
       "path": "ACTION_GRAPH_MANIFEST.json",
-      "sha256": "fec673dacb5a5949814046e4e549b2e4f99b0b23e61ac6179b32523dca3ecdf4",
+      "sha256": "ab78323cf8eef152666f0b78bc5177340cbb766c338257734d551023561b4fb9",
       "bytes": 1961
     },
     {
@@ -330,12 +330,12 @@
     },
     {
       "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
-      "sha256": "d9e7797f694665de9ae89f8fdc05172b7c891294119f62f0dd84d5d9cb4729bf",
+      "sha256": "4dc22af70de48775a6e6e85b25f023a5fab392958cf675305a594dab7079d423",
       "bytes": 1519
     },
     {
       "path": "ROOM_GRAPH_MANIFEST.json",
-      "sha256": "40b0986d1db3c2098fbdfd1c66eb5ecbd86acc8f76dca4f4c94e6d3e4d9b3f35",
+      "sha256": "b70b0bf81b63e3772b52319ad88d36c3d60df6905115b22fd31d5008c999b91a",
       "bytes": 2131
     },
     {
@@ -410,7 +410,7 @@
     },
     {
       "path": "PLAN_CONCORDANCE_MANIFEST.json",
-      "sha256": "dee7de0cbd540057df7aeea2e36b0b89651f18df87d66168123f17cd8f36d536",
+      "sha256": "0728cd4f590f84ad338fb0fcd9f38671b671d9d6b3159dc758eae4661a0ce012",
       "bytes": 1630
     },
     {
@@ -445,7 +445,7 @@
     },
     {
       "path": "VISIBILITY_LAB_MANIFEST.json",
-      "sha256": "82ba76237c840c66551ac682419028d42a45dc76b0f2be8ab7b4d91d249f44c7",
+      "sha256": "d826b9b106e1dfb8e4bdd671ff36be83ad667b1fb41fe7b9d2a0ccc00b9ff174",
       "bytes": 2132
     },
     {
@@ -480,7 +480,7 @@
     },
     {
       "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
-      "sha256": "4d5309cc0bd3f09d94e5afa5f7833b28a651068aa6f422ddb1ad49ce7b67629b",
+      "sha256": "9b0bec661c67c349b1fdb4c92d6988aab83f798367d9c46a3eab44b1b470dc85",
       "bytes": 3272
     },
     {
@@ -525,7 +525,7 @@
     },
     {
       "path": "METRIC_VIEW_LAB_MANIFEST.json",
-      "sha256": "674ab47ac158e020dff6b215948b3d7a5fa3bf57bd9089a1151ffe33d07ce47b",
+      "sha256": "92b65baf8fec807c6a315ae9bb00432946ba204d7f5e3ba0b3f380e110b3da0f",
       "bytes": 2163
     },
     {
@@ -575,7 +575,7 @@
     },
     {
       "path": "PLATE_REGISTRATION_MANIFEST.json",
-      "sha256": "10ca3e40980756af7e12c28068fd2787af944f78eef5158d16b6788160b324d0",
+      "sha256": "030b9d19a29ddf8ea341013031db005e670f5eecdf2d819bc05e2b6e1cd6be7b",
       "bytes": 5030
     },
     {
@@ -685,8 +685,43 @@
     },
     {
       "path": "WORKBENCH_MANIFEST.json",
-      "sha256": "cc0d667a686d2aafff5b7d1720d9c31fd072d5e2500ad5fe320a39ceb5ef7d81",
+      "sha256": "f94012aa547aefe89e1bee9b5bfdd060e73c3fd44f0bc154135276c9163f526d",
       "bytes": 2292
+    },
+    {
+      "path": "docs/EVIDENCE_ASSEMBLY.md",
+      "sha256": "f635db56ef1c8e4f739ebbac0fbcbce4ebaf526006ae22027aaa85102df44a9a",
+      "bytes": 13225
+    },
+    {
+      "path": "EVIDENCE_ASSEMBLY_MANIFEST.json",
+      "sha256": "df477b33236fd6e08c6f4ee1b9be5cc8e0268907c96de8b9a8a99e66e591f949",
+      "bytes": 5230
+    },
+    {
+      "path": "src/evidence/types.ts",
+      "sha256": "9f31566155f3ef076bb3f4226988ef52b993f482c222f1e68184efff37afb1bd",
+      "bytes": 3449
+    },
+    {
+      "path": "src/evidence/assembly.ts",
+      "sha256": "500cef2f142d27b897a37b2bb10325e172e3f029ce0bd927f37957c9c75bf474",
+      "bytes": 24169
+    },
+    {
+      "path": "src/evidence/spatial.ts",
+      "sha256": "1cd863d2d847ab0714eaa01a66cd9ed0c7821533561762f3f832d67defee028c",
+      "bytes": 13473
+    },
+    {
+      "path": "src/evidence/graph.ts",
+      "sha256": "cf17ae8f4c543d6a5add75ee04d38c712fcb034a0b7d4754aae205747eafa6a2",
+      "bytes": 9704
+    },
+    {
+      "path": "src/evidence/receipts.ts",
+      "sha256": "7f5c8661528ce4e80e8803386c0cf0769ddb4acc4b5183b79c7b12b23c3300ee",
+      "bytes": 21743
     }
   ]
 }

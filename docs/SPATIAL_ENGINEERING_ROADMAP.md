@@ -1,4 +1,7 @@
 # GIZA — repository audit and spatial engineering roadmap
+
+Current handoff note (2026-09-17): the audit below is preserved as a historical snapshot, including its then-private repository status and then-unimplemented recommendations. The model-first navigation, usability work and first governed sarcophagus assembly have since evolved. See `EVIDENCE_ASSEMBLY.md` and the newest `VALIDATION.md` section; do not interpret this snapshot as an instruction to undo current implementation.
+
 Date: 2026-09-17
 Repository: https://github.com/jacksonjp0311-gif/GIZA (private, main)
 Scope: source/data inspection, existing automated checks, publishing/clone integrity. This is an engineering audit, not an archaeological survey. Recommendations below have not been implemented.
@@ -152,4 +155,3 @@ Counts below are UI-bound media references (photos **and drawings**, deduplicate
 The user authorized creation/push on 2026-09-17. Repository visibility is private; default branch is main. Git identity uses the authenticated account's noreply address. Credential-pattern and sensitive-filename scans found no matches requiring exclusion; these scans are not a formal security audit. node_modules, dist, local vault bytes and environment/credential files are excluded. Historical verification logs are intentionally tracked because release manifests reference them. .gitattributes disables automatic line-ending conversion to preserve checksum-bound evidence.
 
 Current automated checks include TypeScript, inherited model/evidence validators, 25 registration regression tests and 10 component tests. Release integrity verification checks all current manifest hashes. Historical verification files have not been relabeled as new results.
-

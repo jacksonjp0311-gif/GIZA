@@ -13,6 +13,9 @@ import type { ActiveSimulation } from './simlab/types';
 import type { AtlasMapId } from './maps/types';
 import type { DetailContext } from './lib/componentDetails';
 import { SphinxWorkbench } from './sphinx/SphinxEntry';
+import { AssemblyEntry } from './evidence/AssemblyEntry';
+import { DataHealthNotice } from './workstation/WorkspaceBoundary';
+import { quickViewDefinitions } from './workstation/quickViewDefinitions';
 
 function isInternal(part: Part) {
   return part.id.startsWith('part.upper.') || part.id.startsWith('part.lower.') || part.id.startsWith('part.burial.') || part.id.startsWith('part.sarcophagus.');
@@ -20,6 +23,7 @@ function isInternal(part: Part) {
 
 export default function App() {
   const [sphinx,setSphinx]=useState<boolean|'stela'>(false);
+  const [evidenceAssembly,setEvidenceAssembly]=useState<string|null>(null);
   const [workspaceRevision,setWorkspaceRevision]=useState(0);
   const [model, setModel] = useState<ModelBundle | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -46,6 +50,10 @@ export default function App() {
   const [activeQuickView,setActiveQuickView]=useState<string|null>('Full Pyramid');
   const openDetail = useCallback((id:string, context:DetailContext='ROOM') => {
     setSphinx(false);
+    if(['part.sarcophagus.body','part.sarcophagus.lid','part.burial.chamber'].includes(id)){
+      setEvidenceAssembly(id);setSelectedId(id);setSurface('MODEL');return;
+    }
+    setEvidenceAssembly(null);
     setActiveQuickView(null);
     setDetail(v=>({id,context,revision:(v?.revision??0)+1}));
     setSelectedId(id);setSelectedStone(null);setTab('OVERVIEW');setSurface('MODEL');
@@ -70,6 +78,7 @@ export default function App() {
   const resetWorkspace = () => {
     setWorkspaceRevision(v=>v+1);
     setSphinx(false);
+    setEvidenceAssembly(null);
     setSurface('MODEL');setFilter('');
     setActiveQuickView('Full Pyramid');
     setDetail(null);
@@ -90,7 +99,7 @@ export default function App() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if(document.querySelector('[data-sphinx-workbench], [data-epigraphy]'))return;
+      if(document.querySelector('[data-sphinx-workbench], [data-epigraphy], [data-evidence-workbench]'))return;
       if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();document.getElementById('component-search')?.focus();return;}
       if(event.ctrlKey||event.metaKey||event.altKey)return;
       const tag = (event.target as HTMLElement | null)?.tagName;
@@ -159,22 +168,7 @@ export default function App() {
 
   const quickViews = useMemo<QuickViewItem[]>(() => {
     if (!model) return [];
-    const defs = [
-      { label:'Sphinx',id:'preview.sphinx',action:()=>setSphinx(true) },
-      { label: 'Full Pyramid', id: 'part.pyramid.khafre', action: () => { setExplode(0); setSectionAxis('OFF'); activateView('PERSPECTIVE'); selectPart('part.pyramid.khafre'); } },
-      { label: 'Exploded', id: 'part.pyramid.khafre', action: () => { setExplode(1.75); activateView('PERSPECTIVE'); selectPart('part.pyramid.khafre'); } },
-      { label: 'Interior', id: 'part.burial.chamber', action: () => openDetail('part.burial.chamber') },
-      { label: 'Underground', id: 'part.shaft.alpha.1', action: () => { setLayers(l => ({ ...l, subsurface: true })); setExplode(0.56); activateView('UNDERGROUND'); selectPart('part.shaft.alpha.1'); } },
-      { label: 'Cross Section', id: 'part.burial.chamber', action: () => { setSectionAxis('Y'); setSectionPos(0); activateView('SECTION'); selectPart('part.burial.chamber'); } },
-      { label: 'Burial Chamber', id: 'part.burial.chamber', action: () => openDetail('part.burial.chamber') },
-      { label: 'Sarcophagus', id: 'part.sarcophagus.body', action: () => openDetail('part.sarcophagus.body') },
-      { label: 'Lower Chamber', id: 'part.lower.chamber', action: () => openDetail('part.lower.chamber') },
-      { label: 'Sarcophagus Lid', id: 'part.sarcophagus.lid', action: () => openDetail('part.sarcophagus.lid','OBJECT') },
-      { label: 'Roof & Chamber', id: 'part.burial.gable_envelope', action: () => openDetail('part.burial.gable_envelope') },
-      { label: 'Upper Passage', id: 'part.upper.entrance.existing', action: () => openDetail('part.upper.entrance.existing','OBJECT') },
-      { label: 'Portcullis', id: 'part.upper.portcullis.slab', action: () => openDetail('part.upper.portcullis.slab','OBJECT') },
-      { label: 'Plateau View', id: 'part.plateau.reference', action: () => { setLayers(l => ({ ...l, terrain: true })); activateView('TOP'); selectPart('part.plateau.reference'); } },
-    ];
+    const defs = quickViewDefinitions({setSphinx,setExplode,setSectionAxis,setSectionPos,activateView,selectPart,openDetail,setLayers});
     return defs.map(def => ({
       ...def,
       part: model.parts.find(p => p.id === def.id),
@@ -189,13 +183,15 @@ export default function App() {
     <div className="app nexusEdge">
       <WorkstationHeader
         sphinx={!!sphinx}
-        modelTitle={sphinx?'GIZA / THE GREAT SPHINX':activeQuickView ? `KHAFRE / ${activeQuickView.toUpperCase()}` : model.parts.find(p=>p.id===detail?.id)?.name ?? 'KHAFRE / PYRAMID CORE'}
+        modelTitle={evidenceAssembly?'KHAFRE / EVIDENCE ASSEMBLY':sphinx?'GIZA / THE GREAT SPHINX':activeQuickView ? `KHAFRE / ${activeQuickView.toUpperCase()}` : model.parts.find(p=>p.id===detail?.id)?.name ?? 'KHAFRE / PYRAMID CORE'}
         model={model}
         surface={surface}
-        onSurface={v=>{setSurface(v);if(v!=='MODEL')setSphinx(false);}}
+        onSurface={v=>{setSurface(v);if(v!=='MODEL'){setSphinx(false);setEvidenceAssembly(null);}}}
       />
 
-      {sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className="workspace edgeWorkspace">
+      <DataHealthNotice diagnostics={model.runtimeDiagnostics}/>
+
+      {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>setEvidenceAssembly(null)} onLegacy={()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);}}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className="workspace edgeWorkspace">
         <LeftRail
           onOpenSphinx={()=>setSphinx(true)}
           parts={model.parts}
@@ -274,6 +270,7 @@ export default function App() {
           onSelectPart={id => selectPart(id)}
         />
       </main>}
+
 
       <WorkstationFooter keyStructures={sphinx?10:model.parts.length} sphinx={!!sphinx}/>
     </div>

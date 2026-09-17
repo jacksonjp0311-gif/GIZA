@@ -58,5 +58,14 @@
     "REGISTRATION_WORKBENCH",
     "ADVERSARIAL_REGRESSION"
   ],
-  "revision": "REGISTRATION_REPAIR_001"
+  "revision": "REGISTRATION_REPAIR_001",
+  "evidence_assembly": {
+    "contract": "giza.evidence-assembly.v1",
+    "target": "assembly.khafre.sarcophagus",
+    "status": "SOURCE_DIMENSION_CONSTRAINED_RECONSTRUCTION",
+    "documentation": "docs/EVIDENCE_ASSEMBLY.md",
+    "archaeological_registration_created": false,
+    "canonical_geometry_mutated": false,
+    "root_release_identity_preserved": true
+  }
 }

@@ -64,7 +64,7 @@ function StoneFieldMesh({ field, explode, visible, selectedStoneId, sectionAxis,
   };
 
   return (
-    <instancedMesh ref={ref} args={[undefined, undefined, cells.length]} castShadow={false} receiveShadow onClick={handleClick} frustumCulled>
+    <instancedMesh ref={ref} args={[undefined, undefined, cells.length]} userData={{authority:'HYPOTHESIS',geometryAuthority:'PROCEDURAL_ANALYSIS_CELLS',coordinateFrame:'frame.khafre.monument.legacy',surfaceSurvey:'NOT_ESTABLISHED',presentationOnly:true}} castShadow={false} receiveShadow onClick={handleClick} frustumCulled>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial vertexColors roughness={0.84} metalness={0.01} emissive="#9a7240" emissiveIntensity={0.34} clippingPlanes={clip} />
     </instancedMesh>
@@ -89,6 +89,8 @@ export function MasonryLayer({ field, explode, visible, selectedStone, sectionAx
   field: StoneField; explode: number; visible: boolean; selectedStone: StoneCellInfo | null;
   sectionAxis: SectionAxis; sectionPos: number; onSelectStone: (cell: StoneCellInfo) => void;
 }) {
+  // Hidden hypothesis cells need neither instanced allocations nor a surviving selection outline.
+  if (!visible) return null;
   return <>
     <StoneFieldMesh
       field={field}

@@ -3,6 +3,7 @@ dist/
 .vite/
 *.log
 !verification/*.log
+!verification/**/*.log
 .env
 .env.*
 !.env.example

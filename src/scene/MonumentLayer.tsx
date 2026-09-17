@@ -2,19 +2,14 @@ import { Suspense, useMemo } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { Edges, Html } from '@react-three/drei';
 import { STLLoader } from 'three-stdlib';
-import type { Part, ProvenanceClass } from '../lib/model';
+import type { Part } from '../lib/model';
+import { legacyObjectAuthority } from '../evidence/authority';
 import { clippingPlanes, normalizeVector } from './geometry';
 import type { SectionAxis, UiMode } from './types';
 
-const PROVENANCE: Record<ProvenanceClass, string> = {
-  SOURCE: '#61e6a8', MEASURED: '#61e6a8', VALIDATED: '#61e6a8',
-  DERIVED: '#75a7ff', GENERATED: '#aeb7c2', SIMULATED: '#b38cff',
-  ASSUMED: '#e0a22f', UNVERIFIED: '#e45a47', USER_LOCKED: '#d8edf7',
-};
-
 function partColor(part: Part, selected: boolean, mode: UiMode) {
   if (selected) return '#ffe3a3';
-  if (part.provenance.class === 'UNVERIFIED') return '#ad796b';
+  if (legacyObjectAuthority(part).authority === 'HYPOTHESIS') return '#b48acc';
   if (mode === 'DISCOVER') {
     if (part.id.includes('pyramid')) return '#d8bd7b';
     if (part.id.includes('sarcophagus')) return '#a96f58';
@@ -30,7 +25,8 @@ function partColor(part: Part, selected: boolean, mode: UiMode) {
     if (part.id.includes('plateau')) return '#696659';
     return '#c9ad78';
   }
-  return PROVENANCE[part.provenance.class] ?? '#96a0aa';
+  // Measured dimensions do not make an idealized display envelope an observed surface.
+  return '#c6a273';
 }
 
 function Stl({ url, color, opacity, clip }: { url: string; color: string; opacity: number; clip: ReturnType<typeof clippingPlanes> }) {
@@ -70,7 +66,7 @@ function PartMesh({
   const clip = clippingPlanes(sectionAxis, sectionPos);
 
   return (
-    <group position={position} rotation={part.spatial.rpy_rad} onClick={e => { e.stopPropagation(); onSelect(part.id); }}>
+    <group position={position} rotation={part.spatial.rpy_rad} userData={{evidenceObject:legacyObjectAuthority(part),presentationOnly:true,explosion:explode}} onClick={e => { e.stopPropagation(); onSelect(part.id); }}>
       {stl ? (
         <Suspense fallback={<Html center><span className="loader">mesh…</span></Html>}>
           <Stl url={stl} color={color} opacity={opacity} clip={clip} />
@@ -88,7 +84,7 @@ function PartMesh({
           <Edges threshold={30} color={selected ? '#ffe8b1' : '#5b4930'} />
         </mesh>
       )}
-      {selected && showLabels && <Html center position={[0, 0, 5]}><div className="objectTag">{part.name}</div></Html>}
+      {selected && showLabels && <Html center position={[0, 0, 5]}><div className="objectTag">{part.name} · {legacyObjectAuthority(part).authority}</div></Html>}
     </group>
   );
 }

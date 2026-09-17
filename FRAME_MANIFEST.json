@@ -25,13 +25,13 @@
     },
     {
       "path": "src/scene/MasonryLayer.tsx",
-      "bytes": 4859,
-      "sha256": "6959e864bbeeab5f1be07b23a4180a8de5d05dcb3e1aab00922f288030f11c47"
+      "bytes": 5170,
+      "sha256": "ec255e8cd321ff5d690b914151dfa156c3a14444ad002a20c007278a16538621"
     },
     {
       "path": "src/scene/MonumentLayer.tsx",
-      "bytes": 5642,
-      "sha256": "e13ab18f57f5afa069b166e0bf1bb02342aabeb97eac1ced7cf3d528310a75f2"
+      "bytes": 5637,
+      "sha256": "1404c8b96a4c752b86143e29cb3e83f31a709360547554bbf05f926dd46f2fe4"
     },
     {
       "path": "src/scene/SimulationLayer.tsx",
@@ -55,13 +55,13 @@
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
-      "bytes": 36420,
-      "sha256": "98393fe13e56dc76748b87067712851d2f14c143a72151790477c52bf6167a62"
+      "bytes": 36988,
+      "sha256": "e2b36edac82f7b53a913c756aa98baeb6ce008b0f1ea28b8381c41a9e92f33ae"
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "bytes": 8174,
-      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b"
+      "bytes": 9148,
+      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894"
     },
     {
       "path": "src/workstation/WorkstationFooter.tsx",
@@ -70,13 +70,13 @@
     },
     {
       "path": "src/workstation/WorkstationHeader.tsx",
-      "bytes": 2392,
-      "sha256": "ca61c2f9bd4a0f6ee5071860f4273783e2b626d21e679dafb7ae57b3f5f422d9"
+      "bytes": 2544,
+      "sha256": "4df36fb184fa32da413f15d11eccad3f643bff8b649b5406a7196c1c084e551b"
     }
   ],
   "simulation_seam": "src/scene/SimulationLayer.tsx",
   "geometry_changed": false,
   "research_semantics_changed": false,
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T16:55:51.241Z"
+  "sealed_at": "2026-09-17T20:36:54.608Z"
 }

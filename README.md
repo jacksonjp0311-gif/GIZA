@@ -2,6 +2,14 @@
 
 ## Current repository status — 2026-09-17
 
+### Evidence Assembly / 01 — Khafre sarcophagus
+
+Open **Sarcophagus**, **Sarcophagus Lid**, **Burial Chamber** or **Interior** in Quick Views for the new full-width Evidence Assembly. Measure exact anchors or picked points, inspect orthogonal/oblique sections and hollow-body caps, compare preserved legacy coordinates, traverse feature-level evidence, and review deterministic Investigation Candidates into immutable computation/finding receipts. Reality layers are independently controlled. Selection and lid inspection motion never enter physical measurements or exports.
+
+The known detail/overview disagreement is now an explicit frame audit, **not a silent correction**. The detached lid's physical placement, assembly-to-monument/site transform, raw primary-source custody and metric image registration remain unresolved. UNKNOWN is not zero. The older component viewer remains under **Views**; historical sources, experiments, Sphinx, Inscription Lab, simulations and atlas are preserved. See [Evidence Assembly contract and handoff](docs/EVIDENCE_ASSEMBLY.md) for capabilities, guarantees and limits.
+
+`npm run check` now includes the Evidence Assembly, graph/receipt, presentation and runtime-resilience tests. `npm run validate:evidence-assembly` reproduces candidates from repository data; see `scripts/evidence/README.md` for immutable receipt output. Root release identity stays 0.10.12, with contract v1 and compile-time commit/source-hash/build metadata.
+
 This project is maintained as **GIZA**. The model-first Explorer includes the original animated logo, searchable components, expanded viewing and component Quick Views. The repo-contained launcher now compiles TypeScript and production assets on every start, stamps the build outside the repository, and serves both Explorer and Registration Workbench. Historical verification artifacts retain their original results.
 
 See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for the original audit and all 56 component coverage rows. [Usability foundation](docs/USABILITY_FOUNDATION.md) tracks the first implemented tranche and remaining limits; the full archaeological roadmap is not complete.

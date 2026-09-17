@@ -22,7 +22,7 @@ export interface GeospatialFrame {
     axes: Record<string, string>;
     origin_local_m: [number, number, number];
     origin_geodetic: string;
-    rotation_to_monument: string;
+    rotation_to_monument: string | {status:string;receipt_id:string;yaw_arcmin:number;application:string};
     status: string;
   };
   transform: {

@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { Grid } from '@react-three/drei';
+import { WebGLRecovery } from '../workstation/WorkspaceBoundary';
 import type { Part, StoneField } from '../lib/model';
 import type { UncertaintyRecord } from '../lib/field';
 import type { ActiveSimulation, AcousticResult, GravityResult, StrataResult } from '../simlab/types';
@@ -43,6 +44,7 @@ export function GizaScene({
       }}
     >
       <color attach="background" args={['#02070b']} />
+      <WebGLRecovery/>
       <ambientLight intensity={0.82} />
       <hemisphereLight args={['#fff1d2', '#6b5132', 1.12]} />
       <directionalLight position={[320, -260, 520]} intensity={3.15} color="#fff0cf" castShadow />

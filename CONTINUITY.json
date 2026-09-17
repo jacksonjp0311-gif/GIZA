@@ -8,6 +8,7 @@
     "README.md",
     "CONTINUITY.json",
     "AGENTS.md",
+    "docs/EVIDENCE_ASSEMBLY.md",
     "docs/CONTINUATION_PROTOCOL.md",
     "docs/ROOM_GRAPH.md",
     "docs/VISIBILITY_LAB.md",
@@ -296,7 +297,14 @@
       "public/workbench/index.html",
       "public/workbench/workbench.js",
       "public/workbench/workbench.css",
-      "WORKBENCH_MANIFEST.json"
+      "WORKBENCH_MANIFEST.json",
+      "docs/EVIDENCE_ASSEMBLY.md",
+      "EVIDENCE_ASSEMBLY_MANIFEST.json",
+      "src/evidence/types.ts",
+      "src/evidence/assembly.ts",
+      "src/evidence/spatial.ts",
+      "src/evidence/graph.ts",
+      "src/evidence/receipts.ts"
     ],
     "required_commands": [
       "npm run simlab:benchmarks",
@@ -372,5 +380,25 @@
     "goal": "Run the repaired workflow with genuine source bytes and independently justified targets. Do not promote a synthetic or merely cached result.",
     "precondition": "Real byte custody, reviewed source render, independently justified scale and targets, immutable experiment and passing holdouts."
   },
-  "current_codename": "REMOTE PLATE WITNESS + DIMENSION GRAPH"
+  "current_codename": "REMOTE PLATE WITNESS + DIMENSION GRAPH",
+  "evidence_assembly_evolution": {
+    "date": "2026-09-17",
+    "contract": "giza.evidence-assembly.v1",
+    "entry": "Quick Views: Sarcophagus / Sarcophagus Lid / Burial Chamber / Interior",
+    "read_first": "docs/EVIDENCE_ASSEMBLY.md",
+    "implementation": "src/evidence",
+    "validation": "npm run test:evidence-assembly && npm run test:runtime && npm run validate:evidence-assembly",
+    "preservation": "No canonical part, measurement, assembly, stone-field or frozen archaeological experiment rewritten.",
+    "spatial_invariant": "Presentation poses never enter physical measurement, sections or canonical export.",
+    "unresolved": ["Physical lid pose/contact geometry", "Assembly-to-monument archaeological reconciliation", "Site translation/vertical datum", "Accepted assembly image registration/independent control/holdouts", "Complete uncertainty propagation", "Metric connected-passage navigation"],
+    "next": "Acquire legitimate feature-level source bytes and independently controlled observations through the existing registration engine. Do not infer missing archaeological transforms from a visually plausible alignment.",
+    "version_note": "Root historical release identity remains 0.10.12; new assembly schema and compile-time commit/source-hash metadata identify this software evolution."
+  },
+  "current_handoff_precedence": {
+    "date": "2026-09-17",
+    "navigation": "The user-approved model-first header supersedes historical five-tab navigation instructions above. Do not restore the removed DISCOVER/EXPLORE/REVERSE ENGINEER/ANALYZE/SIMULATE tabs. Preserve existing workspace functionality through its current contextual entry points.",
+    "historical_fields": "current_codename and next_recommended_phase retain earlier phase history; current root codename/current_version and evidence_assembly_evolution describe the present handoff.",
+    "validation": "VALIDATION.md newest Evidence Assembly section; verification/evidence-assembly; public/model/evidence_assembly/validation-20260917-evolution-v1.json",
+    "draft_scope": "Investigation review drafts survive contextual-panel changes for the active assembly session. Only sealed journal receipts persist; export before leaving the assembly or reloading."
+  }
 }

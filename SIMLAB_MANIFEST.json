@@ -243,15 +243,15 @@
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
-      "sha256": "98393fe13e56dc76748b87067712851d2f14c143a72151790477c52bf6167a62",
-      "bytes": 36420
+      "sha256": "e2b36edac82f7b53a913c756aa98baeb6ce008b0f1ea28b8381c41a9e92f33ae",
+      "bytes": 36988
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b",
-      "bytes": 8174
+      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894",
+      "bytes": 9148
     }
   ],
   "release_version": "0.10.12",
-  "sealed_at": "2026-09-17T16:55:51.241Z"
+  "sealed_at": "2026-09-17T20:36:54.608Z"
 }

@@ -1,0 +1,257 @@
+{
+  "version": "0.9.3",
+  "codename": "STRATA",
+  "phase": "GRAVITY_ACOUSTICS_STRATA",
+  "generated_at": "2026-09-11T15:43:48.175734+00:00",
+  "active_solvers": [
+    "solver.gravity",
+    "solver.acoustic",
+    "solver.strata"
+  ],
+  "run_count": 6,
+  "truth_invariant": "Prediction is not observation. Simulation can test consequences of a hypothesis but cannot promote archaeology by itself.",
+  "files": [
+    {
+      "path": "docs/ACOUSTIC_LAB.md",
+      "sha256": "2d3ecd4e41128c2fadbaa5a42fb46651e1df878047ce5e37cf2d11c8a5465b08",
+      "bytes": 2458
+    },
+    {
+      "path": "docs/ECHO.md",
+      "sha256": "adfa4b834e023dbe541d18369228e5f366c2e3a5aca24cf5753ac5176fa26994",
+      "bytes": 2915
+    },
+    {
+      "path": "docs/GRAVITY_LAB.md",
+      "sha256": "c64304d6871f1e216ecb310ea369921dcdda4c6895a7ed570d2d90b478ae6b40",
+      "bytes": 937
+    },
+    {
+      "path": "docs/SIMLAB.md",
+      "sha256": "a8af7bf7cf3ef9d6ec0db282c962ba845da8f6c7ad19ed51d16c9e1a8de6ea01",
+      "bytes": 1829
+    },
+    {
+      "path": "docs/STRATA.md",
+      "sha256": "8bd60c2bf52a9c88d20d6740e50f6b5512137f2cbc7b50d8c90295e802d61d2b",
+      "bytes": 1785
+    },
+    {
+      "path": "public/model/simlab/benchmarks/acoustic_benchmark.json",
+      "sha256": "5a15e909314cd7e5e92191ad332849354f9007d9432f7c207c1f2e00835506f0",
+      "bytes": 732
+    },
+    {
+      "path": "public/model/simlab/benchmarks/gravity_benchmark.json",
+      "sha256": "eda6d983910289c2722b45d9ebb7dd2819550b267bb3c1ebb0793fcebc864b56",
+      "bytes": 661
+    },
+    {
+      "path": "public/model/simlab/benchmarks/strata_benchmark.json",
+      "sha256": "00e1b36386625d16e92dcd7906ab15a8ca0795ad8591ce1c5e99f20e8bb01d8f",
+      "bytes": 704
+    },
+    {
+      "path": "public/model/simlab/experiments/acoustic.known-interiors-screening.json",
+      "sha256": "2a8acee317564aabc69156e5e6ea804bf37a55b25fd7bab7950c8c5fc735ac2d",
+      "bytes": 3586
+    },
+    {
+      "path": "public/model/simlab/experiments/gravity.deep-claim-conditional.json",
+      "sha256": "09249d068ebb019d42cbc9852a45a854750561854be5932132bca97dc4a95f49",
+      "bytes": 1826
+    },
+    {
+      "path": "public/model/simlab/experiments/gravity.deep-shafts-only.json",
+      "sha256": "88e3b33cca3a23af6c07ce9d9124f9d9f62ba3364bfc15bdaba5356cf6d3a766",
+      "bytes": 1785
+    },
+    {
+      "path": "public/model/simlab/experiments/gravity.deep-terminals-only.json",
+      "sha256": "4c89b8c40877490545c76c4c3f1c0579531c4d55d349f497da8f02c79192cc0a",
+      "bytes": 1648
+    },
+    {
+      "path": "public/model/simlab/experiments/gravity.known-interiors-screening.json",
+      "sha256": "b4ff7eb9614c2805175038dcb940b22df4e24f70784ad078f0e2de15d7683221",
+      "bytes": 1349
+    },
+    {
+      "path": "public/model/simlab/experiments/strata.deep-claim-screening.json",
+      "sha256": "48858e3f9dce1e3a70fd3d5cd671b6994d33a138603a80f78155668d26423703",
+      "bytes": 1131
+    },
+    {
+      "path": "public/model/simlab/material_sets.json",
+      "sha256": "9eb69f7f7d47e6ac0961c63436bdea82d67cfd92924e997fc88156496ec9e17d",
+      "bytes": 931
+    },
+    {
+      "path": "public/model/simlab/null_models.json",
+      "sha256": "559fdd2c7ddf586df4b2261db7fbb20f22be0461244b2fe9d6705ea5a0e32599",
+      "bytes": 2645
+    },
+    {
+      "path": "public/model/simlab/results/acoustic.component-modes.csv",
+      "sha256": "d627633ac960af85ca1bf905947216838c78f433cd26f92624ad1f623d09b869",
+      "bytes": 13749
+    },
+    {
+      "path": "public/model/simlab/results/acoustic.known-interiors-screening.json",
+      "sha256": "cd5131ddca47921d5c2d8fffde7128360d0b7b10dbd7cff58d63bb52f68dc3ef",
+      "bytes": 401069
+    },
+    {
+      "path": "public/model/simlab/results/acoustic.known-interiors-screening.png",
+      "sha256": "195fa0cc886bc373ebafca7601b96c5383b8a65b16d4d6d36647594ee80415a3",
+      "bytes": 91786
+    },
+    {
+      "path": "public/model/simlab/results/acoustic.response-peaks.csv",
+      "sha256": "34237eb0c95b8aa919d7124e5ab259a0472e37e2e735d5cabc30177e15beb15a",
+      "bytes": 990
+    },
+    {
+      "path": "public/model/simlab/results/gravity.deep-claim-conditional.json",
+      "sha256": "93aedc246146f5d0dee8000e67b12890e3261a19a4ea499114238e2893c7f06c",
+      "bytes": 244551
+    },
+    {
+      "path": "public/model/simlab/results/gravity.deep-claim-conditional.png",
+      "sha256": "91257271319a0c1ae3841171310a45a393117dfd27eac19fb32ca0cac29fccee",
+      "bytes": 78569
+    },
+    {
+      "path": "public/model/simlab/results/gravity.deep-claim-sensitivity.json",
+      "sha256": "293a7c711927f6b60d7685677b770c0197c7a7d80c97b0ee5ce4863f5838aecd",
+      "bytes": 7207
+    },
+    {
+      "path": "public/model/simlab/results/gravity.deep-shafts-only.json",
+      "sha256": "5739e3932be8ad356372f3a8128fe57f7383849b5412f02d4b49e3f12e686435",
+      "bytes": 244297
+    },
+    {
+      "path": "public/model/simlab/results/gravity.deep-terminals-only.json",
+      "sha256": "edfe8888f4491db351110991ac90c3be99a005108d896c544f0c38feb281d1b6",
+      "bytes": 243764
+    },
+    {
+      "path": "public/model/simlab/results/gravity.known-interiors-screening.json",
+      "sha256": "96f0bd2abd1b22f7a40dcde287e35afe9f061fe1163b2d49c8f6dc58bdabbeee",
+      "bytes": 250923
+    },
+    {
+      "path": "public/model/simlab/results/strata.deep-claim-screening.json",
+      "sha256": "9e2debef2a31f0ae93b851d4ce9b5ef7ae8b907e4bb51316d204e77ffe7f2ea0",
+      "bytes": 29571
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.csv",
+      "sha256": "8189a4545fceb97eff68e34c64d824f6488f92c3281e75ce481a4fb8cdeb7efd",
+      "bytes": 511
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.png",
+      "sha256": "cc6ef52f649f2659f4dfbf671c41ae14a1c9af333298d237db3d9153e8f78da1",
+      "bytes": 96477
+    },
+    {
+      "path": "public/model/simlab/run_contract.json",
+      "sha256": "14f60ffa03bb2f7b8b2c93dede8dbafd3f1d4e4946430f92ccd58eb3a1d82221",
+      "bytes": 1007
+    },
+    {
+      "path": "public/model/simlab/run_index.json",
+      "sha256": "ffdfdc88cb4da4528ea7e8ab893cae5e987cf5a8f3a8234ceeecda5cdc2bc5ae",
+      "bytes": 2105
+    },
+    {
+      "path": "public/model/simlab/simlab_manifest.json",
+      "sha256": "ee05eedd887377d4b0ee66b0c972a4a8dd2d08d8a407fd4a68e8da9541b3812f",
+      "bytes": 961
+    },
+    {
+      "path": "scripts/simlab/acoustic-benchmark.mjs",
+      "sha256": "160000e868859e2547b7c85d62794bcb9de2e8b6bc3c55fb14af4d791a66b6f0",
+      "bytes": 1665
+    },
+    {
+      "path": "scripts/simlab/acoustic-engine.mjs",
+      "sha256": "61b1596d277dcb3bd4e65cf7abb32212b84573c2f4876e85e2b967609b6d7508",
+      "bytes": 4967
+    },
+    {
+      "path": "scripts/simlab/acoustic-run.mjs",
+      "sha256": "591a5541209a47eb4823b55f8b06770d83ee870ed39e2fe9ea333710ce7166ea",
+      "bytes": 8150
+    },
+    {
+      "path": "scripts/simlab/gravity-benchmark.mjs",
+      "sha256": "75b1282b98c99ca51bce1e9fc8326ed194c44ab6ee8bfb6daf80a3eb0c8fa112",
+      "bytes": 1686
+    },
+    {
+      "path": "scripts/simlab/gravity-engine.mjs",
+      "sha256": "d84984b8158cce5cf27e6b00b0b87f2e3f957de180fcaf106ef368fdef638d51",
+      "bytes": 4407
+    },
+    {
+      "path": "scripts/simlab/gravity-run.mjs",
+      "sha256": "e8536973b6877f214a6dd00d4cf9f182c3d635677529a47788e174a96659e260",
+      "bytes": 3054
+    },
+    {
+      "path": "scripts/simlab/gravity-sensitivity.mjs",
+      "sha256": "8317ef2590b4c4ec214f0e00f338ffc45afe59043dcf055039c4cafd5beecb61",
+      "bytes": 2364
+    },
+    {
+      "path": "scripts/simlab/strata-benchmark.mjs",
+      "sha256": "59e8df412ab93511686319aaaeabf7b8574c15b7db772a06897d6394e20bbc66",
+      "bytes": 1045
+    },
+    {
+      "path": "scripts/simlab/strata-run.mjs",
+      "sha256": "e332d6e68c1edcd256ef945adae4e0e1ea8c57ee1c1cc15faa789ef77fe20891",
+      "bytes": 6284
+    },
+    {
+      "path": "scripts/simlab/validate-echo.mjs",
+      "sha256": "5ac764b73cbde01a8c0fa6ea477ebf9bf9215e3e17099806e82f4cacbbcf28d7",
+      "bytes": 2875
+    },
+    {
+      "path": "scripts/simlab/validate-simlab.mjs",
+      "sha256": "3df9357d6f219b0fc83f942d987c16c01a5238a977e5085129c8b32cdcba0af8",
+      "bytes": 2958
+    },
+    {
+      "path": "scripts/simlab/validate-strata.mjs",
+      "sha256": "45018c9a2ef422f382ec0e0ae214ff3b8904e6f36c84bd384f132a789abdc00f",
+      "bytes": 1598
+    },
+    {
+      "path": "src/scene/SimulationLayer.tsx",
+      "sha256": "e40f2b666bb9aae9517741ffe57873c99b642c5b1f617af77fd0d452089cc618",
+      "bytes": 4923
+    },
+    {
+      "path": "src/simlab/types.ts",
+      "sha256": "9d6dee7a36ee5b557205439cde1acb21061f3c7916ef71aa8d8af84eaedbed38",
+      "bytes": 6195
+    },
+    {
+      "path": "src/workstation/ObjectInspectorPanel.tsx",
+      "sha256": "98393fe13e56dc76748b87067712851d2f14c143a72151790477c52bf6167a62",
+      "bytes": 36420
+    },
+    {
+      "path": "src/workstation/SpatialViewport.tsx",
+      "sha256": "6c9d4dde8754e9736b2105fd33907fe33b03ac6a13758bd6e55ed9a356fb0a4b",
+      "bytes": 8174
+    }
+  ],
+  "release_version": "0.10.12",
+  "sealed_at": "2026-09-17T16:55:51.241Z"
+}

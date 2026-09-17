@@ -1,5 +1,17 @@
 # v0.10.12 — REGISTRATION WORKBENCH
 
+## Evidence Assembly contract v1 — 2026-09-17
+
+- Added a lazy, full-width Khafre sarcophagus/lid/chamber workspace with exact feature evidence, typed reality layers, canonical point/angle tools, orthogonal/oblique sections/caps, source references, explicit uncertainty and session camera bookmarks.
+- Audited object → assembly → monument → site frames. Preserved the legacy orientation/position discrepancies as comparison-only candidates; unresolved archaeological transforms remain blocked. Display parking/explosion/selection cannot enter measurement or physical export.
+- Added a machine-readable Spatial Evidence Graph, deterministic Investigation Candidates with nulls/falsifiers, reproducible SHA-256 experiments, separate reviewed findings, denied-promotion receipts and an append-only/corruption-preserving local journal.
+- Kept the existing registration engine authoritative; added a read-only plate-local control/holdout residual adapter. No archaeological fit, source-byte custody or registered photo overlay was fabricated.
+- Added independently gated reality metadata/visuals to legacy and Sphinx objects; synthetic masonry, simulations and repair layouts remain hypothetical. UNVERIFIED underground remains off initially.
+- Added runtime validation for 50 startup datasets, isolated optional-data failure, lazy atlas/component workspaces, workspace recovery boundaries and WebGL recovery hooks. Fixed FIELD object rendering and historical finding-version aliases without changing evidence JSON.
+- Added tests and immutable validation/export tooling; maintained root version/history and compile-first one-command startup. See `docs/EVIDENCE_ASSEMBLY.md` and the latest VALIDATION section.
+
+### Original registration workbench release
+
 - Added an executable dependency-free local registration UI and HTTP service.
 - Repaired six independently reproduced registration/parser defects.
 - Added 25 positive/adversarial regression tests and a synthetic end-to-end PDF workflow test.

@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-09-17T18:06:32.910Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "os_release": "10.0.26200",
+  "version": "0.10.12",
+  "commit": "377581b966ce71c107062282e82aa7103ccc42b5",
+  "working_tree": "UNCOMMITTED_EVOLUTION",
+  "logs": [
+    {
+      "file": "full-check.log",
+      "sha256": "1edad398bddbaee0f730343373c73bbc5e84d6bf7c8a6ce4375005b956af0ce7"
+    },
+    {
+      "file": "isolated-smoke-4177-4178.log",
+      "sha256": "f1ba78c05663c3ddde0cf8a04e377d7474c3ef360b5c1949de948cdcc29af506"
+    },
+    {
+      "file": "pre-responsive-full-check.log",
+      "sha256": "b75e31c3f7b45aaf4f24ea87f7e3c86b1d05274059c49adfb4f79bff2e0c1588"
+    },
+    {
+      "file": "production-compile-check.log",
+      "sha256": "296e54c64f216b23f331297a4655c11ba9810488c422df424abcd3088a6fc2dc"
+    }
+  ],
+  "bundles": [
+    {
+      "file": "AssemblyWorkbench-Btf9vvez.js",
+      "bytes": 97994,
+      "gzip_bytes": 31274
+    },
+    {
+      "file": "ComponentWorkbench-DCEyitOU.js",
+      "bytes": 17394,
+      "gzip_bytes": 6097
+    },
+    {
+      "file": "DetailMaterial-Dji1e4n2.js",
+      "bytes": 747,
+      "gzip_bytes": 535
+    },
+    {
+      "file": "GLTFExporter-CJ3Ic0yV.js",
+      "bytes": 35257,
+      "gzip_bytes": 10525
+    },
+    {
+      "file": "index-4jgC6ks5.js",
+      "bytes": 1207874,
+      "gzip_bytes": 339893
+    },
+    {
+      "file": "InscriptionLab-DWjX8my_.js",
+      "bytes": 80427,
+      "gzip_bytes": 23214
+    },
+    {
+      "file": "MapAtlasPanel-C_iMcFol.js",
+      "bytes": 28324,
+      "gzip_bytes": 8944
+    },
+    {
+      "file": "specifications-BP32DZb4.js",
+      "bytes": 1358,
+      "gzip_bytes": 618
+    },
+    {
+      "file": "SphinxWorkbench-CILALkE7.js",
+      "bytes": 31418,
+      "gzip_bytes": 12353
+    }
+  ],
+  "interpretation": "Build sizes and execution-log hashes; not archaeological validation."
+}

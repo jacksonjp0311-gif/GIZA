@@ -1,4 +1,5 @@
 import type { ActionGraphMapData, RoomGraphMapData, VisibilityLabMapData, MetricReadinessMapData, MapAtlasBundle, MapAtlasManifest, PlateauMapData, RitualMapData, SurveyMapData, GeologyMapData, HistoryMapData, IntentMapData, PhotoCoverageMapData, RitualNarrative } from '../maps/types';
+import { createRuntimeLoader, type RuntimeDiagnostic } from './runtimeData';
 import type { SimlabBundle, SimlabManifest, GravityResult, GravityBenchmark, AcousticResult, AcousticBenchmark, StrataResult, StrataBenchmark } from '../simlab/types';
 import type {
   FieldAcquisitionCatalog,
@@ -259,8 +260,10 @@ export interface FindingEntry {
   status: string;
   priority: string;
   domain: string;
-  introduced_version: string;
-  updated_version: string;
+  introduced_version?: string;
+  updated_version?: string;
+  first_seen_version?: string;
+  last_updated_version?: string;
   truth_class: string;
   summary: string;
   why_interesting: string;
@@ -306,6 +309,8 @@ export interface IntentBundle {
 }
 
 export interface ModelBundle {
+  /** Missing optional data is quarantined, not silently interpreted as verified emptiness. */
+  runtimeDiagnostics: RuntimeDiagnostic[];
   componentResearch: ComponentResearch;
   project: Record<string,unknown>;
   parts: Part[];
@@ -342,13 +347,9 @@ export interface ModelBundle {
   };
 }
 
-async function getJson<T>(url:string):Promise<T> {
-  const r = await fetch(url,{signal:AbortSignal.timeout(15000)});
-  if (!r.ok) throw new Error(`${url}: ${r.status}`);
-  return r.json() as Promise<T>;
-}
-
 export async function loadModel():Promise<ModelBundle> {
+  const runtimeDiagnostics:RuntimeDiagnostic[]=[];
+  const getJson=createRuntimeLoader(runtimeDiagnostics);
   const [
     project, partsDoc, assembliesDoc, measurementsDoc, hypothesesDoc, calculations,
     photoDoc, atlasDoc, stoneField, evidenceDoc, sourceRegistryDoc, maturityDoc,
@@ -411,6 +412,7 @@ export async function loadModel():Promise<ModelBundle> {
   ]);
 
   return {
+    runtimeDiagnostics:runtimeDiagnostics.sort((a,b)=>a.url.localeCompare(b.url)),
     componentResearch,
     project,
     parts: partsDoc.parts,

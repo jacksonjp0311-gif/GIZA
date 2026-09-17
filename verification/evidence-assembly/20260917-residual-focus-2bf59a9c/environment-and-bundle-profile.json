@@ -1,0 +1,19 @@
+{
+  "schema":"giza.software-run.v1",
+  "date":"2026-09-17",
+  "authority":"SOFTWARE_VALIDATION_ONLY",
+  "node":"v24.18.0",
+  "platform":"win32",
+  "architecture":"x64",
+  "os_release":"10.0.26200",
+  "version":"0.10.12",
+  "build":"0.10.12+dev.20260917203202216",
+  "commit":"377581b966ce71c107062282e82aa7103ccc42b5",
+  "working_tree":"UNCOMMITTED_EVOLUTION",
+  "full_check":{"passed":true,"tests":154,"inherited":89,"evidence":52,"runtime":13,"file":"full-check.log","sha256":"777050622f5578c5be9df1765620ea922a2ba08839d260c8dab9294ab520c2c8"},
+  "production_compile":{"passed":true,"command":"npm start -- --check","file":"production-compile-check.log","sha256":"e4f987b95e1e3d9cae51fd9862ea4b9976b998d310113553eabd25a6f5045679"},
+  "bundles":[{"file":"index-DQcIlL9l.js","bytes":1207874},{"file":"AssemblyWorkbench-CvqCCHLm.js","bytes":98987}],
+  "benchmark_results":["projective_camera.json","planar_homography.json"],
+  "preservation":"Newly executed benchmark outputs copied here before restoring their tracked historical timestamps. Previous execution logs and pre-evolution seals remain retained.",
+  "limitations":"Large core chunk warning remains. Bundle byte counts are not runtime performance certification. No archaeological authority created."
+}

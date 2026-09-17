@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import * as THREE from 'three';
 
 // Deterministic illustrative mineral grain, NOT a photograph or surface scan.
-export function GraniteMaterial({rough=false,attach}:{rough?:boolean;attach?:string}) {
+export function GraniteMaterial({rough=false,attach,color='#978779',clippingPlanes=[]}:{rough?:boolean;attach?:string;color?:string;clippingPlanes?:THREE.Plane[]}) {
   const texture=useMemo(()=>{
     const size=256,data=new Uint8Array(size*size*4);
     let seed=1883;
@@ -20,5 +20,5 @@ export function GraniteMaterial({rough=false,attach}:{rough?:boolean;attach?:str
     return t;
   },[]);
   useEffect(()=>()=>texture.dispose(),[texture]);
-  return <meshStandardMaterial attach={attach} map={texture} color="#978779" roughness={rough?.94:.3} metalness={0}/>;
+  return <meshStandardMaterial attach={attach} map={texture} color={color} clippingPlanes={clippingPlanes} roughness={rough?.94:.3} metalness={0}/>;
 }

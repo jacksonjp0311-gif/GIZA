@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-09-17T18:11:40.628Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "os_release": "10.0.26200",
+  "version": "0.10.12",
+  "commit": "377581b966ce71c107062282e82aa7103ccc42b5",
+  "working_tree": "UNCOMMITTED_EVOLUTION",
+  "logs": [
+    {
+      "file": "full-check.log",
+      "sha256": "7999e6f731d77fd8fbee7853962f525df9bfb9c73748b05f159c00205a57756e"
+    },
+    {
+      "file": "production-compile-check.log",
+      "sha256": "2ed89d11a38cad893fe38d147c242385c82fc0062b922730bd311d6f05674ae7"
+    }
+  ],
+  "bundles": [
+    {
+      "file": "AssemblyWorkbench-CSrxYInz.js",
+      "bytes": 98028,
+      "gzip_bytes": 31295
+    },
+    {
+      "file": "ComponentWorkbench-B06jYYjn.js",
+      "bytes": 17394,
+      "gzip_bytes": 6101
+    },
+    {
+      "file": "DetailMaterial-BZQvb1US.js",
+      "bytes": 747,
+      "gzip_bytes": 533
+    },
+    {
+      "file": "GLTFExporter-DCivvYha.js",
+      "bytes": 35257,
+      "gzip_bytes": 10524
+    },
+    {
+      "file": "index-ptedYtRR.js",
+      "bytes": 1207874,
+      "gzip_bytes": 339900
+    },
+    {
+      "file": "InscriptionLab-HEPoaqmO.js",
+      "bytes": 80427,
+      "gzip_bytes": 23213
+    },
+    {
+      "file": "MapAtlasPanel-DCkJ41ps.js",
+      "bytes": 28324,
+      "gzip_bytes": 8943
+    },
+    {
+      "file": "specifications-BP32DZb4.js",
+      "bytes": 1358,
+      "gzip_bytes": 618
+    },
+    {
+      "file": "SphinxWorkbench-CHzNOPmY.js",
+      "bytes": 31418,
+      "gzip_bytes": 12352
+    }
+  ],
+  "interpretation": "Build sizes and execution-log hashes; not archaeological validation."
+}

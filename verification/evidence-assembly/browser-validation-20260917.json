@@ -1,0 +1,38 @@
+{
+  "schema": "giza.browser-validation.v1",
+  "date": "2026-09-17",
+  "authority": "SOFTWARE_QA_ONLY_NOT_ARCHAEOLOGICAL_EVIDENCE",
+  "environment": "Actual localhost application in Codex in-app Chromium browser on Windows; browser automation via CUA",
+  "url": "http://127.0.0.1:4173/",
+  "final_build": "0.10.12+dev.20260917203202216",
+  "base_commit": "377581b966ce71c107062282e82aa7103ccc42b5",
+  "working_tree": "UNCOMMITTED_EVOLUTION",
+  "checks": [
+    {"name":"feature inspection","result":"PASS","details":"Feature-specific observations, source links, native units, uncertainty and local/assembly XYZ visible; world XYZ and registration remain UNKNOWN."},
+    {"name":"exact anchor distance","result":"PASS","coffer_length_m":2.633472,"lid_length_m":2.634742},
+    {"name":"inspection motion invariance","result":"PASS","details":"Lid-local length remains 2.634742 m after setting inspection separation to 3 m. Requesting the same points in the burial assembly frame returns UNKNOWN."},
+    {"name":"angle and section","result":"PASS","angle_degrees":90,"oblique_cap_area_m2":1.050779,"details":"Oblique azimuth 35 degrees, inclination 30 degrees, offset -0.3 m; analytic cuts preserve cavity and exclude unresolved lid from body-frame sections."},
+    {"name":"actual pointer picking","result":"PASS","snap":false,"distance_m":1.6887672,"details":"Two pointer clicks on reconstructed coffer faces produced local canonical coordinates and an explicitly reconstructed distance; not a survey observation."},
+    {"name":"orbit zoom and fit","result":"PASS","details":"Drag changed orientation, wheel changed framing, Fit included body and lid at 3 m separation. Camera bookmark capture created Bookmark 1. Bookmark restore was not separately end-to-end certified."},
+    {"name":"keyboard tools","result":"PASS","details":"C opened Section, Escape closed contextual tools, M reopened Measure. Form controls retained input behavior."},
+    {"name":"candidate experiment and finding","result":"PASS","details":"Lid/body length difference 0.00127 m with reported conservative uncertainty 0.001016 m, exact inputs, null explanations and falsifier displayed. Reproducible experiment appended; explicitly inconclusive Automated software QA finding appended without authority promotion."},
+    {"name":"journal restoration","result":"PASS","retained_records":2,"experiment_created_at":"2026-09-17T18:01:17.880Z","finding_created_at":"2026-09-17T18:01:28.826Z","details":"Reload retained both original records. No QA record was rewritten or removed."},
+    {"name":"draft continuity","result":"PASS_AFTER_FIX","details":"Review draft survived candidate -> Lid west length evidence -> Investigate detour. Temporary unsealed QA text was cleared afterward; journal untouched."},
+    {"name":"missing registration","result":"PASS_AFTER_FIX","details":"Absent optional fit served as HTML 200 now produces a readable UNKNOWN status; no residuals invented."},
+    {"name":"residual file selection","result":"PASS","fixture":"SYNTHETIC_UI_QA_NOT_ARCHAEOLOGY","details":"Selected a local explicitly synthetic JSON fixture through actual file chooser. CONTROL/HOLDOUT role filtering and Enter inspection worked; holdout dx=0, dy=0.1 m, error=0.1 m. Imported pass/hash claims retained metric authority NONE."},
+    {"name":"SVG keyboard focus","result":"PASS_AFTER_FIX","details":"Initial generic CSS focus outline expanded in plate-local metre units. Final build uses non-scaling selected/focus markers; final screenshot no longer contains oversized outline."},
+    {"name":"preserved workspaces","result":"PASS","details":"Final build loaded all 11 Atlas evidence views, Sphinx region/layer controls and the Inscription Lab source/story/restoration overview. No annotation edits were made."},
+    {"name":"recoverable lazy import","result":"PASS","details":"An already open older build requested a retired Atlas chunk during production rebuild. Workspace boundary contained the error and offered reload without disabling the workstation. Final-build reload opened Atlas successfully; historical error log remains recorded."}
+  ],
+  "responsive": {
+    "initial_failed_landscape": {"viewport":[844,390],"canvas":[542,33.5],"status":"FIXED_NOT_ERASED"},
+    "final": [
+      {"viewport":[390,844],"document":[390,844],"canvas":[378,205.5]},
+      {"viewport":[844,390],"document":[844,390],"canvas":[542,203]},
+      {"viewport":[1280,800],"document":[1280,800],"canvas":[928,506.5]}
+    ],
+    "temporary_viewport_override_reset": true
+  },
+  "cleanup": "Synthetic imported comparison was session-only and removed by leaving Compare. Temporary review draft cleared. Two sealed QA journal records preserved. Evidence Assembly left open on the final build.",
+  "not_certified": ["Physical touch hardware","Complete screen-reader audit","Actual GPU driver/context failure","Frame-time/startup benchmark","Archaeological registration or registered photo projection","Authenticated scholarly finding","Complete propagated positional uncertainty"]
+}
