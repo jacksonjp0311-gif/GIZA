@@ -9,7 +9,7 @@ function load():Progress{try{const p=JSON.parse(localStorage.getItem(KEY)||'null
 export function teach(chapter=0){window.dispatchEvent(new CustomEvent('giza:teach',{detail:chapter}));}
 export function TeachButton({chapter}:{chapter:number}){return <button type="button" title="Teach me this" aria-label="Teach me this" onClick={()=>teach(chapter)}>?</button>;}
 type Rect={left:number;top:number;right:number;bottom:number;width:number;height:number};
-export function Tutorial(){
+export function Tutorial({welcomeEnabled=true}:{welcomeEnabled?:boolean}){
   const [welcomeSlot,setWelcomeSlot]=useState<HTMLElement|null>(null);
   useEffect(()=>{setWelcomeSlot(document.getElementById('giza-welcome-slot'));},[]);
   const [progress,setProgress]=useState(load),[rect,setRect]=useState<Rect|null>(null),[layout,setLayout]=useState({width:320,height:220,left:12,top:90});
@@ -48,7 +48,7 @@ export function Tutorial(){
     const resize=new ResizeObserver(schedule),mutation=new MutationObserver(records=>{if(records.some(r=>!(r.target as Element).closest?.('[data-tutorial-root]')))schedule();});
     resize.observe(document.documentElement);mutation.observe(document.querySelector('.app')??document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['hidden','class','aria-pressed','open']});
     window.addEventListener('resize',schedule);window.addEventListener('scroll',schedule,true);
-    const click=(e:MouseEvent)=>{if(step.click&&observed?.contains(e.target as Node)){pendingClick.current=true;schedule();}};
+    const click=(e:MouseEvent)=>{if(step.click&&document.querySelector<HTMLElement>(selector)?.contains(e.target as Node)){pendingClick.current=true;schedule();}};
     document.addEventListener('click',click);
     schedule();popup.current?.focus({preventScroll:true});
     return()=>{cancelAnimationFrame(frame);resize.disconnect();mutation.disconnect();window.removeEventListener('resize',schedule);window.removeEventListener('scroll',schedule,true);document.removeEventListener('click',click);};
@@ -64,7 +64,7 @@ export function Tutorial(){
       }
     };window.addEventListener('keydown',key,true);return()=>window.removeEventListener('keydown',key,true);
   },[progress.active,step.id]);
-  if(!progress.active)return !progress.dismissed&&welcomeSlot?createPortal(<aside className="tutorialWelcome" data-tutorial-root aria-label="New to GIZA?"><b>NEW TO GIZA?</b><p>Take a guided tour.</p><button onClick={()=>teach(0)}>Start tutorial</button><button onClick={()=>update({dismissed:true})}>Explore on my own</button></aside>,welcomeSlot):null;
+  if(!progress.active)return welcomeEnabled&&!progress.dismissed&&welcomeSlot?createPortal(<aside className="tutorialWelcome" data-tutorial-root aria-label="New to GIZA?"><b>NEW TO GIZA?</b><p>Take a guided tour.</p><button onClick={()=>teach(0)}>Start tutorial</button><button onClick={()=>update({dismissed:true})}>Explore on my own</button></aside>,welcomeSlot):null;
   const w=window.innerWidth,h=window.innerHeight;
   return <div data-tutorial-root className="tutorialRoot">
     {rect?<><div className="tutorialShade" style={{left:0,top:0,width:w,height:rect.top}}/><div className="tutorialShade" style={{left:0,top:rect.bottom,width:w,height:h-rect.bottom}}/><div className="tutorialShade" style={{left:0,top:rect.top,width:rect.left,height:rect.height}}/><div className="tutorialShade" style={{left:rect.right,top:rect.top,width:w-rect.right,height:rect.height}}/><div data-testid="tutorial-cutout" className="tutorialOutline" style={{left:rect.left,top:rect.top,width:rect.width,height:rect.height}}/></>:<div className="tutorialShade" style={{inset:0}}/>}

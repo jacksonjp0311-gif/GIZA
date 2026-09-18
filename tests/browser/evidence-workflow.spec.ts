@@ -4,6 +4,11 @@ async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1')
 async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
 async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
 test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
+  // Remote Windows trace 35374930729 completed the real actions/assertions,
+  // but the combined save/reload/compare/import journey exceeded 60 s.
+  // Individual replay/import actions took 3.1–7.2 s under SwiftShader.
+  // Keep every assertion and its normal 15 s expectation; bound this long journey.
+  test.setTimeout(120_000);
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await openAssembly(page);await measureLid(page);
   await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
   await page.getByLabel('Lid inspection separation').fill('3');await page.getByRole('button',{name:'Investigate',exact:true}).click();

@@ -1,11 +1,13 @@
 import {test,expect} from '@playwright/test';
-test('off-center wheel zoom and real drag preserve the overview orbit pivot',async({page})=>{
+test('off-center wheel zoom and real drag preserve the overview orbit pivot',async({page},testInfo)=>{
   await page.goto('/?layerDiagnostics=1');
   const canvas=page.locator('canvas').first();
   const state=async()=>JSON.parse(await canvas.getAttribute('data-layer-diagnostics')??'{}');
   await expect.poll(async()=>(await state()).orbitTarget?.length).toBe(3);
-  let last='',stable=0;
-  await expect.poll(async()=>{const s=await state(),key=JSON.stringify([s.orbitTarget,s.cameraPosition]);stable=key===last?stable+1:0;last=key;return stable;}).toBeGreaterThanOrEqual(3);
+  let last='',stable=0;const samples:unknown[]=[];
+  try{
+    await expect.poll(async()=>{const s=await state(),key=JSON.stringify([s.orbitTarget,s.cameraPosition]);samples.push({at:Date.now(),target:s.orbitTarget,position:s.cameraPosition});if(samples.length>30)samples.shift();stable=key===last?stable+1:0;last=key;return stable;}).toBeGreaterThanOrEqual(3);
+  }catch(error){await testInfo.attach('orbit-settling.json',{body:JSON.stringify(samples),contentType:'application/json'});throw error;}
   const before=await state(),box=(await canvas.boundingBox())!;
   expect(before.orbitTarget[0]).toBe(0);expect(before.orbitTarget[1]).toBe(0);
   await page.mouse.move(box.x+box.width*.75,box.y+box.height*.55);

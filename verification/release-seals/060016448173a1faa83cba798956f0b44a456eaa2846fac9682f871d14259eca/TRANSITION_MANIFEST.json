@@ -1,0 +1,16 @@
+{
+  "version": "0.12.0",
+  "codename": "TRANSITION STATE — NOT GEOMETRY PROMOTION",
+  "files": [
+    {
+      "path": "public/model/plate_registration/transition_gate.json",
+      "sha256": "6515786016031000a2aa83c0cbd54dcb542ff0b328a10ad64f393049d67c1ded",
+      "bytes": 1283
+    },
+    {
+      "path": "docs/TRANSITION_GATE.md",
+      "sha256": "6bfa2475a5c1b475b3767cdfb39aa1b184ebb886df98733eb9e658478571746e",
+      "bytes": 839
+    }
+  ]
+}

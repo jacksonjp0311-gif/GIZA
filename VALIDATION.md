@@ -73,11 +73,51 @@ the timing envelope; setup, contracts, compilation and smoke succeeded. The
 retained artifact was inspected, not relabelled as a product failure. Details:
 verification/live-evidence-012/windows-baseline.md.
 
-Successor CI separates contracts/build/smoke and four exhaustive browser groups
-on each OS, with streaming bounded logs and 14-day artifacts. At this document
-checkpoint the successor remote pipeline has not run. Local passes do not
-certify remote completion. Acceptance requires the exact sealed commit to
-complete on Ubuntu and Windows.
+The first successor CI run separated contracts/build/smoke and four browser groups
+on each OS, with streaming bounded logs and 14-day artifacts. Run 35374930729
+at sealed commit 63cde09 passed both OS contracts/build/smoke jobs and Ubuntu
+core/Atlas. Ubuntu evidence failed at a 149.5 px portrait canvas; guidance
+failed when a real keyboard click arrived before the first target-measurement
+RAF. Public failure logs are retained under
+verification/live-evidence-012/remote-63cde09; original remote traces remain
+in workflow artifacts.
+
+Repairs: the first-use welcome is shown only on the ordinary model, not inside
+an opened research workspace; click-driven tutorial progression identifies the
+real event target directly rather than waiting for the layout observer's cached
+element. No viewport assertion or timeout was weakened. A successor sealed
+commit must complete both remote platforms before acceptance; local passes do
+not override the recorded remote failures.
+
+The same run's Windows evidence shard passed section-cap picking but exceeded
+the 60-second aggregate budget for the complete save/reload/compare/import
+journey. The retained trace shows successful individual actions taking
+3.1–7.2 seconds and the assertions continuing through the final return to the
+workstation; it does not show a stalled pick or failed arithmetic assertion.
+That one long test now has a bounded 120-second budget. All interactions and
+15-second expectations remain unchanged. This measured environment adjustment
+is not a claim of improved application performance.
+
+The Windows core shard finished in 9.2 minutes with three failures (settling
+assertion, Inscription Lab timeout, layer workflow timeout) and trace teardown
+errors reporting truncated ZIPs. Its public log is preserved alongside the
+other first-run failures. The successor separates navigation and spatial core
+tests, for five exhaustive groups per OS. Trace recording keeps DOM/action
+snapshots and source while disabling the continuous screenshot filmstrip;
+explicit failure PNGs and tutorial/layout screenshots remain. This bounds
+diagnostic overhead, not interaction coverage. The original exact camera
+settling assertion is retained, with a bounded numeric diagnostic attachment
+on failure so a repeat failure can be investigated rather than guessed.
+
+Local repair checkpoint live-evidence-012-remote-repair-contracts passed the
+full 201-test pipeline. live-evidence-012-remote-repair passed all 31 browser
+tests. With bounded tracing, live-evidence-012-bounded-tracing again passed all
+31 (2.9 minutes on this machine). Read-only overview diagnostics now avoid
+writing an unchanged JSON attribute every frame; their values and all spatial
+assertions are unchanged.
+The final seal-contracts checkpoint passed all 201 tests and inherited checks;
+the affected spatial shard passed all four actual browser interactions after
+the diagnostic-write change.
 
 The real Khafre archaeological campaign remains BLOCKED on identified
 permitted-use plan bytes, independent local control/scale, datum, uncertainty,

@@ -1,7 +1,8 @@
 # Live evidence integration — 0.12.0 implementation checkpoint
 
 Base: 3074047ce8c39950b5d03814b1a40408f55c7739 (0.11.1).
-This document describes implemented contracts, not a completed remote release.
+This document describes implemented contracts. Exact-commit remote acceptance
+is reported by the GitHub verification workflow, not inferred from local tests.
 
 ## Transform authority
 

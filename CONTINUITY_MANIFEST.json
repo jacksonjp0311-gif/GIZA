@@ -1,17 +1,17 @@
 {
   "version": "0.12.0",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-18T17:31:29.776Z",
+  "sealed_at": "2026-09-18T17:55:24.570Z",
   "required_handoff_files": [
     {
       "path": "docs/TUTORIAL_MODE.md",
-      "sha256": "d585d52351252a00f9856e327983dc4ce5289026ecefcb3f4fe6bc6fced8b46e",
-      "bytes": 3177
+      "sha256": "8dc1adafc744441d388bf1c0bc72ba7b80f61409b36d8070e6de0915cea925d9",
+      "bytes": 3390
     },
     {
       "path": "docs/LIVE_EVIDENCE_INTEGRATION.md",
-      "sha256": "412847839eaba14ab8e8965717a897dfa7f0a4992ff95e2a1dad282c4732360f",
-      "bytes": 5080
+      "sha256": "ccc4e985a50c6169103d960a88b9e053ecd2373616cdda5fe1912c3845fb87f3",
+      "bytes": 5159
     },
     {
       "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
@@ -25,13 +25,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "ef0dc8207bf0fe415795dcb9e4807aa5664842faf137122a56fb5b71adc72607",
-      "bytes": 14440
+      "sha256": "e5bf71c970614629550ba83753e9e9bcdbfa698377be56ed2c19027e132540a3",
+      "bytes": 14646
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "dafb9201d01b3bd2d5844291dd2b49b30ad5fe06b105b69cc8c2250f6409ff58",
-      "bytes": 26420
+      "sha256": "b7c715ddb057c6f5990a937d9efd35851f92167c3ce90f3825c65545e0730dd8",
+      "bytes": 26395
     },
     {
       "path": "GIZA.json",
@@ -45,8 +45,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "548f6e16846bcfed9cc7f43066dc32bded4c193e282059fe32a139e9b1f285d6",
-      "bytes": 58568
+      "sha256": "39669bec0be377ad2570e48b31fa1afe1bb3e34a538d2809ce7d52ad320e1378",
+      "bytes": 61144
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -185,7 +185,7 @@
     },
     {
       "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
-      "sha256": "51f2ed08f86151b29c44ced82687d40026440454f1c6fd70023a38cacdd3fdd9",
+      "sha256": "7242a92a26767aa8a6b07cf43a6b0f9cf089a54c11a2916637caae058d41fc68",
       "bytes": 3254
     },
     {
@@ -220,7 +220,7 @@
     },
     {
       "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
-      "sha256": "d7c7be7ebcffe53e686efdf123b7b7ca35844f331a536182707ceda6656b30ff",
+      "sha256": "a38d2f71b677fd7083d9379d5ad904eb008f8b3af2ffe7877f97b77bf6a8b849",
       "bytes": 2049
     },
     {
@@ -270,7 +270,7 @@
     },
     {
       "path": "RITUAL_MAP_MANIFEST.json",
-      "sha256": "66336b5dc60055b8a48a3cd7388ed3d8bb767b31cf7d535ea77240dc836fdd79",
+      "sha256": "1a21524faea64c32ea2dfb057c2ed788b8b811e388bf3ceca6038a94fe810d99",
       "bytes": 4032
     },
     {
@@ -300,7 +300,7 @@
     },
     {
       "path": "SOURCE_PARSER_MANIFEST.json",
-      "sha256": "7a5de274697918b54da8ff48124cdc3aa6e9b8cf620b28b738dbc4ad83756d8b",
+      "sha256": "5993b6984a0cda367741f29938fb72d6794252fd0c4e4dfcce3f11df32e69585",
       "bytes": 1989
     },
     {
@@ -335,7 +335,7 @@
     },
     {
       "path": "ACTION_GRAPH_MANIFEST.json",
-      "sha256": "1b2663c07c2ba0eb89ab6f08a60726d9d7d19fd81eeee6c11e94faf378fa99cc",
+      "sha256": "6c5ff38713dae4c2c2404401f6d30b6234aa43b3ce54b35aeb60d970fa28e08b",
       "bytes": 1960
     },
     {
@@ -350,12 +350,12 @@
     },
     {
       "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
-      "sha256": "e031ea5e6c9936f3c36901edcce66158f3ecc34974dc4e647abb45e1d17ee55b",
+      "sha256": "9042a57440f382bb2e918c72111c33b15aeef5e4c2b00548f79141c6d41189a0",
       "bytes": 1518
     },
     {
       "path": "ROOM_GRAPH_MANIFEST.json",
-      "sha256": "2f8f226186eb57262bfccc2ccc542f0c1f09d4f9fddc9690813624001d5d644f",
+      "sha256": "1ef851c3f3317101ee8009050a26b74ae3e99493a3800041ebb3d046aaf516c7",
       "bytes": 2130
     },
     {
@@ -430,7 +430,7 @@
     },
     {
       "path": "PLAN_CONCORDANCE_MANIFEST.json",
-      "sha256": "50ae68e970662010698ecebee63fcb8316d553c88f8516c8a3cf5dc59f97e3d4",
+      "sha256": "4e2ec6fa968f98197003af510dd4bc580a04491d0f463b090d410ecdf28130ec",
       "bytes": 1629
     },
     {
@@ -465,7 +465,7 @@
     },
     {
       "path": "VISIBILITY_LAB_MANIFEST.json",
-      "sha256": "3c37561a187df68488764b29c3fc34da50327b3096cdaf7d2ae363e51002bb1c",
+      "sha256": "5d24f9125cf9e6fe167bb8f0496d73e56c2dc8e8a5888ea78794cc5c7aacd297",
       "bytes": 2131
     },
     {
@@ -500,7 +500,7 @@
     },
     {
       "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
-      "sha256": "e0fec39abebcda1201337db7e747df241aabb47a6e7872d0630f30d79ec3cf45",
+      "sha256": "2e8192dd8fd850a5df9186e8bec36b8583cd07b17ab20578c71196f1a1168a27",
       "bytes": 3271
     },
     {
@@ -545,7 +545,7 @@
     },
     {
       "path": "METRIC_VIEW_LAB_MANIFEST.json",
-      "sha256": "c94143f696c5b923728aca68dc2f78760de1698f495bfeed61fa4cf82e336050",
+      "sha256": "4b1a0be4718557e91fb67948cf7fa988884582f7f2db9715c85ab40ce8f87456",
       "bytes": 2162
     },
     {
@@ -595,7 +595,7 @@
     },
     {
       "path": "PLATE_REGISTRATION_MANIFEST.json",
-      "sha256": "993f87ee03a94d3d1f1d0103d36e235b3e5fb07896a0502942783a06de6e15b8",
+      "sha256": "66be38a850c1bc35a373f99396a3ba24e3312a1296942ab42983593786cc6ce2",
       "bytes": 5029
     },
     {
@@ -705,7 +705,7 @@
     },
     {
       "path": "WORKBENCH_MANIFEST.json",
-      "sha256": "576a0452e5ac82417d980de72e245c627e3ef6eff17eb8d60dd44970120df08c",
+      "sha256": "fe238a2500b3ea8a724c580dc98b83abc1dea3701cbc702fb42c4a4ca73469fc",
       "bytes": 4704
     },
     {
@@ -715,7 +715,7 @@
     },
     {
       "path": "EVIDENCE_ASSEMBLY_MANIFEST.json",
-      "sha256": "9417b05fb129a0e72f64fbca0acbd7090e929a591c394f9cab49ae6cf220d56d",
+      "sha256": "06b481021e3ffd7eb5e1f950571fb3e4b7025b9ad29d55beeea2de286b84e68f",
       "bytes": 12687
     },
     {

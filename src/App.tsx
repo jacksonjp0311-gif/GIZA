@@ -196,7 +196,7 @@ export default function App() {
         onSurface={v=>requestNavigation(()=>{setSurface(v);setSphinx(false);setEvidenceAssembly(null);})}
       />
 
-      <Tutorial/>
+      <Tutorial welcomeEnabled={!evidenceAssembly&&surface==='MODEL'&&!sphinx&&!detail}/>
       <DataHealthNotice diagnostics={model.runtimeDiagnostics}/>
 
       {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>requestNavigation(()=>setEvidenceAssembly(null))} onLegacy={()=>requestNavigation(()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);})}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className={`workspace edgeWorkspace${surface==='ATLAS'?' atlasWorkspace':''}`}>

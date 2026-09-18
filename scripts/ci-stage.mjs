@@ -2,7 +2,7 @@
 import fs from 'node:fs';import {spawn} from 'node:child_process';
 const stage=process.argv[2],group=process.env.GIZA_BROWSER_GROUP;
 const commands={dependencies:'npm ci',contracts:'npm run check',compilation:'npm run build',browserSetup:'npx playwright install --with-deps chromium',browser:group?'node scripts/browser-groups.mjs '+group:'npm run test:browser',smoke:'npm start -- --smoke'};
-if(!Object.hasOwn(commands,stage)||group&&!['core','evidence','atlas','guidance'].includes(group))throw new Error('Unknown CI stage/group');
+if(!Object.hasOwn(commands,stage)||group&&!['navigation','spatial','evidence','atlas','guidance'].includes(group))throw new Error('Unknown CI stage/group');
 fs.mkdirSync('verification-ci',{recursive:true});
 const started=new Date().toISOString(),file='verification-ci/'+stage+'.log';
 fs.writeFileSync(file,'');fs.writeFileSync('verification-ci/'+stage+'.json',JSON.stringify({stage,group,status:'RUNNING_OR_INTERRUPTED',started,platform:process.platform,node:process.version}));

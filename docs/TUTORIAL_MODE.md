@@ -2,7 +2,8 @@
 
 The permanent **Tutorial / ?** header button starts the real-interface tour.
 The first-use welcome is an inline header row, not an overlay covering research
-controls. Explore on my own dismisses it without starting a tour.
+controls. It is limited to the ordinary model and does not consume space in an
+opened research workspace. Explore on my own dismisses it without starting a tour.
 
 ## Curriculum
 
@@ -14,7 +15,9 @@ Sphinx and Inscription Lab; saving/replay; and independent exploration.
 The tour explains existing capabilities. It does not perform registrations,
 create observations, silently navigate to missing workspaces, or simulate picks.
 Click-driven steps advance only after the real target is clicked and the
-destination is present. Global draft protection applies to those clicks.
+destination is present. Event targeting does not depend on the first layout
+RAF having run, so rapid keyboard activation is also recognized. Global draft
+protection applies to those clicks.
 
 ## Implementation
 

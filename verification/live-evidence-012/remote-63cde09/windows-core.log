@@ -1,0 +1,87 @@
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 9 tests using 1 worker
+
+  x  1 tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot (1.5m)
+  x  2 tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery (2.1m)
+  x  3 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (2.1m)
+  ok 4 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (40.7s)
+  ok 5 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 (27.2s)
+  ok 6 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 (13.2s)
+  ok 7 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 (8.6s)
+  ok 8 tests\browser\viewport-drawers.spec.ts:2:1 › viewport drawers collapse after pointer use and support keyboard (27.2s)
+  ok 9 tests\browser\viewport-drawers.spec.ts:16:1 › touch drawers open and close explicitly (23.6s)
+
+
+  1) tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot 
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 3
+    Received:    0
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+       6 |   await expect.poll(async()=>(await state()).orbitTarget?.length).toBe(3);
+       7 |   let last='',stable=0;
+    >  8 |   await expect.poll(async()=>{const s=await state(),key=JSON.stringify([s.orbitTarget,s.cameraPosition]);stable=key===last?stable+1:0;last=key;return stable;}).toBeGreaterThanOrEqual(3);
+         |                                                                                                                                                                 ^
+       9 |   const before=await state(),box=(await canvas.boundingBox())!;
+      10 |   expect(before.orbitTarget[0]).toBe(0);expect(before.orbitTarget[1]).toBe(0);
+      11 |   await page.mouse.move(box.x+box.width*.75,box.y+box.height*.55);
+        at D:\a\GIZA\GIZA\tests\browser\centered-orbit.spec.ts:8:161
+
+    Tearing down "context" exceeded the test timeout of 60000ms.
+
+    Error: End of central directory record signature not found. Either not a zip file, or file is truncated.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\error-context.md
+
+  2) tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery 
+
+    Test timeout of 60000ms exceeded.
+
+    Tearing down "context" exceeded the test timeout of 60000ms.
+
+    Error: End of central directory record signature not found. Either not a zip file, or file is truncated.
+
+    Error Context: test-results\centered-orbit-Inscription-43966-t-from-reproduction-imagery\error-context.md
+
+  3) tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection 
+
+    Test timeout of 60000ms exceeded.
+
+    Tearing down "context" exceeded the test timeout of 60000ms.
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for getByText('Reality layers', { exact: true })
+
+
+       9 |   await page.getByRole('checkbox',{name:'Subterranean (Unverified)',exact:true}).uncheck();await expect.poll(underground).toBe(0);
+      10 |   await page.getByRole('button',{name:'Underground',exact:true}).click();await expect.poll(underground).toBe(8);
+    > 11 |   await page.getByRole('button',{name:'Inspect / layers',exact:true}).hover();await page.getByText('Reality layers',{exact:true}).click();await page.getByRole('checkbox',{name:'HYPOTHESIS',exact:true}).uncheck();await expect.poll(underground).toBe(0);
+         |                                                                                                                                   ^
+      12 |   await expect(page.getByText(/Subterranean layer is enabled but hidden/)).toBeVisible();await page.getByRole('button',{name:'Show hypothetical underground'}).click();await expect.poll(underground).toBe(8);
+      13 |   await page.getByRole('checkbox',{name:'Exterior (Current)',exact:true}).uncheck();await expect.poll(async()=>(await ids()).includes('part.pyramid.khafre')).toBe(false);await expect.poll(async()=>JSON.parse((await canvas.getAttribute('data-layer-diagnostics'))!).instanced).toBe(0);
+      14 |   await page.getByRole('checkbox',{name:'Internal Architecture',exact:true}).uncheck();await page.getByRole('button',{name:'Inspect / layers',exact:true}).hover();await page.getByRole('button',{name:'Remove shell / inspect inside'}).click();await expect.poll(async()=>(await ids()).length).toBe(0);
+        at D:\a\GIZA\GIZA\tests\browser\layers.spec.ts:11:131
+
+    Error: End of central directory record signature not found. Either not a zip file, or file is truncated.
+
+    Error Context: test-results\layers-overview-layer-requ-ffc79-ority-and-filter-inspection\error-context.md
+
+  3 failed
+    tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot 
+    tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery 
+    tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection 
+  6 passed (9.2m)

@@ -1,0 +1,379 @@
+{
+  "version": "0.12.0",
+  "contract": "giza.evidence-assembly.v1",
+  "archaeological_fit_created": false,
+  "canonical_geometry_mutated": false,
+  "artifacts": [
+    {
+      "path": "docs/EVIDENCE_ASSEMBLY.md",
+      "sha256": "4958c4d2b7f480091bc0b41c949d6107965de71b629e825d133c0e51d258e108",
+      "bytes": 14864
+    },
+    {
+      "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
+      "sha256": "18ffb52e20057dc9000356bec8f7d6525056ceee07bb8ec6b2cda63bd56ded6a",
+      "bytes": 6510
+    },
+    {
+      "path": "docs/LIVE_EVIDENCE_INTEGRATION.md",
+      "sha256": "412847839eaba14ab8e8965717a897dfa7f0a4992ff95e2a1dad282c4732360f",
+      "bytes": 5080
+    },
+    {
+      "path": "docs/RELIABILITY_0_11_1.md",
+      "sha256": "6a1d9afa38ee8b6369f8b827411dd0dba3d6190aa16fe85cbd5f328924f134f6",
+      "bytes": 9176
+    },
+    {
+      "path": "docs/SOURCE_CAMPAIGN.md",
+      "sha256": "21c12d986b4e3f5bfd20b5d2b10f155638eb3db4669a5440eb0d7cd5171f1e6a",
+      "bytes": 10313
+    },
+    {
+      "path": "docs/TUTORIAL_MODE.md",
+      "sha256": "d585d52351252a00f9856e327983dc4ce5289026ecefcb3f4fe6bc6fced8b46e",
+      "bytes": 3177
+    },
+    {
+      "path": "public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json",
+      "sha256": "b41e0ef2c198e9f60577c9908c9b8e4260e2c1299403af7b48bf0a24ea39bd9d",
+      "bytes": 2663
+    },
+    {
+      "path": "public/model/evidence_assembly/validation-20260917-evolution-v1.json",
+      "sha256": "0c947fad5ee97f2a80fb7e48a57d0e58cb02714c86ef005893ee1c7f2405fd89",
+      "bytes": 4832754
+    },
+    {
+      "path": "scripts/evidence/README.md",
+      "sha256": "7d662d1bedede2365eecf52553f0637bc5e0593cd7c718c83d440b6364715d5d",
+      "bytes": 1946
+    },
+    {
+      "path": "scripts/evidence/browser-checkpoint.mjs",
+      "sha256": "e23c437f00508b45c7a327736c900c56a94f7b3c4c62f7b843e24303610b3955",
+      "bytes": 1198
+    },
+    {
+      "path": "scripts/evidence/browser-performance.mjs",
+      "sha256": "e5cb0dbfead31c253d2cba94f98bc2955b7bde25ee9ffecbaf4874cf19608530",
+      "bytes": 3927
+    },
+    {
+      "path": "scripts/evidence/campaign-cli.mjs",
+      "sha256": "3e040845e7fe362d12e29ea2bfc01911d6c07914292a19435ae5ad312843fd48",
+      "bytes": 3195
+    },
+    {
+      "path": "scripts/evidence/campaign-fixture.mjs",
+      "sha256": "928bcfbfb5f04fbd0286e44b6ade96c5683d2252103414826473c1429511827d",
+      "bytes": 4985
+    },
+    {
+      "path": "scripts/evidence/campaign.mjs",
+      "sha256": "6b8ddf4c4e3a67c07770c2774c9332c24ca2d6193d231261b6c9c980c434827c",
+      "bytes": 20120
+    },
+    {
+      "path": "scripts/evidence/checkpoint.mjs",
+      "sha256": "eee02d8b22bd4bcf1971b4e0f3e9a27226f3266c13512cfc7a7c86b99767fb23",
+      "bytes": 1964
+    },
+    {
+      "path": "scripts/evidence/profile-reliability.mjs",
+      "sha256": "fe943e69a4e60e663ff8599dda7fcd750b3704224690ed9a9d63fe8a3aa56a97",
+      "bytes": 2873
+    },
+    {
+      "path": "scripts/evidence/validate.mjs",
+      "sha256": "9d1d958e256836abaa16693eeb94598695d6ca58d283bf097ad041513dbc0b34",
+      "bytes": 7726
+    },
+    {
+      "path": "src/evidence/AssemblyEntry.tsx",
+      "sha256": "d1330ac729222a3efd674c3cbe37796a344fa405b26f6a501fcc4b8fcf0e2b3e",
+      "bytes": 917
+    },
+    {
+      "path": "src/evidence/AssemblyScene.tsx",
+      "sha256": "73595bc3fafb2e9137500a873bd658b176bf55ba8ffea53bd8d577c480374cc3",
+      "bytes": 12471
+    },
+    {
+      "path": "src/evidence/AssemblyWorkbench.tsx",
+      "sha256": "bb9589f47a71ad0a569dc7ee6e9db2b6f9982ca31794ad4634926a0e45d0f567",
+      "bytes": 20043
+    },
+    {
+      "path": "src/evidence/ComparisonPanel.tsx",
+      "sha256": "dfba57ac1c6c81ee0660073340d7468f246aa45ed00c03e2efe047fd37e74994",
+      "bytes": 7414
+    },
+    {
+      "path": "src/evidence/ExplanationPanel.tsx",
+      "sha256": "edf7e900b5d822e7cda734e9a06d8d501bd6f4ea13a79370427e3fe721bd989c",
+      "bytes": 2392
+    },
+    {
+      "path": "src/evidence/FeaturePanel.tsx",
+      "sha256": "ac3110867fb06d5517cbe32eafc064e2b7a37e2f9d583c896f85963a29161545",
+      "bytes": 5615
+    },
+    {
+      "path": "src/evidence/InvestigationPanel.tsx",
+      "sha256": "63f5f823ca9c340b79adb40de8669b9769dc323764bd6e08dc79580e5832b51c",
+      "bytes": 8631
+    },
+    {
+      "path": "src/evidence/LiveEvidencePanel.tsx",
+      "sha256": "23e100b4471075ca8d56879ac847002b9f7a8ee1bf171fff4681eb6c946f8271",
+      "bytes": 3787
+    },
+    {
+      "path": "src/evidence/SavedInvestigations.tsx",
+      "sha256": "4a35f68937ca5dcb5078092edb8489fe875723435fe6973569d000aff8c2e0cc",
+      "bytes": 6078
+    },
+    {
+      "path": "src/evidence/SpatialTools.tsx",
+      "sha256": "347756cc629bc913fe17552bf3f8805fa85653ea391cd576bb0ad4f3f4c94b00",
+      "bytes": 8231
+    },
+    {
+      "path": "src/evidence/UncertaintyReadout.tsx",
+      "sha256": "842362f6013d8c867ced031dd56082a3fcb00c6cdf2c7bc46116659016c0fa73",
+      "bytes": 1212
+    },
+    {
+      "path": "src/evidence/assembly.ts",
+      "sha256": "271a0e407af6f7f5e982e6e6ecd06a89f1a7bef1d49c3b19e11774ea674da924",
+      "bytes": 23669
+    },
+    {
+      "path": "src/evidence/authority.ts",
+      "sha256": "62924aed9a768eb484e6f35f84ed6f77d5edb96322b06a5cbb58eb2c5cec4433",
+      "bytes": 2446
+    },
+    {
+      "path": "src/evidence/dependencies.ts",
+      "sha256": "c017ab72c6342b7874c0f3412eea78721775812476f54679d111246d29255843",
+      "bytes": 2808
+    },
+    {
+      "path": "src/evidence/evidence.css",
+      "sha256": "cbd4fa76d5e44731ff5d2ace2e6fae8be3e3aa0e7bee589913a0c5cd544341f6",
+      "bytes": 8942
+    },
+    {
+      "path": "src/evidence/explanation.ts",
+      "sha256": "5332dc23a62a8e8cf21f4cf98dd9735aa033abdb72c9a373f364d56552fa7ce3",
+      "bytes": 4585
+    },
+    {
+      "path": "src/evidence/export.ts",
+      "sha256": "157b92387893c493153863963c29df4373cc03156fc0f6ea994c5909638a0765",
+      "bytes": 405
+    },
+    {
+      "path": "src/evidence/graph.ts",
+      "sha256": "ab7f98870bf56d7b93a3fa0cf64417683c785b10552257ba7df45a87b62eac04",
+      "bytes": 22221
+    },
+    {
+      "path": "src/evidence/impact.ts",
+      "sha256": "483803ac6a00cfa10fe08418f2f9e94f73dae75e19687dac424888eb07171810",
+      "bytes": 4797
+    },
+    {
+      "path": "src/evidence/intelligence.ts",
+      "sha256": "eb0d577991113ab4c4b0962c51f079ef972467c705287ead8815675e2875de2f",
+      "bytes": 10581
+    },
+    {
+      "path": "src/evidence/investigations.ts",
+      "sha256": "710ed22be97aeb0c51818e1ba6a7a56047eeedc2c3a321e73ebc120040cec737",
+      "bytes": 11064
+    },
+    {
+      "path": "src/evidence/liveEvidence.ts",
+      "sha256": "6b879acba010778242a813ab436ad017efb5828447c72ac1bfd854bf22b19e32",
+      "bytes": 6225
+    },
+    {
+      "path": "src/evidence/membership.ts",
+      "sha256": "4d3533109af77df48639532aeaa19926f402bac9a2ec7c814f6f885ba4441992",
+      "bytes": 3886
+    },
+    {
+      "path": "src/evidence/observationContract.ts",
+      "sha256": "2d42f61999734a0e89adc9ed929dd7adee0874a6b1b9d5dd4fa52443c10cc4c0",
+      "bytes": 12589
+    },
+    {
+      "path": "src/evidence/presentation.ts",
+      "sha256": "e7fd16b4800424205acde3d71cfdd6e1ca91c8fccd81c3cf8267121bf007255d",
+      "bytes": 1806
+    },
+    {
+      "path": "src/evidence/receipts.ts",
+      "sha256": "0b2da1bf635b8592688b09566fb88d7bed3df77580ee09eb9caf71f0b8c8736b",
+      "bytes": 25411
+    },
+    {
+      "path": "src/evidence/registration.ts",
+      "sha256": "9efa8cb7375f96379d6210eca9da29824f08522a1eff4f6cdd9b48e2db095a1f",
+      "bytes": 5104
+    },
+    {
+      "path": "src/evidence/spatial.ts",
+      "sha256": "b8fd8c65ce8a19d112c1b3960a0a4783abdc2e7fcb549689dae8e0114bb0323e",
+      "bytes": 19621
+    },
+    {
+      "path": "src/evidence/types.ts",
+      "sha256": "48e111d7c5670f1c27e24269217695fa1244cbd27ff51007975eefcf7f929ae6",
+      "bytes": 3807
+    },
+    {
+      "path": "src/evidence/viewGeometry.ts",
+      "sha256": "411c51ede4f2ebce6af92c59901b86613f912179ccc60d506c6e1131a80c0a28",
+      "bytes": 4644
+    },
+    {
+      "path": "src/lib/runtimeData.ts",
+      "sha256": "5a0602318f36ec1b740f03a1b98d985383e6476dca59ee692ba18e887b533d60",
+      "bytes": 19483
+    },
+    {
+      "path": "src/lib/runtimeWebGL.ts",
+      "sha256": "f0573fce4c119f15c05975ddf8ca28e79b5d1e21373801ca643e5277768634e4",
+      "bytes": 547
+    },
+    {
+      "path": "src/tutorial/Tutorial.tsx",
+      "sha256": "ec9e176f66c54040a7be79d546f9bc7ff39dd41c033f53c4a9db44259e5cc1f5",
+      "bytes": 10002
+    },
+    {
+      "path": "src/tutorial/curriculum.ts",
+      "sha256": "5e6edc101fb2981a4862baf25a496b18a8c6a5d92c40da4c0d1d793efd634e35",
+      "bytes": 10632
+    },
+    {
+      "path": "src/tutorial/tutorial.css",
+      "sha256": "913b2d50867c9746060c94619d43af8c6e75a4c7a477dbdd45a9d02ed136bdb8",
+      "bytes": 1869
+    },
+    {
+      "path": "src/workstation/WorkspaceBoundary.tsx",
+      "sha256": "bf45e7ff1230d1e4609a70f9a5437b4e3ed2bab56911180184224845a3eea30a",
+      "bytes": 3796
+    },
+    {
+      "path": "src/workstation/navigationGuard.ts",
+      "sha256": "b0a0b94372e3ed72c906f4cb3db73d579bfe7301b6c4005e4ebf8cccf003a221",
+      "bytes": 1207
+    },
+    {
+      "path": "tests/browser/atlas-expansion.spec.ts",
+      "sha256": "9248fc54f85009af2855acd010ed6de67f2f324e297e85fb3d736d2a3fe0c084",
+      "bytes": 3576
+    },
+    {
+      "path": "tests/browser/centered-orbit.spec.ts",
+      "sha256": "4a6313a7854b3b21d57cef364d60645dd885fb468a27844ceecbad06b5ab787c",
+      "bytes": 2359
+    },
+    {
+      "path": "tests/browser/evidence-workflow.spec.ts",
+      "sha256": "a93ce04c838f11fb3de780a139ef0f1d94fb6a19aa1f86b45e350b4326c088e3",
+      "bytes": 10901
+    },
+    {
+      "path": "tests/browser/layers.spec.ts",
+      "sha256": "17d7952e349d88980abb2e2cb2d603653dd83d02c75505fb28d5ea85bc4aaa1a",
+      "bytes": 4555
+    },
+    {
+      "path": "tests/browser/source-campaign.spec.ts",
+      "sha256": "4832034f5312d6b3852d00bea8cca4cf222d9e6d14201d91a90fc16fb8af4028",
+      "bytes": 3047
+    },
+    {
+      "path": "tests/browser/startup-camera.spec.ts",
+      "sha256": "add124a174149db6550ba8f4447fa8e731ac0000e671fdbcdf25700c98c54d1a",
+      "bytes": 1974
+    },
+    {
+      "path": "tests/browser/tutorial.spec.ts",
+      "sha256": "33a033bd5452f6d7cb82b447574ea5e8068f0afdcfb083b96aed777b58592386",
+      "bytes": 8070
+    },
+    {
+      "path": "tests/browser/viewport-drawers.spec.ts",
+      "sha256": "01311aae18e29ed41442e960c31e2fc60720cc4c19b82777608129a33b43de1c",
+      "bytes": 2392
+    },
+    {
+      "path": "tests/evidence-assembly.test.mjs",
+      "sha256": "5860699b643b96851063b3f0a4e20b34570eaaa00cad7b0af5d704cfede8ff5f",
+      "bytes": 16377
+    },
+    {
+      "path": "tests/evidence-boundaries.test.mjs",
+      "sha256": "59957ba8f11b9b1a367206da31967aee4212d17e0576dd5c7c590ceb9e23821d",
+      "bytes": 11911
+    },
+    {
+      "path": "tests/evidence-campaign.test.mjs",
+      "sha256": "751d1a4a73c4d88dcf083be9f1631a53fe3d828ffa435747c20e680168bed2a2",
+      "bytes": 4437
+    },
+    {
+      "path": "tests/evidence-intelligence.test.mjs",
+      "sha256": "e946d6a022846cb41fc0f9c42cb1fdea2b9c415ff6448d802f55e8e1e2312d8b",
+      "bytes": 18549
+    },
+    {
+      "path": "tests/evidence-view.test.mjs",
+      "sha256": "a7ba3b88efd1eff7dc06bb0852f4b5422d0079f915ad15cd950ec0532afd1514",
+      "bytes": 5701
+    },
+    {
+      "path": "tests/evidence-workflow.test.mjs",
+      "sha256": "5ece4904fdd1079f1697dc038a106effd9b641694e1909939939f0237c83136f",
+      "bytes": 10876
+    },
+    {
+      "path": "tests/live-evidence.test.mjs",
+      "sha256": "7ca0e937cb5d8849f4dacb7de7dc70ed51015c36cb114dce8dc15e00abcc55f3",
+      "bytes": 6602
+    },
+    {
+      "path": "tests/runtime-resilience.test.mjs",
+      "sha256": "7dfde265f7b97436a683e3d29ce9f27dbe34e0841fee0ec1d76fb1b4b88417b9",
+      "bytes": 9916
+    },
+    {
+      "path": "verification/evidence-assembly/browser-validation-20260917.json",
+      "sha256": "da8bbfc2e3a7080ecfec71cd4031a3e076c7f5b05c1c8cb8deb850ad108792a6",
+      "bytes": 5032
+    }
+  ],
+  "release_version": "0.12.0",
+  "sealed_at": "2026-09-18T17:31:29.776Z",
+  "schemas": {
+    "assembly": "giza.evidence-assembly.v1",
+    "quantity": "giza.quantity.v1",
+    "receipt": "giza.evidence-receipt.v2",
+    "investigation": "giza.saved-investigation.v2",
+    "campaign": "giza.scoped-campaign.v1",
+    "comparisonRule": "giza.comparison-rules.v3",
+    "measurementRule": "canonical-measurement.v4",
+    "transformRule": "giza.transform-authority.v2",
+    "conditionalMeasurement": "giza.conditional-measurement.v1",
+    "livePlanRelation": "giza.live-plan-relation.v1",
+    "impactRule": "giza.evidence-impact.v1",
+    "tutorial": "giza.tutorial.v1"
+  }
+}

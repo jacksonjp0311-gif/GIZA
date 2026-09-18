@@ -1,4 +1,4 @@
-# 0.12.0 — Live Evidence + Human Guidance (verification candidate)
+# 0.12.0 — Live Evidence + Human Guidance
 
 - Reproduced and sealed transform-authority leakage: hypothetical resolved
   relations cannot produce ordinary authoritative measurements. Added explicit
@@ -13,7 +13,7 @@
   and Inscription Lab exits.
 - Add interactive fifteen-chapter Tutorial, semantic targets, spotlight,
   keyboard/reduced-motion support and separate presentation-only progress.
-- Split remote browser verification into four exhaustive groups on both OSes;
+- Split remote browser verification into five exhaustive groups on both OSes;
   stream bounded logs so cancellation preserves progress.
 - Preserve prior media, centered-orbit, layer, Atlas and drawer improvements.
 

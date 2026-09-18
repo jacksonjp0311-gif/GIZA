@@ -1,0 +1,54 @@
+
+> giza-nexus-registration-workbench@0.12.0 test:browser
+> playwright test
+
+
+Running 31 tests using 1 worker
+
+  ok  1 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 1280 (9.5s)
+  ok  2 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 390 (4.9s)
+  ok  3 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 844 (5.2s)
+  ok  4 tests\browser\atlas-expansion.spec.ts:19:1 › spherical stones and contextual assembly explosion are reversible (15.1s)
+  ok  5 tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot (6.6s)
+  ok  6 tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery (9.3s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (22.2s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (8.8s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:41:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (6.9s)
+  ok 10 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 1280x800 (3.4s)
+  ok 11 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 390x844 (2.3s)
+  ok 12 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 844x390 (1.6s)
+  ok 13 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas slow does not block core or force workspace navigation (2.3s)
+  ok 14 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas missing does not block core or force workspace navigation (2.6s)
+  ok 15 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas malformed does not block core or force workspace navigation (3.3s)
+  ok 16 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (9.7s)
+  ok 17 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (6.7s)
+  ok 18 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (12.8s)
+  ok 19 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 (7.1s)
+  ok 20 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 (4.1s)
+  ok 21 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 (3.2s)
+  ok 22 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 1280 (8.7s)
+  ok 23 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 390 (4.9s)
+  ok 24 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 844 (4.3s)
+  ok 25 tests\browser\tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping (3.4s)
+  ok 26 tests\browser\tutorial.spec.ts:45:1 › tutorial respects global unsaved research and does not lose a draft (4.2s)
+  ok 27 tests\browser\tutorial.spec.ts:56:1 › reduced motion and high DPI tutorial do not mutate physical exports (12.2s)
+  ok 28 tests\browser\tutorial.spec.ts:70:1 › tutorial scrolls a real quick-view target into its spotlight (5.9s)
+  ok 29 tests\browser\tutorial.spec.ts:83:1 › unavailable optional workspace leaves tutorial recoverable (3.6s)
+  ok 30 tests\browser\viewport-drawers.spec.ts:2:1 › viewport drawers collapse after pointer use and support keyboard (5.2s)
+  ok 31 tests\browser\viewport-drawers.spec.ts:16:1 › touch drawers open and close explicitly (4.0s)
+
+  31 passed (3.8m)
+
+[WebServer] (node:23724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:13568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:6388) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:18760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "live-evidence-012-remote-repair-contracts",
+  "createdAt": "2026-09-18T17:41:22.148Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 0,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

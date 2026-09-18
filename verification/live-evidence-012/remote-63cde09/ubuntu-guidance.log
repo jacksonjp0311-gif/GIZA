@@ -1,0 +1,61 @@
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 9 tests using 1 worker
+
+  ✓  1 tests/browser/source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (7.9s)
+  ✓  2 tests/browser/tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 1280 (11.3s)
+  ✓  3 tests/browser/tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 390 (6.5s)
+  ✓  4 tests/browser/tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 844 (4.8s)
+  ✘  5 tests/browser/tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping (18.6s)
+  ✓  6 tests/browser/tutorial.spec.ts:45:1 › tutorial respects global unsaved research and does not lose a draft (6.0s)
+  ✓  7 tests/browser/tutorial.spec.ts:56:1 › reduced motion and high DPI tutorial do not mutate physical exports (12.6s)
+  ✓  8 tests/browser/tutorial.spec.ts:70:1 › tutorial scrolls a real quick-view target into its spotlight (6.1s)
+  ✓  9 tests/browser/tutorial.spec.ts:83:1 › unavailable optional workspace leaves tutorial recoverable (4.0s)
+
+
+  1) tests/browser/tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('region', { name: 'GIZA tutorial' })
+    Expected substring: "Read maps without mistaking their scope"
+    Received string:    "15 / 36 · Map AtlasOpen the AtlasSource-linked maps are separate from metric 3-D geometry. Tutorial navigation uses the same research guard.Click MAP ATLAS.BackUse highlighted controlExit tutorialChapters & restartChoose a chapter1. Welcome to GIZA NEXUS2. The main workstation3. Navigating 3-D space4. Reality and authority5. Component inspection6. Map Atlas7. Evidence Assembly8. Measurements9. Section Lab10. Evidence graph11. Investigations12. Registration13. Sphinx + Inscription Lab14. Saving and replaying research15. You are readySkip chapterRestart tutorial"
+    Timeout: 15000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('region', { name: 'GIZA tutorial' }) with timeout 15000ms
+      - waiting for getByRole('region', { name: 'GIZA tutorial' })
+        33 × locator resolved to <section tabindex="-1" role="region" class="tutorialPopover" aria-label="GIZA tutorial" aria-describedby="tutorial-description">…</section>
+           - unexpected value "15 / 36 · Map AtlasOpen the AtlasSource-linked maps are separate from metric 3-D geometry. Tutorial navigation uses the same research guard.Click MAP ATLAS.BackUse highlighted controlExit tutorialChapters & restartChoose a chapter1. Welcome to GIZA NEXUS2. The main workstation3. Navigating 3-D space4. Reality and authority5. Component inspection6. Map Atlas7. Evidence Assembly8. Measurements9. Section Lab10. Evidence graph11. Investigations12. Registration13. Sphinx + Inscription Lab14. Saving and replaying research15. You are readySkip chapterRestart tutorial"
+
+
+      39 |   await guide.getByLabel('Tutorial chapter').selectOption('5');
+      40 |   await page.locator(target('surface-atlas')).focus();await page.keyboard.press('Enter');
+    > 41 |   await expect(guide).toContainText('Read maps without mistaking their scope');
+         |                       ^
+      42 |   await guide.getByRole('button',{name:'Restart tutorial',exact:true}).click();await expect(guide).toContainText('A spatial research workstation');
+      43 |   expect(await page.evaluate(()=>performance.getEntriesByName('giza.tutorial.layout').length)).toBeGreaterThan(0);
+      44 | });
+        at /home/runner/work/GIZA/GIZA/tests/browser/tutorial.spec.ts:41:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/tutorial-tutorial-cutout-t-a261d--click-and-chapter-skipping/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/tutorial-tutorial-cutout-t-a261d--click-and-chapter-skipping/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/tutorial-tutorial-cutout-t-a261d--click-and-chapter-skipping/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/tutorial-tutorial-cutout-t-a261d--click-and-chapter-skipping/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping 
+  8 passed (1.6m)

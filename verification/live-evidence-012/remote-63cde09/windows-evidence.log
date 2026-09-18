@@ -1,0 +1,36 @@
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 9 tests using 1 worker
+
+  x  1 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (1.6m)
+  ok 2 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (35.8s)
+  ok 3 tests\browser\evidence-workflow.spec.ts:41:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (21.5s)
+  ok 4 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 1280x800 (13.1s)
+  ok 5 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 390x844 (3.4s)
+  ok 6 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 844x390 (3.4s)
+  ok 7 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas slow does not block core or force workspace navigation (8.5s)
+  ok 8 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas missing does not block core or force workspace navigation (9.7s)
+  ok 9 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas malformed does not block core or force workspace navigation (9.9s)
+
+
+  1) tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore 
+
+    Test timeout of 60000ms exceeded.
+
+    Error Context: test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore 
+  8 passed (3.8m)

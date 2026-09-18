@@ -1,7 +1,7 @@
 {
   "version": "0.12.0",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-18T17:31:29.776Z",
+  "sealed_at": "2026-09-18T17:55:24.570Z",
   "runtime": "Native browser modules; Node shared engine; scoped campaigns lazily compile shared contracts with existing esbuild",
   "new_runtime_npm_dependencies": 0,
   "archaeological_fit_created": false,

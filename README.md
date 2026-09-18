@@ -1,6 +1,9 @@
 # GIZA NEXUS v0.12.0 — Live Evidence + Human Guidance
 
-## 0.12.0 verification candidate
+## 0.12.0 — live evidence and guidance
+
+[Exact-commit verification runs](https://github.com/jacksonjp0311-gif/GIZA/actions/workflows/verify.yml)
+are the authority for remote CI status; local checkpoints alone are not release acceptance.
 
 Start with **Tutorial / ?** in the header for the interactive, fifteen-chapter
 tour. It uses the real workstation controls and protects unsaved research.

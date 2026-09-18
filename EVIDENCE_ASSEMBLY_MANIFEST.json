@@ -16,8 +16,8 @@
     },
     {
       "path": "docs/LIVE_EVIDENCE_INTEGRATION.md",
-      "sha256": "412847839eaba14ab8e8965717a897dfa7f0a4992ff95e2a1dad282c4732360f",
-      "bytes": 5080
+      "sha256": "ccc4e985a50c6169103d960a88b9e053ecd2373616cdda5fe1912c3845fb87f3",
+      "bytes": 5159
     },
     {
       "path": "docs/RELIABILITY_0_11_1.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "docs/TUTORIAL_MODE.md",
-      "sha256": "d585d52351252a00f9856e327983dc4ce5289026ecefcb3f4fe6bc6fced8b46e",
-      "bytes": 3177
+      "sha256": "8dc1adafc744441d388bf1c0bc72ba7b80f61409b36d8070e6de0915cea925d9",
+      "bytes": 3390
     },
     {
       "path": "public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json",
@@ -251,8 +251,8 @@
     },
     {
       "path": "src/tutorial/Tutorial.tsx",
-      "sha256": "ec9e176f66c54040a7be79d546f9bc7ff39dd41c033f53c4a9db44259e5cc1f5",
-      "bytes": 10002
+      "sha256": "f9506c935181730fc479dcd33e88e0ee4424573248d94658d966604f90d3bd0b",
+      "bytes": 10102
     },
     {
       "path": "src/tutorial/curriculum.ts",
@@ -281,13 +281,13 @@
     },
     {
       "path": "tests/browser/centered-orbit.spec.ts",
-      "sha256": "4a6313a7854b3b21d57cef364d60645dd885fb468a27844ceecbad06b5ab787c",
-      "bytes": 2359
+      "sha256": "fabe05b74a7aa64bfba3b9e9ef27ac6fe87ada64e66febcd3c7d75eef2642506",
+      "bytes": 2655
     },
     {
       "path": "tests/browser/evidence-workflow.spec.ts",
-      "sha256": "a93ce04c838f11fb3de780a139ef0f1d94fb6a19aa1f86b45e350b4326c088e3",
-      "bytes": 10901
+      "sha256": "ea63feadef4bf99b0a5afd6e0349a1c1f124db49e7d91a9a87c46931a1bfe0a3",
+      "bytes": 11236
     },
     {
       "path": "tests/browser/layers.spec.ts",
@@ -361,7 +361,7 @@
     }
   ],
   "release_version": "0.12.0",
-  "sealed_at": "2026-09-18T17:31:29.776Z",
+  "sealed_at": "2026-09-18T17:55:24.570Z",
   "schemas": {
     "assembly": "giza.evidence-assembly.v1",
     "quantity": "giza.quantity.v1",
