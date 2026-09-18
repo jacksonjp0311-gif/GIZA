@@ -1,7 +1,7 @@
 {
   "product": "GIZA",
   "codename": "REGISTRATION WORKBENCH",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "model": "Khafre rev.0003",
   "description": "Evidence-governed spatial workstation with strict observations and quantities, canonical measurements, replayable saved investigations, independent optional loading and a scoped source-to-plan registration/review workflow. Existing explorer, atlas, Sphinx and Inscription Lab preserved; no archaeological placement is inferred.",
   "runtime": "React + Three.js + Vite",

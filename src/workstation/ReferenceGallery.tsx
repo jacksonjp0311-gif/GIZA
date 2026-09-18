@@ -14,7 +14,8 @@ function ReferenceFigure({photo:p}:{photo:PhotoRecord}) {
     </figcaption>
   </figure>;
 }
-export function ReferenceGallery({photos}:{photos:PhotoRecord[]}) {
+export function ReferenceGallery({photos:records}:{photos:PhotoRecord[]}) {
+  const photos=uniqueMedia(records);
   const [kind,setKind]=useState('all');
   const visible=photos.filter(p=>kind==='all'||p.kind===kind);
   return <>
@@ -26,3 +27,4 @@ export function ReferenceGallery({photos}:{photos:PhotoRecord[]}) {
     {visible.length?visible.map(p=><ReferenceFigure key={p.id} photo={p}/>):<p>No references of this type are bound to this component.</p>}
   </>;
 }
+import {uniqueMedia} from '../lib/mediaIdentity';

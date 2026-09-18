@@ -1,7 +1,9 @@
+import {Tutorial} from './tutorial/Tutorial';
+import {requestNavigation,useNavigationUnloadGuard} from './workstation/navigationGuard';
 import './maps/atlasWorkspace.css';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { loadModel, type ModelBundle, type Part } from './lib/model';
-import { DEFAULT_WORKSPACE, clearWorkspaceState, loadWorkspaceState, saveWorkspaceState } from './lib/workspace';
+import { DEFAULT_WORKSPACE, clearWorkspaceState, loadWorkspaceState, startupWorkspace, saveWorkspaceState } from './lib/workspace';
 import { uncertaintyForTarget } from './lib/field';
 import type { StoneCellInfo, UiMode, SectionAxis, ViewPreset } from './scene/types';
 import { WorkstationHeader } from './workstation/WorkstationHeader';
@@ -23,13 +25,14 @@ function isInternal(part: Part) {
 }
 
 export default function App() {
+  useNavigationUnloadGuard();
   const [sphinx,setSphinx]=useState<boolean|'stela'>(false);
   const [evidenceAssembly,setEvidenceAssembly]=useState<string|null>(null);
   const [workspaceRevision,setWorkspaceRevision]=useState(0);
   const [model, setModel] = useState<ModelBundle | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loadRevision,setLoadRevision]=useState(0);
-  const [initial] = useState(loadWorkspaceState);
+  const [initial] = useState(()=>startupWorkspace(loadWorkspaceState()));
   const [selectedId, setSelectedId] = useState<string | null>(initial.selectedId);
   const [selectedStone, setSelectedStone] = useState<StoneCellInfo | null>(null);
   const [explode, setExplode] = useState(initial.explode);
@@ -50,7 +53,7 @@ export default function App() {
   const [atlasFocus, setAtlasFocus] = useState<AtlasMapId|null>('plateau');
   const [detail, setDetail] = useState<{id:string;context:DetailContext;revision:number}|null>(null);
   const [activeQuickView,setActiveQuickView]=useState<string|null>('Full Pyramid');
-  const openDetail = useCallback((id:string, context:DetailContext='ROOM') => {
+  const openDetail = useCallback((id:string, context:DetailContext='ROOM') => requestNavigation(()=>{
     setSphinx(false);
     if(['part.sarcophagus.body','part.sarcophagus.lid','part.burial.chamber'].includes(id)){
       setEvidenceAssembly(id);setSelectedId(id);setSurface('MODEL');return;
@@ -59,7 +62,7 @@ export default function App() {
     setActiveQuickView(null);
     setDetail(v=>({id,context,revision:(v?.revision??0)+1}));
     setSelectedId(id);setSelectedStone(null);setTab('OVERVIEW');setSurface('MODEL');
-  }, []);
+  }), []);
 
   const activateView = useCallback((preset: ViewPreset) => {
     setViewPreset(preset);
@@ -79,7 +82,7 @@ export default function App() {
     });
   }, [selectedId, explode, mode, sectionAxis, sectionPos, viewPreset, animationSpeed, showLabels, showDimensions, layers]);
 
-  const resetWorkspace = () => {
+  const resetWorkspace = () => requestNavigation(()=>{
     setWorkspaceRevision(v=>v+1);
     setSphinx(false);
     setEvidenceAssembly(null);
@@ -99,7 +102,7 @@ export default function App() {
     setShowDimensions(DEFAULT_WORKSPACE.showDimensions);
     setLayers(DEFAULT_WORKSPACE.layers);
     setTab('OVERVIEW');
-  };
+  });
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -128,8 +131,8 @@ export default function App() {
       if (key === 'v') { setActiveSimulation('GRAVITY'); setLayers(v => ({ ...v, simulation: true })); setMode('ENGINEER'); setTab('SIMULATION'); }
       if (key === 'j') { setActiveSimulation('STRATA'); setLayers(v => ({ ...v, simulation: true, subsurface: true })); setMode('ENGINEER'); setTab('SIMULATION'); }
       if (key === 'k') { setMode('ENGINEER'); setTab('FINDINGS'); }
-      if (key === 'h') setSurface('REGISTRATION');
-      if (key === 'm') setSurface(v => v === 'MODEL' ? 'ATLAS' : 'MODEL');
+      if (key === 'h') requestNavigation(()=>setSurface('REGISTRATION'));
+      if (key === 'm') requestNavigation(()=>setSurface(v => v === 'MODEL' ? 'ATLAS' : 'MODEL'));
       if (key === 'r') resetWorkspace();
     };
     window.addEventListener('keydown', onKeyDown);
@@ -190,15 +193,16 @@ export default function App() {
         modelTitle={evidenceAssembly?'KHAFRE / EVIDENCE ASSEMBLY':sphinx?'GIZA / THE GREAT SPHINX':activeQuickView ? `KHAFRE / ${activeQuickView.toUpperCase()}` : model.parts.find(p=>p.id===detail?.id)?.name ?? 'KHAFRE / PYRAMID CORE'}
         model={model}
         surface={surface}
-        onSurface={v=>{setSurface(v);if(v!=='MODEL'){setSphinx(false);setEvidenceAssembly(null);}}}
+        onSurface={v=>requestNavigation(()=>{setSurface(v);setSphinx(false);setEvidenceAssembly(null);})}
       />
 
+      <Tutorial/>
       <DataHealthNotice diagnostics={model.runtimeDiagnostics}/>
 
-      {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>setEvidenceAssembly(null)} onLegacy={()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);}}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className={`workspace edgeWorkspace${surface==='ATLAS'?' atlasWorkspace':''}`}>
+      {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>requestNavigation(()=>setEvidenceAssembly(null))} onLegacy={()=>requestNavigation(()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);})}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className={`workspace edgeWorkspace${surface==='ATLAS'?' atlasWorkspace':''}`}>
         <LeftRail
           overviewActive={!detail&&surface==='MODEL'}
-          onOpenSphinx={()=>setSphinx(true)}
+          onOpenSphinx={()=>requestNavigation(()=>setSphinx(true))}
           parts={model.parts}
           onOpenPart={id=>openDetail(id,id.startsWith('part.sarcophagus.')||id.startsWith('part.burial.')?'ROOM':'OBJECT')}
           filter={filter}
@@ -210,19 +214,19 @@ export default function App() {
           viewPreset={viewPreset}
           setViewPreset={activateView}
           onReset={resetWorkspace}
-          onOpenAtlas={id => { setAtlasFocus(id); setSurface('ATLAS'); }}
-          onOpenModel={() => {setWorkspaceRevision(v=>v+1);setSurface('MODEL');setDetail(null);setActiveQuickView('Full Pyramid');}}
+          onOpenAtlas={id => requestNavigation(()=>{ setAtlasFocus(id); setSurface('ATLAS'); })}
+          onOpenModel={() => requestNavigation(()=>{setWorkspaceRevision(v=>v+1);setSurface('MODEL');setDetail(null);setActiveQuickView('Full Pyramid');})}
         />
 
         <SpatialViewport
-          onArtifact={()=>{setSurface('MODEL');setSphinx('stela');}}
+          onArtifact={()=>requestNavigation(()=>{setSurface('MODEL');setSphinx('stela');})}
           key={workspaceRevision}
           animationSpeed={animationSpeed}
           showDimensions={showDimensions&&layers.measurements}
           setShowDimensions={setShowDimensions}
           detail={detail}
           onOpenDetail={openDetail}
-          onCloseDetail={()=>{setDetail(null);setActiveQuickView('Full Pyramid');}}
+          onCloseDetail={()=>requestNavigation(()=>{setDetail(null);setActiveQuickView('Full Pyramid');})}
           model={model}
           parts={displayedParts}
           selectedId={selectedId}
@@ -244,11 +248,11 @@ export default function App() {
           activeSimulation={activeSimulation}
           uncertainty={layers.measurements && mode === 'ENGINEER' ? selectedUncertainty : null}
           activeQuickView={activeQuickView}
-          quickViews={quickViews.map(v => ({ ...v, action: () => { setSphinx(false);setSurface('MODEL');setDetail(null); v.action();setActiveQuickView(v.label); } }))}
+          quickViews={quickViews.map(v => ({ ...v, action: () => requestNavigation(()=>{ setSphinx(false);setSurface('MODEL');setDetail(null); v.action();setActiveQuickView(v.label); }) }))}
           onSelectPart={id => selectPart(id)}
           onSelectStone={selectStone}
           surface={surface}
-          onSurface={setSurface}
+          onSurface={v=>requestNavigation(()=>setSurface(v))}
           atlasFocus={atlasFocus}
           onAtlasFocus={setAtlasFocus}
         />

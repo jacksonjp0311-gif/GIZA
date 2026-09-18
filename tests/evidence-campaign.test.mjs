@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {campaignFixture} from '../scripts/evidence/campaign-fixture.mjs';
-import {acquireCampaign,freezeCampaign,fitCampaign,exportCampaign,replayCampaign,reviewCampaign,rollbackCampaign,verifyAcquisition} from '../scripts/evidence/campaign.mjs';
+import {acquireCampaign,freezeCampaign,fitCampaign,exportCampaign,replayCampaign,reviewCampaign,rollbackCampaign,verifyAcquisition,liveCampaignRelation} from '../scripts/evidence/campaign.mjs';
 import {ROOTS,readJson} from '../scripts/plate_registration/engine.mjs';
 const root=()=>path.join(fs.mkdtempSync(path.join(os.tmpdir(),'giza-scoped-campaign-')),'campaign');
 test('positive source bytes → freeze → shared fit → replay → reviewed 2D revision → rollback',async()=>{
@@ -12,7 +12,11 @@ test('positive source bytes → freeze → shared fit → replay → reviewed 2D
   const packet=exportCampaign(r),replay=await replayCampaign(root(),packet);assert.equal(replay.result.passed,true);
   const original=fs.readFileSync(path.join(r,'assembly.json')),revision=await reviewCampaign(r,{reviewer:'Synthetic QA operator',note:'Software-only success, no archaeological promotion.',acceptPlanScope:true});
   assert.equal(revision.payload.relationship.dimension,'PLAN_2D_ONLY');assert.equal(revision.payload.canonicalGeometryChanged,false);assert.equal(revision.payload.classification,'SYNTHETIC_SOFTWARE_QA');
+  const live=await liveCampaignRelation(r);
+  assert.equal(live.payload.authority,'HYPOTHESIS');assert.equal(live.payload.dimensionalScope,'PLAN_2D_ONLY');assert.equal(live.payload.physical3DPlacement,'UNRESOLVED');
+  assert.equal(live.payload.holdouts.length,2);assert.equal(live.payload.replay.reproduced,true);assert.equal(live.payload.revisionId,revision.id);
   assert.equal(rollbackCampaign(r,'Software rollback proof').restore,'BASE_ASSEMBLY');assert.deepEqual(fs.readFileSync(path.join(r,'assembly.json')),original);assert.ok(fs.existsSync(path.join(r,'accepted-revision.json')));
+  await assert.rejects(liveCampaignRelation(r),/NO_ACTIVE_REVIEWED_REVISION/);
 });
 test('failed holdout is retained and cannot become an accepted revision',async()=>{
   const r=root(),f=campaignFixture();f.input.landmarks[4].target_m.x+=2;await acquireCampaign(r,f);freezeCampaign(r,f.input);const result=fitCampaign(r);assert.equal(result.result.passed,false);assert.equal(result.result.holdout_residuals.length,2);

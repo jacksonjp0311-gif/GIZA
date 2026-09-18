@@ -9,6 +9,7 @@ import {spawnSync} from 'node:child_process';
 import {ROOTS, VERSION, GateError, readJson, inside, atomicJson, freezeLandmarks, fitFrozen, sha, hashObject} from '../plate_registration/engine.mjs';
 import {fitSimilarity,applySimilarity,residuals,summarizeResiduals,frameDiagonal} from '../plate_registration/math.mjs';
 const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const productVersion=JSON.parse(fs.readFileSync(path.join(repo,'package.json'),'utf8')).version;
 const root=path.resolve(process.env.GIZA_ROOT||repo),port=Number(process.env.GIZA_PORT||4174);
 const token=crypto.randomBytes(32).toString('hex');
 const has=rel=>fs.existsSync(inside(root,rel));
@@ -56,6 +57,9 @@ const server=http.createServer(async(req,res)=>{
         else if(payload.action==='export')result=api.exportCampaign(campaignRoot);
         else if(payload.action==='replay')result=await api.replayCampaign(campaignRoot,payload.input);
         else if(payload.action==='review')result=await api.reviewCampaign(campaignRoot,payload.input);
+        else if(payload.action==='live-relation')result=await api.liveCampaignRelation(campaignRoot);
+        else if(payload.action==='replay-verification')result=await api.replayCampaignVerification(campaignRoot);
+        else if(payload.action==='revision-state')result=api.campaignRevisionState(campaignRoot);
         else if(payload.action==='rollback')result=api.rollbackCampaign(campaignRoot,payload.input?.reason);
         else throw new GateError('CAMPAIGN_ACTION_REQUIRED');
         return send(res,200,result);
@@ -80,7 +84,7 @@ const server=http.createServer(async(req,res)=>{
       const s=state();if(!s.render.present)throw new GateError('VERIFIED_RENDER_MISSING');
       return staticFile(res,inside(root,readJson(root,ROOTS.handoff).local_custody.plate_vi_render_path));
     }
-    if(url.pathname==='/api/health')return send(res,200,{ok:true,version:VERSION,loopback_only:true});
+    if(url.pathname==='/api/health')return send(res,200,{ok:true,version:VERSION,productVersion,loopback_only:true});
     const route=url.pathname==='/'||url.pathname==='/workbench'||url.pathname==='/workbench/'?'/index.html':url.pathname.replace(/^\/workbench/,'');
     const base=path.join(repo,'public/workbench'); const full=path.resolve(base,'.'+decodeURIComponent(route));
     if(!full.startsWith(base+path.sep)||!fs.existsSync(full)||!fs.statSync(full).isFile())return send(res,404,{error:'NOT_FOUND'});
@@ -88,4 +92,4 @@ const server=http.createServer(async(req,res)=>{
   }catch(e){return send(res,e instanceof GateError?409:500,{error:e.code??'INTERNAL_ERROR',message:e.message});}
 });
 server.on('error',e=>{console.error(e.message);process.exitCode=1;});
-server.listen(port,'127.0.0.1',()=>console.log(`GIZA ${VERSION} Registration Workbench: http://127.0.0.1:${port}/workbench/`));
+server.listen(port,'127.0.0.1',()=>console.log(`GIZA ${productVersion} Registration Workbench (engine ${VERSION}): http://127.0.0.1:${port}/workbench/`));

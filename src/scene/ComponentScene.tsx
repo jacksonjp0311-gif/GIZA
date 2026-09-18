@@ -24,7 +24,7 @@ function DetailCamera({target,radius,revision,top}:{target:V3;radius:number;revi
     ref.current.target.set(...target);camera.position.copy(direction.multiplyScalar(distance).add(ref.current.target));
     ref.current.update();
   },[camera,size.width,size.height,radius,target[0],target[1],target[2],revision,top]);
-  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.12} zoomToCursor
+  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.12} zoomToCursor={false}
     minDistance={Math.max(.15,radius*.12)} maxDistance={Math.max(30,radius*16)}
     rotateSpeed={.55} zoomSpeed={.8} panSpeed={.7} screenSpacePanning
     minPolarAngle={.02} maxPolarAngle={Math.PI-.02}/>;

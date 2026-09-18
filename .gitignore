@@ -18,6 +18,10 @@ credentials.json
 .vault-cache/
 .giza-research/
 verification-ci/
+# Large local failure traces remain preserved on disk and indexed by hash.
+verification/evidence-boundaries/hover-drawers-browser-a/**/trace.zip
+verification/evidence-boundaries/media-orbit-browser-a/**/trace.zip
+verification/evidence-boundaries/live-evidence-012-browser-a/**/trace.zip
 public/vault/raw/*
 !public/vault/raw/README.md
 !public/vault/raw/.gitkeep

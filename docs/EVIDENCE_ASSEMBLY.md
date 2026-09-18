@@ -1,5 +1,10 @@
 # Khafre Evidence Assembly / contract v1
 
+Current 0.12.0 behavior is specified in [Live Evidence Integration](LIVE_EVIDENCE_INTEGRATION.md).
+The dated 0.10.12 implementation description below is historical, not the
+current product version. Measurement applicability now uses
+canonical-measurement.v4; archived rules remain explicitly replayable.
+
 The [boundary evolution addendum](EVIDENCE_BOUNDARY_EVOLUTION.md) documents shared observation validation, quantity metadata, query purpose and v2 receipt applicability. The original contract and historical results below remain preserved.
 
 Implemented 2026-09-17 in place. The sealed product identity remains 0.10.12; the compile-first launcher produces a distinct development build. This module is `giza.evidence-assembly.v1`, not a revision of archaeological measurements. Historical module versions and failed registration receipts remain historical.

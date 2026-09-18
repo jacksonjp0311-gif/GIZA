@@ -1,3 +1,4 @@
+import {TeachButton} from '../tutorial/Tutorial';
 import {ReadableMap} from './ReadableMap';
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { ModelBundle } from '../lib/model';
@@ -47,7 +48,7 @@ export function MapAtlasPanel({model,atlas,focusMap,onSelectPart,onActiveMap}:{
 
   const guards:Record<AtlasMapId,string>={plateau:atlas.plateau.guard,ritual:atlas.ritual.guard,action:atlas.action.guard,rooms:atlas.rooms.guard,visibility:atlas.visibility.guard,metric:atlas.metric.guard,survey:atlas.survey.guard,geology:atlas.geology.guard,history:atlas.history.guard,intent:atlas.intent.guard,photos:atlas.photos.guard};
 
-  return <div className="mapAtlasRoot">
+  return <div data-tutorial-id="atlas" className="mapAtlasRoot"><TeachButton chapter={5}/>
     <AtlasNavigator manifest={atlas.manifest} activeMap={activeMap} layers={layers} onMap={go} onToggleLayer={toggle}/>
     <div ref={scrollRef} className="mapAtlasScroller" onScroll={onScroll}>
       <div className="atlasHero">

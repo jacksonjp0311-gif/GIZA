@@ -17,7 +17,7 @@ for(const viewport of [{width:1280,height:800},{width:390,height:844},{width:844
   await page.getByRole('button',{name:'3D MODEL',exact:true}).click();await expect(page.locator('.leftRail')).toBeVisible();
 });
 test('spherical stones and contextual assembly explosion are reversible',async({page})=>{
-  await page.goto('/?layerDiagnostics=1');await page.getByLabel('Stone arrangement').selectOption('SPHERE');
+  await page.goto('/?layerDiagnostics=1');await page.getByRole('button',{name:'Explode',exact:true}).hover();await page.getByLabel('Stone arrangement').selectOption('SPHERE');
   await page.getByRole('slider',{name:'Explosion distance',exact:true}).fill('2.75');
   const canvas=page.locator('canvas').first();
   const expansion=async()=>JSON.parse(await canvas.getAttribute('data-layer-diagnostics')??'{}').expansions?.[0];

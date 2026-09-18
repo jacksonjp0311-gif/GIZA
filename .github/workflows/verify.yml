@@ -24,11 +24,7 @@ jobs:
         run: node scripts/ci-stage.mjs contracts
       - id: compilation
         run: node scripts/ci-stage.mjs compilation
-      - id: browserSetup
-        run: node scripts/ci-stage.mjs browserSetup
-      - id: browser
-        run: node scripts/ci-stage.mjs browser
-      - name: Compile and launch smoke (also after browser failure)
+      - name: Compile and launch smoke
         if: ${{ always() && steps.compilation.outcome == 'success' }}
         run: node scripts/ci-stage.mjs smoke
         env:
@@ -39,6 +35,46 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: verification-${{ matrix.os }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            verification-ci/
+            test-results/
+            playwright-report/
+  browser:
+    needs: verify
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        group: [core, evidence, atlas, guidance]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      GIZA_BROWSER_GROUP: ${{ matrix.group }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: node scripts/ci-stage.mjs dependencies
+      - name: Cache Chromium downloads
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/AppData/Local/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - run: node scripts/ci-stage.mjs browserSetup
+      - run: node scripts/ci-stage.mjs browser
+      - name: Preserve public browser verification
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: browser-${{ matrix.os }}-${{ matrix.group }}-${{ github.run_attempt }}
           retention-days: 14
           if-no-files-found: warn
           path: |

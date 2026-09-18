@@ -1,3 +1,4 @@
+import {TeachButton} from '../tutorial/Tutorial';
 import {useEffect,useState} from 'react';
 import type {EvidenceAssembly,EvidenceFeature} from './types';
 import type {SpatialEvidenceGraph} from './graph';
@@ -25,7 +26,7 @@ export function InvestigationPanel({assembly,graph,candidates,selected,feature,o
     {candidate&&<>
       <span className="evidenceBadge">{candidate.authority} · {candidate.status}</span><h3>{candidate.title}</h3><p>{candidate.detected}</p>
       <div className="evidenceReadout"><small>{candidate.computation.method}</small><p><code>{candidate.computation.expression}</code></p><strong>{typeof candidate.computation.result==='number'?formatValue(candidate.computation.result,candidate.computation.unit):candidate.computation.result??'UNKNOWN'}</strong><p>Uncertainty: {formatValue(candidate.uncertainty.value,candidate.uncertainty.unit)}</p><p>{candidate.uncertainty.note}</p></div>
-      <h4>Exact evidence / computation inputs</h4>{candidate.computation.inputs.map(i=><p key={i.id}><code>{i.id}</code><br/>{typeof i.value==='number'?formatValue(i.value,i.unit):i.value??'UNKNOWN'}</p>)}
+      <TeachButton chapter={10}/><h4>Exact evidence / computation inputs</h4>{candidate.computation.inputs.map(i=><p key={i.id}><code>{i.id}</code><br/>{typeof i.value==='number'?formatValue(i.value,i.unit):i.value??'UNKNOWN'}</p>)}
       <details><summary>Evidence IDs and 3-D locations</summary>{candidate.evidenceIds.map(id=><p key={id}><code>{id}</code></p>)}<div className="actions">{candidate.featureIds.map(id=><button key={id} onClick={()=>onLocate(id)}>{assembly.features.find(f=>f.id===id)?.label??id}</button>)}</div></details>
       <h4>Alternative / null explanations</h4><ul>{candidate.alternatives.map(s=><li key={s}>{s}</li>)}</ul><h4>What would falsify it?</h4><p>{candidate.falsification.test}</p><ul>{candidate.falsification.neededEvidence.map(s=><li key={s}>{s}</li>)}</ul>
       <button disabled={busy} onClick={()=>perform(()=>runCandidateExperiment(candidate,graph,context()))}>Run reproducible computation</button>

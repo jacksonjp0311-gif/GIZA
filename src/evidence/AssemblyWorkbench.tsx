@@ -1,3 +1,6 @@
+import {LiveEvidencePanel} from './LiveEvidencePanel';
+import {integrateLiveRelation,isLiveRevisionActive,type LiveRelation} from './liveEvidence';
+import {requestNavigation,useResearchDraft} from '../workstation/navigationGuard';
 import {useCallback,useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import type {ModelBundle} from '../lib/model';
 import {GIZA_BUILD,GIZA_DISPLAY_VERSION} from '../version';
@@ -23,7 +26,19 @@ type Panel='EVIDENCE'|'MEASURE'|'SECTION'|'COMPARE'|'INVESTIGATE'|'VIEWS';
 const JOURNAL_KEY='giza.evidence-assembly.journal.v1';
 export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequested,onLegacy:onLegacyRequested}:{model:ModelBundle;initialPart:string;onClose:()=>void;onLegacy:()=>void}){
   const currentAssembly=useMemo(()=>buildKhafreAssembly(model),[model.measurements,model.componentResearch,model.parts,model.sourceRegistry,model.field.geospatialFrame]);
-  const [archivedAssembly,setArchivedAssembly]=useState<EvidenceAssembly|null>(null),assembly=archivedAssembly??currentAssembly,baseGraph=useMemo(()=>buildEvidenceGraph(assembly),[assembly]);
+  const [archivedAssembly,setArchivedAssembly]=useState<EvidenceAssembly|null>(null),assembly=archivedAssembly??currentAssembly;
+  const [liveRecords,setLiveRecords]=useState<LiveRelation[]>([]);
+  const [liveNotice,setLiveNotice]=useState('');
+  useEffect(()=>{
+    let active=true,busy=false;
+    const check=async()=>{if(busy||document.visibilityState==='hidden'||!liveRecords.length)return;busy=true;
+      const states=await Promise.all(liveRecords.map(async r=>({r,valid:await isLiveRevisionActive(r)})));
+      if(active&&states.some(s=>!s.valid)){setLiveRecords(current=>current.filter(r=>!states.some(s=>s.r===r&&!s.valid)));setLiveNotice('A live campaign was rolled back, changed, or could not be checked. Its session link was removed. Preserved research remains available; replay before linking again.');}busy=false;
+    };
+    window.addEventListener('focus',check);document.addEventListener('visibilitychange',check);
+    return()=>{active=false;window.removeEventListener('focus',check);document.removeEventListener('visibilitychange',check);};
+  },[liveRecords]);
+  const baseGraph=useMemo(()=>{let g=buildEvidenceGraph(assembly);if(!archivedAssembly)for(const r of liveRecords){try{g=integrateLiveRelation(g,r,assembly);}catch{/* Changed snapshots cannot silently reuse a live relationship. */}}return g;},[assembly,archivedAssembly,liveRecords]);
   const candidates=useMemo(()=>generateInvestigationCandidates(assembly,baseGraph),[assembly,baseGraph]);
   const [selectedId,setSelectedId]=useState(()=>initialPart.includes('lid')?'feature.lid.envelope':initialPart.includes('chamber')?'feature.chamber.doorway':'feature.coffer.wall.west');
   const selected=assembly.features.find(f=>f.id===selectedId)??assembly.features[0];
@@ -65,9 +80,10 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
   const plane=useMemo(()=>restoredPlane!==undefined?restoredPlane:sectionPlane(section),[section,restoredPlane]);
   const draft={points,frameId:measureFrame,mode:pickMode,section:plane};
   const signature=canonicalJson(draft),[savedSignature,setSavedSignature]=useState('');
-  const dirty=reviewDirty||(points.length>0&&signature!==savedSignature);
-  useEffect(()=>{const warn=(e:BeforeUnloadEvent)=>{if(dirty){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',warn);return()=>window.removeEventListener('beforeunload',warn);},[dirty]);
-  const guardLeave=(action:()=>void)=>{if(!dirty||window.confirm('This measurement has unsaved changes. Leave without saving the investigation?'))action();};
+  const baselineDraft=useRef(signature);
+  const dirty=reviewDirty||signature!==(savedSignature||baselineDraft.current);
+  useResearchDraft(dirty);
+  const guardLeave=requestNavigation;
   const onClose=()=>guardLeave(onCloseRequested),onLegacy=()=>guardLeave(onLegacyRequested);
   const restore=(record:SavedInvestigation)=>guardLeave(()=>{
     const p=record.payload,d=p.draft,s=d.section,n=s?Math.hypot(...s.normal):1;
@@ -79,15 +95,16 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
   });
   const names:Record<Panel,string>={EVIDENCE:'Feature evidence',MEASURE:'Spatial measurement',SECTION:'Section laboratory',COMPARE:'Source / model comparison',INVESTIGATE:'Investigation workspace',VIEWS:'View & assembly'};
   return <div className="evidenceWorkbench" data-evidence-workbench>
-    <header className="evidenceHeader"><button onClick={onClose}>← Workstation</button><div><small>{archivedAssembly?'ARCHIVED INPUTS — ORIGINAL SNAPSHOT':'EVIDENCE ASSEMBLY / 01'}</small><h2>Sarcophagus · lid · burial chamber</h2></div><nav className="evidenceTools" aria-label="Spatial interrogation tools">{(['EVIDENCE','MEASURE','SECTION','COMPARE','INVESTIGATE','VIEWS'] as Panel[]).map(p=><button key={p} aria-pressed={panel===p} onClick={()=>setPanel(v=>v===p?null:p)}>{p==='EVIDENCE'?'Evidence':p==='MEASURE'?'Measure':p==='SECTION'?'Section':p==='COMPARE'?'Compare':p==='INVESTIGATE'?'Investigate':'Views'}</button>)}</nav></header>
+    <header className="evidenceHeader"><button onClick={onClose}>← Workstation</button><div><small>{archivedAssembly?'ARCHIVED INPUTS — ORIGINAL SNAPSHOT':'EVIDENCE ASSEMBLY / 01'}</small><h2>Sarcophagus · lid · burial chamber</h2></div><nav data-tutorial-id="evidence-tools" className="evidenceTools" aria-label="Spatial interrogation tools">{(['EVIDENCE','MEASURE','SECTION','COMPARE','INVESTIGATE','VIEWS'] as Panel[]).map(p=><button data-tutorial-id={"tool-"+p.toLowerCase()} key={p} aria-pressed={panel===p} onClick={()=>setPanel(v=>v===p?null:p)}>{p==='EVIDENCE'?'Evidence':p==='MEASURE'?'Measure':p==='SECTION'?'Section':p==='COMPARE'?'Compare':p==='INVESTIGATE'?'Investigate':'Views'}</button>)}</nav></header>
     <div className={`evidenceStage${panel?' hasPanel':''}`}><section className="evidenceView" aria-label="Evidence Assembly 3-D viewport"><div className="evidenceViewbar"><button aria-pressed={room} onClick={()=>{setRoom(v=>!v);setIsolated(null);command(room?'OBJECT':'ROOM');}}>{room?'Isolate coffer assembly':'Show burial chamber'}</button><button onClick={()=>command(room?'ROOM':'OBJECT')}>Fit · F</button><button onClick={()=>command('TOP')}>Top</button><details className="assemblyExplode"><summary>Explode / restore</summary><label>Detached lid · presentation only<input aria-label="Assembly explosion distance" type="range" min="0" max="3" step=".01" value={explode} onChange={e=>setExplode(Number(e.target.value))}/></label><button onClick={()=>setExplode(0)}>Restore inspection stand</button><small>Physical lid placement remains UNKNOWN. This does not split monolithic stone or change measurements.</small></details><div className="evidenceLegend" aria-label="Reality layers">{(['OBSERVED','RECONSTRUCTED','HYPOTHESIS'] as RealityAuthority[]).map(layer=><label key={layer}><input type="checkbox" aria-label={`${layer} reality layer`} checked={layers[layer]} onChange={e=>setLayers(v=>({...v,[layer]:e.target.checked}))}/><i className={layer.toLowerCase()}/>{layer}</label>)}</div></div>
       <div className="evidenceCanvas"><AssemblyScene key={canvasRevision} assembly={assembly} selectedId={selected.id} layers={layers} room={room} isolated={isolated} explode={explode} plane={plane} caps={section.caps} hotspots={hotspots} points={points} camera={camera} onBookmark={onBookmark} onCameraReader={onCameraReader} onPick={dispatchPick} onLost={()=>setGlLost(true)} onRestored={()=>setGlLost(false)} comparison={comparison&&layers.HYPOTHESIS} legacy={legacy}/>{glLost&&<div className="evidenceWebglAlert" role="alert"><h3>Graphics context interrupted</h3><p>Evidence and measurements are retained.</p><button onClick={()=>{setCanvasRevision(v=>v+1);setGlLost(false);command(room?'ROOM':'OBJECT');}}>Recreate 3-D viewport</button></div>}</div>
       <div className="evidenceStatus" aria-live="polite"><span>{status}</span><span>m · X east / Y north / Z up · {panel==='MEASURE'?'Click to measure':'Drag rotate · wheel zoom · right-drag pan'}</span></div>
-    </section><aside className="evidencePanel" hidden={!panel} aria-label={panel?names[panel]:'Contextual tools'}><header><h3>{panel?names[panel]:''}</h3><button aria-label="Close contextual panel" onClick={()=>setPanel(null)}>×</button></header>
+    </section><aside data-tutorial-id={panel==="MEASURE"?"measurement-panel":panel==="SECTION"?"section-panel":panel==="INVESTIGATE"?"investigation-panel":panel==="EVIDENCE"?"feature-evidence":"evidence-panel"} className="evidencePanel" hidden={!panel} aria-label={panel?names[panel]:'Contextual tools'}><header><h3>{panel?names[panel]:''}</h3><button aria-label="Close contextual panel" onClick={()=>setPanel(null)}>×</button></header>
       {panel==='EVIDENCE'&&<FeaturePanel assembly={assembly} graph={graph} feature={selected} onSelect={chooseFeature} layers={layers} model={model}/>}
       {panel==='MEASURE'&&<><label>Feature for precise anchors<select aria-label="Measurement feature" value={selected.id} onChange={e=>chooseFeature(e.target.value)}>{assembly.features.filter(f=>f.geometry.kind!=='unknown').map(f=><option key={f.id} value={f.id}>{f.label}</option>)}</select></label><MeasurementTools assembly={assembly} feature={selected} points={points} onPoints={setPoints} mode={pickMode} onMode={setPickMode} frame={measureFrame} onFrame={setMeasureFrame} snap={snap} onSnap={setSnap}/></>}
       {panel==='SECTION'&&<SectionTools assembly={assembly} state={section} onChange={value=>{setRestoredPlane(undefined);setSection(value);}}/>}
-      {panel==='COMPARE'&&<ComparisonPanel assembly={assembly} overlay={comparison} onOverlay={v=>{setComparison(v);if(v)setLayers(s=>({...s,HYPOTHESIS:true}));}}/>}
+      {panel==='COMPARE'&&<LiveEvidencePanel experiments={journal} candidates={candidates} onInvestigate={()=>setPanel("INVESTIGATE")} assembly={assembly} graph={baseGraph} records={liveRecords} onAdd={r=>setLiveRecords(v=>[...v.filter(p=>p.sha256!==r.sha256),r])} onRemove={r=>setLiveRecords(v=>v.filter(p=>p!==r))}/>}
+      {panel==='COMPARE'&&<><p role="status">{liveNotice}</p><ComparisonPanel assembly={assembly} overlay={comparison} onOverlay={v=>{setComparison(v);if(v)setLayers(s=>({...s,HYPOTHESIS:true}));}}/></>}
       <div hidden={panel!=='INVESTIGATE'}>{preservedRaw!==null&&<button onClick={()=>downloadJson('GIZA-preserved-unreadable-journal.txt',preservedRaw)}>Export preserved stored bytes</button>}<InvestigationPanel assembly={assembly} graph={baseGraph} candidates={candidates} selected={candidateId} feature={selected} onCandidate={setCandidateId} onLocate={locate} context={receiptContext} journal={journal} onAppend={addReceipt} journalMessage={journalMessage} onDraftChange={setReviewDirty}/></div>
       {panel==='VIEWS'&&<>
         <button onClick={()=>command('ENTIRE')}>Fit entire assembly (including hidden geometry)</button>

@@ -95,7 +95,7 @@ export function ObjectInspectorPanel({
   const surveyTie=model.field.geospatialFrame.local_frame.rotation_to_monument;
 
   return (
-    <aside className="rightRail edgeRight inspectorDock">
+    <aside data-tutorial-id="object-inspector" className="rightRail edgeRight inspectorDock">
       <section className="panelCard inspectorHead">
         <div className="inspectorTitle">
           <b>OBJECT INSPECTOR</b>

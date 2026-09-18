@@ -1,0 +1,19 @@
+.tutorialRoot{position:fixed;inset:0;z-index:10000;pointer-events:none}
+.tutorialShade{position:fixed;background:rgba(0,7,12,.70);pointer-events:auto}
+.tutorialOutline{position:fixed;border:2px solid #ecc67c;border-radius:12px;box-shadow:0 0 13px #59cce577,inset 0 0 8px #efc57733;pointer-events:none}
+.tutorialPopover,.tutorialWelcome{color:#f4dfb4;background:#102029;border:1px solid #b79b64;border-radius:9px;box-shadow:0 6px 24px #0009;padding:14px;font:14px/1.5 system-ui,sans-serif}
+.tutorialPopover{position:fixed;overflow:auto;pointer-events:auto;box-sizing:border-box}
+.tutorialPopover h2{font:600 18px/1.3 system-ui;margin:8px 0}
+.tutorialPopover nav{display:flex;gap:6px;flex-wrap:wrap}
+.tutorialPopover button,.tutorialWelcome button{min-height:36px;margin:3px;padding:5px 9px;color:#f4dfb4;background:#17303c;border:1px solid #ad8a4b;border-radius:4px;cursor:pointer}
+.tutorialPopover button:disabled{color:#a7b0b4;background:#182126;border-color:#4d5a60;cursor:default}
+.tutorialPopover select{color:#f4dfb4;background:#17303c;border:1px solid #ad8a4b;min-height:36px}
+.tutorialPopover select{max-width:100%;width:100%}
+.tutorialPopover :focus-visible{outline:2px solid #66d9ed;outline-offset:3px}
+.tutorialWelcome{display:flex;align-items:center;gap:8px;padding:4px 8px;box-sizing:border-box}
+#giza-welcome-slot:empty{display:none}
+#giza-welcome-slot{grid-column:1 / -1;min-width:0}
+.app.nexusEdge:has(.tutorialWelcome){grid-template-rows:132px minmax(0,1fr) 28px}
+@media(max-width:720px){.app.nexusEdge:has(.tutorialWelcome){grid-template-rows:176px minmax(0,1fr) 28px}.tutorialWelcome{flex-wrap:wrap;font-size:12px;gap:2px}.tutorialWelcome p{display:none}.tutorialWelcome button{font-size:12px;min-height:30px}}
+.tutorialWelcome p{margin:7px 0}
+@media(prefers-reduced-motion:reduce){.tutorialRoot *{animation:none!important;transition:none!important}}

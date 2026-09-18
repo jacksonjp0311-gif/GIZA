@@ -61,6 +61,13 @@ export function sanitizeWorkspace(value:unknown):WorkspaceState {
     showLabels:typeof v.showLabels==='boolean'?v.showLabels:defaults.showLabels,showDimensions:typeof v.showDimensions==='boolean'?v.showDimensions:defaults.showDimensions};
 }
 
+/** Startup is a model overview, not an implicit resume of a transient inspection pose.
+ * Research journals and saved investigation snapshots are separate and untouched. */
+export function startupWorkspace(saved:WorkspaceState):WorkspaceState {
+  return {...saved,selectedId:DEFAULT_WORKSPACE.selectedId,explode:0,sectionAxis:'OFF',sectionPos:0,viewPreset:'PERSPECTIVE',mode:'EXPLORE',
+    layers:{...saved.layers,exterior:true,xray:false,subsurface:false,simulation:false}};
+}
+
 export function loadWorkspaceState(): WorkspaceState {
   if (typeof window === 'undefined') return DEFAULT_WORKSPACE;
   try {

@@ -1,4 +1,115 @@
+# 0.12.0 live evidence + guidance — 2026-09-18
+
+Base commit: 3074047ce8c39950b5d03814b1a40408f55c7739. The working tree
+included subsequent centered-camera, media, layer and drawer improvements;
+those were preserved. This section is a dated verification record, not a claim
+that synthetic campaign success establishes archaeology.
+
+## Reproduced and repaired
+
+- A RESOLVED HYPOTHESIS rigid transform produced an ordinary KNOWN result.
+- Its graph wrapper incorrectly became RECONSTRUCTED.
+- A feature-owned constraint's observation was absent from derived traversal.
+- Imported registration verification flags were not a local replay capability.
+
+The first three pre-repair failures are retained in
+verification/live-evidence-012/reproduction.md. New adversarial tests cover
+conditional chains/assumptions, imported claims, owned constraints, unrelated
+context and deterministic impact. Synthetic campaign tests retain custody,
+untouched holdouts, scoped review and rollback. No canonical archaeological
+data was adjusted to make tests pass.
+
+## Executed local verification
+
+Environment: Windows, Node 24.18.0, Chromium 153.0.8010.12, headless
+SwiftShader, AMD Ryzen 5 3500. Complete check checkpoints integrity-a and
+integrity-b passed. The version-transition integrity-final failed on the
+hard-coded old release identity; both identity fields were corrected without
+weakening the check. live-evidence-012-integrity-final-b passed: 201 tests,
+TypeScript, inherited validators, Evidence Assembly validation and workbench
+build. npm start -- --smoke compiled 0.12.0, reached both services and exited
+successfully on dedicated ports 4183/4184.
+
+Browser checkpoint live-evidence-012-browser-a: 24 passed, 4 failed because the
+first-use welcome covered controls. The welcome moved into a dedicated header
+row. Checkpoint browser-b: 28 passed. Checkpoint browser-c: 29 passed, including
+the actual campaign-to-live-graph/rollback path and tutorial keyboard/resize
+behavior. Additional targeted tutorial/campaign run: 9 passed, including
+scroll targeting and an unavailable optional Atlas. Earlier failures and their
+artifacts remain preserved. live-evidence-012-browser-final passed all 31
+tests, including measurement-fingerprint invariance across tutorial use.
+Screenshots cover 1280×800, 390×844, 844×390 and 1440×900 at device scale 2.
+The final focused contract/campaign rerun passed all 14 tests.
+
+Large new failure trace ZIPs remain intact locally and are listed with
+SHA-256/size in verification/live-evidence-012/local-traces.json. They are not
+Git release objects; prior tracked historical traces remain unchanged.
+
+## Performance observations, not certification
+
+Comparable environment and readiness criterion, four fresh browser contexts:
+the retained 0.11.1 profile had ordinary-start samples 880.0, 622.1, 642.9 ms;
+the current implementation measured 1032.7, 436.7, 473.5 ms. The 5-second
+optional-Atlas delay sample reached usable core at 677.4 ms before and 622.2 ms
+now. Each recorded 64 requests, including 55 model requests. These few samples
+do not support a general startup-speed claim.
+
+Current idle RAF p95 samples: 93.4, 50.3, 50.2, 35.0 ms. Real-drag scheduling
+p95: 67.9, 63.0, 57.8, 60.9 ms. These measure page scheduling under SwiftShader,
+not GPU frame duration. Heap estimates were 19.3–20.5 MB, not process memory.
+Tutorial layout updates measured 0.5–1.7 ms maximum per sample (1–2 updates),
+not a continuous per-frame React loop.
+
+Idle CPU profile, ten samples: graph validation median 18.777 ms; fresh receipt
+replay 58.441 ms; immutable verified reuse 0.001 ms; contextual explanation
+54.720 ms; impact analysis 65.591 ms. The earlier impact profile ran alongside
+browser verification and was contended; do not compare it as an optimization
+baseline. Raw profiles remain in verification/evidence-boundaries.
+
+## Remote verification and limits
+
+The baseline Ubuntu job succeeded. Its Windows browser stage was cancelled at
+the timing envelope; setup, contracts, compilation and smoke succeeded. The
+retained artifact was inspected, not relabelled as a product failure. Details:
+verification/live-evidence-012/windows-baseline.md.
+
+Successor CI separates contracts/build/smoke and four exhaustive browser groups
+on each OS, with streaming bounded logs and 14-day artifacts. At this document
+checkpoint the successor remote pipeline has not run. Local passes do not
+certify remote completion. Acceptance requires the exact sealed commit to
+complete on Ubuntu and Windows.
+
+The real Khafre archaeological campaign remains BLOCKED on identified
+permitted-use plan bytes, independent local control/scale, datum, uncertainty,
+distributed frozen controls and untouched holdouts. Local dimensions remain
+usable; lid placement and monument/site transforms remain unresolved.
+
 # GIZA NEXUS 0.11.1 — Software validation
+
+## Centered orbit, media audit and overlapping controls — 2026-09-18
+
+- Reproduced two display causes: preview dimensions occupied the same top-left position as the inspection tab; overview screen-fitting translated the orbit target off the monument axis, while zoom-to-cursor could move targets during wheel zoom. Dimensions are now nested in the drawer, the overview pivot remains on-axis, and all four spatial viewers use fixed-target zoom. Explicit panning remains intentional.
+- `node scripts/evidence/checkpoint.mjs media-orbit-full-final`: PASS, 193 tests plus TypeScript, inherited validators and workbench build. The earlier `media-orbit-full-a` missing-import compilation failure is preserved; `media-orbit-full-b` passed before the final axial-camera refinement.
+- `node scripts/media/audit-duplicates.mjs`: 17 public raster files, 75 media references including the inscription catalog; zero byte-duplicate local files and zero invalid JSON files. Sixteen identities recur across attribution/catalog records, with no within-catalog repeated identity. This does not establish that all remote or perceptually similar images are unique. No historical records were deleted.
+- Existing source-image hashes remain asserted; two new unchanged image hashes, author/license/source metadata and explicit reproduction caveats are recorded. Browser coverage includes opening the reproduction through the actual Inscription Lab and checking loaded image dimensions.
+- Initial browser checkpoint `media-orbit-browser-a`: 21 passed, one failed. The new orbit test sampled startup interpolation before settling. It now waits for stable camera/target samples before real wheel and pointer gestures; the numeric target-invariance assertion was not relaxed.
+- `node scripts/evidence/browser-checkpoint.mjs media-orbit-browser-final`: PASS, all 23 actual-browser tests plus production build, 2.5 minutes. Includes fixed-axis target, real off-center wheel/drag invariance, hidden nested dimensions, locally loaded reproduction image, all existing assembly/registration workflows and desktop/narrow/short layouts. No forced clicks or increased timeouts. Local HTTP 4173 returned 200 after the new production build.
+- Local environment: Windows, Node v24.18.0, Chromium with SwiftShader. No Ubuntu or remote CI run for this follow-up. No archaeological data, measurement frames, registration gates or source authority changed. Details: `docs/MEDIA_ORBIT_CLEANUP.md`.
+
+## Hover-collapsing viewport drawers — 2026-09-18
+
+- Shell/reality and explosion controls start collapsed, reveal on hover/focus/tap, and close after pointer departure. Active range drags retain the drawer until release; Escape and explicit Close work without hover. Tabs remain stationary as panels expand, with available-height constraints for short viewports. Geometry and research storage are unchanged.
+- `node scripts/evidence/checkpoint.mjs hover-drawers-full-final`: PASS, 192 tests, TypeScript, inherited validation and workbench build. Initial `hover-drawers-full-a` also passed.
+- `node scripts/evidence/browser-checkpoint.mjs hover-drawers-browser-final`: PASS, 21 actual-browser tests with production build. New checks exercise mouse departure, real pointer down/drag outside/up, keyboard open/Escape and touch open/close. Startup/reload centering, layer switches, spherical expansion and all research workflows remain passing.
+- Initial `hover-drawers-browser-a` retained: two startup assertions attempted to use the newly hidden slider after reload, and a short-landscape hover exposed the expanding tab moving under the header. Tests now explicitly hover the tab after reload; stationary tab/absolute-panel layout fixes the real overlap. No forced interaction or numerical assertion was removed.
+- Local Windows / Chromium SwiftShader / Node v24.18.0; no remote CI or Ubuntu execution for this change. Short-landscape screenshot visually reviewed. Previous uncommitted centered-startup work is preserved.
+
+## Centered startup repair — 2026-09-18
+
+- Reproduced in code: startup reused the saved overview explosion, clipping, hidden exterior and camera preset; a saved explosion could translate the pyramid hundreds of display metres away from the fixed camera. The perspective preset also aimed at Z=35 regardless of viewport aspect ratio. STL bounds were inspected and agree with the declared centered envelope; no archaeological geometry was changed.
+- `node scripts/evidence/checkpoint.mjs centered-startup-full-a`: PASS, 192 tests, TypeScript, inherited validation and workbench build. New tests cover immutable startup preferences and projected-envelope fitting across five aspect ratios.
+- `node scripts/evidence/browser-checkpoint.mjs centered-startup-browser-a`: PASS, 19 actual-browser tests including production compilation. Three new tests seed an exploded, clipped, hidden-exterior underground state, open and reload the app, and assert assembled visible geometry plus actual rendered-mesh projection bounds centered within 0.015 NDC at 1280×800, 390×844 and 844×390. A separate storage sentinel survives. Desktop startup screenshot visually reviewed; screenshots for all sizes retained with the checkpoint.
+- Local Windows / Node v24.18.0 / Chromium SwiftShader only; no remote CI or Ubuntu run for this repair. Research snapshots, canonical data, measurement frames and explicit saved investigations were not altered. Display preferences remain available; transient overview pose is deliberately not resumed at startup.
 
 ## Atlas and spatial presentation — 2026-09-18 UTC
 

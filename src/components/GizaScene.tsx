@@ -1,3 +1,4 @@
+import * as THREE from 'three';
 import { Canvas,useFrame,useThree } from '@react-three/fiber';
 import { Grid } from '@react-three/drei';
 import { WebGLRecovery } from '../workstation/WorkspaceBoundary';
@@ -16,7 +17,10 @@ export type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/ty
 export { buildStoneCells } from '../scene/geometry';
 
 function LayerDiagnostics(){
-  const {scene,gl}=useThree();useFrame(()=>{const ids:string[]=[];let instanced=0;const expansions:unknown[]=[];scene.traverse(object=>{if(object.userData.evidenceObject?.objectId)ids.push(object.userData.evidenceObject.objectId);if('isInstancedMesh' in object){instanced++;if(object.userData.expansion)expansions.push(object.userData.expansion);}});gl.domElement.dataset.layerDiagnostics=JSON.stringify({ids:ids.sort(),instanced,expansions});});return null;
+  const {scene,gl,camera,controls}=useThree();useFrame(()=>{const projected:THREE.Vector3[]=[];scene.updateMatrixWorld();camera.updateMatrixWorld();
+    scene.traverse(object=>{if(object.userData.evidenceObject?.objectId!=='part.pyramid.khafre')return;object.traverse(child=>{if(!(child instanceof THREE.Mesh))return;const p=child.geometry.getAttribute('position');if(p)for(let i=0;i<p.count;i++)projected.push(new THREE.Vector3().fromBufferAttribute(p,i).applyMatrix4(child.matrixWorld).project(camera));});});
+    const pyramid=projected.length?{minX:Math.min(...projected.map(p=>p.x)),maxX:Math.max(...projected.map(p=>p.x)),minY:Math.min(...projected.map(p=>p.y)),maxY:Math.max(...projected.map(p=>p.y))}:null;
+    const ids:string[]=[];let instanced=0;const expansions:unknown[]=[];scene.traverse(object=>{if(object.userData.evidenceObject?.objectId)ids.push(object.userData.evidenceObject.objectId);if('isInstancedMesh' in object){instanced++;if(object.userData.expansion)expansions.push(object.userData.expansion);}});gl.domElement.dataset.layerDiagnostics=JSON.stringify({ids:ids.sort(),instanced,expansions,pyramid,orbitTarget:(controls as unknown as {target?:THREE.Vector3})?.target?.toArray(),cameraPosition:camera.position.toArray()});});return null;
 }
 
 export function GizaScene({
@@ -98,7 +102,7 @@ export function GizaScene({
 
       <FieldLayer visible={showFieldFrame&&!sphere} selectedPart={selectedPart} uncertainty={uncertainty} explode={explode} />
       <SimulationLayer visible={simulationVisible} active={activeSimulation} gravity={gravityResult} acoustic={acousticResult} strata={strataResult} />
-      <CameraRig sphere={sphere} preset={viewPreset} revision={cameraRevision} speed={animationSpeed} fitParts={inspection?parts:undefined} explode={explode}/>
+      <CameraRig overviewSize={[stoneField.base_m,stoneField.height_m]} sphere={sphere} preset={viewPreset} revision={cameraRevision} speed={animationSpeed} fitParts={inspection?parts:undefined} explode={explode}/>
     </Canvas>
   );
 }

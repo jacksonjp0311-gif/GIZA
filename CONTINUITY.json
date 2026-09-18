@@ -1,7 +1,11 @@
 {
   "schema_version": "1.0.0",
   "product": "GIZA",
-  "current_version": "0.11.1",
+  "current_version": "0.12.0",
+  "live_evidence_handoff": "0.12.0 continues base 3074047ce8c39950b5d03814b1a40408f55c7739. Read docs/LIVE_EVIDENCE_INTEGRATION.md and docs/TUTORIAL_MODE.md. HYPOTHESIS transforms cannot yield authoritative KNOWN measurements; conditional calculations remain explicit. Live PLAN_2D capabilities require local shared-engine replay and scoped review, never imported flags. Tutorial state is presentation-only. Real Khafre campaign remains BLOCKED. See VALIDATION.md and exact-commit remote CI; do not assume remote completion from a local checkpoint.",
+  "media_orbit_followup": "2026-09-18: preserve axis-centered overview framing and fixed-target zoom; explicit panning remains intentional. Dimensions belong inside Inspect / layers. docs/MEDIA_ORBIT_CLEANUP.md records exact-byte/source-identity audit limits, image credits and the distinction between original Stela photographs and museum reproduction. Do not promote replicas or alternate scans into independent archaeological evidence.",
+  "viewport_drawers": "Inspect / layers and Explode are compact hover drawers. Preserve keyboard/touch access, Escape/Close actions and active-slider drag retention. Hidden content is removed from pointer/tab interaction rather than merely transparent; browser tests must open the real drawer before operating its controls.",
+  "centered_startup": "2026-09-18: startupWorkspace sanitizes transient overview pose into assembled PERSPECTIVE with exterior on, clipping/explosion/subsurface/xray/simulation off. Research snapshots are not deleted or rebased. overviewCamera fits the projected pyramid envelope to the viewport; do not reintroduce fixed startup framing or automatically restore the last transient camera/explosion. See VALIDATION.md.",
   "atlas_spatial_followup": "Full-workspace Atlas and reversible sphere/assembly presentation are documented in docs/ATLAS_SPATIAL_PRESENTATION.md. Sphere cells remain ASSUMED illustrative outer masonry, not a surveyed inventory. Physical lid placement remains UNKNOWN. Do not conflate display-only offsets with canonical geometry. See VALIDATION.md for final executed checkpoints.",
   "layer_controls_followup": "2026-09-18 UTC: explicit subsurface/Underground requests enable hypothetical display, not archaeological authority; independent HYPOTHESIS hiding stays available. Inspection consumes filtered parts. Exterior hides masonry; Measurement Overlays gates preview dimensions. Separate detail/atlas views disable overview controls. See VALIDATION.md for executed browser regressions and preserved failures.",
   "codename": "REGISTRATION WORKBENCH",
@@ -166,6 +170,8 @@
   ],
   "release_contract": {
     "required_update_files": [
+      "docs/TUTORIAL_MODE.md",
+      "docs/LIVE_EVIDENCE_INTEGRATION.md",
       "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
       "docs/SOURCE_CAMPAIGN.md",
       "README.md",

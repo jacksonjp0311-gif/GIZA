@@ -1,14 +1,14 @@
 {
   "name": "giza-nexus-registration-workbench",
   "private": true,
-  "version": "0.11.1",
+  "version": "0.12.0",
   "type": "module",
   "scripts": {
     "start": "node scripts/start.mjs",
     "test:usability": "node --test tests/usability.test.mjs tests/spatial-presentation.test.mjs",
     "test:sphinx": "node --test tests/sphinx.test.mjs",
     "test:epigraphy": "node --test tests/epigraphy.test.mjs tests/epigraphy-storage.test.mjs tests/epigraphy-navigation.test.mjs",
-    "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs tests/evidence-campaign.test.mjs",
+    "test:evidence-assembly": "node --test tests/live-evidence.test.mjs tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs tests/evidence-campaign.test.mjs",
     "test:browser": "playwright test",
     "evidence:campaign": "node scripts/evidence/campaign-cli.mjs",
     "test:campaign": "node --test tests/evidence-campaign.test.mjs",
@@ -142,5 +142,5 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "gizaVersion": "0.11.1"
+  "gizaVersion": "0.12.0"
 }

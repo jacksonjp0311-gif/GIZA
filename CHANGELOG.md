@@ -1,4 +1,43 @@
+# 0.12.0 — Live Evidence + Human Guidance (verification candidate)
+
+- Reproduced and sealed transform-authority leakage: hypothetical resolved
+  relations cannot produce ordinary authoritative measurements. Added explicit
+  conditional results and measurement rule v4 with historical replay.
+- Preserve graph transform authority and traverse owned derived constraints
+  without broadening direct support. Reject imported local-verification flags.
+- Link locally replayed, reviewed PLAN_2D campaign context to the exact live
+  assembly; retain custody, holdouts, scale classification, review and rollback.
+  No 3-D placement or archaeological discovery is asserted.
+- Add deterministic dependency impact using existing explain/replay machinery.
+- Centralize research-draft navigation protection, including tutorial actions
+  and Inscription Lab exits.
+- Add interactive fifteen-chapter Tutorial, semantic targets, spotlight,
+  keyboard/reduced-motion support and separate presentation-only progress.
+- Split remote browser verification into four exhaustive groups on both OSes;
+  stream bounded logs so cancellation preserves progress.
+- Preserve prior media, centered-orbit, layer, Atlas and drawer improvements.
+
+See VALIDATION.md for executed results and unresolved release acceptance.
+
 # 0.11.1 — investigation reliability and contextual comparison
+
+## Centered orbit and reference cleanup — 2026-09-18
+
+- Keep overview framing on the pyramid axis; disable cursor-driven orbit-target drift during zoom across four spatial viewers. Explicit panning remains available.
+- Nest preview dimensions inside the inspection drawer to eliminate overlapping tabs.
+- Audit bundled raster hashes and media identities; deduplicate gallery URL aliases without deleting provenance records.
+- Add credited Stela placement and explicitly labeled museum-reproduction photographs; link the higher-resolution NYPL historical scan without counting it as independent evidence.
+
+## Compact viewport drawers — 2026-09-18
+
+- Shell/reality tools and explosion controls now start as compact Inspect / layers and Explode tabs, expand on hover and collapse after pointer use.
+- Keep sliders open during active drags; support keyboard focus, Escape and explicit touch open/close. No geometry, measurements or saved research are changed.
+
+## Centered startup repair — 2026-09-18
+
+- Start with the assembled visible pyramid in perspective, not the prior transient exploded, clipped or underground pose. Keep display preferences and saved research separate.
+- Fit and visually center the displayed pyramid envelope for the current viewport aspect ratio; initialize the camera directly rather than flying in from an off-center startup pose.
+- Add saved-state/reload browser regressions using actual projected mesh vertices at desktop, portrait and short-landscape dimensions, plus numerical camera-fit and immutable-preference tests.
 
 ## Atlas and spatial presentation follow-up — 2026-09-18 UTC
 

@@ -57,7 +57,7 @@ function Camera({view,revision,selected,isolated,focused,explosion,turntable}:Sp
     }
     cam.up.set(0,0,1);ref.current.target.copy(target);cam.position.copy(dir.multiplyScalar(distance*1.12).add(target));cam.updateProjectionMatrix();ref.current.update();
   },[view,revision,isolated,focused,size.width,size.height,camera]);
-  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.1} zoomToCursor rotateSpeed={.55} zoomSpeed={.8} panSpeed={.75} minDistance={2} maxDistance={600} minPolarAngle={.03} maxPolarAngle={Math.PI*.88} autoRotate={turntable&&!motion.matches} autoRotateSpeed={.65}/>;
+  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.1} zoomToCursor={false} rotateSpeed={.55} zoomSpeed={.8} panSpeed={.75} minDistance={2} maxDistance={600} minPolarAngle={.03} maxPolarAngle={Math.PI*.88} autoRotate={turntable&&!motion.matches} autoRotateSpeed={.65}/>;
 }
 function Geometry(p:SphinxSceneProps){
   const body=useMemo(bodyGeometry,[]),head=useMemo(headGeometry,[]),north=useMemo(()=>nemesGeometry(1),[]),south=useMemo(()=>nemesGeometry(-1),[]),tail=useMemo(tailGeometry,[]);

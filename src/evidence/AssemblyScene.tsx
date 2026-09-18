@@ -31,7 +31,7 @@ function CameraRig({assembly,features,command,explode,onBookmark,onCameraReader}
     camera.up.set(0,0,1);controls.update();
   // Resize doesn't move a researcher's camera; the next Fit command uses the new aspect.
   },[command.revision,assembly]);
-  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.12} rotateSpeed={.6} zoomSpeed={.7} panSpeed={.7} zoomToCursor screenSpacePanning minDistance={.08} maxDistance={150} minPolarAngle={.015} maxPolarAngle={Math.PI-.015}/>;
+  return <OrbitControls ref={ref} makeDefault enableDamping dampingFactor={.12} rotateSpeed={.6} zoomSpeed={.7} panSpeed={.7} zoomToCursor={false} screenSpacePanning minDistance={.08} maxDistance={150} minPolarAngle={.015} maxPolarAngle={Math.PI-.015}/>;
 }
 function polygonGeometry(vertices:Vec3[]){
   const geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.Float32BufferAttribute(vertices.flat(),3));

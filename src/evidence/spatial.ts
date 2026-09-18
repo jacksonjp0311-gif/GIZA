@@ -32,12 +32,19 @@ export function transformPoint(m:Matrix4,p:Vec3):Vec3 {
   return [m[0]*p[0]+m[1]*p[1]+m[2]*p[2]+m[3],m[4]*p[0]+m[5]*p[1]+m[6]*p[2]+m[7],m[8]*p[0]+m[9]*p[1]+m[10]*p[2]+m[11]];
 }
 /** All available paths must agree. Unknown edges never become implicit identities. */
-export function resolveTransform(frames:SpatialFrame[],transforms:SpatialTransform[],from:string,to:string,scope:'AUTHORITATIVE_RECONSTRUCTION'|'COMPARISON_ONLY'='AUTHORITATIVE_RECONSTRUCTION'):Matrix4|null {
+export type CalculationScope='AUTHORITATIVE_RECONSTRUCTION'|'COMPARISON_ONLY'|'CONDITIONAL_HYPOTHESIS';
+export const TRANSFORM_AUTHORITY_RULE='giza.transform-authority.v2';
+export function transformEligible(t:SpatialTransform,scope:CalculationScope):boolean{
+  return t.status==='RESOLVED'&&!!t.matrix&&
+    (scope==='CONDITIONAL_HYPOTHESIS'?t.scope==='AUTHORITATIVE_RECONSTRUCTION':t.scope===scope)&&
+    (['OBSERVED','RECONSTRUCTED'].includes(t.authority)||(scope!=='AUTHORITATIVE_RECONSTRUCTION'&&t.authority==='HYPOTHESIS'));
+}
+export function resolveTransform(frames:SpatialFrame[],transforms:SpatialTransform[],from:string,to:string,scope:CalculationScope='AUTHORITATIVE_RECONSTRUCTION'):Matrix4|null {
   if(!frames.some(f=>f.id===from)||!frames.some(f=>f.id===to))throw new Error('Unknown coordinate frame');
   if(frames.some(f=>f.units!=='m'||f.handedness!=='RIGHT_HANDED'))throw new Error('Frame units/handedness require explicit normalization');
   if(from===to)return identityMatrix();
   const found=new Map<string,Matrix4>([[from,identityMatrix()]]),queue=[from];
-  const eligible=transforms.filter(t=>t.status==='RESOLVED'&&t.matrix&&t.scope===scope);
+  const eligible=transforms.filter(t=>transformEligible(t,scope));
   while(queue.length){const current=queue.shift()!;for(const edge of eligible){
     if(edge.from!==current&&edge.to!==current)continue;
     const next=edge.from===current?edge.to:edge.from;
@@ -49,6 +56,35 @@ export function resolveTransform(frames:SpatialFrame[],transforms:SpatialTransfo
 }
 export function pointInFrame(assembly:EvidenceAssembly,point:CanonicalPoint,frameId:string):Vec3|null {
   const transform=resolveTransform(assembly.frames,assembly.transforms,point.frameId,frameId);return transform?transformPoint(transform,point.position):null;
+}
+/** A separate result contract prevents conditional numbers being mistaken for SpatialResult. */
+export function measureConditionalPoints(assembly:EvidenceAssembly,a:CanonicalPoint,b:CanonicalPoint,frameId:string){
+  const scope='CONDITIONAL_HYPOTHESIS' as const;
+  const paths=(from:string)=>{
+    const matrix=resolveTransform(assembly.frames,assembly.transforms,from,frameId,scope);
+    if(!matrix)return null;
+    const queue=[{frame:from,frameChain:[from],transforms:[] as SpatialTransform[]}],seen=new Set([from]);
+    while(queue.length){
+      const current=queue.shift()!;if(current.frame===frameId)return {...current,matrix};
+      for(const t of [...assembly.transforms].sort((a,b)=>a.id.localeCompare(b.id))){
+        if(!transformEligible(t,scope)||(t.from!==current.frame&&t.to!==current.frame))continue;
+        const next=t.from===current.frame?t.to:t.from;if(seen.has(next))continue;
+        seen.add(next);queue.push({frame:next,frameChain:[...current.frameChain,next],transforms:[...current.transforms,t]});
+      }
+    }return null;
+  };
+  const p=paths(a.frameId),q=paths(b.frameId),transforms=[...new Map([...(p?.transforms??[]),...(q?.transforms??[])].map(t=>[t.id,t])).values()];
+  const assumptions=transforms.filter(t=>t.authority==='HYPOTHESIS');
+  const missing=assumptions.some(t=>!t.assumptionIds?.length||t.assumptionIds.some(id=>typeof id!=='string'||!id.trim()));
+  const value=p&&q&&!missing?distance(transformPoint(p.matrix,a.position),transformPoint(q.matrix,b.position)):null;
+  return {schema:'giza.conditional-measurement.v1' as const,rule:TRANSFORM_AUTHORITY_RULE,scope,
+    status:value===null?'UNKNOWN' as const:'CONDITIONAL' as const,value,unit:'m' as const,frameId,
+    points:JSON.parse(JSON.stringify([a,b])) as CanonicalPoint[],
+    frameChains:[p?.frameChain??[],q?.frameChain??[]],
+    transforms:transforms.map(t=>({id:t.id,from:t.from,to:t.to,matrix:t.matrix,authority:t.authority,scope:t.scope,assumptionIds:t.assumptionIds??[],observationIds:t.observationIds,uncertainty:t.uncertainty})),
+    assumptionIds:[...new Set(assumptions.flatMap(t=>t.assumptionIds??[]))],
+    uncertainty:unknownUncertainty('Conditional placement and source uncertainties have not been propagated.'),
+    reason:value===null?'UNKNOWN: missing frame connection or explicit hypothesis assumption IDs.':`Conditional distance under placement assumptions ${assumptions.map(t=>t.id).join(', ')||'(none; explicitly conditional calculation)'}; not established physical placement.`};
 }
 export function validateCanonicalMembership(a:EvidenceAssembly,p:CanonicalPoint):void {
   const f=a.features.find(f=>f.id===p.featureId);
@@ -124,6 +160,7 @@ export function importCanonicalAssembly(input:unknown):EvidenceAssembly {
     if(t.status==='RESOLVED'){if(!t.matrix)throw new Error('Missing transform matrix');validateRigidMatrix(t.matrix);}else if(t.matrix!==null)throw new Error('Unresolved transform must have null matrix');
     if(!Array.isArray(t.observationIds)||t.observationIds.some(id=>!observationIds.has(id)))throw new Error('Invalid transform observation binding');
     uncertainty(t.uncertainty);authority(t.authority);
+    if(t.assumptionIds!==undefined&&(!Array.isArray(t.assumptionIds)||t.assumptionIds.length>100||t.assumptionIds.some(id=>typeof id!=='string'||!id.trim())||new Set(t.assumptionIds).size!==t.assumptionIds.length))throw new Error('Invalid transform assumption IDs');
   }
   for(const s of a.sources)if(typeof s.title!=='string'||typeof s.url!=='string'||(s.url!==''&&!/^https?:\/\//i.test(s.url))||s.byteStatus!=='UNKNOWN')throw new Error('Invalid source metadata / unsupported custody claim');
   for(const o of a.observations)validateObservation(o,sourceIds);

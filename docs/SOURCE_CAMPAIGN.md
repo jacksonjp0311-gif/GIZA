@@ -1,6 +1,15 @@
+# 0.12.0 live integration addendum
+
+The existing acquisition/freeze/fit/replay/review/rollback engine remains the
+only fitting path. [Live Evidence Integration](LIVE_EVIDENCE_INTEGRATION.md)
+documents the new governed PLAN_2D graph bridge, session verification capability
+and impact behavior. Earlier sidecar-only descriptions below describe the
+historical implementation. Imported campaign inspection is still claim-only
+until local replay. The real campaign remains BLOCKED on archaeological inputs.
+
 # Scoped Khafre source-to-result workflow
 
-Current product: **0.11.1**. The campaign engine/2-D claim scope is preserved; see the 0.11.1 integration-status section below and `RELIABILITY_0_11_1.md` for current investigation rule identities.
+Historical 0.11.1 implementation: The campaign engine/2-D claim scope is preserved; see the 0.11.1 integration-status section below and `RELIABILITY_0_11_1.md` for current investigation rule identities.
 
 ## Claim boundary
 

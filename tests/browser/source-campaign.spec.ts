@@ -11,5 +11,16 @@ test('actual local workbench: synthetic acquisition → freeze → shared fit �
   await page.getByLabel('Reviewer',{exact:true}).fill('Browser synthetic QA');await page.getByLabel('Interpretation / limitations').fill('Software fixture only, no archaeological interpretation or promotion.');await page.locator('#scope').check();
   await page.getByRole('button',{name:'Replay and create reviewed revision',exact:true}).click();await expect(page.locator('#result')).toContainText('Adds a reviewed source-pixel to local-plan relationship');
   const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export source-to-result packet',exact:true}).click();expect((await download).suggestedFilename()).toBe('GIZA-source-campaign-packet.json');
+  const model=await page.context().newPage();await model.goto('/');
+  await model.getByRole('button',{name:'Explore on my own',exact:true}).click();
+  await model.getByRole('button',{name:'Sarcophagus',exact:true}).click();
+  await model.getByRole('button',{name:'Compare',exact:true}).click();
+  await model.getByLabel('Local campaign ID').fill(id);
+  await model.getByRole('button',{name:'Replay & link scoped evidence',exact:true}).click();
+  await expect(model.getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.',{exact:true})).toBeVisible();
+  await expect(model.getByText(id+' · REVIEWED_SCOPED_RELATION',{exact:true})).toBeVisible();
   await page.getByRole('button',{name:'Record rollback to base assembly',exact:true}).click();await expect(page.locator('#result')).toContainText('"restore": "BASE_ASSEMBLY"');
+  await model.getByRole('button',{name:'Replay & link scoped evidence',exact:true}).click();
+  await expect(model.getByText(id+' · REVIEWED_SCOPED_RELATION',{exact:true})).toHaveCount(0);
+  await model.close();
 });

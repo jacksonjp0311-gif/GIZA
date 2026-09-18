@@ -113,3 +113,44 @@ export function rollbackCampaign(root,reason){
   requireGate(text(reason),'ROLLBACK_REASON_REQUIRED');const revision=readJson(root,'accepted-revision.json');requireGate(hashObject(revision.payload)===revision.sha256,'REVISION_CHANGED');
   const receipt={schema:'giza.revision-rollback.v1',revisionId:revision.id,restore:'BASE_ASSEMBLY',reason,canonicalGeometryChanged:false,createdAt:new Date().toISOString()};exclusive(root,'rollback.json',receipt);return receipt;
 }
+
+/** Fresh shared-engine replay is mandatory; imported pass/review flags are insufficient. */
+export function campaignRevisionState(root){
+  const revision=readJson(root,'accepted-revision.json');
+  requireGate(hashObject(revision.payload)===revision.sha256,'REVISION_CHANGED');
+  return {revisionId:revision.id,active:!fs.existsSync(inside(root,'rollback.json'))};
+}
+export async function replayCampaignVerification(root){
+  const packet=exportCampaign(root),replayRoot=path.join(root,'replays',`inspect-${Date.now()}-${Math.random().toString(16).slice(2)}`);
+  const replay=await replayCampaign(replayRoot,packet);
+  return {verificationState:'REPLAY_VERIFIED',campaignId:packet.config.id,packetSha256:hashObject(packet),numericalResultSha256:hashObject(numerical(replay.result)),result:replay.result,scope:replay.claim,acceptedForLiveGraph:false,reason:packet.rollback?'Revision rolled back; replay remains historical.':'Numerical replay is not a scoped review or archaeological authentication.'};
+}
+export async function liveCampaignRelation(root){
+  const packet=exportCampaign(root),revision=packet.revision;
+  requireGate(revision&&!packet.rollback,'NO_ACTIVE_REVIEWED_REVISION');
+  const review=revision.payload.review;
+  requireGate(hashObject(revision.payload.affectedFeatures)===hashObject([...new Set(packet.config.landmarks.map(l=>l.featureId))].sort())&&revision.payload.relationship.from==='SOURCE_RENDER_PIXELS','REVISION_FEATURE_SCOPE_MISMATCH');
+  requireGate(text(review?.reviewer)&&text(review?.note)&&review.acceptPlanScope===true&&review.authentication==='OPERATOR_ASSERTED_NOT_AUTHENTICATED','SCOPED_OPERATOR_REVIEW_REQUIRED');
+  const replayRoot=path.join(root,'replays',`live-${Date.now()}-${Math.random().toString(16).slice(2)}`);
+  const replay=await replayCampaign(replayRoot,packet);
+  requireGate(replay.result.passed,'FAILED_GATES_CANNOT_ENTER_LIVE_GRAPH');
+  requireGate(packet.config.classification!=='INDEPENDENT_CONTROLLED'||packet.input.landmarks.every(l=>l.uncertainty.status!=='UNKNOWN'),'REVIEW_REQUIRES_CONTROL_UNCERTAINTY');
+  const payload={schema:'giza.live-plan-relation.v1',id:`plan-relation:${revision.sha256}`,
+    campaignId:packet.config.id,assemblyId:packet.assembly.id,assemblySha256:hashObject(packet.assembly),
+    dimensionalScope:'PLAN_2D_ONLY',from:'SOURCE_RENDER_PIXELS',targetFrame:packet.config.targetFrame,
+    authority:packet.config.classification==='SYNTHETIC_SOFTWARE_QA'?'HYPOTHESIS':'RECONSTRUCTED',
+    classification:packet.config.classification,sourceIdentity:packet.config.sources,custody:packet.acquisition.payload.custody,acquisitionSha256:packet.acquisition.sha256,
+    sourceSha256:replay.result.source_sha256,renderSha256:replay.result.render_sha256,
+    freezeSha256:replay.result.freeze_sha256,numericalResultSha256:hashObject(numerical(replay.result)),
+    rule:context(),fitRule:'SHARED_SIMILARITY_2D',fit:replay.result.fit,
+    controls:replay.result.control_residuals,holdouts:replay.result.holdout_residuals,
+    frozenInput:packet.input,independentScale:packet.input.scale_expectation,
+    uncertainty:'CONTROL_AND_HOLDOUT_RESIDUALS_ARE_NOT_SURVEY_COVARIANCE',
+    affectedFeatures:revision.payload.affectedFeatures,reviewReceipt:revision,
+    revisionId:revision.id,rollbackLink:{campaignId:packet.config.id,revisionId:revision.id,restore:'BASE_ASSEMBLY'},
+    replay:{packetSha256:hashObject(packet),resultSha256:replay.result.result_sha256,reproduced:true},
+    verificationClaim:'REVIEWED_SCOPED_RELATION',physical3DPlacement:'UNRESOLVED',
+    rightsAuthentication:'OPERATOR_DECLARATION',historicalAuthentication:'NOT_ESTABLISHED'};
+  // Preserve the replayed relationship as an immutable audit record, not a 3-D transform.
+  const record={payload,sha256:hashObject(payload)};exclusive(replayRoot,'live-relation.json',record);return record;
+}

@@ -1,6 +1,30 @@
-# GIZA NEXUS v0.11.1 — Registration Workbench
+# GIZA NEXUS v0.12.0 — Live Evidence + Human Guidance
 
-## Current release — aligned investigation contracts
+## 0.12.0 verification candidate
+
+Start with **Tutorial / ?** in the header for the interactive, fifteen-chapter
+tour. It uses the real workstation controls and protects unsaved research.
+The model-first interface and existing specialized workspaces remain intact.
+
+In **Sarcophagus → Compare**, a locally replayed and reviewed campaign can link
+its exact **PLAN_2D_ONLY** relation to the live graph. Imported verification
+flags cannot establish local verification. Hypothetical transforms are excluded
+from ordinary physical measurements; an explicitly conditional calculation is
+available separately. Impact/explain tools preserve original research records.
+
+[Tutorial behavior and accessibility](docs/TUTORIAL_MODE.md) ·
+[Live evidence contracts and limitations](docs/LIVE_EVIDENCE_INTEGRATION.md) ·
+[Executed verification and release status](VALIDATION.md).
+The real archaeological campaign remains **BLOCKED**, not synthetically completed.
+Remote acceptance requires both platforms at the same sealed commit.
+
+## Preserved 0.11.1 functionality and follow-ups
+
+Centered interaction and media cleanup: scroll zoom keeps the orbit pivot fixed, pyramid framing stays on its central axis, and dimensions live inside Inspect / layers. Open **Hieroglyphs · Inscription Lab** for the Dream Stela photographs, labeled reproduction detail and source links. [Audit, credits and limitations](docs/MEDIA_ORBIT_CLEANUP.md).
+
+Viewport controls tuck away automatically: hover **Inspect / layers** or **Explode** to expand them. Move away to collapse; keyboard focus or tap also opens them, with Escape/Close available.
+
+Startup always opens the assembled Khafre pyramid centered and fitted to the 3-D viewport. Prior overview explosion, clipping, underground view and shell-hiding settings no longer displace the next launch. Saved research investigations and explicit archived views remain separate and unchanged.
 
 Atlas/spatial follow-up: full-workspace maps, readable labels with a complete text index, map zoom/pan, contextual assembly explosion, and reversible **Spherical expansion** of the existing illustrative pyramid stone cells. [Controls, limitations and design references](docs/ATLAS_SPATIAL_PRESENTATION.md).
 

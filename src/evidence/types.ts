@@ -12,6 +12,8 @@ export interface SpatialTransform {
   id: string; from: string; to: string; status: 'RESOLVED' | 'UNRESOLVED';
   scope: 'AUTHORITATIVE_RECONSTRUCTION' | 'COMPARISON_ONLY'; matrix: Matrix4 | null;
   authority: RealityAuthority; observationIds: string[]; uncertainty: Uncertainty; derivation: string;
+  /** Explicit conditional calculation assumptions; never inferred from resolution. */
+  assumptionIds?:string[];
 }
 export interface EvidenceObservation {
   quantity?:import('./observationContract').ValidatedQuantity;

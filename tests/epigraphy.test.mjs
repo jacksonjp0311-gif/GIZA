@@ -75,8 +75,8 @@ test('manual AI packet retains image provenance and never claims connected infer
   const packet=aiReviewPacket(region(),INSCRIPTION_IMAGES.find(i=>i.id==='dream-photo'));assert.equal(packet.source.author,'HoremWeb');assert.match(packet.instruction,/abstain/);assert.match(packet.integration,/No OCR service or AI provider is connected/);assert.deepEqual(packet.normalized_image_rect,[.2,.3,.4,.1]);
 });
 test('bundled source images have stable bytes and visible rights metadata',()=>{
-  const hashes={'dream-detail':'833fdd37ac8a16f8f2b5a6daf0d42a4287ae25e3d02d737576eeba8729d8c602','dream-photo':'73826fd777b8af7872c52ba040da26e1c6c18d006bcec7f174d8d87ce6925f1f','dream-lepsius':'e42018d9ea06e34e01b3230034d1893c7cc762d62ad60dbcd9d303dcb2daca55'};
-  for(const source of INSCRIPTION_IMAGES){const bytes=fs.readFileSync(new URL('../public'+source.image,import.meta.url));assert.equal(bytes[0],0xff);assert.equal(bytes[1],0xd8);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),hashes[source.id]);assert.ok(source.author&&source.license&&source.licenseUrl&&source.source);}
+  const hashes={'dream-context-wheeler':'4ecc8c1cb88dae7d1f4cf9211591ec73a70436cb77de4c64143a3851e8c340db','dream-reproduction-detail':'ea7538b8739a60b99d8a17e7a704af923d22530cb6a40f29fd453651a9bc6ad2','dream-detail':'833fdd37ac8a16f8f2b5a6daf0d42a4287ae25e3d02d737576eeba8729d8c602','dream-photo':'73826fd777b8af7872c52ba040da26e1c6c18d006bcec7f174d8d87ce6925f1f','dream-lepsius':'e42018d9ea06e34e01b3230034d1893c7cc762d62ad60dbcd9d303dcb2daca55'};
+  for(const source of INSCRIPTION_IMAGES){const bytes=fs.readFileSync(new URL('../public'+source.image,import.meta.url));assert.equal(bytes[0],source.image.endsWith('.png')?0x89:0xff);assert.equal(bytes[1],source.image.endsWith('.png')?0x50:0xd8);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),hashes[source.id]);assert.ok(source.author&&source.license&&source.licenseUrl&&source.source);}
 });
 test('sign palette contains unique valid Egyptian Unicode characters with code labels',()=>{
   assert.equal(SIGN_PALETTE.length,1072);

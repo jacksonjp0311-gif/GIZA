@@ -1,12 +1,14 @@
+import {TeachButton} from '../tutorial/Tutorial';
 import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,SectionPlane,Vec3} from './types';
-import {measureAngle,measurePoints,pointInFrame,resolveTransform,transformPoint} from './spatial';
+import {measureAngle,measurePoints,measureConditionalPoints,pointInFrame,resolveTransform,transformPoint} from './spatial';
 import {featureAnchors,assemblySections} from './viewGeometry';
 import {formatValue} from './FeaturePanel';
 
 export function MeasurementTools({assembly,feature,points,onPoints,mode,onMode,frame,onFrame,snap,onSnap}:{assembly:EvidenceAssembly;feature:EvidenceFeature;points:CanonicalPoint[];onPoints:(p:CanonicalPoint[])=>void;mode:'DISTANCE'|'ANGLE';onMode:(m:'DISTANCE'|'ANGLE')=>void;frame:string;onFrame:(f:string)=>void;snap:boolean;onSnap:(v:boolean)=>void}){
   const result=mode==='ANGLE'&&points.length===3?measureAngle(assembly,points[0],points[1],points[2],frame):mode==='DISTANCE'&&points.length===2?measurePoints(assembly,points[0],points[1],frame):null;
   const anchors=featureAnchors(feature);
-  return <>
+  const conditional=mode==='DISTANCE'&&points.length===2?measureConditionalPoints(assembly,points[0],points[1],frame):null;
+  return <><TeachButton chapter={7}/>
     <div className="actions"><button aria-pressed={mode==='DISTANCE'} onClick={()=>{onMode('DISTANCE');onPoints([]);}}>Point distance</button><button aria-pressed={mode==='ANGLE'} onClick={()=>{onMode('ANGLE');onPoints([]);}}>Angle · A–B–C</button></div>
     <p>Click {mode==='ANGLE'?'three':'two'} locations in 3-D or choose exact feature anchors below. B is the angle vertex. Measurements ignore inspection motion.</p>
     <label>Authoritative output frame<select aria-label="Measurement frame" value={frame} onChange={e=>onFrame(e.target.value)}>{assembly.frames.map(f=><option key={f.id} value={f.id}>{f.label}</option>)}</select></label>
@@ -14,6 +16,7 @@ export function MeasurementTools({assembly,feature,points,onPoints,mode,onMode,f
     <div className="evidenceReadout" aria-live="polite"><small>{mode==='ANGLE'?'ANGLE':'DISTANCE'} · {points.length}/{mode==='ANGLE'?3:2} POINTS</small><strong>{result?formatValue(result.value,result.unit):'Select points'}</strong>{result&&<><p>{result.reason}</p><small>Uncertainty: UNKNOWN · reconstruction computation</small></>}</div>
     {points.map((p,i)=>{const at=pointInFrame(assembly,p,frame);return <p key={i}><b>{String.fromCharCode(65+i)}</b> · {at?at.map(n=>n.toFixed(6)).join(', ')+' m':'UNKNOWN in requested frame'}<br/><small>{p.featureId} · local {p.position.map(n=>n.toFixed(6)).join(', ')}</small></p>;})}
     <button onClick={()=>onPoints([])}>Clear measurement</button>
+    {conditional&&<details><summary>Conditional placement calculation · not physical placement</summary><p>{conditional.value===null?'UNKNOWN':formatValue(conditional.value,'m')+' under explicitly conditional placement'}</p><p>{conditional.reason}</p><p>Assumptions: {conditional.assumptionIds.join(', ')||'No hypothetical edge in the selected chain'}. Uncertainty: UNKNOWN.</p><pre>{conditional.frameChains.map(chain=>chain.join(' → ')).join('\n')}</pre><p>This preview is not the ordinary measurement above and is not saved as an established physical result.</p></details>}
     {points.some(p=>p.origin)&&<p>Computed section surface · RECONSTRUCTED · {points.filter(p=>p.origin).length} picked points retain their original section definition.</p>}
     <section><h4>Exact anchors · {feature.label}</h4><p>These are reconstructed corners/endpoints, not observed survey targets.</p><div className="actions">{anchors.map((p,i)=><button key={i} title={p.join(', ')} onClick={()=>onPoints([...points.slice(points.length>=(mode==='ANGLE'?3:2)?points.length:0),{frameId:feature.frameId,featureId:feature.id,position:p}])}>Anchor {i+1}</button>)}</div>{!anchors.length&&<p>UNKNOWN: this feature has no mapped geometry.</p>}</section>
     <section><h4>Assembly clearances / constraints</h4>{assembly.constraints.map(c=><article key={c.id}><b>{c.kind} · {c.status}</b><p>{c.value===null?'UNKNOWN / not numeric':formatValue(c.value,c.unit)}</p><small>{c.note}</small></article>)}</section>
@@ -36,7 +39,7 @@ function SectionMap({assembly,plane}:{assembly:EvidenceAssembly;plane:SectionPla
 }
 export function SectionTools({assembly,state,onChange}:{assembly:EvidenceAssembly;state:SectionState;onChange:(s:SectionState)=>void}){
   const plane=sectionPlane(state);const change=(patch:Partial<SectionState>)=>onChange({...state,...patch});
-  return <><label><input type="checkbox" checked={state.enabled} onChange={e=>change({enabled:e.target.checked})}/>Clipping / cross-section active</label>
+  return <><TeachButton chapter={8}/><label><input type="checkbox" checked={state.enabled} onChange={e=>change({enabled:e.target.checked})}/>Clipping / cross-section active</label>
     <label>Physical section frame<select aria-label="Section frame" value={state.frameId} onChange={e=>change({frameId:e.target.value})}>{assembly.frames.filter(f=>f.status==='DEFINED'&&!f.id.includes('legacy')).map(f=><option key={f.id} value={f.id}>{f.label}</option>)}</select></label>
     <div className="actions">{(['X','Y','Z','OBLIQUE'] as const).map(axis=><button key={axis} aria-pressed={state.axis===axis} onClick={()=>change({axis,enabled:true})}>{axis}</button>)}</div>
     {state.axis==='OBLIQUE'&&<><label>Azimuth {state.azimuth}°<input aria-label="Section azimuth" type="range" min="-180" max="180" step="1" value={state.azimuth} onChange={e=>change({azimuth:Number(e.target.value)})}/></label><label>Inclination {state.inclination}°<input aria-label="Section inclination" type="range" min="-90" max="90" step="1" value={state.inclination} onChange={e=>change({inclination:Number(e.target.value)})}/></label></>}

@@ -25,7 +25,7 @@ export function LeftRail({
   ];
 
   return (
-    <aside className="leftRail edgeLeft">
+    <aside data-tutorial-id="project-explorer" className="leftRail edgeLeft">
       <section className="railCard projectCard">
         <div className="railHeader"><b>PROJECT EXPLORER</b><span>▱</span></div>
         <div className="projectSearch">⌕ <input id="component-search" aria-label="Find a component" value={filter} onChange={e => setFilter(e.target.value)} placeholder="Find chamber, slab, passage…" onKeyDown={e=>{if(e.key==='Escape')setFilter('');if(e.key==='Enter'&&results[0])openResult(results[0].id);}} /></div>
@@ -49,7 +49,7 @@ export function LeftRail({
         </div>
       </section>
 
-      <section className="railCard layerCard">
+      <section data-tutorial-id="model-layers" className="railCard layerCard">
         <div className="railHeader"><b>MODEL LAYERS</b><span>▱</span></div>
         {!overviewActive&&<p>These layers control the overview. <button onClick={onOpenModel}>Return to model layers</button></p>}
         {layerRows.map(([key, label]) => (
@@ -66,7 +66,7 @@ export function LeftRail({
         </label>
       </section>
 
-      <section className="railCard viewCard">
+      <section data-tutorial-id="view-controls" className="railCard viewCard">
         <div className="railHeader"><b>VIEW CONTROLS</b><span>▱</span></div>
         <div className="viewGrid">
           {VIEW_BUTTONS.map(item => (

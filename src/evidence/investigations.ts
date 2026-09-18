@@ -7,7 +7,7 @@ import {validateBookmark,type CameraBookmark} from './presentation';
 
 export interface InvestigationDraft {/** v1 compatibility only; active selection belongs to presentation in v2. */selectedId?:string;points:CanonicalPoint[];frameId:string;mode:'DISTANCE'|'ANGLE';section:SectionPlane|null}
 export interface InvestigationPresentation {purpose:'PRESENTATION_ONLY';selectedId?:string;room:boolean;isolated:string|null;layers:Record<RealityAuthority,boolean>;explode:number;bookmarks:CameraBookmark[];camera?:CameraBookmark|null}
-export interface SavedInvestigation {schema:'giza.saved-investigation.v1'|'giza.saved-investigation.v2';id:string;sha256:string;payload:{title:string;createdAt:string;assemblySnapshot:EvidenceAssembly;snapshotSha256:string;dependencyFingerprint:string;dependencyRule?:'canonical-measurement.v1'|'canonical-measurement.v2'|'canonical-measurement.v3';supersedes?:string;draft:InvestigationDraft;result:SpatialResult;receipts:EvidenceReceipt[];presentation:InvestigationPresentation}}
+export interface SavedInvestigation {schema:'giza.saved-investigation.v1'|'giza.saved-investigation.v2';id:string;sha256:string;payload:{title:string;createdAt:string;assemblySnapshot:EvidenceAssembly;snapshotSha256:string;dependencyFingerprint:string;dependencyRule?:'canonical-measurement.v1'|'canonical-measurement.v2'|'canonical-measurement.v3'|'canonical-measurement.v4';supersedes?:string;draft:InvestigationDraft;result:SpatialResult;receipts:EvidenceReceipt[];presentation:InvestigationPresentation}}
 function checkDraft(d:InvestigationDraft,a:EvidenceAssembly){
   if(!d||!['DISTANCE','ANGLE'].includes(d.mode)||!a.frames.some(f=>f.id===d.frameId)||(d.selectedId!==undefined&&!a.features.some(f=>f.id===d.selectedId))||!Array.isArray(d.points)||d.points.length!==(d.mode==='ANGLE'?3:2))throw new Error('Investigation requires a complete measurement in a declared frame');
   const checkPlane=(p:SectionPlane)=>{if(!p||!a.frames.some(f=>f.id===p.frameId)||!Array.isArray(p.normal)||p.normal.length!==3||p.normal.some(v=>typeof v!=='number'||!Number.isFinite(v))||Math.hypot(...p.normal)<1e-10||!Number.isFinite(p.offset))throw new Error('Invalid investigation section');};
@@ -22,15 +22,19 @@ function checkPresentation(p:InvestigationPresentation,a:EvidenceAssembly){
   if(p.camera!=null)validateBookmark(p.camera);
   if(p.selectedId!==undefined&&!a.features.some(f=>f.id===p.selectedId))throw new Error('Invalid presentation selection');
 }
-function compute(a:EvidenceAssembly,d:InvestigationDraft){return d.mode==='ANGLE'?measureAngle(a,d.points[0],d.points[1],d.points[2],d.frameId):measurePoints(a,d.points[0],d.points[1],d.frameId);}
+function compute(a:EvidenceAssembly,d:InvestigationDraft,rule='canonical-measurement.v4'){
+  // Archival v1-v3 replay only: retain the former calculation semantics without
+  // changing the stored snapshot or admitting the result as current authority.
+  if(rule!=='canonical-measurement.v4')a={...a,transforms:a.transforms.map(t=>({...t,authority:'RECONSTRUCTED'}))};
+  return d.mode==='ANGLE'?measureAngle(a,d.points[0],d.points[1],d.points[2],d.frameId):measurePoints(a,d.points[0],d.points[1],d.frameId);}
 export function measurementDependencies(a:EvidenceAssembly,d:InvestigationDraft,rule='canonical-measurement.v1'){
-  if(!['canonical-measurement.v1','canonical-measurement.v2','canonical-measurement.v3'].includes(rule))throw new Error('Unsupported measurement dependency rule');
+  if(!['canonical-measurement.v1','canonical-measurement.v2','canonical-measurement.v3','canonical-measurement.v4'].includes(rule))throw new Error('Unsupported measurement dependency rule');
   const features=a.features.filter(f=>d.points.some(p=>p.featureId===f.id)),frames=new Set([d.frameId,...d.points.map(p=>p.frameId)]),transforms=new Set<string>();
-  let changed=rule!=='canonical-measurement.v3'||d.points.some(p=>p.frameId!==d.frameId);while(changed){changed=false;for(const t of a.transforms)if(t.scope==='AUTHORITATIVE_RECONSTRUCTION'&&frames.has(t.from)){transforms.add(t.id);if(!frames.has(t.to)){frames.add(t.to);changed=true;}}}
+  let changed=!['canonical-measurement.v3','canonical-measurement.v4'].includes(rule)||d.points.some(p=>p.frameId!==d.frameId);while(changed){changed=false;for(const t of a.transforms)if(t.scope==='AUTHORITATIVE_RECONSTRUCTION'&&frames.has(t.from)){transforms.add(t.id);if(!frames.has(t.to)){frames.add(t.to);changed=true;}}}
   const ts=a.transforms.filter(t=>transforms.has(t.id)),observations=new Set([...features.flatMap(f=>f.observationIds),...ts.flatMap(t=>t.observationIds)]);
   const frameRecords=a.frames.filter(f=>frames.has(f.id));
   const obs=a.observations.filter(o=>observations.has(o.id));
-  return {rule,points:d.points,mode:d.mode,frameId:d.frameId,features:rule!=='canonical-measurement.v1'?features.map(({label:_,...physical})=>physical):features,frames:rule!=='canonical-measurement.v1'?frameRecords.map(({label:_,...physical})=>physical):frameRecords,transforms:ts,observations:obs,...(rule==='canonical-measurement.v3'?{sources:a.sources.filter(s=>obs.some(o=>o.sourceId===s.id))}:{})};
+  return {rule,points:d.points,mode:d.mode,frameId:d.frameId,features:rule!=='canonical-measurement.v1'?features.map(({label:_,...physical})=>physical):features,frames:rule!=='canonical-measurement.v1'?frameRecords.map(({label:_,...physical})=>physical):frameRecords,transforms:ts,observations:obs,...(['canonical-measurement.v3','canonical-measurement.v4'].includes(rule)?{sources:a.sources.filter(s=>obs.some(o=>o.sourceId===s.id))}:{})};
 }
 async function fingerprint(a:EvidenceAssembly,d:InvestigationDraft,rule='canonical-measurement.v1'){return sha256Json(measurementDependencies(a,d,rule));}
 export async function saveInvestigation(title:string,assembly:EvidenceAssembly,draft:InvestigationDraft,presentation:InvestigationPresentation,receipts:readonly EvidenceReceipt[],supersedes?:string):Promise<SavedInvestigation>{
@@ -40,7 +44,7 @@ export async function saveInvestigation(title:string,assembly:EvidenceAssembly,d
   if(verified.some(r=>r.payload.assemblyId!==a.id))throw new Error('Linked receipt belongs to another assembly');
   const {selectedId,...physicalDraft}=draft;
   if(supersedes!==undefined&&!/^investigation:[a-f0-9]{64}$/.test(supersedes))throw new Error('Invalid original investigation link');
-  const payload={title,createdAt:new Date().toISOString(),assemblySnapshot:a,snapshotSha256:await sha256Json(a),dependencyRule:'canonical-measurement.v3',dependencyFingerprint:await fingerprint(a,draft,'canonical-measurement.v3'),...(supersedes?{supersedes}:{}),draft:physicalDraft,result:compute(a,draft),receipts:verified,presentation:{...presentation,...(presentation.selectedId||selectedId?{selectedId:presentation.selectedId??selectedId}:{})}};
+  const payload={title,createdAt:new Date().toISOString(),assemblySnapshot:a,snapshotSha256:await sha256Json(a),dependencyRule:'canonical-measurement.v4',dependencyFingerprint:await fingerprint(a,draft,'canonical-measurement.v4'),...(supersedes?{supersedes}:{}),draft:physicalDraft,result:compute(a,draft),receipts:verified,presentation:{...presentation,...(presentation.selectedId||selectedId?{selectedId:presentation.selectedId??selectedId}:{})}};
   const sha256=await sha256Json(payload);return JSON.parse(canonicalJson({schema:'giza.saved-investigation.v2',id:`investigation:${sha256}`,sha256,payload}));
 }
 export async function restoreInvestigation(input:unknown):Promise<SavedInvestigation>{
@@ -52,12 +56,12 @@ export async function restoreInvestigation(input:unknown):Promise<SavedInvestiga
   const p=s.payload,a=importCanonicalAssembly(p.assemblySnapshot);checkDraft(p.draft,a);checkPresentation(p.presentation,a);
   if(p.supersedes!==undefined&&!/^investigation:[a-f0-9]{64}$/.test(p.supersedes))throw new Error('Invalid original investigation link');
   if(typeof p.title!=='string'||!p.title.trim()||p.title.length>160||!Number.isFinite(Date.parse(p.createdAt))||!Array.isArray(p.receipts)||p.receipts.length>100)throw new Error('Invalid investigation metadata');
-  if(p.snapshotSha256!==await sha256Json(a)||p.dependencyFingerprint!==await fingerprint(a,p.draft,p.dependencyRule)||canonicalJson(p.result)!==canonicalJson(compute(a,p.draft)))throw new Error('Investigation does not reproduce against archived inputs');
+  if(p.snapshotSha256!==await sha256Json(a)||p.dependencyFingerprint!==await fingerprint(a,p.draft,p.dependencyRule)||canonicalJson(p.result)!==canonicalJson(compute(a,p.draft,p.dependencyRule??'canonical-measurement.v1')))throw new Error('Investigation does not reproduce against archived inputs');
   for(const r of p.receipts)if((await verifyReceipt(r)).payload.assemblyId!==a.id)throw new Error('Linked receipt assembly mismatch');
   return s;
 }
 export async function investigationApplicability(s:SavedInvestigation,current:EvidenceAssembly){
-  try{const checked=await restoreInvestigation(s);checkDraft(checked.payload.draft,current);if(checked.payload.dependencyRule!=='canonical-measurement.v3')return 'HISTORICAL';return await fingerprint(current,checked.payload.draft,checked.payload.dependencyRule)===checked.payload.dependencyFingerprint?'CURRENT':'HISTORICAL';}catch{return 'UNVERIFIABLE';}
+  try{const checked=await restoreInvestigation(s);checkDraft(checked.payload.draft,current);if(checked.payload.dependencyRule!=='canonical-measurement.v4')return 'HISTORICAL';return await fingerprint(current,checked.payload.draft,checked.payload.dependencyRule)===checked.payload.dependencyFingerprint?'CURRENT':'HISTORICAL';}catch{return 'UNVERIFIABLE';}
 }
 /** Read-only historical inspection never routes ambiguous points into current geometry. */
 export async function inspectHistoricalInvestigation(raw:string){

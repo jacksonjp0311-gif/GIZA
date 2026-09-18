@@ -1,0 +1,14 @@
+.viewportDrawer{position:absolute;z-index:8;max-width:calc(100% - 24px);color:#f4d598}
+.viewportDrawer.inspection{top:12px;left:12px}
+.viewportDrawer.explosion{right:14px;bottom:42px}
+.viewportDrawerTab{background:#111e24ed;color:#f4d598;border:1px solid #997141;border-radius:5px;padding:9px 12px;font-size:12px;cursor:pointer}
+.viewportDrawerTab:focus-visible{outline:2px solid #ffcf7d;outline-offset:3px}
+.viewportDrawerBody{position:absolute;top:100%;left:0;background:#081217f5;border:1px solid #997141;border-radius:5px;padding:8px;overflow:auto;animation:drawerReveal 120ms ease-out}
+.viewportDrawerBody[hidden]{display:none}
+.viewportDrawer .interiorControls,.viewportDrawer .viewportExplodeControl{position:static;inset:auto;max-width:100%;margin:0;box-shadow:none;border:0;background:transparent;padding:4px}
+.viewportDrawer.inspection .viewportDrawerBody{width:520px;max-width:calc(100vw - 50px)}
+.viewportDrawer.explosion .viewportDrawerBody{top:auto;bottom:100%;left:auto;right:0;width:310px;max-width:calc(100vw - 50px)}
+.viewportDrawerClose{display:block;margin:6px 0 0 auto;background:transparent;color:#d9bd8b;border:1px solid #806840;border-radius:4px;padding:5px 8px;font-size:11px}
+@keyframes drawerReveal{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.viewportDrawerBody{animation:none}}
+.viewportDrawer .dimensionReadout{position:static;max-width:none;margin-top:8px}

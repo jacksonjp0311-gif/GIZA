@@ -3,15 +3,15 @@ import {assertSafeDocument,validateObservation,validateFeatureSupport} from './o
 import type {EvidenceFeature,EvidenceObservation} from './types';
 import {importCanonicalAssembly} from './spatial';
 
-export type EvidenceNodeKind = 'FEATURE' | 'OBSERVATION' | 'SOURCE' | 'SOURCE_BYTES' | 'REGISTRATION' | 'FRAME' | 'TRANSFORM' | 'UNCERTAINTY' | 'GEOMETRY' | 'ASSEMBLY' | 'CONSTRAINT' | 'EXPERIMENT' | 'FINDING' | 'RECEIPT';
+export type EvidenceNodeKind = 'FEATURE' | 'OBSERVATION' | 'SOURCE' | 'SOURCE_BYTES' | 'REGISTRATION' | 'FRAME' | 'TRANSFORM' | 'UNCERTAINTY' | 'GEOMETRY' | 'ASSEMBLY' | 'CONSTRAINT' | 'EXPERIMENT' | 'FINDING' | 'RECEIPT' | 'PLAN_RELATION';
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 export interface EvidenceNode { id: string; kind: EvidenceNodeKind; label: string; authority: 'OBSERVED' | 'RECONSTRUCTED' | 'HYPOTHESIS' | null; data: Record<string, JsonValue> }
-const relationships=['CITES','HAS_UNCERTAINTY','HAS_CUSTODY_STATE','IMAGE_METRIC_AUTHORITY_STATE','REGISTRATION_REQUIRES_BYTES','COMPUTED_FROM','TRANSFORMS_BY','TARGET_FRAME','DECLARES_TRANSFORM','REPRESENTED_BY','EXPRESSED_IN','MEMBER_OF','CONSTRAINED_BY','HAS_CONSTRAINT','HAS_TRANSFORM_AUDIT','HAS_RESEARCH_RECORD','SEALED_BY','REVIEWS_EXPERIMENT','RELATED_CONTEXT'] as const;
+const relationships=['CITES','HAS_UNCERTAINTY','HAS_CUSTODY_STATE','IMAGE_METRIC_AUTHORITY_STATE','REGISTRATION_REQUIRES_BYTES','COMPUTED_FROM','TRANSFORMS_BY','TARGET_FRAME','DECLARES_TRANSFORM','REPRESENTED_BY','EXPRESSED_IN','MEMBER_OF','CONSTRAINED_BY','HAS_CONSTRAINT','HAS_TRANSFORM_AUDIT','HAS_RESEARCH_RECORD','SEALED_BY','REVIEWS_EXPERIMENT','RELATED_CONTEXT','REGISTERED_PLAN_CONTEXT'] as const;
 export type EvidenceRelationship=typeof relationships[number];
 export interface EvidenceEdge { from: string; to: string; relationship: EvidenceRelationship }
 export interface SpatialEvidenceGraph { schema: 'giza.spatial-evidence-graph.v1'; assemblyId: string; authoritativeFrameId: string; nodes: EvidenceNode[]; edges: EvidenceEdge[]; limitations: string[] }
 
-const kinds: EvidenceNodeKind[] = ['FEATURE', 'OBSERVATION', 'SOURCE', 'SOURCE_BYTES', 'REGISTRATION', 'FRAME', 'TRANSFORM', 'UNCERTAINTY', 'GEOMETRY', 'ASSEMBLY', 'CONSTRAINT', 'EXPERIMENT', 'FINDING', 'RECEIPT'];
+const kinds: EvidenceNodeKind[] = ['FEATURE', 'OBSERVATION', 'SOURCE', 'SOURCE_BYTES', 'REGISTRATION', 'FRAME', 'TRANSFORM', 'UNCERTAINTY', 'GEOMETRY', 'ASSEMBLY', 'CONSTRAINT', 'EXPERIMENT', 'FINDING', 'RECEIPT', 'PLAN_RELATION'];
 const safeKey = (s: string) => s !== '__proto__' && s !== 'constructor' && s !== 'prototype';
 
 /** Stable, finite JSON only. Used for reproducible receipts, not archaeology authority. */
@@ -56,7 +56,7 @@ export function buildEvidenceGraph(assembly: EvidenceAssembly): SpatialEvidenceG
   }
   for (const frame of assembly.frames) add(frame.id, 'FRAME', frame.id, null, frame);
   for (const transform of assembly.transforms) {
-    add(transform.id, 'TRANSFORM', transform.id, 'RECONSTRUCTED', transform);
+    add(transform.id, 'TRANSFORM', transform.id, transform.authority, transform);
     add(`uncertainty:${transform.id}`, 'UNCERTAINTY', 'Transform uncertainty', null, transform.uncertainty);
     edge(transform.id, `uncertainty:${transform.id}`, 'HAS_UNCERTAINTY');
     for (const id of transform.observationIds) edge(transform.id, id, 'COMPUTED_FROM');
@@ -124,7 +124,7 @@ function validateGraphSemantics(g:SpatialEvidenceGraph){
   requireKind(g.assemblyId,'ASSEMBLY');requireKind(g.authoritativeFrameId,'FRAME');
   if(byId.get(g.assemblyId)!.data.authoritativeFrameId!==g.authoritativeFrameId)throw new Error('Assembly frame identity mismatch');
   const endpointKinds:Record<Exclude<EvidenceRelationship,'RELATED_CONTEXT'>,[EvidenceNodeKind[],EvidenceNodeKind[]]>={
-    CITES:[['OBSERVATION'],['SOURCE']],HAS_UNCERTAINTY:[['OBSERVATION','FEATURE','TRANSFORM'],['UNCERTAINTY']],HAS_CUSTODY_STATE:[['SOURCE'],['SOURCE_BYTES']],IMAGE_METRIC_AUTHORITY_STATE:[['OBSERVATION'],['REGISTRATION']],REGISTRATION_REQUIRES_BYTES:[['SOURCE_BYTES'],['REGISTRATION']],COMPUTED_FROM:[['TRANSFORM','CONSTRAINT'],['OBSERVATION']],TRANSFORMS_BY:[['FRAME'],['TRANSFORM']],TARGET_FRAME:[['TRANSFORM'],['FRAME']],DECLARES_TRANSFORM:[['ASSEMBLY'],['TRANSFORM']],REPRESENTED_BY:[['FEATURE'],['GEOMETRY']],EXPRESSED_IN:[['GEOMETRY'],['FRAME']],MEMBER_OF:[['GEOMETRY'],['ASSEMBLY']],CONSTRAINED_BY:[['FEATURE'],['OBSERVATION','CONSTRAINT']],HAS_CONSTRAINT:[['ASSEMBLY'],['CONSTRAINT']],HAS_TRANSFORM_AUDIT:[['ASSEMBLY'],['CONSTRAINT']],HAS_RESEARCH_RECORD:[['ASSEMBLY'],['EXPERIMENT','FINDING']],SEALED_BY:[['EXPERIMENT','FINDING'],['RECEIPT']],REVIEWS_EXPERIMENT:[['FINDING'],['RECEIPT']]};
+    REGISTERED_PLAN_CONTEXT:[['FEATURE'],['PLAN_RELATION']],CITES:[['OBSERVATION'],['SOURCE']],HAS_UNCERTAINTY:[['OBSERVATION','FEATURE','TRANSFORM'],['UNCERTAINTY']],HAS_CUSTODY_STATE:[['SOURCE'],['SOURCE_BYTES']],IMAGE_METRIC_AUTHORITY_STATE:[['OBSERVATION'],['REGISTRATION']],REGISTRATION_REQUIRES_BYTES:[['SOURCE_BYTES'],['REGISTRATION']],COMPUTED_FROM:[['TRANSFORM','CONSTRAINT'],['OBSERVATION']],TRANSFORMS_BY:[['FRAME'],['TRANSFORM']],TARGET_FRAME:[['TRANSFORM'],['FRAME']],DECLARES_TRANSFORM:[['ASSEMBLY'],['TRANSFORM']],REPRESENTED_BY:[['FEATURE'],['GEOMETRY']],EXPRESSED_IN:[['GEOMETRY'],['FRAME']],MEMBER_OF:[['GEOMETRY'],['ASSEMBLY']],CONSTRAINED_BY:[['FEATURE'],['OBSERVATION','CONSTRAINT']],HAS_CONSTRAINT:[['ASSEMBLY'],['CONSTRAINT']],HAS_TRANSFORM_AUDIT:[['ASSEMBLY'],['CONSTRAINT']],HAS_RESEARCH_RECORD:[['ASSEMBLY'],['EXPERIMENT','FINDING']],SEALED_BY:[['EXPERIMENT','FINDING'],['RECEIPT']],REVIEWS_EXPERIMENT:[['FINDING'],['RECEIPT']]};
   endpointKinds.HAS_RESEARCH_RECORD[1].push('CONSTRAINT');endpointKinds.SEALED_BY[0].push('CONSTRAINT');
   const seen=new Set<string>();
   for(const e of g.edges){const key=canonicalJson(e);if(seen.has(key))throw new Error('Duplicate graph relationship');seen.add(key);if(e.relationship==='RELATED_CONTEXT')continue;const [from,to]=endpointKinds[e.relationship];if(!from.includes(byId.get(e.from)!.kind)||!to.includes(byId.get(e.to)!.kind))throw new Error(`Wrong-kind endpoints: ${e.relationship}`);}
@@ -153,9 +153,21 @@ function validateGraphSemantics(g:SpatialEvidenceGraph){
       if(n.authority!==authority||n.data.coordinateAuthority!==f.coordinateAuthority||n.data.scalarAuthority!==f.authority||n.data.surfaceAuthority!==(f.geometry.kind==='unknown'?'UNKNOWN':authority)||n.data.frameId!==f.frameId||canonicalJson(n.data.geometry)!==canonicalJson(f.geometry))throw new Error('Geometry authority/frame/representation contradicts its feature');
       exact(n.id,'EXPRESSED_IN',[f.frameId]);exact(n.id,'MEMBER_OF',[g.assemblyId]);
     }
-    if(n.kind==='TRANSFORM'){exact(n.id,'COMPUTED_FROM',n.data.observationIds as string[]);exact(n.id,'TARGET_FRAME',[n.data.to as string]);const origins=g.edges.filter(e=>e.to===n.id&&e.relationship==='TRANSFORMS_BY');if(origins.length!==1||origins[0].from!==n.data.from)throw new Error('Transform origin mismatch');}
+    if(n.kind==='TRANSFORM'){if(n.authority!==n.data.authority)throw new Error('Transform wrapper/record authority mismatch');exact(n.id,'COMPUTED_FROM',n.data.observationIds as string[]);exact(n.id,'TARGET_FRAME',[n.data.to as string]);const origins=g.edges.filter(e=>e.to===n.id&&e.relationship==='TRANSFORMS_BY');if(origins.length!==1||origins[0].from!==n.data.from)throw new Error('Transform origin mismatch');}
     if(n.kind==='CONSTRAINT'){exact(n.id,'COMPUTED_FROM',n.data.observationIds as string[]);if(Array.isArray(n.data.featureIds)){const incoming=g.edges.filter(e=>e.to===n.id&&e.relationship==='CONSTRAINED_BY').map(e=>e.from).sort();if(canonicalJson(incoming)!==canonicalJson([...n.data.featureIds].sort()))throw new Error('Constraint feature ownership mismatch');}}
     if(n.kind==='SOURCE_BYTES'||n.kind==='REGISTRATION'){requireKind(n.data.sourceId,'SOURCE');if(n.id!==`${n.kind==='SOURCE_BYTES'?'bytes':'registration'}:${n.data.sourceId}`)throw new Error('Source custody/registration ownership mismatch');}
+    if(n.kind==='REGISTRATION'&&(n.data.status!=='NO_ACCEPTED_ASSEMBLY_REGISTRATION'||n.data.geometryAuthority!=='NONE'||n.data.passed===true||n.authority!==null||(n.data.verificationState!==undefined&&!['IMPORTED_CLAIM','NO_REGISTRATION'].includes(String(n.data.verificationState)))))throw new Error('Imported registration verification claim is not local replay verification; use the scoped campaign bridge');
+    if(n.kind==='PLAN_RELATION'){
+      const d=n.data;if(d.schema!=='giza.live-plan-relation.v1'||d.dimensionalScope!=='PLAN_2D_ONLY'||d.assemblyId!==g.assemblyId||d.physical3DPlacement!=='UNRESOLVED'||n.authority!==d.authority||!Array.isArray(d.affectedFeatures)||!['SYNTHETIC_SOFTWARE_QA','DOCUMENTARY_CONSISTENCY','INDEPENDENT_CONTROLLED'].includes(String(d.classification)))throw new Error('Invalid scoped plan relation');
+      if(d.classification==='SYNTHETIC_SOFTWARE_QA'&&n.authority!=='HYPOTHESIS')throw new Error('Synthetic relation cannot gain archaeological authority');
+      if(d.classification!=='SYNTHETIC_SOFTWARE_QA'&&n.authority!=='RECONSTRUCTED')throw new Error('A fitted plan relation is reconstructed, not an observed surface');
+      if(typeof d.revisionId!=='string'||!/^revision:[a-f0-9]{64}$/.test(d.revisionId)||n.id!=='plan-relation:'+d.revisionId.slice(9)||d.id!==n.id||d.from!=='SOURCE_RENDER_PIXELS'||typeof d.targetFrame!=='string'||!d.targetFrame.trim()||d.targetFrame===g.authoritativeFrameId||d.fitRule!=='SHARED_SIMILARITY_2D')throw new Error('Invalid plan relation identity or dimensional frame');
+      for(const key of ['sourceIdentity','custody','controls','holdouts'])if(!Array.isArray(d[key])||!(d[key] as JsonValue[]).length)throw new Error('Incomplete plan relation chain: '+key);
+      for(const key of ['rule','fit','frozenInput','independentScale','reviewReceipt','rollbackLink','replay'])if(!d[key]||typeof d[key]!=='object'||Array.isArray(d[key]))throw new Error('Incomplete plan relation chain: '+key);
+      for(const id of d.affectedFeatures)requireKind(id,'FEATURE');
+      for(const key of ['assemblySha256','sourceSha256','renderSha256','freezeSha256','numericalResultSha256'])if(typeof d[key]!=='string'||!/^[a-f0-9]{64}$/.test(d[key] as string))throw new Error('Missing plan relation custody identity');
+      const incoming=g.edges.filter(e=>e.relationship==='REGISTERED_PLAN_CONTEXT'&&e.to===n.id).map(e=>e.from).sort();if(canonicalJson(incoming)!==canonicalJson([...d.affectedFeatures].sort()))throw new Error('Plan feature bindings disagree');
+    }
     if(n.kind==='SOURCE')exact(n.id,'HAS_CUSTODY_STATE',[`bytes:${n.id}`]);
     if(n.kind==='SOURCE_BYTES')exact(n.id,'REGISTRATION_REQUIRES_BYTES',[`registration:${n.data.sourceId}`]);
   }
@@ -172,7 +184,7 @@ export function traverseEvidence(graph: SpatialEvidenceGraph, startId: string, m
     if(purpose==='RELATED_CONTEXT')return true;
     const target=byId.get(e.to)!;
     if(['CITES','HAS_UNCERTAINTY','HAS_CUSTODY_STATE','IMAGE_METRIC_AUTHORITY_STATE','REGISTRATION_REQUIRES_BYTES'].includes(e.relationship))return true;
-    if(e.relationship==='CONSTRAINED_BY')return target.kind==='OBSERVATION';
+    if(e.relationship==='CONSTRAINED_BY')return target.kind==='OBSERVATION'||(purpose==='DERIVED_DEPENDENCIES'&&target.kind==='CONSTRAINT'&&Array.isArray(target.data.featureIds)&&target.data.featureIds.includes(e.from));
     if(purpose!=='DIRECT_SUPPORT'&&e.relationship==='COMPUTED_FROM')return true;
     return purpose==='PLACEMENT'&&(['REPRESENTED_BY','EXPRESSED_IN','TARGET_FRAME'].includes(e.relationship)||(e.relationship==='TRANSFORMS_BY'&&target.data.scope==='AUTHORITATIVE_RECONSTRUCTION'));
   };

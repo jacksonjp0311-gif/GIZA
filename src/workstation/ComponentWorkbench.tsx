@@ -28,7 +28,7 @@ export function ComponentWorkbench({model,part,initialContext,onClose,onOpen,onS
   const hasDimensions=chamber||(burial&&(context==='ROOM'||part.id==='part.burial.chamber'||part.id.startsWith('part.sarcophagus.')));
   const refs=model.componentResearch.sources;
   const observations=model.componentResearch.observations.filter(o=>o.bind?o.bind.includes(part.id):burial);
-  return <div className="componentWorkbench">
+  return <div data-tutorial-id="component-workspace" className="componentWorkbench">
     <div className="componentToolbar">
       <button onClick={onClose}>← Full pyramid</button>
       <div><small>COMPONENT EXPLORER</small><h2>{part.name}</h2></div>

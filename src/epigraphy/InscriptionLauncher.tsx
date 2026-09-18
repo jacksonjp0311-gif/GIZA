@@ -7,5 +7,5 @@ class LabBoundary extends Component<{children:ReactNode;onClose:()=>void},{faile
 }
 export function InscriptionLauncher({onModel,label='Hieroglyphs · Inscription Lab'}:{onModel?:()=>void;label?:string}){
   const [open,setOpen]=useState(false);
-  return <><button className="inscriptionLaunch" onClick={()=>setOpen(true)}>{label}</button>{open&&<LabBoundary onClose={()=>setOpen(false)}><Suspense fallback={<span role="status">Loading inscription tools… <button onClick={()=>setOpen(false)}>Cancel</button></span>}><Lab onClose={()=>setOpen(false)} onModel={onModel?()=>{setOpen(false);onModel();}:undefined}/></Suspense></LabBoundary>}</>;
+  return <><button data-tutorial-id="inscription-launch" className="inscriptionLaunch" onClick={()=>setOpen(true)}>{label}</button>{open&&<LabBoundary onClose={()=>setOpen(false)}><Suspense fallback={<span role="status">Loading inscription tools… <button onClick={()=>setOpen(false)}>Cancel</button></span>}><Lab onClose={()=>setOpen(false)} onModel={onModel?()=>{setOpen(false);onModel();}:undefined}/></Suspense></LabBoundary>}</>;
 }
