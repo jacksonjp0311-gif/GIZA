@@ -1,0 +1,54 @@
+{
+  "version": "0.10.1",
+  "codename": "ATLAS INGEST + PRIMARY SOURCE VAULT",
+  "phase": "OPEN_MEDIA_ATLAS_PLUS_BYTE_PROVENANCE",
+  "generated_at": "2026-09-12T23:05:00Z",
+  "geometry_changed": false,
+  "ui_shell_changed": false,
+  "evidence_maturity_changed": false,
+  "counts": {
+    "media_assets": 16,
+    "media_collections": 9,
+    "photo_observations": 13,
+    "verified_open_media_files": 7
+  },
+  "files": [
+    {
+      "path": "docs/ATLAS_INGEST.md",
+      "sha256": "1cd1ad3695ea3a667dee82ab3892851e3ec768ea288edcd7b83e8b874fa1deca",
+      "bytes": 3861
+    },
+    {
+      "path": "public/model/observatory/media_collections.json",
+      "sha256": "a490e8e2f097df56ba160a625852e0842f9ce75faca8db461c3a02beb8ff5c2a",
+      "bytes": 4188
+    },
+    {
+      "path": "public/model/observatory/media_catalog.json",
+      "sha256": "d9280be46ba011db2b0145d4629ad7a05db45c983e9e8aa504874e67d68d9df9",
+      "bytes": 18296
+    },
+    {
+      "path": "public/model/observatory/photo_observations.json",
+      "sha256": "91fb01d79933322aab9b7b865669780b2a15b89bdd3a34bd3282a8c7c63dfa6a",
+      "bytes": 6383
+    },
+    {
+      "path": "public/media/observatory/ATTRIBUTION.json",
+      "sha256": "a65b8435a7344fd1b6f3d3ada6a18cd2bcc4e08a77d77849ef04c1573c51f18b",
+      "bytes": 7603
+    },
+    {
+      "path": "scripts/media/harvest-commons.mjs",
+      "sha256": "199237d557a11a3017dc4356e55923d16cf6ccaa6fc86626b7010eabe69eb93e",
+      "bytes": 5923
+    },
+    {
+      "path": "public/model/corpus/open_media_candidates.json",
+      "sha256": "0c03418375216551d41b85ecb7e6b7cdb8c52de294fb924b12d2bf157bb92081",
+      "bytes": 2497
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:36:28.684Z"
+}

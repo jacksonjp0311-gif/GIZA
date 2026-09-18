@@ -1,0 +1,10 @@
+
+> giza-nexus-registration-workbench@0.11.1 check
+> tsc --noEmit && npm run check:legacy && npm run test:repairs && npm run test:components && npm run test:usability && npm run test:sphinx && npm run test:epigraphy && npm run test:evidence-assembly && npm run test:runtime && npm run validate:evidence-assembly && npm run build:workbench
+
+src/workstation/ReferenceGallery.tsx(18,16): error TS2304: Cannot find name 'uniqueMedia'.
+src/workstation/ReferenceGallery.tsx(20,31): error TS7006: Parameter 'p' implicitly has an 'any' type.
+src/workstation/ReferenceGallery.tsx(24,62): error TS7006: Parameter 'p' implicitly has an 'any' type.
+src/workstation/ReferenceGallery.tsx(25,56): error TS7006: Parameter 'p' implicitly has an 'any' type.
+src/workstation/ReferenceGallery.tsx(27,33): error TS7006: Parameter 'p' implicitly has an 'any' type.
+

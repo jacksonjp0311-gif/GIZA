@@ -1,0 +1,42 @@
+{
+  "schema": "giza.software-profile.v1",
+  "at": "2026-09-18T17:04:00.791Z",
+  "commit": "3074047ce8c39950b5d03814b1a40408f55c7739",
+  "dirty": true,
+  "node": "v24.18.0",
+  "platform": "win32",
+  "cpu": "AMD Ryzen 5 3500 6-Core Processor              ",
+  "rows": [
+    {
+      "name": "impactAnalysis",
+      "samples": 10,
+      "medianMs": 221.9558999999997,
+      "maxMs": 328.8518999999999
+    },
+    {
+      "name": "graphValidation",
+      "samples": 10,
+      "medianMs": 60.33829999999989,
+      "maxMs": 117.70870000000014
+    },
+    {
+      "name": "freshReceiptReplay",
+      "samples": 10,
+      "medianMs": 250.1797000000006,
+      "maxMs": 633.3373000000001
+    },
+    {
+      "name": "immutableReceiptReuse",
+      "samples": 10,
+      "medianMs": 0.001299999999901047,
+      "maxMs": 0.0978000000004613
+    },
+    {
+      "name": "contextualExplanation",
+      "samples": 10,
+      "medianMs": 268.8139999999994,
+      "maxMs": 401.5466000000015
+    }
+  ],
+  "note": "Current isolated contract/CPU profile; not a before/after viewport, GPU or memory improvement certification. No archaeological authority."
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "media-orbit-full-a",
+  "createdAt": "2026-09-18T10:31:38.825Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 2,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

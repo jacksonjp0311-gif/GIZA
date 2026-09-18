@@ -103,8 +103,8 @@
     },
     {
       "path": "src/maps/MapAtlasPanel.tsx",
-      "sha256": "877352e42f5a9932908888453b69b59ab60e1211f4d03265973e9e63da77137c",
-      "bytes": 7063
+      "sha256": "af92e80f87b9b3bb4713f91105f899471a6ab888fb19ab690be2f8c5679f79a8",
+      "bytes": 7164
     },
     {
       "path": "scripts/maps/validate-maps.mjs",
@@ -117,6 +117,6 @@
       "bytes": 8219
     }
   ],
-  "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:36:28.684Z"
+  "release_version": "0.12.0",
+  "sealed_at": "2026-09-18T17:31:29.776Z"
 }

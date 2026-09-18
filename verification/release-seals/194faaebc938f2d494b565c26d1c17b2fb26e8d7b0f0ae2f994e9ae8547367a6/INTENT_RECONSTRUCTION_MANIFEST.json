@@ -1,0 +1,58 @@
+{
+  "version": "0.10.6",
+  "codename": "SOURCE-BYTE REGISTRATION + METRIC VIEW LAB",
+  "phase": "INTENT_RECONSTRUCTION_METRIC_GATED",
+  "generated_at": "2026-09-13T22:19:14.970731Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "hypotheses": 8,
+    "evidence_links": 25,
+    "tests": 5,
+    "source_registry_total": 73,
+    "knowledge_nodes_total": 42
+  },
+  "invariants": [
+    "intent is inferred, not observed",
+    "scores are triage indices, not probabilities",
+    "source-family independence prevents double counting",
+    "plan concordance cannot convert reconstruction agreement into historical intent",
+    "visibility topology cannot establish ritual meaning",
+    "future-message/machine/advanced-computation remain unpromoted without direct evidence",
+    "Metric readiness or visibility cannot establish ancient intent without registered geometry and independent evidence."
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/intent/manifest.json",
+      "sha256": "0d04b9bc36cf9617500f415f5d54faee4fe6a236bc7c58c8616a29c573409d01",
+      "bytes": 1249
+    },
+    {
+      "path": "public/model/intent/hypotheses.json",
+      "sha256": "5d9228aa71e6642160a950a2cd13f5106ac62a6a09f56c34e9d9fd4679224867",
+      "bytes": 5347
+    },
+    {
+      "path": "public/model/intent/evidence_links.json",
+      "sha256": "6cdf3f056db86f4c9df3491aac62024f41d9be4f47203ea4efc5e8bba45f446e",
+      "bytes": 8907
+    },
+    {
+      "path": "public/model/intent/test_matrix.json",
+      "sha256": "0caa825079e758cefe2695a32ab9836b48def18308326ff10001bb5c656dace1",
+      "bytes": 2963
+    },
+    {
+      "path": "public/model/intent/synthesis.json",
+      "sha256": "91a40aa92e83222a2fe859886901e3cef05c8bdf83004fe0f754e0ab7e5c5a1e",
+      "bytes": 3744
+    },
+    {
+      "path": "docs/INTENT_RECONSTRUCTION.md",
+      "sha256": "15f31d32968ab43fa15b310489a3cea974fc758c7ce564ba5d30a25d1d0415ca",
+      "bytes": 6340
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T10:38:25.024Z"
+}

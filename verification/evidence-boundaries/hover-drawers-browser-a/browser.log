@@ -1,0 +1,184 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 21 tests using 1 worker
+
+  ok  1 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 1280 (8.5s)
+  ok  2 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 390 (4.0s)
+  ok  3 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 844 (4.7s)
+  ok  4 tests\browser\atlas-expansion.spec.ts:19:1 › spherical stones and contextual assembly explosion are reversible (15.4s)
+  ok  5 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (14.5s)
+  ok  6 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (8.2s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:41:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (4.5s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 1280x800 (2.6s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 390x844 (1.7s)
+  ok 10 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 844x390 (1.7s)
+  ok 11 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas slow does not block core or force workspace navigation (2.2s)
+  ok 12 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas missing does not block core or force workspace navigation (2.1s)
+  ok 13 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas malformed does not block core or force workspace navigation (2.2s)
+  ok 14 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (9.7s)
+  ok 15 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (5.4s)
+  ok 16 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (4.4s)
+  x  17 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 (23.9s)
+  x  18 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 (19.0s)
+  x  19 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 (1.3m)
+  ok 20 tests\browser\viewport-drawers.spec.ts:2:1 › viewport drawers collapse after pointer use and support keyboard (3.8s)
+  ok 21 tests\browser\viewport-drawers.spec.ts:13:1 › touch drawers open and close explicitly (3.2s)
+
+
+  1) tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('slider', { name: 'Explosion distance', exact: true })
+    Expected: "0"
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByRole('slider', { name: 'Explosion distance', exact: true }) with timeout 15000ms
+      - waiting for getByRole('slider', { name: 'Explosion distance', exact: true })
+
+
+      14 |   await page.screenshot({path:test.info().outputPath('centered-startup.png')});
+      15 |   await page.getByRole('button',{name:'Explode',exact:true}).hover();await page.getByRole('slider',{name:'Explosion distance',exact:true}).fill('2');await page.reload();
+    > 16 |   await expect(page.getByRole('slider',{name:'Explosion distance',exact:true})).toHaveValue('0');await expect.poll(centered).toBe(true);
+         |                                                                                 ^
+      17 |   expect(await page.evaluate(()=>localStorage.getItem('giza.qa.research-preservation'))).toBe('untouched research sentinel');
+      18 | });
+      19 |
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\startup-camera.spec.ts:16:81
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-497ca-spite-prior-inspection-1280\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\startup-camera-startup-cen-497ca-spite-prior-inspection-1280\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-497ca-spite-prior-inspection-1280\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\startup-camera-startup-cen-497ca-spite-prior-inspection-1280\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('slider', { name: 'Explosion distance', exact: true })
+    Expected: "0"
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByRole('slider', { name: 'Explosion distance', exact: true }) with timeout 15000ms
+      - waiting for getByRole('slider', { name: 'Explosion distance', exact: true })
+
+
+      14 |   await page.screenshot({path:test.info().outputPath('centered-startup.png')});
+      15 |   await page.getByRole('button',{name:'Explode',exact:true}).hover();await page.getByRole('slider',{name:'Explosion distance',exact:true}).fill('2');await page.reload();
+    > 16 |   await expect(page.getByRole('slider',{name:'Explosion distance',exact:true})).toHaveValue('0');await expect.poll(centered).toBe(true);
+         |                                                                                 ^
+      17 |   expect(await page.evaluate(()=>localStorage.getItem('giza.qa.research-preservation'))).toBe('untouched research sentinel');
+      18 | });
+      19 |
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\startup-camera.spec.ts:16:81
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-c7f4f-espite-prior-inspection-390\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\startup-camera-startup-cen-c7f4f-espite-prior-inspection-390\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-c7f4f-espite-prior-inspection-390\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\startup-camera-startup-cen-c7f4f-espite-prior-inspection-390\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.hover: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Explode', exact: true })
+        - locator resolved to <button aria-expanded="true" class="viewportDrawerTab" aria-controls="viewport-explosion">…</button>
+      - attempting hover action
+        2 × waiting for element to be visible and stable
+          - element is visible and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <nav class="surfaceSwitch" aria-label="Viewport surface">…</nav> from <header class="topbar edgeTop compactModelHeader">…</header> subtree intercepts pointer events
+        - retrying hover action
+        - waiting 20ms
+        2 × waiting for element to be visible and stable
+          - element is visible and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <nav class="surfaceSwitch" aria-label="Viewport surface">…</nav> from <header class="topbar edgeTop compactModelHeader">…</header> subtree intercepts pointer events
+        - retrying hover action
+          - waiting 100ms
+        136 × waiting for element to be visible and stable
+            - element is visible and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <nav class="surfaceSwitch" aria-label="Viewport surface">…</nav> from <header class="topbar edgeTop compactModelHeader">…</header> subtree intercepts pointer events
+          - retrying hover action
+            - waiting 500ms
+
+
+      13 |   await expect.poll(centered).toBe(true);
+      14 |   await page.screenshot({path:test.info().outputPath('centered-startup.png')});
+    > 15 |   await page.getByRole('button',{name:'Explode',exact:true}).hover();await page.getByRole('slider',{name:'Explosion distance',exact:true}).fill('2');await page.reload();
+         |                                                              ^
+      16 |   await page.getByRole('button',{name:'Explode',exact:true}).hover();await expect(page.getByRole('slider',{name:'Explosion distance',exact:true})).toHaveValue('0');await expect.poll(centered).toBe(true);
+      17 |   expect(await page.evaluate(()=>localStorage.getItem('giza.qa.research-preservation'))).toBe('untouched research sentinel');
+      18 | });
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\startup-camera.spec.ts:15:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-59f37-espite-prior-inspection-844\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\startup-camera-startup-cen-59f37-espite-prior-inspection-844\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\startup-camera-startup-cen-59f37-espite-prior-inspection-844\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\startup-camera-startup-cen-59f37-espite-prior-inspection-844\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 
+    tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 
+    tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 
+  18 passed (4.2m)
+
+[WebServer] (node:10804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:13000) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:20452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:4480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

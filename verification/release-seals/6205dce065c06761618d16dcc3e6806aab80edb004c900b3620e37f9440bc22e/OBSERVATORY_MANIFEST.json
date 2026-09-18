@@ -1,0 +1,30 @@
+{
+  "version": "0.10.6",
+  "codename": "SOURCE-BYTE REGISTRATION + METRIC VIEW LAB",
+  "phase": "OBSERVATORY_PLAN_REGISTRATION_READINESS",
+  "generated_at": "2026-09-13T22:19:14.970731Z",
+  "geometry_changed": false,
+  "ui_shell_changed": false,
+  "evidence_maturity_changed": false,
+  "counts": {
+    "observations": 129,
+    "publications": 25,
+    "media_assets": 16,
+    "cross_domain_summaries": 16,
+    "acquisition_targets": 24,
+    "source_registry_total": 73,
+    "rights_rows": 73,
+    "findings": 29,
+    "knowledge_nodes": 42,
+    "claim_records": 8
+  },
+  "hard_rules": [
+    "source-family dependence must be explicit in plan concordance",
+    "premetric visibility cannot claim sightlines or ancient experience",
+    "Remote plan availability does not imply local source-byte custody.",
+    "Metric visibility remains disabled until registered geometry passes residual/holdout gates."
+  ],
+  "files": [],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:36:28.684Z"
+}

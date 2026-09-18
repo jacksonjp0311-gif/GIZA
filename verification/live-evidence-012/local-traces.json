@@ -1,0 +1,46 @@
+{
+  "schema": "giza.local-software-artifacts.v1",
+  "note": "Original failure traces preserved locally, not deleted. Excluded from Git publication and current release file inventory because large traces exceed GitHub object limits. Historical tracked traces remain tracked. Public logs, error contexts and screenshots accompany these runs; CI publishes bounded-retention traces as workflow artifacts.",
+  "records": [
+    {
+      "path": "verification/evidence-boundaries/hover-drawers-browser-a/artifacts/startup-camera-startup-cen-497ca-spite-prior-inspection-1280/trace.zip",
+      "bytes": 17505851,
+      "sha256": "4147051dbd508b3891e79af5e66a759bfb8fa0d0ca8fba6c2af667ff8e2aed91"
+    },
+    {
+      "path": "verification/evidence-boundaries/hover-drawers-browser-a/artifacts/startup-camera-startup-cen-59f37-espite-prior-inspection-844/trace.zip",
+      "bytes": 224741671,
+      "sha256": "681bed54b95163958a866672dbcff7ec0e7ae51632b975e9b2473ffda4b37709"
+    },
+    {
+      "path": "verification/evidence-boundaries/hover-drawers-browser-a/artifacts/startup-camera-startup-cen-c7f4f-espite-prior-inspection-390/trace.zip",
+      "bytes": 10947738,
+      "sha256": "a5d4c3c6dd24df3f1814622e74f0c62143283953ca43a85e46cc8bee00822027"
+    },
+    {
+      "path": "verification/evidence-boundaries/media-orbit-browser-a/artifacts/centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot/trace.zip",
+      "bytes": 11579897,
+      "sha256": "04d8278154a00692ed842243a0ec2d351279efcce78defce993f397091a2dfcc"
+    },
+    {
+      "path": "verification/evidence-boundaries/live-evidence-012-browser-a/artifacts/centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot/trace.zip",
+      "bytes": 62460303,
+      "sha256": "f70f53f3e2af7a1cbc641c4792390be49bc36f83687d682f37f5af498363e63e"
+    },
+    {
+      "path": "verification/evidence-boundaries/live-evidence-012-browser-a/artifacts/evidence-workflow-actual-m-1080d-t-detour-export-and-restore/trace.zip",
+      "bytes": 87948127,
+      "sha256": "41f140966f7a56704561bf9c14d14b940ee92ee121a88c4c71fef6beb923d495"
+    },
+    {
+      "path": "verification/evidence-boundaries/live-evidence-012-browser-a/artifacts/evidence-workflow-actual-p-8110c-es-in-canonical-coordinates/trace.zip",
+      "bytes": 78913892,
+      "sha256": "0fbcf3a287a17606843970823bc9112f26941dd23e163bbefdb2e66cfc4977b8"
+    },
+    {
+      "path": "verification/evidence-boundaries/live-evidence-012-browser-a/artifacts/layers-overview-overlays-a-087df--controls-match-their-scope/trace.zip",
+      "bytes": 64554060,
+      "sha256": "c38073506144d0d645d91f560e269a61bd12e1850ae225da47c64cc4c5627990"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "version": "0.9.3",
+  "codename": "STRATA",
+  "phase": "SIMLAB_GEOMECHANICS_HYDRAULICS",
+  "generated_at": "2026-09-11T15:43:48.175734+00:00",
+  "active_solver": "solver.strata",
+  "baseline_experiment": "strata.deep-claim-screening",
+  "run_id": "run.strata.strata.deep-claim-screening.47505c0a0969",
+  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
+  "input_hash": "47505c0a096970b3822eb17282553dfa323a3dc8255a426660bbba1cc276d548",
+  "field_point_count": 106,
+  "shaft_bottom_stress_mpa": 16.522243919999998,
+  "terminal_center_stress_mpa": 18.358048799999995,
+  "shaft_bottom_water_pressure_mpa": 6.3547092,
+  "flow_status": "UNRESOLVED",
+  "stability_status": "UNRESOLVED_REQUIRES_ROCK_MASS_MODEL",
+  "truth_invariant": "Screening is SIMULATED and cannot promote UNVERIFIED geometry or imply cavity stability/flooding/flow.",
+  "files": [
+    {
+      "path": "public/model/simlab/experiments/strata.deep-claim-screening.json",
+      "sha256": "48858e3f9dce1e3a70fd3d5cd671b6994d33a138603a80f78155668d26423703",
+      "bytes": 1131
+    },
+    {
+      "path": "public/model/simlab/results/strata.deep-claim-screening.json",
+      "sha256": "9e2debef2a31f0ae93b851d4ce9b5ef7ae8b907e4bb51316d204e77ffe7f2ea0",
+      "bytes": 29571
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.csv",
+      "sha256": "8189a4545fceb97eff68e34c64d824f6488f92c3281e75ce481a4fb8cdeb7efd",
+      "bytes": 511
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.png",
+      "sha256": "cc6ef52f649f2659f4dfbf671c41ae14a1c9af333298d237db3d9153e8f78da1",
+      "bytes": 96477
+    },
+    {
+      "path": "public/model/simlab/benchmarks/strata_benchmark.json",
+      "sha256": "00e1b36386625d16e92dcd7906ab15a8ca0795ad8591ce1c5e99f20e8bb01d8f",
+      "bytes": 704
+    },
+    {
+      "path": "public/model/solvers/contracts/strata.json",
+      "sha256": "a39dc11d144548b9a1e9a3583cfa9d6c59b9d64dd33b419974ced3df9f9c1da7",
+      "bytes": 1218
+    },
+    {
+      "path": "scripts/simlab/strata-run.mjs",
+      "sha256": "e332d6e68c1edcd256ef945adae4e0e1ea8c57ee1c1cc15faa789ef77fe20891",
+      "bytes": 6284
+    },
+    {
+      "path": "scripts/simlab/strata-benchmark.mjs",
+      "sha256": "59e8df412ab93511686319aaaeabf7b8574c15b7db772a06897d6394e20bbc66",
+      "bytes": 1045
+    },
+    {
+      "path": "scripts/simlab/validate-strata.mjs",
+      "sha256": "45018c9a2ef422f382ec0e0ae214ff3b8904e6f36c84bd384f132a789abdc00f",
+      "bytes": 1598
+    },
+    {
+      "path": "docs/STRATA.md",
+      "sha256": "8bd60c2bf52a9c88d20d6740e50f6b5512137f2cbc7b50d8c90295e802d61d2b",
+      "bytes": 1785
+    },
+    {
+      "path": "public/model/research/findings_registry.json",
+      "sha256": "13e1d78c0f1a2221a4fc4919fc466af5b19c18a0c06d241673b7cff3bf5169d7",
+      "bytes": 51578
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:36:28.684Z"
+}

@@ -1,7 +1,7 @@
 {
-  "version": "0.11.1",
+  "version": "0.12.0",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-18T02:36:28.684Z",
+  "sealed_at": "2026-09-18T17:31:29.776Z",
   "runtime": "Native browser modules; Node shared engine; scoped campaigns lazily compile shared contracts with existing esbuild",
   "new_runtime_npm_dependencies": 0,
   "archaeological_fit_created": false,
@@ -43,8 +43,8 @@
     },
     {
       "path": "scripts/workbench/server.mjs",
-      "sha256": "639ee89d5118a83629833482fc2888e00d85b3267cd2c1c89b1330529ceafc0e",
-      "bytes": 10186
+      "sha256": "6fb8559e4dc5677d641ad116dff212e2db775152b1c47f9a375a3d14d1ecd9f9",
+      "bytes": 10639
     },
     {
       "path": "scripts/plate_registration/engine.mjs",
@@ -88,8 +88,8 @@
     },
     {
       "path": "scripts/evidence/browser-performance.mjs",
-      "sha256": "1e9eb7661fea11fbae2116f5520e46578504c3d3dca4b1dd66f2fe1f246ae011",
-      "bytes": 2810
+      "sha256": "e5cb0dbfead31c253d2cba94f98bc2955b7bde25ee9ffecbaf4874cf19608530",
+      "bytes": 3927
     },
     {
       "path": "scripts/evidence/campaign-cli.mjs",
@@ -103,8 +103,8 @@
     },
     {
       "path": "scripts/evidence/campaign.mjs",
-      "sha256": "261a7ef8a15b5252d161af433f858b4298ae4fa12efc5f87003f9e0d4c8f68ff",
-      "bytes": 16290
+      "sha256": "6b8ddf4c4e3a67c07770c2774c9332c24ca2d6193d231261b6c9c980c434827c",
+      "bytes": 20120
     },
     {
       "path": "scripts/evidence/checkpoint.mjs",
@@ -113,8 +113,8 @@
     },
     {
       "path": "scripts/evidence/profile-reliability.mjs",
-      "sha256": "b616bf72bf57860f998e184ab7bf8ba2e826be0ae525af20746750cbbd9627e8",
-      "bytes": 2717
+      "sha256": "fe943e69a4e60e663ff8599dda7fcd750b3704224690ed9a9d63fe8a3aa56a97",
+      "bytes": 2873
     },
     {
       "path": "scripts/evidence/README.md",
@@ -133,8 +133,8 @@
     },
     {
       "path": "docs/SOURCE_CAMPAIGN.md",
-      "sha256": "15b73a84e6292a86cf10036c9b836a6662243f43e63625f439227d70b8e1089b",
-      "bytes": 9805
+      "sha256": "21c12d986b4e3f5bfd20b5d2b10f155638eb3db4669a5440eb0d7cd5171f1e6a",
+      "bytes": 10313
     }
   ]
 }

@@ -1,0 +1,46 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 23 tests using 1 worker
+
+  ok  1 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 1280 (8.3s)
+  ok  2 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 390 (4.9s)
+  ok  3 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 844 (4.1s)
+  ok  4 tests\browser\atlas-expansion.spec.ts:19:1 › spherical stones and contextual assembly explosion are reversible (14.3s)
+  ok  5 tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot (9.4s)
+  ok  6 tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery (7.0s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (18.3s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (8.1s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:41:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (4.2s)
+  ok 10 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 1280x800 (2.9s)
+  ok 11 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 390x844 (2.0s)
+  ok 12 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 844x390 (1.5s)
+  ok 13 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas slow does not block core or force workspace navigation (2.2s)
+  ok 14 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas missing does not block core or force workspace navigation (2.1s)
+  ok 15 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas malformed does not block core or force workspace navigation (2.3s)
+  ok 16 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (9.1s)
+  ok 17 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (6.4s)
+  ok 18 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (4.4s)
+  ok 19 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 (4.8s)
+  ok 20 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 (3.1s)
+  ok 21 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 (2.9s)
+  ok 22 tests\browser\viewport-drawers.spec.ts:2:1 › viewport drawers collapse after pointer use and support keyboard (4.3s)
+  ok 23 tests\browser\viewport-drawers.spec.ts:16:1 › touch drawers open and close explicitly (3.8s)
+
+  23 passed (2.5m)
+
+[WebServer] (node:4808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:21060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:22480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:25472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

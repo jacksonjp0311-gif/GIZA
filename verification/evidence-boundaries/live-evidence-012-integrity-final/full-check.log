@@ -1,0 +1,130 @@
+
+> giza-nexus-registration-workbench@0.12.0 check
+> tsc --noEmit && npm run check:legacy && npm run test:repairs && npm run test:components && npm run test:usability && npm run test:sphinx && npm run test:epigraphy && npm run test:evidence-assembly && npm run test:runtime && npm run validate:evidence-assembly && npm run build:workbench
+
+
+> giza-nexus-registration-workbench@0.12.0 check:legacy
+> node scripts/validate-model.mjs && node scripts/validate-evidence.mjs && node scripts/validate-solvers.mjs && node scripts/validate-canon.mjs && node scripts/field/validate-field.mjs && node scripts/validate-ui-layout.mjs && node scripts/validate-visual-contract.mjs && node scripts/validate-frame.mjs && node scripts/simlab/validate-simlab.mjs && node scripts/simlab/validate-echo.mjs && node scripts/simlab/validate-strata.mjs && node scripts/observatory/validate-observatory.mjs && node scripts/observatory/validate-register.mjs && node scripts/media/validate-atlas-ingest.mjs && node scripts/registration/benchmark.mjs && node scripts/registration/validate-registration.mjs && node scripts/controlnet/benchmark.mjs && node scripts/controlnet/validate.mjs && node scripts/corpus/validate-corpus.mjs && node scripts/source_parser/validate.mjs && node scripts/action_graph/validate.mjs && node scripts/plan_parser/validate.mjs && node scripts/room_graph/validate.mjs && node scripts/plan_concordance/validate.mjs && node scripts/visibility_lab/validate.mjs && node scripts/source_bytes/validate.mjs && node scripts/metric_view/validate.mjs && node scripts/plate_registration/validate.mjs && node scripts/residual_field/validate.mjs && node scripts/intent/validate-intent.mjs && node scripts/maps/validate-maps.mjs && node scripts/vault/validate-vault.mjs && node scripts/validate-findings.mjs && node scripts/validate-continuity.mjs && node scripts/syntax-check.cjs
+
+GIZA v0.10.7 model validation
+parts=56 assemblies=9 measurements=127 media=13 stoneCells=10152
+PASS
+GIZA v0.10.7 evidence validation sources=73 items=12 maturityLevels=6 queue=4 quarantinedAssets=0
+PASS
+GIZA v0.10.7 solver validation solvers=7
+PASS
+GIZA v0.10.7 CANON validation
+sources=73 parts=56 rights=73 conflicts=7
+futureMeasurements=13 materialProperties=9 unverifiedParts=31
+PASS
+GIZA // FIELD validation
+parts=56 sources=73 photoNodes=6 photoEdges=5
+uncertaintyTargets=4 promotionTargets=6 acquisitionTargets=5
+photoClusters=3 mappedCandidates=0 terrainImports=0
+terrainActive=NONE unverifiedParts=31
+PASS
+GIZA v0.10.7 UI layout validation
+inspector=docked tabs=4x2 hero=conditional solverSwitch=3 findings=fixed-shell responsiveGuard=1020px
+PASS
+GIZA v0.10.7 visual contract
+baseline=1672x941 shell=MODEL_FIRST_APPROVED brand=GIZA_NEXUS nav=3 inspector=DOCKED_4x2
+PASS
+GIZA v0.10.7 // FRAME architecture validation
+App.tsx=14769 bytes GizaScene.tsx=6312 bytes modules=12
+PASS
+GIZA // SIMLAB validation
+gravity map points=961 elements=1672 peak=283.423 microGal
+controls shafts=251.958 terminals=31.746 microGal
+knownInteriorScreen=33.573 microGal sensitivityScenarios=27
+benchmark=PASS runs=6 null=no_void_density_contrast
+PASS
+GIZA // ECHO validation
+components=12 pressurePoints=385
+burialFundamental=12.123 Hz lower=16.426 Hz
+clusters=7 independentNullMean=3.825 constrainedNullMean=4.850
+benchmark=PASS designClaim=NOT_ESTABLISHED
+PASS
+STRATA stress648=16.522 MPa water648=6.355 MPa points=106
+PASS
+OBSERVATORY observations=129 publications=25 media=16 cross_domain=16 acquisition=24
+PASS
+REGISTER mechanicalSamples=5 physicalSamples=3 discrepancies=3 claims=2 plans=6 media=16
+PASS
+ATLAS media=16 collections=9 photoObs=13 uiPhotos=13
+PASS
+{
+  "benchmark_id": "benchmark.registration.planar_homography.0.9.8",
+  "kind": "SYNTHETIC_ANALYTIC_CONTROL",
+  "correspondence_count": 6,
+  "reprojection_rmse_px": 4.3453624276198343e-13,
+  "plane_rmse_m": 1.3259401376254866e-15,
+  "pass": true,
+  "created_at": "2026-09-18T17:24:33.231Z"
+}
+REGISTRATION LAB priors=14 controls=33 jobs=10 pairClusters=3 surveySources=6 benchmark=PASS
+PASS
+{
+  "pass": true,
+  "tests": [
+    {
+      "id": "exact_fit_rmse",
+      "value": 1.1632471704138598e-12,
+      "tolerance_px": 1e-7,
+      "pass": true
+    },
+    {
+      "id": "exact_holdout_rmse",
+      "value": 8.41205780201832e-13,
+      "tolerance_px": 0.000001,
+      "pass": true
+    },
+    {
+      "id": "noise_0.25px_fit_rmse",
+      "value": 0.07256135398647164,
+      "tolerance_px": 0.5,
+      "pass": true
+    },
+    {
+      "id": "noise_0.25px_holdout_rmse",
+      "value": 0.28418043071699745,
+      "tolerance_px": 1.5,
+      "pass": true
+    }
+  ]
+}
+CONTROL NET frames=4 constraints=7 points=6 real_jobs=10 yaw=-4.45 arcmin DLT=PASS
+PASS
+ARCHIVE HARVEST knowledge=42 timeline=17 monuments=9 claims=8 receipts=14 openMedia=7
+PASS
+SOURCE PARSER validation PASS records=26 raw_byte_verified=0 locators=BOUND
+ACTION GRAPH validation PASS nodes=14 edges=14 geometry_write=NONE ritual_script=NOT_CLAIMED
+PRIMARY PLAN PARSER validation PASS sources=13 extractions=34 raw_bytes=0 conflicts=3
+ROOM GRAPH validation PASS spaces=24 thresholds=21 geometry_write=NONE
+PLAN CONCORDANCE validation PASS facts=14 geometry_write=NONE
+VISIBILITY LAB validation PASS spaces=24 transitions=22 metric_rays=0 geometry_write=NONE
+SOURCE-BYTE REGISTRATION PASS candidates=4 receipts=4 attempts=4 raw_byte_verified=0
+METRIC VIEW LAB PASS readiness=4 registered_plans=0 metric_rays=0 plate_local_gate=READY
+PLATE REGISTRATION PASS threshold_profiles=2 synthetic=PASS raw=0 controls=0 holdouts=0 canonical_registered=0 metric_rays=0
+RESIDUAL FIELD PASS archaeological=BLOCKED_PENDING_FIT authority=NONE
+INTENT RECONSTRUCTION hypotheses=8 links=25 tests=5
+PASS
+GIZA v0.10.7 map validation maps=11 room_spaces=24 visibility_spaces=24 metric_targets=4 survey_points=6 manifest=7714939bae37
+registered_plans=0 metric_visibility_rays=0 geometry_write=NONE shell=LOCKED scroll_atlas=READY
+PASS
+PRIMARY SOURCE VAULT assets=14 snapshots=5 locks=2 localRaw=0
+cache=EMPTY_OR_PRIVATE_ONLY
+PASS
+findings=36 pattern_watch=5 research_priority=17
+PASS
+
+file:///C:/Users/jacks/OneDrive/Desktop/GIZA-v0.10.12/scripts/validate-continuity.mjs:4
+if(pkg.version!=='0.11.1'||pkg.gizaVersion!==pkg.version||g.version!==pkg.version||c.current_version!==pkg.version)throw new Error('PRODUCT_VERSION_DRIFT');
+                                                                                                                         ^
+
+Error: PRODUCT_VERSION_DRIFT
+    at file:///C:/Users/jacks/OneDrive/Desktop/GIZA-v0.10.12/scripts/validate-continuity.mjs:4:122
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.18.0

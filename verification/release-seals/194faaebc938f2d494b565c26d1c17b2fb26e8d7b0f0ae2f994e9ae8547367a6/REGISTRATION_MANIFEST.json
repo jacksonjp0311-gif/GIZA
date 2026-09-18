@@ -1,0 +1,109 @@
+{
+  "version": "0.9.8",
+  "codename": "REGISTRATION LAB + CONTROL NET",
+  "phase": "PHOTO_SURVEY_REGISTRATION_BACKEND",
+  "generated_at": "2026-09-12T16:05:38.943135+00:00",
+  "geometry_changed": false,
+  "ui_shell_changed": false,
+  "evidence_maturity_changed": false,
+  "counts": {
+    "camera_priors": 14,
+    "world_control_candidates": 33,
+    "jobs": 10,
+    "survey_control_sources": 6,
+    "pair_clusters": 3,
+    "control_net_links": 3
+  },
+  "benchmark": {
+    "id": "benchmark.registration.planar_homography.0.9.8",
+    "pass": true,
+    "reprojection_rmse_px": 4.3453624276198343e-13,
+    "plane_rmse_m": 1.3259401376254866e-15
+  },
+  "real_pose_count": 0,
+  "truth_invariant": "Registration infrastructure is not registered geometry. No real pose or metric photo-derived geometry is promoted until controls/residuals/coordinate-frame receipts pass review.",
+  "files": [
+    {
+      "path": "public/model/registration/benchmarks/planar_homography.json",
+      "sha256": "69fd5d41f9fdc128664bcb8460398ecb5bf34a19f4d78218dbad1665c16cc709",
+      "bytes": 292
+    },
+    {
+      "path": "public/model/registration/camera_priors.json",
+      "sha256": "7812dcbc6945a0ec0cf0aeeefdcf42830ea8dca4cbe41f54b356dd090f04434f",
+      "bytes": 10651
+    },
+    {
+      "path": "public/model/registration/jobs.json",
+      "sha256": "a650b908945a9084b0a59c416062c47f78589b797ded5da3fe1f622fc07d19cb",
+      "bytes": 13217
+    },
+    {
+      "path": "public/model/registration/manifest.json",
+      "sha256": "70408c2051f226c5564dd78c73e644fb2ab3a9f257f78d493ebdf93b1b7c6a8f",
+      "bytes": 2429
+    },
+    {
+      "path": "public/model/registration/pair_candidates.json",
+      "sha256": "c3e992032146cf84ea34cfa3036d5ddbc71e761c4da8a6a47ea11853748fdd76",
+      "bytes": 1750
+    },
+    {
+      "path": "public/model/registration/survey_control_sources.json",
+      "sha256": "190129abc0372cdfb0e8f0265b471acd3f2cd062af4424f35de13c38535a7137",
+      "bytes": 3907
+    },
+    {
+      "path": "public/model/registration/transform_receipts.json",
+      "sha256": "75cf5d127f1087e77e6409a90a44e688f1b7f4a7dbdd27d3a308b9544bcd0694",
+      "bytes": 198
+    },
+    {
+      "path": "public/model/registration/world_control_candidates.json",
+      "sha256": "14f240dab998b815787e86a583584e4dbb2633cf80c5ffda4ec97651fecc8c25",
+      "bytes": 13546
+    },
+    {
+      "path": "scripts/registration/benchmark.mjs",
+      "sha256": "3074362f8e20638a8ee914864e59024b4444ea6d6a39f97dc761d4838a2c41e4",
+      "bytes": 1018
+    },
+    {
+      "path": "scripts/registration/import-kml.mjs",
+      "sha256": "98948a85e2c39dc7874d34e7268a6c206ae9f76f032d551d3eb5a643e08572f7",
+      "bytes": 1198
+    },
+    {
+      "path": "scripts/registration/new-job.mjs",
+      "sha256": "4c7e268b8f0134c163d9b4bb7fc66af5dc845bda629793cda57c32b93633f54f",
+      "bytes": 1141
+    },
+    {
+      "path": "scripts/registration/registration-math.mjs",
+      "sha256": "626bb87bbd81f4ea72ff5c5b67cf2ec48055f249f12fb88de1716894abb05226",
+      "bytes": 2809
+    },
+    {
+      "path": "scripts/registration/seed-registration.mjs",
+      "sha256": "906e4ac257088519d76dda39f0dc5703fc4b3437bc594bc5538a378f479191b8",
+      "bytes": 5820
+    },
+    {
+      "path": "scripts/registration/solve-planar.mjs",
+      "sha256": "79bdb2755114eff4f133215bc8c4f0e4f7f353e47b09a0526d3c7e734087293d",
+      "bytes": 1264
+    },
+    {
+      "path": "scripts/registration/validate-registration.mjs",
+      "sha256": "3212351a7e37ce5453fa50b52546476d714fde227ddfc703817a4d17afd80101",
+      "bytes": 2187
+    },
+    {
+      "path": "docs/REGISTRATION_LAB.md",
+      "sha256": "b0f1655d4c4617f670de2e992d039e847fbeeac68a80748ee55fb8609b274e7e",
+      "bytes": 5273
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T10:38:25.024Z"
+}

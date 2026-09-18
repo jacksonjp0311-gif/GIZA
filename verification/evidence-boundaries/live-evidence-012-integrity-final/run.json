@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "live-evidence-012-integrity-final",
+  "createdAt": "2026-09-18T17:24:34.578Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 1,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

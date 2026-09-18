@@ -1,0 +1,48 @@
+{
+  "version": "0.10.7",
+  "codename": "PRIMARY PLAN PARSER",
+  "phase": "PRIMARY_PLAN_PARSER",
+  "generated_at": "2026-09-13T22:45:42.939Z",
+  "canonical_geometry_changed": false,
+  "counts": {
+    "plan_sources": 13,
+    "extractions": 34,
+    "raw_byte_verified": 0,
+    "preserved_conflicts": 3
+  },
+  "invariants": [
+    "remote plan text is not source-byte custody",
+    "plan scale metadata is not coordinate extraction",
+    "reconstruction conflicts remain explicit",
+    "metric promotion requires checksum + parser + frame + residual receipts"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/plan_parser/manifest.json",
+      "sha256": "53a1a67c5ba26981d532b88f1d31e69ec6b924dd51ee7f881aff51affc430d08",
+      "bytes": 720
+    },
+    {
+      "path": "public/model/plan_parser/plan_sources.json",
+      "sha256": "d379e538f0e2824a5915be814addfa04dc73c28319225f644a83f445cd63a5c1",
+      "bytes": 6282
+    },
+    {
+      "path": "public/model/plan_parser/extractions.json",
+      "sha256": "63465257709581ba5441a66bab5916c3745574885ae7bd7986e20fced4a091df",
+      "bytes": 23171
+    },
+    {
+      "path": "public/model/plan_parser/conflicts.json",
+      "sha256": "e810b5f6c27ed5f26e475ed8f772b9ea24bfb7f7be7274db08352aa3926cc8aa",
+      "bytes": 1879
+    },
+    {
+      "path": "docs/PRIMARY_PLAN_PARSER.md",
+      "sha256": "6ebbd5af1502aba1210abcf9b57eac467e1eebf38e44339e47f1992d12ba9064",
+      "bytes": 3102
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T10:38:25.024Z"
+}

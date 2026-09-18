@@ -1,18 +1,23 @@
 {
-  "version": "0.11.1",
+  "version": "0.12.0",
   "contract": "giza.evidence-assembly.v1",
   "archaeological_fit_created": false,
   "canonical_geometry_mutated": false,
   "artifacts": [
     {
       "path": "docs/EVIDENCE_ASSEMBLY.md",
-      "sha256": "2bf7c6702bd5b881ce0399365b36efdf367d4024c576755129bca75ec36337ae",
-      "bytes": 14559
+      "sha256": "4958c4d2b7f480091bc0b41c949d6107965de71b629e825d133c0e51d258e108",
+      "bytes": 14864
     },
     {
       "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
       "sha256": "18ffb52e20057dc9000356bec8f7d6525056ceee07bb8ec6b2cda63bd56ded6a",
       "bytes": 6510
+    },
+    {
+      "path": "docs/LIVE_EVIDENCE_INTEGRATION.md",
+      "sha256": "412847839eaba14ab8e8965717a897dfa7f0a4992ff95e2a1dad282c4732360f",
+      "bytes": 5080
     },
     {
       "path": "docs/RELIABILITY_0_11_1.md",
@@ -21,8 +26,13 @@
     },
     {
       "path": "docs/SOURCE_CAMPAIGN.md",
-      "sha256": "15b73a84e6292a86cf10036c9b836a6662243f43e63625f439227d70b8e1089b",
-      "bytes": 9805
+      "sha256": "21c12d986b4e3f5bfd20b5d2b10f155638eb3db4669a5440eb0d7cd5171f1e6a",
+      "bytes": 10313
+    },
+    {
+      "path": "docs/TUTORIAL_MODE.md",
+      "sha256": "d585d52351252a00f9856e327983dc4ce5289026ecefcb3f4fe6bc6fced8b46e",
+      "bytes": 3177
     },
     {
       "path": "public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json",
@@ -46,8 +56,8 @@
     },
     {
       "path": "scripts/evidence/browser-performance.mjs",
-      "sha256": "1e9eb7661fea11fbae2116f5520e46578504c3d3dca4b1dd66f2fe1f246ae011",
-      "bytes": 2810
+      "sha256": "e5cb0dbfead31c253d2cba94f98bc2955b7bde25ee9ffecbaf4874cf19608530",
+      "bytes": 3927
     },
     {
       "path": "scripts/evidence/campaign-cli.mjs",
@@ -61,8 +71,8 @@
     },
     {
       "path": "scripts/evidence/campaign.mjs",
-      "sha256": "261a7ef8a15b5252d161af433f858b4298ae4fa12efc5f87003f9e0d4c8f68ff",
-      "bytes": 16290
+      "sha256": "6b8ddf4c4e3a67c07770c2774c9332c24ca2d6193d231261b6c9c980c434827c",
+      "bytes": 20120
     },
     {
       "path": "scripts/evidence/checkpoint.mjs",
@@ -71,8 +81,8 @@
     },
     {
       "path": "scripts/evidence/profile-reliability.mjs",
-      "sha256": "b616bf72bf57860f998e184ab7bf8ba2e826be0ae525af20746750cbbd9627e8",
-      "bytes": 2717
+      "sha256": "fe943e69a4e60e663ff8599dda7fcd750b3704224690ed9a9d63fe8a3aa56a97",
+      "bytes": 2873
     },
     {
       "path": "scripts/evidence/validate.mjs",
@@ -86,13 +96,13 @@
     },
     {
       "path": "src/evidence/AssemblyScene.tsx",
-      "sha256": "182b259107616472d4a8a77918f808b4eaa8a3d5149c7846940b0ccd825bc27b",
-      "bytes": 12463
+      "sha256": "73595bc3fafb2e9137500a873bd658b176bf55ba8ffea53bd8d577c480374cc3",
+      "bytes": 12471
     },
     {
       "path": "src/evidence/AssemblyWorkbench.tsx",
-      "sha256": "c47c50c27e885ef6224dc2e6f83487e2b8f7f2da3b432ef8b5948de4d088d85f",
-      "bytes": 18277
+      "sha256": "bb9589f47a71ad0a569dc7ee6e9db2b6f9982ca31794ad4634926a0e45d0f567",
+      "bytes": 20043
     },
     {
       "path": "src/evidence/ComparisonPanel.tsx",
@@ -106,13 +116,18 @@
     },
     {
       "path": "src/evidence/FeaturePanel.tsx",
-      "sha256": "dd7c85acda56e99f06a05039e9b0ecf248ef40a50f9ef2527e0052c31f8cbc43",
-      "bytes": 5270
+      "sha256": "ac3110867fb06d5517cbe32eafc064e2b7a37e2f9d583c896f85963a29161545",
+      "bytes": 5615
     },
     {
       "path": "src/evidence/InvestigationPanel.tsx",
-      "sha256": "4d6d3ecdc33f0a8bb702f86cd759d8f7a2800a16558a3f5890e805762ddd5540",
-      "bytes": 8554
+      "sha256": "63f5f823ca9c340b79adb40de8669b9769dc323764bd6e08dc79580e5832b51c",
+      "bytes": 8631
+    },
+    {
+      "path": "src/evidence/LiveEvidencePanel.tsx",
+      "sha256": "23e100b4471075ca8d56879ac847002b9f7a8ee1bf171fff4681eb6c946f8271",
+      "bytes": 3787
     },
     {
       "path": "src/evidence/SavedInvestigations.tsx",
@@ -121,8 +136,8 @@
     },
     {
       "path": "src/evidence/SpatialTools.tsx",
-      "sha256": "32ad4085c6f24345c34e49cdb898b9e624f8fd5ab5515a64a325e4dcee058b3d",
-      "bytes": 7401
+      "sha256": "347756cc629bc913fe17552bf3f8805fa85653ea391cd576bb0ad4f3f4c94b00",
+      "bytes": 8231
     },
     {
       "path": "src/evidence/UncertaintyReadout.tsx",
@@ -151,7 +166,7 @@
     },
     {
       "path": "src/evidence/explanation.ts",
-      "sha256": "424c7a323426d3bc65a1759bf7e9039708fdcce275883bf72afc85d4af2ad4a1",
+      "sha256": "5332dc23a62a8e8cf21f4cf98dd9735aa033abdb72c9a373f364d56552fa7ce3",
       "bytes": 4585
     },
     {
@@ -161,8 +176,13 @@
     },
     {
       "path": "src/evidence/graph.ts",
-      "sha256": "47be4b107541662a06c80a98e654c75e5f593fed0c9e51c7408cdae22d257811",
-      "bytes": 19336
+      "sha256": "ab7f98870bf56d7b93a3fa0cf64417683c785b10552257ba7df45a87b62eac04",
+      "bytes": 22221
+    },
+    {
+      "path": "src/evidence/impact.ts",
+      "sha256": "483803ac6a00cfa10fe08418f2f9e94f73dae75e19687dac424888eb07171810",
+      "bytes": 4797
     },
     {
       "path": "src/evidence/intelligence.ts",
@@ -171,8 +191,13 @@
     },
     {
       "path": "src/evidence/investigations.ts",
-      "sha256": "6ff53152cf1c964e833065446d558257cd241ef100d7952e7a3d04d5d7b85bfa",
-      "bytes": 10578
+      "sha256": "710ed22be97aeb0c51818e1ba6a7a56047eeedc2c3a321e73ebc120040cec737",
+      "bytes": 11064
+    },
+    {
+      "path": "src/evidence/liveEvidence.ts",
+      "sha256": "6b879acba010778242a813ab436ad017efb5828447c72ac1bfd854bf22b19e32",
+      "bytes": 6225
     },
     {
       "path": "src/evidence/membership.ts",
@@ -201,13 +226,13 @@
     },
     {
       "path": "src/evidence/spatial.ts",
-      "sha256": "f47037fcad9ff1e327fd0b236397e14da4737eb279cccd320a25abcb55d261d9",
-      "bytes": 16369
+      "sha256": "b8fd8c65ce8a19d112c1b3960a0a4783abdc2e7fcb549689dae8e0114bb0323e",
+      "bytes": 19621
     },
     {
       "path": "src/evidence/types.ts",
-      "sha256": "1197d552e790568e6f2c3fc6893506b4ce7a70021b7d338da16529396256341c",
-      "bytes": 3693
+      "sha256": "48e111d7c5670f1c27e24269217695fa1244cbd27ff51007975eefcf7f929ae6",
+      "bytes": 3807
     },
     {
       "path": "src/evidence/viewGeometry.ts",
@@ -225,14 +250,39 @@
       "bytes": 547
     },
     {
+      "path": "src/tutorial/Tutorial.tsx",
+      "sha256": "ec9e176f66c54040a7be79d546f9bc7ff39dd41c033f53c4a9db44259e5cc1f5",
+      "bytes": 10002
+    },
+    {
+      "path": "src/tutorial/curriculum.ts",
+      "sha256": "5e6edc101fb2981a4862baf25a496b18a8c6a5d92c40da4c0d1d793efd634e35",
+      "bytes": 10632
+    },
+    {
+      "path": "src/tutorial/tutorial.css",
+      "sha256": "913b2d50867c9746060c94619d43af8c6e75a4c7a477dbdd45a9d02ed136bdb8",
+      "bytes": 1869
+    },
+    {
       "path": "src/workstation/WorkspaceBoundary.tsx",
       "sha256": "bf45e7ff1230d1e4609a70f9a5437b4e3ed2bab56911180184224845a3eea30a",
       "bytes": 3796
     },
     {
+      "path": "src/workstation/navigationGuard.ts",
+      "sha256": "b0a0b94372e3ed72c906f4cb3db73d579bfe7301b6c4005e4ebf8cccf003a221",
+      "bytes": 1207
+    },
+    {
       "path": "tests/browser/atlas-expansion.spec.ts",
-      "sha256": "09dd78ef93ece922f3f64e384c4638f2ececed5389f1b7d2c5e70dfe176aef57",
-      "bytes": 3509
+      "sha256": "9248fc54f85009af2855acd010ed6de67f2f324e297e85fb3d736d2a3fe0c084",
+      "bytes": 3576
+    },
+    {
+      "path": "tests/browser/centered-orbit.spec.ts",
+      "sha256": "4a6313a7854b3b21d57cef364d60645dd885fb468a27844ceecbad06b5ab787c",
+      "bytes": 2359
     },
     {
       "path": "tests/browser/evidence-workflow.spec.ts",
@@ -241,13 +291,28 @@
     },
     {
       "path": "tests/browser/layers.spec.ts",
-      "sha256": "5f088ebf917bb110d1671d948e4732b05368745b6ea069381369f15386be804c",
-      "bytes": 4169
+      "sha256": "17d7952e349d88980abb2e2cb2d603653dd83d02c75505fb28d5ea85bc4aaa1a",
+      "bytes": 4555
     },
     {
       "path": "tests/browser/source-campaign.spec.ts",
-      "sha256": "583f474b9da5aeb3e7eaa1ceeab5ca7073daf4516bbebb59fbbf4491d99db678",
-      "bytes": 2155
+      "sha256": "4832034f5312d6b3852d00bea8cca4cf222d9e6d14201d91a90fc16fb8af4028",
+      "bytes": 3047
+    },
+    {
+      "path": "tests/browser/startup-camera.spec.ts",
+      "sha256": "add124a174149db6550ba8f4447fa8e731ac0000e671fdbcdf25700c98c54d1a",
+      "bytes": 1974
+    },
+    {
+      "path": "tests/browser/tutorial.spec.ts",
+      "sha256": "33a033bd5452f6d7cb82b447574ea5e8068f0afdcfb083b96aed777b58592386",
+      "bytes": 8070
+    },
+    {
+      "path": "tests/browser/viewport-drawers.spec.ts",
+      "sha256": "01311aae18e29ed41442e960c31e2fc60720cc4c19b82777608129a33b43de1c",
+      "bytes": 2392
     },
     {
       "path": "tests/evidence-assembly.test.mjs",
@@ -261,8 +326,8 @@
     },
     {
       "path": "tests/evidence-campaign.test.mjs",
-      "sha256": "129dbb5a49e1f4b0bab6012e218fa19bf89561c37b6960d47821349d6c596e27",
-      "bytes": 3973
+      "sha256": "751d1a4a73c4d88dcf083be9f1631a53fe3d828ffa435747c20e680168bed2a2",
+      "bytes": 4437
     },
     {
       "path": "tests/evidence-intelligence.test.mjs",
@@ -280,6 +345,11 @@
       "bytes": 10876
     },
     {
+      "path": "tests/live-evidence.test.mjs",
+      "sha256": "7ca0e937cb5d8849f4dacb7de7dc70ed51015c36cb114dce8dc15e00abcc55f3",
+      "bytes": 6602
+    },
+    {
       "path": "tests/runtime-resilience.test.mjs",
       "sha256": "7dfde265f7b97436a683e3d29ce9f27dbe34e0841fee0ec1d76fb1b4b88417b9",
       "bytes": 9916
@@ -290,8 +360,8 @@
       "bytes": 5032
     }
   ],
-  "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:36:28.684Z",
+  "release_version": "0.12.0",
+  "sealed_at": "2026-09-18T17:31:29.776Z",
   "schemas": {
     "assembly": "giza.evidence-assembly.v1",
     "quantity": "giza.quantity.v1",
@@ -299,6 +369,11 @@
     "investigation": "giza.saved-investigation.v2",
     "campaign": "giza.scoped-campaign.v1",
     "comparisonRule": "giza.comparison-rules.v3",
-    "measurementRule": "canonical-measurement.v3"
+    "measurementRule": "canonical-measurement.v4",
+    "transformRule": "giza.transform-authority.v2",
+    "conditionalMeasurement": "giza.conditional-measurement.v1",
+    "livePlanRelation": "giza.live-plan-relation.v1",
+    "impactRule": "giza.evidence-impact.v1",
+    "tutorial": "giza.tutorial.v1"
   }
 }

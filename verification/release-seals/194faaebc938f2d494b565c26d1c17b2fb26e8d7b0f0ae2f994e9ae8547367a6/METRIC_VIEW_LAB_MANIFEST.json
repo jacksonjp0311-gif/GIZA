@@ -1,0 +1,67 @@
+{
+  "version": "0.10.7",
+  "codename": "METRIC VIEW LAB — HOLDOUT GATE",
+  "generated_at": "2026-09-13T22:45:43.145Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "readiness_targets": 4,
+    "registered_plans": 0,
+    "metric_rays": 0,
+    "emergent_patterns": 7
+  },
+  "invariants": [
+    "no metric ray from schematic coordinates",
+    "workflow progress is not confidence",
+    "metric visibility cannot prove ritual meaning"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/metric_view_lab/manifest.json",
+      "sha256": "1e764cc452b4f18a7269ddf20fe40fdb3631f3b8be8247772f4d34765e35c384",
+      "bytes": 944
+    },
+    {
+      "path": "public/model/metric_view_lab/metric_readiness.json",
+      "sha256": "165f9721f4e386c30ab74256c6728b8a34867e0d7b8284ceb2cd7b900b50f9de",
+      "bytes": 2132
+    },
+    {
+      "path": "public/model/metric_view_lab/ray_contract.json",
+      "sha256": "e6282f79011c43177f1834c741a4effe71dcf4b463476a1c1e51bed51ca0a895",
+      "bytes": 974
+    },
+    {
+      "path": "public/model/metric_view_lab/registration_requirements.json",
+      "sha256": "cf1c661e0f378ccf127cef8e8f27a54dc4a178e3586a5e0ecb17a63c51225930",
+      "bytes": 1135
+    },
+    {
+      "path": "public/model/metric_view_lab/emergence_report.json",
+      "sha256": "ba0d08042932c1c4fd7ab5994a8e8326740aeef39a0173e295698dad7ff6992a",
+      "bytes": 5742
+    },
+    {
+      "path": "public/model/maps/layers/metric_readiness.json",
+      "sha256": "ee6e7f1adfdd311195151a3ce3ac034906ded86397b8fe51b1fcbcaa57fd92d9",
+      "bytes": 2111
+    },
+    {
+      "path": "scripts/metric_view/validate.mjs",
+      "sha256": "44312ab2ef00ac0c7a7c42c8368936872d8987784915934de87df6176f629f28",
+      "bytes": 2001
+    },
+    {
+      "path": "docs/METRIC_VIEW_LAB.md",
+      "sha256": "8802ddb413cee0c8579e7e250f55f0ef4dd0e2d7be8227e6012e55e0430ff947",
+      "bytes": 1948
+    },
+    {
+      "path": "docs/EMERGENCE_REPORT.md",
+      "sha256": "e7003fde7d670b8a4761e1d96c020087dd3e5352b5a0dfccb18f3848550640c3",
+      "bytes": 3639
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T10:38:25.024Z"
+}

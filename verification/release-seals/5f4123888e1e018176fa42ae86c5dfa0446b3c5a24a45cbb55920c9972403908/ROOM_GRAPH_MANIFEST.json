@@ -1,0 +1,67 @@
+{
+  "version": "0.10.7",
+  "codename": "ROOM GRAPH",
+  "phase": "ROOM_GRAPH",
+  "generated_at": "2026-09-13T22:45:42.980Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "spaces": 24,
+    "thresholds": 21,
+    "complex_zones": 4,
+    "visibility_constraints": 3,
+    "movement_constraints": 3,
+    "findspot_links": 3
+  },
+  "invariants": [
+    "room coordinates are schematic UI positions",
+    "threshold topology does not prove ritual choreography",
+    "findspot does not prove original placement",
+    "visibility remains qualitative until metric plan parsing",
+    "room graph has zero geometry-write authority"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/room_graph/manifest.json",
+      "sha256": "0c91182e6e716e107f24abd370559557190630cd4a699f894c68ba9c40a48421",
+      "bytes": 753
+    },
+    {
+      "path": "public/model/room_graph/graph.json",
+      "sha256": "b3e97ebb3114c84ea4dcc3fed03f800908fe8962d8104c16575876ac6f06be60",
+      "bytes": 20701
+    },
+    {
+      "path": "public/model/room_graph/spaces.json",
+      "sha256": "efeeebd42a428fb0d39998377386684dd9516983100b3054383797b68c8fd0a0",
+      "bytes": 10807
+    },
+    {
+      "path": "public/model/room_graph/thresholds.json",
+      "sha256": "e2254bcbce2c7ac849faf7ad122ca49b474f7ab7ecc7944b125b0534f7ce95d2",
+      "bytes": 6317
+    },
+    {
+      "path": "public/model/room_graph/constraints.json",
+      "sha256": "0691cd8694e69be898d08050db2b343c0aca6594a6678c4be90f1fd421a6071d",
+      "bytes": 2220
+    },
+    {
+      "path": "public/model/room_graph/findspot_links.json",
+      "sha256": "ca9f801dad6aecb2370201e9de2083a7ede47e00ccc52db3d7fa83400d2bc5ae",
+      "bytes": 1029
+    },
+    {
+      "path": "public/model/maps/layers/room_graph.json",
+      "sha256": "c1420c6a4e668dd88c47993af505878b8d0591289034da4c7c2d00795c0908c3",
+      "bytes": 15896
+    },
+    {
+      "path": "docs/ROOM_GRAPH.md",
+      "sha256": "c29ad6e5dcb275486f33ea008fa3e1bc8bdca6e38fbcb43224cb519e2ef9c7c2",
+      "bytes": 2915
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T10:09:44.262Z"
+}

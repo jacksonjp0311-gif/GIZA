@@ -1,0 +1,27 @@
+[WebServer] (node:13028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:8172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:22068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:9352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (8.2s)
+  ok 2 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 1280 (11.0s)
+  ok 3 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 390 (4.9s)
+  ok 4 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 844 (4.5s)
+  ok 5 tests\browser\tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping (3.4s)
+  ok 6 tests\browser\tutorial.spec.ts:45:1 › tutorial respects global unsaved research and does not lose a draft (3.9s)
+  ok 7 tests\browser\tutorial.spec.ts:56:1 › reduced motion and high DPI tutorial do not mutate physical exports (13.9s)
+  ok 8 tests\browser\tutorial.spec.ts:70:1 › tutorial scrolls a real quick-view target into its spotlight (5.8s)
+  ok 9 tests\browser\tutorial.spec.ts:83:1 › unavailable optional workspace leaves tutorial recoverable (4.2s)
+
+  9 passed (1.3m)

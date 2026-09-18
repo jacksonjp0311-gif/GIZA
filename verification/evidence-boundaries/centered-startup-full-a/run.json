@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "centered-startup-full-a",
+  "createdAt": "2026-09-18T10:08:42.108Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 0,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

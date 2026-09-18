@@ -1,0 +1,420 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 28 tests using 1 worker
+
+  ok  1 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 1280 (9.1s)
+  ok  2 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 390 (4.4s)
+  ok  3 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 844 (4.8s)
+  ok  4 tests\browser\atlas-expansion.spec.ts:19:1 › spherical stones and contextual assembly explosion are reversible (14.2s)
+  x   5 tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot (1.3m)
+  ok  6 tests\browser\centered-orbit.spec.ts:24:1 › Inscription Lab distinguishes original context from reproduction imagery (4.3s)
+  x   7 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (1.2m)
+  x   8 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (1.3m)
+  ok  9 tests\browser\evidence-workflow.spec.ts:41:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (6.2s)
+  ok 10 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 1280x800 (2.7s)
+  ok 11 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 390x844 (2.8s)
+  ok 12 tests\browser\evidence-workflow.spec.ts:47:91 › model-first layout and keyboard 844x390 (2.9s)
+  ok 13 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas slow does not block core or force workspace navigation (2.4s)
+  ok 14 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas missing does not block core or force workspace navigation (2.9s)
+  ok 15 tests\browser\evidence-workflow.spec.ts:51:53 › optional atlas malformed does not block core or force workspace navigation (2.5s)
+  ok 16 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (10.4s)
+  x  17 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (1.3m)
+  ok 18 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (1.8s)
+  ok 19 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 1280 (6.6s)
+  ok 20 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 390 (3.4s)
+  ok 21 tests\browser\startup-camera.spec.ts:2:95 › startup centers assembled pyramid despite prior inspection 844 (3.2s)
+  ok 22 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 1280 (7.3s)
+  ok 23 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 390 (5.1s)
+  ok 24 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 844 (3.9s)
+  ok 25 tests\browser\tutorial.spec.ts:25:1 › tutorial respects global unsaved research and does not lose a draft (4.2s)
+  ok 26 tests\browser\tutorial.spec.ts:36:1 › reduced motion and high DPI tutorial do not mutate physical exports (9.6s)
+  ok 27 tests\browser\viewport-drawers.spec.ts:2:1 › viewport drawers collapse after pointer use and support keyboard (6.5s)
+  ok 28 tests\browser\viewport-drawers.spec.ts:16:1 › touch drawers open and close explicitly (4.6s)
+
+
+  1) tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.check: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('checkbox', { name: 'Show Dimensions', exact: true })
+        - locator resolved to <input type="checkbox"/>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        27 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+
+
+      16 |   expect((await state()).orbitTarget).toEqual(before.orbitTarget);
+      17 |   await page.getByRole('button',{name:'Full Pyramid',exact:true}).click();
+    > 18 |   await page.getByRole('checkbox',{name:'Show Dimensions',exact:true}).check();
+         |                                                                        ^
+      19 |   await page.getByRole('button',{name:'Inspect / layers',exact:true}).hover();
+      20 |   await expect(page.locator('.viewportDrawer.inspection .dimensionReadout')).toBeVisible();
+      21 |   await page.mouse.move(box.x+box.width*.6,box.y+box.height*.6);
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\centered-orbit.spec.ts:18:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\centered-orbit-off-center--ae0e7-ve-the-overview-orbit-pivot\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForEvent: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for event "download"
+    ============================================================
+
+      3 | async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
+      4 | async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
+    > 5 | async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
+        |                                                                                   ^
+      6 | test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
+      7 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await openAssembly(page);await measureLid(page);
+      8 |   await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
+        at exported (C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:5:83)
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:14:21
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Export saved record', exact: true })
+        - locator resolved to <button>Export saved record</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <button>Explore on my own</button> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        27 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button>Explore on my own</button> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      3 | async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
+      4 | async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
+    > 5 | async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
+        |                                                                                                                                                                    ^
+      6 | test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
+      7 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await openAssembly(page);await measureLid(page);
+      8 |   await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
+        at exported (C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:5:164)
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:14:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\evidence-workflow-actual-m-1080d-t-detour-export-and-restore\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForEvent: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for event "download"
+    ============================================================
+
+      3 | async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
+      4 | async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
+    > 5 | async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
+        |                                                                                   ^
+      6 | test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
+      7 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await openAssembly(page);await measureLid(page);
+      8 |   await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
+        at exported (C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:5:83)
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:36:380
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Export saved record', exact: true })
+        - locator resolved to <button>Export saved record</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <button>Explore on my own</button> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        31 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button>Explore on my own</button> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <p>Take a guided tour of the spatial research workst…</p> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+
+
+      3 | async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
+      4 | async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
+    > 5 | async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
+        |                                                                                                                                                                    ^
+      6 | test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
+      7 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await openAssembly(page);await measureLid(page);
+      8 |   await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
+        at exported (C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:5:164)
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:36:380
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope ───
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.check: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('checkbox', { name: 'Show Dimensions', exact: true })
+        - locator resolved to <input type="checkbox"/>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        29 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <b>NEW TO GIZA?</b> from <aside class="tutorialWelcome" data-tutorial-root="true" aria-label="New to GIZA?">…</aside> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      20 |   await page.goto('/?layerDiagnostics=1');
+      21 |   await page.getByRole('button',{name:'Full Pyramid',exact:true}).click();
+    > 22 |   await page.getByRole('checkbox',{name:'Show Dimensions',exact:true}).check();
+         |                                                                        ^
+      23 |   await page.getByRole('button',{name:'Inspect / layers',exact:true}).hover();
+      24 |   await expect(page.getByText('Selected preview dimensions',{exact:true})).toBeVisible();
+      25 |   await page.getByRole('checkbox',{name:'Measurement Overlays',exact:true}).uncheck();
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\layers.spec.ts:22:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\layers-overview-overlays-a-087df--controls-match-their-scope\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\layers-overview-overlays-a-087df--controls-match-their-scope\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\layers-overview-overlays-a-087df--controls-match-their-scope\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\layers-overview-overlays-a-087df--controls-match-their-scope\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests\browser\centered-orbit.spec.ts:2:1 › off-center wheel zoom and real drag preserve the overview orbit pivot 
+    tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore 
+    tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+    tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope ────
+  24 passed (7.8m)
+
+[WebServer] (node:20600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:24992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:19424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:7188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4476) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

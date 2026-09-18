@@ -1,0 +1,67 @@
+{
+  "product": "GIZA",
+  "version": "0.8.1",
+  "phase": "FIELD",
+  "generated_at": "2026-09-11T10:05:30.332820+00:00",
+  "files": [
+    {
+      "path": "public/model/field/acquisition_targets.json",
+      "sha256": "b8bf9c9f2849cf37ed1f976a1ecabb12578f269a62e55003640130bfcce70caf",
+      "bytes": 2013
+    },
+    {
+      "path": "public/model/field/field_manifest.json",
+      "sha256": "f4921b7b46f846b5ade683be9f97bf65dad0d0fcdaddbb7cc0392c31b73d2725",
+      "bytes": 584
+    },
+    {
+      "path": "public/model/field/geospatial_frame.json",
+      "sha256": "7c5a2a9f5fde2ad4c1d862cc6bb5c1e1bf96bd8051fdda722ab86727cf03cc32",
+      "bytes": 1744
+    },
+    {
+      "path": "public/model/field/mapped_stone_candidates.json",
+      "sha256": "d2ff540beba834bb5f2de28d14ff121f878150f65a023e464d209501b7617370",
+      "bytes": 199
+    },
+    {
+      "path": "public/model/field/photo_clusters.json",
+      "sha256": "7ef4a8dc6818b29b70428600f4eac7d3777e5d56df88f8e0309d4333390e9657",
+      "bytes": 1006
+    },
+    {
+      "path": "public/model/field/photo_graph.json",
+      "sha256": "a3c8f78a9f0bf4bf96c2ca0a77d2d5799ac0984bbe76c5eaf6af3c652421b066",
+      "bytes": 5353
+    },
+    {
+      "path": "public/model/field/promotion_state.json",
+      "sha256": "dfc98c0796625385f2a3d9e41d53d8c742153dbc8ca1125d3e0cc4932b9d74ed",
+      "bytes": 3523
+    },
+    {
+      "path": "public/model/field/terrain_imports.json",
+      "sha256": "b5b23978424e6d8484fde03de78228618efff8d44f3573514a235fb8a6da98ff",
+      "bytes": 42
+    },
+    {
+      "path": "public/model/field/terrain_registry.json",
+      "sha256": "87ce927340b93b1e4bfc91e3edc35410d1b9c56f01bdcd14d1f0cee1509a5b6c",
+      "bytes": 2518
+    },
+    {
+      "path": "public/model/field/uncertainty_envelopes.json",
+      "sha256": "77ded2b495983093f55f89b83765c48aa9afba440c0819e071779357640cbd30",
+      "bytes": 2835
+    }
+  ],
+  "truth_guards": [
+    "No DEM bytes -> no real terrain render",
+    "No solved camera -> no 3-D photo frustum",
+    "No numeric uncertainty -> no zero-width certainty assumption",
+    "No E4 evidence receipt -> no FORGE cell becomes mapped stone",
+    "No survey tie -> geographic anchor remains context-grade"
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:36:28.684Z"
+}

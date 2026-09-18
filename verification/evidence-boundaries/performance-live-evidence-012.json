@@ -1,0 +1,93 @@
+{
+  "label": "live-evidence-012",
+  "createdAt": "2026-09-18T17:20:50.790Z",
+  "commit": "3074047ce8c39950b5d03814b1a40408f55c7739",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "cpu": "AMD Ryzen 5 3500 6-Core Processor              ",
+  "browser": "153.0.8010.12",
+  "rendering": "Chromium headless SwiftShader, production preview; fresh contexts; unthrottled localhost",
+  "criterion": "Visible model canvas and enabled quick-view UI plus two animation frames. RAF is page scheduling, not GPU frame timing. Heap is Chromium estimate, not total process memory.",
+  "samples": [
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 1032.7000000476837,
+      "rafMedianMs": 31.399999976158142,
+      "rafP95Ms": 93.39999997615814,
+      "jsHeapBytes": 20500000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "interactionScheduling": {
+        "medianMs": 32.60000002384186,
+        "p95Ms": 67.89999997615814
+      },
+      "tutorialLayout": {
+        "samples": 2,
+        "maxMs": 0.5
+      },
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 436.6999999284744,
+      "rafMedianMs": 17,
+      "rafP95Ms": 50.300000071525574,
+      "jsHeapBytes": 20500000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "interactionScheduling": {
+        "medianMs": 34.299999952316284,
+        "p95Ms": 63
+      },
+      "tutorialLayout": {
+        "samples": 1,
+        "maxMs": 0.6000000238418579
+      },
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 0,
+      "firstUsableMs": 473.5,
+      "rafMedianMs": 16.700000047683716,
+      "rafP95Ms": 50.199999928474426,
+      "jsHeapBytes": 20500000,
+      "resourceCount": 63,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "interactionScheduling": {
+        "medianMs": 32.5,
+        "p95Ms": 57.799999952316284
+      },
+      "tutorialLayout": {
+        "samples": 2,
+        "maxMs": 1.6999999284744263
+      },
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    },
+    {
+      "optionalDelayMs": 5000,
+      "firstUsableMs": 622.2000000476837,
+      "rafMedianMs": 17.699999928474426,
+      "rafP95Ms": 35,
+      "jsHeapBytes": 19300000,
+      "resourceCount": 62,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "interactionScheduling": {
+        "medianMs": 32.699999928474426,
+        "p95Ms": 60.89999997615814
+      },
+      "tutorialLayout": {
+        "samples": 2,
+        "maxMs": 0.5
+      },
+      "requestCount": 64,
+      "modelRequests": 55,
+      "errors": []
+    }
+  ]
+}
