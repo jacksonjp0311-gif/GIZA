@@ -5,7 +5,9 @@ import type {EvidenceFeature,EvidenceObservation} from './types';
 export type EvidenceNodeKind = 'FEATURE' | 'OBSERVATION' | 'SOURCE' | 'SOURCE_BYTES' | 'REGISTRATION' | 'FRAME' | 'TRANSFORM' | 'UNCERTAINTY' | 'GEOMETRY' | 'ASSEMBLY' | 'CONSTRAINT' | 'EXPERIMENT' | 'FINDING' | 'RECEIPT';
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 export interface EvidenceNode { id: string; kind: EvidenceNodeKind; label: string; authority: 'OBSERVED' | 'RECONSTRUCTED' | 'HYPOTHESIS' | null; data: Record<string, JsonValue> }
-export interface EvidenceEdge { from: string; to: string; relationship: string }
+const relationships=['CITES','HAS_UNCERTAINTY','HAS_CUSTODY_STATE','IMAGE_METRIC_AUTHORITY_STATE','REGISTRATION_REQUIRES_BYTES','COMPUTED_FROM','TRANSFORMS_BY','TARGET_FRAME','DECLARES_TRANSFORM','REPRESENTED_BY','EXPRESSED_IN','MEMBER_OF','CONSTRAINED_BY','HAS_CONSTRAINT','HAS_TRANSFORM_AUDIT','HAS_RESEARCH_RECORD','SEALED_BY','REVIEWS_EXPERIMENT','RELATED_CONTEXT'] as const;
+export type EvidenceRelationship=typeof relationships[number];
+export interface EvidenceEdge { from: string; to: string; relationship: EvidenceRelationship }
 export interface SpatialEvidenceGraph { schema: 'giza.spatial-evidence-graph.v1'; assemblyId: string; authoritativeFrameId: string; nodes: EvidenceNode[]; edges: EvidenceEdge[]; limitations: string[] }
 
 const kinds: EvidenceNodeKind[] = ['FEATURE', 'OBSERVATION', 'SOURCE', 'SOURCE_BYTES', 'REGISTRATION', 'FRAME', 'TRANSFORM', 'UNCERTAINTY', 'GEOMETRY', 'ASSEMBLY', 'CONSTRAINT', 'EXPERIMENT', 'FINDING', 'RECEIPT'];
@@ -35,7 +37,7 @@ function data(value: unknown): Record<string, JsonValue> {
 export function buildEvidenceGraph(assembly: EvidenceAssembly): SpatialEvidenceGraph {
   const nodes: EvidenceNode[] = [], edges: EvidenceEdge[] = [];
   const add = (id: string, kind: EvidenceNodeKind, label: string, authority: EvidenceNode['authority'], value: unknown) => nodes.push({ id, kind, label, authority, data: data(value) });
-  const edge = (from: string, to: string, relationship: string) => edges.push({ from, to, relationship });
+  const edge = (from: string, to: string, relationship: EvidenceRelationship) => edges.push({ from, to, relationship });
   add(assembly.id, 'ASSEMBLY', assembly.title, 'RECONSTRUCTED', { authoritativeFrameId: assembly.authoritativeFrameId, limitations: assembly.limitations });
   for (const source of assembly.sources) {
     add(source.id, 'SOURCE', source.title, null, source);
@@ -65,7 +67,8 @@ export function buildEvidenceGraph(assembly: EvidenceAssembly): SpatialEvidenceG
   }
   for (const feature of assembly.features) {
     add(feature.id, 'FEATURE', feature.label, feature.authority, feature);
-    add(`geometry:${feature.id}`, 'GEOMETRY', feature.label, feature.coordinateAuthority==='UNKNOWN'?null:feature.authority==='HYPOTHESIS'?'HYPOTHESIS':'RECONSTRUCTED', { geometry: feature.geometry, frameId: feature.frameId, coordinateAuthority:feature.coordinateAuthority, scalarAuthority:feature.authority, surfaceAuthority:feature.geometry.kind==='unknown'?'UNKNOWN':'RECONSTRUCTED', placementAuthority:'RECONSTRUCTED_OR_UNRESOLVED_SEE_TRANSFORMS', reviewStatus:'NOT_AUTHENTICATED', derivation: feature.derivation, unknowns: feature.unknowns });
+    const geometryAuthority=feature.coordinateAuthority==='UNKNOWN'?null:feature.authority==='HYPOTHESIS'?'HYPOTHESIS':'RECONSTRUCTED';
+    add(`geometry:${feature.id}`, 'GEOMETRY', feature.label, geometryAuthority, { geometry: feature.geometry, frameId: feature.frameId, coordinateAuthority:feature.coordinateAuthority, scalarAuthority:feature.authority, surfaceAuthority:feature.geometry.kind==='unknown'?'UNKNOWN':geometryAuthority, placementAuthority:'RECONSTRUCTED_OR_UNRESOLVED_SEE_TRANSFORMS', reviewStatus:'NOT_AUTHENTICATED', derivation: feature.derivation, unknowns: feature.unknowns });
     add(`uncertainty:${feature.id}`, 'UNCERTAINTY', 'Feature uncertainty', null, feature.uncertainty);
     edge(feature.id, `geometry:${feature.id}`, 'REPRESENTED_BY');
     edge(feature.id, `uncertainty:${feature.id}`, 'HAS_UNCERTAINTY');
@@ -103,7 +106,7 @@ export function parseEvidenceGraph(value: unknown): SpatialEvidenceGraph {
   const sources=new Set(graph.nodes.filter(n=>n.kind==='SOURCE').map(n=>n.id));
   for(const node of graph.nodes)if(node.kind==='OBSERVATION'){validateObservation(node.data,sources);if(node.id!==node.data.id||node.authority!==node.data.authority)throw new Error('Observation graph identity/authority mismatch');}
   for(const node of graph.nodes)if(node.kind==='FEATURE')validateFeatureSupport(node.data as unknown as EvidenceFeature,graph.nodes.filter(n=>n.kind==='OBSERVATION').map(n=>n.data as unknown as EvidenceObservation));
-  for (const edge of graph.edges) if (!edge || !ids.has(edge.from) || !ids.has(edge.to) || typeof edge.relationship !== 'string' || !edge.relationship) throw new Error('Dangling evidence relationship');
+  for (const edge of graph.edges) if (!edge || !ids.has(edge.from) || !ids.has(edge.to) || !relationships.includes(edge.relationship)) throw new Error('Dangling or unsupported evidence relationship');
   return graph;
 }
 

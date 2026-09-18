@@ -1,0 +1,3478 @@
+{
+  "schemaVersion": "giza.evidence-assembly.v1",
+  "id": "assembly.khafre.sarcophagus",
+  "title": "Khafre Sarcophagus Evidence Assembly",
+  "authoritativeFrameId": "frame.khafre.burial.reconstruction",
+  "frames": [
+    {
+      "id": "frame.khafre.coffer.object",
+      "label": "Coffer object-local",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "handedness": "RIGHT_HANDED",
+      "datum": "Reconstructed rim centre; rim z=0; length follows +N. Cavity centring is an idealization.",
+      "authority": "RECONSTRUCTED",
+      "status": "DEFINED"
+    },
+    {
+      "id": "frame.khafre.lid.object",
+      "label": "Lid object-local",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "handedness": "RIGHT_HANDED",
+      "datum": "Idealized lid underside centre; z=0. Physical chamber pose UNKNOWN.",
+      "authority": "RECONSTRUCTED",
+      "status": "DEFINED"
+    },
+    {
+      "id": "frame.khafre.burial.reconstruction",
+      "label": "Burial assembly reconstruction",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "handedness": "RIGHT_HANDED",
+      "datum": "Mean interior plan centre; reconstructed paving/coffer-rim z=0. Not the legacy overview datum.",
+      "authority": "RECONSTRUCTED",
+      "status": "DEFINED"
+    },
+    {
+      "id": "frame.khafre.monument.legacy",
+      "label": "Preserved monument overview",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "handedness": "RIGHT_HANDED",
+      "datum": "Existing parts.json engineering coordinates, unchanged; inherited placements retain their limitations.",
+      "authority": "RECONSTRUCTED",
+      "status": "DEFINED"
+    },
+    {
+      "id": "frame.giza.local",
+      "label": "Site / world context",
+      "units": "m",
+      "axes": {
+        "x": "+EAST",
+        "y": "+NORTH",
+        "z": "+UP"
+      },
+      "handedness": "RIGHT_HANDED",
+      "datum": "Existing FIELD local ENU frame. Horizontal survey translation and vertical datum unresolved.",
+      "authority": "RECONSTRUCTED",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "transforms": [
+    {
+      "id": "transform.coffer.assembly",
+      "from": "frame.khafre.coffer.object",
+      "to": "frame.khafre.burial.reconstruction",
+      "matrix": [
+        1,
+        0,
+        0,
+        -5.456999499999999,
+        0,
+        1,
+        0,
+        0.091059,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "RESOLVED",
+      "scope": "AUTHORITATIVE_RECONSTRUCTION",
+      "authority": "RECONSTRUCTED",
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.coffer.outer_width",
+        "m.coffer.outer_length",
+        "coffer.west_clearance",
+        "coffer.north_clearance",
+        "coffer.orientation",
+        "coffer.floor"
+      ],
+      "derivation": "Reported local clearances in idealized mean chamber; flush rim reconstructed from historical description. Source notes subsequent movement; not observed present-day XYZ.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No complete placement covariance / independently controlled registration exists."
+      }
+    },
+    {
+      "id": "transform.lid.assembly",
+      "from": "frame.khafre.lid.object",
+      "to": "frame.khafre.burial.reconstruction",
+      "matrix": null,
+      "status": "UNRESOLVED",
+      "scope": "AUTHORITATIVE_RECONSTRUCTION",
+      "authority": "RECONSTRUCTED",
+      "observationIds": [
+        "coffer.lid"
+      ],
+      "derivation": "Detached lid is reported; measured physical position/orientation in chamber is UNKNOWN. Inspection lift is never this transform.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No complete placement covariance / independently controlled registration exists."
+      }
+    },
+    {
+      "id": "transform.assembly.monument",
+      "from": "frame.khafre.burial.reconstruction",
+      "to": "frame.khafre.monument.legacy",
+      "matrix": null,
+      "status": "UNRESOLVED",
+      "scope": "AUTHORITATIVE_RECONSTRUCTION",
+      "authority": "RECONSTRUCTED",
+      "observationIds": [
+        "coffer.floor",
+        "coffer.orientation"
+      ],
+      "derivation": "Blocked: legacy orientation and floor/rim disagree. No surveyed control/registration establishes a corrected archaeological transform.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No complete placement covariance / independently controlled registration exists."
+      }
+    },
+    {
+      "id": "transform.monument.site",
+      "from": "frame.khafre.monument.legacy",
+      "to": "frame.giza.local",
+      "matrix": null,
+      "status": "UNRESOLVED",
+      "scope": "AUTHORITATIVE_RECONSTRUCTION",
+      "authority": "RECONSTRUCTED",
+      "observationIds": [],
+      "derivation": "FIELD orientation prior is unapplied; site translation and vertical datum remain unresolved. Geographic context is not metric control.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No complete placement covariance / independently controlled registration exists."
+      }
+    },
+    {
+      "id": "comparison.assembly.legacy-floor",
+      "from": "frame.khafre.burial.reconstruction",
+      "to": "frame.khafre.monument.legacy",
+      "matrix": [
+        1,
+        0,
+        0,
+        8.536304999999999,
+        0,
+        1,
+        0,
+        4.401229999999984,
+        0,
+        0,
+        1,
+        -3.55,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "RESOLVED",
+      "scope": "COMPARISON_ONLY",
+      "authority": "RECONSTRUCTED",
+      "observationIds": [
+        "m.burial.wall_height"
+      ],
+      "derivation": "Comparison adapter only: align reconstructed chamber floor with preserved envelope floor to quantify disagreement. NOT a promotion or measurement frame.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No complete placement covariance / independently controlled registration exists."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "src.petrie1883",
+      "title": "The Pyramids and Temples of Gizeh",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "authority": "CITED_MEASUREMENTS_ONLY",
+      "byteStatus": "UNKNOWN"
+    },
+    {
+      "id": "detail.petrie1883",
+      "title": "Petrie 1883 — Chapter IX, §§75–78, pp.105–109",
+      "url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh",
+      "authority": "CITED_MEASUREMENTS_ONLY",
+      "byteStatus": "UNKNOWN"
+    }
+  ],
+  "observations": [
+    {
+      "id": "m.burial.width_e",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.105",
+      "value": 4.97332,
+      "unit": "m",
+      "nativeValue": 195.8,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 195.8,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 4.97332,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.width_w",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.105",
+      "value": 4.97586,
+      "unit": "m",
+      "nativeValue": 195.9,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 195.9,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 4.97586,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.length_n",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.105",
+      "value": 14.170659999999998,
+      "unit": "m",
+      "nativeValue": 557.9,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 557.9,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 14.170659999999998,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.length_s",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.105",
+      "value": 14.15796,
+      "unit": "m",
+      "nativeValue": 557.4,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 557.4,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 14.15796,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.wall_height",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.105",
+      "value": 5.24256,
+      "unit": "m",
+      "nativeValue": 206.4,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Representative wall height; Petrie lists small corner variation.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 206.4,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 5.24256,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.gable_rise.vyse",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.106 (Vyse value)",
+      "value": 0.9652,
+      "unit": "m",
+      "nativeValue": 38,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "HISTORICAL_REPORTED",
+      "derivation": "Historical roof-rise value reported by Petrie; other modern summaries differ. Kept as explicit source-specific parameter.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 38,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.9652,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.door_from_e.start",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.106",
+      "value": 2.6492199999999997,
+      "unit": "m",
+      "nativeValue": 104.3,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 104.3,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 2.6492199999999997,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.burial.door_from_e.end",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §75, p.106",
+      "value": 3.68046,
+      "unit": "m",
+      "nativeValue": 144.9,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 144.9,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 3.68046,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.outer_length",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 2.6334720000000003,
+      "unit": "m",
+      "nativeValue": 103.68,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 103.68,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 2.6334720000000003,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.outer_width",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 1.065911,
+      "unit": "m",
+      "nativeValue": 41.965,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 41.965,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 1.065911,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.outer_height",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 0.9682479999999999,
+      "unit": "m",
+      "nativeValue": 38.12,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 38.12,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.9682479999999999,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.side_thickness",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 0.194183,
+      "unit": "m",
+      "nativeValue": 7.645,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 7.645,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.194183,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.inner_length",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 2.152142,
+      "unit": "m",
+      "nativeValue": 84.73,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 84.73,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 2.152142,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.inner_width",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 0.677926,
+      "unit": "m",
+      "nativeValue": 26.69,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 26.69,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.677926,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.inner_depth",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 0.7513319999999999,
+      "unit": "m",
+      "nativeValue": 29.58,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 29.58,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.7513319999999999,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.lid_length",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 2.634742,
+      "unit": "m",
+      "nativeValue": 103.73,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 103.73,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 2.634742,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.lid_width",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, pp.107-108",
+      "value": 1.067562,
+      "unit": "m",
+      "nativeValue": 42.03,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 42.03,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 1.067562,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.lid_thickness_min",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, p.108",
+      "value": 0.20827999999999997,
+      "unit": "m",
+      "nativeValue": 8.2,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Measured points range through 9.89 in; lid is not uniform.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 8.2,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.20827999999999997,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "m.coffer.lid_thickness_max",
+      "sourceId": "src.petrie1883",
+      "locator": "ch. IX §77, p.108",
+      "value": 0.251206,
+      "unit": "m",
+      "nativeValue": 9.89,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "MEASURED",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 9.89,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.251206,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "burial.paving.thickness_min",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "value": 0.2286,
+      "unit": "m",
+      "nativeValue": 9,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Lower end of reported limestone paving thickness; not a uniform slab thickness or current floor survey.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 9,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.2286,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "burial.paving.thickness_max",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "value": 0.3556,
+      "unit": "m",
+      "nativeValue": 14,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Upper end of the limestone paving range. Granite blocks around the coffer are described separately.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 14,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.3556,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.bottom.saw_overcut",
+      "sourceId": "detail.petrie1883",
+      "locator": "§76, p.106",
+      "value": 0.00508,
+      "unit": "m",
+      "nativeValue": 0.2,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Petrie's reported maximum saw overcut below the dressed bottom. Not applied to the mesh without a mapped location/profile.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 0.2,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.00508,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.surface.finish",
+      "sourceId": "detail.petrie1883",
+      "locator": "§76, p.106",
+      "value": "Petrie describes polished inner and outer sides, with the underside left rough and showing sawing.",
+      "unit": null,
+      "nativeValue": "Petrie describes polished inner and outer sides, with the underside left rough and showing sawing.",
+      "nativeUnit": null,
+      "authority": "OBSERVED",
+      "status": "REPORTED_DESCRIPTION",
+      "derivation": "Historical condition description; no exact surface scan or finish map is available.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "burial.wall.construction",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "value": "Rock-cut chamber walls with stone repairs and stucco; the gabled roof is assembled from limestone beams.",
+      "unit": null,
+      "nativeValue": "Rock-cut chamber walls with stone repairs and stucco; the gabled roof is assembled from limestone beams.",
+      "nativeUnit": null,
+      "authority": "OBSERVED",
+      "status": "REPORTED_DESCRIPTION",
+      "derivation": "Construction description, not a surveyed map of every joint or repair.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "burial.floor.disturbance",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "value": "Petrie reports earlier disturbance of the paving during Perring's search for other chambers.",
+      "unit": null,
+      "nativeValue": "Petrie reports earlier disturbance of the paving during Perring's search for other chambers.",
+      "nativeUnit": null,
+      "authority": "OBSERVED",
+      "status": "REPORTED_DESCRIPTION",
+      "derivation": "Historic account; do not treat an idealized complete floor as present-day condition.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "coffer.pin_n.from_n_inner",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "value": 0.150114,
+      "unit": "m",
+      "nativeValue": 5.91,
+      "nativeUnit": "in",
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_MIDPOINT",
+      "derivation": "Mean of reported edges 5.40–6.42 in from the north inner end. Derived marker location only; bore depth unmeasured.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 5.91,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.150114,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.pin_n.from_w_outer",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "value": 0.10922,
+      "unit": "m",
+      "nativeValue": 4.3,
+      "nativeUnit": "in",
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_MIDPOINT",
+      "derivation": "Mean of reported edges 3.76–4.84 in from west outside.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 4.3,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.10922,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.pin_s.from_s_inner",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "value": 0.159893,
+      "unit": "m",
+      "nativeValue": 6.295,
+      "nativeUnit": "in",
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_MIDPOINT",
+      "derivation": "Mean of reported edges 5.74–6.85 in from the south inner end. Derived marker location only.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 6.295,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.159893,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.pin_s.from_w_outer",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "value": 0.111506,
+      "unit": "m",
+      "nativeValue": 4.39,
+      "nativeUnit": "in",
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_MIDPOINT",
+      "derivation": "Mean of reported edges 3.86–4.92 in from west outside.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 4.39,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.111506,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.ledge_n.width_min",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "value": 0.03048,
+      "unit": "m",
+      "nativeValue": 1.2,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Reported minimum north ledge width. Range recorded, not forced into a uniform groove.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 1.2,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.03048,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.ledge_n.width_max",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "value": 0.05842,
+      "unit": "m",
+      "nativeValue": 2.3,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Reported maximum north ledge width.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 2.3,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.05842,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.ledge_s.width_min",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "value": 0.027432,
+      "unit": "m",
+      "nativeValue": 1.08,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Reported minimum south ledge width.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 1.08,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.027432,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.ledge_s.width_max",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.107",
+      "value": 0.04826,
+      "unit": "m",
+      "nativeValue": 1.9,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Reported maximum south ledge width.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 1.9,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.04826,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.west_clearance",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.106",
+      "value": 1.0922,
+      "unit": "m",
+      "nativeValue": 43,
+      "nativeUnit": "in",
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_MEAN",
+      "derivation": "Mean of 43.1 in at N and 42.9 in at S; Petrie notes subsequent movement. Local detail placement only.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 43,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 1.0922,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.north_clearance",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.106",
+      "value": 1.0795,
+      "unit": "m",
+      "nativeValue": 42.5,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 42.5,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 1.0795,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    },
+    {
+      "id": "coffer.orientation",
+      "sourceId": "detail.petrie1883",
+      "locator": "§§75–77, pp.106–108",
+      "value": "Long axis north–south, near west wall",
+      "unit": null,
+      "nativeValue": "Long axis north–south, near west wall",
+      "nativeUnit": null,
+      "authority": "RECONSTRUCTED",
+      "status": "DERIVED_FROM_SURVEY",
+      "derivation": "Existing overview preview has its long axis east–west. Detail scene corrects this locally without rewriting the canonical model.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "coffer.floor",
+      "sourceId": "detail.petrie1883",
+      "locator": "§75, p.105",
+      "value": "Originally recessed to sliding-lid level",
+      "unit": null,
+      "nativeValue": "Originally recessed to sliding-lid level",
+      "nativeUnit": null,
+      "authority": "OBSERVED",
+      "status": "REPORTED_DESCRIPTION",
+      "derivation": "Floor opening shown schematically; present-day disturbed paving and precise recess profile not reconstructed.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "coffer.lid",
+      "sourceId": "detail.petrie1883",
+      "locator": "§76, pp.106–107",
+      "value": "Detached lid described on chamber floor; closure slid from west",
+      "unit": null,
+      "nativeValue": "Detached lid described on chamber floor; closure slid from west",
+      "nativeUnit": null,
+      "authority": "OBSERVED",
+      "status": "REPORTED_DESCRIPTION",
+      "derivation": "The lifted lid control is an inspection pose, not a historical or present-day location.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "UNKNOWN",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      }
+    },
+    {
+      "id": "coffer.pin_diameter",
+      "sourceId": "detail.petrie1883",
+      "locator": "§77, p.108",
+      "value": 0.027178,
+      "unit": "m",
+      "nativeValue": 1.07,
+      "nativeUnit": "in",
+      "authority": "OBSERVED",
+      "status": "REPORTED_MEASUREMENT",
+      "derivation": "Two locking-pin bores. Optional survey markers use transcript-derived midpoint positions; physical holes and depths are not reconstructed without scan/plate checks.",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "quantity": {
+        "schema": "giza.quantity.v1",
+        "dimension": "LENGTH",
+        "native": {
+          "value": 1.07,
+          "unit": "in"
+        },
+        "normalized": {
+          "value": 0.027178,
+          "unit": "m"
+        },
+        "conversion": {
+          "from": "m",
+          "factor": 1,
+          "rule": "explicit-unit-table.v1"
+        },
+        "uncertaintyInterpretation": "UNSPECIFIED_MAGNITUDE"
+      }
+    }
+  ],
+  "features": [
+    {
+      "id": "feature.coffer.wall.west",
+      "objectId": "part.sarcophagus.body",
+      "label": "West wall / rim",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          -0.5329555,
+          -1.3167360000000001,
+          -0.7513319999999999
+        ],
+        "max": [
+          -0.338963,
+          1.3167360000000001,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_width",
+        "m.coffer.inner_width",
+        "m.coffer.outer_length",
+        "m.coffer.inner_depth"
+      ],
+      "derivation": "Idealized planar reconstruction from reported dimensions; centred rectangular cavity is not a mapped survey surface.",
+      "unknowns": [
+        "Actual surface irregularities, chips and local face positions UNKNOWN.",
+        "Complete propagated uncertainty UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.coffer.wall.east",
+      "objectId": "part.sarcophagus.body",
+      "label": "East wall / rim",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          0.338963,
+          -1.3167360000000001,
+          -0.7513319999999999
+        ],
+        "max": [
+          0.5329555,
+          1.3167360000000001,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_width",
+        "m.coffer.inner_width",
+        "m.coffer.outer_length",
+        "m.coffer.inner_depth"
+      ],
+      "derivation": "Idealized planar reconstruction from reported dimensions; centred rectangular cavity is not a mapped survey surface.",
+      "unknowns": [
+        "Actual surface irregularities, chips and local face positions UNKNOWN.",
+        "Complete propagated uncertainty UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.coffer.wall.north",
+      "objectId": "part.sarcophagus.body",
+      "label": "North end / rim",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          -0.338963,
+          1.076071,
+          -0.7513319999999999
+        ],
+        "max": [
+          0.338963,
+          1.3167360000000001,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.inner_width",
+        "m.coffer.inner_length",
+        "m.coffer.outer_length",
+        "m.coffer.inner_depth"
+      ],
+      "derivation": "Idealized planar reconstruction from reported dimensions; centred rectangular cavity is not a mapped survey surface.",
+      "unknowns": [
+        "Actual surface irregularities, chips and local face positions UNKNOWN.",
+        "Complete propagated uncertainty UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.coffer.wall.south",
+      "objectId": "part.sarcophagus.body",
+      "label": "South end / rim",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          -0.338963,
+          -1.3167360000000001,
+          -0.7513319999999999
+        ],
+        "max": [
+          0.338963,
+          -1.076071,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.inner_width",
+        "m.coffer.inner_length",
+        "m.coffer.outer_length",
+        "m.coffer.inner_depth"
+      ],
+      "derivation": "Idealized planar reconstruction from reported dimensions; centred rectangular cavity is not a mapped survey surface.",
+      "unknowns": [
+        "Actual surface irregularities, chips and local face positions UNKNOWN.",
+        "Complete propagated uncertainty UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.coffer.base",
+      "objectId": "part.sarcophagus.body",
+      "label": "Cavity floor / base",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          -0.5329555,
+          -1.3167360000000001,
+          -0.9682479999999999
+        ],
+        "max": [
+          0.5329555,
+          1.3167360000000001,
+          -0.7513319999999999
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_width",
+        "m.coffer.outer_length",
+        "m.coffer.outer_height",
+        "m.coffer.inner_depth",
+        "coffer.bottom.saw_overcut",
+        "coffer.surface.finish"
+      ],
+      "derivation": "Base thickness is outer height minus cavity depth. Reported overcut is not carved without a mapped location/profile.",
+      "unknowns": [
+        "Actual surface irregularities, chips and local face positions UNKNOWN.",
+        "Complete propagated uncertainty UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.lid.envelope",
+      "objectId": "part.sarcophagus.lid",
+      "label": "Lid mean-thickness envelope",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "box",
+        "min": [
+          -0.533781,
+          -1.317371,
+          0
+        ],
+        "max": [
+          0.533781,
+          1.317371,
+          0.22974299999999998
+        ]
+      },
+      "observationIds": [
+        "m.coffer.lid_width",
+        "m.coffer.lid_length",
+        "m.coffer.lid_thickness_min",
+        "m.coffer.lid_thickness_max"
+      ],
+      "derivation": "Plan dimensions reported at different edges; midpoint thickness is visualization only, not a uniform physical lid.",
+      "unknowns": [
+        "Thickness field / taper UNKNOWN.",
+        "Actual closure fit and seating height UNKNOWN.",
+        "Actual chamber placement UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.west",
+      "objectId": "part.burial.chamber",
+      "label": "West chamber boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            -7.082154999999999,
+            2.487295,
+            0
+          ],
+          [
+            -7.082154999999999,
+            2.487295,
+            5.24256
+          ],
+          [
+            -7.082154999999999,
+            -2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height"
+      ],
+      "derivation": "Mean orthogonal envelope; individual opposing wall lengths differ. Boundary surface only; no invented wall thickness.",
+      "unknowns": [
+        "Surveyed wall surface and local deviation UNKNOWN.",
+        "Door opening height UNKNOWN; doorway is only a plan anchor."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.east",
+      "objectId": "part.burial.chamber",
+      "label": "East chamber boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            5.24256
+          ],
+          [
+            7.082154999999999,
+            -2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height"
+      ],
+      "derivation": "Mean orthogonal envelope; individual opposing wall lengths differ. Boundary surface only; no invented wall thickness.",
+      "unknowns": [
+        "Surveyed wall surface and local deviation UNKNOWN.",
+        "Door opening height UNKNOWN; doorway is only a plan anchor."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.north",
+      "objectId": "part.burial.chamber",
+      "label": "North chamber boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            5.24256
+          ],
+          [
+            -7.082154999999999,
+            2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height"
+      ],
+      "derivation": "Mean orthogonal envelope; individual opposing wall lengths differ. Boundary surface only; no invented wall thickness.",
+      "unknowns": [
+        "Surveyed wall surface and local deviation UNKNOWN.",
+        "Door opening height UNKNOWN; doorway is only a plan anchor."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.south",
+      "objectId": "part.burial.chamber",
+      "label": "South chamber boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            -2.487295,
+            5.24256
+          ],
+          [
+            -7.082154999999999,
+            -2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height"
+      ],
+      "derivation": "Mean orthogonal envelope; individual opposing wall lengths differ. Boundary surface only; no invented wall thickness.",
+      "unknowns": [
+        "Surveyed wall surface and local deviation UNKNOWN.",
+        "Door opening height UNKNOWN; doorway is only a plan anchor."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.floor",
+      "objectId": "part.burial.floor_paving",
+      "label": "Reconstructed floor datum",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            -2.487295,
+            0
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            0
+          ],
+          [
+            -7.082154999999999,
+            2.487295,
+            0
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "coffer.floor",
+        "burial.floor.disturbance"
+      ],
+      "derivation": "Reference surface, not a complete physical floor slab. Opening/recess profile and disturbed paving are UNKNOWN.",
+      "unknowns": [
+        "Coffer recess and present floor surface UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.doorway",
+      "objectId": "part.burial.chamber",
+      "label": "North doorway plan interval",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          3.4016949999999992,
+          2.487295,
+          0
+        ],
+        "b": [
+          4.432935,
+          2.487295,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.burial.door_from_e.start",
+        "m.burial.door_from_e.end",
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w"
+      ],
+      "derivation": "Reported plan interval at floor datum; no invented 1.805 m door height.",
+      "unknowns": [
+        "Door height, jamb profile and independently surveyed connection transform UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 1.0312400000000004,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.roof.south",
+      "objectId": "part.burial.gable_envelope",
+      "label": "South gable boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            0,
+            6.20776
+          ],
+          [
+            7.082154999999999,
+            0,
+            6.20776
+          ],
+          [
+            7.082154999999999,
+            -2.487295,
+            5.24256
+          ],
+          [
+            -7.082154999999999,
+            -2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height",
+        "m.burial.gable_rise.vyse"
+      ],
+      "derivation": "Vyse rise reported by Petrie; idealized envelope only. No fabricated beam joints.",
+      "unknowns": [
+        "Individual beam profiles / thickness / joints UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.chamber.roof.north",
+      "objectId": "part.burial.gable_envelope",
+      "label": "North gable boundary",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "surface",
+        "vertices": [
+          [
+            -7.082154999999999,
+            0,
+            6.20776
+          ],
+          [
+            7.082154999999999,
+            0,
+            6.20776
+          ],
+          [
+            7.082154999999999,
+            2.487295,
+            5.24256
+          ],
+          [
+            -7.082154999999999,
+            2.487295,
+            5.24256
+          ]
+        ]
+      },
+      "observationIds": [
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.burial.wall_height",
+        "m.burial.gable_rise.vyse"
+      ],
+      "derivation": "Vyse rise reported by Petrie; idealized envelope only. No fabricated beam joints.",
+      "unknowns": [
+        "Individual beam profiles / thickness / joints UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.outer_length",
+      "objectId": "part.sarcophagus.body",
+      "label": "Outer length",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          0,
+          -1.3167360000000001,
+          0
+        ],
+        "b": [
+          0,
+          1.3167360000000001,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_length"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 2.6334720000000003,
+      "unit": "m",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.outer_width",
+      "objectId": "part.sarcophagus.body",
+      "label": "Mean outer width",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          -0.5329555,
+          0,
+          0
+        ],
+        "b": [
+          0.5329555,
+          0,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_width"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 1.065911,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.outer_height",
+      "objectId": "part.sarcophagus.body",
+      "label": "Outer height",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          0,
+          0,
+          -0.9682479999999999
+        ],
+        "b": [
+          0,
+          0,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.outer_height"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 0.9682479999999999,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.inner_length",
+      "objectId": "part.sarcophagus.body",
+      "label": "Cavity length",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          0,
+          -1.076071,
+          0
+        ],
+        "b": [
+          0,
+          1.076071,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.inner_length"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 2.152142,
+      "unit": "m",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.inner_width",
+      "objectId": "part.sarcophagus.body",
+      "label": "Cavity width",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          -0.338963,
+          0,
+          0
+        ],
+        "b": [
+          0.338963,
+          0,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.inner_width"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 0.677926,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.inner_depth",
+      "objectId": "part.sarcophagus.body",
+      "label": "Cavity depth",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          0,
+          0,
+          -0.7513319999999999
+        ],
+        "b": [
+          0,
+          0,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.inner_depth"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 0.7513319999999999,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.lid_length",
+      "objectId": "part.sarcophagus.lid",
+      "label": "Lid west length",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          0,
+          -1.317371,
+          0
+        ],
+        "b": [
+          0,
+          1.317371,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.lid_length"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 2.634742,
+      "unit": "m",
+      "uncertainty": {
+        "status": "KNOWN",
+        "value": 0.000508,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNSPECIFIED_MAGNITUDE"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.dimension.m.coffer.lid_width",
+      "objectId": "part.sarcophagus.lid",
+      "label": "Lid south width",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "segment",
+        "a": [
+          -0.533781,
+          0,
+          0
+        ],
+        "b": [
+          0.533781,
+          0,
+          0
+        ]
+      },
+      "observationIds": [
+        "m.coffer.lid_width"
+      ],
+      "derivation": "Cited scalar represented on a reconstructed reference line; line position is not an observed/surveyed edge.",
+      "unknowns": [],
+      "authority": "OBSERVED",
+      "value": 1.067562,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.record.m.burial.width_e",
+      "objectId": "part.burial.chamber",
+      "label": "burial · width e",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.width_e"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 4.97332,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.width_w",
+      "objectId": "part.burial.chamber",
+      "label": "burial · width w",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.width_w"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 4.97586,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.length_n",
+      "objectId": "part.burial.chamber",
+      "label": "burial · length n",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.length_n"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 14.170659999999998,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.length_s",
+      "objectId": "part.burial.chamber",
+      "label": "burial · length s",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.length_s"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 14.15796,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.wall_height",
+      "objectId": "part.burial.chamber",
+      "label": "burial · wall height",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.wall_height"
+      ],
+      "derivation": "Representative wall height; Petrie lists small corner variation.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 5.24256,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.gable_rise.vyse",
+      "objectId": "part.burial.chamber",
+      "label": "burial · gable rise · vyse",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.gable_rise.vyse"
+      ],
+      "derivation": "Historical roof-rise value reported by Petrie; other modern summaries differ. Kept as explicit source-specific parameter.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.9652,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.door_from_e.start",
+      "objectId": "part.burial.chamber",
+      "label": "burial · door from e · start",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.door_from_e.start"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 2.6492199999999997,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.burial.door_from_e.end",
+      "objectId": "part.burial.chamber",
+      "label": "burial · door from e · end",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.burial.door_from_e.end"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 3.68046,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.coffer.side_thickness",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · side thickness",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.coffer.side_thickness"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.194183,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.coffer.lid_thickness_min",
+      "objectId": "part.sarcophagus.lid",
+      "label": "coffer · lid thickness min",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.coffer.lid_thickness_min"
+      ],
+      "derivation": "Measured points range through 9.89 in; lid is not uniform.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.20827999999999997,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.m.coffer.lid_thickness_max",
+      "objectId": "part.sarcophagus.lid",
+      "label": "coffer · lid thickness max",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "m.coffer.lid_thickness_max"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.251206,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.burial.paving.thickness_min",
+      "objectId": "part.burial.chamber",
+      "label": "burial · paving · thickness min",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "burial.paving.thickness_min"
+      ],
+      "derivation": "Lower end of reported limestone paving thickness; not a uniform slab thickness or current floor survey.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.2286,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.burial.paving.thickness_max",
+      "objectId": "part.burial.chamber",
+      "label": "burial · paving · thickness max",
+      "frameId": "frame.khafre.burial.reconstruction",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "burial.paving.thickness_max"
+      ],
+      "derivation": "Upper end of the limestone paving range. Granite blocks around the coffer are described separately.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.3556,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.bottom.saw_overcut",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · bottom · saw overcut",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.bottom.saw_overcut"
+      ],
+      "derivation": "Petrie's reported maximum saw overcut below the dressed bottom. Not applied to the mesh without a mapped location/profile.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.00508,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.pin_n.from_n_inner",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · pin n · from n inner",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.pin_n.from_n_inner"
+      ],
+      "derivation": "Mean of reported edges 5.40–6.42 in from the north inner end. Derived marker location only; bore depth unmeasured.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.150114,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.pin_n.from_w_outer",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · pin n · from w outer",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.pin_n.from_w_outer"
+      ],
+      "derivation": "Mean of reported edges 3.76–4.84 in from west outside.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.10922,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.pin_s.from_s_inner",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · pin s · from s inner",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.pin_s.from_s_inner"
+      ],
+      "derivation": "Mean of reported edges 5.74–6.85 in from the south inner end. Derived marker location only.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.159893,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.pin_s.from_w_outer",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · pin s · from w outer",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.pin_s.from_w_outer"
+      ],
+      "derivation": "Mean of reported edges 3.86–4.92 in from west outside.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.111506,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.ledge_n.width_min",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · ledge n · width min",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.ledge_n.width_min"
+      ],
+      "derivation": "Reported minimum north ledge width. Range recorded, not forced into a uniform groove.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.03048,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.ledge_n.width_max",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · ledge n · width max",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.ledge_n.width_max"
+      ],
+      "derivation": "Reported maximum north ledge width.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.05842,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.ledge_s.width_min",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · ledge s · width min",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.ledge_s.width_min"
+      ],
+      "derivation": "Reported minimum south ledge width.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.027432,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.ledge_s.width_max",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · ledge s · width max",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.ledge_s.width_max"
+      ],
+      "derivation": "Reported maximum south ledge width.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.04826,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.west_clearance",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · west clearance",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.west_clearance"
+      ],
+      "derivation": "Mean of 43.1 in at N and 42.9 in at S; Petrie notes subsequent movement. Local detail placement only.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 1.0922,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.north_clearance",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · north clearance",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.north_clearance"
+      ],
+      "derivation": "Source-reported record; no surveyed endpoints or authenticated review implied.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 1.0795,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.record.coffer.pin_diameter",
+      "objectId": "part.sarcophagus.body",
+      "label": "coffer · pin diameter",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Scalar/range is sourced; a unique mapped feature position is not established."
+      },
+      "observationIds": [
+        "coffer.pin_diameter"
+      ],
+      "derivation": "Two locking-pin bores. Optional survey markers use transcript-derived midpoint positions; physical holes and depths are not reconstructed without scan/plate checks.",
+      "unknowns": [
+        "Mapped feature geometry UNKNOWN."
+      ],
+      "authority": "OBSERVED",
+      "value": 0.027178,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "Source magnitude; statistical meaning unspecified.",
+        "interpretation": "UNKNOWN"
+      },
+      "coordinateAuthority": "UNKNOWN"
+    },
+    {
+      "id": "feature.coffer.pin.n",
+      "objectId": "part.sarcophagus.body",
+      "label": "North locking-pin marker",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "point",
+        "point": [
+          -0.42373550000000004,
+          0.925957,
+          0
+        ]
+      },
+      "observationIds": [
+        "coffer.pin_n.from_w_outer",
+        "coffer.pin_n.from_n_inner",
+        "coffer.pin_diameter",
+        "m.coffer.outer_width",
+        "m.coffer.inner_length"
+      ],
+      "derivation": "Transcript edge-midpoint marker only, not a cylindrical bore.",
+      "unknowns": [
+        "Bore depth / axis / shape UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.027178,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.coffer.pin.s",
+      "objectId": "part.sarcophagus.body",
+      "label": "South locking-pin marker",
+      "frameId": "frame.khafre.coffer.object",
+      "geometry": {
+        "kind": "point",
+        "point": [
+          -0.42144950000000003,
+          -0.9161779999999999,
+          0
+        ]
+      },
+      "observationIds": [
+        "coffer.pin_s.from_w_outer",
+        "coffer.pin_s.from_s_inner",
+        "coffer.pin_diameter",
+        "m.coffer.outer_width",
+        "m.coffer.inner_length"
+      ],
+      "derivation": "Transcript edge-midpoint marker only, not a cylindrical bore.",
+      "unknowns": [
+        "Bore depth / axis / shape UNKNOWN."
+      ],
+      "authority": "RECONSTRUCTED",
+      "value": 0.027178,
+      "unit": "m",
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "RECONSTRUCTED"
+    },
+    {
+      "id": "feature.lid.closure-hypothesis",
+      "objectId": "part.sarcophagus.lid",
+      "label": "Proposed closure / sliding fit",
+      "frameId": "frame.khafre.lid.object",
+      "geometry": {
+        "kind": "unknown",
+        "reason": "Groove geometry, engagement, seating and measured closure pose are absent."
+      },
+      "observationIds": [
+        "coffer.lid",
+        "coffer.ledge_n.width_min",
+        "coffer.ledge_n.width_max",
+        "coffer.ledge_s.width_min",
+        "coffer.ledge_s.width_max"
+      ],
+      "derivation": "Historical sliding direction is reported, but a collision/clearance model cannot be inferred from plan envelopes.",
+      "unknowns": [
+        "Contact geometry, fit clearance and admissible closure trajectory UNKNOWN."
+      ],
+      "authority": "HYPOTHESIS",
+      "value": null,
+      "unit": null,
+      "uncertainty": {
+        "status": "UNKNOWN",
+        "value": null,
+        "unit": "m",
+        "note": "No uncertainty supplied by the cited record."
+      },
+      "coordinateAuthority": "UNKNOWN"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "constraint.cavity.within-body",
+      "kind": "CONTAINMENT",
+      "featureIds": [
+        "feature.coffer.base",
+        "feature.coffer.wall.west",
+        "feature.coffer.wall.east"
+      ],
+      "observationIds": [
+        "m.coffer.outer_width",
+        "m.coffer.outer_length",
+        "m.coffer.outer_height",
+        "m.coffer.inner_width",
+        "m.coffer.inner_length",
+        "m.coffer.inner_depth"
+      ],
+      "status": "SATISFIED",
+      "value": null,
+      "unit": null,
+      "note": "Necessary envelope containment only; no claim about surface-level fit."
+    },
+    {
+      "id": "constraint.lid.fit",
+      "kind": "CLEARANCE",
+      "featureIds": [
+        "feature.lid.envelope",
+        "feature.coffer.wall.west",
+        "feature.lid.closure-hypothesis"
+      ],
+      "observationIds": [
+        "coffer.lid",
+        "m.coffer.lid_width",
+        "m.coffer.outer_width"
+      ],
+      "status": "UNKNOWN",
+      "value": null,
+      "unit": "m",
+      "note": "Plan overhang is not closure clearance. Groove/contact profiles and actual lid pose are UNKNOWN."
+    },
+    {
+      "id": "constraint.chamber.connection",
+      "kind": "CONNECTION",
+      "featureIds": [
+        "feature.chamber.doorway"
+      ],
+      "observationIds": [
+        "m.burial.door_from_e.start",
+        "m.burial.door_from_e.end"
+      ],
+      "status": "UNKNOWN",
+      "value": null,
+      "unit": "m",
+      "note": "Known north doorway references the existing upper route. Navigable metric connection requires validated endpoint orientation, elevation and opening geometry; no new space is created."
+    },
+    {
+      "id": "constraint.coffer.west-clearance",
+      "kind": "CLEARANCE",
+      "featureIds": [
+        "feature.coffer.wall.west",
+        "feature.chamber.west"
+      ],
+      "observationIds": [
+        "coffer.west_clearance"
+      ],
+      "status": "SATISFIED",
+      "value": 1.0922,
+      "unit": "m",
+      "note": "Source-derived mean in reconstructed assembly; later movement noted. Not a present-day measured clearance."
+    },
+    {
+      "id": "constraint.coffer.north-clearance",
+      "kind": "CLEARANCE",
+      "featureIds": [
+        "feature.coffer.wall.north",
+        "feature.chamber.north"
+      ],
+      "observationIds": [
+        "coffer.north_clearance"
+      ],
+      "status": "SATISFIED",
+      "value": 1.0795,
+      "unit": "m",
+      "note": "Source-reported clearance used as reconstruction constraint; full uncertainty UNKNOWN."
+    }
+  ],
+  "audit": [
+    {
+      "id": "audit.coffer.axis",
+      "label": "Coffer long-axis disagreement",
+      "status": "DISAGREEMENT",
+      "legacyValue": 0,
+      "detailValue": 1.5707963267948966,
+      "difference": 1.5707963267948966,
+      "unit": "rad",
+      "observationIds": [
+        "coffer.orientation"
+      ],
+      "note": "Legacy envelope has length along X; detail reconstruction has length along Y. A single chamber translation cannot reconcile this."
+    },
+    {
+      "id": "audit.coffer.floor-rim",
+      "label": "Legacy rim above chamber-floor adapter",
+      "status": "DISAGREEMENT",
+      "legacyValue": 0.968248,
+      "detailValue": 0,
+      "difference": -0.968248,
+      "unit": "m",
+      "observationIds": [
+        "coffer.floor",
+        "m.coffer.outer_height",
+        "m.burial.wall_height"
+      ],
+      "note": "Difference = detail minus legacy. Comparison only. Legacy body sits above its chamber floor; detail reconstructs a recessed coffer with rim at floor. Neither data set is silently rewritten."
+    },
+    {
+      "id": "audit.coffer.north-offset",
+      "label": "Legacy/detail north–south offset",
+      "status": "DISAGREEMENT",
+      "legacyValue": 0,
+      "detailValue": 0.091059,
+      "difference": 0.091059,
+      "unit": "m",
+      "observationIds": [
+        "coffer.north_clearance",
+        "m.burial.width_e",
+        "m.burial.width_w",
+        "m.coffer.outer_length"
+      ],
+      "note": "Difference = detail minus legacy. Reported northern clearance versus preserved centred overview body."
+    },
+    {
+      "id": "audit.coffer.west-offset",
+      "label": "Legacy/detail east–west offset",
+      "status": "DISAGREEMENT",
+      "legacyValue": -4.673218999999998,
+      "detailValue": -5.456999499999999,
+      "difference": -0.7837805000000015,
+      "unit": "m",
+      "observationIds": [
+        "coffer.west_clearance",
+        "m.burial.length_n",
+        "m.burial.length_s",
+        "m.coffer.outer_width",
+        "m.coffer.outer_length"
+      ],
+      "note": "Difference = detail minus legacy. The legacy long-axis orientation uses a different extent when locating the body from the west wall; a rotation about its old centre is insufficient."
+    },
+    {
+      "id": "audit.site.datum",
+      "label": "Site/world datum unresolved",
+      "status": "UNRESOLVED",
+      "legacyValue": null,
+      "detailValue": null,
+      "difference": null,
+      "unit": "m",
+      "observationIds": [],
+      "note": "Geospatial FIELD context anchor is not survey control. No precise world coordinate export is authorized."
+    }
+  ],
+  "limitations": [
+    "Source-reported dimensions constrain idealized geometry; this is not a scan or new archaeological survey.",
+    "No metric registration, independent scale/control, holdout result or feature-image residual is established for this assembly.",
+    "Raw source-byte custody must be resolved through the existing source vault; this contract does not assert that a source URL is a byte receipt.",
+    "Missing uncertainty is UNKNOWN, never zero. Apparent decimal precision is not measurement accuracy.",
+    "Cavity centring, planar orthogonal faces and mean chamber envelope are explicit reconstruction assumptions.",
+    "Lid inspection position, selection, explode, camera and animation are presentation only, excluded from measurement and export.",
+    "Physical lid pose, closure fit, groove profile, pin depth, recess profile, per-beam and per-stone geometry remain UNKNOWN.",
+    "Assembly→monument→site transforms remain blocked pending reconciliation and independently controlled evidence."
+  ]
+}

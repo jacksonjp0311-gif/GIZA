@@ -27,7 +27,7 @@ export function validateUncertainty(u:Uncertainty):void {
   if(u.interpretation!==undefined&&!['UNSPECIFIED_MAGNITUDE','BOUND','STANDARD_UNCERTAINTY','ROUNDING','UNKNOWN'].includes(u.interpretation))throw new Error('Unsupported uncertainty interpretation');
 }
 const units:Record<string,{dimension:string;unit:string;factor:number}>={m:{dimension:'LENGTH',unit:'m',factor:1},cm:{dimension:'LENGTH',unit:'m',factor:.01},mm:{dimension:'LENGTH',unit:'m',factor:.001},in:{dimension:'LENGTH',unit:'m',factor:.0254},deg:{dimension:'ANGLE',unit:'deg',factor:1},rad:{dimension:'ANGLE',unit:'deg',factor:180/Math.PI},arcmin:{dimension:'ANGLE',unit:'deg',factor:1/60},m2:{dimension:'AREA',unit:'m2',factor:1},m3:{dimension:'VOLUME',unit:'m3',factor:1},ratio:{dimension:'RATIO',unit:'ratio',factor:1}};
-export interface ValidatedQuantity {schema:'giza.quantity.v1';dimension:string;native:{value:number|string|null;unit:string|null};normalized:{value:number;unit:string};conversion:{from:string;factor:number;rule:'explicit-unit-table.v1'};uncertaintyInterpretation:string}
+export interface ValidatedQuantity {schema:'giza.quantity.v1';dimension:string;native:{value:number|string|null;unit:string|null};normalized:{value:number;unit:string};conversion:{from:string;factor:number;rule:'explicit-unit-table.v1'};nativeConversion?:{from:string;to:string;factor:number};uncertaintyInterpretation:string}
 export function normalizeQuantity(value:number,unit:string,nativeValue:number|string|null,nativeUnit:string|null):ValidatedQuantity {
   const spec=units[unit];if(!spec||!Number.isFinite(value))throw new Error(`Unsupported quantity unit ${unit}`);
   if(typeof nativeValue==='number'&&(!nativeUnit||!units[nativeUnit]))throw new Error('Numeric native observation requires a supported native unit');
@@ -36,7 +36,7 @@ export function normalizeQuantity(value:number,unit:string,nativeValue:number|st
     // Preserve supplied rounding; inconsistent conversions cannot enter geometry.
     if(Math.abs(nativeValue*source.factor-value*spec.factor)>1e-8*Math.max(1,Math.abs(value*spec.factor)))throw new Error('Observation input differs: quantity conversion disagrees with native value');
   }
-  return {schema:'giza.quantity.v1',dimension:spec.dimension,native:{value:nativeValue,unit:nativeUnit},normalized:{value:value*spec.factor,unit:spec.unit},conversion:{from:unit,factor:spec.factor,rule:'explicit-unit-table.v1'},uncertaintyInterpretation:'UNSPECIFIED_MAGNITUDE'};
+  return {schema:'giza.quantity.v1',dimension:spec.dimension,native:{value:nativeValue,unit:nativeUnit},normalized:{value:value*spec.factor,unit:spec.unit},conversion:{from:unit,factor:spec.factor,rule:'explicit-unit-table.v1'},...(typeof nativeValue==='number'&&nativeUnit?{nativeConversion:{from:nativeUnit,to:spec.unit,factor:units[nativeUnit].factor}}:{}),uncertaintyInterpretation:'UNSPECIFIED_MAGNITUDE'};
 }
 export function validateObservation(input:unknown,sourceIds?:Set<string>):asserts input is EvidenceObservation {
   assertSafeDocument(input);
@@ -55,7 +55,8 @@ export function validateObservation(input:unknown,sourceIds?:Set<string>):assert
     const quantity=normalizeQuantity(o.value,o.unit,o.nativeValue,o.nativeUnit);
     if(o.quantity!==undefined){
       const q=o.quantity;
-      if(q.schema!=='giza.quantity.v1'||q.dimension!==quantity.dimension||q.normalized.value!==o.value||q.normalized.unit!==o.unit||q.native.value!==o.nativeValue||q.native.unit!==o.nativeUnit||q.conversion.rule!=='explicit-unit-table.v1'||!units[q.conversion.from]||q.conversion.factor!==units[q.conversion.from].factor)throw new Error('Quantity metadata inconsistent with observation');
+      if(q.schema!=='giza.quantity.v1'||q.dimension!==quantity.dimension||q.normalized.value!==quantity.normalized.value||q.normalized.unit!==quantity.normalized.unit||q.native.value!==o.nativeValue||q.native.unit!==o.nativeUnit||q.conversion.rule!=='explicit-unit-table.v1'||![o.unit,o.nativeUnit].includes(q.conversion.from)||!units[q.conversion.from]||units[q.conversion.from].dimension!==quantity.dimension||q.conversion.factor!==units[q.conversion.from].factor)throw new Error('Quantity metadata inconsistent with observation');
+      if(q.nativeConversion&&(q.nativeConversion.from!==o.nativeUnit||q.nativeConversion.to!==quantity.normalized.unit||q.nativeConversion.factor!==quantity.nativeConversion?.factor))throw new Error('Native conversion provenance mismatch');
     }
   }else if(o.quantity!==undefined)throw new Error('Non-numeric observation cannot carry numeric quantity');
 }

@@ -1,0 +1,64 @@
+{
+  "version": "0.10.7",
+  "codename": "ACTION GRAPH",
+  "phase": "ACTION_GRAPH",
+  "generated_at": "2026-09-13T22:45:42.902Z",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "counts": {
+    "nodes": 14,
+    "places": 7,
+    "actions": 7,
+    "edges": 14
+  },
+  "invariants": [
+    "every action node is evidence-addressed",
+    "graph is not recovered ritual testimony",
+    "behavioral edges have zero geometry-write authority",
+    "epistemic status remains visible in UI"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/action_graph/manifest.json",
+      "sha256": "cdc8c11ecb34d8f2ff0087981e50e51c4d712394eef55a133f1f75fa203c74ea",
+      "bytes": 1007
+    },
+    {
+      "path": "public/model/action_graph/seeds.json",
+      "sha256": "2a1579ccd7750779831d7559b5925a057e24c7b054391a61d8b3a60880469840",
+      "bytes": 6979
+    },
+    {
+      "path": "public/model/action_graph/graph.json",
+      "sha256": "8b9a67767fb6853301596c5d6fac2637648ec7720f3d0acf8b92b8d24a94b3ee",
+      "bytes": 14225
+    },
+    {
+      "path": "public/model/action_graph/traversal.json",
+      "sha256": "f787e9d1789d76b74d524b24ab9131aed5168d8e32adc9663892e7e9035516ea",
+      "bytes": 1040
+    },
+    {
+      "path": "public/model/maps/layers/action_graph.json",
+      "sha256": "818aad3ced478bf2cd7f75f2d513ea074e41b24ee45b06933dfd26c2c70da5c9",
+      "bytes": 7791
+    },
+    {
+      "path": "scripts/action_graph/build.mjs",
+      "sha256": "5a3f271b318220fded1a919867eaae504d2ee9ac47fbd5dd371152b6d21a6f35",
+      "bytes": 3761
+    },
+    {
+      "path": "scripts/action_graph/validate.mjs",
+      "sha256": "c2f52f830f0b61522800829eb54e07aa4715a75687323d50efc57ec6a4904cd4",
+      "bytes": 1788
+    },
+    {
+      "path": "docs/ACTION_GRAPH.md",
+      "sha256": "cf707ec152f8540ed132cafbf23d02f3fd4698bf09d81ea3973feeddb6197b52",
+      "bytes": 3780
+    }
+  ],
+  "release_version": "0.10.12",
+  "sealed_at": "2026-09-17T20:36:54.608Z"
+}

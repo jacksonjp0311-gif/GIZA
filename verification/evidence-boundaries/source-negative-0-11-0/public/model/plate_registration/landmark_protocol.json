@@ -1,0 +1,46 @@
+{
+  "minimums": {
+    "fit_controls": 4,
+    "holdouts": 2,
+    "control_sectors": 3,
+    "holdout_sectors": 2
+  },
+  "landmarks": [
+    {
+      "id": "qa.point.0",
+      "sector": "NW",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    },
+    {
+      "id": "qa.point.1",
+      "sector": "NE",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    },
+    {
+      "id": "qa.point.2",
+      "sector": "SW",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    },
+    {
+      "id": "qa.point.3",
+      "sector": "SE",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    },
+    {
+      "id": "qa.point.4",
+      "sector": "CENTRE",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    },
+    {
+      "id": "qa.point.5",
+      "sector": "SOUTH",
+      "description": "Synthetic point, not archaeology",
+      "featureId": "feature.coffer.wall.west"
+    }
+  ]
+}

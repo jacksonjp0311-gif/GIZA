@@ -1,0 +1,42 @@
+{
+  "id": "revision:a0557962bdba1e9690255386d5d6191947ebff46e1c67650309bfd76e8a57ac7",
+  "sha256": "a0557962bdba1e9690255386d5d6191947ebff46e1c67650309bfd76e8a57ac7",
+  "payload": {
+    "schema": "giza.assembly-plan-revision.v1",
+    "assemblyId": "assembly.khafre.sarcophagus",
+    "baseAssemblySha256": "f2719aab3dc63ee8bebaa54c0dc67dee7e697fb66f777abfaea0bafa3b31f0cc",
+    "previousRevision": "BASE_ASSEMBLY",
+    "campaignId": "qa.khafre.plan",
+    "classification": "SYNTHETIC_SOFTWARE_QA",
+    "sourceSha256": "322325232a3ca088fbcc16039258717b7ecb9bd81acd9907da42c747651d3b27",
+    "freezeSha256": "4a39bd693e7757b73105168184214753b13a31359e7f7f6a745ce5f86e3b0a7b",
+    "numericalResultSha256": "53b74745e7a8e8fbd40f23b7b9d880d546fa2b6a8282ac519fc17de7b9da57b0",
+    "relationship": {
+      "from": "SOURCE_RENDER_PIXELS",
+      "to": "frame.qa.coffer.plan.2d",
+      "units": "m",
+      "dimension": "PLAN_2D_ONLY",
+      "fit": {
+        "a": 0.02,
+        "b": 4.2247059725609824e-19,
+        "tx": 5,
+        "ty": 4,
+        "scale": 0.02,
+        "angle_deg": 1.2102891095572802e-15
+      },
+      "uncertainty": "CONTROL_AND_HOLDOUT_RESIDUALS_ARE_NOT_SURVEY_COVARIANCE"
+    },
+    "affectedFeatures": [
+      "feature.coffer.wall.west"
+    ],
+    "difference": "Adds a reviewed source-pixel to local-plan relationship. 3-D surfaces, lid placement and monument/site transforms are unchanged.",
+    "review": {
+      "reviewer": "Automated software QA",
+      "note": "Synthetic-only positive path; no archaeological authority.",
+      "acceptPlanScope": true,
+      "authentication": "OPERATOR_ASSERTED_NOT_AUTHENTICATED"
+    },
+    "canonicalGeometryChanged": false,
+    "createdAt": "2026-09-17T23:55:09.573Z"
+  }
+}

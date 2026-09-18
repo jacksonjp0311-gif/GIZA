@@ -1,0 +1,29 @@
+{
+  "schema": "giza.blocked-source-campaign.v1",
+  "id": "khafre.coffer.chamber.plan.20260917",
+  "status": "BLOCKED",
+  "classification": "PROPOSED_INDEPENDENT_CONTROLLED",
+  "assemblyId": "assembly.khafre.sarcophagus",
+  "question": "Does an identified historical coffer/chamber plan agree with independently measured corresponding coffer/chamber features in a declared local 2-D frame?",
+  "preregisteredAcceptance": "Use the existing shared-engine historical-plan similarity profile unchanged, with its control/holdout and sector minima, independent scale check and untouched holdouts. Numerical success alone does not authenticate source identity or promote 3-D surfaces.",
+  "scope": "PLAN_2D_ONLY; physical lid pose and assembly-to-monument/site transforms stay unresolved",
+  "sourceLeadsChecked": [
+    {"url": "https://giza.fas.harvard.edu/pubdocs/551/full/", "identity": "Digital Giza catalog for Petrie, The Pyramids and Temples of Gizeh", "limitation": "Catalog citation identifies a 1990 reprint of the 1883 work; exact edition/page/render identity and permitted use must be established from acquired bytes."},
+    {"url": "https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh", "identity": "Online text of Petrie's work", "limitation": "Text/citation access is not independently controlled feature coordinates or a source-render custody record."}
+  ],
+  "existingRelevantLocators": ["Petrie sections 75–77, pp.105–108, as recorded in the existing component observations"],
+  "missingInputs": [
+    "Checksum-preserved, permitted-use source bytes for the correctly identified coffer/chamber image and its confirmed page/render",
+    "Feature-identifiable 2-D correspondences, not fabricated rectangle corners inferred from this model",
+    "Independent control source bytes and lineage demonstrating independence from both the underlying plan measurements and the model under evaluation",
+    "Independent scale provenance in metres per source-render pixel",
+    "Frozen controls and untouched holdouts distributed across the required sectors",
+    "Control uncertainty definitions and explicit local-plan datum/axes"
+  ],
+  "fitAttempted": false,
+  "reasonNoFit": "Pre-fit evidence gates are unmet. No controls were invented and no unrelated valley-temple registration was borrowed.",
+  "availableLocalResult": "The recorded lid/body lengths differ arithmetically by 0.00127 m; this is not seated clearance, manufacturing tolerance, or independent confirmation.",
+  "sourceBytesAcquiredByThisCampaign": false,
+  "reviewAuthority": "RESEARCH_LEAD_ASSESSMENT_NOT_AUTHENTICATED_SCHOLARLY_REVIEW",
+  "canonicalGeometryChanged": false
+}

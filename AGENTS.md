@@ -1,4 +1,4 @@
-# GIZA v0.10.12 — continuation contract
+# GIZA v0.11.0 — continuation contract
 
 Continue the actual software in this folder. Preserve the existing 3-D explorer, atlas, scientific data, source histories and original design references.
 

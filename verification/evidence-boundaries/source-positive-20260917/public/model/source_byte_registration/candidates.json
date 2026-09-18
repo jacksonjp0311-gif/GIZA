@@ -1,0 +1,10 @@
+{
+  "candidates": [
+    {
+      "id": "qa.khafre.plan",
+      "raw_byte_verified": true,
+      "local_path": "assets/source.pdf",
+      "sha256": "1dcb4b286d4e22f41e12373105e3573594dd362b1720c4c961295dd520e3f40d"
+    }
+  ]
+}

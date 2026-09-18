@@ -1,0 +1,147 @@
+{
+  "version": "0.10.12",
+  "campaign_id": "qa.khafre.plan",
+  "source_sha256": "1dcb4b286d4e22f41e12373105e3573594dd362b1720c4c961295dd520e3f40d",
+  "render_sha256": "aaa64b6a1f0d0c973867e86e764debb90944489ca01ba125deaaa4271b4a9622",
+  "freeze_sha256": "67f1157858134f33d7660d9cda776f703cd091474edefa5ab2b8fa8a29b8d2bc",
+  "fit_model": "SIMILARITY_2D",
+  "target_frame": "PLATE_LOCAL_METERS",
+  "pixel_axis": "Y_DOWN",
+  "threshold_profile_id": "threshold.historical_plan_similarity.v1",
+  "profile_sha256": "626f881a568ddc593c5ae15b19defbcbe0e447bbb29a5a0a22862dbe2f19998d",
+  "fit": {
+    "a": 0.02,
+    "b": 4.2247059725609824e-19,
+    "tx": 5,
+    "ty": 4,
+    "scale": 0.02,
+    "angle_deg": 1.2102891095572802e-15
+  },
+  "frame_diagonal_m": 2.8284271247461903,
+  "control_summary": {
+    "count": 4,
+    "rms": 0,
+    "max": 0,
+    "normalized_rms": 0,
+    "normalized_max": 0
+  },
+  "holdout_summary": {
+    "count": 2,
+    "rms": 0,
+    "max": 0,
+    "normalized_rms": 0,
+    "normalized_max": 0
+  },
+  "control_residuals": [
+    {
+      "id": "qa.point.0",
+      "sector": "NW",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 5.2,
+        "y": 3.8
+      },
+      "target": {
+        "x": 5.2,
+        "y": 3.8
+      }
+    },
+    {
+      "id": "qa.point.1",
+      "sector": "NE",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 7.2,
+        "y": 3.6
+      },
+      "target": {
+        "x": 7.2,
+        "y": 3.6
+      }
+    },
+    {
+      "id": "qa.point.2",
+      "sector": "SW",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 5.4,
+        "y": 1.7999999999999998
+      },
+      "target": {
+        "x": 5.4,
+        "y": 1.7999999999999998
+      }
+    },
+    {
+      "id": "qa.point.3",
+      "sector": "SE",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 7.1,
+        "y": 2
+      },
+      "target": {
+        "x": 7.1,
+        "y": 2
+      }
+    }
+  ],
+  "holdout_residuals": [
+    {
+      "id": "qa.point.4",
+      "sector": "CENTRE",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 6,
+        "y": 2.9
+      },
+      "target": {
+        "x": 6,
+        "y": 2.9
+      }
+    },
+    {
+      "id": "qa.point.5",
+      "sector": "SOUTH",
+      "dx": 0,
+      "dy": 0,
+      "error": 0,
+      "predicted": {
+        "x": 6.4,
+        "y": 2.3
+      },
+      "target": {
+        "x": 6.4,
+        "y": 2.3
+      }
+    }
+  ],
+  "scale_check": {
+    "evaluated": true,
+    "expected_meters_per_pixel": 0.02,
+    "actual_meters_per_pixel": 0.02,
+    "relative_drift": 0,
+    "maximum_drift": 0.01
+  },
+  "gates": {
+    "holdout_rms": true,
+    "normalized_rms": true,
+    "worst_holdout": true,
+    "independent_scale": true
+  },
+  "passed": true,
+  "generated_at": "2026-09-17T23:38:30.752Z",
+  "geometry_authority": "PLATE_LOCAL_METRIC_CANDIDATE_REQUIRES_MANUAL_REVIEW",
+  "canonical_geometry_mutated": false,
+  "result_sha256": "2b1afb371d5eb6e77caf867aabc05a4fef75e685412dd2c0d48dd10eeeacef13"
+}

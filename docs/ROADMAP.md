@@ -1,5 +1,9 @@
 # GIZA Roadmap — v0.10.7
 
+## v0.11.0 continuation
+
+The focused evidence workflow now has numerical and actual browser regressions plus a synthetic source-to-result path. Next archaeological work is acquisition of legitimate, independently controlled coffer/chamber material—not additional approximate monuments. Physical lid pose, assembly/site placement, source authentication and full 3-D surface authority remain unresolved. See `SOURCE_CAMPAIGN.md` for exact evidence gates and replay instructions.
+
 ## Current — v0.10.7 // FIRST-PLATE REGISTRATION + HOLDOUT GATE
 
 Freeze the first real registration test before source-byte fitting. The release separates plate-local metric authority from plateau geodesy and records byte-acquisition failures without promoting remote files into local custody.

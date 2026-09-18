@@ -1,9 +1,9 @@
 {
   "product": "GIZA",
   "codename": "REGISTRATION WORKBENCH",
-  "version": "0.10.12",
+  "version": "0.11.0",
   "model": "Khafre rev.0003",
-  "description": "Runnable local registration workbench with hash-verified immutable experiments, profile-specific gates, a residual viewer and adversarial regression tests. Existing 3-D explorer and atlas preserved.",
+  "description": "Evidence-governed spatial workstation with strict observations and quantities, canonical measurements, replayable saved investigations, independent optional loading and a scoped source-to-plan registration/review workflow. Existing explorer, atlas, Sphinx and Inscription Lab preserved; no archaeological placement is inferred.",
   "runtime": "React + Three.js + Vite",
   "truth_model": "provenance-gated",
   "media_model": "object-bound open media with attribution",
@@ -15,7 +15,7 @@
   "axes": "right-handed Z-up",
   "units": "m",
   "handoff": "checksum-custody/landmark-freeze evidence-governed",
-  "phase": "REGISTRATION_WORKBENCH_REPAIR",
+  "phase": "EVIDENCE_WORKFLOW_EVOLUTION",
   "subsystems": [
     "NEXUS",
     "FORGE",

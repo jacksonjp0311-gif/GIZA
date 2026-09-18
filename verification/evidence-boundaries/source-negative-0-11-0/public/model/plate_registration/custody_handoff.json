@@ -1,0 +1,11 @@
+{
+  "accepted_candidate_id": "qa.khafre.plan.negative",
+  "local_custody": {
+    "path": "assets/source.pdf",
+    "sha256": "322325232a3ca088fbcc16039258717b7ecb9bd81acd9907da42c747651d3b27",
+    "plate_vi_render_path": "assets/render.png",
+    "plate_vi_render_sha256": "aaa64b6a1f0d0c973867e86e764debb90944489ca01ba125deaaa4271b4a9622",
+    "render_source_sha256": "322325232a3ca088fbcc16039258717b7ecb9bd81acd9907da42c747651d3b27",
+    "visual_confirmation": true
+  }
+}

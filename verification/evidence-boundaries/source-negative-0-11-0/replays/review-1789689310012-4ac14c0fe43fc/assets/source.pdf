@@ -1,0 +1,40 @@
+%PDF-1.4
+% SYNTHETIC SOFTWARE QA ONLY
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 128 128] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 168 >>
+stream
+0 0 0 rg
+8 116 4 4 re f
+108 106 4 4 re f
+18 16 4 4 re f
+103 26 4 4 re f
+48 71 4 4 re f
+68 41 4 4 re f
+BT /F1 4 Tf 3 3 Td (SYNTHETIC SOFTWARE QA - NOT ARCHAEOLOGY) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000038 00000 n 
+0000000087 00000 n 
+0000000144 00000 n 
+0000000270 00000 n 
+0000000489 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+559
+%%EOF

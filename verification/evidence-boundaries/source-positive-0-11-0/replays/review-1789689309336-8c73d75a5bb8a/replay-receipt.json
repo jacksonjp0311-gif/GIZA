@@ -1,0 +1,14 @@
+{
+  "schema": "giza.campaign-replay.v1",
+  "packetSha256": "6f3f789961da3d47da227b17a4e46c9206a141294702c7b3291f6744b34c03e6",
+  "resultSha256": "766549a5a8ff74d35b2c052b622d6eca3a8c29a9ecf44965b1b2a47af730bd7f",
+  "reproduced": true,
+  "claim": {
+    "classification": "SYNTHETIC_SOFTWARE_QA",
+    "dimension": "PLAN_2D_ONLY",
+    "targetFrame": "frame.qa.coffer.plan.2d",
+    "physical3DPlacement": "UNRESOLVED",
+    "geometryAuthority": "NONE_PENDING_SCOPED_REVIEW"
+  },
+  "createdAt": "2026-09-17T23:55:09.570Z"
+}

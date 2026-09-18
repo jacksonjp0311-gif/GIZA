@@ -33,8 +33,14 @@ test('actual pointer cut picking saves computed surfaces in canonical coordinate
     await page.getByRole('button',{name:'Clear measurement',exact:true}).click();await page.mouse.click(box.x+box.width*x,box.y+box.height*y);
     if(await page.getByText(/Computed section surface/).count()){await page.mouse.click(box.x+box.width*x+2,box.y+box.height*y);if(await page.getByText(/2 picked points retain/).count()){found=true;break outer;}}
   }
-  expect(found,'Actual browser ray must reach an analytic section cap').toBe(true);await page.getByRole('button',{name:'Investigate',exact:true}).click();const study=await exported(page);
+  expect(found,'Actual browser ray must reach an analytic section cap').toBe(true);await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Save investigation',exact:true}).click();await expect(page.getByText('Saved with original geometry, canonical points and reproducible result.',{exact:true})).toBeVisible();const study=await exported(page,'Export saved record');
   expect(study.payload.draft.points).toHaveLength(2);for(const point of study.payload.draft.points){expect(point.origin.kind).toBe('COMPUTED_SECTION');expect(point.position[2]).toBeCloseTo(-.3,5);}expect(study.payload.result.status).toBe('KNOWN');
+});
+test('authority-hidden geometry is absent from actual Fit-visible camera bounds',async({page})=>{
+  await openAssembly(page);await measureLid(page);await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();
+  await page.getByLabel('RECONSTRUCTED reality layer',{exact:true}).uncheck();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();await page.getByRole('button',{name:'Evidence',exact:true}).click();await expect(page.getByText(/This authority layer is hidden/)).toBeVisible();
+  await page.getByRole('button',{name:'Investigate',exact:true}).click();const study=await exported(page),views=study.payload.presentation.bookmarks,body=study.payload.assemblySnapshot.transforms.find((t:{id:string})=>t.id==='transform.coffer.assembly');
+  expect(views[0].target[0]).not.toBeCloseTo(views[1].target[0],5);expect(views[1].target[0]).toBeCloseTo(body.matrix[3],5);expect(study.payload.result.status).toBe('KNOWN');expect(study.payload.presentation.layers.RECONSTRUCTED).toBe(false);
 });
 for(const size of [{width:1280,height:800},{width:390,height:844},{width:844,height:390}])test(`model-first layout and keyboard ${size.width}x${size.height}`,async({page})=>{
   await page.setViewportSize(size);await openAssembly(page);const box=await page.locator('[data-evidence-workbench] canvas').boundingBox();expect(box!.height).toBeGreaterThan(150);expect(box!.width).toBeGreaterThan(200);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);

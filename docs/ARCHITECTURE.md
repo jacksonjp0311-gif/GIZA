@@ -1,5 +1,9 @@
 # GIZA Architecture — v0.10.6 SOURCE-BYTE REGISTRATION + METRIC VIEW LAB
 
+## v0.11.0 additive evolution
+
+See [evidence boundaries](EVIDENCE_BOUNDARY_EVOLUTION.md) and [scoped source campaigns](SOURCE_CAMPAIGN.md). Shared observation validation now spans runtime/assembly/graph/receipt boundaries; computation fingerprints differ from full archival hashes; saved studies restore original geometry; optional loading is independent of core model entry. Existing specialized workspaces and the shared registration engine are retained. The historical architecture below remains documented rather than rewritten.
+
 v0.10.6 inserts a hard custody/registration boundary between PLAN CONCORDANCE / ROOM GRAPH and any future metric viewshed claim.
 
 ```text

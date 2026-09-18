@@ -76,6 +76,8 @@ The residual display auto-fits supplied points, uses image-style Y-down display 
 
 ## Runtime and verification
 
+Release 0.11.0 adds shared strict observation/quantity contracts, purpose-specific evidence queries, separate scalar/surface/placement authority, dependency-bound receipt v2, saved-investigation v2 with original-snapshot restore, and scoped campaign v1. Historical v1 records retain their original interpretation; missing metadata is not backfilled. See `EVIDENCE_BOUNDARY_EVOLUTION.md` and `SOURCE_CAMPAIGN.md` for executable contracts, compatibility rules and the fresh-user demonstration. Core startup now returns after the five required datasets; 45 optional datasets load independently with explicit status. Browser tests supplement rather than rename the historical visual contract checks.
+
 All 50 startup dataset shapes have runtime contracts. Required geometry fails closed; optional unavailable/malformed data is quarantined with visible diagnostics and affected consumers gated. Sphinx, inscriptions, component detail, atlas and the new assembly are optional lazy workspaces with recoverable boundaries. WebGL context interruption preserves evidence/UI state and offers restoration/recreation where supported. Actual GPU driver recovery is browser-dependent.
 
 Run `npm run check`, `npm run build` and `npm start -- --check`. New commands: `npm run test:evidence-assembly`, `npm run test:runtime`, `npm run validate:evidence-assembly`. To append an immutable targeted computation receipt: `node scripts/evidence/validate.mjs --output public/model/evidence_assembly/<new-unique-name>.json`. Exclusive creation refuses overwrites. This is not a replacement for the complete validation suite.

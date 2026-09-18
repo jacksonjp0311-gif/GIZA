@@ -1,6 +1,18 @@
-# GIZA NEXUS 0.10.12 — Software validation
+# GIZA NEXUS 0.11.0 — Software validation
 
-## Evidence-boundary follow-up (in progress)
+## Evidence-boundary release — 2026-09-17
+
+- Final full pipeline: `node scripts/evidence/checkpoint.mjs release-0-11-0-full-b` passed: **179 tests**, strict TypeScript, inherited validators, semantic evidence replay and native workbench build. Final browser checkpoint `release-0-11-0-browser-b` passed **10 actual Chromium tests**, including production compilation. Earlier failures and generated benchmark outputs remain archived; historical benchmark bytes were restored after timestamp-only comparison.
+- Browser coverage includes entry/exit, isolated fitting and authority visibility, measurement invariance, actual section-cap pointer picking through save/export, historical input changes, review-draft detours, export/reload/restore, optional slow/missing/malformed atlas, keyboard routing and 1280×800, 390×844, 844×390 layouts. These tests are separate from inherited source-pattern/visual guards. CI is configured; remote CI execution and other browser engines were not observed here.
+- `GIZA_EXPLORER_PORT=4183 GIZA_PORT=4184 npm start -- --smoke` passed on Windows/Node v24.18.0: compiled 691 modules, served both application and workbench, then stopped its own services. Existing user services were not terminated. The legacy registration engine retains its historical 0.10.12 identity; product release is 0.11.0. Vite's large-core warning remains visible.
+- Same-machine Chromium/SwiftShader production-preview samples are preserved in `verification/evidence-boundaries/performance-*.json`. Baseline usable-model times: 983.9/474.5/468.6 ms; final: 1099.2/492.9/620.2 ms. With a five-second optional atlas delay: **5761.8 → 679.8 ms**. This establishes removal of that startup barrier, not a general startup speedup. Final RAF p95: 67.4/82.8/64.1/53.0 ms versus baseline 108.7/61.1/57.1/58.8 ms. RAF scheduling is not GPU timing; heap values are Chromium estimates. Final sampling overlapped launch compilation, so no controlled frame-rate improvement is claimed.
+- Scoped campaign positive and failed-holdout negative packets are retained under `source-positive-0-11-0` and `source-negative-0-11-0`. Both are explicitly **synthetic software QA**, not archaeological evidence. The positive path exercises bytes, freeze, shared-engine fit, replay and reviewed 2-D sidecar revision; browser coverage additionally exercises rollback. Failed holdouts and denied promotion are preserved.
+- Real Khafre coffer/chamber campaign: **BLOCKED**, before fitting. Missing verified relevant source/render bytes and permitted use, independently attributable control/scale with uncertainty, identified correspondences and local datum/axes, and frozen untouched holdouts. Local dimensions remain usable; lid placement and assembly-to-site transforms remain unresolved. See `docs/SOURCE_CAMPAIGN.md` for reproducible workflow and exact limitations.
+- Executable contracts use assembly v1, quantity v1, receipt v2, saved-investigation v2 and scoped-campaign v1. Historical receipt v1 and saved-investigation v1 interpretation is retained; absent historical metadata is not fabricated. Browser-local persistence is not archival or atomic multi-user storage. Operator attribution is not authenticated scholarly review.
+
+The sections below are preserved historical validation records, not current release claims.
+
+## Historical evidence-boundary checkpoint
 
 See [checkpoint ledger](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Full check `increment-1-20260917-b` passed 163 tests; preceding failed run is preserved. Subsequent work requires fresh validation. These numerical/contract checks are not browser or performance certification.
 

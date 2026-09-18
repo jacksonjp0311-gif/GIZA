@@ -16,6 +16,7 @@ playwright-report/
 credentials.json
 .DS_Store
 .vault-cache/
+.giza-research/
 public/vault/raw/*
 !public/vault/raw/README.md
 !public/vault/raw/.gitkeep

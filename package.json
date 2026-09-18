@@ -1,15 +1,17 @@
 {
   "name": "giza-nexus-registration-workbench",
   "private": true,
-  "version": "0.10.12",
+  "version": "0.11.0",
   "type": "module",
   "scripts": {
     "start": "node scripts/start.mjs",
     "test:usability": "node --test tests/usability.test.mjs",
     "test:sphinx": "node --test tests/sphinx.test.mjs",
     "test:epigraphy": "node --test tests/epigraphy.test.mjs tests/epigraphy-storage.test.mjs tests/epigraphy-navigation.test.mjs",
-    "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs",
+    "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs tests/evidence-campaign.test.mjs",
     "test:browser": "playwright test",
+    "evidence:campaign": "node scripts/evidence/campaign-cli.mjs",
+    "test:campaign": "node --test tests/evidence-campaign.test.mjs",
     "test:runtime": "node --test tests/runtime-resilience.test.mjs",
     "validate:evidence-assembly": "node scripts/evidence/validate.mjs",
     "dev": "vite --host 127.0.0.1",
@@ -140,5 +142,5 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "gizaVersion": "0.10.12"
+  "gizaVersion": "0.11.0"
 }

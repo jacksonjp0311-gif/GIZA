@@ -2,7 +2,7 @@ import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import type {ModelBundle} from '../lib/model';
 import {GIZA_BUILD,GIZA_DISPLAY_VERSION} from '../version';
 import {ASSEMBLY_FRAME,BODY_FRAME,LID_FRAME,buildKhafreAssembly} from './assembly';
-import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,RealityAuthority,Vec3} from './types';
+import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,RealityAuthority,SectionPlane,Vec3} from './types';
 import {buildEvidenceGraph,canonicalJson} from './graph';
 import {generateInvestigationCandidates} from './intelligence';
 import {appendReceipt,graphWithReceipt,loadReceiptJournal,saveReceiptJournal,type EvidenceReceipt,type ReceiptContext} from './receipts';
@@ -33,6 +33,7 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
   const [camera,setCamera]=useState<CameraCommand>({revision:0,mode:initialPart.includes('chamber')?'ROOM':'OBJECT'}),[bookmarks,setBookmarks]=useState<CameraBookmark[]>([]);
   const [points,setPoints]=useState<CanonicalPoint[]>([]),[pickMode,setPickMode]=useState<'DISTANCE'|'ANGLE'>('DISTANCE'),[snap,setSnap]=useState(true),[measureFrame,setMeasureFrame]=useState(initialPart.includes('lid')?LID_FRAME:BODY_FRAME);
   const [section,setSection]=useState<SectionState>({enabled:false,axis:'Z',offset:-.3,azimuth:35,inclination:30,frameId:BODY_FRAME,caps:true});
+  const [restoredPlane,setRestoredPlane]=useState<SectionPlane|null|undefined>(undefined);
   const [candidateId,setCandidateId]=useState<string|null>(null),[status,setStatus]=useState('Select a face to inspect its evidence.'),[journal,setJournal]=useState<readonly EvidenceReceipt[]>([]),[journalMessage,setJournalMessage]=useState('Loading research journal…'),[preservedRaw,setPreservedRaw]=useState<string|null>(null);
   const baseline=useRef<string|null|undefined>(undefined),writing=useRef(false);
   const cameraReader=useRef<()=>CameraBookmark|null>(()=>null);
@@ -57,8 +58,8 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
   const onBookmark=useCallback((b:CameraBookmark)=>{setBookmarks(v=>[...v.slice(-11),validateBookmark({...b,name:`Bookmark ${v.length+1}`})]);setStatus('Camera bookmark captured for this session; physical geometry unchanged.');},[]);
   useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.ctrlKey||e.metaKey||e.altKey||/INPUT|TEXTAREA|SELECT|BUTTON/.test((e.target as HTMLElement)?.tagName))return;if(e.key==='Escape'){setPanel(null);return;}if(e.key.toLowerCase()==='f'){e.preventDefault();command(room?'ROOM':'OBJECT');}if(e.key.toLowerCase()==='m')setPanel('MEASURE');if(e.key.toLowerCase()==='c')setPanel('SECTION');if(e.key.toLowerCase()==='e')setExplode(v=>v?0:1.5);};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key);},[room]);
   const legacy=useMemo<LegacyEnvelope|null>(()=>{const p=model.parts.find(p=>p.id==='part.sarcophagus.body'),adapter=assembly.transforms.find(t=>t.id==='comparison.assembly.legacy-floor');if(!p||p.spatial.primitive.kind!=='box'||!adapter?.matrix)return null;return {position:transformPoint(invertRigid(adapter.matrix),p.spatial.origin_m),size:[p.spatial.primitive.sx,p.spatial.primitive.sy,p.spatial.primitive.sz],rotation:p.spatial.rpy_rad};},[model,assembly]);
-  const plane=useMemo(()=>sectionPlane(section),[section]);
-  const draft={selectedId,points,frameId:measureFrame,mode:pickMode,section:plane};
+  const plane=useMemo(()=>restoredPlane!==undefined?restoredPlane:sectionPlane(section),[section,restoredPlane]);
+  const draft={points,frameId:measureFrame,mode:pickMode,section:plane};
   const signature=canonicalJson(draft),[savedSignature,setSavedSignature]=useState('');
   const dirty=reviewDirty||(points.length>0&&signature!==savedSignature);
   useEffect(()=>{const warn=(e:BeforeUnloadEvent)=>{if(dirty){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',warn);return()=>window.removeEventListener('beforeunload',warn);},[dirty]);
@@ -66,9 +67,10 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
   const onClose=()=>guardLeave(onCloseRequested),onLegacy=()=>guardLeave(onLegacyRequested);
   const restore=(record:SavedInvestigation)=>guardLeave(()=>{
     const p=record.payload,d=p.draft,s=d.section,n=s?Math.hypot(...s.normal):1;
-    setArchivedAssembly(p.assemblySnapshot);setSelectedId(d.selectedId);setPoints(d.points);setMeasureFrame(d.frameId);setPickMode(d.mode);
+    const {selectedId:_legacySelection,...physicalDraft}=d;
+    setArchivedAssembly(p.assemblySnapshot);setSelectedId(p.presentation.selectedId??d.selectedId??d.points[0].featureId!);setPoints(d.points);setMeasureFrame(d.frameId);setPickMode(d.mode);
     setSection(s?{enabled:true,caps:true,axis:'OBLIQUE',offset:s.offset/n,frameId:s.frameId,azimuth:Math.atan2(s.normal[1],s.normal[0])*180/Math.PI,inclination:Math.asin(s.normal[2]/n)*180/Math.PI}:{...section,enabled:false});
-    setRoom(p.presentation.room);setIsolated(p.presentation.isolated);setLayers(p.presentation.layers);setExplode(p.presentation.explode);setBookmarks(p.presentation.bookmarks);setSavedSignature(canonicalJson(d));setStatus('ARCHIVED SNAPSHOT — measurements use the saved geometry, not current inputs.');command('OBJECT');
+    setRestoredPlane(s);setRoom(p.presentation.room);setIsolated(p.presentation.isolated);setLayers(p.presentation.layers);setExplode(p.presentation.explode);setBookmarks(p.presentation.bookmarks);setSavedSignature(canonicalJson(physicalDraft));setStatus('ARCHIVED SNAPSHOT — measurements use the saved geometry, not current inputs.');command('OBJECT');
     if(p.presentation.camera)command('BOOKMARK',p.presentation.camera);
   });
   const names:Record<Panel,string>={EVIDENCE:'Feature evidence',MEASURE:'Spatial measurement',SECTION:'Section laboratory',COMPARE:'Source / model comparison',INVESTIGATE:'Investigation workspace',VIEWS:'View & assembly'};
@@ -80,7 +82,7 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
     </section><aside className="evidencePanel" hidden={!panel} aria-label={panel?names[panel]:'Contextual tools'}><header><h3>{panel?names[panel]:''}</h3><button aria-label="Close contextual panel" onClick={()=>setPanel(null)}>×</button></header>
       {panel==='EVIDENCE'&&<FeaturePanel assembly={assembly} graph={graph} feature={selected} onSelect={chooseFeature} layers={layers} model={model}/>}
       {panel==='MEASURE'&&<><label>Feature for precise anchors<select aria-label="Measurement feature" value={selected.id} onChange={e=>chooseFeature(e.target.value)}>{assembly.features.filter(f=>f.geometry.kind!=='unknown').map(f=><option key={f.id} value={f.id}>{f.label}</option>)}</select></label><MeasurementTools assembly={assembly} feature={selected} points={points} onPoints={setPoints} mode={pickMode} onMode={setPickMode} frame={measureFrame} onFrame={setMeasureFrame} snap={snap} onSnap={setSnap}/></>}
-      {panel==='SECTION'&&<SectionTools assembly={assembly} state={section} onChange={setSection}/>}
+      {panel==='SECTION'&&<SectionTools assembly={assembly} state={section} onChange={value=>{setRestoredPlane(undefined);setSection(value);}}/>}
       {panel==='COMPARE'&&<ComparisonPanel assembly={assembly} overlay={comparison} onOverlay={v=>{setComparison(v);if(v)setLayers(s=>({...s,HYPOTHESIS:true}));}}/>}
       <div hidden={panel!=='INVESTIGATE'}>{preservedRaw!==null&&<button onClick={()=>downloadJson('GIZA-preserved-unreadable-journal.txt',preservedRaw)}>Export preserved stored bytes</button>}<InvestigationPanel assembly={assembly} graph={baseGraph} candidates={candidates} selected={candidateId} feature={selected} onCandidate={setCandidateId} onLocate={locate} context={receiptContext} journal={journal} onAppend={addReceipt} journalMessage={journalMessage} onDraftChange={setReviewDirty}/></div>
       {panel==='VIEWS'&&<>
@@ -90,7 +92,7 @@ export default function AssemblyWorkbench({model,initialPart,onClose:onCloseRequ
         <h4>Explicit coordinate hierarchy</h4>{assembly.transforms.map(t=><details key={t.id}><summary>{t.status} · {t.scope==='COMPARISON_ONLY'?'COMPARISON ONLY':t.id.replace('transform.','')}</summary><code>{t.from} → {t.to}</code><p>{t.derivation}</p><small>Uncertainty UNKNOWN</small></details>)}
         <h4>Machine-readable exports</h4><div className="actions"><button onClick={()=>downloadJson('GIZA-khafre-evidence-assembly.json',exportCanonicalAssembly(assembly))}>Export physical contract</button><button onClick={()=>downloadJson('GIZA-spatial-evidence-graph.json',graph)}>Export evidence graph</button></div><p>Includes units, axes, datums, unknowns and evidence. No selection, camera or inspection transforms enter the physical export.</p><button onClick={onLegacy}>Open preserved component viewer</button>
       </>}
-      <div hidden={panel!=='INVESTIGATE'}>{archivedAssembly&&<p role="status">ARCHIVED INPUTS · <button onClick={()=>guardLeave(()=>{setArchivedAssembly(null);setPoints([]);setStatus('Returned to current inputs. Historical records remain unchanged.');})}>Return to current inputs</button></p>}<SavedInvestigations assembly={assembly} current={currentAssembly} draft={draft} presentation={{purpose:'PRESENTATION_ONLY',room,isolated,layers,explode,bookmarks}} cameraReader={()=>cameraReader.current()} receipts={journal} onRestore={restore} onSaved={()=>setSavedSignature(signature)}/></div>
+      <div hidden={panel!=='INVESTIGATE'}>{archivedAssembly&&<p role="status">ARCHIVED INPUTS · <button onClick={()=>guardLeave(()=>{setArchivedAssembly(null);setPoints([]);setStatus('Returned to current inputs. Historical records remain unchanged.');})}>Return to current inputs</button></p>}<SavedInvestigations assembly={assembly} current={currentAssembly} draft={draft} presentation={{purpose:'PRESENTATION_ONLY',selectedId,room,isolated,layers,explode,bookmarks}} cameraReader={()=>cameraReader.current()} receipts={journal} onRestore={restore} onSaved={()=>setSavedSignature(signature)}/></div>
     </aside></div>
     <footer className="evidenceTruth"><strong>RECONSTRUCTION ≠ OBSERVATION</strong><span>Source-reported dimensions · idealized surfaces · lid placement, survey uncertainty and site transform UNKNOWN. No new metric registration or archaeological finding is asserted.</span></footer>
   </div>;

@@ -1,3 +1,12 @@
+# v0.11.0 — evidence boundaries and durable spatial research
+
+- Explicit status/authority policy, shared observation validation, normalized quantities, separate geometry authority and purpose-specific evidence queries.
+- Input-bound v2 computation receipts and current/historical/unverifiable review states; original v1 receipts retained without invented fingerprints.
+- Shared visible-geometry fitting, analytic section picking, saved investigation v2 with verified restore, original snapshots and presentation-state separation.
+- Core-first model entry, independently loading optional data, scoped diagnostics and real production-browser CI coverage.
+- Scoped source acquisition/freeze/shared-engine/replay/review/rollback workflow. Synthetic positive and negative fixtures are software-only; the real coffer/chamber campaign remains BLOCKED.
+- Historical archaeological files, failed results and release seals are preserved. No site transform, physical lid placement or observed surface was manufactured.
+
 # v0.10.12 — REGISTRATION WORKBENCH
 
 ## Unreleased evidence-boundary evolution

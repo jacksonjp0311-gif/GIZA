@@ -1,0 +1,147 @@
+{
+  "payload": {
+    "schema_version": "2.0.0",
+    "campaign_id": "qa.khafre.plan",
+    "candidate_id": "qa.khafre.plan",
+    "target_frame": "PLATE_LOCAL_METERS",
+    "pixel_axis": "Y_DOWN",
+    "source_sha256": "322325232a3ca088fbcc16039258717b7ecb9bd81acd9907da42c747651d3b27",
+    "render_sha256": "aaa64b6a1f0d0c973867e86e764debb90944489ca01ba125deaaa4271b4a9622",
+    "threshold_profile_id": "threshold.historical_plan_similarity.v1",
+    "profile_snapshot": {
+      "id": "threshold.historical_plan_similarity.v1",
+      "use_for": [
+        "reg.petrie.plate_vi",
+        "reg.perring.plate_i"
+      ],
+      "fit_model": "SIMILARITY_2D",
+      "minimum_controls": 4,
+      "minimum_holdouts": 2,
+      "control_policy": "Controls must span both axes and the usable plate footprint; no control may be moved after holdout evaluation.",
+      "holdout_policy": "Holdouts are frozen before solving and excluded from fit.",
+      "acceptance": {
+        "normalized_holdout_rms_max": 0.0075,
+        "normalized_holdout_max_max": 0.015,
+        "scale_drift_fraction_max": 0.01,
+        "absolute_holdout_rms_m_max": 0.3
+      },
+      "normalizer": "target-frame diagonal across frozen control+holdout extent",
+      "outlier_policy": "NO_AUTOMATIC_OUTLIER_REMOVAL",
+      "model_escalation": "Affine/projective escalation requires separate preregistration and documented scan distortion; failure of similarity fit is not permission to overfit."
+    },
+    "scale_expectation": {
+      "meters_per_pixel": 0.02,
+      "source_id": "qa.control",
+      "locator": "Generated independent truth table; software fixture only",
+      "independent_of_fit": true
+    },
+    "controls": [
+      {
+        "id": "qa.point.0",
+        "sector": "NW",
+        "source": {
+          "x": 10,
+          "y": 10
+        },
+        "target": {
+          "x": 5.2,
+          "y": 3.8
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      },
+      {
+        "id": "qa.point.1",
+        "sector": "NE",
+        "source": {
+          "x": 110,
+          "y": 20
+        },
+        "target": {
+          "x": 7.2,
+          "y": 3.6
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      },
+      {
+        "id": "qa.point.2",
+        "sector": "SW",
+        "source": {
+          "x": 20,
+          "y": 110
+        },
+        "target": {
+          "x": 5.4,
+          "y": 1.7999999999999998
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      },
+      {
+        "id": "qa.point.3",
+        "sector": "SE",
+        "source": {
+          "x": 105,
+          "y": 100
+        },
+        "target": {
+          "x": 7.1,
+          "y": 2
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      }
+    ],
+    "holdouts": [
+      {
+        "id": "qa.point.4",
+        "sector": "CENTRE",
+        "source": {
+          "x": 50,
+          "y": 55
+        },
+        "target": {
+          "x": 6,
+          "y": 2.9
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      },
+      {
+        "id": "qa.point.5",
+        "sector": "SOUTH",
+        "source": {
+          "x": 70,
+          "y": 85
+        },
+        "target": {
+          "x": 6.4,
+          "y": 2.3
+        },
+        "target_source": {
+          "source_id": "qa.control",
+          "locator": "Generated independent truth table; software fixture only",
+          "independent_of_fit": true
+        }
+      }
+    ]
+  },
+  "sha256": "4a39bd693e7757b73105168184214753b13a31359e7f7f6a745ce5f86e3b0a7b",
+  "frozen_at": "2026-09-17T23:55:09.274Z"
+}

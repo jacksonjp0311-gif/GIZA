@@ -1,0 +1,15 @@
+import {test,expect} from '@playwright/test';
+import {campaignFixture} from '../../scripts/evidence/campaign-fixture.mjs';
+test('actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback',async({page})=>{
+  const id=`qa.browser.${Date.now()}`,fixture=campaignFixture(id);
+  await page.goto('http://127.0.0.1:4198/workbench/campaign.html');await page.getByLabel('Campaign ID').fill(id);
+  await page.locator('#packet').setInputFiles({name:'SYNTHETIC-acquisition.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
+  await page.getByRole('button',{name:'Acquire new campaign',exact:true}).click();await expect(page.locator('#status')).toContainText('acquire completed');
+  await page.locator('#landmarks').setInputFiles({name:'SYNTHETIC-frozen-landmarks.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture.input))});
+  await page.getByRole('button',{name:'Freeze identified inputs',exact:true}).click();await expect(page.locator('#status')).toContainText('freeze completed');
+  await page.getByRole('button',{name:'Run shared engine',exact:true}).click();await expect(page.locator('#result')).toContainText('"passed": true');await expect(page.locator('#result')).toContainText('SYNTHETIC_SOFTWARE_QA');
+  await page.getByLabel('Reviewer',{exact:true}).fill('Browser synthetic QA');await page.getByLabel('Interpretation / limitations').fill('Software fixture only, no archaeological interpretation or promotion.');await page.locator('#scope').check();
+  await page.getByRole('button',{name:'Replay and create reviewed revision',exact:true}).click();await expect(page.locator('#result')).toContainText('Adds a reviewed source-pixel to local-plan relationship');
+  const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export source-to-result packet',exact:true}).click();expect((await download).suggestedFilename()).toBe('GIZA-source-campaign-packet.json');
+  await page.getByRole('button',{name:'Record rollback to base assembly',exact:true}).click();await expect(page.locator('#result')).toContainText('"restore": "BASE_ASSEMBLY"');
+});

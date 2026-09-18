@@ -45,6 +45,21 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='POST'){
       if(req.headers['x-giza-token']!==token)throw new GateError('TOKEN_REQUIRED');
       if(req.headers.origin&&!['http://127.0.0.1:'+port,'http://localhost:'+port,'http://127.0.0.1:4173','http://localhost:4173'].includes(req.headers.origin))throw new GateError('ORIGIN_NOT_ALLOWED');
+      if(url.pathname==='/api/evidence-campaign'){
+        const payload=JSON.parse((await body(req,100*1024*1024)).toString());
+        if(typeof payload.id!=='string'||!/^[a-z][a-z0-9.-]{2,100}$/.test(payload.id))throw new GateError('CAMPAIGN_ID_REQUIRED');
+        const api=await import('../evidence/campaign.mjs'),campaignRoot=inside(root,`.giza-research/campaigns/${payload.id}`);
+        let result;
+        if(payload.action==='acquire'){if(payload.input?.config?.id!==payload.id)throw new GateError('CAMPAIGN_ID_MISMATCH');result=await api.acquireCampaign(campaignRoot,payload.input);}
+        else if(payload.action==='freeze')result=api.freezeCampaign(campaignRoot,payload.input);
+        else if(payload.action==='fit')result=api.fitCampaign(campaignRoot);
+        else if(payload.action==='export')result=api.exportCampaign(campaignRoot);
+        else if(payload.action==='replay')result=await api.replayCampaign(campaignRoot,payload.input);
+        else if(payload.action==='review')result=await api.reviewCampaign(campaignRoot,payload.input);
+        else if(payload.action==='rollback')result=api.rollbackCampaign(campaignRoot,payload.input?.reason);
+        else throw new GateError('CAMPAIGN_ACTION_REQUIRED');
+        return send(res,200,result);
+      }
       if(url.pathname==='/api/import'){
         if(has(ROOTS.frozen)||has(ROOTS.result))throw new GateError('EXPERIMENT_ALREADY_FROZEN');
         const b=await body(req,64*1024*1024);if(b.subarray(0,5).toString()!=='%PDF-')throw new GateError('SOURCE_NOT_PDF');

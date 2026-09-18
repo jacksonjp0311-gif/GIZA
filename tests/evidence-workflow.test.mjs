@@ -46,6 +46,11 @@ test('checksum-valid false result or off-plane cap cannot pass restore',async()=
   const d=structuredClone(draft);d.points[0].origin={kind:'COMPUTED_SECTION',surfaceAuthority:'RECONSTRUCTED',section:{frameId:f.frameId,normal:[0,0,1],offset:100}};
   await assert.rejects(saveInvestigation('Bad cap',a,d,presentation,[]),/plane/);
 });
+test('presentation labels and active selection do not invalidate current measurement dependencies',async()=>{
+  const record=await saveInvestigation('Label QA',a,draft,presentation,[]),renamed=structuredClone(a);
+  renamed.features.find(g=>g.id===f.id).label='A different UI caption';renamed.frames.find(g=>g.id===f.frameId).label='Renamed frame label';
+  assert.equal(await investigationApplicability(record,renamed),'CURRENT');assert.equal(record.payload.draft.selectedId,undefined);assert.equal(record.payload.presentation.selectedId,f.id);
+});
 test('storage protects duplicates, stale tabs, corrupt bytes and quota failures',async()=>{
   let stored=null;const storage={getItem:()=>stored,setItem:(k,v)=>{stored=v;}};
   const record=await saveInvestigation('Storage QA',a,draft,presentation,[]);

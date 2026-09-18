@@ -1,0 +1,147 @@
+{
+  "payload": {
+    "input": {
+      "source_sha256": "322325232a3ca088fbcc16039258717b7ecb9bd81acd9907da42c747651d3b27",
+      "render_sha256": "aaa64b6a1f0d0c973867e86e764debb90944489ca01ba125deaaa4271b4a9622",
+      "threshold_profile_id": "threshold.historical_plan_similarity.v1",
+      "pixel_axis": "Y_DOWN",
+      "scale_expectation": {
+        "meters_per_pixel": 0.02,
+        "source_id": "qa.control",
+        "locator": "Generated independent truth table; software fixture only",
+        "independent_of_fit": true
+      },
+      "landmarks": [
+        {
+          "id": "qa.point.0",
+          "role": "CONTROL",
+          "source_px": {
+            "x": 10,
+            "y": 10
+          },
+          "target_m": {
+            "x": 5.2,
+            "y": 3.8
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        },
+        {
+          "id": "qa.point.1",
+          "role": "CONTROL",
+          "source_px": {
+            "x": 110,
+            "y": 20
+          },
+          "target_m": {
+            "x": 7.2,
+            "y": 3.6
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        },
+        {
+          "id": "qa.point.2",
+          "role": "CONTROL",
+          "source_px": {
+            "x": 20,
+            "y": 110
+          },
+          "target_m": {
+            "x": 5.4,
+            "y": 1.7999999999999998
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        },
+        {
+          "id": "qa.point.3",
+          "role": "CONTROL",
+          "source_px": {
+            "x": 105,
+            "y": 100
+          },
+          "target_m": {
+            "x": 7.1,
+            "y": 2
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        },
+        {
+          "id": "qa.point.4",
+          "role": "HOLDOUT",
+          "source_px": {
+            "x": 50,
+            "y": 55
+          },
+          "target_m": {
+            "x": 8,
+            "y": 2.9
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        },
+        {
+          "id": "qa.point.5",
+          "role": "HOLDOUT",
+          "source_px": {
+            "x": 70,
+            "y": 85
+          },
+          "target_m": {
+            "x": 6.4,
+            "y": 2.3
+          },
+          "target_source": {
+            "source_id": "qa.control",
+            "locator": "Generated independent truth table; software fixture only",
+            "independent_of_fit": true
+          },
+          "uncertainty": {
+            "status": "BOUND",
+            "value": 0.001
+          }
+        }
+      ]
+    },
+    "acquisitionSha256": "f390019fdaa28dbc0e149af68c1fbcf9503b4500aaafd0a4db75e2d434fd4a4d",
+    "freezeSha256": "d9c1c834c754723a0abbd01835f7679f3805fbdd4bc11711c07506e37a62685f"
+  },
+  "sha256": "10f692d7a0187f2b24d6ea010d8094b3cfa2378af32dafd2914bdbd266995032"
+}

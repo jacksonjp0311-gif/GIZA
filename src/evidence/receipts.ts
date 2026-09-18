@@ -1,5 +1,5 @@
 import { appendEvidenceNodes, canonicalJson, parseEvidenceGraph } from './graph';
-import type { JsonValue, SpatialEvidenceGraph } from './graph';
+import type { EvidenceEdge,JsonValue, SpatialEvidenceGraph } from './graph';
 import type { InvestigationCandidate } from './intelligence';
 import type { EvidenceFeature, RealityAuthority } from './types';
 import {dependencyFingerprint,EVALUATION_RULE} from './dependencies';
@@ -152,7 +152,7 @@ export function graphWithReceipt(graph: SpatialEvidenceGraph, receipt: EvidenceR
   if (graph.assemblyId !== receipt.payload.assemblyId) throw new Error('Receipt assembly mismatch');
   if (receipt.kind === 'PROMOTION' ? receipt.payload.data.authoritativeFrameId !== graph.authoritativeFrameId || !graph.nodes.some(n => n.id === receipt.payload.frameId && n.kind === 'FRAME') : receipt.payload.frameId !== graph.authoritativeFrameId) throw new Error('Receipt authoritative frame mismatch');
   const nodeId = `${receipt.kind.toLowerCase()}:${receipt.sha256}`;
-  const links = [{ from: graph.assemblyId, to: nodeId, relationship: 'HAS_RESEARCH_RECORD' }, { from: nodeId, to: receipt.id, relationship: 'SEALED_BY' }];
+  const links:EvidenceEdge[] = [{ from: graph.assemblyId, to: nodeId, relationship: 'HAS_RESEARCH_RECORD' }, { from: nodeId, to: receipt.id, relationship: 'SEALED_BY' }];
   const cited = receipt.kind === 'FINDING' ? receipt.payload.data.experimentReceiptId : null;
   if (typeof cited === 'string') { const prior = graph.nodes.find(n => n.id === cited && n.kind === 'RECEIPT'); if (!prior || prior.data.kind !== 'EXPERIMENT' || prior.data.sha256 !== receipt.payload.data.experimentSha256 || prior.data.candidateId !== receipt.payload.data.candidateId) throw new Error('Finding requires its matching experiment receipt in the graph'); links.push({ from: nodeId, to: cited, relationship: 'REVIEWS_EXPERIMENT' }); }
   // Index sealed records, do not recursively copy complete graph snapshots twice per experiment.

@@ -1,4 +1,10 @@
-# GIZA NEXUS v0.10.12 — Registration Workbench
+# GIZA NEXUS v0.11.0 — Registration Workbench
+
+## Reliable evidence workflows
+
+Select exact feature support separately from context; measure in a declared frame; preserve a replayable investigation with its original geometry, points and result; reopen historical inputs without silently rebasing them. New computations carry dependency fingerprints. Analytic section cuts are pickable, fitting uses visible geometry, and optional research data no longer blocks the initial model.
+
+The focused source campaign reuses the shared registration engine for acquisition, immutable controls/holdouts, replay and reviewed **2-D-only** revisions. Its synthetic positive path works; the real coffer/chamber campaign is explicitly BLOCKED on independent source/control requirements. See the [fresh-user demonstration and exact limits](docs/SOURCE_CAMPAIGN.md), [checkpoint ledger](docs/EVIDENCE_BOUNDARY_EVOLUTION.md), and [validation record](VALIDATION.md).
 
 ## Current repository status — 2026-09-17
 

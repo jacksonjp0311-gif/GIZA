@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "version": "0.10.11",
+  "profile_count": 2,
+  "freeze": "PREREGISTERED_BEFORE_FIRST_ARCHAEOLOGICAL_FIT",
+  "profiles": [
+    {
+      "id": "threshold.historical_plan_similarity.v1",
+      "use_for": [
+        "reg.petrie.plate_vi",
+        "reg.perring.plate_i"
+      ],
+      "fit_model": "SIMILARITY_2D",
+      "minimum_controls": 4,
+      "minimum_holdouts": 2,
+      "control_policy": "Controls must span both axes and the usable plate footprint; no control may be moved after holdout evaluation.",
+      "holdout_policy": "Holdouts are frozen before solving and excluded from fit.",
+      "acceptance": {
+        "normalized_holdout_rms_max": 0.0075,
+        "normalized_holdout_max_max": 0.015,
+        "scale_drift_fraction_max": 0.01,
+        "absolute_holdout_rms_m_max": 0.3
+      },
+      "normalizer": "target-frame diagonal across frozen control+holdout extent",
+      "outlier_policy": "NO_AUTOMATIC_OUTLIER_REMOVAL",
+      "model_escalation": "Affine/projective escalation requires separate preregistration and documented scan distortion; failure of similarity fit is not permission to overfit."
+    },
+    {
+      "id": "threshold.modern_1_100_similarity.v1",
+      "use_for": [
+        "reg.arce.vt100"
+      ],
+      "fit_model": "SIMILARITY_2D",
+      "minimum_controls": 6,
+      "minimum_holdouts": 3,
+      "control_policy": "Controls must be survey/architectural correspondences distributed across the temple footprint.",
+      "holdout_policy": "At least three holdouts spanning distinct plan sectors; excluded from fit.",
+      "acceptance": {
+        "normalized_holdout_rms_max": 0.003,
+        "normalized_holdout_max_max": 0.006,
+        "scale_drift_fraction_max": 0.005,
+        "absolute_holdout_rms_m_max": 0.12
+      },
+      "normalizer": "target-frame diagonal across frozen control+holdout extent",
+      "outlier_policy": "NO_AUTOMATIC_OUTLIER_REMOVAL",
+      "model_escalation": "No projective model without evidence that the published digital image itself is perspective-distorted."
+    }
+  ]
+}
