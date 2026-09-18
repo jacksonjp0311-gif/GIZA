@@ -1,0 +1,52 @@
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 9 tests using 1 worker
+
+  ✓  1 tests/browser/evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (13.5s)
+  ✓  2 tests/browser/evidence-workflow.spec.ts:33:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (8.7s)
+  ✓  3 tests/browser/evidence-workflow.spec.ts:46:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (4.8s)
+  ✓  4 tests/browser/evidence-workflow.spec.ts:52:91 › model-first layout and keyboard 1280x800 (3.1s)
+  ✘  5 tests/browser/evidence-workflow.spec.ts:52:91 › model-first layout and keyboard 390x844 (2.5s)
+  ✓  6 tests/browser/evidence-workflow.spec.ts:52:91 › model-first layout and keyboard 844x390 (3.2s)
+  ✓  7 tests/browser/evidence-workflow.spec.ts:56:53 › optional atlas slow does not block core or force workspace navigation (2.5s)
+  ✓  8 tests/browser/evidence-workflow.spec.ts:56:53 › optional atlas missing does not block core or force workspace navigation (2.8s)
+  ✓  9 tests/browser/evidence-workflow.spec.ts:56:53 › optional atlas malformed does not block core or force workspace navigation (2.8s)
+
+
+  1) tests/browser/evidence-workflow.spec.ts:52:91 › model-first layout and keyboard 390x844 ───────
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 150
+    Received:   150
+
+      51 | });
+      52 | for(const size of [{width:1280,height:800},{width:390,height:844},{width:844,height:390}])test(`model-first layout and keyboard ${size.width}x${size.height}`,async({page})=>{
+    > 53 |   await page.setViewportSize(size);await openAssembly(page);const box=await page.locator('[data-evidence-workbench] canvas').boundingBox();expect(box!.height).toBeGreaterThan(150);expect(box!.width).toBeGreaterThan(200);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+         |                                                                                                                                                                ^
+      54 |   await page.locator('[data-evidence-workbench]').click({position:{x:5,y:5}});await page.keyboard.press('m');await expect(page.getByLabel('Measurement frame')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByLabel('Measurement frame')).not.toBeVisible();
+      55 | });
+      56 | for(const failure of ['slow','missing','malformed'])test(`optional atlas ${failure} does not block core or force workspace navigation`,async({page})=>{
+        at /home/runner/work/GIZA/GIZA/tests/browser/evidence-workflow.spec.ts:53:160
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/evidence-workflow-model-first-layout-and-keyboard-390x844/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/evidence-workflow-model-first-layout-and-keyboard-390x844/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/evidence-workflow-model-first-layout-and-keyboard-390x844/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/evidence-workflow-model-first-layout-and-keyboard-390x844/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/evidence-workflow.spec.ts:52:91 › model-first layout and keyboard 390x844 ────────
+  8 passed (1.0m)

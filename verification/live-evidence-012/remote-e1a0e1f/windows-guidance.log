@@ -1,0 +1,63 @@
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 9 tests using 1 worker
+
+  x  1 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (1.2m)
+  ok 2 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 1280 (20.1s)
+  ok 3 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 390 (9.6s)
+  ok 4 tests\browser\tutorial.spec.ts:3:95 › tutorial real target, navigation, reflow and persistence 844 (9.0s)
+  ok 5 tests\browser\tutorial.spec.ts:27:1 › tutorial cutout tracks resize, keyboard click and chapter skipping (6.3s)
+  ok 6 tests\browser\tutorial.spec.ts:45:1 › tutorial respects global unsaved research and does not lose a draft (10.5s)
+  ok 7 tests\browser\tutorial.spec.ts:56:1 › reduced motion and high DPI tutorial do not mutate physical exports (30.4s)
+  ok 8 tests\browser\tutorial.spec.ts:70:1 › tutorial scrolls a real quick-view target into its spotlight (7.2s)
+  ok 9 tests\browser\tutorial.spec.ts:83:1 › unavailable optional workspace leaves tutorial recoverable (6.9s)
+
+
+  1) tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.', { exact: true })
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.', { exact: true }) with timeout 15000ms
+      - waiting for getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.', { exact: true })
+
+
+      18 |   await model.getByLabel('Local campaign ID').fill(id);
+      19 |   await model.getByRole('button',{name:'Replay & link scoped evidence',exact:true}).click();
+    > 20 |   await expect(model.getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.',{exact:true})).toBeVisible();
+         |                                                                                                                               ^
+      21 |   await expect(model.getByText(id+' · REVIEWED_SCOPED_RELATION',{exact:true})).toBeVisible();
+      22 |   await page.getByRole('button',{name:'Record rollback to base assembly',exact:true}).click();await expect(page.locator('#result')).toContainText('"restore": "BASE_ASSEMBLY"');
+      23 |   await model.getByRole('button',{name:'Replay & link scoped evidence',exact:true}).click();
+        at D:\a\GIZA\GIZA\tests\browser\source-campaign.spec.ts:20:127
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\source-campaign-actual-loc-ebe5f-evision-→-export-→-rollback\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\source-campaign-actual-loc-ebe5f-evision-→-export-→-rollback\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\source-campaign-actual-loc-ebe5f-evision-→-export-→-rollback\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\source-campaign-actual-loc-ebe5f-evision-→-export-→-rollback\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\source-campaign-actual-loc-ebe5f-evision-→-export-→-rollback\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback 
+  8 passed (3.2m)

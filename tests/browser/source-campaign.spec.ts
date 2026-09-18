@@ -1,6 +1,9 @@
 import {test,expect} from '@playwright/test';
 import {campaignFixture} from '../../scripts/evidence/campaign-fixture.mjs';
 test('actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback',async({page})=>{
+  // Remote Windows replay took 21.6 s in run 35377185849. Synchronize with
+  // the real endpoint's existing 60 s budget, then retain normal UI assertions.
+  test.setTimeout(120000);
   const id=`qa.browser.${Date.now()}`,fixture=campaignFixture(id);
   await page.goto('/workbench/campaign.html');await page.getByLabel('Campaign ID').fill(id);
   await page.locator('#packet').setInputFiles({name:'SYNTHETIC-acquisition.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
@@ -16,7 +19,9 @@ test('actual local workbench: synthetic acquisition → freeze → shared fit �
   await model.getByRole('button',{name:'Sarcophagus',exact:true}).click();
   await model.getByRole('button',{name:'Compare',exact:true}).click();
   await model.getByLabel('Local campaign ID').fill(id);
+  const liveReplay=model.waitForResponse(response=>response.url().endsWith('/api/evidence-campaign')&&response.request().postDataJSON()?.action==='live-relation',{timeout:60000});
   await model.getByRole('button',{name:'Replay & link scoped evidence',exact:true}).click();
+  expect((await liveReplay).status()).toBe(200);
   await expect(model.getByText('Shared-engine replay and scoped review linked. No canonical geometry changed.',{exact:true})).toBeVisible();
   await expect(model.getByText(id+' · REVIEWED_SCOPED_RELATION',{exact:true})).toBeVisible();
   await page.getByRole('button',{name:'Record rollback to base assembly',exact:true}).click();await expect(page.locator('#result')).toContainText('"restore": "BASE_ASSEMBLY"');

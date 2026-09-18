@@ -1,5 +1,29 @@
 # 0.12.0 live evidence + guidance — 2026-09-18
 
+## Follow-up remote checkpoint e1a0e1f
+
+Run 35377185849 completed both operating systems' release integrity, dependency,
+contract, compilation and startup-smoke jobs. Eight of ten browser groups passed.
+Ubuntu evidence failed because the portrait layout assertion sampled the canvas
+at its initial 150-pixel height before the first settled scene. Windows guidance
+failed because a real live-relation request took 21.6 seconds (HTTP 200), exceeding
+the test's 15-second UI assertion while replay was still busy. All eight tutorial
+tests in that Windows group passed. Public failure logs are preserved in
+verification/live-evidence-012/remote-e1a0e1f; full traces remain in remote artifacts.
+
+The follow-up test repairs wait for actual settled scene diagnostics before
+layout inspection, and wait for the actual live-relation response within its
+existing 60-second API budget before ordinary 15-second UI assertions. The
+source-to-result scenario has a 120-second aggregate budget. No geometry,
+threshold, authority gate, engine calculation, pointer event or assertion was
+bypassed. Three fresh-context repeats of each layout size passed locally (9/9).
+This checkpoint remains a failed remote run, not retrospectively a success.
+
+Follow-up local verification: npm run test:browser passed 31/31 (3.2 minutes);
+live-evidence-012-final-sync-contracts passed the complete check (201 tests,
+TypeScript and inherited validators). The production build executed as part
+of the actual browser server startup. No new performance claim is made.
+
 Base commit: 3074047ce8c39950b5d03814b1a40408f55c7739. The working tree
 included subsequent centered-camera, media, layer and drawer improvements;
 those were preserved. This section is a dated verification record, not a claim

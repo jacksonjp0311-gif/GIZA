@@ -1,0 +1,13 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "date": "2026-09-18",
+  "baseCommit": "e1a0e1f6e3ce71605eaff4b57d2ab4aaac6df02b",
+  "changes": ["wait for settled scene before layout assertion", "wait for actual live-relation response before UI assertion"],
+  "command": "npm run test:browser",
+  "environment": {"platform": "win32", "node": "24.18.0", "browser": "Chromium 153.0.8010.12", "renderer": "SwiftShader"},
+  "passed": 31,
+  "failed": 0,
+  "reportedDuration": "3.2m",
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "note": "Actual application interactions; no forced clicks, mocked picks or relaxed evidence gates."
+}
