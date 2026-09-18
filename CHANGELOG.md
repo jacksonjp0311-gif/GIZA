@@ -1,5 +1,18 @@
 # 0.11.1 — investigation reliability and contextual comparison
 
+## Atlas and spatial presentation follow-up — 2026-09-18 UTC
+
+- Expand Atlas to the workspace, reclaim obsolete header padding, enlarge navigation and text, and add zoom/pan, label decluttering and a complete text index.
+- Expose reversible explosion in Evidence Assembly and component views without inventing joints or changing physical measurements.
+- Add deterministic, animated spherical expansion of existing illustrative pyramid cells with automatic display framing and restoration; retain cell dimensions.
+- Route scene picks through the current committed research callback across DOM/R3F roots. Preserve original failed verification checkpoints and add real rendered-layout coverage.
+
+## Follow-up layer controls — 2026-09-18 UTC
+
+- Connect explicit subterranean enablement and Underground quick view to the HYPOTHESIS visibility gate, preserving off-by-default unverified geometry and independent authority hiding.
+- Make interior inspection respect overview filters; hide illustrative masonry with Exterior and selected preview dimensions with Measurement Overlays or hidden geometry.
+- Disable overview-only switches in separate detail/atlas views with an explicit return action. Restore pointer hit areas and keyboard focus to layer switches; remove decorative thumbnail text from quick-view accessible names.
+
 - Enforce imported graph support/authority/ownership semantics and shared point membership for boxes, segments, concave planar surfaces, points and analytic sections.
 - Harden unit inheritance, normalization overflow and uncertainty compatibility. Version comparison/measurement rules while preserving historical replay and original bytes.
 - Add deterministic contextual explanations, exact original/current dependency differences, linked reruns and read-only historical investigation inspection.

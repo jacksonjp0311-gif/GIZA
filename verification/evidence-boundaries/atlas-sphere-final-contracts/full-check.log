@@ -1,0 +1,511 @@
+
+> giza-nexus-registration-workbench@0.11.1 check
+> tsc --noEmit && npm run check:legacy && npm run test:repairs && npm run test:components && npm run test:usability && npm run test:sphinx && npm run test:epigraphy && npm run test:evidence-assembly && npm run test:runtime && npm run validate:evidence-assembly && npm run build:workbench
+
+
+> giza-nexus-registration-workbench@0.11.1 check:legacy
+> node scripts/validate-model.mjs && node scripts/validate-evidence.mjs && node scripts/validate-solvers.mjs && node scripts/validate-canon.mjs && node scripts/field/validate-field.mjs && node scripts/validate-ui-layout.mjs && node scripts/validate-visual-contract.mjs && node scripts/validate-frame.mjs && node scripts/simlab/validate-simlab.mjs && node scripts/simlab/validate-echo.mjs && node scripts/simlab/validate-strata.mjs && node scripts/observatory/validate-observatory.mjs && node scripts/observatory/validate-register.mjs && node scripts/media/validate-atlas-ingest.mjs && node scripts/registration/benchmark.mjs && node scripts/registration/validate-registration.mjs && node scripts/controlnet/benchmark.mjs && node scripts/controlnet/validate.mjs && node scripts/corpus/validate-corpus.mjs && node scripts/source_parser/validate.mjs && node scripts/action_graph/validate.mjs && node scripts/plan_parser/validate.mjs && node scripts/room_graph/validate.mjs && node scripts/plan_concordance/validate.mjs && node scripts/visibility_lab/validate.mjs && node scripts/source_bytes/validate.mjs && node scripts/metric_view/validate.mjs && node scripts/plate_registration/validate.mjs && node scripts/residual_field/validate.mjs && node scripts/intent/validate-intent.mjs && node scripts/maps/validate-maps.mjs && node scripts/vault/validate-vault.mjs && node scripts/validate-findings.mjs && node scripts/validate-continuity.mjs && node scripts/syntax-check.cjs
+
+GIZA v0.10.7 model validation
+parts=56 assemblies=9 measurements=127 media=13 stoneCells=10152
+PASS
+GIZA v0.10.7 evidence validation sources=73 items=12 maturityLevels=6 queue=4 quarantinedAssets=0
+PASS
+GIZA v0.10.7 solver validation solvers=7
+PASS
+GIZA v0.10.7 CANON validation
+sources=73 parts=56 rights=73 conflicts=7
+futureMeasurements=13 materialProperties=9 unverifiedParts=31
+PASS
+GIZA // FIELD validation
+parts=56 sources=73 photoNodes=6 photoEdges=5
+uncertaintyTargets=4 promotionTargets=6 acquisitionTargets=5
+photoClusters=3 mappedCandidates=0 terrainImports=0
+terrainActive=NONE unverifiedParts=31
+PASS
+GIZA v0.10.7 UI layout validation
+inspector=docked tabs=4x2 hero=conditional solverSwitch=3 findings=fixed-shell responsiveGuard=1020px
+PASS
+GIZA v0.10.7 visual contract
+baseline=1672x941 shell=MODEL_FIRST_APPROVED brand=GIZA_NEXUS nav=3 inspector=DOCKED_4x2
+PASS
+GIZA v0.10.7 // FRAME architecture validation
+App.tsx=14232 bytes GizaScene.tsx=5421 bytes modules=12
+PASS
+GIZA // SIMLAB validation
+gravity map points=961 elements=1672 peak=283.423 microGal
+controls shafts=251.958 terminals=31.746 microGal
+knownInteriorScreen=33.573 microGal sensitivityScenarios=27
+benchmark=PASS runs=6 null=no_void_density_contrast
+PASS
+GIZA // ECHO validation
+components=12 pressurePoints=385
+burialFundamental=12.123 Hz lower=16.426 Hz
+clusters=7 independentNullMean=3.825 constrainedNullMean=4.850
+benchmark=PASS designClaim=NOT_ESTABLISHED
+PASS
+STRATA stress648=16.522 MPa water648=6.355 MPa points=106
+PASS
+OBSERVATORY observations=129 publications=25 media=16 cross_domain=16 acquisition=24
+PASS
+REGISTER mechanicalSamples=5 physicalSamples=3 discrepancies=3 claims=2 plans=6 media=16
+PASS
+ATLAS media=16 collections=9 photoObs=13 uiPhotos=13
+PASS
+{
+  "benchmark_id": "benchmark.registration.planar_homography.0.9.8",
+  "kind": "SYNTHETIC_ANALYTIC_CONTROL",
+  "correspondence_count": 6,
+  "reprojection_rmse_px": 4.3453624276198343e-13,
+  "plane_rmse_m": 1.3259401376254866e-15,
+  "pass": true,
+  "created_at": "2026-09-18T02:34:09.084Z"
+}
+REGISTRATION LAB priors=14 controls=33 jobs=10 pairClusters=3 surveySources=6 benchmark=PASS
+PASS
+{
+  "pass": true,
+  "tests": [
+    {
+      "id": "exact_fit_rmse",
+      "value": 1.1632471704138598e-12,
+      "tolerance_px": 1e-7,
+      "pass": true
+    },
+    {
+      "id": "exact_holdout_rmse",
+      "value": 8.41205780201832e-13,
+      "tolerance_px": 0.000001,
+      "pass": true
+    },
+    {
+      "id": "noise_0.25px_fit_rmse",
+      "value": 0.07256135398647164,
+      "tolerance_px": 0.5,
+      "pass": true
+    },
+    {
+      "id": "noise_0.25px_holdout_rmse",
+      "value": 0.28418043071699745,
+      "tolerance_px": 1.5,
+      "pass": true
+    }
+  ]
+}
+CONTROL NET frames=4 constraints=7 points=6 real_jobs=10 yaw=-4.45 arcmin DLT=PASS
+PASS
+ARCHIVE HARVEST knowledge=42 timeline=17 monuments=9 claims=8 receipts=14 openMedia=7
+PASS
+SOURCE PARSER validation PASS records=26 raw_byte_verified=0 locators=BOUND
+ACTION GRAPH validation PASS nodes=14 edges=14 geometry_write=NONE ritual_script=NOT_CLAIMED
+PRIMARY PLAN PARSER validation PASS sources=13 extractions=34 raw_bytes=0 conflicts=3
+ROOM GRAPH validation PASS spaces=24 thresholds=21 geometry_write=NONE
+PLAN CONCORDANCE validation PASS facts=14 geometry_write=NONE
+VISIBILITY LAB validation PASS spaces=24 transitions=22 metric_rays=0 geometry_write=NONE
+SOURCE-BYTE REGISTRATION PASS candidates=4 receipts=4 attempts=4 raw_byte_verified=0
+METRIC VIEW LAB PASS readiness=4 registered_plans=0 metric_rays=0 plate_local_gate=READY
+PLATE REGISTRATION PASS threshold_profiles=2 synthetic=PASS raw=0 controls=0 holdouts=0 canonical_registered=0 metric_rays=0
+RESIDUAL FIELD PASS archaeological=BLOCKED_PENDING_FIT authority=NONE
+INTENT RECONSTRUCTION hypotheses=8 links=25 tests=5
+PASS
+GIZA v0.10.7 map validation maps=11 room_spaces=24 visibility_spaces=24 metric_targets=4 survey_points=6 manifest=7714939bae37
+registered_plans=0 metric_visibility_rays=0 geometry_write=NONE shell=LOCKED scroll_atlas=READY
+PASS
+PRIMARY SOURCE VAULT assets=14 snapshots=5 locks=2 localRaw=0
+cache=EMPTY_OR_PRIVATE_ONLY
+PASS
+findings=36 pattern_watch=5 research_priority=17
+PASS
+CONTINUITY PASS version=0.11.1; evidence artifact versions preserved; workbench present.
+PASS src/App.tsx
+PASS src/components/GizaScene.tsx
+PASS src/epigraphy/ArtifactOverview.tsx
+PASS src/epigraphy/InscriptionLab.tsx
+PASS src/epigraphy/InscriptionLauncher.tsx
+PASS src/epigraphy/ReadingBoard.tsx
+PASS src/epigraphy/RestorationStudio.tsx
+PASS src/epigraphy/SourceViewer.tsx
+PASS src/epigraphy/StoryPanel.tsx
+PASS src/epigraphy/catalog.ts
+PASS src/epigraphy/model.ts
+PASS src/epigraphy/navigation.ts
+PASS src/epigraphy/signs.ts
+PASS src/epigraphy/storage.ts
+PASS src/epigraphy/story.ts
+PASS src/evidence/AssemblyEntry.tsx
+PASS src/evidence/AssemblyScene.tsx
+PASS src/evidence/AssemblyWorkbench.tsx
+PASS src/evidence/ComparisonPanel.tsx
+PASS src/evidence/ExplanationPanel.tsx
+PASS src/evidence/FeaturePanel.tsx
+PASS src/evidence/InvestigationPanel.tsx
+PASS src/evidence/SavedInvestigations.tsx
+PASS src/evidence/SpatialTools.tsx
+PASS src/evidence/UncertaintyReadout.tsx
+PASS src/evidence/assembly.ts
+PASS src/evidence/authority.ts
+PASS src/evidence/dependencies.ts
+PASS src/evidence/explanation.ts
+PASS src/evidence/export.ts
+PASS src/evidence/graph.ts
+PASS src/evidence/intelligence.ts
+PASS src/evidence/investigations.ts
+PASS src/evidence/membership.ts
+PASS src/evidence/observationContract.ts
+PASS src/evidence/presentation.ts
+PASS src/evidence/receipts.ts
+PASS src/evidence/registration.ts
+PASS src/evidence/spatial.ts
+PASS src/evidence/types.ts
+PASS src/evidence/viewGeometry.ts
+PASS src/lib/componentDetails.ts
+PASS src/lib/evidence.ts
+PASS src/lib/field.ts
+PASS src/lib/interiorInspection.ts
+PASS src/lib/model.ts
+PASS src/lib/runtimeData.ts
+PASS src/lib/runtimeWebGL.ts
+PASS src/lib/search.ts
+PASS src/lib/solver.ts
+PASS src/lib/workspace.ts
+PASS src/main.tsx
+PASS src/maps/AtlasNavigator.tsx
+PASS src/maps/MapAtlasPanel.tsx
+PASS src/maps/MapVisuals.tsx
+PASS src/maps/ReadableMap.tsx
+PASS src/maps/types.ts
+PASS src/scene/CameraRig.tsx
+PASS src/scene/ComponentScene.tsx
+PASS src/scene/DetailGeometry.tsx
+PASS src/scene/DetailMaterial.tsx
+PASS src/scene/FieldLayer.tsx
+PASS src/scene/MasonryLayer.tsx
+PASS src/scene/MonumentLayer.tsx
+PASS src/scene/SimulationLayer.tsx
+PASS src/scene/geometry.ts
+PASS src/scene/sphericalExpansion.ts
+PASS src/scene/types.ts
+PASS src/simlab/types.ts
+PASS src/sphinx/SpecificationsPanel.tsx
+PASS src/sphinx/SphinxEntry.tsx
+PASS src/sphinx/SphinxMaterial.tsx
+PASS src/sphinx/SphinxReferences.tsx
+PASS src/sphinx/SphinxScene.tsx
+PASS src/sphinx/SphinxWorkbench.tsx
+PASS src/sphinx/catalog.ts
+PASS src/sphinx/geometry.ts
+PASS src/sphinx/references.ts
+PASS src/sphinx/specifications.ts
+PASS src/version.ts
+PASS src/workstation/ComponentWorkbench.tsx
+PASS src/workstation/DimensionReadout.tsx
+PASS src/workstation/LeftRail.tsx
+PASS src/workstation/ObjectInspectorPanel.tsx
+PASS src/workstation/OptionalWorkspaces.tsx
+PASS src/workstation/RealityControls.tsx
+PASS src/workstation/RecoveryBoundary.tsx
+PASS src/workstation/ReferenceGallery.tsx
+PASS src/workstation/SpatialViewport.tsx
+PASS src/workstation/WorkspaceBoundary.tsx
+PASS src/workstation/WorkstationFooter.tsx
+PASS src/workstation/WorkstationHeader.tsx
+PASS src/workstation/quickViewDefinitions.ts
+PASS src/workstation/types.ts
+syntax files=94
+
+> giza-nexus-registration-workbench@0.11.1 test:repairs
+> node --test tests/registration-repairs.test.mjs
+
+✔ valid freeze + fit preserves all holdouts and never promotes geometry (976.8504ms)
+✔ AUDIT: modern profile rejects four controls even with a perfect fit (68.3787ms)
+✔ profile-specific holdout minimum enforced (69.8441ms)
+✔ modern six-control/three-holdout profile can pass (168.3983ms)
+✔ AUDIT: a doubled scale fails even with perfect positional residuals (703.3603ms)
+✔ missing independent scale is not silently skipped (71.2405ms)
+✔ AUDIT: changed render bytes reject before fit (198.0872ms)
+✔ changed source bytes reject before freeze (42.0733ms)
+✔ AUDIT: missing target provenance cannot use a fallback string (109.4368ms)
+✔ unknown target source rejected (73.1599ms)
+✔ target locator and independence assertion required (58.2323ms)
+✔ AUDIT: refreeze after result cannot overwrite original coordinates (196.8434ms)
+✔ refreeze before result is also blocked (142.0709ms)
+✔ fit cannot overwrite prior result (173.3728ms)
+✔ post-freeze coordinate edits are detected by content seal (163.3354ms)
+✔ post-freeze threshold edits cannot loosen acceptance (183.0216ms)
+✔ a missing immutable seal blocks fit (236.4529ms)
+✔ duplicate landmark IDs cannot straddle control and holdout (101.2997ms)
+✔ duplicate pixel locations cannot be counted twice (122.2436ms)
+✔ nonfinite coordinates rejected (192.8431ms)
+✔ pixels outside the checksum-bound render rejected (103.0565ms)
+✔ collinear controls cannot qualify as a two-dimensional plate sample (282.9519ms)
+✔ a failed holdout remains in an immutable failed result (396.1769ms)
+✔ source/render linkage is checked, not only their individual hashes (61.8384ms)
+✔ AUDIT: unrelated cached bytes do not relabel copied observations as raw extraction (445.0529ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5534.4406
+
+> giza-nexus-registration-workbench@0.11.1 test:components
+> node --test tests/component-details.test.mjs
+
+✔ coffer body and lid distinguish object measurements from assembly context (4.8812ms)
+✔ lower doorway closes the reported east wall without inventing a height (0.3752ms)
+✔ transcript pin markers stay within the west rim and have no inferred depth (1.6352ms)
+✔ photo deduplication preserves records and canonical source order (0.9815ms)
+✔ supplement observations resolve sources, SI conversions and part bindings (0.4472ms)
+✔ coffer body and hollow cavity use Petrie inch dimensions in metres (0.1679ms)
+✔ north-south coffer fits the room with source-reported west/north clearances (0.1619ms)
+✔ missing and nonfinite survey values fail closed (1.6635ms)
+✔ object isolation never includes the full pyramid or unrelated parts (0.2245ms)
+✔ every catalog part can be opened and retains its evidence distinction (2.2767ms)
+✔ new reference records have valid bindings, licenses, and no metric authority (0.2399ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 683.9435
+
+> giza-nexus-registration-workbench@0.11.1 test:usability
+> node --test tests/usability.test.mjs tests/spatial-presentation.test.mjs
+
+✔ spherical presentation is deterministic, reversible and does not mutate cell geometry (7.1372ms)
+✔ corrupt workspace inputs fall back safely (1.7788ms)
+✔ nonfinite controls and invalid enums cannot crash camera (0.2486ms)
+✔ numeric workspace values clamp to control limits (0.1782ms)
+✔ workspace sanitizer does not mutate shared defaults (0.1733ms)
+✔ search matches all words across names and IDs (13.9105ms)
+✔ search never upgrades hypothesis status (0.4325ms)
+✔ selection cannot change monument geometry scale (0.4632ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 878.6944
+
+> giza-nexus-registration-workbench@0.11.1 test:sphinx
+> node --test tests/sphinx.test.mjs
+
+✔ Sphinx catalog has unique explicit study regions and authoritative source links (1.0206ms)
+✔ assembled pose is unshifted and explosion clamps nonfinite/out-of-range values (1.1157ms)
+✔ explosion is deterministic, reversible, and leaves source offsets untouched (0.1695ms)
+✔ repair-block field is deterministic, finite, bounded and nonrandom (1.5267ms)
+✔ Sphinx surfaces have finite positions, normals and triangle indices (277.95ms)
+✔ every anatomical loft has closed topology and outward winding (927.1715ms)
+✔ flattened paws preserve bilateral position and overall eastward envelope (43.9414ms)
+✔ offline comparison photographs have credited licenses and matching source-byte hashes (67.2607ms)
+✔ heavy viewers load on demand and Escape respects the inscription modal (1.0658ms)
+✔ interpreted body and head stay in the documented display envelope (105.6669ms)
+✔ new workspace does not write to canonical archaeological data (2.6633ms)
+✔ stela mesh obeys its chosen published height while preserving conflicting source summaries (11.1712ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2359.3971
+
+> giza-nexus-registration-workbench@0.11.1 test:epigraphy
+> node --test tests/epigraphy.test.mjs tests/epigraphy-storage.test.mjs tests/epigraphy-navigation.test.mjs
+
+✔ selected-zone fit centers the normalized target with display-only padding (1.1122ms)
+✔ small zones respect the 400 percent zoom ceiling (0.1592ms)
+✔ full-image framing never zooms below 100 percent (0.7792ms)
+✔ portrait and landscape sources fit without invalid letterbox scrolling (0.1748ms)
+✔ corner-zone framing clamps to actual image scroll bounds (0.1811ms)
+✔ invalid extents and coordinates yield finite bounded display values (0.3327ms)
+✔ fitting does not mutate normalized observations or source dimensions (0.2115ms)
+✔ a missing notebook loads without writing and saves the existing JSON schema (5.9206ms)
+✔ load retains exact original bytes, including whitespace, as its baseline (0.2163ms)
+✔ malformed and unsupported persisted data stays untouched and cannot be auto-saved over (0.3539ms)
+✔ storage access failures and unavailable storage block load and save (3.2928ms)
+✔ quota or write failure reports an unsaved draft without changing the old copy (10.5214ms)
+✔ two tabs that loaded the same baseline cannot sequentially overwrite each other (0.5576ms)
+✔ creation in another tab and deletion in another tab also count as conflicts (0.2702ms)
+✔ identical saves avoid unnecessary writes but still reject a stale baseline (0.8775ms)
+✔ readback detects an immediately competing write without reporting a successful save (79.0314ms)
+✔ oversized UTF-8 notebooks are preserved on load and rejected before any save (186.1772ms)
+✔ serialization failures do not write and verification failures do not claim success (0.5961ms)
+✔ old v1 notebooks migrate to an empty prediction layer without source changes (3.7139ms)
+✔ predicted color round trips with provenance and never becomes observed pigment (2.3187ms)
+✔ hypothesis imports reject malformed, injected and unbounded strokes (0.6632ms)
+✔ generated prediction is checksum-bound and excluded from the evidence catalog (17.7315ms)
+✔ inspection excludes shells, terrain, hidden envelopes and hypotheses (0.4635ms)
+✔ subsystem isolation is reversible and does not edit canonical parts (1.3215ms)
+✔ fit bounds follow normalized explosion vectors and handle empty selection (0.4396ms)
+✔ zone coordinates normalize reverse drags and clamp image bounds (0.2508ms)
+✔ notebook round trip retains source identity and separate traces (0.3337ms)
+✔ malformed imports cannot supply unknown sources, duplicate IDs or invalid geometry (0.5794ms)
+✔ AI import cannot promote itself to a human-reviewed translation (0.284ms)
+✔ review needs an operator, citation and reading; edits revoke attestation (0.2387ms)
+✔ manual AI packet retains image provenance and never claims connected inference (0.2281ms)
+✔ bundled source images have stable bytes and visible rights metadata (34.2665ms)
+✔ sign palette contains unique valid Egyptian Unicode characters with code labels (0.8693ms)
+✔ bundled hieroglyph font maps every sign, including late base-block additions (11.5695ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1330.6655
+
+> giza-nexus-registration-workbench@0.11.1 test:evidence-assembly
+> node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs tests/evidence-campaign.test.mjs
+
+✔ building assembly preserves exact canonical input and deterministic contract (21.3733ms)
+✔ rigid transforms round trip after 10000 iterations without scale/drift (28.4003ms)
+✔ metric transforms reject scale, shear, reflection, NaN and non-affine matrices (6.5226ms)
+✔ explicit frame hierarchy blocks unresolved monument/world and detached lid (0.8167ms)
+✔ frame graph rejects inconsistent alternative transform paths (0.5324ms)
+✔ legacy/detail disagreements are quantified without canonical rewrite (0.2769ms)
+✔ detail agreement is constrained by exact west/north clearance records (0.2874ms)
+✔ measurement invariance under selection, isolation, explosion and animation (280.8768ms)
+✔ cross-object lid/body measurements are UNKNOWN, local lid dimensions remain measurable (0.9195ms)
+✔ angles use canonical coordinates and reject coincident or unresolved inputs (29.2649ms)
+✔ reality layers isolate actual spatial objects independently (1.0077ms)
+✔ measured dimension features bind their exact scalar, units, locator and recorded uncertainty (0.507ms)
+✔ every feature resolves observations and every observation resolves source metadata (0.6124ms)
+✔ lid fit, physical pose and unmapped pin/groove/recess geometry remain UNKNOWN (0.4655ms)
+✔ body solid decomposition preserves hollow cavity without overlap or invented fill (139.8314ms)
+✔ orthogonal section caps preserve cavity opening and exact model section area (2.3104ms)
+✔ oblique sections are ordered coplanar polygons with no invented caps outside volume (8.5314ms)
+✔ coordinate export/import round trip preserves units, axes, datums, unknowns and all receipts (96.5772ms)
+✔ trust boundary rejects malformed frames, invalid geometry and forged finite certainty (275.3157ms)
+✔ malformed points and planes fail closed rather than returning NaN geometry (0.6015ms)
+✔ missing optional observations become explicit unknown graph records without crashing core (40.5823ms)
+✔ missing/invalid core dimensions never invent a replacement body (118.0756ms)
+✔ chamber surfaces are hollow-space boundaries, not solid wall envelopes or invented connected tunnels (1.8908ms)
+✔ legacy measured-provenance meshes cannot be promoted to observed survey surfaces (90.8051ms)
+✔ Sphinx photo-informed meshes and synthetic repairs have independently gated authority (0.8595ms)
+✔ Sphinx view and GLB exports retain governed object authority and presentation status (1.6668ms)
+✔ imported graph rejects authority contradictions, undeclared support and wrong-kind edges (272.0992ms)
+✔ unit inheritance, overflow and uncertainty dimensions fail at observation boundary (1.8584ms)
+✔ compatible uncertainty preserves original units and interpretation without inventing confidence (0.3158ms)
+✔ experiment explanation and linked rerun keep old inputs immutable (2551.905ms)
+✔ recognized lower-authority observations cannot generate observed or reconstructed physical solids (38.4357ms)
+✔ hypothetical placement descriptions do not resolve a physical chamber relationship (15.1879ms)
+✔ unsupported source statuses reject rather than default to observation (9.4434ms)
+✔ valid hypothesis records cannot be laundered through imported observed features (104.9864ms)
+✔ observation value union is identical in direct, assembly, graph and checksum-valid receipt boundaries (1457.6519ms)
+✔ zero and null stay distinct; source, units, duplicate IDs and dangerous keys fail closed (13.8946ms)
+✔ metre centimetre and inch source inputs produce equivalent geometry; angles do not (34.4921ms)
+✔ observed scalar endpoints retain reconstructed geometry authority (0.4547ms)
+✔ adding unrelated constraint context cannot expand direct supporting evidence (18.7613ms)
+✔ dependency fingerprint ignores unrelated context but changes with relevant inputs (1229.0655ms)
+✔ actual archived v1 computations remain replayable without inventing new identity metadata (577.5373ms)
+✔ positive source bytes → freeze → shared fit → replay → reviewed 2D revision → rollback (9781.2325ms)
+✔ failed holdout is retained and cannot become an accepted revision (2763.8403ms)
+✔ independent classification rejects same-underlying-source control even if fit is numerically perfect (165.8691ms)
+✔ missing scale, missing source permission and wrong units reject before result (639.2853ms)
+✔ byte changes, input changes and fabricated replay results fail closed (2095.7318ms)
+✔ packet replay rehashes independent control assets, not just the image (903.8546ms)
+✔ feature evidence graph reaches exact observation, locator, source and explicit unknown custody (7.3035ms)
+✔ graph trust boundary rejects dangling relations, duplicates, nonfinite data and prototype keys (58.007ms)
+✔ candidates are deterministic and carry evidence, computation, alternatives, falsifiers and authority (2.4697ms)
+✔ lid fit is a scalar compatibility candidate, not observed clearance or statistical discovery (116.8896ms)
+✔ missing optional observations remain UNKNOWN and graph/candidates still load (51.5695ms)
+✔ every candidate computation reproduces into an immutable versioned content-hashed receipt (6972.4077ms)
+✔ tampered candidate, receipt, input graph and wrong declared frame fail closed (489.994ms)
+✔ review produces an append-only nonauthoritative finding and traversable graph records (439.4739ms)
+✔ realistic reconstruction cannot become OBSERVED through review or imported pass flags (122.2319ms)
+✔ checksum-valid finding forgeries cannot promote authority or change referenced experiment semantics (533.9681ms)
+✔ journal requires an earlier matching experiment and rejects cross-assembly/frame records (801.1631ms)
+✔ promotion gates are replayed against the sealed graph, not trusted from hash-valid flags (732.517ms)
+✔ research graph is compact and full replay snapshots stay exclusively in immutable receipts (2103.4245ms)
+✔ canonical graph hash is stable under object key ordering, not coordinate changes (76.4176ms)
+✔ append-only persisted journal preserves corrupted data and refuses stale/deleting writes (708.6796ms)
+✔ registration comparison preserves control/holdout vectors and has NO imported metric authority (1.2632ms)
+✔ malformed residuals and counterfeit fit shapes are isolated, never rendered as evidence (180.9037ms)
+✔ physical picks round trip through display poses at every explosion distance (61.4534ms)
+✔ lid visual parking never resolves its physical placement or changes local distance (1.0367ms)
+✔ section cap excludes the cavity and unknown lid, with no shared-base double count (1.6627ms)
+✔ section results agree in object and assembly frames and support non-unit normals (1.681ms)
+✔ bookmark and display input guards reject nonfinite data and cameras at target (1.4507ms)
+✔ contextual tool keyboard routing and selections cannot modify physical geometry (0.6449ms)
+✔ short landscape keeps a viewport-focused layout and honest candidate uncertainty (0.4348ms)
+✔ investigation drafts stay mounted while following evidence or closing a panel (0.3473ms)
+✔ residual keyboard focus uses a non-scaling marker, not a metre-sized CSS outline (0.4692ms)
+✔ save rejects distant segment, polygon and point membership, not just boxes (43.4505ms)
+✔ membership deliberately includes edges, rejects outside/degenerate and handles concave polygons (1.2037ms)
+✔ checksum-valid saved imports cannot assign distant points to non-box geometry (563.5033ms)
+✔ older saved dependency rule replays historically without silently upgrading its checksum (249.5035ms)
+✔ scaled section planes have identical membership and unknown cuts cannot manufacture surfaces (85.4325ms)
+✔ explanations identify exact relevant changes; labels and local-frame parent transforms do not stale new studies (300.9835ms)
+✔ visible geometry is exactly isolated and authority filtered; camera bounds share this set (3.8952ms)
+✔ computed cap picks preserve canonical position and section provenance under inspection movement (4.4116ms)
+✔ saved investigations round trip original geometry, result, points and separate presentation (419.1188ms)
+✔ relevant revised geometry makes a saved investigation historical without changing its snapshot (333.2275ms)
+✔ checksum-valid false result or off-plane cap cannot pass restore (100.6026ms)
+✔ presentation labels and active selection do not invalidate current measurement dependencies (99.1452ms)
+✔ storage protects duplicates, stale tabs, corrupt bytes and quota failures (367.5546ms)
+ℹ tests 86
+ℹ suites 0
+ℹ pass 86
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17083.8857
+
+> giza-nexus-registration-workbench@0.11.1 test:runtime
+> node --test tests/runtime-resilience.test.mjs
+
+✔ every shipped startup dataset satisfies its runtime contract without rewriting records (185.3291ms)
+✔ shape validation rejects wrong containers, row types, and nested numeric corruption (11.332ms)
+✔ required canonical geometry fails closed on malformed vectors and primitive sizes (3.3147ms)
+✔ duplicate IDs, unknown provenance and invalid masonry cannot enter canonical rendering (3.7116ms)
+✔ missing optional bytes yield explicit unavailable diagnostics, never a passing benchmark or zero result (1.6681ms)
+✔ invalid JSON, rejected fetches, and malformed optional schemas are quarantined (1.9818ms)
+✔ missing mandatory data is actionable and cannot be replaced with fabricated defaults (5.5746ms)
+✔ malformed observations and orphan source bindings are quarantined without authority fallback (2.8768ms)
+✔ healthy loader preserves source objects and unrecognized extension fields byte-equivalently (1.9764ms)
+✔ complete workstation loads when all optional research datasets are unavailable (32.3457ms)
+✔ diagnostics do not leak between retries and healthy load retains the full research corpus (208.3566ms)
+✔ core model resolves before hanging optional data and aborted subscriptions cannot replace newer state (206.3791ms)
+✔ WebGL loss is cancelable, restoration clears status, and unmount removes listeners (2.2214ms)
+✔ heavy optional workspaces have lazy entries, recoverable boundaries and data guards (7.4919ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1836.7552
+
+> giza-nexus-registration-workbench@0.11.1 validate:evidence-assembly
+> node scripts/evidence/validate.mjs
+
+{
+  "passed": true,
+  "features": 50,
+  "observations": 39,
+  "graph_nodes": 260,
+  "graph_edges": 520,
+  "investigation_candidates": 13,
+  "experiments": 13,
+  "sha256": "11b75982d43844845027dcb8a7b33d960601b3aa30b8db9cb77f301dbbd97c67",
+  "output": null,
+  "archaeological_registration": "NOT_PRODUCED",
+  "note": "This targeted contract validator does not replace npm run check, browser tests or production build."
+}
+
+> giza-nexus-registration-workbench@0.11.1 build:workbench
+> node scripts/workbench/build.mjs
+
+WORKBENCH BUILD PASS — native browser modules ready; optional scoped campaigns reuse shared TypeScript contracts and registration engine.
+

@@ -15,8 +15,8 @@
   "modules": [
     {
       "path": "src/scene/CameraRig.tsx",
-      "bytes": 3012,
-      "sha256": "77f311ce27fddbff08786d030178a5cdeecc31d3d562815fd9d6ab9dce8f1618"
+      "bytes": 3555,
+      "sha256": "d44525df47e9a9f4b4869a11394b71aba271fb6cd53cbfc7546abcb72a031153"
     },
     {
       "path": "src/scene/FieldLayer.tsx",
@@ -25,8 +25,8 @@
     },
     {
       "path": "src/scene/MasonryLayer.tsx",
-      "bytes": 5170,
-      "sha256": "ec255e8cd321ff5d690b914151dfa156c3a14444ad002a20c007278a16538621"
+      "bytes": 6076,
+      "sha256": "9736d5752a54f641949baf382384192b6d884db28ec703175a711c126c2b8b5c"
     },
     {
       "path": "src/scene/MonumentLayer.tsx",
@@ -50,8 +50,8 @@
     },
     {
       "path": "src/workstation/LeftRail.tsx",
-      "bytes": 5055,
-      "sha256": "8fc6dc284bbed45074f82abf4c638e8a023a3638cb377bd587925f4036c7b4c8"
+      "bytes": 5324,
+      "sha256": "e2544bf6aaa9d896dafe14cd4af479ab01066180a6ca2a7cbf10d88a09a45690"
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
@@ -60,8 +60,8 @@
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "bytes": 9148,
-      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894"
+      "bytes": 10616,
+      "sha256": "65b6c57f06cf9d45266618273889de419092cfd9be2c484881f40ebf2df3d76f"
     },
     {
       "path": "src/workstation/WorkstationFooter.tsx",
@@ -78,5 +78,5 @@
   "geometry_changed": false,
   "research_semantics_changed": false,
   "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z"
+  "sealed_at": "2026-09-18T02:36:28.684Z"
 }

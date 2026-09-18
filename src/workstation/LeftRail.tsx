@@ -6,10 +6,10 @@ import type { Part } from '../lib/model';
 import { searchParts } from '../lib/search';
 
 export function LeftRail({
-  filter, setFilter, layers, toggleLayer, sectionAxis, setSectionAxis, viewPreset, setViewPreset, onReset, onOpenAtlas, onOpenModel, parts, onOpenPart, onOpenSphinx,
+  filter, setFilter, layers, toggleLayer, sectionAxis, setSectionAxis, viewPreset, setViewPreset, onReset, onOpenAtlas, onOpenModel, parts, onOpenPart, onOpenSphinx,overviewActive,
 }: {
   filter: string; setFilter: (value: string) => void;
-  onOpenSphinx:()=>void;
+  onOpenSphinx:()=>void;overviewActive:boolean;
   parts:Part[];onOpenPart:(id:string)=>void;
   layers: Record<LayerKey, boolean>; toggleLayer: (key: LayerKey) => void;
   sectionAxis: SectionAxis; setSectionAxis: (axis: SectionAxis) => void;
@@ -51,16 +51,17 @@ export function LeftRail({
 
       <section className="railCard layerCard">
         <div className="railHeader"><b>MODEL LAYERS</b><span>▱</span></div>
+        {!overviewActive&&<p>These layers control the overview. <button onClick={onOpenModel}>Return to model layers</button></p>}
         {layerRows.map(([key, label]) => (
           <label className="layerRow" key={key}>
             <span className="layerName">◈ {label}</span>
-            <input type="checkbox" checked={layers[key]} onChange={() => toggleLayer(key)} />
+            <input type="checkbox" aria-label={label} disabled={!overviewActive} checked={layers[key]} onChange={() => toggleLayer(key)} />
             <i className="toggleVisual" />
           </label>
         ))}
         <label className="layerRow">
           <span className="layerName">◈ Section Cut Plane</span>
-          <input type="checkbox" checked={sectionAxis !== 'OFF'} onChange={() => setSectionAxis(sectionAxis === 'OFF' ? 'Y' : 'OFF')} />
+          <input type="checkbox" disabled={!overviewActive} checked={sectionAxis !== 'OFF'} onChange={() => setSectionAxis(sectionAxis === 'OFF' ? 'Y' : 'OFF')} />
           <i className="toggleVisual" />
         </label>
       </section>
@@ -69,7 +70,7 @@ export function LeftRail({
         <div className="railHeader"><b>VIEW CONTROLS</b><span>▱</span></div>
         <div className="viewGrid">
           {VIEW_BUTTONS.map(item => (
-            <button key={item.preset} className={viewPreset === item.preset ? 'active' : ''} onClick={() => setViewPreset(item.preset)}>{item.label}</button>
+            <button key={item.preset} disabled={!overviewActive} className={viewPreset === item.preset ? 'active' : ''} onClick={() => setViewPreset(item.preset)}>{item.label}</button>
           ))}
           <button onClick={onReset}>Reset</button>
         </div>

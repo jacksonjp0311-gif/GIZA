@@ -1,4 +1,4 @@
-import { Canvas } from '@react-three/fiber';
+import { Canvas,useFrame,useThree } from '@react-three/fiber';
 import { Grid } from '@react-three/drei';
 import { WebGLRecovery } from '../workstation/WorkspaceBoundary';
 import type { Part, StoneField } from '../lib/model';
@@ -15,14 +15,18 @@ import type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/ty
 export type { SectionAxis, StoneCellInfo, UiMode, ViewPreset } from '../scene/types';
 export { buildStoneCells } from '../scene/geometry';
 
+function LayerDiagnostics(){
+  const {scene,gl}=useThree();useFrame(()=>{const ids:string[]=[];let instanced=0;const expansions:unknown[]=[];scene.traverse(object=>{if(object.userData.evidenceObject?.objectId)ids.push(object.userData.evidenceObject.objectId);if('isInstancedMesh' in object){instanced++;if(object.userData.expansion)expansions.push(object.userData.expansion);}});gl.domElement.dataset.layerDiagnostics=JSON.stringify({ids:ids.sort(),instanced,expansions});});return null;
+}
+
 export function GizaScene({
   parts, stoneField, showStoneField, explode, selectedId, selectedStone, showUnverified, mode, sectionAxis, sectionPos, animationSpeed,
   viewPreset = 'PERSPECTIVE', cameraRevision = 0, xray = false, showLabels = true, showFieldFrame = false, uncertainty = null, simulationVisible = false, activeSimulation = 'GRAVITY', gravityResult = null, acousticResult = null, strataResult = null,
-  onSelect, onSelectStone,inspection=false,
+  onSelect, onSelectStone,inspection=false,sphere=false,
 }: {
   parts: Part[]; stoneField: StoneField; showStoneField: boolean; explode: number; selectedId: string | null;
   animationSpeed:number;
-  inspection?:boolean;
+  inspection?:boolean;sphere?:boolean;
   selectedStone?: StoneCellInfo | null; showUnverified: boolean; mode: UiMode; sectionAxis: SectionAxis; sectionPos: number;
   viewPreset?: ViewPreset; cameraRevision?: number; xray?: boolean; showLabels?: boolean; showFieldFrame?: boolean; uncertainty?: UncertaintyRecord | null; simulationVisible?: boolean; activeSimulation?: ActiveSimulation; gravityResult?: GravityResult | null; acousticResult?: AcousticResult | null; strataResult?: StrataResult | null;
   onSelect: (id: string | null) => void;
@@ -44,6 +48,7 @@ export function GizaScene({
       }}
     >
       <color attach="background" args={['#02070b']} />
+      {new URLSearchParams(location.search).has('layerDiagnostics')&&<LayerDiagnostics/>}
       <WebGLRecovery/>
       <ambientLight intensity={0.82} />
       <hemisphereLight args={['#fff1d2', '#6b5132', 1.12]} />
@@ -51,7 +56,7 @@ export function GizaScene({
       <directionalLight position={[-360, 260, 180]} intensity={1.05} color="#d7e4df" />
       <pointLight position={[0, -80, 210]} intensity={1.2} distance={760} color="#d99a4f" />
       <pointLight position={[-180, 210, 110]} intensity={0.9} distance={680} color="#e6bd77" />
-      {!inspection&&<Grid
+      {!inspection&&!sphere&&<Grid
         args={[820, 820]}
         position={[0, 0, -4.5]}
         rotation={[Math.PI / 2, 0, 0]}
@@ -69,6 +74,7 @@ export function GizaScene({
 
       <MasonryLayer
         field={stoneField}
+        sphere={sphere}
         explode={explode}
         visible={showStoneField}
         selectedStone={selectedStone ?? null}
@@ -78,7 +84,7 @@ export function GizaScene({
       />
 
       <MonumentLayer
-        parts={parts}
+        parts={sphere&&explode>0?parts.filter(p=>!['part.plateau.reference','part.pyramid.khafre','part.casing.granite.lower'].includes(p.id)):parts}
         explode={explode}
         selectedId={selectedId}
         showUnverified={showUnverified}
@@ -90,9 +96,9 @@ export function GizaScene({
         onSelect={onSelect}
       />
 
-      <FieldLayer visible={showFieldFrame} selectedPart={selectedPart} uncertainty={uncertainty} explode={explode} />
+      <FieldLayer visible={showFieldFrame&&!sphere} selectedPart={selectedPart} uncertainty={uncertainty} explode={explode} />
       <SimulationLayer visible={simulationVisible} active={activeSimulation} gravity={gravityResult} acoustic={acousticResult} strata={strataResult} />
-      <CameraRig preset={viewPreset} revision={cameraRevision} speed={animationSpeed} fitParts={inspection?parts:undefined} explode={explode}/>
+      <CameraRig sphere={sphere} preset={viewPreset} revision={cameraRevision} speed={animationSpeed} fitParts={inspection?parts:undefined} explode={explode}/>
     </Canvas>
   );
 }

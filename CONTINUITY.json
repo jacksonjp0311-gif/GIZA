@@ -2,6 +2,8 @@
   "schema_version": "1.0.0",
   "product": "GIZA",
   "current_version": "0.11.1",
+  "atlas_spatial_followup": "Full-workspace Atlas and reversible sphere/assembly presentation are documented in docs/ATLAS_SPATIAL_PRESENTATION.md. Sphere cells remain ASSUMED illustrative outer masonry, not a surveyed inventory. Physical lid placement remains UNKNOWN. Do not conflate display-only offsets with canonical geometry. See VALIDATION.md for final executed checkpoints.",
+  "layer_controls_followup": "2026-09-18 UTC: explicit subsurface/Underground requests enable hypothetical display, not archaeological authority; independent HYPOTHESIS hiding stays available. Inspection consumes filtered parts. Exterior hides masonry; Measurement Overlays gates preview dimensions. Separate detail/atlas views disable overview controls. See VALIDATION.md for executed browser regressions and preserved failures.",
   "codename": "REGISTRATION WORKBENCH",
   "purpose": "Continue 0.11.1 in place: consistent graph and point contracts, explicit uncertainty, historical replay and contextual investigation explanation/comparison. Preserve canonical archaeology. Real registration remains blocked; successor remote CI remains unverified until run.",
   "read_order": [

@@ -30,9 +30,9 @@ function DetailCamera({target,radius,revision,top}:{target:V3;radius:number;revi
     minPolarAngle={.02} maxPolarAngle={Math.PI-.02}/>;
 }
 
-export function ComponentScene({model,part,context,lidLift,dimensions,roof,survey,revision,top,wide,onSelect}:{
+export function ComponentScene({model,part,context,lidLift,dimensions,roof,survey,revision,top,wide,onSelect,explosion=0}:{
   model:ModelBundle;part:Part;context:DetailContext;lidLift:number;dimensions:boolean;roof:boolean;
-  survey:boolean;revision:number;top:boolean;wide:boolean;onSelect:(id:string)=>void;
+  explosion?:number;survey:boolean;revision:number;top:boolean;wide:boolean;onSelect:(id:string)=>void;
 }) {
   const burial=isBurialDetail(part.id);
   const lower=part.id==='part.lower.chamber';
@@ -43,9 +43,10 @@ export function ComponentScene({model,part,context,lidLift,dimensions,roof,surve
     return detailParts(model,part,context).map(p=>({...p,detail_tier:'primary',spatial:{...p.spatial,
       origin_m:[p.spatial.origin_m[0]-x,p.spatial.origin_m[1]-y,p.spatial.origin_m[2]-z] as V3}}));
   },[model,part,context]);
+  const displayParts=useMemo(()=>localParts.map((p,i)=>({...p,spatial:{...p.spatial,origin_m:p.spatial.origin_m.map((v,axis)=>v+(p.id===part.id?0:(axis===0?(i%2?1:-1)*explosion:axis===2?Math.floor(i/2)*explosion:0))) as V3}})),[localParts,part.id,explosion]);
   const bounds=useMemo(()=>{
     const box=new THREE.Box3();
-    for(const p of localParts){
+    for(const p of displayParts){
       const g=p.spatial.primitive;
       const size=g.kind==='box'?new THREE.Vector3(g.sx,g.sy,g.sz):new THREE.Vector3(g.radius*2,g.radius*2,g.height);
       const b=new THREE.Box3(size.clone().multiplyScalar(-.5),size.clone().multiplyScalar(.5));
@@ -54,7 +55,7 @@ export function ComponentScene({model,part,context,lidLift,dimensions,roof,surve
       box.union(b.applyMatrix4(matrix));
     }
     return {target:box.getCenter(new THREE.Vector3()).toArray() as V3,radius:box.getSize(new THREE.Vector3()).length()/2};
-  },[localParts]);
+  },[displayParts]);
   let target:V3=bounds.target,radius=bounds.radius;
   if(detailedBurial){
     const d=burialDimensions(model);
@@ -72,10 +73,10 @@ export function ComponentScene({model,part,context,lidLift,dimensions,roof,surve
     <directionalLight position={[12,-14,18]} intensity={2.4} color="#ffedc8"/>
     <directionalLight position={[-8,6,10]} intensity={1.25} color="#dceaf0"/>
     <Suspense fallback={null}>
-      {detailedBurial ? <BurialDetail model={model} room={room} lidLift={lidLift} dimensions={dimensions} roof={roof} survey={survey} focusId={part.id} onSelect={onSelect}/>
-      : lower && part.spatial.primitive.kind==='box' ? <LowerChamberDetail model={model} height={part.spatial.primitive.sz} dimensions={dimensions}/>
-      : <MonumentLayer parts={localParts} explode={0} selectedId={null} showUnverified mode="EXPLORE" sectionAxis="OFF" sectionPos={0} xray={false} showLabels={false} onSelect={onSelect}/>}
+      {detailedBurial ? <BurialDetail explosion={explosion} model={model} room={room} lidLift={lidLift+explosion} dimensions={dimensions} roof={roof} survey={survey} focusId={part.id} onSelect={onSelect}/>
+      : lower && part.spatial.primitive.kind==='box' ? <LowerChamberDetail explosion={explosion} model={model} height={part.spatial.primitive.sz} dimensions={dimensions}/>
+      : <MonumentLayer parts={displayParts} explode={0} selectedId={null} showUnverified mode="EXPLORE" sectionAxis="OFF" sectionPos={0} xray={false} showLabels={false} onSelect={onSelect}/>}
     </Suspense>
-    <DetailCamera target={target} radius={Math.max(.1,radius)} revision={revision} top={top}/>
+    <DetailCamera target={target} radius={Math.max(.1,radius+(detailedBurial||lower?explosion*2:0))} revision={revision} top={top}/>
   </Canvas>;
 }

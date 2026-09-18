@@ -8,11 +8,16 @@ import type { ViewPreset } from './types';
 import type { Part } from '../lib/model';
 import { inspectionBounds } from '../lib/interiorInspection';
 
-export function CameraRig({ preset, revision, speed=1,fitParts,explode=0 }: { preset: ViewPreset; revision: number;speed?:number;fitParts?:Part[];explode?:number }) {
+export function CameraRig({ preset, revision, speed=1,fitParts,explode=0,sphere=false }: { preset: ViewPreset; revision: number;speed?:number;fitParts?:Part[];explode?:number;sphere?:boolean }) {
   const { camera,size } = useThree();
   const controls = useRef<OrbitControlsImpl>(null);
   const moving = useRef(true);
-  const desired = VIEW_PRESETS[preset];
+  const desired = useMemo(()=>{
+    if(!sphere)return VIEW_PRESETS[preset];
+    const cam=camera as THREE.PerspectiveCamera,vfov=THREE.MathUtils.degToRad(cam.fov),hfov=2*Math.atan(Math.tan(vfov/2)*size.width/size.height);
+    const distance=260/Math.sin(Math.min(vfov,hfov)/2)*1.12;
+    return {position:new THREE.Vector3(.85,-1.3,.7).normalize().multiplyScalar(distance).add(new THREE.Vector3(0,0,70)).toArray() as [number,number,number],target:[0,0,70] as [number,number,number]};
+  },[sphere,preset,camera,size.width,size.height]);
   const desiredPosition = useMemo(() => new THREE.Vector3(...desired.position), [desired]);
   const desiredTarget = useMemo(() => new THREE.Vector3(...desired.target), [desired]);
 
@@ -26,7 +31,7 @@ export function CameraRig({ preset, revision, speed=1,fitParts,explode=0 }: { pr
     camera.position.copy(new THREE.Vector3(.85,-1.3,.7).normalize().multiplyScalar(distance).add(controls.current.target));
     controls.current.update();
     // Explosion does not refit on every slider move. Fit interior explicitly reframes it.
-  }, [preset, revision,fitParts,size.width,size.height]);
+  }, [preset, revision,fitParts,size.width,size.height,sphere]);
 
   useFrame((_, delta) => {
     if (!moving.current || !controls.current) return;
@@ -46,7 +51,7 @@ export function CameraRig({ preset, revision, speed=1,fitParts,explode=0 }: { pr
     <OrbitControls
       ref={controls}
       makeDefault
-      maxDistance={1800}
+      maxDistance={sphere?6000:1800}
       minDistance={fitParts?.length ? .15 : 10}
       enableDamping
       dampingFactor={0.075}

@@ -1,0 +1,81 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 16 tests using 1 worker
+
+  ok  1 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 1280 (4.3s)
+  ok  2 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 390 (2.5s)
+  ok  3 tests\browser\atlas-expansion.spec.ts:2:95 › full-page atlas readable controls 844 (2.6s)
+  ok  4 tests\browser\atlas-expansion.spec.ts:16:1 › spherical stones and contextual assembly explosion are reversible (9.2s)
+  ok  5 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (14.9s)
+  x   6 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (23.4s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:40:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (5.7s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 1280x800 (2.8s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 390x844 (1.9s)
+  ok 10 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 844x390 (2.0s)
+  ok 11 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas slow does not block core or force workspace navigation (2.0s)
+  ok 12 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas missing does not block core or force workspace navigation (3.0s)
+  ok 13 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas malformed does not block core or force workspace navigation (2.3s)
+  ok 14 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (9.4s)
+  ok 15 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (5.5s)
+  ok 16 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (3.7s)
+
+
+  1) tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/1 picked points retain/)
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText(/1 picked points retain/) with timeout 15000ms
+      - waiting for getByText(/1 picked points retain/)
+
+
+      32 |   await expect.poll(async()=>{const d=JSON.parse(await canvas.getAttribute('data-spatial-diagnostics')??'{}');return !!d.settled&&d.caps.filter((c:any)=>c.inViewport&&Math.abs(c.section.offset-.3)<1e-8).length>=2;}).toBe(true);
+      33 |   const diagnostic=JSON.parse((await canvas.getAttribute('data-spatial-diagnostics'))!);const targets=diagnostic.caps.filter((c:any)=>c.inViewport).slice(0,2);
+    > 34 |   for(let i=0;i<2;i++){await page.mouse.click(targets[i].screen[0],targets[i].screen[1]);await expect(page.getByText(new RegExp(`${i+1} picked points retain`))).toBeVisible();}
+         |                                                                                                                                                                  ^
+      35 |   await expect(page.getByText(/Computed section surface/).first()).toBeVisible();await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Save investigation',exact:true}).click();await expect(page.getByText('Saved with original geometry, canonical points and reproducible result.',{exact:true})).toBeVisible();const study=await exported(page,'Export saved record');
+      36 |   expect(study.payload.draft.points).toHaveLength(2);for(const point of study.payload.draft.points){expect(point.origin.kind).toBe('COMPUTED_SECTION');expect(point.position[2]).toBeCloseTo(-.3,5);}expect(study.payload.result.status).toBe('KNOWN');
+      37 |   expect(study.payload.draft.points.map((p:any)=>p.featureId)).toEqual(targets.map((t:any)=>t.featureId));expect(study.payload.draft.points.map((p:any)=>p.frameId)).toEqual(targets.map((t:any)=>t.frameId));
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\evidence-workflow.spec.ts:34:162
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+  15 passed (1.9m)
+
+[WebServer] (node:18876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:21224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:3916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:6788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

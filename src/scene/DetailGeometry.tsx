@@ -21,8 +21,8 @@ function Block({ size, at, color = '#bba276', onClick }: { size: V3; at: V3; col
   </mesh>;
 }
 
-export function BurialDetail({ model, room, lidLift, dimensions, roof, survey, focusId, onSelect }: {
-  model: ModelBundle; room: boolean; lidLift: number; dimensions: boolean; roof: boolean; survey:boolean; focusId: string; onSelect: (id:string)=>void;
+export function BurialDetail({ model, room, lidLift, dimensions, roof, survey, focusId, onSelect,explosion=0 }: {
+  explosion?:number;model: ModelBundle; room: boolean; lidLift: number; dimensions: boolean; roof: boolean; survey:boolean; focusId: string; onSelect: (id:string)=>void;
 }) {
   const d = useMemo(()=>burialDimensions(model),[model]);
   const x = room ? -d.length/2+d.westClearance+d.outerWidth/2 : 0;
@@ -43,7 +43,7 @@ export function BurialDetail({ model, room, lidLift, dimensions, roof, survey, f
   const labelLength=onlyLid?d.lidLength:d.outerLength,labelWidth=onlyLid?d.lidWidth:d.outerWidth;
   const labelZ=onlyLid?lidZ+d.lidThickness/2+.12:.12;
   return <group>
-    {room && <RoomShell length={d.length} width={d.width} height={d.wallHeight} rise={d.rise} roof={roof}
+    {room && <RoomShell explosion={explosion} length={d.length} width={d.width} height={d.wallHeight} rise={d.rise} roof={roof}
       hole={{x,y,width:d.outerWidth+.035,length:d.outerLength+.035}}
       door={{start:d.length/2-d.doorEnd,end:d.length/2-d.doorStart}} onSelect={onSelect}/>}
     <group position={[x,y,0]}>
@@ -72,7 +72,7 @@ export function BurialDetail({ model, room, lidLift, dimensions, roof, survey, f
   </group>;
 }
 
-export function LowerChamberDetail({model,height,dimensions}:{model:ModelBundle;height:number;dimensions:boolean}) {
+export function LowerChamberDetail({model,height,dimensions,explosion=0}:{model:ModelBundle;height:number;dimensions:boolean;explosion?:number}) {
   const d=lowerDimensions(model);
   return <>
     <RoomShell length={d.length} width={d.width} height={height} eastDoor={{start:d.doorStart,end:d.doorEnd}}/>
@@ -83,8 +83,8 @@ export function LowerChamberDetail({model,height,dimensions}:{model:ModelBundle;
   </>;
 }
 
-export function RoomShell({length:L,width:W,height:H,rise=0,roof=false,hole,door,eastDoor,onSelect}:{
-  length:number;width:number;height:number;rise?:number;roof?:boolean;
+export function RoomShell({length:L,width:W,height:H,rise=0,roof=false,hole,door,eastDoor,onSelect,explosion=0}:{
+  explosion?:number;length:number;width:number;height:number;rise?:number;roof?:boolean;
   hole?:{x:number;y:number;width:number;length:number};door?:{start:number;end:number};eastDoor?:{start:number;end:number};onSelect?:(id:string)=>void;
 }) {
   const floor = useMemo(()=>{
@@ -95,24 +95,24 @@ export function RoomShell({length:L,width:W,height:H,rise=0,roof=false,hole,door
   },[L,W,hole?.x,hole?.y,hole?.width,hole?.length]);
   useEffect(()=>()=>floor.dispose(),[floor]);
   return <group>
-    <mesh geometry={floor} onClick={e=>{e.stopPropagation();onSelect?.('part.burial.floor_paving');}}>
+    <mesh position={[0,0,-explosion]} geometry={floor} onClick={e=>{e.stopPropagation();onSelect?.('part.burial.floor_paving');}}>
       <meshStandardMaterial color="#aa9270" roughness={.96} side={THREE.DoubleSide}/>
     </mesh>
     {eastDoor ? <>
-      <Block size={[.16,eastDoor.start+W/2,H]} at={[L/2+.08,(eastDoor.start-W/2)/2,H/2]}/>
-      <Block size={[.16,W/2-eastDoor.end,H]} at={[L/2+.08,(eastDoor.end+W/2)/2,H/2]}/>
-    </> : <Block size={[.16,W,H]} at={[L/2+.08,0,H/2]} onClick={()=>onSelect?.('part.burial.chamber')}/>}
-    <Block size={[.16,W,H]} at={[-L/2-.08,0,H/2]} onClick={()=>onSelect?.('part.burial.chamber')}/>
+      <Block size={[.16,eastDoor.start+W/2,H]} at={[L/2+.08+explosion,(eastDoor.start-W/2)/2,H/2]}/>
+      <Block size={[.16,W/2-eastDoor.end,H]} at={[L/2+.08+explosion,(eastDoor.end+W/2)/2,H/2]}/>
+    </> : <Block size={[.16,W,H]} at={[L/2+.08+explosion,0,H/2]} onClick={()=>onSelect?.('part.burial.chamber')}/>}
+    <Block size={[.16,W,H]} at={[-L/2-.08-explosion,0,H/2]} onClick={()=>onSelect?.('part.burial.chamber')}/>
     {door ? <>
-      <Block size={[door.start+L/2,.16,H]} at={[(door.start-L/2)/2,W/2+.08,H/2]}/>
-      <Block size={[L/2-door.end,.16,H]} at={[(door.end+L/2)/2,W/2+.08,H/2]}/>
-      <Block size={[door.end-door.start,.16,H-1.805]} at={[(door.start+door.end)/2,W/2+.08,(H+1.805)/2]}/>
-    </> : <Block size={[L,.16,H]} at={[0,W/2+.08,H/2]}/>}
+      <Block size={[door.start+L/2,.16,H]} at={[(door.start-L/2)/2,W/2+.08+explosion,H/2]}/>
+      <Block size={[L/2-door.end,.16,H]} at={[(door.end+L/2)/2,W/2+.08+explosion,H/2]}/>
+      <Block size={[door.end-door.start,.16,H-1.805]} at={[(door.start+door.end)/2,W/2+.08+explosion,(H+1.805)/2]}/>
+    </> : <Block size={[L,.16,H]} at={[0,W/2+.08+explosion,H/2]}/>}
     {/* South wall omitted for a readable cutaway; no invented beam joints. */}
     <Line points={[[-L/2,-W/2,0],[L/2,-W/2,0],[L/2,W/2,0],[-L/2,W/2,0],[-L/2,-W/2,0]]} color="#ebc16f"/>
     {rise>0 && <>
       {[-L/2,L/2].map((x,i)=><Line key={i} points={[[x,-W/2,H],[x,0,H+rise],[x,W/2,H]]} color="#ccab70" dashed dashSize={.16} gapSize={.1}/>)}
-      {roof && [-1,1].map(side=><mesh key={side} position={[0,side*W/4,H+rise/2]} rotation={[side===1?-Math.atan2(rise,W/2):Math.atan2(rise,W/2),0,0]} onClick={e=>{e.stopPropagation();onSelect?.('part.burial.gable_envelope');}}>
+      {roof && [-1,1].map(side=><mesh key={side} position={[0,side*W/4,H+rise/2+explosion]} rotation={[side===1?-Math.atan2(rise,W/2):Math.atan2(rise,W/2),0,0]} onClick={e=>{e.stopPropagation();onSelect?.('part.burial.gable_envelope');}}>
         <planeGeometry args={[L,Math.hypot(W/2,rise)]}/><meshStandardMaterial color="#d9c297" side={THREE.DoubleSide} transparent opacity={.45} depthWrite={false}/>
       </mesh>)}
     </>}

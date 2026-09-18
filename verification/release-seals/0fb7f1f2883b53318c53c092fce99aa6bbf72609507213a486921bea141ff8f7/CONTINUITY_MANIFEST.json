@@ -1,0 +1,742 @@
+{
+  "version": "0.11.1",
+  "codename": "REGISTRATION WORKBENCH",
+  "sealed_at": "2026-09-18T02:02:16.173Z",
+  "required_handoff_files": [
+    {
+      "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
+      "sha256": "18ffb52e20057dc9000356bec8f7d6525056ceee07bb8ec6b2cda63bd56ded6a",
+      "bytes": 6510
+    },
+    {
+      "path": "docs/SOURCE_CAMPAIGN.md",
+      "sha256": "15b73a84e6292a86cf10036c9b836a6662243f43e63625f439227d70b8e1089b",
+      "bytes": 9805
+    },
+    {
+      "path": "README.md",
+      "sha256": "88c57334422a482c23a62a5c77c382fddbb98c88ff9e3a20d0081b5f6a8228d2",
+      "bytes": 11875
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "ebe1f52581814e8d0bfcae9337791814f85c5d83fb15b871980271764ea1d525",
+      "bytes": 22246
+    },
+    {
+      "path": "GIZA.json",
+      "sha256": "3b288b809328ebd1676a74a15cd3b9c1e09169a9282521ef272e10622126d954",
+      "bytes": 2096
+    },
+    {
+      "path": "CONTINUITY.json",
+      "sha256": "5d83ae0d8b0320d5ac233a76869cbe3dba550a033f03ad3c68475fedc89f1617",
+      "bytes": 27418
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "47e170308c1b955f67fcd1fcd928c9a040f81d16a10b790464acdaee5f8fbf96",
+      "bytes": 43778
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "90e404d66ba21a1a286eba862c5c4d6a792926d07de92cb0d08aad51cd1446df",
+      "bytes": 2919
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "9d605148a5feabf81f03943ce386746546991da988af36969225c358b80e4aac",
+      "bytes": 1936
+    },
+    {
+      "path": "docs/RESEARCH_FINDINGS.md",
+      "sha256": "24b16305daf788cbe69c4715a909f7b00e8c8c601aeba874a031ec87a37c6197",
+      "bytes": 2259
+    },
+    {
+      "path": "docs/DESIGN_SYSTEM.md",
+      "sha256": "edfacf96cf836f8bf8a4603213ac14990ebbca5e2bc87f3d2df197ae88cb0434",
+      "bytes": 4196
+    },
+    {
+      "path": "docs/design/LAYOUT_CONTRACT.json",
+      "sha256": "be1aa5a70efcfc0ee57e7083b1d264feeb2d792bbd54f2e68cc66a63dd3f2929",
+      "bytes": 3135
+    },
+    {
+      "path": "docs/OBSERVATORY.md",
+      "sha256": "7634d26f6ab7d4fc4427fa873c693949eacf322284d7570ad79aacde4254f05c",
+      "bytes": 3902
+    },
+    {
+      "path": "public/model/observatory/manifest.json",
+      "sha256": "8350d5db24fa6deae09e8a5f14326f0c73be2ad7aa1c5da98c1de810fcb56fdf",
+      "bytes": 4476
+    },
+    {
+      "path": "docs/ATLAS_INGEST.md",
+      "sha256": "1cd1ad3695ea3a667dee82ab3892851e3ec768ea288edcd7b83e8b874fa1deca",
+      "bytes": 3861
+    },
+    {
+      "path": "public/model/observatory/media_collections.json",
+      "sha256": "a490e8e2f097df56ba160a625852e0842f9ce75faca8db461c3a02beb8ff5c2a",
+      "bytes": 4188
+    },
+    {
+      "path": "public/model/observatory/photo_observations.json",
+      "sha256": "91fb01d79933322aab9b7b865669780b2a15b89bdd3a34bd3282a8c7c63dfa6a",
+      "bytes": 6383
+    },
+    {
+      "path": "docs/REGISTRATION_LAB.md",
+      "sha256": "b0f1655d4c4617f670de2e992d039e847fbeeac68a80748ee55fb8609b274e7e",
+      "bytes": 5273
+    },
+    {
+      "path": "public/model/registration/manifest.json",
+      "sha256": "70408c2051f226c5564dd78c73e644fb2ab3a9f257f78d493ebdf93b1b7c6a8f",
+      "bytes": 2429
+    },
+    {
+      "path": "public/model/registration/survey_control_sources.json",
+      "sha256": "190129abc0372cdfb0e8f0265b471acd3f2cd062af4424f35de13c38535a7137",
+      "bytes": 3907
+    },
+    {
+      "path": "docs/CONTROL_NET.md",
+      "sha256": "e75dc3afb89e02211aa38e05ff3507bdcb87e077381a4bf376f09b447f32bfd7",
+      "bytes": 3923
+    },
+    {
+      "path": "public/model/control_net/manifest.json",
+      "sha256": "cfce02fea88780ecded770e070796a0fb9e9e7f970b9aa604e8c31d13a8bdc31",
+      "bytes": 1725
+    },
+    {
+      "path": "public/model/control_net/orientation_receipts.json",
+      "sha256": "16d227402493782b45dfd604e22b91859ec41b6c5573d680d474f08c78e92e3a",
+      "bytes": 3696
+    },
+    {
+      "path": "public/model/control_net/survey_points.json",
+      "sha256": "46ddb47f876e80bef58d9e4b0fbbc6acc22bf5ea00fbef0e35b8f97ab97241a0",
+      "bytes": 2865
+    },
+    {
+      "path": "docs/ARCHIVE_HARVEST.md",
+      "sha256": "1a278015d8179fa3be68df27c7ae2b724d4e8607f3e3d79b691b1f5232f37c92",
+      "bytes": 5208
+    },
+    {
+      "path": "public/model/corpus/manifest.json",
+      "sha256": "c69ead9fae70217064c14f12b6513de884dc7707872a5f0a6b7b7c6865cf3ca7",
+      "bytes": 2134
+    },
+    {
+      "path": "public/model/corpus/knowledge_nodes.json",
+      "sha256": "10cf120a1c49323131bb3a499bb4e6cce23d0df96fc8b6ce4c94e7b1c9f422e9",
+      "bytes": 33041
+    },
+    {
+      "path": "public/model/corpus/claim_matrix.json",
+      "sha256": "0a09727f16f0469a59cb535a048be80eab152446e8039ab3cf30923ac5b35bb5",
+      "bytes": 4197
+    },
+    {
+      "path": "docs/PRIMARY_SOURCE_VAULT.md",
+      "sha256": "8876a080908864c7e5400b05dfdef6259e65eeb80e356befb3281a10aca05dce",
+      "bytes": 4200
+    },
+    {
+      "path": "public/vault/manifest.json",
+      "sha256": "7388512dae70e4be171eea3466a76def925662535ee350e56e14315fa1bf573a",
+      "bytes": 1933
+    },
+    {
+      "path": "public/vault/assets.json",
+      "sha256": "28b6c656605b7b48260585313cdf170232dec12824fda84f20e9843de7bdadda",
+      "bytes": 13281
+    },
+    {
+      "path": "public/vault/rights_policy.json",
+      "sha256": "374aad4db6c2e9f40517d8fea3bd6086874794af6fef973c0236494ae471713c",
+      "bytes": 780
+    },
+    {
+      "path": "public/vault/remote_locks.json",
+      "sha256": "d3f92dcc694e8c4a30c422e1ff5819ceee7fbdb52dfe5c55d3c77e7d08f89108",
+      "bytes": 739
+    },
+    {
+      "path": "public/vault/receipts/verification_receipts.json",
+      "sha256": "04d0618e6afaaf9a81cdcce212a716ea36c48852b2cb229afc6eb57fa6ae3443",
+      "bytes": 2488
+    },
+    {
+      "path": "PRIMARY_SOURCE_VAULT_MANIFEST.json",
+      "sha256": "d18221500fa4097ba152f841b9d579cf338d82c77ac9ea7a06f8c351cee39f7b",
+      "bytes": 3254
+    },
+    {
+      "path": "docs/INTENT_RECONSTRUCTION.md",
+      "sha256": "15f31d32968ab43fa15b310489a3cea974fc758c7ce564ba5d30a25d1d0415ca",
+      "bytes": 6340
+    },
+    {
+      "path": "public/model/intent/manifest.json",
+      "sha256": "0d04b9bc36cf9617500f415f5d54faee4fe6a236bc7c58c8616a29c573409d01",
+      "bytes": 1249
+    },
+    {
+      "path": "public/model/intent/hypotheses.json",
+      "sha256": "5d9228aa71e6642160a950a2cd13f5106ac62a6a09f56c34e9d9fd4679224867",
+      "bytes": 5347
+    },
+    {
+      "path": "public/model/intent/evidence_links.json",
+      "sha256": "6cdf3f056db86f4c9df3491aac62024f41d9be4f47203ea4efc5e8bba45f446e",
+      "bytes": 8907
+    },
+    {
+      "path": "public/model/intent/test_matrix.json",
+      "sha256": "0caa825079e758cefe2695a32ab9836b48def18308326ff10001bb5c656dace1",
+      "bytes": 2963
+    },
+    {
+      "path": "public/model/intent/synthesis.json",
+      "sha256": "91a40aa92e83222a2fe859886901e3cef05c8bdf83004fe0f754e0ab7e5c5a1e",
+      "bytes": 3744
+    },
+    {
+      "path": "INTENT_RECONSTRUCTION_MANIFEST.json",
+      "sha256": "2bd0ee27fb84ea3d4311f08966548ac9ab297e66af4d81cf074cf5b4a7c68c7f",
+      "bytes": 2049
+    },
+    {
+      "path": "docs/RITUAL_MAP.md",
+      "sha256": "5ab3de52a45af812412112cee209425513b1e18f3f4f608bb86b53a8c6519d3d",
+      "bytes": 8219
+    },
+    {
+      "path": "public/model/maps/manifest.json",
+      "sha256": "7714939bae377aae3c97a705af9fb5428c9a28fcfa1a48ff083bca8aed3d7a55",
+      "bytes": 5948
+    },
+    {
+      "path": "public/model/maps/layers/plateau_master.json",
+      "sha256": "ee3d4972e81cb8308ab2374ae6d3d58e24e558cf32fc22914d552c567f09f80b",
+      "bytes": 3159
+    },
+    {
+      "path": "public/model/maps/layers/ritual_route.json",
+      "sha256": "20b175dc2912cf4a5ef098e6c287e91b5fd0e03c41605fced1c42810a529b63b",
+      "bytes": 3528
+    },
+    {
+      "path": "public/model/maps/layers/survey_control.json",
+      "sha256": "dafc941241d4f17e595084c281417da7cefd5c2036f36f012f5b41626bd26b76",
+      "bytes": 1842
+    },
+    {
+      "path": "public/model/maps/layers/geology_quarry.json",
+      "sha256": "9bbcec5564f8e87a77ad237766cf52849e2dbcb213213c403543b4c185a7d549",
+      "bytes": 1470
+    },
+    {
+      "path": "public/model/maps/layers/historical_sources.json",
+      "sha256": "fe07669fe0a88d13f1a61fc476cda448489b483296f54e1defccee493bee8e48",
+      "bytes": 1683
+    },
+    {
+      "path": "public/model/maps/layers/intent_map.json",
+      "sha256": "c2f8035d6513cc2607c33c3bb2e5362d1daa6bc016b3543a19e0660d558eccc1",
+      "bytes": 761
+    },
+    {
+      "path": "public/model/maps/layers/photo_coverage.json",
+      "sha256": "cd8a946ccf5337822fd542255bd31ab8e257e78b5c5d90b24413557fbe30e05f",
+      "bytes": 1176
+    },
+    {
+      "path": "RITUAL_MAP_MANIFEST.json",
+      "sha256": "06ec0b47b502444153a3188f554c510a5e7b652046aa5446ed49c3a336f7509f",
+      "bytes": 4032
+    },
+    {
+      "path": "docs/SOURCE_PARSER.md",
+      "sha256": "3032f5799ba071c5c07c428c99b1034d179d34f8cedef9487c44bd38f9f4b17f",
+      "bytes": 2552
+    },
+    {
+      "path": "public/model/source_parser/manifest.json",
+      "sha256": "a9d0511854a28a671d89052685917a7c0e0ca9250311d426fb01631505ddc47e",
+      "bytes": 1053
+    },
+    {
+      "path": "public/model/source_parser/targets.json",
+      "sha256": "bcc30e959af5d1f245be514da34a53e94139e641baf6d84180cf062a629ff0e0",
+      "bytes": 4376
+    },
+    {
+      "path": "public/model/source_parser/parsed_records.json",
+      "sha256": "50bafe43fadefd8d213e24787ee9d33a740d3981c8e55cc138b8e033c6e8200e",
+      "bytes": 28157
+    },
+    {
+      "path": "public/model/source_parser/parser_receipts.json",
+      "sha256": "6b84e5c9fcf7ab245c0b06ab01ef99786de48d32a7048aabb983a6457c846ef2",
+      "bytes": 14996
+    },
+    {
+      "path": "SOURCE_PARSER_MANIFEST.json",
+      "sha256": "13aed391b8405e78731995cc0511f19e797508eb367640a9f9768efda0a55e95",
+      "bytes": 1989
+    },
+    {
+      "path": "docs/ACTION_GRAPH.md",
+      "sha256": "cf707ec152f8540ed132cafbf23d02f3fd4698bf09d81ea3973feeddb6197b52",
+      "bytes": 3780
+    },
+    {
+      "path": "public/model/action_graph/manifest.json",
+      "sha256": "cdc8c11ecb34d8f2ff0087981e50e51c4d712394eef55a133f1f75fa203c74ea",
+      "bytes": 1007
+    },
+    {
+      "path": "public/model/action_graph/seeds.json",
+      "sha256": "2a1579ccd7750779831d7559b5925a057e24c7b054391a61d8b3a60880469840",
+      "bytes": 6979
+    },
+    {
+      "path": "public/model/action_graph/graph.json",
+      "sha256": "8b9a67767fb6853301596c5d6fac2637648ec7720f3d0acf8b92b8d24a94b3ee",
+      "bytes": 14225
+    },
+    {
+      "path": "public/model/action_graph/traversal.json",
+      "sha256": "f787e9d1789d76b74d524b24ab9131aed5168d8e32adc9663892e7e9035516ea",
+      "bytes": 1040
+    },
+    {
+      "path": "public/model/maps/layers/action_graph.json",
+      "sha256": "818aad3ced478bf2cd7f75f2d513ea074e41b24ee45b06933dfd26c2c70da5c9",
+      "bytes": 7791
+    },
+    {
+      "path": "ACTION_GRAPH_MANIFEST.json",
+      "sha256": "368be1303c96e1d3e3f891c62380ce37768f880812c4d2b368cfa5b28d2b7a16",
+      "bytes": 1960
+    },
+    {
+      "path": "docs/PRIMARY_PLAN_PARSER.md",
+      "sha256": "6ebbd5af1502aba1210abcf9b57eac467e1eebf38e44339e47f1992d12ba9064",
+      "bytes": 3102
+    },
+    {
+      "path": "docs/ROOM_GRAPH.md",
+      "sha256": "c29ad6e5dcb275486f33ea008fa3e1bc8bdca6e38fbcb43224cb519e2ef9c7c2",
+      "bytes": 2915
+    },
+    {
+      "path": "PRIMARY_PLAN_PARSER_MANIFEST.json",
+      "sha256": "aa3c0df91d9ab18490d29e4c337ba446c885f7e1512857b93e0b048ebb406b72",
+      "bytes": 1518
+    },
+    {
+      "path": "ROOM_GRAPH_MANIFEST.json",
+      "sha256": "c53cb69b22131ba0c45dbc19c1070c3ebacca52e2cf1cfc84cf9897ad63b8203",
+      "bytes": 2130
+    },
+    {
+      "path": "public/model/plan_parser/manifest.json",
+      "sha256": "53a1a67c5ba26981d532b88f1d31e69ec6b924dd51ee7f881aff51affc430d08",
+      "bytes": 720
+    },
+    {
+      "path": "public/model/plan_parser/plan_sources.json",
+      "sha256": "d379e538f0e2824a5915be814addfa04dc73c28319225f644a83f445cd63a5c1",
+      "bytes": 6282
+    },
+    {
+      "path": "public/model/plan_parser/extractions.json",
+      "sha256": "63465257709581ba5441a66bab5916c3745574885ae7bd7986e20fced4a091df",
+      "bytes": 23171
+    },
+    {
+      "path": "public/model/plan_parser/conflicts.json",
+      "sha256": "e810b5f6c27ed5f26e475ed8f772b9ea24bfb7f7be7274db08352aa3926cc8aa",
+      "bytes": 1879
+    },
+    {
+      "path": "public/model/room_graph/manifest.json",
+      "sha256": "0c91182e6e716e107f24abd370559557190630cd4a699f894c68ba9c40a48421",
+      "bytes": 753
+    },
+    {
+      "path": "public/model/room_graph/graph.json",
+      "sha256": "b3e97ebb3114c84ea4dcc3fed03f800908fe8962d8104c16575876ac6f06be60",
+      "bytes": 20701
+    },
+    {
+      "path": "public/model/room_graph/spaces.json",
+      "sha256": "efeeebd42a428fb0d39998377386684dd9516983100b3054383797b68c8fd0a0",
+      "bytes": 10807
+    },
+    {
+      "path": "public/model/room_graph/thresholds.json",
+      "sha256": "e2254bcbce2c7ac849faf7ad122ca49b474f7ab7ecc7944b125b0534f7ce95d2",
+      "bytes": 6317
+    },
+    {
+      "path": "public/model/room_graph/constraints.json",
+      "sha256": "0691cd8694e69be898d08050db2b343c0aca6594a6678c4be90f1fd421a6071d",
+      "bytes": 2220
+    },
+    {
+      "path": "public/model/maps/layers/room_graph.json",
+      "sha256": "c1420c6a4e668dd88c47993af505878b8d0591289034da4c7c2d00795c0908c3",
+      "bytes": 15896
+    },
+    {
+      "path": "docs/PLAN_CONCORDANCE.md",
+      "sha256": "d9ff2a1cf3e78de2a52ee9339f332e11e93ec8dcedff48789123c90628571f7a",
+      "bytes": 2599
+    },
+    {
+      "path": "public/model/plan_concordance/facts.json",
+      "sha256": "75e533a6620b83897168407133370d59a65aff4a45f4adad8a77d9fe4f13a7d2",
+      "bytes": 7784
+    },
+    {
+      "path": "public/model/plan_concordance/matrix.json",
+      "sha256": "021aa20d33b389007a8e05c4a3511e4d1c1d71025cbbb7bd204bcc765a938edc",
+      "bytes": 21883
+    },
+    {
+      "path": "public/model/plan_concordance/manifest.json",
+      "sha256": "c377f399f00a70e3b178653b1e6b880f05b28b38c3caf7ad1a4e6d9828fceaf2",
+      "bytes": 1057
+    },
+    {
+      "path": "PLAN_CONCORDANCE_MANIFEST.json",
+      "sha256": "f148953db75fd9fd251f4be1a5b55ca5e515dc63a47cafd2218c615eb515c53e",
+      "bytes": 1629
+    },
+    {
+      "path": "docs/VISIBILITY_LAB.md",
+      "sha256": "96c499aba7256587613fae9b351cbdce6da83c663ead4dafaef5621729742844",
+      "bytes": 2689
+    },
+    {
+      "path": "public/model/visibility_lab/states.json",
+      "sha256": "e717b0f61e3d3a7c0f40ccb379ee22088de6e76bb6539d641b67b7e8a754d792",
+      "bytes": 5597
+    },
+    {
+      "path": "public/model/visibility_lab/route_metrics.json",
+      "sha256": "755d630baebaa8836295fe4abc786a4b967a449035089680be17014796fafcc6",
+      "bytes": 13952
+    },
+    {
+      "path": "public/model/visibility_lab/transition_analysis.json",
+      "sha256": "a32b5cbfab3a4c691938fa5167fc68e0a9c652ae2b52a64f1d1a6a1e8256ec18",
+      "bytes": 9567
+    },
+    {
+      "path": "public/model/visibility_lab/manifest.json",
+      "sha256": "639e274f466e0fd4c6b5b1840e6306474555f4a131574eca9149886236ff8584",
+      "bytes": 862
+    },
+    {
+      "path": "public/model/maps/layers/visibility_lab.json",
+      "sha256": "12f16361e2023fbff15480e4fe38b20bb0d0cd5bdc8b6129a565191ed046f7e8",
+      "bytes": 26750
+    },
+    {
+      "path": "VISIBILITY_LAB_MANIFEST.json",
+      "sha256": "c4b38f34dd0f7a0270c1807bb2d8e048182c92e8a8a9da6c76cc8881ad6cab0b",
+      "bytes": 2131
+    },
+    {
+      "path": "docs/SOURCE_BYTE_REGISTRATION.md",
+      "sha256": "6f924f97bb0553c582babb3f02b87ae0831190cd536e380cf3b1af9ce60b5b53",
+      "bytes": 3068
+    },
+    {
+      "path": "public/model/source_byte_registration/manifest.json",
+      "sha256": "269c405eef5b20c738029e0738f5d394a783fb5e24159811178948a4719f368e",
+      "bytes": 1517
+    },
+    {
+      "path": "public/model/source_byte_registration/candidates.json",
+      "sha256": "d1fef78ec515606199480c80baa248f24d1486931d2724f20566b3b164da7c0b",
+      "bytes": 4451
+    },
+    {
+      "path": "public/model/source_byte_registration/page_locators.json",
+      "sha256": "74d195deccd46b3f69bce3597e1b0952eada2bd7c69de63329b77f7c3a7fffae",
+      "bytes": 4078
+    },
+    {
+      "path": "public/model/source_byte_registration/rights_gates.json",
+      "sha256": "d7e1b24ce0c547bcc2a8ef7adba14c5ad3ec3921e4b7bc17a6428f9a5c633e87",
+      "bytes": 1196
+    },
+    {
+      "path": "public/model/source_byte_registration/registration_jobs.json",
+      "sha256": "574c4e2ca68f3619aad2e867edd684c1067a0d7ebb841bc25b38e69525421706",
+      "bytes": 2689
+    },
+    {
+      "path": "SOURCE_BYTE_REGISTRATION_MANIFEST.json",
+      "sha256": "54b71daa14fc5f6c03b71d3e339c764afd8705dbbc13f7cc69d0660efed457ba",
+      "bytes": 3271
+    },
+    {
+      "path": "docs/METRIC_VIEW_LAB.md",
+      "sha256": "8802ddb413cee0c8579e7e250f55f0ef4dd0e2d7be8227e6012e55e0430ff947",
+      "bytes": 1948
+    },
+    {
+      "path": "docs/EMERGENCE_REPORT.md",
+      "sha256": "e7003fde7d670b8a4761e1d96c020087dd3e5352b5a0dfccb18f3848550640c3",
+      "bytes": 3639
+    },
+    {
+      "path": "public/model/metric_view_lab/manifest.json",
+      "sha256": "1e764cc452b4f18a7269ddf20fe40fdb3631f3b8be8247772f4d34765e35c384",
+      "bytes": 944
+    },
+    {
+      "path": "public/model/metric_view_lab/metric_readiness.json",
+      "sha256": "165f9721f4e386c30ab74256c6728b8a34867e0d7b8284ceb2cd7b900b50f9de",
+      "bytes": 2132
+    },
+    {
+      "path": "public/model/metric_view_lab/ray_contract.json",
+      "sha256": "e6282f79011c43177f1834c741a4effe71dcf4b463476a1c1e51bed51ca0a895",
+      "bytes": 974
+    },
+    {
+      "path": "public/model/metric_view_lab/registration_requirements.json",
+      "sha256": "cf1c661e0f378ccf127cef8e8f27a54dc4a178e3586a5e0ecb17a63c51225930",
+      "bytes": 1135
+    },
+    {
+      "path": "public/model/metric_view_lab/emergence_report.json",
+      "sha256": "ba0d08042932c1c4fd7ab5994a8e8326740aeef39a0173e295698dad7ff6992a",
+      "bytes": 5742
+    },
+    {
+      "path": "public/model/maps/layers/metric_readiness.json",
+      "sha256": "ee6e7f1adfdd311195151a3ce3ac034906ded86397b8fe51b1fcbcaa57fd92d9",
+      "bytes": 2111
+    },
+    {
+      "path": "METRIC_VIEW_LAB_MANIFEST.json",
+      "sha256": "b65f75d3a79c5eb9ef495c1e0c6335f4ede0b428f1aac6b9d197967ddd35a089",
+      "bytes": 2162
+    },
+    {
+      "path": "public/model/plate_registration/manifest.json",
+      "sha256": "a4b1b9ee7cc20ee8a166d9d13d79bb6c1ecfd593db9f053f9ec38f2b6e4d75f4",
+      "bytes": 1778
+    },
+    {
+      "path": "public/model/plate_registration/preregistered_thresholds.json",
+      "sha256": "670bf00aabff20bd5343cb8e9ee1c6fac7131ea17660f8553decee019d695bc8",
+      "bytes": 2068
+    },
+    {
+      "path": "public/model/plate_registration/frames.json",
+      "sha256": "3bc79486f1a496e5a8ac20d6420c31af391b79907be9345212b0fd4b3d7b50b5",
+      "bytes": 1143
+    },
+    {
+      "path": "public/model/plate_registration/first_plate_campaign.json",
+      "sha256": "72657fa1a6ebaa15296f6cadbdf518bd5c1b9f73ac06a1207194ffd1292418f1",
+      "bytes": 1348
+    },
+    {
+      "path": "public/model/plate_registration/cross_source_holdout.json",
+      "sha256": "9e802ad6d7ed50e4a5bac295ee24ad8422e7af766bd0c7ce57ea1b957b8ce036",
+      "bytes": 996
+    },
+    {
+      "path": "public/model/source_byte_registration/remote_receipts.json",
+      "sha256": "96b3791ac08b5e66d5635036c8986581121e7d5eaa2ba0c7167ec1806288bbcb",
+      "bytes": 2592
+    },
+    {
+      "path": "public/model/source_byte_registration/acquisition_attempts.json",
+      "sha256": "58f1a6db7401cdcac08383b5d4a722752b73ed9c96a8dd9836cd4d137fcbdcdb",
+      "bytes": 2542
+    },
+    {
+      "path": "docs/PLATE_REGISTRATION.md",
+      "sha256": "53a5bc66bfeb1789c6edc32c2a6f6f17401dbe8697f7d218b3b486614e6a01a9",
+      "bytes": 2873
+    },
+    {
+      "path": "docs/FIRST_PLATE_CAMPAIGN.md",
+      "sha256": "c8c374a6034fc8b1ee79912a7b04c3680dfdc2c90050bd7d60009295ad4b95af",
+      "bytes": 2669
+    },
+    {
+      "path": "PLATE_REGISTRATION_MANIFEST.json",
+      "sha256": "82c4b2080f0cdd45ad5017bbe442a8c05e268ef3dd27ade6600dfa82d6a4cfa9",
+      "bytes": 5029
+    },
+    {
+      "path": "public/model/plate_registration/remote_plate_witness.json",
+      "sha256": "c574073d83b41e47f31417b03f7f2230a028ec2820ad6b9028749dd9d8ad41e2",
+      "bytes": 1400
+    },
+    {
+      "path": "public/model/plate_registration/dimension_graph.json",
+      "sha256": "11e9dc474c6ca5f1b387000e22ca0679128ac219a36f86bb414ba51be5d3f070",
+      "bytes": 8143
+    },
+    {
+      "path": "public/model/plate_registration/registration_readiness.json",
+      "sha256": "f273d46bd2965fd8f041e44b883027309363503c5b5e0049b40257ab88cfe980",
+      "bytes": 1336
+    },
+    {
+      "path": "docs/REMOTE_PLATE_WITNESS.md",
+      "sha256": "31a9183a90113041dc8127b4c68a88c39be2e8833f138361a623bb1eb1ba5648",
+      "bytes": 715
+    },
+    {
+      "path": "docs/DIMENSION_GRAPH.md",
+      "sha256": "9d1f50013867306bd4c5e033480a2ff4ba7aa788564cf4ce5e23b22098ce1ddd",
+      "bytes": 559
+    },
+    {
+      "path": "docs/CHECKSUM_HANDOFF.md",
+      "sha256": "af287897be06ade439a35242319b5c39d2b8b3797f96b0ec71b0e2a71356d844",
+      "bytes": 1682
+    },
+    {
+      "path": "docs/PLATE_VI_LANDMARK_PROTOCOL.md",
+      "sha256": "2f151dc12ac950653e103388a18a8f85b1f162b127890c7ea7934f6de1e7b9a9",
+      "bytes": 1618
+    },
+    {
+      "path": "public/model/plate_registration/remote_file_fingerprint.json",
+      "sha256": "1e6218f51cf642db63c1a6fd044bae67c215dd6edf6ae72d569cae3f4426b212",
+      "bytes": 1313
+    },
+    {
+      "path": "public/model/plate_registration/custody_handoff.json",
+      "sha256": "32bf6c06d705d146c766a4461b954a3a25be2ce057dc6ce1f715435053e7d9ea",
+      "bytes": 1166
+    },
+    {
+      "path": "public/model/plate_registration/landmark_protocol.json",
+      "sha256": "144d7ec64e2c0c56d261f425262c7a56ffd8dbfa928fd7cd99b5ebafc912202d",
+      "bytes": 3264
+    },
+    {
+      "path": "scripts/source_bytes/import-petrie.mjs",
+      "sha256": "852b88bc9f80cc8bc004e748ce66924c4b998528c0d0b6ee2e87ff26d009114c",
+      "bytes": 3279
+    },
+    {
+      "path": "scripts/plate_registration/render-plate-vi.mjs",
+      "sha256": "8c78a0d07b06db4ab75e310bd04ec36c1b9726fb0d689166ee1dba4c9ad5fee5",
+      "bytes": 1953
+    },
+    {
+      "path": "scripts/plate_registration/confirm-plate-vi.mjs",
+      "sha256": "138fb157e2ad87dde21f6090d51ea73e07d50a9e903376e0e4ed552629aa3fa6",
+      "bytes": 1339
+    },
+    {
+      "path": "scripts/plate_registration/freeze-landmarks.mjs",
+      "sha256": "f8bbea2616849902307d72b8db3a80804dd0191209273f3339285a1d5a912f33",
+      "bytes": 512
+    },
+    {
+      "path": "scripts/desktop/Invoke-GizaPlateVI.ps1",
+      "sha256": "95587bb6b99360dff069738fb05ac9ee555fea44c478c52e1c447d6e1c21d62f",
+      "bytes": 1731
+    },
+    {
+      "path": "docs/REGISTRATION_WORKBENCH.md",
+      "sha256": "7444c75ec0d8ce1d4ca4bdf8ebb9967ca1db06e928c9fbf322354c8fe037f449",
+      "bytes": 3157
+    },
+    {
+      "path": "scripts/plate_registration/engine.mjs",
+      "sha256": "8b36a1ea45180e8630284da642809d6e615ec394733725d82be231e09ebb7a22",
+      "bytes": 13899
+    },
+    {
+      "path": "tests/registration-repairs.test.mjs",
+      "sha256": "082c7874073e48202161357ac64d8183053edd44137f30ea2ae113315e25797c",
+      "bytes": 9950
+    },
+    {
+      "path": "public/workbench/index.html",
+      "sha256": "af78219e99b6baea10de3810d336f216f1ce55d64f62bdbf6e8dc319acbc7f1d",
+      "bytes": 7156
+    },
+    {
+      "path": "public/workbench/workbench.js",
+      "sha256": "8634eeecf3faa44da76805e0bb9a6bc8e03c03082f9fa0baa09f54034d54daf2",
+      "bytes": 15355
+    },
+    {
+      "path": "public/workbench/workbench.css",
+      "sha256": "5c616b8a01a7c95da9e2a5e82cc6b11f3fbc577f709fae68d37eaada16faac3c",
+      "bytes": 10964
+    },
+    {
+      "path": "WORKBENCH_MANIFEST.json",
+      "sha256": "f4391e2ee1a14b1bb9513ba6a8def14868946950bff89e808a323e061665884c",
+      "bytes": 4703
+    },
+    {
+      "path": "docs/EVIDENCE_ASSEMBLY.md",
+      "sha256": "2bf7c6702bd5b881ce0399365b36efdf367d4024c576755129bca75ec36337ae",
+      "bytes": 14559
+    },
+    {
+      "path": "EVIDENCE_ASSEMBLY_MANIFEST.json",
+      "sha256": "e5da26508d703226b82373e1405065f377d1fb75265059b9357e540c49fa6368",
+      "bytes": 9791
+    },
+    {
+      "path": "src/evidence/types.ts",
+      "sha256": "1197d552e790568e6f2c3fc6893506b4ce7a70021b7d338da16529396256341c",
+      "bytes": 3693
+    },
+    {
+      "path": "src/evidence/assembly.ts",
+      "sha256": "271a0e407af6f7f5e982e6e6ecd06a89f1a7bef1d49c3b19e11774ea674da924",
+      "bytes": 23669
+    },
+    {
+      "path": "src/evidence/spatial.ts",
+      "sha256": "f47037fcad9ff1e327fd0b236397e14da4737eb279cccd320a25abcb55d261d9",
+      "bytes": 16369
+    },
+    {
+      "path": "src/evidence/graph.ts",
+      "sha256": "47be4b107541662a06c80a98e654c75e5f593fed0c9e51c7408cdae22d257811",
+      "bytes": 19336
+    },
+    {
+      "path": "src/evidence/receipts.ts",
+      "sha256": "0b2da1bf635b8592688b09566fb88d7bed3df77580ee09eb9caf71f0b8c8736b",
+      "bytes": 25411
+    },
+    {
+      "path": "docs/RELIABILITY_0_11_1.md",
+      "sha256": "6a1d9afa38ee8b6369f8b827411dd0dba3d6190aa16fe85cbd5f328924f134f6",
+      "bytes": 9176
+    }
+  ]
+}

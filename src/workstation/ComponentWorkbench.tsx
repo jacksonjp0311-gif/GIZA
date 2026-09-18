@@ -11,6 +11,7 @@ export function ComponentWorkbench({model,part,initialContext,onClose,onOpen,onS
 }) {
   const [context,setContext]=useState<DetailContext>(initialContext);
   const [lidLift,setLidLift]=useState(.8);
+  const [explosion,setExplosion]=useState(0);
   const [survey,setSurvey]=useState(false);
   const [roof,setRoof]=useState(part.id==='part.burial.gable_envelope');
   const [revision,setRevision]=useState(0);
@@ -37,7 +38,7 @@ export function ComponentWorkbench({model,part,initialContext,onClose,onOpen,onS
     <div className={`componentStage${evidence||catalog?' drawerOpen':''}`}>
       <div className="componentVisual">
       <div className="componentRender">
-      <ComponentScene model={model} part={part} context={context} lidLift={lidLift} dimensions={dimensions} roof={roof} survey={survey} revision={revision} top={top} wide={wide} onSelect={onSelect}/>
+      <ComponentScene explosion={explosion} model={model} part={part} context={context} lidLift={lidLift} dimensions={dimensions} roof={roof} survey={survey} revision={revision} top={top} wide={wide} onSelect={onSelect}/>
       </div>
       <div className="componentViewControls">
         {!chamber&&part.id!=='part.burial.chamber'&&<><button className={context==='OBJECT'?'active':''} onClick={()=>{setContext('OBJECT');setWide(false);setRevision(v=>v+1);}}>Object only</button>
@@ -49,6 +50,7 @@ export function ComponentWorkbench({model,part,initialContext,onClose,onOpen,onS
         {part.id==='part.sarcophagus.body'&&<button onClick={()=>onOpen('part.sarcophagus.lid','OBJECT')}>Inspect lid</button>}
       </div>
       <div className="componentControls">
+        <details className="assemblyExplode"><summary>Explode / restore</summary><label>Inspection separation<input aria-label="Component explosion distance" type="range" min="0" max="3" step=".01" value={explosion} onChange={e=>setExplosion(Number(e.target.value))}/></label><button onClick={()=>setExplosion(0)}>Restore assembly</button><small>Display-only separation of modeled components and room panels, not stone fractures or physical clearances. A single-piece object stays intact.</small></details>
         {showLid&&<label>Inspection lid lift <input aria-label="Sarcophagus lid lift" type="range" min="0" max="1.5" step=".01" value={lidLift} onChange={e=>setLidLift(Number(e.target.value))}/><span>{lidLift===0?'Hidden':(lidLift*1.3).toFixed(2)+' m'}</span></label>}
         {hasDimensions&&<label><input type="checkbox" checked={dimensions} onChange={e=>setDimensions(e.target.checked)}/>Dimensions</label>}
         {part.id==='part.sarcophagus.body'&&<label><input type="checkbox" checked={survey} onChange={e=>setSurvey(e.target.checked)}/>Survey pin markers</label>}

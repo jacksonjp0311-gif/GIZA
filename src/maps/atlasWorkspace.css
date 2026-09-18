@@ -1,0 +1,50 @@
+.app .workspace.atlasWorkspace{grid-template-columns:minmax(0,1fr)}
+.atlasWorkspace>.leftRail,.atlasWorkspace>.rightRail{display:none}
+.atlasWorkspace .atlasShell{grid-column:1/-1;grid-template-rows:minmax(0,1fr);min-height:0}
+.atlasShell>.quickViewsBar{display:none}
+.atlasShell .mapAtlasRoot{padding:8px 0 0}
+.atlasShell .atlasNavigator{margin:0 8px 8px}
+.atlasShell .atlasNavHead{padding:10px;gap:12px;flex-wrap:wrap}
+.atlasShell .atlasNavHead span,.atlasShell .atlasNavHead b,.atlasShell .atlasNavHead small{font-size:12px;letter-spacing:.04em}
+.atlasShell .atlasMapTabs{gap:6px;padding:8px}
+.atlasShell .atlasMapTabs button{min-width:190px;max-width:220px;padding:10px;min-height:60px}
+.atlasShell .atlasMapTabs button b{font-size:14px;white-space:normal;line-height:1.35}
+.atlasShell .atlasMapTabs button span{font-size:12px;white-space:normal;line-height:1.4}
+.atlasLayerOptions{padding:7px 10px;font-size:13px}
+.atlasLayerOptions summary{cursor:pointer}
+.atlasShell .atlasLayerStrip{flex-wrap:wrap;padding:8px 0;gap:8px}
+.atlasShell .atlasLayerStrip button{font-size:12px;padding:8px}
+.atlasShell .atlasHero{display:none}
+.atlasShell .atlasMapSection>header{align-items:flex-start;flex-wrap:wrap;gap:12px;padding:16px}
+.atlasShell .atlasMapSection>header h3{font-size:24px}
+.atlasShell .atlasMapSection>header p,.atlasShell .atlasMapSection>header small{font-size:13px;line-height:1.5}
+.atlasShell .mapTruthBadges{display:flex;flex-wrap:wrap}
+.atlasShell .mapTruthBadges span,.atlasShell .mapTruthBadges b{font-size:11px;white-space:normal}
+.atlasShell .atlasMapNote p{font-size:14px;line-height:1.6}
+.atlasShell .atlasMapNote span,.atlasShell .atlasMapNote>b{font-size:12px;line-height:1.5}
+.atlasShell .atlasMapFrame{overflow:auto;aspect-ratio:auto;min-height:0}
+.atlasShell .atlasMapFrame:before,.atlasShell .mapScanline{display:none}
+.atlasReadingTools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:10px 16px;font-size:13px}
+.atlasReadingTools label{display:flex;align-items:center;gap:8px}
+.atlasDrawing{min-width:1000px;position:relative;aspect-ratio:1000/620}
+.atlasDrawing svg{position:relative!important;display:block;width:100%;height:auto;aspect-ratio:1000/620}
+.atlasLabelIndex{padding:10px 16px;font-size:13px;line-height:1.6}
+.atlasLabelIndex ul{columns:3 240px;padding-left:20px}
+.assemblyExplode{position:relative;font-size:12px;max-width:310px}
+.assemblyExplode summary{cursor:pointer;border:1px solid #947242;border-radius:4px;padding:7px}
+.assemblyExplode[open]{padding:8px;background:#172124;border:1px solid #947242}
+.assemblyExplode label,.assemblyExplode small{display:block;line-height:1.5}
+.assemblyExplode input{display:block;width:100%;accent-color:#edb766;margin:10px 0}
+@media(max-width:700px){.atlasShell .atlasMapTabs button{min-width:170px}.atlasShell .atlasMapNote{grid-template-columns:1fr}.atlasShell .atlasMapNote>b{grid-row:auto}.atlasShell .mapAtlasScroller{padding:0 6px 12px}.atlasShell .atlasNavHead>div{flex-wrap:wrap}.atlasShell .atlasMapSection>header h3{font-size:20px}}
+.atlasDrawing svg text{font-family:system-ui,sans-serif;filter:none;text-shadow:none;font-size:12px!important}
+.atlasWorkspace>aside{display:none}
+.viewportExplodeControl label{display:flex;gap:8px;align-items:center;font-size:12px;grid-column:1/-1}
+.viewportExplodeControl select{min-width:0;max-width:185px;background:#142229;color:#f1d39a;border:1px solid #947242;padding:5px}
+.viewportExplodeControl small{grid-column:1/-1;display:block;font-size:11px;line-height:1.4}
+.atlasReadingTools button{background:#15242b;color:#f1d39a;border:1px solid #947242;padding:7px;border-radius:4px}
+.atlasMapChooser{padding:8px 10px;display:flex;gap:15px;align-items:flex-start;flex-wrap:wrap;font-size:13px}
+.atlasMapChooser label{display:flex;align-items:center;gap:10px}
+.atlasMapChooser select{max-width:230px;padding:7px;background:#13242c;color:#f1d39a;border:1px solid #947242;border-radius:4px}
+.atlasMapChooser>details{min-width:0;flex:1;max-width:100%}
+.atlasMapChooser summary{padding:7px;cursor:pointer}
+.atlasMapChooser .atlasMapTabs{max-width:100%;overflow-x:auto}

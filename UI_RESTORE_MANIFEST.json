@@ -28,13 +28,13 @@
     },
     {
       "path": "src/workstation/LeftRail.tsx",
-      "sha256": "8fc6dc284bbed45074f82abf4c638e8a023a3638cb377bd587925f4036c7b4c8",
-      "bytes": 5055
+      "sha256": "e2544bf6aaa9d896dafe14cd4af479ab01066180a6ca2a7cbf10d88a09a45690",
+      "bytes": 5324
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894",
-      "bytes": 9148
+      "sha256": "65b6c57f06cf9d45266618273889de419092cfd9be2c484881f40ebf2df3d76f",
+      "bytes": 10616
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
@@ -48,8 +48,8 @@
     },
     {
       "path": "src/styles.css",
-      "sha256": "6c1fd541039e68fb98c83ac0ffca4864c62b4112c1481a0a6135c3c5e9877e7d",
-      "bytes": 78553
+      "sha256": "12c4d443008a74d9611a8022e28e397c3a21466bce9fad0fb5c1d11eed0227d5",
+      "bytes": 78907
     },
     {
       "path": "docs/design/APPROVED-UI-TARGET.png",
@@ -83,5 +83,5 @@
     }
   ],
   "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z"
+  "sealed_at": "2026-09-18T02:36:28.684Z"
 }

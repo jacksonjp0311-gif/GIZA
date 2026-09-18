@@ -1,0 +1,99 @@
+{
+  "version": "0.10.1",
+  "codename": "PRIMARY SOURCE VAULT",
+  "phase": "BYTE_LEVEL_CHAIN_OF_CUSTODY",
+  "canonical_geometry_changed": false,
+  "nexus_shell_changed": false,
+  "raw_primary_binaries_cached_in_chat_sandbox": 0,
+  "counts": {
+    "assets": 14,
+    "normalized_snapshots": 5,
+    "verification_receipts": 5,
+    "remote_hash_locks": 2,
+    "local_primary_binaries": 0
+  },
+  "files": [
+    {
+      "path": "public/vault/manifest.json",
+      "sha256": "7388512dae70e4be171eea3466a76def925662535ee350e56e14315fa1bf573a",
+      "bytes": 1933
+    },
+    {
+      "path": "public/vault/assets.json",
+      "sha256": "28b6c656605b7b48260585313cdf170232dec12824fda84f20e9843de7bdadda",
+      "bytes": 13281
+    },
+    {
+      "path": "public/vault/rights_policy.json",
+      "sha256": "374aad4db6c2e9f40517d8fea3bd6086874794af6fef973c0236494ae471713c",
+      "bytes": 780
+    },
+    {
+      "path": "public/vault/remote_locks.json",
+      "sha256": "d3f92dcc694e8c4a30c422e1ff5819ceee7fbdb52dfe5c55d3c77e7d08f89108",
+      "bytes": 739
+    },
+    {
+      "path": "public/vault/cache_status.json",
+      "sha256": "988ebeb0e7bda8cd7fdf4da72795a3fef8f8e6e49b473384dc9a32ae8a87dfcb",
+      "bytes": 412
+    },
+    {
+      "path": "public/vault/receipts/verification_receipts.json",
+      "sha256": "04d0618e6afaaf9a81cdcce212a716ea36c48852b2cb229afc6eb57fa6ae3443",
+      "bytes": 2488
+    },
+    {
+      "path": "docs/PRIMARY_SOURCE_VAULT.md",
+      "sha256": "8876a080908864c7e5400b05dfdef6259e65eeb80e356befb3281a10aca05dce",
+      "bytes": 4200
+    },
+    {
+      "path": "scripts/vault/fetch-primary.mjs",
+      "sha256": "ce1b60d586256b7dddc648a9951a58e2609e1ee7b00a78410036c0780d94f50d",
+      "bytes": 4110
+    },
+    {
+      "path": "scripts/vault/validate-vault.mjs",
+      "sha256": "c132015600d3b3c23f90bab9ed9a2bf6adbd42a547fb25575c013d99eb0c6471",
+      "bytes": 4070
+    },
+    {
+      "path": "scripts/vault/build-index.mjs",
+      "sha256": "17ade14014803dec2432ae57fcd9efc900e63e2e43f5771d1914dd6ef3344d00",
+      "bytes": 1229
+    },
+    {
+      "path": "scripts/vault/parser-receipt.mjs",
+      "sha256": "6de8ce5e7786055185815628d056a3340d2f019c4a0c7d5269ba7d048efa2f64",
+      "bytes": 1107
+    },
+    {
+      "path": "public/vault/snapshots/dash_surveys_at_giza.normalized.json",
+      "sha256": "3ffb7e3339f94f03315afec37439df8b0389a51cd1ea03439fe8bc23b127cb6a",
+      "bytes": 893
+    },
+    {
+      "path": "public/vault/snapshots/heritage_science_2020.normalized.json",
+      "sha256": "52c2697d737af848c8a17047ea42778794c9b735870c786d80bfd2862e498984",
+      "bytes": 793
+    },
+    {
+      "path": "public/vault/snapshots/opencontext_arce_sphinx.normalized.json",
+      "sha256": "be29d44188f156f1d41d54e58fac145727efaa61fae845b78f5e5b1fb76cb887",
+      "bytes": 2003
+    },
+    {
+      "path": "public/vault/snapshots/petrie1883.normalized.json",
+      "sha256": "d2cc49f255be72cbecfcb56ab1ff7d229db684997889dd1df184be687cdccbef",
+      "bytes": 661
+    },
+    {
+      "path": "public/vault/snapshots/scidep2025.normalized.json",
+      "sha256": "9a83f61389a4bd9a6487c655fac5ad13f75be3407e6f115b7c9141bc44df8f21",
+      "bytes": 555
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:02:16.173Z"
+}

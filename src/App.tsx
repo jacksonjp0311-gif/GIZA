@@ -1,3 +1,4 @@
+import './maps/atlasWorkspace.css';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { loadModel, type ModelBundle, type Part } from './lib/model';
 import { DEFAULT_WORKSPACE, clearWorkspaceState, loadWorkspaceState, saveWorkspaceState } from './lib/workspace';
@@ -194,8 +195,9 @@ export default function App() {
 
       <DataHealthNotice diagnostics={model.runtimeDiagnostics}/>
 
-      {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>setEvidenceAssembly(null)} onLegacy={()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);}}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className="workspace edgeWorkspace">
+      {evidenceAssembly?<main className="evidenceWorkspace"><AssemblyEntry model={model} initialPart={evidenceAssembly} onClose={()=>setEvidenceAssembly(null)} onLegacy={()=>{setDetail({id:evidenceAssembly,context:'ROOM',revision:Date.now()});setEvidenceAssembly(null);}}/></main>:sphinx?<main className="sphinxWorkspace"><SphinxWorkbench initialArtifact={sphinx==='stela'} onClose={resetWorkspace}/></main>:<main className={`workspace edgeWorkspace${surface==='ATLAS'?' atlasWorkspace':''}`}>
         <LeftRail
+          overviewActive={!detail&&surface==='MODEL'}
           onOpenSphinx={()=>setSphinx(true)}
           parts={model.parts}
           onOpenPart={id=>openDetail(id,id.startsWith('part.sarcophagus.')||id.startsWith('part.burial.')?'ROOM':'OBJECT')}
@@ -216,7 +218,7 @@ export default function App() {
           onArtifact={()=>{setSurface('MODEL');setSphinx('stela');}}
           key={workspaceRevision}
           animationSpeed={animationSpeed}
-          showDimensions={showDimensions}
+          showDimensions={showDimensions&&layers.measurements}
           setShowDimensions={setShowDimensions}
           detail={detail}
           onOpenDetail={openDetail}
@@ -232,7 +234,7 @@ export default function App() {
           sectionPos={sectionPos}
           viewPreset={viewPreset}
           cameraRevision={cameraRevision}
-          showStoneField={layers.blocks}
+          showStoneField={layers.blocks&&layers.exterior}
           showUnverified={layers.subsurface}
           xray={layers.xray}
           showLabels={showLabels}

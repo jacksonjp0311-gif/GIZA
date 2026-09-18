@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node scripts/start.mjs",
-    "test:usability": "node --test tests/usability.test.mjs",
+    "test:usability": "node --test tests/usability.test.mjs tests/spatial-presentation.test.mjs",
     "test:sphinx": "node --test tests/sphinx.test.mjs",
     "test:epigraphy": "node --test tests/epigraphy.test.mjs tests/epigraphy-storage.test.mjs tests/epigraphy-navigation.test.mjs",
     "test:evidence-assembly": "node --test tests/evidence-assembly.test.mjs tests/evidence-intelligence.test.mjs tests/evidence-view.test.mjs tests/evidence-boundaries.test.mjs tests/evidence-workflow.test.mjs tests/evidence-campaign.test.mjs",

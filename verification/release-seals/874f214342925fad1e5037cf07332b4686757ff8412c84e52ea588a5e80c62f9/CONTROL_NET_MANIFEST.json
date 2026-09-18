@@ -1,0 +1,111 @@
+{
+  "version": "0.9.8",
+  "codename": "CONTROL NET",
+  "phase": "SURVEY_CONSTRAINED_REGISTRATION",
+  "generated_at": "2026-09-12T16:05:38.943135+00:00",
+  "geometry_changed": false,
+  "ui_shell_changed": false,
+  "evidence_maturity_changed": false,
+  "counts": {
+    "frames": 4,
+    "survey_constraints": 7,
+    "survey_points": 6,
+    "asset_receipts": 4,
+    "registration_links": 3,
+    "orientation_receipts": 1
+  },
+  "orientation": {
+    "receipt_id": "receipt.orientation.khafre.nell2006.rigid_square",
+    "yaw_arcmin": -4.45,
+    "rms_side_residual_arcmin": 0.7921489758877429,
+    "measured_points": 54,
+    "translation_status": "UNRESOLVED"
+  },
+  "projective_camera_benchmark": {
+    "id": "benchmark.controlnet.projective_camera.0.9.8",
+    "pass": true,
+    "exact_holdout_rmse_px": 8.41205780201832e-13,
+    "noisy_holdout_rmse_px": 0.28418043071699745
+  },
+  "real_camera_poses_promoted": 0,
+  "photo_geometry_promotions": 0,
+  "files": [
+    {
+      "path": "public/model/control_net/asset_receipts.json",
+      "sha256": "ccfffc6677a03780274f055abedf6ef07b3ec4f5910523fe1214a4e2cb4dd942",
+      "bytes": 1835
+    },
+    {
+      "path": "public/model/control_net/benchmarks/projective_camera.json",
+      "sha256": "dc0e5fdc91a20f2de20bb0a84088b3a1b5a7afa359bbbafa6fe960b4273d252a",
+      "bytes": 12928
+    },
+    {
+      "path": "public/model/control_net/frames.json",
+      "sha256": "c0f2ff651671f7ea816b3402b4df8ad1dc9e6044df0416a06ba249d8ecaa70a8",
+      "bytes": 3184
+    },
+    {
+      "path": "public/model/control_net/manifest.json",
+      "sha256": "cfce02fea88780ecded770e070796a0fb9e9e7f970b9aa604e8c31d13a8bdc31",
+      "bytes": 1725
+    },
+    {
+      "path": "public/model/control_net/orientation_receipts.json",
+      "sha256": "16d227402493782b45dfd604e22b91859ec41b6c5573d680d474f08c78e92e3a",
+      "bytes": 3696
+    },
+    {
+      "path": "public/model/control_net/quality_gates.json",
+      "sha256": "082c9b1e7bdbc212a56d7b97fcf2c9fab4350a7429045d547e244d74b80f7cde",
+      "bytes": 1423
+    },
+    {
+      "path": "public/model/control_net/registration_links.json",
+      "sha256": "c53cbaa3a942587d46cc1d49ec251b9d5577c34910c4f23aad6c8a91a06aac3a",
+      "bytes": 1257
+    },
+    {
+      "path": "public/model/control_net/survey_constraints.json",
+      "sha256": "8edad0c43b8fd30db30f436eae623798f228a1683c3c30eb40bf36ef2e80b792",
+      "bytes": 2536
+    },
+    {
+      "path": "public/model/control_net/survey_points.json",
+      "sha256": "46ddb47f876e80bef58d9e4b0fbbc6acc22bf5ea00fbef0e35b8f97ab97241a0",
+      "bytes": 2865
+    },
+    {
+      "path": "scripts/controlnet/benchmark.mjs",
+      "sha256": "7fbf81f952c8f0ad39eb0a2420475b31a0fe37bf137774b6501f73f2e0387a36",
+      "bytes": 2209
+    },
+    {
+      "path": "scripts/controlnet/build.mjs",
+      "sha256": "389d1fa3a7f5540caca4a992a9024ffc00e1c423749c17dc9bf216e0da6b9204",
+      "bytes": 1498
+    },
+    {
+      "path": "scripts/controlnet/derive-khafre-orientation.mjs",
+      "sha256": "0524f5a3b7b1d0a4ff0c22130a98794f81205ba6bb39810217211bfd40a2792f",
+      "bytes": 3909
+    },
+    {
+      "path": "scripts/controlnet/projective-camera.mjs",
+      "sha256": "f4d4bd3a7f7a94a1933d3eb9acc8204cdea6d9f223c782870bd27e9d1fb976e3",
+      "bytes": 2537
+    },
+    {
+      "path": "scripts/controlnet/validate.mjs",
+      "sha256": "94b2d5d34fc70f37190430e5488010a6ccdb720c629781c7f2f5bf9d90cd7e37",
+      "bytes": 4375
+    },
+    {
+      "path": "docs/CONTROL_NET.md",
+      "sha256": "e75dc3afb89e02211aa38e05ff3507bdcb87e077381a4bf376f09b447f32bfd7",
+      "bytes": 3923
+    }
+  ],
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:18:48.199Z"
+}

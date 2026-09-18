@@ -2,6 +2,10 @@
 
 ## Current release — aligned investigation contracts
 
+Atlas/spatial follow-up: full-workspace maps, readable labels with a complete text index, map zoom/pan, contextual assembly explosion, and reversible **Spherical expansion** of the existing illustrative pyramid stone cells. [Controls, limitations and design references](docs/ATLAS_SPATIAL_PRESENTATION.md).
+
+Layer-control follow-up: **Subterranean (Unverified)** and **Underground** explicitly reveal hypothetical underground geometry; fresh sessions still default it off. Reality layers can hide it independently, with an actionable explanation. Interior inspection respects the model-layer switches. Overview-only controls are disabled in separate detail/atlas views; use **Return to model layers**.
+
 This reliability successor adds strict imported-graph semantics, point-to-feature membership, compatible uncertainty, deterministic rendered cap picking, and contextual **Explain / compare inputs** with linked reruns. No interface rebuild or new archaeological authority. See [0.11.1 handoff and demonstration](docs/RELIABILITY_0_11_1.md) and [actual verification status](VALIDATION.md).
 
 ## Preserved 0.11.0 capabilities

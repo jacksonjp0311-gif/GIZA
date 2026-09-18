@@ -91,8 +91,8 @@
     },
     {
       "path": "src/evidence/AssemblyWorkbench.tsx",
-      "sha256": "138c9ec27add0d2153071de12bd1ab8e1e935b4be3c10c78959541cfab695432",
-      "bytes": 17438
+      "sha256": "c47c50c27e885ef6224dc2e6f83487e2b8f7f2da3b432ef8b5948de4d088d85f",
+      "bytes": 18277
     },
     {
       "path": "src/evidence/ComparisonPanel.tsx",
@@ -230,9 +230,19 @@
       "bytes": 3796
     },
     {
+      "path": "tests/browser/atlas-expansion.spec.ts",
+      "sha256": "09dd78ef93ece922f3f64e384c4638f2ececed5389f1b7d2c5e70dfe176aef57",
+      "bytes": 3509
+    },
+    {
       "path": "tests/browser/evidence-workflow.spec.ts",
-      "sha256": "c8d151a737b2bee8c21c8f880bc9cd056ffd59ba373f511c3b4510b312216fb9",
-      "bytes": 10831
+      "sha256": "a93ce04c838f11fb3de780a139ef0f1d94fb6a19aa1f86b45e350b4326c088e3",
+      "bytes": 10901
+    },
+    {
+      "path": "tests/browser/layers.spec.ts",
+      "sha256": "5f088ebf917bb110d1671d948e4732b05368745b6ea069381369f15386be804c",
+      "bytes": 4169
     },
     {
       "path": "tests/browser/source-campaign.spec.ts",
@@ -281,7 +291,7 @@
     }
   ],
   "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z",
+  "sealed_at": "2026-09-18T02:36:28.684Z",
   "schemas": {
     "assembly": "giza.evidence-assembly.v1",
     "quantity": "giza.quantity.v1",

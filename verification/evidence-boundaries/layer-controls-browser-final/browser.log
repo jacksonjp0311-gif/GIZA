@@ -1,0 +1,77 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 12 tests using 1 worker
+
+  ok  1 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (20.1s)
+  ok  2 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (9.1s)
+  ok  3 tests\browser\evidence-workflow.spec.ts:40:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (7.8s)
+  ok  4 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 1280x800 (3.9s)
+  ok  5 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 390x844 (2.8s)
+  ok  6 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 844x390 (2.4s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas slow does not block core or force workspace navigation (3.6s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas missing does not block core or force workspace navigation (4.6s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas malformed does not block core or force workspace navigation (3.3s)
+  ok 10 tests\browser\layers.spec.ts:2:1 › overview layer requests render underground, respect authority and filter inspection (12.0s)
+  x  11 tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope (21.8s)
+  ok 12 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (2.5s)
+
+
+  1) tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Selected preview dimensions', { exact: true })
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Selected preview dimensions', { exact: true }) with timeout 15000ms
+      - waiting for getByText('Selected preview dimensions', { exact: true })
+
+
+      20 |   await page.goto('/?layerDiagnostics=1');
+      21 |   await page.getByRole('button',{name:'Full Pyramid',exact:true}).click();
+    > 22 |   await expect(page.getByText('Selected preview dimensions',{exact:true})).toBeVisible();
+         |                                                                            ^
+      23 |   await page.getByRole('checkbox',{name:'Measurement Overlays',exact:true}).uncheck();
+      24 |   await expect(page.getByText('Selected preview dimensions',{exact:true})).toHaveCount(0);
+      25 |   await page.getByRole('checkbox',{name:'Measurement Overlays',exact:true}).check();
+        at C:\Users\jacks\OneDrive\Desktop\GIZA-v0.10.12\tests\browser\layers.spec.ts:22:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\layers-overview-overlays-a-087df--controls-match-their-scope\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\layers-overview-overlays-a-087df--controls-match-their-scope\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\layers-overview-overlays-a-087df--controls-match-their-scope\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\layers-overview-overlays-a-087df--controls-match-their-scope\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\browser\layers.spec.ts:19:1 › overview overlays and detail controls match their scope ────
+  11 passed (1.9m)
+
+[WebServer] (node:12620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:21072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2932) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:6720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

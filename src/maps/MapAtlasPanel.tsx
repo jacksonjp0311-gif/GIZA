@@ -1,3 +1,4 @@
+import {ReadableMap} from './ReadableMap';
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { ModelBundle } from '../lib/model';
 import { AtlasNavigator } from './AtlasNavigator';
@@ -55,7 +56,7 @@ export function MapAtlasPanel({model,atlas,focusMap,onSelectPart,onActiveMap}:{
       </div>
       {sections.map(({id,render,note},index)=>{const d=descriptors[id];return <section key={id} data-atlas-map={id} className="atlasMapSection">
         <header><div><small>{String(index+1).padStart(2,'0')} / {String(sections.length).padStart(2,'0')}</small><h3>{d.label}</h3><p>{d.subtitle}</p></div><div className="mapTruthBadges"><span>{d.truth_class}</span><b>GEOMETRY: {d.geometry_authority}</b></div></header>
-        <div className="atlasMapFrame">{render()}<div className="mapScanline"/></div>
+        <ReadableMap>{render()}</ReadableMap>
         <div className="atlasMapNote"><b>READING</b><p>{note}</p><span>{guards[id]}</span></div>
       </section>})}
       <div className="atlasEndCap"><span>END OF ATLAS</span><b>RETURN TO ANY MAP FROM THE STICKY INDEX ABOVE</b><p>RITUAL MAP never writes geometry. It makes relationships visible so the next tests can be sharper.</p></div>

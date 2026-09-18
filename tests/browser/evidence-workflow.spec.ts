@@ -28,6 +28,7 @@ test('actual model entry, isolation fit, invariant measurement, computation, dra
 test('actual pointer cut picking saves computed surfaces in canonical coordinates',async({page})=>{
   await openAssembly(page);await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Top',exact:true}).click();
   await page.getByRole('button',{name:'Section',exact:true}).click();await page.getByRole('button',{name:'OBLIQUE',exact:true}).click();await page.getByLabel('Section inclination').fill('-90');await page.getByLabel('Section offset exact').fill('0.3');await page.getByRole('button',{name:'Measure',exact:true}).click();
+  await expect(page.getByLabel('Measurement feature')).toBeVisible();
   const canvas=page.locator('[data-evidence-workbench] canvas');
   await expect.poll(async()=>{const d=JSON.parse(await canvas.getAttribute('data-spatial-diagnostics')??'{}');return !!d.settled&&d.caps.filter((c:any)=>c.inViewport&&Math.abs(c.section.offset-.3)<1e-8).length>=2;}).toBe(true);
   const diagnostic=JSON.parse((await canvas.getAttribute('data-spatial-diagnostics'))!);const targets=diagnostic.caps.filter((c:any)=>c.inViewport).slice(0,2);

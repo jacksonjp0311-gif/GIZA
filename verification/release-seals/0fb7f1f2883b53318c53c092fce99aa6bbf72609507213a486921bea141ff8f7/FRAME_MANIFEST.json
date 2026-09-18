@@ -1,0 +1,82 @@
+{
+  "product": "GIZA",
+  "version": "0.8.2",
+  "codename": "FRAME",
+  "generated_at": "2026-09-11T14:29:39.273875+00:00",
+  "orchestrator_limits": {
+    "App.tsx_max_bytes": 15000,
+    "GizaScene.tsx_max_bytes": 7000
+  },
+  "actual": {
+    "App.tsx_bytes": 10153,
+    "GizaScene.tsx_bytes": 3565,
+    "frame_module_count": 12
+  },
+  "modules": [
+    {
+      "path": "src/scene/CameraRig.tsx",
+      "bytes": 3012,
+      "sha256": "77f311ce27fddbff08786d030178a5cdeecc31d3d562815fd9d6ab9dce8f1618"
+    },
+    {
+      "path": "src/scene/FieldLayer.tsx",
+      "bytes": 2557,
+      "sha256": "52ec677cfec091b25680577ad1d637719ac4894c1e055b2bfb89598af7946aab"
+    },
+    {
+      "path": "src/scene/MasonryLayer.tsx",
+      "bytes": 5170,
+      "sha256": "ec255e8cd321ff5d690b914151dfa156c3a14444ad002a20c007278a16538621"
+    },
+    {
+      "path": "src/scene/MonumentLayer.tsx",
+      "bytes": 5637,
+      "sha256": "1404c8b96a4c752b86143e29cb3e83f31a709360547554bbf05f926dd46f2fe4"
+    },
+    {
+      "path": "src/scene/SimulationLayer.tsx",
+      "bytes": 4923,
+      "sha256": "e40f2b666bb9aae9517741ffe57873c99b642c5b1f617af77fd0d452089cc618"
+    },
+    {
+      "path": "src/scene/geometry.ts",
+      "bytes": 3510,
+      "sha256": "ac1c93f343a66bf280d1128c86d15bb7cdf9ba9d289f3a6474e0f942ad41a6b0"
+    },
+    {
+      "path": "src/scene/types.ts",
+      "bytes": 454,
+      "sha256": "6871bd2b6cb4533bcd58b3b6c7b1f6714dd3071cedd342c22d3a3fb9eea6a5e0"
+    },
+    {
+      "path": "src/workstation/LeftRail.tsx",
+      "bytes": 5055,
+      "sha256": "8fc6dc284bbed45074f82abf4c638e8a023a3638cb377bd587925f4036c7b4c8"
+    },
+    {
+      "path": "src/workstation/ObjectInspectorPanel.tsx",
+      "bytes": 36988,
+      "sha256": "e2b36edac82f7b53a913c756aa98baeb6ce008b0f1ea28b8381c41a9e92f33ae"
+    },
+    {
+      "path": "src/workstation/SpatialViewport.tsx",
+      "bytes": 9148,
+      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894"
+    },
+    {
+      "path": "src/workstation/WorkstationFooter.tsx",
+      "bytes": 523,
+      "sha256": "dbe13daa45f7629dd60d715d03051501c9ec3bd2fb7edf14747866af7722aad4"
+    },
+    {
+      "path": "src/workstation/WorkstationHeader.tsx",
+      "bytes": 2544,
+      "sha256": "4df36fb184fa32da413f15d11eccad3f643bff8b649b5406a7196c1c084e551b"
+    }
+  ],
+  "simulation_seam": "src/scene/SimulationLayer.tsx",
+  "geometry_changed": false,
+  "research_semantics_changed": false,
+  "release_version": "0.11.1",
+  "sealed_at": "2026-09-18T02:02:16.173Z"
+}

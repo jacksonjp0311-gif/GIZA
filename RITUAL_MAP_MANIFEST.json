@@ -93,8 +93,8 @@
     },
     {
       "path": "src/maps/AtlasNavigator.tsx",
-      "sha256": "39a25fb140ebcb824052d3a0357fef0a9b178cda7562841a533fc864301e3fce",
-      "bytes": 1690
+      "sha256": "43f086a175a7f893e05c36f6a782f76c921f7f70071ecf167b65ac709c64320a",
+      "bytes": 2109
     },
     {
       "path": "src/maps/MapVisuals.tsx",
@@ -103,13 +103,13 @@
     },
     {
       "path": "src/maps/MapAtlasPanel.tsx",
-      "sha256": "13b3315dcc2d55e7f8a69ccf22c6df53ad052b93769806c2b8ceecf09bc3b80c",
-      "bytes": 7060
+      "sha256": "877352e42f5a9932908888453b69b59ab60e1211f4d03265973e9e63da77137c",
+      "bytes": 7063
     },
     {
       "path": "scripts/maps/validate-maps.mjs",
-      "sha256": "2bfdfa2784468198238b9c9214dcb555be7f68dd842cd717cb22dd74a9695316",
-      "bytes": 5204
+      "sha256": "110e0e09ecdd46888a015b79d20c262f581010a5a7c2c333c35ae00a2b5556e7",
+      "bytes": 5443
     },
     {
       "path": "docs/RITUAL_MAP.md",
@@ -118,5 +118,5 @@
     }
   ],
   "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z"
+  "sealed_at": "2026-09-18T02:36:28.684Z"
 }

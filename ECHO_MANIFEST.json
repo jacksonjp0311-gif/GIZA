@@ -203,8 +203,8 @@
     },
     {
       "path": "src/workstation/SpatialViewport.tsx",
-      "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894",
-      "bytes": 9148
+      "sha256": "65b6c57f06cf9d45266618273889de419092cfd9be2c484881f40ebf2df3d76f",
+      "bytes": 10616
     },
     {
       "path": "docs/ECHO.md",
@@ -218,5 +218,5 @@
     }
   ],
   "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z"
+  "sealed_at": "2026-09-18T02:36:28.684Z"
 }
