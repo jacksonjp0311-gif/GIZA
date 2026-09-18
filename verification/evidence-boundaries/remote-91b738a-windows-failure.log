@@ -1,0 +1,63 @@
+verify (windows-latest)	Run npm run test:browser	﻿2026-09-18T00:26:21.0092266Z ##[group]Run npm run test:browser
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.0093182Z ^[[36;1mnpm run test:browser^[[0m
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.0161186Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.0161571Z ##[endgroup]
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.6140490Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.6141077Z > giza-nexus-registration-workbench@0.11.0 test:browser
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.6141472Z > playwright test
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:21.6141844Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:35.5245352Z [WebServer] 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:35.5250039Z [WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:35.5250978Z [WebServer] - Using dynamic import() to code-split the application
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:35.5252072Z [WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:35.5253258Z [WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:40.9307670Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:40.9308585Z Running 10 tests using 1 worker
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:26:40.9308945Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:27:19.2574072Z   ok  1 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (37.7s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:29:25.9872357Z   x   2 tests\browser\evidence-workflow.spec.ts:26:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (2.0m)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:30:05.7582808Z   ok  3 tests\browser\evidence-workflow.spec.ts:39:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (38.7s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:30:42.9105547Z   ok  4 tests\browser\evidence-workflow.spec.ts:45:91 › model-first layout and keyboard 1280x800 (37.0s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:30:47.7959735Z   ok  5 tests\browser\evidence-workflow.spec.ts:45:91 › model-first layout and keyboard 390x844 (4.9s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:30:51.9862280Z   ok  6 tests\browser\evidence-workflow.spec.ts:45:91 › model-first layout and keyboard 844x390 (4.2s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:11.5863319Z   ok  7 tests\browser\evidence-workflow.spec.ts:49:53 › optional atlas slow does not block core or force workspace navigation (19.6s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:23.8299971Z   ok  8 tests\browser\evidence-workflow.spec.ts:49:53 › optional atlas missing does not block core or force workspace navigation (12.2s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:37.6758237Z   ok  9 tests\browser\evidence-workflow.spec.ts:49:53 › optional atlas malformed does not block core or force workspace navigation (13.8s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.4310634Z   ok 10 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (1.7s)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7618243Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7625937Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7643237Z   1) tests\browser\evidence-workflow.spec.ts:26:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7644128Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7644556Z     Test timeout of 60000ms exceeded.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7645035Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7645456Z     Tearing down "context" exceeded the test timeout of 60000ms.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7646797Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7647191Z     Error: locator.click: Test ended.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7648086Z     Call log:
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7649094Z       - waiting for getByRole('button', { name: 'Clear measurement', exact: true })
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7650359Z         - locator resolved to <button>Clear measurement</button>
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7651436Z       - attempting click action
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7652026Z         - waiting for element to be visible, enabled and stable
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7652924Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7653069Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7653561Z       31 |   // lower half-space. Cavity remains empty; only real analytic cap meshes hit.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7654498Z       32 |   outer:for(const y of [.35,.4,.45,.5,.55,.6,.65])for(const x of [.42,.43,.57,.58,.4,.45,.5,.55,.6]){
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7656151Z     > 33 |     await page.getByRole('button',{name:'Clear measurement',exact:true}).click();await page.mouse.click(box.x+box.width*x,box.y+box.height*y);
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7659923Z          |                                                                          ^
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7661395Z       34 |     if(await page.getByText(/Computed section surface/).count()){await page.mouse.click(box.x+box.width*x+2,box.y+box.height*y);if(await page.getByText(/2 picked points retain/).count()){found=true;break outer;}}
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7662619Z       35 |   }
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7664885Z       36 |   expect(found,'Actual browser ray must reach an analytic section cap').toBe(true);await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Save investigation',exact:true}).click();await expect(page.getByText('Saved with original geometry, canonical points and reproducible result.',{exact:true})).toBeVisible();const study=await exported(page,'Export saved record');
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7667933Z         at D:\a\GIZA\GIZA\tests\browser\evidence-workflow.spec.ts:33:74
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7668486Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7669058Z     Error: End of central directory record signature not found. Either not a zip file, or file is truncated.
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7669712Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7670618Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7671650Z     test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\test-failed-1.png
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7673939Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7675010Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7675767Z     Error Context: test-results\evidence-workflow-actual-p-8110c-es-in-canonical-coordinates\error-context.md
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7676512Z 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7676864Z   1 failed
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7677985Z     tests\browser\evidence-workflow.spec.ts:26:1 › actual pointer cut picking saves computed surfaces in canonical coordinates 
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.7678923Z   9 passed (5.3m)
+verify (windows-latest)	Run npm run test:browser	2026-09-18T00:31:39.8765214Z ##[error]Process completed with exit code 1.

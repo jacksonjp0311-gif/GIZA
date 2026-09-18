@@ -1,5 +1,6 @@
 import type {BoxGeometry,CanonicalPoint,EvidenceAssembly,Matrix4,SectionPlane,SpatialFrame,SpatialResult,SpatialTransform,Uncertainty,Vec3} from './types';
 import {assertSafeDocument,validateObservation,validateFeatureSupport} from './observationContract';
+import {belongsToGeometry,geometryTolerance,polygonProjection} from './membership';
 
 export const unknownUncertainty=(note='No uncertainty supplied by the cited record.'):Uncertainty=>({status:'UNKNOWN',value:null,unit:'m',note});
 export const identityMatrix=():Matrix4=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
@@ -49,6 +50,24 @@ export function resolveTransform(frames:SpatialFrame[],transforms:SpatialTransfo
 export function pointInFrame(assembly:EvidenceAssembly,point:CanonicalPoint,frameId:string):Vec3|null {
   const transform=resolveTransform(assembly.frames,assembly.transforms,point.frameId,frameId);return transform?transformPoint(transform,point.position):null;
 }
+export function validateCanonicalMembership(a:EvidenceAssembly,p:CanonicalPoint):void {
+  const f=a.features.find(f=>f.id===p.featureId);
+  if(!f||f.coordinateAuthority==='UNKNOWN'||f.frameId!==p.frameId||!belongsToGeometry(f.geometry,p.position,!!p.origin))throw new Error('Point does not belong to its originating physical surface');
+  if(p.origin){
+    const plane=p.origin.section;if(p.origin.kind!=='COMPUTED_SECTION'||p.origin.surfaceAuthority!=='RECONSTRUCTED'||!plane||!Array.isArray(plane.normal)||plane.normal.length!==3||!plane.normal.every(Number.isFinite)||!Number.isFinite(plane.offset))throw new Error('Invalid computed section');
+    const magnitude=Math.hypot(...plane.normal),at=pointInFrame(a,p,plane.frameId);
+    if(!at||!Number.isFinite(magnitude)||magnitude<1e-12)throw new Error('Invalid section plane magnitude');
+    const normal=plane.normal.map(v=>v/magnitude) as Vec3,offset=plane.offset/magnitude;
+    if(!Number.isFinite(offset)||Math.abs(dot(at,normal)-offset)>geometryTolerance([p.position]))throw new Error('Section point is off its archived plane');
+    const matrix=resolveTransform(a.frames,a.transforms,f.frameId,plane.frameId)!;
+    if(f.geometry.kind!=='box')throw new Error('Unsupported computed section origin');
+    const box=f.geometry;const corners:Vec3[]=Array.from({length:8},(_,i)=>[i&1?box.max[0]:box.min[0],i&2?box.max[1]:box.min[1],i&4?box.max[2]:box.min[2]]);
+    if(Math.max(...corners.map(v=>dot(transformPoint(matrix,v),normal)-offset))<=geometryTolerance(corners))throw new Error('Section has no retained solid volume');
+    const localPlane:SectionPlane={frameId:f.frameId,normal:[matrix[0]*normal[0]+matrix[4]*normal[1]+matrix[8]*normal[2],matrix[1]*normal[0]+matrix[5]*normal[1]+matrix[9]*normal[2],matrix[2]*normal[0]+matrix[6]*normal[1]+matrix[10]*normal[2]],offset:offset-normal[0]*matrix[3]-normal[1]*matrix[7]-normal[2]*matrix[11]};
+    const cut=sectionBox(box,localPlane);
+    if(f.authority!=='RECONSTRUCTED'||cut.length<3||polygonArea(cut)<=geometryTolerance(corners)**2||!belongsToGeometry({kind:'surface',vertices:cut},p.position))throw new Error('Point is not on an actual supported section cap');
+  }
+}
 function result(value:number|null,unit:'m'|'deg',frameId:string,reason:string):SpatialResult {
   return {status:value===null?'UNKNOWN':'KNOWN',value,unit,frameId,reason,uncertainty:{...unknownUncertainty('Source uncertainty and idealized feature positions do not establish complete propagated uncertainty.'),unit}};
 }
@@ -65,6 +84,7 @@ export function measureAngle(assembly:EvidenceAssembly,a:CanonicalPoint,vertex:C
 /** Exact convex intersection polygon in the box frame. Normal need not be unit length. */
 export function sectionBox(box:BoxGeometry,plane:SectionPlane):Vec3[] {
   if(!Number.isFinite(plane.offset)||!Array.isArray(plane.normal)||plane.normal.length!==3||!plane.normal.every(Number.isFinite)||Math.hypot(...plane.normal)<1e-12)throw new Error('Invalid section plane');
+  const magnitude=Math.hypot(...plane.normal);if(!Number.isFinite(magnitude))throw new Error('Invalid section magnitude');plane={...plane,normal:plane.normal.map(v=>v/magnitude) as Vec3,offset:plane.offset/magnitude};
   if(!Array.isArray(box.min)||!Array.isArray(box.max)||box.min.length!==3||box.max.length!==3||box.min.some((v,i)=>!Number.isFinite(v)||!Number.isFinite(box.max[i])||v>box.max[i]))throw new Error('Invalid box');
   const corners:Vec3[]=Array.from({length:8},(_,i)=>[i&1?box.max[0]:box.min[0],i&2?box.max[1]:box.min[1],i&4?box.max[2]:box.min[2]]);
   const points:Vec3[]=[];const add=(p:Vec3)=>{if(!points.some(q=>distance(p,q)<1e-9))points.push(p);};
@@ -115,6 +135,9 @@ export function importCanonicalAssembly(input:unknown):EvidenceAssembly {
     if(!g||!['box','surface','segment','point','unknown'].includes(g.kind))throw new Error('Invalid feature geometry');
     if(g.kind==='box'&&(!finitePoint(g.min)||!finitePoint(g.max)||g.min.some((v,i)=>v>g.max[i])))throw new Error('Invalid box');
     if(g.kind==='surface'&&(!Array.isArray(g.vertices)||g.vertices.length<3||g.vertices.length>1000||!g.vertices.every(finitePoint)))throw new Error('Invalid surface');
+    if(g.kind==='surface')polygonProjection(g.vertices);
+    if(g.kind==='box'&&g.min.some((v,i)=>v>=g.max[i]))throw new Error('Degenerate box');
+    if(g.kind==='segment'&&finitePoint(g.a)&&finitePoint(g.b)&&distance(g.a,g.b)<=geometryTolerance([g.a,g.b]))throw new Error('Degenerate segment');
     if(g.kind==='segment'&&(!finitePoint(g.a)||!finitePoint(g.b)))throw new Error('Invalid segment');
     if(g.kind==='point'&&!finitePoint(g.point))throw new Error('Invalid point');
     if(g.kind==='unknown'&&typeof g.reason!=='string')throw new Error('UNKNOWN requires reason');

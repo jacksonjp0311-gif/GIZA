@@ -2,9 +2,10 @@ import {canonicalJson,parseEvidenceGraph} from './graph';
 import type {SpatialEvidenceGraph} from './graph';
 import type {InvestigationCandidate} from './intelligence';
 
-export const EVALUATION_RULE='giza.comparison-rules.v2';
+export const EVALUATION_RULE='giza.comparison-rules.v3';
 /** Minimal calculation inputs, not UI labels, graph-wide annotations or archival snapshot identity. */
-export function computationDependencies(candidate:InvestigationCandidate,graph:SpatialEvidenceGraph){
+export function computationDependencies(candidate:InvestigationCandidate,graph:SpatialEvidenceGraph,rule:string=EVALUATION_RULE){
+  if(!['giza.comparison-rules.v2',EVALUATION_RULE].includes(rule))throw new Error('Unsupported calculation rule');
   parseEvidenceGraph(graph);
   const ids=new Set([...candidate.evidenceIds,...candidate.computation.inputs.map(i=>i.id)]);
   if(candidate.computation.method==='LEGACY_DETAIL_AUDIT')ids.add(candidate.id.replace('candidate.transform:',''));
@@ -21,10 +22,11 @@ export function computationDependencies(candidate:InvestigationCandidate,graph:S
     for(const id of frames)ids.add(id);
     for(const n of graph.nodes)if(ids.has(n.id)&&Array.isArray(n.data.observationIds))for(const id of n.data.observationIds)if(typeof id==='string')ids.add(id);
   }
+  if(rule===EVALUATION_RULE)for(const n of graph.nodes)if(ids.has(n.id)&&n.kind==='OBSERVATION'&&typeof n.data.sourceId==='string')ids.add(n.data.sourceId);
   const nodes=graph.nodes.filter(n=>ids.has(n.id)).map(n=>({id:n.id,kind:n.kind,authority:n.authority,data:n.data})).sort((a,b)=>a.id.localeCompare(b.id));
-  return {schema:'giza.computation-dependencies.v1',rule:EVALUATION_RULE,assemblyId:graph.assemblyId,frameId:candidate.frameId,method:candidate.computation.method,unit:candidate.computation.unit,inputs:candidate.computation.inputs,nodes};
+  return {schema:'giza.computation-dependencies.v1',rule,assemblyId:graph.assemblyId,frameId:candidate.frameId,method:candidate.computation.method,unit:candidate.computation.unit,inputs:candidate.computation.inputs,nodes};
 }
-export async function dependencyFingerprint(candidate:InvestigationCandidate,graph:SpatialEvidenceGraph):Promise<string>{
-  const bytes=new TextEncoder().encode(canonicalJson(computationDependencies(candidate,graph)));
+export async function dependencyFingerprint(candidate:InvestigationCandidate,graph:SpatialEvidenceGraph,rule:string=EVALUATION_RULE):Promise<string>{
+  const bytes=new TextEncoder().encode(canonicalJson(computationDependencies(candidate,graph,rule)));
   return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('');
 }

@@ -1,5 +1,6 @@
 import type { EvidenceAssembly } from './types';
 import type { SpatialEvidenceGraph } from './graph';
+import {normalizeQuantity,normalizedUncertainty} from './observationContract';
 
 export interface InvestigationCandidate {
   id: string;
@@ -24,12 +25,14 @@ export function generateInvestigationCandidates(assembly: EvidenceAssembly, grap
   const featuresFor = (ids: string[]) => assembly.features.filter(f => f.observationIds.some(id => ids.includes(id))).map(f => f.id).sort();
   const difference = (id: string, title: string, left: string, right: string, detected: string, alternatives: string[], falsifier: string) => {
     const a = observations.get(left), b = observations.get(right);
-    if (!a || !b || typeof a.value !== 'number' || typeof b.value !== 'number' || a.unit !== b.unit) return;
-    const known = a.uncertainty.status === 'KNOWN' && b.uncertainty.status === 'KNOWN' && typeof a.uncertainty.value === 'number' && typeof b.uncertainty.value === 'number';
-    const uncertainty = known ? a.uncertainty.value! + b.uncertainty.value! : null;
+    if (!a || !b || typeof a.value !== 'number' || typeof b.value !== 'number'||!a.unit||!b.unit) return;
+    const qa=normalizeQuantity(a.value,a.unit,a.nativeValue,a.nativeUnit),qb=normalizeQuantity(b.value,b.unit,b.nativeValue,b.nativeUnit);if(qa.dimension!==qb.dimension)return;
+    const ua=normalizedUncertainty(a.uncertainty,a.unit),ub=normalizedUncertainty(b.uncertainty,b.unit);
+    const known = ua.value!==null&&ub.value!==null&&ua.interpretation==='BOUND'&&ub.interpretation==='BOUND';
+    const uncertainty = known ? ua.value! + ub.value! : null;
     result.push({ id, title, detected, evidenceIds: [left, right], featureIds: featuresFor([left, right]),
-      computation: { method: 'DIRECT_DIFFERENCE', expression: `${left} - ${right}`, inputs: [{ id: left, value: a.value, unit: a.unit }, { id: right, value: b.value, unit: b.unit }], result: a.value - b.value, unit: a.unit },
-      uncertainty: { status: known ? 'KNOWN' : 'UNKNOWN', value: uncertainty, unit: a.unit, note: known ? 'Conservative sum of the supplied uncertainty magnitudes; no independence or confidence distribution assumed.' : 'At least one source uncertainty is unreported; no statistical significance or tolerance claim is possible.' },
+      computation: { method: 'DIRECT_DIFFERENCE', expression: `${left} - ${right}`, inputs: [{ id: left, value: a.value, unit: a.unit }, { id: right, value: b.value, unit: b.unit }], result: qa.normalized.value - qb.normalized.value, unit: qa.normalized.unit },
+      uncertainty: { status: known ? 'KNOWN' : 'UNKNOWN', value: uncertainty, unit: qa.normalized.unit, note: known ? 'Sum of explicitly declared bounds after unit normalization; not a confidence interval.' : 'Uncertainty is missing or not expressed as compatible bounds. No statistical propagation, significance or tolerance is claimed.' },
       alternatives, falsification: { test: falsifier, neededEvidence: ['Independent measurements of the same named features', 'Measurement uncertainty and datum definitions'] },
       authority: 'RECONSTRUCTED', status: 'REVIEW_REQUIRED', frameId: assembly.authoritativeFrameId });
   };

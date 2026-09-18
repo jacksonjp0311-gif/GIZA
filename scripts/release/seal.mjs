@@ -13,8 +13,8 @@ if(fs.existsSync('GIZA_MANIFEST.json')){
 const keys=['artifacts','files','modules','required_handoff_files'];
 if(fs.existsSync('EVIDENCE_ASSEMBLY_MANIFEST.json')){
  const p='EVIDENCE_ASSEMBLY_MANIFEST.json',d=JSON.parse(fs.readFileSync(p,'utf8'));
- const paths=new Set([...(d.artifacts??[]).map(r=>r.path),...tree('src/evidence'),...tree('scripts/evidence'),...tree('tests/browser'),'tests/evidence-boundaries.test.mjs','tests/evidence-workflow.test.mjs','tests/evidence-campaign.test.mjs','docs/EVIDENCE_BOUNDARY_EVOLUTION.md','docs/SOURCE_CAMPAIGN.md','public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json']);
- d.version=pkg.version;d.schemas={assembly:'giza.evidence-assembly.v1',quantity:'giza.quantity.v1',receipt:'giza.evidence-receipt.v2',investigation:'giza.saved-investigation.v2',campaign:'giza.scoped-campaign.v1'};d.artifacts=[...paths].sort().map(row);save(p,d);
+ const paths=new Set([...(d.artifacts??[]).map(r=>r.path),...tree('src/evidence'),...tree('scripts/evidence'),...tree('tests/browser'),'tests/evidence-boundaries.test.mjs','tests/evidence-workflow.test.mjs','tests/evidence-campaign.test.mjs','docs/EVIDENCE_BOUNDARY_EVOLUTION.md','docs/SOURCE_CAMPAIGN.md','docs/RELIABILITY_0_11_1.md','public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json']);
+ d.version=pkg.version;d.schemas={assembly:'giza.evidence-assembly.v1',quantity:'giza.quantity.v1',receipt:'giza.evidence-receipt.v2',investigation:'giza.saved-investigation.v2',campaign:'giza.scoped-campaign.v1',comparisonRule:'giza.comparison-rules.v3',measurementRule:'canonical-measurement.v3'};d.artifacts=[...paths].sort().map(row);save(p,d);
 }
 const top=fs.readdirSync('.').filter(p=>/MANIFEST\.json$/.test(p)&&!['GIZA_MANIFEST.json','CONTINUITY_MANIFEST.json','TRANSITION_MANIFEST.json'].includes(p));
 for(const p of top){const d=JSON.parse(fs.readFileSync(p));for(const k of keys){if(!Array.isArray(d[k]))continue;d[k]=d[k].map(x=>x?.path&&fs.existsSync(x.path)?{...x,...row(x.path)}:x);}

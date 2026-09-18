@@ -25,11 +25,25 @@ export function scalar(value:unknown):asserts value is number|string|null {
 export function validateUncertainty(u:Uncertainty):void {
   if(!u||!['KNOWN','UNKNOWN'].includes(u.status)||typeof u.unit!=='string'||typeof u.note!=='string'||(u.status==='UNKNOWN'?u.value!==null:typeof u.value!=='number'||!Number.isFinite(u.value)||u.value<0))throw new Error('Invalid uncertainty');
   if(u.interpretation!==undefined&&!['UNSPECIFIED_MAGNITUDE','BOUND','STANDARD_UNCERTAINTY','ROUNDING','UNKNOWN'].includes(u.interpretation))throw new Error('Unsupported uncertainty interpretation');
+  if(u.status==='KNOWN'&&u.interpretation==='UNKNOWN'||u.status==='UNKNOWN'&&u.interpretation!==undefined&&u.interpretation!=='UNKNOWN')throw new Error('Uncertainty status/interpretation conflict');
 }
 const units:Record<string,{dimension:string;unit:string;factor:number}>={m:{dimension:'LENGTH',unit:'m',factor:1},cm:{dimension:'LENGTH',unit:'m',factor:.01},mm:{dimension:'LENGTH',unit:'m',factor:.001},in:{dimension:'LENGTH',unit:'m',factor:.0254},deg:{dimension:'ANGLE',unit:'deg',factor:1},rad:{dimension:'ANGLE',unit:'deg',factor:180/Math.PI},arcmin:{dimension:'ANGLE',unit:'deg',factor:1/60},m2:{dimension:'AREA',unit:'m2',factor:1},m3:{dimension:'VOLUME',unit:'m3',factor:1},ratio:{dimension:'RATIO',unit:'ratio',factor:1}};
 export interface ValidatedQuantity {schema:'giza.quantity.v1';dimension:string;native:{value:number|string|null;unit:string|null};normalized:{value:number;unit:string};conversion:{from:string;factor:number;rule:'explicit-unit-table.v1'};nativeConversion?:{from:string;to:string;factor:number};uncertaintyInterpretation:string}
+// All existing lookups, including supplemental adapters, use an own-key-only table.
+Object.setPrototypeOf(units,null);Object.freeze(units);
+export function normalizedUncertainty(u:Uncertainty,quantityUnit:string){
+  validateUncertainty(u);const quantity=units[quantityUnit],spec=units[u.unit];
+  if(!quantity)throw new Error('Unsupported quantity unit');
+  if(u.status==='UNKNOWN'&&u.unit==='UNKNOWN')return {value:null,unit:quantity.unit,interpretation:'UNKNOWN',original:u};
+  if(!spec||spec.dimension!==quantity.dimension)throw new Error('Uncertainty unit dimension incompatible with quantity');
+  const value=u.value===null?null:u.value*spec.factor;
+  if(value!==null&&!Number.isFinite(value))throw new Error('Nonfinite normalized uncertainty');
+  return {value,unit:spec.unit,interpretation:u.interpretation??(u.status==='UNKNOWN'?'UNKNOWN':'UNSPECIFIED_MAGNITUDE'),original:u,conversion:{from:u.unit,factor:spec.factor,rule:'explicit-unit-table.v1'}};
+}
 export function normalizeQuantity(value:number,unit:string,nativeValue:number|string|null,nativeUnit:string|null):ValidatedQuantity {
   const spec=units[unit];if(!spec||!Number.isFinite(value))throw new Error(`Unsupported quantity unit ${unit}`);
+  if(!Number.isFinite(spec.factor)||spec.factor<=0||!Number.isFinite(value*spec.factor))throw new Error('Nonfinite quantity normalization');
+  if(typeof nativeValue==='number'&&(!Number.isFinite(nativeValue)||nativeUnit&&units[nativeUnit]&&!Number.isFinite(nativeValue*units[nativeUnit].factor)))throw new Error('Nonfinite native normalization');
   if(typeof nativeValue==='number'&&(!nativeUnit||!units[nativeUnit]))throw new Error('Numeric native observation requires a supported native unit');
   if(typeof nativeValue==='number'&&nativeUnit&&units[nativeUnit]){
     const source=units[nativeUnit];if(source.dimension!==spec.dimension)throw new Error('Native/normalized quantity dimension mismatch');
@@ -46,6 +60,7 @@ export function validateObservation(input:unknown,sourceIds?:Set<string>):assert
   scalar(o.value);scalar(o.nativeValue);
   for(const u of [o.unit,o.nativeUnit])if(u!==null&&(typeof u!=='string'||!u.trim()))throw new Error('Invalid observation unit');
   validateUncertainty(o.uncertainty);
+  if(o.unit&&units[o.unit])normalizedUncertainty(o.uncertainty,o.unit);
   if(observationAuthority(o.status)!==o.authority)throw new Error('Observation authority disagrees with source status');
   if(sourceIds&&!sourceIds.has(o.sourceId))throw new Error(`Unbound observation source ${o.sourceId}`);
   if(o.authority==='OBSERVED'&&(o.locator==='UNKNOWN'||o.sourceId==='source.unknown'))throw new Error('Observed record needs an identified source and locator');
@@ -53,6 +68,7 @@ export function validateObservation(input:unknown,sourceIds?:Set<string>):assert
   if(typeof o.value==='number'){
     if(o.unit===null)throw new Error('Numeric observation requires unit');
     const quantity=normalizeQuantity(o.value,o.unit,o.nativeValue,o.nativeUnit);
+    normalizedUncertainty(o.uncertainty,o.unit);
     if(o.quantity!==undefined){
       const q=o.quantity;
       if(q.schema!=='giza.quantity.v1'||q.dimension!==quantity.dimension||q.normalized.value!==quantity.normalized.value||q.normalized.unit!==quantity.normalized.unit||q.native.value!==o.nativeValue||q.native.unit!==o.nativeUnit||q.conversion.rule!=='explicit-unit-table.v1'||![o.unit,o.nativeUnit].includes(q.conversion.from)||!units[q.conversion.from]||units[q.conversion.from].dimension!==quantity.dimension||q.conversion.factor!==units[q.conversion.from].factor)throw new Error('Quantity metadata inconsistent with observation');

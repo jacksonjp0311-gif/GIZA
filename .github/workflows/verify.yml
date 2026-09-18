@@ -18,11 +18,30 @@ jobs:
           node-version: '22'
           cache: npm
       - run: node scripts/release/verify.mjs
-      - run: npm ci
-      - run: npm run check
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser
-      - run: npm start -- --smoke
+      - id: dependencies
+        run: node scripts/ci-stage.mjs dependencies
+      - id: contracts
+        run: node scripts/ci-stage.mjs contracts
+      - id: compilation
+        run: node scripts/ci-stage.mjs compilation
+      - id: browserSetup
+        run: node scripts/ci-stage.mjs browserSetup
+      - id: browser
+        run: node scripts/ci-stage.mjs browser
+      - name: Compile and launch smoke (also after browser failure)
+        if: ${{ always() && steps.compilation.outcome == 'success' }}
+        run: node scripts/ci-stage.mjs smoke
         env:
           GIZA_EXPLORER_PORT: '4183'
           GIZA_PORT: '4184'
+      - name: Preserve public verification artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: verification-${{ matrix.os }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            verification-ci/
+            test-results/
+            playwright-report/

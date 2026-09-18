@@ -1,0 +1,33 @@
+
+> giza-nexus-registration-workbench@0.11.1 start
+> node scripts/start.mjs --smoke
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 694 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.49 kB │ gzip:   0.31 kB
+dist/assets/AssemblyWorkbench-BWFPiQzv.css      8.81 kB │ gzip:   2.53 kB
+dist/assets/InscriptionLab-CbLDiibl.css        22.73 kB │ gzip:   5.44 kB
+dist/assets/index-DX0_iZdo.css                 77.07 kB │ gzip:  17.58 kB
+dist/assets/DetailMaterial-BcFYGt9B.js          0.75 kB │ gzip:   0.54 kB
+dist/assets/specifications-BP32DZb4.js          1.36 kB │ gzip:   0.62 kB
+dist/assets/ComponentWorkbench-Brofx7S4.js     17.39 kB │ gzip:   6.10 kB
+dist/assets/MapAtlasPanel-CeKMhiOq.js          28.32 kB │ gzip:   8.94 kB
+dist/assets/SphinxWorkbench-D0Cp4kD1.js        31.42 kB │ gzip:  12.35 kB
+dist/assets/GLTFExporter-bQlpiu0H.js           35.27 kB │ gzip:  10.53 kB
+dist/assets/InscriptionLab-DR4sJ6np.js         80.43 kB │ gzip:  23.21 kB
+dist/assets/AssemblyWorkbench-BosR-D20.js     137.76 kB │ gzip:  43.21 kB
+dist/assets/index-CDUnP8MG.js               1,218.09 kB │ gzip: 343.28 kB
+✓ built in 8.48s
+Compiled 0.11.1+dev.20260918015836872. Receipt: C:\Users\jacks\AppData\Local\Temp\giza-runtime\328b8f526dd4
+GIZA 0.10.12 Registration Workbench: http://127.0.0.1:4184/workbench/
+  ➜  Local:   http://127.0.0.1:4183/
+GIZA READY — http://127.0.0.1:4183/ — Ctrl+C stops both services.
+
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

@@ -1,6 +1,6 @@
 import {test,expect,type Page} from '@playwright/test';
 import fs from 'node:fs/promises';
-async function openAssembly(page:Page){await page.goto('/');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
+async function openAssembly(page:Page){await page.goto('/?spatialDiagnostics=1');await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await expect(page.locator('[data-evidence-workbench] canvas')).toBeVisible();await expect(page.getByLabel('Evidence feature')).toBeVisible();}
 async function measureLid(page:Page){await page.getByLabel('Evidence feature').selectOption('feature.lid.envelope');await page.getByRole('button',{name:'Measure',exact:true}).click();await page.getByLabel('Measurement frame').selectOption('frame.khafre.lid.object');await page.getByRole('button',{name:'Anchor 1',exact:true}).click();await page.getByRole('button',{name:'Anchor 2',exact:true}).click();}
 async function exported(page:Page,button='Export investigation'){const event=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();const d=await event;return JSON.parse(await fs.readFile((await d.path())!,'utf8'));}
 test('actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore',async({page})=>{
@@ -18,6 +18,8 @@ test('actual model entry, isolation fit, invariant measurement, computation, dra
   // Synthetic in-browser revision only: never written into archaeological datasets.
   await page.route('**/model/research/measurements.json',async route=>{const response=await route.fetch(),doc=await response.json(),row=doc.measurements.find((r:{id:string})=>r.id==='m.coffer.lid_length');row.native_value+=.1;row.si_value=row.native_value*.0254;await route.fulfill({json:doc});});
   await page.reload();await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByLabel('Investigation candidate').selectOption('candidate.coffer.lid-length-fit');await expect(page.getByText(/HISTORICAL ·/).first()).toBeVisible();await expect(page.getByLabel('Finding reviewer')).toHaveCount(0);
+  await page.getByRole('button',{name:'Explain / compare inputs',exact:true}).first().click();await expect(page.getByText('inputs.nodes.m.coffer.lid_length.data.value',{exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Run new linked result',exact:true}).first().click();await expect(page.getByText('CURRENT — matching dependency fingerprint',{exact:true})).toBeVisible();
   await page.getByRole('button',{name:'Open saved snapshot',exact:true}).click();await expect(page.getByText('ARCHIVED INPUTS — ORIGINAL SNAPSHOT',{exact:true})).toBeVisible();
   const reopened=await exported(page,'Export saved record');expect(reopened).toEqual(study);
   await page.getByLabel('Import saved investigation').setInputFiles({name:'synthetic-browser-study.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(study))});await expect(page.getByText(/Imported and replay-verified/)).toBeVisible();await expect(page.getByRole('button',{name:'Open saved snapshot',exact:true})).toHaveCount(1);
@@ -26,15 +28,14 @@ test('actual model entry, isolation fit, invariant measurement, computation, dra
 test('actual pointer cut picking saves computed surfaces in canonical coordinates',async({page})=>{
   await openAssembly(page);await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Top',exact:true}).click();
   await page.getByRole('button',{name:'Section',exact:true}).click();await page.getByRole('button',{name:'OBLIQUE',exact:true}).click();await page.getByLabel('Section inclination').fill('-90');await page.getByLabel('Section offset exact').fill('0.3');await page.getByRole('button',{name:'Measure',exact:true}).click();
-  const canvas=page.locator('[data-evidence-workbench] canvas'),box=(await canvas.boundingBox())!;let found=false;
-  // Search visible cut, not a synthetic picking API. Top view faces the retained
-  // lower half-space. Cavity remains empty; only real analytic cap meshes hit.
-  outer:for(const y of [.35,.4,.45,.5,.55,.6,.65])for(const x of [.42,.43,.57,.58,.4,.45,.5,.55,.6]){
-    await page.getByRole('button',{name:'Clear measurement',exact:true}).click();await page.mouse.click(box.x+box.width*x,box.y+box.height*y);
-    if(await page.getByText(/Computed section surface/).count()){await page.mouse.click(box.x+box.width*x+2,box.y+box.height*y);if(await page.getByText(/2 picked points retain/).count()){found=true;break outer;}}
-  }
-  expect(found,'Actual browser ray must reach an analytic section cap').toBe(true);await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Save investigation',exact:true}).click();await expect(page.getByText('Saved with original geometry, canonical points and reproducible result.',{exact:true})).toBeVisible();const study=await exported(page,'Export saved record');
+  const canvas=page.locator('[data-evidence-workbench] canvas');
+  await expect.poll(async()=>{const d=JSON.parse(await canvas.getAttribute('data-spatial-diagnostics')??'{}');return !!d.settled&&d.caps.filter((c:any)=>c.inViewport&&Math.abs(c.section.offset-.3)<1e-8).length>=2;}).toBe(true);
+  const diagnostic=JSON.parse((await canvas.getAttribute('data-spatial-diagnostics'))!);const targets=diagnostic.caps.filter((c:any)=>c.inViewport).slice(0,2);
+  for(let i=0;i<2;i++){await page.mouse.click(targets[i].screen[0],targets[i].screen[1]);await expect(page.getByText(new RegExp(`${i+1} picked points retain`))).toBeVisible();}
+  await expect(page.getByText(/Computed section surface/).first()).toBeVisible();await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Save investigation',exact:true}).click();await expect(page.getByText('Saved with original geometry, canonical points and reproducible result.',{exact:true})).toBeVisible();const study=await exported(page,'Export saved record');
   expect(study.payload.draft.points).toHaveLength(2);for(const point of study.payload.draft.points){expect(point.origin.kind).toBe('COMPUTED_SECTION');expect(point.position[2]).toBeCloseTo(-.3,5);}expect(study.payload.result.status).toBe('KNOWN');
+  expect(study.payload.draft.points.map((p:any)=>p.featureId)).toEqual(targets.map((t:any)=>t.featureId));expect(study.payload.draft.points.map((p:any)=>p.frameId)).toEqual(targets.map((t:any)=>t.frameId));
+  await page.reload();await page.getByRole('button',{name:'Sarcophagus',exact:true}).click();await page.getByRole('button',{name:'Investigate',exact:true}).click();await page.getByRole('button',{name:'Open saved snapshot',exact:true}).click();expect(await exported(page,'Export saved record')).toEqual(study);
 });
 test('authority-hidden geometry is absent from actual Fit-visible camera bounds',async({page})=>{
   await openAssembly(page);await measureLid(page);await page.getByRole('button',{name:'Views',exact:true}).click();await page.getByRole('button',{name:'Isolate selected object',exact:true}).click();await page.getByRole('button',{name:'Fit · F',exact:true}).click();await page.getByRole('button',{name:'Save current camera',exact:true}).click();

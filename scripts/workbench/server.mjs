@@ -44,7 +44,7 @@ const server=http.createServer(async(req,res)=>{
     const url=new URL(req.url,'http://127.0.0.1');
     if(req.method==='POST'){
       if(req.headers['x-giza-token']!==token)throw new GateError('TOKEN_REQUIRED');
-      if(req.headers.origin&&!['http://127.0.0.1:'+port,'http://localhost:'+port,'http://127.0.0.1:4173','http://localhost:4173'].includes(req.headers.origin))throw new GateError('ORIGIN_NOT_ALLOWED');
+      if(req.headers.origin&&!['http://127.0.0.1:'+port,'http://localhost:'+port,'http://127.0.0.1:4173','http://localhost:4173','http://127.0.0.1:'+(process.env.GIZA_EXPLORER_PORT||4173),'http://localhost:'+(process.env.GIZA_EXPLORER_PORT||4173)].includes(req.headers.origin))throw new GateError('ORIGIN_NOT_ALLOWED');
       if(url.pathname==='/api/evidence-campaign'){
         const payload=JSON.parse((await body(req,100*1024*1024)).toString());
         if(typeof payload.id!=='string'||!/^[a-z][a-z0-9.-]{2,100}$/.test(payload.id))throw new GateError('CAMPAIGN_ID_REQUIRED');

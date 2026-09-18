@@ -1,4 +1,4 @@
-const releaseVersion = import.meta.env.VITE_GIZA_RELEASE_VERSION || '0.11.0';
+const releaseVersion = import.meta.env.VITE_GIZA_RELEASE_VERSION || '0.11.1';
 const devBuild = import.meta.env.VITE_GIZA_DEV_BUILD;
 
 export const GIZA_DISPLAY_VERSION = devBuild

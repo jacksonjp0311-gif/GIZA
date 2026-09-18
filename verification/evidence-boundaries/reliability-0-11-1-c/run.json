@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "reliability-0-11-1-c",
+  "createdAt": "2026-09-18T01:50:28.790Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 1,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

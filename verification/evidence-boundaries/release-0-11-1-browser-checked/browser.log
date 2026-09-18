@@ -1,0 +1,33 @@
+
+> giza-nexus-registration-workbench@0.11.1 test:browser
+> playwright test
+
+
+Running 10 tests using 1 worker
+
+  ok  1 tests\browser\evidence-workflow.spec.ts:6:1 › actual model entry, isolation fit, invariant measurement, computation, draft detour, export and restore (16.7s)
+  ok  2 tests\browser\evidence-workflow.spec.ts:28:1 › actual pointer cut picking saves computed surfaces in canonical coordinates (9.1s)
+  ok  3 tests\browser\evidence-workflow.spec.ts:40:1 › authority-hidden geometry is absent from actual Fit-visible camera bounds (5.7s)
+  ok  4 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 1280x800 (3.4s)
+  ok  5 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 390x844 (2.8s)
+  ok  6 tests\browser\evidence-workflow.spec.ts:46:91 › model-first layout and keyboard 844x390 (2.4s)
+  ok  7 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas slow does not block core or force workspace navigation (3.7s)
+  ok  8 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas missing does not block core or force workspace navigation (2.7s)
+  ok  9 tests\browser\evidence-workflow.spec.ts:50:53 › optional atlas malformed does not block core or force workspace navigation (3.0s)
+  ok 10 tests\browser\source-campaign.spec.ts:3:1 › actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback (2.3s)
+
+  10 passed (1.2m)
+
+[WebServer] (node:18248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[WebServer] (node:532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:22896) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:20600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

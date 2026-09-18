@@ -72,8 +72,12 @@ test('candidates are deterministic and carry evidence, computation, alternatives
 test('lid fit is a scalar compatibility candidate, not observed clearance or statistical discovery', () => {
   const length = candidates.find(c => c.id === 'candidate.coffer.lid-length-fit');
   assert.ok(Math.abs(length.computation.result - 0.00127) < 1e-10);
-  assert.equal(length.uncertainty.status, 'KNOWN');
-  assert.ok(Math.abs(length.uncertainty.value - 0.001016) < 1e-10);
+  // Rule v3: the reported magnitudes lack a bound/standard-uncertainty definition.
+  assert.equal(length.uncertainty.status, 'UNKNOWN');
+  assert.equal(length.uncertainty.value, null);
+  const archived=json('evidence_assembly/validation-20260917-evolution-v1.json').experiments.find(r=>r.payload.data.candidate.id===length.id);
+  assert.equal(archived.payload.data.candidate.uncertainty.status,'KNOWN');
+  assert.ok(Math.abs(archived.payload.data.candidate.uncertainty.value-0.001016)<1e-10); // Historical interpretation is untouched.
   const width = candidates.find(c => c.id === 'candidate.coffer.lid-width-fit');
   assert.equal(width.uncertainty.status, 'UNKNOWN');
   assert.equal(width.uncertainty.value, null);

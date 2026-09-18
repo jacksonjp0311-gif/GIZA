@@ -9,11 +9,37 @@ const {generateInvestigationCandidates}=await load('intelligence.ts');
 const {runCandidateExperiment,experimentApplicability,reviewCurrentExperiment,verifyReceipt,sha256Json}=await load('receipts.ts');
 const {validateObservation,adaptObservation,lengthValue,assertSafeDocument}=await load('observationContract.ts');
 const {dependencyFingerprint}=await load('dependencies.ts');
+const {normalizedUncertainty}=await load('observationContract.ts');
+const {explainExperiment}=await load('explanation.ts');
 const read=p=>JSON.parse(fs.readFileSync(new URL('../public/model/'+p,import.meta.url),'utf8'));
 const base={parts:read('parts.json').parts,measurements:read('research/measurements.json').measurements,componentResearch:read('component_research.json'),sourceRegistry:read('evidence/source_registry.json').sources};
 const copy=x=>structuredClone(x),assembly=buildKhafreAssembly(base),graph=buildEvidenceGraph(assembly);
 const candidate=generateInvestigationCandidates(assembly,graph).find(c=>c.id==='candidate.coffer.lid-length-fit');
 const context={version:'boundary-test',commit:'SYNTHETIC_SOFTWARE_QA',environment:'Node',createdAt:'2026-09-17T00:00:00Z'};
+
+test('imported graph rejects authority contradictions, undeclared support and wrong-kind edges',()=>{
+  const g=copy(graph);g.nodes.find(n=>n.kind==='GEOMETRY'&&n.authority==='RECONSTRUCTED').authority='OBSERVED';assert.throws(()=>parseEvidenceGraph(g));
+  const h=copy(graph),f=h.nodes.find(n=>n.kind==='FEATURE'),other=h.nodes.find(n=>n.kind==='OBSERVATION'&&!f.data.observationIds.includes(n.id));h.edges.push({from:f.id,to:other.id,relationship:'CONSTRAINED_BY'});assert.throws(()=>parseEvidenceGraph(h));
+  const k=copy(graph);k.edges.push({from:k.assemblyId,to:k.authoritativeFrameId,relationship:'CITES'});assert.throws(()=>parseEvidenceGraph(k));
+  assert.deepEqual(parseEvidenceGraph(JSON.parse(JSON.stringify(graph))),graph);
+});
+test('unit inheritance, overflow and uncertainty dimensions fail at observation boundary',()=>{
+  const o=copy(assembly.observations.find(o=>typeof o.value==='number'&&o.unit==='m'));delete o.quantity;
+  for(const unit of ['toString','constructor','__proto__']){const q=copy(o);q.unit=unit;q.nativeValue=null;q.nativeUnit=null;assert.throws(()=>validateObservation(q));}
+  const q=copy(o);q.uncertainty={status:'KNOWN',value:1,unit:'deg',note:'synthetic'};assert.throws(()=>validateObservation(q));
+  const huge=copy(o);huge.value=Number.MAX_VALUE;huge.unit='rad';huge.nativeValue=null;huge.nativeUnit=null;assert.throws(()=>validateObservation(huge));
+});
+test('compatible uncertainty preserves original units and interpretation without inventing confidence',()=>{
+  const u={status:'KNOWN',value:2,unit:'cm',note:'Reported magnitude'};const q=normalizedUncertainty(u,'m');assert.equal(q.value,.02);assert.equal(q.interpretation,'UNSPECIFIED_MAGNITUDE');assert.deepEqual(q.original,u);assert.equal(q.conversion.factor,.01);
+  for(const interpretation of ['BOUND','ROUNDING','STANDARD_UNCERTAINTY'])assert.equal(normalizedUncertainty({...u,interpretation},'mm').interpretation,interpretation);
+  assert.equal(normalizedUncertainty({...u,value:0},'m').value,0);
+});
+test('experiment explanation and linked rerun keep old inputs immutable',async()=>{
+  const original=await runCandidateExperiment(candidate,graph,context),model=copy(base),row=model.measurements.find(o=>o.id==='m.coffer.lid_length');row.native_value+=.1;row.si_value=row.native_value*.0254;
+  const a=buildKhafreAssembly(model),g=buildEvidenceGraph(a),c=generateInvestigationCandidates(a,g).find(c=>c.id===candidate.id),e=await explainExperiment(original,c,g);
+  assert.equal(e.status,'HISTORICAL');assert.ok(e.changes.some(d=>d.path.includes('m.coffer.lid_length')&&d.path.endsWith('.value')));
+  const next=await runCandidateExperiment(c,g,context,original);assert.equal(next.payload.data.supersedesReceiptId,original.id);assert.equal((await explainExperiment(next,c,g)).status,'CURRENT');assert.notEqual(next.payload.data.result,original.payload.data.result);
+});
 test('recognized lower-authority observations cannot generate observed or reconstructed physical solids',()=>{
   for(const status of ['UNVERIFIED','HYPOTHESIS','ASSUMED','SIMULATED']){
     const model=copy(base);model.measurements.find(o=>o.id==='m.coffer.outer_length').status=status;

@@ -1,10 +1,11 @@
 {
   "schema_version": "1.0.0",
   "product": "GIZA",
-  "current_version": "0.11.0",
+  "current_version": "0.11.1",
   "codename": "REGISTRATION WORKBENCH",
-  "purpose": "Continue v0.11.0 in place: reliable evidence boundaries, canonical measurement, verified saved investigations and scoped source replay. Preserve the existing workstation and historical evidence; real coffer/chamber independent registration remains BLOCKED.",
+  "purpose": "Continue 0.11.1 in place: consistent graph and point contracts, explicit uncertainty, historical replay and contextual investigation explanation/comparison. Preserve canonical archaeology. Real registration remains blocked; successor remote CI remains unverified until run.",
   "read_order": [
+    "docs/RELIABILITY_0_11_1.md",
     "docs/SOURCE_CAMPAIGN.md",
     "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
     "README.md",
@@ -308,7 +309,8 @@
       "src/evidence/assembly.ts",
       "src/evidence/spatial.ts",
       "src/evidence/graph.ts",
-      "src/evidence/receipts.ts"
+      "src/evidence/receipts.ts",
+      "docs/RELIABILITY_0_11_1.md"
     ],
     "required_commands": [
       "npm run simlab:benchmarks",
@@ -394,7 +396,14 @@
     "validation": "npm run test:evidence-assembly && npm run test:runtime && npm run validate:evidence-assembly",
     "preservation": "No canonical part, measurement, assembly, stone-field or frozen archaeological experiment rewritten.",
     "spatial_invariant": "Presentation poses never enter physical measurement, sections or canonical export.",
-    "unresolved": ["Physical lid pose/contact geometry", "Assembly-to-monument archaeological reconciliation", "Site translation/vertical datum", "Accepted assembly image registration/independent control/holdouts", "Complete uncertainty propagation", "Metric connected-passage navigation"],
+    "unresolved": [
+      "Physical lid pose/contact geometry",
+      "Assembly-to-monument archaeological reconciliation",
+      "Site translation/vertical datum",
+      "Accepted assembly image registration/independent control/holdouts",
+      "Complete uncertainty propagation",
+      "Metric connected-passage navigation"
+    ],
     "next": "Acquire legitimate feature-level source bytes and independently controlled observations through the existing registration engine. Do not infer missing archaeological transforms from a visually plausible alignment.",
     "version_note": "Root historical release identity remains 0.10.12; new assembly schema and compile-time commit/source-hash metadata identify this software evolution."
   },

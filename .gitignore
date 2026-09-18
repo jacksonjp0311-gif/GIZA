@@ -17,6 +17,7 @@ credentials.json
 .DS_Store
 .vault-cache/
 .giza-research/
+verification-ci/
 public/vault/raw/*
 !public/vault/raw/README.md
 !public/vault/raw/.gitkeep

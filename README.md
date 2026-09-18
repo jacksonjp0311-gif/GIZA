@@ -1,14 +1,18 @@
-# GIZA NEXUS v0.11.0 — Registration Workbench
+# GIZA NEXUS v0.11.1 — Registration Workbench
 
-## Reliable evidence workflows
+## Current release — aligned investigation contracts
+
+This reliability successor adds strict imported-graph semantics, point-to-feature membership, compatible uncertainty, deterministic rendered cap picking, and contextual **Explain / compare inputs** with linked reruns. No interface rebuild or new archaeological authority. See [0.11.1 handoff and demonstration](docs/RELIABILITY_0_11_1.md) and [actual verification status](VALIDATION.md).
+
+## Preserved 0.11.0 capabilities
 
 Select exact feature support separately from context; measure in a declared frame; preserve a replayable investigation with its original geometry, points and result; reopen historical inputs without silently rebasing them. New computations carry dependency fingerprints. Analytic section cuts are pickable, fitting uses visible geometry, and optional research data no longer blocks the initial model.
 
 The focused source campaign reuses the shared registration engine for acquisition, immutable controls/holdouts, replay and reviewed **2-D-only** revisions. Its synthetic positive path works; the real coffer/chamber campaign is explicitly BLOCKED on independent source/control requirements. See the [fresh-user demonstration and exact limits](docs/SOURCE_CAMPAIGN.md), [checkpoint ledger](docs/EVIDENCE_BOUNDARY_EVOLUTION.md), and [validation record](VALIDATION.md).
 
-## Current repository status — 2026-09-17
+## Historical 0.10.12 implementation checkpoint — 2026-09-17
 
-Evidence-boundary hardening is in progress; see [ordered implementation checkpoints](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Historical results below remain unchanged. New experiment receipts distinguish current calculations from historical snapshots.
+At this historical checkpoint, evidence-boundary hardening was in progress; see [ordered implementation checkpoints](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Historical results below remain unchanged. New experiment receipts distinguish current calculations from historical snapshots.
 
 ### Evidence Assembly / 01 — Khafre sarcophagus
 
@@ -16,7 +20,7 @@ Open **Sarcophagus**, **Sarcophagus Lid**, **Burial Chamber** or **Interior** in
 
 The known detail/overview disagreement is now an explicit frame audit, **not a silent correction**. The detached lid's physical placement, assembly-to-monument/site transform, raw primary-source custody and metric image registration remain unresolved. UNKNOWN is not zero. The older component viewer remains under **Views**; historical sources, experiments, Sphinx, Inscription Lab, simulations and atlas are preserved. See [Evidence Assembly contract and handoff](docs/EVIDENCE_ASSEMBLY.md) for capabilities, guarantees and limits.
 
-`npm run check` now includes the Evidence Assembly, graph/receipt, presentation and runtime-resilience tests. `npm run validate:evidence-assembly` reproduces candidates from repository data; see `scripts/evidence/README.md` for immutable receipt output. Root release identity stays 0.10.12, with contract v1 and compile-time commit/source-hash/build metadata.
+`npm run check` now includes the Evidence Assembly, graph/receipt, presentation and runtime-resilience tests. `npm run validate:evidence-assembly` reproduces candidates from repository data; see `scripts/evidence/README.md` for immutable receipt output. That historical release identity was 0.10.12, with contract v1 and compile-time commit/source-hash/build metadata.
 
 This project is maintained as **GIZA**. The model-first Explorer includes the original animated logo, searchable components, expanded viewing and component Quick Views. The repo-contained launcher now compiles TypeScript and production assets on every start, stamps the build outside the repository, and serves both Explorer and Registration Workbench. Historical verification artifacts retain their original results.
 

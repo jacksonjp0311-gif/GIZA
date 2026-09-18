@@ -3,6 +3,7 @@ import type { EvidenceEdge,JsonValue, SpatialEvidenceGraph } from './graph';
 import type { InvestigationCandidate } from './intelligence';
 import type { EvidenceFeature, RealityAuthority } from './types';
 import {dependencyFingerprint,EVALUATION_RULE} from './dependencies';
+import {normalizeQuantity,normalizedUncertainty} from './observationContract';
 
 export interface ReceiptContext { version: string; commit: string; environment: string; createdAt: string }
 export interface EvidenceReceipt {
@@ -47,7 +48,7 @@ async function seal(kind: EvidenceReceipt['kind'], payload: EvidenceReceipt['pay
   return freeze(receipt);
 }
 
-function reCompute(candidate: InvestigationCandidate, graph: SpatialEvidenceGraph): number | string | null {
+function reCompute(candidate: InvestigationCandidate, graph: SpatialEvidenceGraph,rule=EVALUATION_RULE): number | string | null {
   const byId = new Map(graph.nodes.map(node => [node.id, node]));
   if (!candidate.id || !candidate.falsification.test || !candidate.alternatives.length || !candidate.falsification.neededEvidence.length || candidate.status !== 'REVIEW_REQUIRED' || !['RECONSTRUCTED', 'HYPOTHESIS'].includes(candidate.authority)) throw new Error('Candidate lacks review/falsification metadata');
   for (const id of candidate.evidenceIds) if (!byId.has(id)) throw new Error(`Candidate evidence missing: ${id}`);
@@ -58,10 +59,16 @@ function reCompute(candidate: InvestigationCandidate, graph: SpatialEvidenceGrap
       if (candidate.computation.inputs.length !== 2) throw new Error('Difference needs exactly two inputs');
       const inputs = candidate.computation.inputs.map(input => {
         const node = byId.get(input.id);
-        if (node?.kind !== 'OBSERVATION' || typeof node.data.value !== 'number' || node.data.value !== input.value || node.data.unit !== input.unit || input.unit !== candidate.computation.unit) throw new Error('Candidate input differs from graph observation');
-        return node.data.value;
+        if (node?.kind !== 'OBSERVATION' || typeof node.data.value !== 'number' || node.data.value !== input.value || node.data.unit !== input.unit) throw new Error('Candidate input differs from graph observation');
+        if(rule===EVALUATION_RULE){const q=normalizeQuantity(node.data.value,String(node.data.unit),node.data.nativeValue as number|string|null,node.data.nativeUnit as string|null);if(q.normalized.unit!==candidate.computation.unit)throw new Error('Candidate normalized dimension/unit mismatch');return q.normalized.value;}
+        if(input.unit!==candidate.computation.unit)throw new Error('Historical candidate unit mismatch');return node.data.value;
       });
-      return inputs[0] - inputs[1];
+      if(rule===EVALUATION_RULE){
+        const uncertainty=candidate.computation.inputs.map(i=>{const o=byId.get(i.id)!.data;return normalizedUncertainty(o.uncertainty as unknown as import('./types').Uncertainty,String(o.unit));});
+        const bounded=uncertainty.every(u=>u.value!==null&&u.interpretation==='BOUND'),magnitude=bounded?uncertainty.reduce((s,u)=>s+u.value!,0):null;
+        if(candidate.uncertainty.status!==(bounded?'KNOWN':'UNKNOWN')||candidate.uncertainty.value!==magnitude||candidate.uncertainty.unit!==candidate.computation.unit)throw new Error('Candidate uncertainty interpretation does not reproduce');
+      }
+      const difference=inputs[0]-inputs[1];if(!Number.isFinite(difference))throw new Error('Nonfinite computed difference');return difference;
     }
     case 'ASSEMBLY_CONSTRAINT_REVIEW': {
       const node = byId.get(candidate.id.replace('candidate.constraint:', ''));
@@ -80,13 +87,16 @@ function reCompute(candidate: InvestigationCandidate, graph: SpatialEvidenceGrap
 }
 
 /** Freeze exact inputs and graph snapshot, rerun deterministic computation, retain UNKNOWN. */
-export async function runCandidateExperiment(candidate: InvestigationCandidate, graphInput: SpatialEvidenceGraph, context: ReceiptContext): Promise<EvidenceReceipt> {
+export async function runCandidateExperiment(candidate: InvestigationCandidate, graphInput: SpatialEvidenceGraph, context: ReceiptContext,original?:EvidenceReceipt): Promise<EvidenceReceipt> {
   const graph = parseEvidenceGraph(graphInput), result = reCompute(candidate, graph);
+  if(original){const checked=await verifyReceipt(original);if(checked.kind!=='EXPERIMENT'||(checked.payload.data.candidate as Record<string,JsonValue>).id!==candidate.id)throw new Error('Linked rerun requires the original candidate');}
   if (typeof result === 'number' && typeof candidate.computation.result === 'number' ? Math.abs(result - candidate.computation.result) > 1e-10 : result !== candidate.computation.result) throw new Error('Candidate result changed; regenerate candidate from current evidence');
-  return seal('EXPERIMENT', { context: contextChecked(context), assemblyId: graph.assemblyId, frameId: graph.authoritativeFrameId, authority: candidate.authority, data: plain({ candidate, dependencyFingerprint:await dependencyFingerprint(candidate,graph),evaluationRule:EVALUATION_RULE,graphSha256: await sha256Json(graph), graphSnapshot: graph, result, outcome: 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED', metricAuthority: 'NONE', note: 'Reproducing source arithmetic is not an independent archaeological test. Candidate still requires review.' }) });
+  return seal('EXPERIMENT', { context: contextChecked(context), assemblyId: graph.assemblyId, frameId: graph.authoritativeFrameId, authority: candidate.authority, data: plain({ candidate,...(original?{supersedesReceiptId:original.id}:{}), dependencyFingerprint:await dependencyFingerprint(candidate,graph),evaluationRule:EVALUATION_RULE,graphSha256: await sha256Json(graph), graphSnapshot: graph, result, outcome: 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED', metricAuthority: 'NONE', note: 'Reproducing source arithmetic is not an independent archaeological test. Candidate still requires review.' }) });
 }
 
 export async function verifyReceipt(value: unknown): Promise<EvidenceReceipt> {
+  // Only recursively frozen, already verified objects enter this identity cache.
+  if(value&&typeof value==='object'&&verifiedReceipts.has(value))return value as EvidenceReceipt;
   if (new TextEncoder().encode(canonicalJson(value)).length > 8_000_000) throw new Error('Receipt exceeds 8 MB');
   const receipt = JSON.parse(canonicalJson(value)) as EvidenceReceipt;
   if (!['giza.evidence-receipt.v1','giza.evidence-receipt.v2'].includes(receipt.schema) || !['EXPERIMENT', 'FINDING', 'PROMOTION'].includes(receipt.kind) || !receipt.payload || !receipt.payload.data || typeof receipt.payload.data !== 'object' || Array.isArray(receipt.payload.data) || typeof receipt.payload.assemblyId !== 'string' || !receipt.payload.assemblyId || typeof receipt.payload.frameId !== 'string' || !receipt.payload.frameId || !['OBSERVED', 'RECONSTRUCTED', 'HYPOTHESIS'].includes(receipt.payload.authority)) throw new Error('Unsupported evidence receipt');
@@ -94,12 +104,13 @@ export async function verifyReceipt(value: unknown): Promise<EvidenceReceipt> {
   const expected = await sha256Json({ schema: receipt.schema, kind: receipt.kind, payload: receipt.payload });
   if (receipt.sha256 !== expected || receipt.id !== `receipt:${receipt.kind.toLowerCase()}:${expected}`) throw new Error('Receipt checksum mismatch');
   if (receipt.kind === 'EXPERIMENT') {
-    const graph = parseEvidenceGraph(receipt.payload.data.graphSnapshot);
+    if(receipt.payload.data.supersedesReceiptId!==undefined&&!/^receipt:experiment:[a-f0-9]{64}$/.test(String(receipt.payload.data.supersedesReceiptId)))throw new Error('Invalid original experiment link');
+    const graph = parseEvidenceGraph(receipt.payload.data.graphSnapshot,receipt.schema==='giza.evidence-receipt.v1'?'HISTORICAL_V1':'CURRENT');
     if (await sha256Json(graph) !== receipt.payload.data.graphSha256 || graph.assemblyId !== receipt.payload.assemblyId || graph.authoritativeFrameId !== receipt.payload.frameId) throw new Error('Experiment graph/frame mismatch');
     const candidate = receipt.payload.data.candidate as unknown as InvestigationCandidate;
-    if(receipt.schema==='giza.evidence-receipt.v2'&&(receipt.payload.data.evaluationRule!==EVALUATION_RULE||receipt.payload.data.dependencyFingerprint!==await dependencyFingerprint(candidate,graph)))throw new Error('Experiment dependency fingerprint/rule mismatch');
+    if(receipt.schema==='giza.evidence-receipt.v2'&&receipt.payload.data.dependencyFingerprint!==await dependencyFingerprint(candidate,graph,String(receipt.payload.data.evaluationRule)))throw new Error('Experiment dependency fingerprint/rule mismatch');
     if (receipt.payload.authority !== candidate.authority || receipt.payload.data.metricAuthority !== 'NONE' || receipt.payload.data.outcome !== 'COMPUTATION_REPRODUCED_NOT_INDEPENDENTLY_CONFIRMED') throw new Error('Experiment authority does not match its candidate');
-    const result = reCompute(candidate, graph);
+    const result = reCompute(candidate, graph,String(receipt.payload.data.evaluationRule??'giza.comparison-rules.v1'));
     if (result !== receipt.payload.data.result || result !== candidate.computation.result) throw new Error('Experiment no longer reproduces');
   } else if (receipt.kind === 'FINDING') {
     const data = receipt.payload.data;
@@ -107,7 +118,7 @@ export async function verifyReceipt(value: unknown): Promise<EvidenceReceipt> {
     if (receipt.payload.authority !== 'HYPOTHESIS' || data.geometryAuthority !== 'NONE' || data.classification !== 'OPERATOR_REVIEW_NOT_AUTHENTICATED') throw new Error('Finding cannot claim observed or metric authority');
     if (typeof data.experimentSha256 !== 'string' || !/^[a-f0-9]{64}$/.test(data.experimentSha256) || data.experimentReceiptId !== `receipt:experiment:${data.experimentSha256}` || typeof data.candidateId !== 'string' || !data.candidateId) throw new Error('Finding experiment reference is malformed');
   } else {
-    const data = receipt.payload.data, graph = parseEvidenceGraph(data.graphSnapshot), review = reviewChecked(data.review);
+    const data = receipt.payload.data, graph = parseEvidenceGraph(data.graphSnapshot,receipt.schema==='giza.evidence-receipt.v1'?'HISTORICAL_V1':'CURRENT'), review = reviewChecked(data.review);
     if (await sha256Json(graph) !== data.graphSha256 || graph.assemblyId !== receipt.payload.assemblyId || data.authoritativeFrameId !== graph.authoritativeFrameId) throw new Error('Promotion graph/frame mismatch');
     const feature = graph.nodes.find(n => n.id === data.featureId && n.kind === 'FEATURE')?.data as unknown as EvidenceFeature | undefined;
     if (!feature || feature.frameId !== receipt.payload.frameId || feature.authority !== receipt.payload.authority || data.previousAuthority !== feature.authority || data.mutatesCanonicalData !== false) throw new Error('Promotion feature/frame/authority mismatch');

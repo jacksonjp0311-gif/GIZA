@@ -1,5 +1,7 @@
 # Scoped Khafre source-to-result workflow
 
+Current product: **0.11.1**. The campaign engine/2-D claim scope is preserved; see the 0.11.1 integration-status section below and `RELIABILITY_0_11_1.md` for current investigation rule identities.
+
 ## Claim boundary
 
 This workflow binds source bytes, attributable identity, permitted-use declarations, feature locators, independent scale/control assertions, frozen holdouts and shared-engine results. It adds reviewed **local 2-D plan evidence**, not a guessed 3-D transform. Body/lid seating and assembly-to-monument/site placement remain unresolved. Reviews are operator-attributed, not authenticated scholarly endorsement. Source/render association is explicitly operator-confirmed; this adapter does not claim automatic page extraction or photogrammetry.
@@ -70,3 +72,6 @@ Browser investigations use `giza.saved-investigation.v2`: canonical points/frame
 4. In **Investigate**, select **Lid/body length compatibility**, then **Run reproducible computation**. The 1.27 mm arithmetic difference is not a seated clearance or tolerance.
 5. **Save investigation**, then **Export saved record**. Reload, reenter Investigate, and **Open saved snapshot**. The header identifies original archived inputs. **Import investigation** verifies/replays exported files and safely handles identical duplicates.
 6. Run `npm run test:browser` for the reproducible challenge: a clearly labelled browser-only synthetic revision changes the lid measurement. The old computation becomes HISTORICAL and current review is blocked until rerun. Opening the old study still restores its original geometry. No archaeological file is changed by that test.
+## 0.11.1 integration status
+
+The shared acquisition/fit/replay implementation is preserved. The Explorer comparison panel explicitly labels imported campaigns SIDECAR ONLY — NOT CONSUMED BY LIVE GRAPH, shows claimed snapshot/revision/source/frame identities, and does not claim local replay. Its workbench link uses the configured launcher proxy. A successful reviewed 2-D campaign still does not change 3-D archaeological geometry. See `RELIABILITY_0_11_1.md` for the connected investigation workflow and smallest next acquisition. Existing v2 saved studies now use measurement-rule v3; earlier rule identities replay historically without being backfilled.

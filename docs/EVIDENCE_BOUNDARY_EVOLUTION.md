@@ -1,8 +1,10 @@
 # Evidence boundary evolution — implementation checkpoints
 
+Current successor: **0.11.1**. See `RELIABILITY_0_11_1.md` for current behavior and the corrected remote failure record. Earlier sections below describe dated 0.11.0 development checkpoints, not current release status.
+
 Baseline: `557cbc275f60d801ba461f187fa33ebe173f040a`. The historical release identity 0.10.12 and 154-test result are not assertions about subsequent work. No audit ZIP was available at the checked Downloads path.
 
-## Increment 1 — current implementation
+## Historical increment 1 implementation
 
 Reproduced: permissive observation authority fallback, malformed observation values accepted by canonical import, numeric supplemental values assigned metres indiscriminately, geometry graph nodes inheriting scalar authority, shared-assembly traversal broadening support, and candidate-ID-only experiment selection.
 
@@ -33,3 +35,6 @@ Increment 2 checkpoint: `increment-2-browser-final` passed all eight actual brow
 The preceding paragraphs describe intermediate checkpoints. Increment 3 is now implemented: scoped acquisition, immutable source/control bytes, shared-engine freeze/fit/replay, explicit 2-D reviewed sidecar revision and rollback. Synthetic positive and failed-holdout packets are preserved. The real campaign remains BLOCKED for missing independently supported evidence; no archaeological completion is certified. See `SOURCE_CAMPAIGN.md`.
 
 Final `release-0-11-0-full-b` passed 179 tests and the full inherited pipeline. `release-0-11-0-browser-b` passed ten actual browser tests. Compile-and-launch smoke passed on ports 4183/4184. Final performance data and limitations are in root VALIDATION.md. Receipt v2 and saved-investigation v2 preserve explicit v1 compatibility. Product identity is 0.11.0; historical engine/data versions remain intact. Current manifests are regenerated after these final documentation changes; historical seals are archived before mutation.
+## Successor checkpoint: 0.11.1
+
+Current work and the corrected remote Windows failure record are documented in `RELIABILITY_0_11_1.md` and root VALIDATION.md. The sections below retain their historical 0.11.0 checkpoint meaning. In particular, local browser success did not certify the later failing remote Windows run.

@@ -1,0 +1,9 @@
+{
+  "benchmark_id": "benchmark.registration.planar_homography.0.9.8",
+  "kind": "SYNTHETIC_ANALYTIC_CONTROL",
+  "correspondence_count": 6,
+  "reprojection_rmse_px": 4.3453624276198343e-13,
+  "plane_rmse_m": 1.3259401376254866e-15,
+  "pass": true,
+  "created_at": "2026-09-18T01:51:39.589Z"
+}

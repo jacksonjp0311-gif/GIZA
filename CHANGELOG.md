@@ -1,3 +1,11 @@
+# 0.11.1 — investigation reliability and contextual comparison
+
+- Enforce imported graph support/authority/ownership semantics and shared point membership for boxes, segments, concave planar surfaces, points and analytic sections.
+- Harden unit inheritance, normalization overflow and uncertainty compatibility. Version comparison/measurement rules while preserving historical replay and original bytes.
+- Add deterministic contextual explanations, exact original/current dependency differences, linked reruns and read-only historical investigation inspection.
+- Replace section pixel hunting with real rendered-cap projection/pointer interaction; preserve CI stage logs and failure artifacts. Keep startup smoke independently reportable after browser failure.
+- Clarify source campaigns as scoped 2-D sidecars not yet consumed by the live graph; preserve blocked real acquisition and existing specializations.
+
 # v0.11.0 — evidence boundaries and durable spatial research
 
 - Explicit status/authority policy, shared observation validation, normalized quantities, separate geometry authority and purpose-specific evidence queries.

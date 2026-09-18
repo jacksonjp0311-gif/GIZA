@@ -1,5 +1,5 @@
 import type {CanonicalPoint,EvidenceAssembly,EvidenceFeature,RealityAuthority,SectionPlane,Vec3} from './types';
-import { invertRigid, pointInFrame, polygonArea, resolveTransform, sectionBox, transformPoint } from './spatial';
+import { invertRigid, pointInFrame, polygonArea, resolveTransform, sectionBox, transformPoint,validateCanonicalMembership } from './spatial';
 import { displayPoint, inspectionPose, physicalPoint } from './presentation';
 
 export function featureAnchors(feature:EvidenceFeature):Vec3[]{
@@ -20,8 +20,8 @@ export function visibleGeometry(assembly:EvidenceAssembly,state:VisibilityState)
 }
 export function pickSectionCanonical(assembly:EvidenceAssembly,feature:EvidenceFeature,display:Vec3,explode:number,section:SectionPlane):CanonicalPoint{
   const point=pickCanonical(assembly,feature,display,explode),at=pointInFrame(assembly,point,section.frameId);
-  if(!at||Math.abs(at.reduce((s,v,i)=>s+v*section.normal[i],-section.offset))>1e-5)throw new Error('Section pick does not lie on its physical plane');
-  return {...point,origin:{kind:'COMPUTED_SECTION',section:structuredClone(section),surfaceAuthority:'RECONSTRUCTED'}};
+  const n=Math.hypot(...section.normal);if(!at||!Number.isFinite(n)||n<1e-12||Math.abs(at.reduce((s,v,i)=>s+v*(section.normal[i]/n),-section.offset/n))>1e-7)throw new Error('Section pick does not lie on its physical plane');
+  const picked:CanonicalPoint={...point,origin:{kind:'COMPUTED_SECTION',section:structuredClone(section),surfaceAuthority:'RECONSTRUCTED'}};validateCanonicalMembership(assembly,picked);return picked;
 }
 export function bodyOrigin(assembly:EvidenceAssembly):Vec3{
   const body=assembly.features.find(f=>f.objectId==='part.sarcophagus.body');

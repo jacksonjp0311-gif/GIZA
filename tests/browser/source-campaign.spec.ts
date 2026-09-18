@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 import {campaignFixture} from '../../scripts/evidence/campaign-fixture.mjs';
 test('actual local workbench: synthetic acquisition → freeze → shared fit → reviewed revision → export → rollback',async({page})=>{
   const id=`qa.browser.${Date.now()}`,fixture=campaignFixture(id);
-  await page.goto('http://127.0.0.1:4198/workbench/campaign.html');await page.getByLabel('Campaign ID').fill(id);
+  await page.goto('/workbench/campaign.html');await page.getByLabel('Campaign ID').fill(id);
   await page.locator('#packet').setInputFiles({name:'SYNTHETIC-acquisition.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
   await page.getByRole('button',{name:'Acquire new campaign',exact:true}).click();await expect(page.locator('#status')).toContainText('acquire completed');
   await page.locator('#landmarks').setInputFiles({name:'SYNTHETIC-frozen-landmarks.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture.input))});

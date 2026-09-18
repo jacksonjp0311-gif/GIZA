@@ -1,7 +1,7 @@
 {
   "name": "giza-nexus-registration-workbench",
   "private": true,
-  "version": "0.11.0",
+  "version": "0.11.1",
   "type": "module",
   "scripts": {
     "start": "node scripts/start.mjs",
@@ -142,5 +142,5 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "gizaVersion": "0.11.0"
+  "gizaVersion": "0.11.1"
 }
