@@ -1,28 +1,23 @@
 {
-  "version": "0.11.1",
+  "version": "0.11.0",
   "contract": "giza.evidence-assembly.v1",
   "archaeological_fit_created": false,
   "canonical_geometry_mutated": false,
   "artifacts": [
     {
       "path": "docs/EVIDENCE_ASSEMBLY.md",
-      "sha256": "2bf7c6702bd5b881ce0399365b36efdf367d4024c576755129bca75ec36337ae",
-      "bytes": 14559
+      "sha256": "2a82ef17473325d5926797908312baaf884f00dfd7fa0469591b0af25aa05da3",
+      "bytes": 14162
     },
     {
       "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
-      "sha256": "18ffb52e20057dc9000356bec8f7d6525056ceee07bb8ec6b2cda63bd56ded6a",
-      "bytes": 6510
-    },
-    {
-      "path": "docs/RELIABILITY_0_11_1.md",
-      "sha256": "6a1d9afa38ee8b6369f8b827411dd0dba3d6190aa16fe85cbd5f328924f134f6",
-      "bytes": 9176
+      "sha256": "9d19ac1e4c3e37bdb38202a204854c68c527f9a43e5a8c95d19f744d55d1001e",
+      "bytes": 5970
     },
     {
       "path": "docs/SOURCE_CAMPAIGN.md",
-      "sha256": "15b73a84e6292a86cf10036c9b836a6662243f43e63625f439227d70b8e1089b",
-      "bytes": 9805
+      "sha256": "7bd3fa2f8775189abda9231f3e64209c4e7d631505483552ddf453576c8fa9b7",
+      "bytes": 8945
     },
     {
       "path": "public/model/evidence_assembly/campaign-khafre-plan-blocked-20260917.json",
@@ -70,11 +65,6 @@
       "bytes": 1964
     },
     {
-      "path": "scripts/evidence/profile-reliability.mjs",
-      "sha256": "b616bf72bf57860f998e184ab7bf8ba2e826be0ae525af20746750cbbd9627e8",
-      "bytes": 2717
-    },
-    {
       "path": "scripts/evidence/validate.mjs",
       "sha256": "9d1d958e256836abaa16693eeb94598695d6ca58d283bf097ad041513dbc0b34",
       "bytes": 7726
@@ -86,8 +76,8 @@
     },
     {
       "path": "src/evidence/AssemblyScene.tsx",
-      "sha256": "182b259107616472d4a8a77918f808b4eaa8a3d5149c7846940b0ccd825bc27b",
-      "bytes": 12463
+      "sha256": "00ecdbf462c9d0c87cbb6e1e442ebc034d442f5a99b9372491e25fc048af371d",
+      "bytes": 10625
     },
     {
       "path": "src/evidence/AssemblyWorkbench.tsx",
@@ -96,13 +86,8 @@
     },
     {
       "path": "src/evidence/ComparisonPanel.tsx",
-      "sha256": "dfba57ac1c6c81ee0660073340d7468f246aa45ed00c03e2efe047fd37e74994",
-      "bytes": 7414
-    },
-    {
-      "path": "src/evidence/ExplanationPanel.tsx",
-      "sha256": "edf7e900b5d822e7cda734e9a06d8d501bd6f4ea13a79370427e3fe721bd989c",
-      "bytes": 2392
+      "sha256": "c4a9bbd669a85a82195aa26bd78604bc8bedf01fb07f43748a0aec7ad509d696",
+      "bytes": 7135
     },
     {
       "path": "src/evidence/FeaturePanel.tsx",
@@ -111,13 +96,13 @@
     },
     {
       "path": "src/evidence/InvestigationPanel.tsx",
-      "sha256": "4d6d3ecdc33f0a8bb702f86cd759d8f7a2800a16558a3f5890e805762ddd5540",
-      "bytes": 8554
+      "sha256": "8b9c003f2d79102842c0aebdb2fd19e52f02ee4a602b2dcce37825af8ce7a629",
+      "bytes": 8062
     },
     {
       "path": "src/evidence/SavedInvestigations.tsx",
-      "sha256": "4a35f68937ca5dcb5078092edb8489fe875723435fe6973569d000aff8c2e0cc",
-      "bytes": 6078
+      "sha256": "3792e60136b37a3a543ed944a971b38ae04a1495f2cea9a50b29ac71c731eb34",
+      "bytes": 4653
     },
     {
       "path": "src/evidence/SpatialTools.tsx",
@@ -141,18 +126,13 @@
     },
     {
       "path": "src/evidence/dependencies.ts",
-      "sha256": "c017ab72c6342b7874c0f3412eea78721775812476f54679d111246d29255843",
-      "bytes": 2808
+      "sha256": "25379fb2561bac9cbb5ae273873a477472bc5ca7050560dd466fa654e79de04d",
+      "bytes": 2491
     },
     {
       "path": "src/evidence/evidence.css",
       "sha256": "cbd4fa76d5e44731ff5d2ace2e6fae8be3e3aa0e7bee589913a0c5cd544341f6",
       "bytes": 8942
-    },
-    {
-      "path": "src/evidence/explanation.ts",
-      "sha256": "424c7a323426d3bc65a1759bf7e9039708fdcce275883bf72afc85d4af2ad4a1",
-      "bytes": 4585
     },
     {
       "path": "src/evidence/export.ts",
@@ -161,28 +141,23 @@
     },
     {
       "path": "src/evidence/graph.ts",
-      "sha256": "47be4b107541662a06c80a98e654c75e5f593fed0c9e51c7408cdae22d257811",
-      "bytes": 19336
+      "sha256": "ea391e9d214675ec8a6a6860e42469304325f78498d5c35ec42f33087619e641",
+      "bytes": 12173
     },
     {
       "path": "src/evidence/intelligence.ts",
-      "sha256": "eb0d577991113ab4c4b0962c51f079ef972467c705287ead8815675e2875de2f",
-      "bytes": 10581
+      "sha256": "48a0ca6c6d07055a899b7ff3546bf00a6d4fe1b3b6b5448abd35c53b88c3bf6a",
+      "bytes": 10262
     },
     {
       "path": "src/evidence/investigations.ts",
-      "sha256": "6ff53152cf1c964e833065446d558257cd241ef100d7952e7a3d04d5d7b85bfa",
-      "bytes": 10578
-    },
-    {
-      "path": "src/evidence/membership.ts",
-      "sha256": "4d3533109af77df48639532aeaa19926f402bac9a2ec7c814f6f885ba4441992",
-      "bytes": 3886
+      "sha256": "a515d7d867e03fe286dc0911b596fb35e4fa0225e5438410af51b886d56e7a12",
+      "bytes": 9657
     },
     {
       "path": "src/evidence/observationContract.ts",
-      "sha256": "2d42f61999734a0e89adc9ed929dd7adee0874a6b1b9d5dd4fa52443c10cc4c0",
-      "bytes": 12589
+      "sha256": "b3d9d1d8e50755e72dc2afaa100b70e36bae20e0685ea7927268ad696d1e1714",
+      "bytes": 10961
     },
     {
       "path": "src/evidence/presentation.ts",
@@ -191,8 +166,8 @@
     },
     {
       "path": "src/evidence/receipts.ts",
-      "sha256": "0b2da1bf635b8592688b09566fb88d7bed3df77580ee09eb9caf71f0b8c8736b",
-      "bytes": 25411
+      "sha256": "ebd5f28f34c54f3e6dcd54269792236faa143206246085b212bd90101749c792",
+      "bytes": 23295
     },
     {
       "path": "src/evidence/registration.ts",
@@ -201,8 +176,8 @@
     },
     {
       "path": "src/evidence/spatial.ts",
-      "sha256": "f47037fcad9ff1e327fd0b236397e14da4737eb279cccd320a25abcb55d261d9",
-      "bytes": 16369
+      "sha256": "da73c87802a4a18e1279163c51d771e33a8ffaaf22d41a99190f1a541d898b06",
+      "bytes": 13596
     },
     {
       "path": "src/evidence/types.ts",
@@ -211,8 +186,8 @@
     },
     {
       "path": "src/evidence/viewGeometry.ts",
-      "sha256": "411c51ede4f2ebce6af92c59901b86613f912179ccc60d506c6e1131a80c0a28",
-      "bytes": 4644
+      "sha256": "d99bba9665778b9ec55d94e19d8e5e3b49d4bff72a9dfc07af20b13227b16291",
+      "bytes": 4462
     },
     {
       "path": "src/lib/runtimeData.ts",
@@ -231,13 +206,13 @@
     },
     {
       "path": "tests/browser/evidence-workflow.spec.ts",
-      "sha256": "c8d151a737b2bee8c21c8f880bc9cd056ffd59ba373f511c3b4510b312216fb9",
-      "bytes": 10831
+      "sha256": "69dd08aa2e3f39e3c68f4a65a3a3f8a4b454d487c9783edfcb2d94bf57915f3b",
+      "bytes": 10011
     },
     {
       "path": "tests/browser/source-campaign.spec.ts",
-      "sha256": "583f474b9da5aeb3e7eaa1ceeab5ca7073daf4516bbebb59fbbf4491d99db678",
-      "bytes": 2155
+      "sha256": "a379e735cfbdb9cc979c2b498204072e0792bbfaff737e157ad5f6cf32952a08",
+      "bytes": 2176
     },
     {
       "path": "tests/evidence-assembly.test.mjs",
@@ -246,8 +221,8 @@
     },
     {
       "path": "tests/evidence-boundaries.test.mjs",
-      "sha256": "59957ba8f11b9b1a367206da31967aee4212d17e0576dd5c7c590ceb9e23821d",
-      "bytes": 11911
+      "sha256": "016778c338f26b7b36bddd421b316019dd2c522c9de8e83f4b09d7b8d1d90d7f",
+      "bytes": 8914
     },
     {
       "path": "tests/evidence-campaign.test.mjs",
@@ -256,8 +231,8 @@
     },
     {
       "path": "tests/evidence-intelligence.test.mjs",
-      "sha256": "e946d6a022846cb41fc0f9c42cb1fdea2b9c415ff6448d802f55e8e1e2312d8b",
-      "bytes": 18549
+      "sha256": "e77ce0f385fff03b5f54d1188526e48c80c4d7a90781455080908b4a202d7489",
+      "bytes": 18132
     },
     {
       "path": "tests/evidence-view.test.mjs",
@@ -266,8 +241,8 @@
     },
     {
       "path": "tests/evidence-workflow.test.mjs",
-      "sha256": "5ece4904fdd1079f1697dc038a106effd9b641694e1909939939f0237c83136f",
-      "bytes": 10876
+      "sha256": "455427c6d1f7bd1c4c27663c04b6ddfd13e8c9c546e97c7dbd31e9efea85c9a7",
+      "bytes": 6022
     },
     {
       "path": "tests/runtime-resilience.test.mjs",
@@ -280,15 +255,13 @@
       "bytes": 5032
     }
   ],
-  "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z",
+  "release_version": "0.11.0",
+  "sealed_at": "2026-09-18T00:02:14.783Z",
   "schemas": {
     "assembly": "giza.evidence-assembly.v1",
     "quantity": "giza.quantity.v1",
     "receipt": "giza.evidence-receipt.v2",
     "investigation": "giza.saved-investigation.v2",
-    "campaign": "giza.scoped-campaign.v1",
-    "comparisonRule": "giza.comparison-rules.v3",
-    "measurementRule": "canonical-measurement.v3"
+    "campaign": "giza.scoped-campaign.v1"
   }
 }

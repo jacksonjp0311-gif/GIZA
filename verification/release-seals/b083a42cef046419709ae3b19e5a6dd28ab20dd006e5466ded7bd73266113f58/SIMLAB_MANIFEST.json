@@ -1,36 +1,41 @@
 {
-  "version": "0.9.2",
-  "codename": "ECHO",
-  "phase": "SIMLAB_ACOUSTICS",
-  "generated_at": "2026-09-11T15:28:09.307532+00:00",
-  "active_solver": "solver.acoustic",
-  "baseline_experiment": "acoustic.known-interiors-screening",
-  "run_id": "run.acoustic.acoustic.known-interiors-screening.1ffcc551ebdb",
-  "geometry_hash": "fefcb9fb1bf5f43ff35eb8c50d737c59977965655a7b0b25a672cde7ca93c535",
-  "input_hash": "1ffcc551ebdb76a7adbdcb8374765d529bd4ac4a7161e1f356d89e1d40197ee8",
-  "component_count": 12,
-  "pressure_point_count": 385,
-  "burial_fundamental_hz": 12.122722532901356,
-  "lower_fundamental_hz": 16.42628166801711,
-  "coincidence_clusters": 7,
-  "independent_null": {
-    "n": 200,
-    "mean": 3.825,
-    "stddev": 1.9350387593017362,
-    "min": 0,
-    "max": 12,
-    "actual_percentile_le": 0.97
-  },
-  "constraint_preserving_null": {
-    "n": 200,
-    "mean": 4.85,
-    "stddev": 1.8241436346954696,
-    "min": 1,
-    "max": 9,
-    "actual_percentile_le": 0.91
-  },
-  "design_claim_status": "NOT_ESTABLISHED",
+  "version": "0.9.3",
+  "codename": "STRATA",
+  "phase": "GRAVITY_ACOUSTICS_STRATA",
+  "generated_at": "2026-09-11T15:43:48.175734+00:00",
+  "active_solvers": [
+    "solver.gravity",
+    "solver.acoustic",
+    "solver.strata"
+  ],
+  "run_count": 6,
+  "truth_invariant": "Prediction is not observation. Simulation can test consequences of a hypothesis but cannot promote archaeology by itself.",
   "files": [
+    {
+      "path": "docs/ACOUSTIC_LAB.md",
+      "sha256": "2d3ecd4e41128c2fadbaa5a42fb46651e1df878047ce5e37cf2d11c8a5465b08",
+      "bytes": 2458
+    },
+    {
+      "path": "docs/ECHO.md",
+      "sha256": "adfa4b834e023dbe541d18369228e5f366c2e3a5aca24cf5753ac5176fa26994",
+      "bytes": 2915
+    },
+    {
+      "path": "docs/GRAVITY_LAB.md",
+      "sha256": "c64304d6871f1e216ecb310ea369921dcdda4c6895a7ed570d2d90b478ae6b40",
+      "bytes": 937
+    },
+    {
+      "path": "docs/SIMLAB.md",
+      "sha256": "a8af7bf7cf3ef9d6ec0db282c962ba845da8f6c7ad19ed51d16c9e1a8de6ea01",
+      "bytes": 1829
+    },
+    {
+      "path": "docs/STRATA.md",
+      "sha256": "8bd60c2bf52a9c88d20d6740e50f6b5512137f2cbc7b50d8c90295e802d61d2b",
+      "bytes": 1785
+    },
     {
       "path": "public/model/simlab/benchmarks/acoustic_benchmark.json",
       "sha256": "5a15e909314cd7e5e92191ad332849354f9007d9432f7c207c1f2e00835506f0",
@@ -40,6 +45,11 @@
       "path": "public/model/simlab/benchmarks/gravity_benchmark.json",
       "sha256": "eda6d983910289c2722b45d9ebb7dd2819550b267bb3c1ebb0793fcebc864b56",
       "bytes": 661
+    },
+    {
+      "path": "public/model/simlab/benchmarks/strata_benchmark.json",
+      "sha256": "00e1b36386625d16e92dcd7906ab15a8ca0795ad8591ce1c5e99f20e8bb01d8f",
+      "bytes": 704
     },
     {
       "path": "public/model/simlab/experiments/acoustic.known-interiors-screening.json",
@@ -65,6 +75,11 @@
       "path": "public/model/simlab/experiments/gravity.known-interiors-screening.json",
       "sha256": "b4ff7eb9614c2805175038dcb940b22df4e24f70784ad078f0e2de15d7683221",
       "bytes": 1349
+    },
+    {
+      "path": "public/model/simlab/experiments/strata.deep-claim-screening.json",
+      "sha256": "48858e3f9dce1e3a70fd3d5cd671b6994d33a138603a80f78155668d26423703",
+      "bytes": 1131
     },
     {
       "path": "public/model/simlab/material_sets.json",
@@ -127,6 +142,21 @@
       "bytes": 250923
     },
     {
+      "path": "public/model/simlab/results/strata.deep-claim-screening.json",
+      "sha256": "9e2debef2a31f0ae93b851d4ce9b5ef7ae8b907e4bb51316d204e77ffe7f2ea0",
+      "bytes": 29571
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.csv",
+      "sha256": "8189a4545fceb97eff68e34c64d824f6488f92c3281e75ce481a4fb8cdeb7efd",
+      "bytes": 511
+    },
+    {
+      "path": "public/model/simlab/results/strata.depth-screen.png",
+      "sha256": "cc6ef52f649f2659f4dfbf671c41ae14a1c9af333298d237db3d9153e8f78da1",
+      "bytes": 96477
+    },
+    {
       "path": "public/model/simlab/run_contract.json",
       "sha256": "14f60ffa03bb2f7b8b2c93dede8dbafd3f1d4e4946430f92ccd58eb3a1d82221",
       "bytes": 1007
@@ -177,6 +207,16 @@
       "bytes": 2364
     },
     {
+      "path": "scripts/simlab/strata-benchmark.mjs",
+      "sha256": "59e8df412ab93511686319aaaeabf7b8574c15b7db772a06897d6394e20bbc66",
+      "bytes": 1045
+    },
+    {
+      "path": "scripts/simlab/strata-run.mjs",
+      "sha256": "e332d6e68c1edcd256ef945adae4e0e1ea8c57ee1c1cc15faa789ef77fe20891",
+      "bytes": 6284
+    },
+    {
       "path": "scripts/simlab/validate-echo.mjs",
       "sha256": "5ac764b73cbde01a8c0fa6ea477ebf9bf9215e3e17099806e82f4cacbbcf28d7",
       "bytes": 2875
@@ -187,14 +227,19 @@
       "bytes": 2958
     },
     {
-      "path": "src/simlab/types.ts",
-      "sha256": "9d6dee7a36ee5b557205439cde1acb21061f3c7916ef71aa8d8af84eaedbed38",
-      "bytes": 6195
+      "path": "scripts/simlab/validate-strata.mjs",
+      "sha256": "45018c9a2ef422f382ec0e0ae214ff3b8904e6f36c84bd384f132a789abdc00f",
+      "bytes": 1598
     },
     {
       "path": "src/scene/SimulationLayer.tsx",
       "sha256": "e40f2b666bb9aae9517741ffe57873c99b642c5b1f617af77fd0d452089cc618",
       "bytes": 4923
+    },
+    {
+      "path": "src/simlab/types.ts",
+      "sha256": "9d6dee7a36ee5b557205439cde1acb21061f3c7916ef71aa8d8af84eaedbed38",
+      "bytes": 6195
     },
     {
       "path": "src/workstation/ObjectInspectorPanel.tsx",
@@ -205,18 +250,8 @@
       "path": "src/workstation/SpatialViewport.tsx",
       "sha256": "77141a2997f54fe73dec7c2c2773088a1ac565a091d88c867cf861fbedc6b894",
       "bytes": 9148
-    },
-    {
-      "path": "docs/ECHO.md",
-      "sha256": "adfa4b834e023dbe541d18369228e5f366c2e3a5aca24cf5753ac5176fa26994",
-      "bytes": 2915
-    },
-    {
-      "path": "docs/ACOUSTIC_LAB.md",
-      "sha256": "2d3ecd4e41128c2fadbaa5a42fb46651e1df878047ce5e37cf2d11c8a5465b08",
-      "bytes": 2458
     }
   ],
-  "release_version": "0.11.1",
-  "sealed_at": "2026-09-18T02:02:16.173Z"
+  "release_version": "0.11.0",
+  "sealed_at": "2026-09-18T00:02:14.783Z"
 }

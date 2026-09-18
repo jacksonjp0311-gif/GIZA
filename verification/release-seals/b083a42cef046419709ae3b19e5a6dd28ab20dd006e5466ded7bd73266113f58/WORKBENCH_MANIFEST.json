@@ -1,7 +1,7 @@
 {
-  "version": "0.11.1",
+  "version": "0.11.0",
   "codename": "REGISTRATION WORKBENCH",
-  "sealed_at": "2026-09-18T02:02:16.173Z",
+  "sealed_at": "2026-09-18T00:02:14.783Z",
   "runtime": "Native browser modules; Node shared engine; scoped campaigns lazily compile shared contracts with existing esbuild",
   "new_runtime_npm_dependencies": 0,
   "archaeological_fit_created": false,
@@ -43,8 +43,8 @@
     },
     {
       "path": "scripts/workbench/server.mjs",
-      "sha256": "639ee89d5118a83629833482fc2888e00d85b3267cd2c1c89b1330529ceafc0e",
-      "bytes": 10186
+      "sha256": "d3a568e1b9d29f4a4dfd6cca257df3dc99003624d50c53187bab372a551c86e0",
+      "bytes": 10068
     },
     {
       "path": "scripts/plate_registration/engine.mjs",
@@ -112,11 +112,6 @@
       "bytes": 1964
     },
     {
-      "path": "scripts/evidence/profile-reliability.mjs",
-      "sha256": "b616bf72bf57860f998e184ab7bf8ba2e826be0ae525af20746750cbbd9627e8",
-      "bytes": 2717
-    },
-    {
       "path": "scripts/evidence/README.md",
       "sha256": "7d662d1bedede2365eecf52553f0637bc5e0593cd7c718c83d440b6364715d5d",
       "bytes": 1946
@@ -128,13 +123,13 @@
     },
     {
       "path": "docs/EVIDENCE_BOUNDARY_EVOLUTION.md",
-      "sha256": "18ffb52e20057dc9000356bec8f7d6525056ceee07bb8ec6b2cda63bd56ded6a",
-      "bytes": 6510
+      "sha256": "9d19ac1e4c3e37bdb38202a204854c68c527f9a43e5a8c95d19f744d55d1001e",
+      "bytes": 5970
     },
     {
       "path": "docs/SOURCE_CAMPAIGN.md",
-      "sha256": "15b73a84e6292a86cf10036c9b836a6662243f43e63625f439227d70b8e1089b",
-      "bytes": 9805
+      "sha256": "7bd3fa2f8775189abda9231f3e64209c4e7d631505483552ddf453576c8fa9b7",
+      "bytes": 8945
     }
   ]
 }
