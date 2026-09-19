@@ -1,0 +1,10 @@
+{
+  "schema": "giza.software-checkpoint.v1",
+  "name": "readme-human-guide-20260919",
+  "createdAt": "2026-09-19T17:46:31.918Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "exitCode": 0,
+  "authority": "SOFTWARE_TESTS_ONLY",
+  "historicalBenchmarkBytesRestored": true
+}

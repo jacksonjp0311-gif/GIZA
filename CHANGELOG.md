@@ -1,5 +1,14 @@
 # 0.12.0 — Live Evidence + Human Guidance
 
+## Human-focused README — 2026-09-19
+
+- Added the existing application logo and a clear introduction, quick start,
+  workstation guide, first investigation, evidence limits, saving guidance,
+  troubleshooting and documentation index.
+- Preserved the previous README verbatim in docs/history/README-2026-09-18.md.
+- Documentation-only follow-up; application behavior and archaeological records
+  are unchanged.
+
 - Reproduced and sealed transform-authority leakage: hypothetical resolved
   relations cannot produce ordinary authoritative measurements. Added explicit
   conditional results and measurement rule v4 with historical replay.

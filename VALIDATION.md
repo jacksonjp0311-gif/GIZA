@@ -1,5 +1,19 @@
 # 0.12.0 live evidence + guidance — 2026-09-18
 
+## README documentation follow-up — 2026-09-19
+
+Replaced the front-page handoff chronology with a human-focused guide and the
+existing public/GIZA-NEXUS.png logo. The prior README is preserved in
+docs/history/README-2026-09-18.md. No runtime code, canonical data or receipt
+interpretation changed. All 15 local Markdown link targets and the logo were
+checked for existence. The complete npm run check passed through checkpoint
+readme-human-guide-20260919 (201 tests plus inherited validators, TypeScript
+and workbench checks); its log and benchmark outputs are retained without
+overwriting historical bytes. Browser tests were not rerun locally for this
+documentation-only change. The README links the successful bb87093 remote run
+as a dated result and the workflow badge as the latest status, not as an
+assertion that this later commit already passed remote verification.
+
 ## Follow-up remote checkpoint e1a0e1f
 
 Run 35377185849 completed both operating systems' release integrity, dependency,

@@ -1,0 +1,62 @@
+{
+  "version": "0.10.7",
+  "codename": "SOURCE PARSER",
+  "phase": "SOURCE_PARSER",
+  "generated_at": "2026-09-13T22:45:42.866Z",
+  "canonical_geometry_changed": false,
+  "counts": {
+    "parsed_records": 26,
+    "raw_byte_verified": 0,
+    "source_locators_bound": 26
+  },
+  "invariants": [
+    "normalized observations are not raw-byte receipts",
+    "source locator required",
+    "parser may not increase geometry authority",
+    "raw-byte verification requires checksum-bound local source bytes"
+  ],
+  "artifacts": [
+    {
+      "path": "public/model/source_parser/manifest.json",
+      "sha256": "a9d0511854a28a671d89052685917a7c0e0ca9250311d426fb01631505ddc47e",
+      "bytes": 1053
+    },
+    {
+      "path": "public/model/source_parser/targets.json",
+      "sha256": "bcc30e959af5d1f245be514da34a53e94139e641baf6d84180cf062a629ff0e0",
+      "bytes": 4376
+    },
+    {
+      "path": "public/model/source_parser/parsed_records.json",
+      "sha256": "50bafe43fadefd8d213e24787ee9d33a740d3981c8e55cc138b8e033c6e8200e",
+      "bytes": 28157
+    },
+    {
+      "path": "public/model/source_parser/parser_receipts.json",
+      "sha256": "6b84e5c9fcf7ab245c0b06ab01ef99786de48d32a7048aabb983a6457c846ef2",
+      "bytes": 14996
+    },
+    {
+      "path": "public/model/source_parser/locator_contract.json",
+      "sha256": "2ba905d040f15960ade0f66b1a0239eaff4cd9b6963499ba48dd82414a76074e",
+      "bytes": 923
+    },
+    {
+      "path": "scripts/source_parser/build.mjs",
+      "sha256": "a6cf3bb15dc5b3fa18e4e508c5edb11c5d43976ca7db29c00d053f0763d35a2b",
+      "bytes": 2976
+    },
+    {
+      "path": "scripts/source_parser/validate.mjs",
+      "sha256": "81a6a6a0310d8637f598105e6de2b0bba02d8f88dfb116fecebc499d3db93e50",
+      "bytes": 1876
+    },
+    {
+      "path": "docs/SOURCE_PARSER.md",
+      "sha256": "3032f5799ba071c5c07c428c99b1034d179d34f8cedef9487c44bd38f9f4b17f",
+      "bytes": 2552
+    }
+  ],
+  "release_version": "0.12.0",
+  "sealed_at": "2026-09-18T18:10:19.910Z"
+}

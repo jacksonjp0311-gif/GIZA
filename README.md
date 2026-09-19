@@ -1,155 +1,293 @@
-# GIZA NEXUS v0.12.0 — Live Evidence + Human Guidance
+<p align="center">
+  <img src="public/GIZA-NEXUS.png" alt="GIZA NEXUS — gold pyramid with cyan orbital rings" width="220">
+</p>
 
-## 0.12.0 — live evidence and guidance
+<h1 align="center">GIZA NEXUS</h1>
 
-[Exact-commit verification runs](https://github.com/jacksonjp0311-gif/GIZA/actions/workflows/verify.yml)
-are the authority for remote CI status; local checkpoints alone are not release acceptance.
+<p align="center">
+  <strong>Explore ancient structures. Inspect the evidence. Keep every claim accountable.</strong><br>
+  A model-first spatial research workstation for the Giza plateau.
+</p>
 
-Start with **Tutorial / ?** in the header for the interactive, fifteen-chapter
-tour. It uses the real workstation controls and protects unsaved research.
-The model-first interface and existing specialized workspaces remain intact.
+<p align="center">
+  <a href="https://github.com/jacksonjp0311-gif/GIZA/actions/workflows/verify.yml"><img src="https://github.com/jacksonjp0311-gif/GIZA/actions/workflows/verify.yml/badge.svg" alt="GIZA verification workflow status"></a>
+  <br>
+  <strong>0.12.0 · Live Evidence + Human Guidance</strong>
+</p>
 
-In **Sarcophagus → Compare**, a locally replayed and reviewed campaign can link
-its exact **PLAN_2D_ONLY** relation to the live graph. Imported verification
-flags cannot establish local verification. Hypothetical transforms are excluded
-from ordinary physical measurements; an explicitly conditional calculation is
-available separately. Impact/explain tools preserve original research records.
+<p align="center">
+  <a href="#get-started">Get started</a> ·
+  <a href="#your-first-investigation">First investigation</a> ·
+  <a href="#explore-the-workstation">Workspaces</a> ·
+  <a href="#understanding-the-evidence">Evidence and limits</a> ·
+  <a href="#documentation">Documentation</a>
+</p>
 
-[Tutorial behavior and accessibility](docs/TUTORIAL_MODE.md) ·
-[Live evidence contracts and limitations](docs/LIVE_EVIDENCE_INTEGRATION.md) ·
-[Executed verification and release status](VALIDATION.md).
-The real archaeological campaign remains **BLOCKED**, not synthetically completed.
-Remote acceptance requires both platforms at the same sealed commit.
+## What is GIZA NEXUS?
 
-## Preserved 0.11.1 functionality and follow-ups
+GIZA NEXUS brings 3-D models, historical sources, measurements and reproducible
+research into one local workstation. Begin with a centered view of Khafre's
+pyramid, move inside its architectural systems, and inspect individual features
+without losing the distinction between what is documented and what is inferred.
 
-Centered interaction and media cleanup: scroll zoom keeps the orbit pivot fixed, pyramid framing stays on its central axis, and dimensions live inside Inspect / layers. Open **Hieroglyphs · Inscription Lab** for the Dream Stela photographs, labeled reproduction detail and source links. [Audit, credits and limitations](docs/MEDIA_ORBIT_CLEANUP.md).
+The central model is your working surface—not a decorative backdrop. Select a
+feature to examine its sources, measure it in a declared coordinate frame,
+inspect a section, or investigate a testable question. Save the result with its
+original inputs so it can be reopened, compared and challenged later.
 
-Viewport controls tuck away automatically: hover **Inspect / layers** or **Explode** to expand them. Move away to collapse; keyboard focus or tap also opens them, with Escape/Close available.
+**GIZA is a research and interpretation tool, not an archaeological scan or an
+automatic discovery engine.** Visual realism does not establish evidence.
+Unknown dimensions and unresolved placements remain explicitly unknown.
 
-Startup always opens the assembled Khafre pyramid centered and fitted to the 3-D viewport. Prior overview explosion, clipping, underground view and shell-hiding settings no longer displace the next launch. Saved research investigations and explicit archived views remain separate and unchanged.
+## Get started
 
-Atlas/spatial follow-up: full-workspace maps, readable labels with a complete text index, map zoom/pan, contextual assembly explosion, and reversible **Spherical expansion** of the existing illustrative pyramid stone cells. [Controls, limitations and design references](docs/ATLAS_SPATIAL_PRESENTATION.md).
+### Requirements
 
-Layer-control follow-up: **Subterranean (Unverified)** and **Underground** explicitly reveal hypothetical underground geometry; fresh sessions still default it off. Reality layers can hide it independently, with an actionable explanation. Interior inspection respects the model-layer switches. Overview-only controls are disabled in separate detail/atlas views; use **Return to model layers**.
+- **Node.js 22** is recommended and used in CI. The package requires Node.js
+  20.19 or later.
+- A modern browser with WebGL support.
+- Git to clone the repository, or a downloaded repository copy.
+- An internet connection for the initial dependency installation and external
+  source links. The application services run locally.
 
-This reliability successor adds strict imported-graph semantics, point-to-feature membership, compatible uncertainty, deterministic rendered cap picking, and contextual **Explain / compare inputs** with linked reruns. No interface rebuild or new archaeological authority. See [0.11.1 handoff and demonstration](docs/RELIABILITY_0_11_1.md) and [actual verification status](VALIDATION.md).
+### Install and launch
 
-## Preserved 0.11.0 capabilities
-
-Select exact feature support separately from context; measure in a declared frame; preserve a replayable investigation with its original geometry, points and result; reopen historical inputs without silently rebasing them. New computations carry dependency fingerprints. Analytic section cuts are pickable, fitting uses visible geometry, and optional research data no longer blocks the initial model.
-
-The focused source campaign reuses the shared registration engine for acquisition, immutable controls/holdouts, replay and reviewed **2-D-only** revisions. Its synthetic positive path works; the real coffer/chamber campaign is explicitly BLOCKED on independent source/control requirements. See the [fresh-user demonstration and exact limits](docs/SOURCE_CAMPAIGN.md), [checkpoint ledger](docs/EVIDENCE_BOUNDARY_EVOLUTION.md), and [validation record](VALIDATION.md).
-
-## Historical 0.10.12 implementation checkpoint — 2026-09-17
-
-At this historical checkpoint, evidence-boundary hardening was in progress; see [ordered implementation checkpoints](docs/EVIDENCE_BOUNDARY_EVOLUTION.md). Historical results below remain unchanged. New experiment receipts distinguish current calculations from historical snapshots.
-
-### Evidence Assembly / 01 — Khafre sarcophagus
-
-Open **Sarcophagus**, **Sarcophagus Lid**, **Burial Chamber** or **Interior** in Quick Views for the new full-width Evidence Assembly. Measure exact anchors or picked points, inspect orthogonal/oblique sections and hollow-body caps, compare preserved legacy coordinates, traverse feature-level evidence, and review deterministic Investigation Candidates into immutable computation/finding receipts. Reality layers are independently controlled. Selection and lid inspection motion never enter physical measurements or exports.
-
-The known detail/overview disagreement is now an explicit frame audit, **not a silent correction**. The detached lid's physical placement, assembly-to-monument/site transform, raw primary-source custody and metric image registration remain unresolved. UNKNOWN is not zero. The older component viewer remains under **Views**; historical sources, experiments, Sphinx, Inscription Lab, simulations and atlas are preserved. See [Evidence Assembly contract and handoff](docs/EVIDENCE_ASSEMBLY.md) for capabilities, guarantees and limits.
-
-`npm run check` now includes the Evidence Assembly, graph/receipt, presentation and runtime-resilience tests. `npm run validate:evidence-assembly` reproduces candidates from repository data; see `scripts/evidence/README.md` for immutable receipt output. That historical release identity was 0.10.12, with contract v1 and compile-time commit/source-hash/build metadata.
-
-This project is maintained as **GIZA**. The model-first Explorer includes the original animated logo, searchable components, expanded viewing and component Quick Views. The repo-contained launcher now compiles TypeScript and production assets on every start, stamps the build outside the repository, and serves both Explorer and Registration Workbench. Historical verification artifacts retain their original results.
-
-See [Spatial Engineering Audit and Roadmap](docs/SPATIAL_ENGINEERING_ROADMAP.md) for the original audit and all 56 component coverage rows. [Usability foundation](docs/USABILITY_FOUNDATION.md) tracks the first implemented tranche and remaining limits; the full archaeological roadmap is not complete.
-
-The [Sphinx Explorer](docs/SPHINX_EXPLORER.md) adds a separate exterior study reconstruction with exploded regions, synthetic repair blocks, clipping, isolation and GLB export. It is explicitly not a scan or a per-stone survey.
-
-An executable local workbench for importing a source plate, recording landmarks, freezing an experiment, and inspecting every holdout residual. This is a software release, not an inspection report.
-
-The existing React / Three.js explorer, exploded-model controls, photo inspector, simulations and eleven-view atlas are retained. The new Registration surface opens from the central viewport; it does not replace the 3-D model or add another global navigation mode.
-
-## Launch now
-
-**Windows:** double-click `Start-GIZA.cmd`, or run:
-
-```powershell
-.\Start-GIZA.ps1
-```
-
-**macOS / Linux:**
+From a terminal:
 
 ```bash
-./start-giza.sh
+git clone https://github.com/jacksonjp0311-gif/GIZA.git
+cd GIZA
+npm ci
+npm start
 ```
 
-First install the locked dependencies once with `npm ci` (Node 22 recommended). All platforms can use `npm start`. Open `http://127.0.0.1:4173/` when the console says **GIZA READY**. Ctrl+C stops both services. Occupied ports produce an actionable error without killing an existing process. Override ports using `GIZA_EXPLORER_PORT` and `GIZA_PORT` if needed. `npm start -- --check` compiles without serving; `npm start -- --smoke` compiles, health-checks both services and stops.
+Wait for **GIZA READY**, then open **[http://127.0.0.1:4173/](http://127.0.0.1:4173/)**.
 
-For the standalone Registration Workbench only, run `npm run workbench` or `Start-GIZA.ps1 -Mode Workbench`, then open `http://127.0.0.1:4174/workbench/`. That standalone mode uses Node built-ins and shipped HTML/CSS/JavaScript: no dependency installation or compilation is required. The package retains its Node >=20.19 requirement.
+Every normal start compiles TypeScript and production assets before launching
+the Explorer and Registration Workbench. **Ctrl+C** stops the services started
+by the launcher.
 
-PDF import additionally requires Poppler's `pdfinfo` and `pdftoppm` on PATH. Missing rendering tools do not prevent the workbench or its synthetic test from launching. The actual historical PDF is not bundled.
+After installing dependencies, you can also use:
 
-## What is usable
+| Platform | Launcher |
+| --- | --- |
+| Windows | Double-click `Start-GIZA.cmd`, or run `./Start-GIZA.ps1` in PowerShell |
+| macOS / Linux | Run `./start-giza.sh` |
+| Any supported platform | Run `npm start` |
 
-The workbench has a local PDF importer, source/render hash checks, an image viewer with zoom and click-to-place landmarks, control/holdout assignment, target-coordinate and scale-provenance forms, JSON draft import/export, an immutable freeze operation, a fit executor, and a residual-vector viewer with numerical gate results. A separately labelled synthetic test exercises the numerical display without writing archaeological results.
+**New here? Select Tutorial / ? in the header.** The fifteen-chapter guided tour
+highlights real controls, lets you interact with them, and explains the evidence
+limits as you go. You can skip chapters, exit at any time, or return through
+contextual help.
 
-The service listens only on `127.0.0.1`. Mutation endpoints require the per-session token and an allowed origin. It performs no outbound network calls and never contacts GitHub.
+PDF rendering additionally needs Poppler's `pdfinfo` and `pdftoppm` on PATH.
+These tools are not required to explore the model. Historical source PDFs are
+not bundled.
 
-## Real experiment workflow
+## Explore the workstation
 
-1. Import the expected 315-page Petrie PDF. The importer checks PDF signature/page count, hashes the supplied bytes and renders page 305 locally.
-2. Inspect the rendered plate and explicitly confirm its identity. Hashing proves which bytes are used; it does not prove historical authenticity.
-3. Select landmarks. Click the image for source pixels, choose control or holdout, and enter independently sourced target coordinates.
-4. Choose the registration profile and enter an independent meters-per-pixel expectation with source ID and locator.
-5. Freeze the experiment. Source hash, render hash, profile, scale expectation, provenance, roles and coordinates are captured together in a content-hashed snapshot.
-6. Execute the fit. The source and render bytes are rehashed, the frozen snapshot is checked, and the selected profile's actual minima and all numerical gates are enforced.
-7. Review the residuals. Success is only a plate-local metric candidate requiring human review; failure retains every holdout. Neither mutates canonical geometry.
+| Workspace | What you can do |
+| --- | --- |
+| **3-D Explorer** | Rotate, zoom and pan around the pyramid; select components; inspect interiors; control model and reality layers. |
+| **Quick Views and components** | Focus on a room or object, inspect its context and sources, and use reversible exploded inspection views. |
+| **Evidence Assembly** | Examine the Khafre sarcophagus, lid and burial chamber with feature-level evidence, measurements, sections and comparisons. |
+| **Map Atlas** | Explore full-workspace maps with filters, zoom, pan and a readable text index. Map context is kept distinct from metric survey control. |
+| **Investigations** | Run deterministic comparisons, review candidates, save research and explain whether an earlier result still applies. |
+| **Registration Workbench** | Acquire source bytes, freeze controls and holdouts, run the shared fitting engine, inspect residuals, replay and review a scoped revision. |
+| **Sphinx** | Inspect an explicitly reconstructed exterior study with isolation, clipping and exploded regions—not a scan or an invented hollow interior. |
+| **Inscription Lab** | Inspect Dream Stela imagery, mark reading zones, trace signs and develop a source-linked translation board. |
+| **Simulations** | Explore the existing simulation tools and their declared assumptions without promoting simulated output into observed archaeology. |
 
-A frozen experiment or recorded fit cannot be overwritten. Make a separate project copy for a new experiment; preserve the original snapshot and result. Provenance and its independence assertion are operator-supplied, not authenticated historical facts.
+### Moving around
 
-## Repairs implemented
+- **Drag** to rotate, **scroll** to zoom, and **right-drag** to pan in the 3-D viewer.
+- **Click** an object or feature to inspect it.
+- Use **Fit** and the available view presets to regain your bearings.
+- Open **Inspect / layers** for shell removal, dimensions and layer controls.
+- Open **Explode** for presentation-only separation; restore the assembled view
+  when finished. Spherical masonry expansion is an illustrative display of the
+  existing stone cells, not a surveyed stone inventory.
+- Use **MAP ATLAS**, **3D MODEL** and **REGISTRATION** to change surfaces.
+  Workspaces provide a return route, and tracked unsaved research triggers a
+  navigation warning.
 
-- The chosen profile governs control/holdout counts; modern 6/3 cannot pass through a hard-coded 4/2 check.
-- Independent scale is mandatory and scale drift is evaluated.
-- Actual source/render bytes are rehashed at both freeze and execution.
-- Target coordinates require a registered source ID, locator and independence assertion. There is no unspecified-provenance fallback.
-- Frozen experiments, profile snapshots and fit results are content-bound and non-overwritable through the application.
-- The normalized-observation builder never relabels copied prose as raw-byte extraction just because an unrelated file is cached.
-- Duplicate, nonfinite, out-of-bounds and collinear correspondence inputs are rejected.
-- Atlas navigation no longer hides later tabs on narrower displays; internal scrolling no longer feeds an automatic parent focus/scroll loop.
-- Release sealing regenerates current manifests in dependency order and verifies their hashes.
+Contextual drawers support hover, keyboard focus and touch. The tutorial supports
+Tab, Shift+Tab, Enter/Space and Escape, and respects reduced-motion preferences.
+Opening or closing help does not give presentation state any physical authority.
 
-## Interior inspection and hieroglyph workspace
+## Your first investigation
 
-In the 3D overview, use **Remove shell / inspect inside** to expose the known internal system, select a subsystem, fit it, and isolate individual components. **Restore shell** returns the ordinary layer selections. The Sphinx offers **Expose carved bedrock**, not an invented hollow interior.
+Start with the focused sarcophagus assembly:
 
-Open **Inscription Lab** from Quick Views or the Sphinx panel to inspect the bundled Dream Stela photo/facsimile, mark reading zones, trace marks, compose signs, and maintain a source-linked translation board. Drafts save locally and export to JSON. AI review packets and proposal import are manual handoffs; no automatic OCR/translation provider is connected. See `docs/INTERIORS_AND_EPIGRAPHY.md` for the current audit, workflow and next priorities.
+1. **Open Sarcophagus** from Quick Views.
+2. **Select a feature.** In Evidence, inspect its exact observations, source
+   locators, units, uncertainty and coordinate frame.
+3. **Separate support from context.** Direct support, derived dependencies,
+   placement dependencies and related context answer different questions.
+4. **Open Measure.** Choose a declared frame and use valid anchors or picked
+   points. Same-object local dimensions can be usable even when site placement
+   is unresolved.
+5. **Try Section.** Inspect an orthogonal or oblique cut. A computed cap is a
+   reconstructed section surface, not a newly observed archaeological face.
+6. **Open Investigate.** Choose an Investigation Candidate and run its
+   reproducible computation against identified inputs. A candidate is a question
+   requiring review—not a discovery.
+7. **Save and export.** Preserve the investigation and keep an exported copy.
+8. **Reopen the saved snapshot.** Use Explain / compare inputs to inspect its
+   original dependencies and determine whether it remains current.
 
-## Existing 3-D explorer
+A relevant input change creates a reason to rerun—not permission to overwrite
+the old result. A linked rerun creates a new record. Unrelated camera movement,
+tutorial progress or presentation labels must not silently make research stale.
 
-On a networked desktop with the original dependencies installed:
+## Understanding the evidence
+
+GIZA separates three reality layers:
+
+| Layer | Meaning |
+| --- | --- |
+| **OBSERVED** | A directly supported observation within its documented scope. A reported length does not establish surveyed endpoints or an entire observed surface. |
+| **RECONSTRUCTED** | Geometry or relationships derived from evidence, with their assumptions and limits retained. |
+| **HYPOTHESIS** | Speculative or testable geometry and relationships. Realistic appearance does not increase their authority. |
+
+Observation authority, surface geometry, physical placement, source custody and
+review are separate concerns. Selection, camera motion, isolation and explosion
+never establish physical coordinates or change canonical dimensions.
+
+**UNKNOWN is not zero.** It identifies missing evidence or an unresolved frame
+relationship. For example, local coffer and lid dimensions do not establish a
+physical body-to-lid clearance while their connecting placement remains unknown.
+Hypothetical transforms cannot produce ordinary authoritative measurements;
+explicit conditional calculations retain the assumptions they depend on.
+
+Saved calculations distinguish **CURRENT**, **HISTORICAL** and **UNVERIFIABLE**.
+Impact analysis also identifies **UNAFFECTED** research. The explanation shows
+which relevant inputs changed, rather than treating general graph reachability
+as evidence.
+
+### Live evidence and registration
+
+A trusted session link requires local replay through the existing registration
+engine and an explicitly scoped reviewed revision. Imported fields such as
+`passed: true` are claims, not proof that GIZA reproduced the result.
+
+The workflow preserves source identity and bytes, hashes, frozen controls,
+untouched holdouts, independent-scale classification, residuals, review and
+rollback identity. In **Sarcophagus → Compare**, an eligible campaign can be
+replayed and linked to the exact assembly snapshot.
+
+**A PLAN_2D relationship remains two-dimensional.** It does not establish
+surface topography, lid seating, 3-D chamber placement or site coordinates.
+Source hashes establish byte identity, not historical authenticity. Rights and
+operator review declarations are not independently authenticated scholarship.
+
+### Current archaeological limits
+
+The real Khafre coffer/chamber campaign remains **BLOCKED** pending:
+
+- A correctly identified plan and permitted-use source bytes.
+- Independent local scale/control evidence.
+- A declared local datum and uncertainty.
+- Distributed frozen controls and untouched holdouts.
+
+Synthetic positive tests demonstrate the software path, not archaeological
+completion. Unverified underground geometry is hypothetical and off by default.
+Sphinx display geometry is not survey geometry. Inscription Lab does not include
+an automatic OCR or translation provider; AI proposal exchange is a manual
+handoff, and predicted reconstructions must remain labelled as predictions.
+
+## Saving and protecting your work
+
+Saved investigations preserve archived inputs, canonical points, measurement
+frames and linked research records. Presentation state stays separate.
+
+Browser-local storage is convenient, but **it is not an archival backup or a
+multi-user database**. Export important investigations and Inscription Lab
+drafts. Keep original source assets, frozen experiments and receipts intact.
+Do not clear browser data before exporting work you need to retain.
+
+The local workbench binds to `127.0.0.1`; mutation endpoints require a
+session token and an allowed origin. External source links and media may still
+require network access. Do not publish private research assets or assume that
+a source image's inclusion grants unrestricted reuse.
+
+## Troubleshooting
+
+| Problem | What to do |
+| --- | --- |
+| Dependencies or compilation fail | Confirm the supported Node version, run `npm ci`, then retry `npm start`. The launcher does not start new services after a failed compilation. |
+| A port is occupied | Stop your existing GIZA instance, or choose different `GIZA_EXPLORER_PORT` and `GIZA_PORT` values. The launcher will not kill an unrelated process. |
+| The 3-D view is blank | Check browser WebGL/hardware-acceleration support and the browser console. Export any accessible draft before clearing application data. |
+| An optional map or research dataset is unavailable | Read the scoped error and retry. Optional data should not prevent the core model from opening. |
+| Measurement returns UNKNOWN | Inspect the declared frame, geometry and missing evidence. Do not substitute a display pose for an unresolved physical transform. |
+| A campaign will not link | Use the normal launcher, inspect replay/review errors, and verify the campaign belongs to the current assembly snapshot. Rolled-back revisions cannot activate live evidence. |
+| PDF rendering fails | Confirm `pdfinfo` and `pdftoppm` are installed and on PATH. Preserve the original source bytes. |
+
+## Development and verification
+
+The application uses **React, TypeScript, Three.js / React Three Fiber and Vite**,
+with a local Node.js registration workbench.
 
 ```bash
-npm install
-npm run dev
+npm ci
+npm run dev                 # Explorer development server
+npm run workbench           # Workbench in a second terminal
 ```
 
-Or use `Start-GIZA.ps1 -Mode Explorer`. The explorer runs on port 4173. Run the workbench in a second terminal to use the new **REGISTRATION** button (keyboard `H`); Vite proxies its local API and UI. `M` continues toggling the model and map atlas.
-
-The original handoff environment lacked Explorer dependencies. Subsequent desktop verification passed its production build; see dated entries in VALIDATION.md. The standalone workbench remains independently executable.
-
-## Tests
+Useful checks:
 
 ```bash
-npm run test:repairs
-npm run build:workbench
-npm run check
-npm run verify:release
+npm run check               # Contracts, validators, TypeScript and workbench checks
+npm run build               # Production compilation
+npx playwright install chromium
+npm run test:browser         # Actual rendered interaction tests
+npm start -- --smoke         # Compile, start both services, check readiness, stop
+npm run verify:release       # Check current sealed manifests
 ```
 
-`test:repairs` is dependency-free and covers all six inspection cases plus positive and negative registration paths. `check:legacy` also runs the historical scientific/static checks; its TypeScript syntax step requires TypeScript locally installed or available via NODE_PATH. `verify:release` verifies the sealed distribution; running generators or importing new data changes the working copy and requires resealing before distributing it.
+Free the default ports before running the smoke check, or configure alternate
+ports. `npm start -- --check` compiles without serving.
 
-Optional Python integration tests are in `tests/`. They use synthetic PDFs only and need ReportLab/Pillow or Playwright where noted. These are test dependencies, not workbench runtime dependencies.
+The 0.12.0 implementation at
+[`bb87093`](https://github.com/jacksonjp0311-gif/GIZA/commit/bb8709381e5efb533505c7a2ef4e0c35c171f66b)
+passed the complete [Ubuntu and Windows verification run](https://github.com/jacksonjp0311-gif/GIZA/actions/runs/35378635731):
+both verification jobs and all ten browser groups. Local verification recorded
+201 contract tests and 31 browser tests. These are dated software results—not
+evidence of archaeological accuracy or a claim about an untested future commit.
 
-## Verification scope
+The badge above reports the latest workflow status.
+[VALIDATION.md](VALIDATION.md) retains successful checkpoints, earlier failures,
+environment details and measurement limitations.
 
-- 25 targeted registration/parser regression tests passed.
-- The local HTTP service completed PDF import, rendering, confirmation, immutable freeze and fit using an isolated synthetic 315-page document; duplicate writes and invalid mutation tokens were rejected.
-- Shipped HTML/CSS/JavaScript rendered and responded correctly in Chromium, including the synthetic residual view and 390px responsive layout. Managed Chromium disallowed URL navigation, so the browser test loaded the actual files and bridged requests to the real loopback API. It did not mock the API or use a generated UI image.
-- No real Petrie PDF, archaeological registration, canonical wall geometry or archaeological metric ray was created in this release.
+When contributing, keep changes focused, add regressions, preserve historical
+receipts and do not weaken evidence gates to obtain a passing result. Read
+[AGENTS.md](AGENTS.md) and the relevant contracts first. Follow the repository's
+release policy: update documentation, regenerate manifests only after final
+changes, then verify the seal. Public visibility does not by itself grant reuse
+rights; consult individual source credits and obtain permission where needed.
 
-Previous release identities and manifests are preserved under `history/0.10.11/`. The project was first published to the private GitHub repository `jacksonjp0311-gif/GIZA` on 2026-09-17 with the user's authorization.
+## Documentation
+
+| Start here | Reference |
+| --- | --- |
+| Guided learning and accessibility | [Tutorial Mode](docs/TUTORIAL_MODE.md) |
+| Feature, frame and measurement contracts | [Evidence Assembly](docs/EVIDENCE_ASSEMBLY.md) |
+| Replay, live relations, impact and rollback | [Live Evidence Integration](docs/LIVE_EVIDENCE_INTEGRATION.md) |
+| Source-to-result workflow and real blockers | [Source Campaign](docs/SOURCE_CAMPAIGN.md) |
+| Registration tools | [Registration Workbench](docs/REGISTRATION_WORKBENCH.md) |
+| Interior inspection and inscription workflows | [Interiors and Epigraphy](docs/INTERIORS_AND_EPIGRAPHY.md) |
+| Sphinx reconstruction limits | [Sphinx Explorer](docs/SPHINX_EXPLORER.md) |
+| Atlas and exploded presentation | [Atlas and Spatial Presentation](docs/ATLAS_SPATIAL_PRESENTATION.md) |
+| Image audit, credits and reproduction distinctions | [Media and Orbit Cleanup](docs/MEDIA_ORBIT_CLEANUP.md) |
+| Release history and executed checks | [Changelog](CHANGELOG.md) · [Validation](VALIDATION.md) |
+| Technical continuation | [Continuity](CONTINUITY.json) |
+
+Earlier handoff prose is preserved in the
+[README snapshot before this human-focused rewrite](docs/history/README-2026-09-18.md).
+It records historical implementation states; use the current README and dated
+verification records for today's entry points.
+
+---
+
+**Explore freely. Inspect the evidence. Run reproducible tests. Keep hypothesis
+separate from observation.**
